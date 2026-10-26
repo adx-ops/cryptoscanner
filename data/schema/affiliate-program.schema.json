@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cryptoscanner.local/schema/affiliate-program/1.0.0",
+  "title": "Affiliate program record (schema 1.0.0)",
+  "description": "Commercial matrix kept apart from product data. Commissions never alter editorial ranking.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "provider_id", "program_name", "type", "our_status", "verification", "is_demo"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "provider_id": { "type": "string" },
+    "program_name": { "type": "string" },
+    "legal_entity": { "type": "string" },
+    "program_url": { "type": "string", "format": "uri" },
+    "business_contact_published": { "type": "string" },
+    "type": { "enum": ["personal_referral", "publisher_affiliate", "cpa", "revenue_share", "hybrid", "unknown"] },
+    "allowed_countries_note": { "type": "string" },
+    "allowed_channels": { "type": "array", "items": { "enum": ["website", "email", "social", "paid_search", "brand_keywords", "sub_affiliation", "unknown"] } },
+    "application_conditions": { "type": "string" },
+    "our_status": {
+      "enum": ["identified", "terms_verified", "application_prepared", "application_sent", "accepted", "tracking_tested", "payment_observed", "declined", "not_applicable"]
+    },
+    "paid_action": { "type": "string" },
+    "validation_conditions": { "type": "string" },
+    "commission": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "model_note": { "type": "string" },
+        "amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "percent": { "type": "number" },
+        "tiers_note": { "type": "string" },
+        "status": { "enum": ["verified", "hypothesis", "unknown", "stale"] }
+      }
+    },
+    "attribution": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "mechanism": { "enum": ["cookie", "referral_code", "tracking_link", "postback", "unknown"] },
+        "window_days": { "oneOf": [{ "type": "number" }, { "const": "unknown" }] },
+        "status": { "enum": ["verified", "hypothesis", "unknown", "stale"] }
+      }
+    },
+    "revenue_share": {
+      "type": "object", "additionalProperties": false,
+      "properties": { "included_products": { "type": "string" }, "duration_note": { "type": "string" }, "exclusions": { "type": "string" } }
+    },
+    "payout": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "threshold": { "type": "string" }, "method": { "type": "string" }, "frequency": { "type": "string" },
+        "holdbacks_note": { "type": "string" }, "cancellation_note": { "type": "string" }
+      }
+    },
+    "reporting": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "dashboard": { "type": "boolean" }, "export": { "type": "boolean" }, "api": { "type": "boolean" }, "postback": { "type": "boolean" },
+        "status": { "enum": ["verified", "hypothesis", "unknown"] }
+      }
+    },
+    "rules_note": { "type": "string" },
+    "internal_score": {
+      "description": "Internal prioritisation only. Never surfaced on public pages.",
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "audience_fit": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "acceptance_conditions": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "evidence_reliability": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "tracking_available": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "validation_probability_label": { "enum": ["low", "medium", "high", "unknown"] },
+        "payout_delay_label": { "enum": ["short", "medium", "long", "unknown"] },
+        "net_commission_label": { "enum": ["low", "medium", "high", "unknown"] }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["url", "accessed_at"],
+        "properties": { "url": { "type": "string", "format": "uri" }, "title": { "type": "string" }, "accessed_at": { "type": "string", "format": "date-time" }, "excerpt": { "type": "string", "maxLength": 400 } }
+      }
+    },
+    "verification": { "enum": ["verified", "hypothesis", "unknown", "stale", "contradictory"] },
+    "is_demo": { "type": "boolean" },
+    "notes": { "type": "string" }
+  }
+}

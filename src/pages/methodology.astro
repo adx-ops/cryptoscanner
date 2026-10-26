@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { CALC_VERSION } from '../lib/calc/engine.ts';
+---
+<Base title="Methodology — how cards are selected, verified and ranked" description="How CryptoScanner selects crypto cards, verifies conditions against official sources, classifies identity checks and ranks cards without letting commissions interfere." canonicalPath="/methodology">
+  <h1>Methodology</h1>
+  <h2>What we compare</h2>
+  <p>Cards that let you spend crypto-funded balances or crypto-backed credit at merchants. We separate four product types because their risks differ: <strong>debit</strong> (spend a balance you hold with the provider), <strong>prepaid</strong> (load first, spend later), <strong>credit</strong> and <strong>crypto-backed credit lines</strong> (you borrow against collateral; interest and liquidation risk apply). A cashback rate never mixes these mechanisms.</p>
+  <h2>Where the data comes from</h2>
+  <p>Only official sources count as verification: the provider's terms, fee schedule, eligibility pages, issuer documentation and, for funding, the affiliate programme terms. Other comparison sites are used to discover candidates, never to confirm a condition. Every material value on a card page carries a status: <span class="badge ok">verified</span> (source consulted, scope and date recorded), <span class="badge ok">calculated</span> (derived from verified inputs), <span class="badge unk">hypothesis</span> (plausible, not confirmed), <span class="badge unk">unknown</span> (insufficient proof), <span class="badge bad">stale</span> or <span class="badge bad">contradictory</span> (kept in history, excluded from current claims). An unknown value is never shown as zero, free or available.</p>
+  <h2>Availability by residence</h2>
+  <p>Availability means the provider's published residence rules — not where the card network is accepted and not a "global" slogan. Countries absent from a provider's lists are shown as "to confirm". A listing never guarantees that an issuer will accept an application.</p>
+  <h2 id="kyc">Identity checks: our editorial grid</h2>
+  <p>We record the concrete requirements (ID document, selfie, proof of address, source of funds…) and the stage at which they apply (account, order, activation, top-up, usage). The labels <strong>light / standard / enhanced</strong> are our own editorial shorthand to make records comparable; they are not an official or universal classification. "No initial ID check" means a card can be ordered without identity verification at that stage; checks may apply later, and we never recommend circumventing a provider's controls.</p>
+  <h2>Rewards and real cost</h2>
+  <p>We show separately: the base reward you can get without extra conditions, the conditional maximum (and what it requires), temporary promotions with their end date, one-off sign-up bonuses, non-monetary perks and the currency or token the reward is paid in. Points are not shown as euros without a verifiable conversion; token rewards without a dated price stay in their native unit. The <a href="/calculator">calculator</a> (engine version {CALC_VERSION}) computes <em>estimated net recurring value = calculable recurring rewards − recurring fees − calculable variable fees</em>, month by month, applying caps, exclusions, thresholds, tiers and promotion dates in order. One-off fees and bonuses are reported apart. Locked or held capital is a separate item, not a fee. Credit products get their own financing scenario.</p>
+  <h2>Ranking</h2>
+  <p>Eligibility comes first, then your stated preferences, then verified data. Sorts are plain: cost, accessible reward, estimated net value when calculable, verification recency. There is no opaque score. Missing data never improves a position: a card with unknown fees is not treated like a card with no fees. Suspended, closed or insufficiently documented products are not shown as available options.</p>
+  <h2>Independence</h2>
+  <p>Some providers pay a commission when a visitor opens an account through our link. That revenue never changes the editorial ranking or the data shown. Monetised links are marked as such; where we have no confirmed affiliate access the link is the official site and is labelled "not an affiliate link". Sponsored placements, if ever introduced, would be separate and labelled. Details on <a href="/how-we-make-money">how we make money</a>.</p>
+  <h2>Freshness</h2>
+  <p>Each record shows when its content was last verified by reading the source — distinct from any automatic check. Promotions expire on their published date even if a page cannot be re-read. Records whose sources changed are marked for review and their claims downgraded until re-verified.</p>
+  <h2>Corrections</h2>
+  <p>Spotted an error? <a href="/contact">Tell us</a> with the page and the official source; corrections are logged on the card's page.</p>
+</Base>

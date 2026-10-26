@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+// No backend yet: the form drafts an email on the visitor's device. Replaced by a static-form
+// endpoint once a publishing entity and a mailbox exist (see docs/RESUME-STATE.md).
+const CONTACT = import.meta.env.PUBLIC_CONTACT_EMAIL || '';
+---
+<Base title="Contact & report an error" description="Report an incorrect figure, a dead link or an outdated condition on CryptoScanner." canonicalPath="/contact">
+  <h1>Contact &amp; report an error</h1>
+  <p>Found a wrong fee, an expired promotion or a dead link? Tell us which page and, if you can, the official source. We check against the provider's documentation and log corrections on the card page.</p>
+  <p><strong>Please note:</strong> we are a comparison site. For a blocked account, missing funds, a declined application or a dispute, contact the card provider's own support — we cannot act on your account and we never ask for identity documents, card numbers or passwords.</p>
+  {CONTACT
+    ? <p>Email: <a href={`mailto:${CONTACT}`}>{CONTACT}</a></p>
+    : <p class="card">A contact mailbox has not been set up yet for this build. This page will show it once the publishing entity is designated.</p>}
+  <form class="card" id="report">
+    <div class="field"><label for="r-page">Page or card</label><input id="r-page" type="text" placeholder="e.g. /cards/example-card" /></div>
+    <div class="field"><label for="r-what">What is wrong</label><input id="r-what" type="text" placeholder="e.g. FX fee is now 1.5%" /></div>
+    <div class="field"><label for="r-src">Official source (URL)</label><input id="r-src" type="url" placeholder="https://" /></div>
+    <button class="btn primary" type="submit" disabled={!CONTACT}>Draft email</button>
+    <p class="muted" style="font-size:0.85rem">Opens your email app with the details pre-filled. Nothing is sent to us until you send it.</p>
+  </form>
+  <script define:vars={{ CONTACT }}>
+    const f = document.getElementById('report');
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!CONTACT) return;
+      const g = (id) => document.getElementById(id).value;
+      const body = `Page: ${g('r-page')}\nIssue: ${g('r-what')}\nSource: ${g('r-src')}`;
+      location.href = `mailto:${CONTACT}?subject=${encodeURIComponent('CryptoScanner error report')}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</Base>
