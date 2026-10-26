@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gnosis-pay-card",
+  "slug": "gnosis-pay-card",
+  "name": "Gnosis Pay Card",
+  "brand": "Gnosis Pay",
+  "provider_id": "gnosis-pay",
+  "issuer": { "name": "Monavate Limited", "status": "verified", "evidence": ["ev-gnosispay-home"] },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": ["virtual", "physical"],
+  "custody": "self_custodial",
+  "funding": { "mechanism": "spend_from_balance", "conversion": "at_spend", "supported_assets_note": "Spends stablecoins (EURe/GBPe/USDCe) 1:1 from a Safe smart account on Gnosis Chain that the user controls.", "evidence": ["ev-gnosispay-fees", "ev-gnosispay-home"] },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "gnosis-pay-card-eu-uk-ch-latam",
+      "region_label": "Europe (EEA, UK, CH) + selected other countries",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": ["AR", "AT", "BE", "BG", "BR", "CO", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "CH", "GB"],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Source lists 35 countries of residency by name (no ISO codes; mapping is ours). Brazil: cards issued only through partner PicNic. France: residents of French overseas territories are not served. Card use is blocked in 22 sanctioned countries/regions. 'Coming soon' (not available): AU, JP, MX, PH, TH, SG. Lists are stated as subject to change and carry no date.",
+        "evidence": ["ev-gnosispay-countries"],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [],
+        "stages_note": "Identity verification via Sumsub is integrated (company site); documents, selfie and address requirements are not stated on the consumer help pages read.",
+        "evidence": ["ev-gnosispay-home"],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": { "type": "free", "status": "verified", "evidence": ["ev-gnosispay-fees"] },
+          "fees": [
+            { "type": "issuance", "kind": "none", "conditions": "Card order free.", "status": "verified", "evidence": ["ev-gnosispay-fees"] },
+            { "type": "delivery", "kind": "none", "conditions": "Free shipping of the physical card. Replacement (lost/stolen) 4.99 EURe/GBPe/USDCe incl. shipping.", "status": "verified", "evidence": ["ev-gnosispay-fees"] },
+            { "type": "subscription", "kind": "unknown", "status": "unknown" },
+            { "type": "fx", "kind": "none", "period": "per_transaction", "conditions": "No added fee from Gnosis Pay; Visa's exchange rate applies at purchase.", "status": "verified", "evidence": ["ev-gnosispay-fees"] },
+            { "type": "atm_withdrawal", "kind": "percent", "percent": 2, "period": "per_transaction", "free_allowance": { "amount": { "amount": 200, "currency": "EUR" }, "count": 5, "period": "month" }, "conditions": "Up to 5 free withdrawals or 200 EURe/GBPe/USDCe per month, whichever first; then 2% per withdrawal. ATM operator fees may apply.", "status": "verified", "evidence": ["ev-gnosispay-fees"] },
+            { "type": "topup", "kind": "unknown", "status": "unknown" }
+          ],
+          "rewards": [
+            { "type": "promotional", "percent": 1, "payout": { "kind": "token", "code": "GNO" }, "requires": "holding", "cap": { "amount": { "amount": 250, "currency": "EUR" }, "period": "month" }, "valid_from": "2025-11-09", "valid_until": "2026-01-31", "excluded_categories": ["ATM withdrawals and cash advances", "bank account top-ups", "refund cycling", "merchant self-payments"], "conditions": "Interim programme: 1% with ≥0.1 GNO held in the Card Safe (2%/3%/4% at 1/10/100 GNO; +1% with OG NFT). Weekly spend caps $250–$1,250 (recorded here as a monthly EUR approximation of the lowest cap; see evidence). Paid weekly in GNO. ENDED 2026-01-31; successor 'partner-led' programmes not documented on the pages read.", "description": "Interim GNO cashback programme (ended)", "status": "stale", "evidence": ["ev-gnosispay-cashback-interim", "ev-gnosispay-cashback-gip110"] }
+          ],
+          "limits": [
+            { "type": "spend", "amount": { "amount": 8000, "currency": "EUR" }, "period": "per_day", "note": "Rolling 24 h; single transaction 5,000 EURe/GBPe/USDCe.", "status": "verified", "evidence": ["ev-gnosispay-fees"] },
+            { "type": "atm_withdrawal", "amount": { "amount": 500, "currency": "EUR" }, "period": "per_day", "note": "Single withdrawal 250.", "status": "verified", "evidence": ["ev-gnosispay-fees"] }
+          ],
+          "mobile_wallets": ["apple_pay", "google_pay"],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    { "id": "ev-gnosispay-home", "url": "https://gnosispay.com", "title": "Gnosis Pay — company site (footer legal text, features)", "source_type": "issuer_doc", "excerpt": "'The Gnosis Pay Debit Card issued by Monavate Limited'; self-custodial via Safe smart accounts; integrated Sumsub verification. Page is partner-oriented; no consumer fees or rewards stated.", "accessed_at": "2026-10-26T19:57:00Z", "effective_from": null, "expires_at": null, "scope": {}, "verification": "verified" },
+    { "id": "ev-gnosispay-countries", "url": "https://help.gnosispay.com/hc/en-us/articles/39401751918612", "title": "Supported countries for Gnosis Pay services (help centre)", "source_type": "eligibility_page", "excerpt": "35 supported countries of residency for ordering the card (EEA members, Iceland, Liechtenstein, Norway, Switzerland, UK, Argentina, Brazil via PicNic, Colombia); 22 restricted countries for usage; 6 'coming soon'. No date; subject to change.", "accessed_at": "2026-10-26T20:00:00Z", "effective_from": null, "expires_at": null, "scope": {}, "verification": "verified" },
+    { "id": "ev-gnosispay-fees", "url": "https://help.gnosispay.com/hc/en-us/articles/39533569163284", "title": "Fees and limits (help centre)", "source_type": "pricing_page", "excerpt": "No purchase transaction fees; no added FX fee (Visa rate); card order and shipping free; replacement 4.99; ATM 5 free or 200/month then 2%; daily spend 8,000 rolling, single 5,000; ATM daily 500, single 250. Monthly fees and top-up fees not stated.", "accessed_at": "2026-10-26T20:01:00Z", "effective_from": null, "expires_at": null, "scope": { "note": "Amounts in EURe/GBPe/USDCe" }, "verification": "verified" },
+    { "id": "ev-gnosispay-cashback-interim", "url": "https://help.gnosispay.com/hc/en-us/articles/40288567337876", "title": "Interim cashback programme 9 Nov 2025 – 31 Jan 2026 (help centre)", "source_type": "official_terms", "excerpt": "Rates 1%/2%/3%/4% at 0.1/1/10/100 GNO; +1% OG NFT; weekly spend caps $250/$375/$500/$1,250; paid weekly in GNO; funded by Gnosis Ltd. Successor 'partner-led incentive programmes' announced without details.", "accessed_at": "2026-10-26T20:01:00Z", "effective_from": "2025-11-09", "expires_at": "2026-01-31", "scope": {}, "verification": "stale" },
+    { "id": "ev-gnosispay-cashback-gip110", "url": "https://help.gnosispay.com/hc/en-us/articles/40288737327252", "title": "GIP-110 cashback programme (help centre)", "source_type": "official_terms", "excerpt": "Page titled 'current cashback programme' but notice says GIP-110 has ended. Same GNO tiers, weekly caps €5,000/£4,500/$5,500.", "accessed_at": "2026-10-26T20:01:00Z", "effective_from": null, "expires_at": null, "scope": {}, "verification": "contradictory", "contradiction_note": "Self-contradictory page (current vs ended). Treated as ended; no current cashback programme is established." }
+  ],
+  "links": { "official_url": "https://gnosispay.com", "affiliate": { "program_id": null, "status": "none", "url": null } },
+  "freshness": { "last_content_verified_at": "2026-10-26T20:01:00Z", "last_auto_check_at": null },
+  "changelog": [
+    { "date": "2026-10-26T20:01:00Z", "field": "*", "reason": "Initial record from official help-centre articles (single read; second read required before publication).", "evidence": ["ev-gnosispay-countries", "ev-gnosispay-fees"], "actor": "claude" }
+  ],
+  "editorial": {
+    "summary": "Self-custodial Visa debit card spending stablecoins from a Safe smart account; free to order, no FX fee from the provider, 2% ATM fee after a monthly allowance. No current cashback programme is documented: the last one ended on 31 January 2026.",
+    "good_for": ["Residents of the EEA, UK, Switzerland and listed Latin-American countries who want to keep custody of their funds", "Spending stablecoins without a provider FX mark-up"],
+    "not_for": ["Anyone counting on cashback today (none documented)", "Business or commercial spending (not supported)", "Residents of countries outside the 35 listed"],
+    "watch_outs": ["Monthly/account fees are not stated anywhere read — treated as unknown, not free.", "The GIP-110 page calls itself 'current' while stating the programme ended; we treat cashback as ended until a new programme is published.", "On-chain transfers into the Safe cost gas (xDai) and may involve exchange fees not covered here."]
+  }
+}
