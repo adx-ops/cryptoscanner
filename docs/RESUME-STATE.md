@@ -1,6 +1,6 @@
 # Resume state
 
-Updated: 2026-10-26 20:50 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
+Updated: 2026-10-26 21:00 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
 
 ## Environment (verified 2026-10-26)
 - Claude cloud workspace (Linux), Node 22.23.4, npm 10.9.9, Python 3.13, git 2.43. Files/shell/web search/web fetch available.
@@ -12,7 +12,7 @@ Updated: 2026-10-26 20:50 (Europe/Berlin). Keep this file short; it is the hand-
 
 ## Repository
 - Path: /home/claude/cryptoscanner (cloud workspace). Git initialised; first commit pending at the time of writing (see git log).
-- Uncommitted changes: none after commit.
+- Last commit: 487fe3e (records Bitpanda, Gnosis Pay). Uncommitted: none.
 
 ## Done with proof (2026-10-26)
 - Schema 1.0.0 for cards and affiliate programmes; validator with business rules → `npm run validate`: 2 records, 0 errors.
@@ -30,7 +30,7 @@ Updated: 2026-10-26 20:50 (Europe/Berlin). Keep this file short; it is the hand-
 | /calculator (client-side engine) | implemented | build only |
 | /methodology, /how-we-make-money, /legal, /contact | implemented | build only |
 | Mobile rendering 360–1440 | blocked in workspace | needs a browser (Mac) |
-| Verified card records | not started | 0 of 15 target |
+| Verified card records | 2 `validated` (single read), 0 `published` | data/cards/bitpanda-card.json, gnosis-pay-card.json; `npm run validate` 4 records 0 errors |
 | Affiliate matrix | not started (schema ready) | — |
 | Sitemap, structured data, analytics | not started | — |
 
@@ -38,7 +38,7 @@ Updated: 2026-10-26 20:50 (Europe/Berlin). Keep this file short; it is the hand-
 GitHub repo: planned · hosting: planned · scheduled tasks: planned · analytics: planned · affiliate dashboards: none.
 
 ## Decisions awaited from David
-1. Folder on the Mac to receive the project (proposed: ~/webdev/cryptoscanner) so the site can be run and browser-tested there.
+1. Folder on the Mac (automatic request was refused by auto mode; needs manual 'Add folder') to receive the project (proposed: ~/webdev/cryptoscanner) so the site can be run and browser-tested there.
 2. Initial/monthly spend ceiling (tools, hosting, ads) — assumed €0 until stated.
 3. Publishing entity (ADX or a new one) and its country — assumed none.
 4. Priority launch country within Europe — assumed none (EEA-wide, DE/FR first for verification).
@@ -46,6 +46,6 @@ GitHub repo: planned · hosting: planned · scheduled tasks: planned · analytic
 
 ## Next work (in order)
 1. Push the repo to the Mac (or GitHub) and run the five-width layout + interaction check in the built-in browser; fix what breaks.
-2. Research & verify the first 3 real card records from official sources (eligibility, KYC, fees, rewards, evidence with dates) → `data/cards/`, record_status validated → published only after a second read.
+2. Second read of Bitpanda + Gnosis Pay (then `published`); Nexo record (country list missing on nexo.com — find the official eligible-country list); then Wirex, Crypto.com, Bybit EEA. Research & verify real card records from official sources (eligibility, KYC, fees, rewards, evidence with dates) → `data/cards/`, record_status validated → published only after a second read.
 3. Affiliate matrix: identify programmes for those 3 providers, statuses `identified`/`terms_verified`, no application sent.
 4. Freshness policy + `scripts/expire-promos.ts` (date-based expiry without re-reading pages) + sitemap.
