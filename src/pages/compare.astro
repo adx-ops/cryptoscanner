@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import type { Fee } from '../lib/types.ts';
+import { allCards, defaultVariantAndTier, rewardSummary, recurringCostSummary, outboundLink, isAvailableOption } from '../lib/data.ts';
+// Static page: all cards are embedded, the client picks the ones in ?cards= (slugs only).
+const cards = allCards().filter(isAvailableOption).map((c) => {
+  const { variant, tier } = defaultVariantAndTier(c);
+  const rs = rewardSummary(tier);
+  const fee = (type: Fee['type']) => { const f = tier.fees.find((x) => x.type === type); if (!f) return 'unknown'; if (f.kind === 'none') return 'none'; if (f.kind === 'unknown') return 'unknown'; return [f.amount ? `${f.amount.amount} ${f.amount.currency}` : '', f.percent !== undefined ? `${f.percent}%` : ''].filter(Boolean).join(' + ') + (f.free_allowance?.amount ? ` (first ${f.free_allowance.amount.amount} ${f.free_allowance.amount.currency}/${f.free_allowance.period ?? 'month'} free)` : ''); };
+  const link = outboundLink(c);
+  return {
+    slug: c.slug, name: c.name, href: link.href, monetised: link.monetised,
+    rows: {
+      'Type': `${c.category.replace('_', ' ')} · ${c.form_factors.join(' + ')}`,
+      'Region': variant.region_label,
+      'Base reward': rs.base, 'Conditional max': rs.max, 'Promotion': rs.promo,
+      'Recurring cost': recurringCostSummary(tier),
+      'FX fee': fee('fx'), 'ATM fee': fee('atm_withdrawal'), 'Top-up fee': fee('topup'), 'Issuance': fee('issuance'), 'Delivery': fee('delivery'),
+      'Identity check': `${variant.kyc.initial_verification.replace(/_/g, ' ')} (${variant.kyc.editorial_level})`,
+      'Custody': c.custody.replace('_', '-'),
+      'Mobile wallets': tier.mobile_wallets?.length ? `${tier.mobile_wallets.join(', ').replace(/_/g, ' ')}${tier.mobile_wallets_status !== 'verified' ? ' (unverified)' : ''}` : 'unknown',
+      'Data verified': c.freshness.last_content_verified_at ? c.freshness.last_content_verified_at.slice(0, 10) : 'not verified',
+    },
+  };
+});
+const rowLabels = cards[0] ? Object.keys(cards[0].rows) : [];
+---
+<Base title="Compare crypto cards side by side" description="Side-by-side comparison of crypto card rewards, fees, availability and verification requirements." canonicalPath="/compare" noindex={true}>
+  <h1>Compare cards</h1>
+  <p class="muted">Pick two or three cards from the <a href="/">catalogue</a>. Values come from the default free tier of each card's first regional variant; see each card page for other tiers.</p>
+  <div id="picker" class="card" style="margin-bottom:16px">
+    <p style="margin-top:0"><strong>Select cards</strong> (2–3)</p>
+    <div class="picks">
+      {cards.map((c) => <label class="chk"><input type="checkbox" value={c.slug} /> {c.name}</label>)}
+    </div>
+  </div>
+  <p id="hint" class="card">Select at least two cards to compare.</p>
+  <div class="table-wrap" id="table-wrap" hidden>
+    <table id="cmp">
+      <thead><tr><th scope="col">Criterion</th>{cards.map((c) => <th scope="col" data-col={c.slug}>{c.name}</th>)}</tr></thead>
+      <tbody>
+        {rowLabels.map((label) => (
+          <tr><th scope="row">{label}</th>{cards.map((c) => <td data-col={c.slug}>{(c.rows as Record<string, string>)[label]}</td>)}</tr>
+        ))}
+        <tr><th scope="row">Go to provider</th>{cards.map((c) => (
+          <td data-col={c.slug}><a class="btn" href={c.href} rel={c.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">{c.monetised ? 'Visit (affiliate link)' : 'Official site (not an affiliate link)'}</a></td>
+        ))}</tr>
+      </tbody>
+    </table>
+  </div>
+</Base>
+
+<style>
+  .picks { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chk { display: inline-flex; align-items: center; gap: 6px; min-height: var(--tap); padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
+  .chk input { width: 18px; height: 18px; min-height: 0; margin: 0; }
+  #cmp th[scope="row"] { position: sticky; left: 0; background: var(--bg); min-width: 110px; }
+  #cmp td, #cmp th[scope="col"] { min-width: 150px; }
+</style>
+
+<script>
+  const boxes = Array.from(document.querySelectorAll<HTMLInputElement>('#picker input'));
+  const wrap = document.getElementById('table-wrap')!;
+  const hint = document.getElementById('hint')!;
+  function apply(sel: string[]) {
+    document.querySelectorAll<HTMLElement>('[data-col]').forEach((el) => { el.hidden = !sel.includes(el.dataset.col!); });
+    wrap.hidden = sel.length < 2; hint.hidden = sel.length >= 2;
+    const url = new URL(location.href);
+    if (sel.length) url.searchParams.set('cards', sel.join(',')); else url.searchParams.delete('cards');
+    history.replaceState(null, '', url);
+  }
+  const initial = (new URL(location.href).searchParams.get('cards') || '').split(',').filter(Boolean).slice(0, 3);
+  boxes.forEach((b) => { b.checked = initial.includes(b.value); b.addEventListener('change', () => {
+    const sel = boxes.filter((x) => x.checked).map((x) => x.value);
+    if (sel.length > 3) { b.checked = false; return; }
+    apply(sel);
+  }); });
+  apply(boxes.filter((x) => x.checked).map((x) => x.value));
+</script>

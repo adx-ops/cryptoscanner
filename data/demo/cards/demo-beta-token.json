@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "demo-beta-token",
+  "slug": "demo-beta-token",
+  "name": "Demo Beta Token Card",
+  "brand": "Demo Beta (fictional)",
+  "provider_id": "demo-beta",
+  "network": "other",
+  "category": "prepaid",
+  "record_status": "candidate",
+  "product_status": "active",
+  "is_demo": true,
+  "form_factors": ["virtual"],
+  "custody": "self_custodial",
+  "funding": { "mechanism": "prefund_crypto", "conversion": "at_topup", "evidence": ["ev-demo-beta-1"] },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "demo-beta-token-global",
+      "region_label": "Selected countries (demo)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": ["DE", "FR", "CH"],
+        "residence_excluded": ["US", "GB"],
+        "default_for_unlisted": "to_confirm",
+        "evidence": ["ev-demo-beta-1"],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "not_required_initially",
+        "editorial_level": "light",
+        "requirements": ["email"],
+        "stages_note": "Demo: no identity check at virtual card order; checks may apply at top-up thresholds (fictional).",
+        "evidence": ["ev-demo-beta-1"],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": { "type": "free", "status": "hypothesis", "evidence": ["ev-demo-beta-1"] },
+          "fees": [
+            { "type": "issuance", "kind": "fixed", "amount": { "amount": 10, "currency": "USD" }, "period": "once", "status": "hypothesis", "evidence": ["ev-demo-beta-1"] },
+            { "type": "topup", "kind": "percent", "percent": 1.5, "period": "per_transaction", "status": "hypothesis", "evidence": ["ev-demo-beta-1"] },
+            { "type": "fx", "kind": "percent", "percent": 1, "period": "per_transaction", "status": "hypothesis", "evidence": ["ev-demo-beta-1"] },
+            { "type": "subscription", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-beta-1"] },
+            { "type": "atm_withdrawal", "kind": "unknown", "status": "unknown" }
+          ],
+          "rewards": [
+            { "type": "base", "percent": 2, "payout": { "kind": "token", "code": "DMO" }, "requires": "none", "status": "hypothesis", "evidence": ["ev-demo-beta-1"] },
+            { "type": "signup_bonus", "fixed": { "amount": 15, "currency": "USD" }, "payout": { "kind": "fiat", "code": "USD" }, "min_spend": { "amount": 100, "currency": "USD" }, "status": "hypothesis", "evidence": ["ev-demo-beta-1"] }
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-demo-beta-1",
+      "url": "https://example.invalid/demo-beta/fees",
+      "title": "Fictional demo fee page (not a real source)",
+      "source_type": "demo",
+      "excerpt": "Demonstration data. No real product.",
+      "accessed_at": "2026-10-26T19:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": { "currency": "USD" },
+      "verification": "hypothesis"
+    }
+  ],
+  "links": { "official_url": "https://example.invalid/demo-beta", "affiliate": { "program_id": null, "status": "none", "url": null } },
+  "freshness": { "last_content_verified_at": null, "last_auto_check_at": null },
+  "changelog": [],
+  "editorial": {
+    "summary": "Fictional token-reward card used to test unknown costs and token payouts without a price.",
+    "good_for": ["Testing token payouts"],
+    "not_for": ["Any real decision"],
+    "watch_outs": ["ATM fee unknown in demo"]
+  }
+}

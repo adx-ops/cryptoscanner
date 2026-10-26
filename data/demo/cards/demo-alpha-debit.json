@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "demo-alpha-debit",
+  "slug": "demo-alpha-debit",
+  "name": "Demo Alpha Debit",
+  "brand": "Demo Alpha (fictional)",
+  "provider_id": "demo-alpha",
+  "issuer": { "name": "Fictional Issuer Ltd", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+  "network": "other",
+  "category": "debit",
+  "record_status": "candidate",
+  "product_status": "active",
+  "is_demo": true,
+  "form_factors": ["virtual", "physical"],
+  "custody": "custodial",
+  "funding": { "mechanism": "prefund_crypto", "conversion": "at_spend", "supported_assets_note": "Fictional demo data.", "evidence": ["ev-demo-alpha-1"] },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "demo-alpha-debit-eea",
+      "region_label": "EEA (demo)",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": ["DE", "FR", "ES", "IT", "NL", "PT", "IE", "AT", "BE"],
+        "residence_excluded": ["GB"],
+        "default_for_unlisted": "to_confirm",
+        "delivery_countries": ["DE", "FR", "ES", "IT", "NL", "PT", "IE", "AT", "BE"],
+        "evidence": ["ev-demo-alpha-1"],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": ["id_document", "selfie", "proof_of_address"],
+        "stages_note": "Demo: KYC at account creation.",
+        "evidence": ["ev-demo-alpha-1"],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "free",
+          "name": "Free",
+          "access": { "type": "free", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+          "fees": [
+            { "type": "issuance", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "delivery", "kind": "fixed", "amount": { "amount": 9.9, "currency": "EUR" }, "period": "once", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "subscription", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "fx", "kind": "percent", "percent": 2, "period": "per_transaction", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "atm_withdrawal", "kind": "fixed_plus_percent", "amount": { "amount": 2, "currency": "EUR" }, "percent": 1, "period": "per_transaction", "free_allowance": { "amount": { "amount": 200, "currency": "EUR" }, "period": "month" }, "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "topup", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "inactivity", "kind": "unknown", "status": "unknown" }
+          ],
+          "rewards": [
+            { "type": "base", "percent": 1, "payout": { "kind": "fiat", "code": "EUR" }, "requires": "none", "cap": { "amount": { "amount": 20, "currency": "EUR" }, "period": "month" }, "excluded_categories": ["cash-like", "gambling"], "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "promotional", "percent": 3, "payout": { "kind": "fiat", "code": "EUR" }, "requires": "none", "cap": { "amount": { "amount": 30, "currency": "EUR" }, "period": "month" }, "valid_from": "2026-10-01", "valid_until": "2026-12-31", "description": "Demo launch promotion (fictional).", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] }
+          ],
+          "limits": [
+            { "type": "spend", "amount": { "amount": 5000, "currency": "EUR" }, "period": "month", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] }
+          ],
+          "mobile_wallets": ["apple_pay", "google_pay"],
+          "mobile_wallets_status": "hypothesis"
+        },
+        {
+          "id": "plus",
+          "name": "Plus",
+          "access": { "type": "subscription", "amount": { "amount": 9.99, "currency": "EUR" }, "period": "month", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+          "fees": [
+            { "type": "issuance", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "delivery", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "subscription", "kind": "fixed", "amount": { "amount": 9.99, "currency": "EUR" }, "period": "month", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "fx", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "atm_withdrawal", "kind": "fixed_plus_percent", "amount": { "amount": 2, "currency": "EUR" }, "percent": 1, "period": "per_transaction", "free_allowance": { "amount": { "amount": 500, "currency": "EUR" }, "period": "month" }, "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "topup", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] },
+            { "type": "inactivity", "kind": "none", "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] }
+          ],
+          "rewards": [
+            { "type": "base", "percent": 2, "payout": { "kind": "fiat", "code": "EUR" }, "requires": "subscription", "cap": { "amount": { "amount": 60, "currency": "EUR" }, "period": "month" }, "excluded_categories": ["cash-like", "gambling"], "status": "hypothesis", "evidence": ["ev-demo-alpha-1"] }
+          ],
+          "mobile_wallets": ["apple_pay", "google_pay"],
+          "mobile_wallets_status": "hypothesis"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-demo-alpha-1",
+      "url": "https://example.invalid/demo-alpha/terms",
+      "title": "Fictional demo terms (not a real source)",
+      "source_type": "demo",
+      "excerpt": "Demonstration data generated to exercise the data model and calculator. No real product.",
+      "accessed_at": "2026-10-26T19:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": { "countries": ["DE", "FR"], "currency": "EUR" },
+      "verification": "hypothesis"
+    }
+  ],
+  "links": { "official_url": "https://example.invalid/demo-alpha", "affiliate": { "program_id": null, "status": "none", "url": null } },
+  "freshness": { "last_content_verified_at": null, "last_auto_check_at": null },
+  "changelog": [],
+  "editorial": {
+    "summary": "Fictional card used to test the comparator. Never shown as verified.",
+    "good_for": ["Testing the data model"],
+    "not_for": ["Any real decision"],
+    "watch_outs": ["Demo data"]
+  }
+}

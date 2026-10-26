@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { allCards, outboundLink, isAvailableOption } from '../../lib/data.ts';
+import type { Fee, Reward, CardRecord } from '../../lib/types.ts';
+export function getStaticPaths() { return allCards().map((c) => ({ params: { slug: c.slug }, props: { card: c } })); }
+const { card } = Astro.props as { card: CardRecord };
+const link = outboundLink(card);
+const available = isAvailableOption(card);
+const ev = new Map(card.evidence.map((e) => [e.id, e]));
+const money = (m?: { amount: number; currency: string }) => (m ? `${m.amount} ${m.currency}` : '');
+const feeText = (f: Fee) => {
+  if (f.kind === 'none') return 'None';
+  if (f.kind === 'unknown') return 'Unknown';
+  const parts = [f.amount ? money(f.amount) : '', f.percent !== undefined ? `${f.percent}%` : ''].filter(Boolean).join(' + ');
+  const per = f.period ? ` / ${f.period.replace('_', ' ')}` : '';
+  const allow = f.free_allowance?.amount ? `; first ${money(f.free_allowance.amount)} per ${f.free_allowance.period ?? 'month'} free` : f.free_allowance?.count !== undefined ? `; first ${f.free_allowance.count} per ${f.free_allowance.period ?? 'month'} free` : '';
+  return `${parts}${per}${allow}${f.conditions ? ` — ${f.conditions}` : ''}`;
+};
+const rewardText = (r: Reward) => {
+  const amt = r.percent !== undefined ? `${r.percent}%` : r.fixed ? money(r.fixed) : '';
+  const unit = r.payout.code ?? r.payout.kind;
+  const cap = r.cap ? `, capped at ${money(r.cap.amount)}/${r.cap.period}` : '';
+  const req = r.requires && r.requires !== 'none' ? `, requires ${r.requires}` : '';
+  const win = r.valid_until ? `, until ${r.valid_until}` : '';
+  const excl = r.excluded_categories?.length ? `; excludes ${r.excluded_categories.join(', ')}` : '';
+  return `${amt} paid in ${unit}${cap}${req}${win}${excl}${r.conditions ? ` — ${r.conditions}` : ''}`;
+};
+---
+<Base title={`${card.name} — rewards, fees, availability`} description={card.editorial.summary ?? `${card.name}: rewards, fees, availability by country and identity-check requirements, with sources.`} canonicalPath={`/cards/${card.slug}`}>
+  <p><a href="/">← All cards</a></p>
+  <h1>{card.name}</h1>
+  <p class="muted">{card.brand} · {card.category.replace('_', ' ')} · {card.form_factors.join(' + ')} · custody: {card.custody.replace('_', '-')}{card.network && card.network !== 'unknown' ? ` · ${card.network}` : ''}</p>
+  {!available && <p class="card" style="border-color:var(--bad)"><strong>This product is {card.product_status}.</strong> It is kept for reference and is not an available option.</p>}
+  {card.editorial.summary && <p>{card.editorial.summary}</p>}
+
+  <div class="grid cols-2">
+    <section class="card"><h2 style="margin-top:0">Good for</h2><ul>{(card.editorial.good_for ?? []).map((x) => <li>{x}</li>)}</ul></section>
+    <section class="card"><h2 style="margin-top:0">Not for</h2><ul>{(card.editorial.not_for ?? []).map((x) => <li>{x}</li>)}</ul></section>
+  </div>
+  {card.editorial.watch_outs?.length ? <section class="card" style="margin-top:12px"><h2 style="margin-top:0">Watch out</h2><ul>{card.editorial.watch_outs.map((x) => <li>{x}</li>)}</ul></section> : null}
+
+  {card.variants.map((v) => (
+    <section>
+      <h2>{v.region_label} <span class="muted">({v.currency})</span></h2>
+      <h3>Availability (residence)</h3>
+      <p>Open to residents of: {v.eligibility.residence_allowed.length ? v.eligibility.residence_allowed.join(', ') : 'none listed'} <StatusBadge s={v.eligibility.status ?? 'unknown'} /><br />
+      Excluded: {v.eligibility.residence_excluded.length ? v.eligibility.residence_excluded.join(', ') : 'none listed'}<br />
+      Other countries: {v.eligibility.default_for_unlisted === 'ineligible' ? 'not eligible' : 'to confirm with the provider'}.
+      {v.eligibility.nationality_restrictions_note && <><br />Nationality: {v.eligibility.nationality_restrictions_note}</>}
+      {v.eligibility.usage_note && <><br />Usage: {v.eligibility.usage_note}</>}</p>
+      <h3>Identity verification</h3>
+      <p>{v.kyc.initial_verification.replace(/_/g, ' ')} <StatusBadge s={v.kyc.status} /> · editorial level: <strong>{v.kyc.editorial_level}</strong> (<a href="/methodology#kyc">what this means</a>)<br />
+      {v.kyc.requirements?.length ? `Documents: ${v.kyc.requirements.join(', ').replace(/_/g, ' ')}.` : ''} {v.kyc.stages_note} {v.kyc.thresholds_note}</p>
+
+      {v.tiers.map((t) => (
+        <article class="card" style="margin-top:12px">
+          <h3 style="margin-top:0">{t.name} tier <StatusBadge s={t.access.status} /></h3>
+          <p class="muted">Access: {t.access.type === 'free' ? 'free' : t.access.type === 'subscription' ? `subscription ${money(t.access.amount)}/${t.access.period}` : `${t.access.type} ${t.access.token_amount ?? ''} ${t.access.token ?? ''}${t.access.lock_months ? ` for ${t.access.lock_months} months` : ''}`}{t.access.note ? ` — ${t.access.note}` : ''}</p>
+          <h4>Rewards</h4>
+          <dl class="kv">
+            {t.rewards.map((r) => <><dt>{r.type.replace('_', ' ')}</dt><dd>{rewardText(r)} <StatusBadge s={r.status} /></dd></>)}
+            {t.rewards.length === 0 && <><dt>Rewards</dt><dd>None documented</dd></>}
+          </dl>
+          <h4>Fees</h4>
+          <dl class="kv">
+            {t.fees.map((f) => <><dt>{f.type.replace('_', ' ')}</dt><dd>{feeText(f)} <StatusBadge s={f.status} /></dd></>)}
+          </dl>
+          {t.limits?.length ? <><h4>Limits</h4><dl class="kv">{t.limits.map((l) => <><dt>{l.type.replace('_', ' ')}</dt><dd>{money(l.amount)}{l.period ? ` / ${l.period}` : ''} {l.note ?? ''} <StatusBadge s={l.status} /></dd></>)}</dl></> : null}
+          {t.mobile_wallets?.length ? <p class="muted">Mobile wallets: {t.mobile_wallets.join(', ').replace(/_/g, ' ')} <StatusBadge s={t.mobile_wallets_status ?? 'unknown'} /></p> : null}
+        </article>
+      ))}
+    </section>
+  ))}
+
+  <section>
+    <h2>Sources and verification</h2>
+    <p class="muted">Content last verified: <strong>{card.freshness.last_content_verified_at ? card.freshness.last_content_verified_at.slice(0, 10) : 'not yet verified'}</strong>. Record status: {card.record_status}.</p>
+    <ul>
+      {card.evidence.map((e) => (
+        <li><a href={e.url} rel="noopener">{e.title}</a> — {e.source_type.replace('_', ' ')}, accessed {e.accessed_at.slice(0, 10)}{e.scope?.countries?.length ? `, scope: ${e.scope.countries.join(', ')}` : ''} <StatusBadge s={e.verification} />{e.excerpt && <><br /><span class="muted">{e.excerpt}</span></>}{e.contradiction_note && <><br /><span class="badge bad">contradiction</span> {e.contradiction_note}</>}</li>
+      ))}
+    </ul>
+    {card.changelog.length > 0 && <><h3>Changes</h3><ul>{card.changelog.map((c) => <li>{c.date.slice(0, 10)}: {c.field} — {c.reason}</li>)}</ul></>}
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <p style="margin:0 0 10px"><a class="btn" href={`/calculator?card=${card.slug}`}>Estimate your net value</a></p>
+    {available
+      ? <a class="btn primary" href={link.href} rel={link.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">{link.monetised ? `Go to ${card.brand} (affiliate link)` : `Go to ${card.brand} official site (not an affiliate link)`}</a>
+      : <span class="btn" aria-disabled="true">Not available</span>}
+    <p class="muted" style="font-size:0.85rem;margin-bottom:0">Listing here does not guarantee the issuer will accept you. <a href="/contact">Report an error</a>.</p>
+  </section>
+</Base>
+<style> h3 { font-size: 1.05rem; margin: 18px 0 6px; } h4 { margin: 12px 0 4px; font-size: 0.95rem; } ul { padding-left: 20px; } </style>

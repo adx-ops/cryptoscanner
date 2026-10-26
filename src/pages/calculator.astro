@@ -1,0 +1,98 @@
+---
+import Base from '../layouts/Base.astro';
+import { allCards, isAvailableOption } from '../lib/data.ts';
+import { CALC_VERSION } from '../lib/calc/engine.ts';
+// The engine runs in the browser with the same code tested in src/lib/calc. No model, no network.
+const cards = allCards().filter(isAvailableOption);
+const payload = cards.map((c) => ({ id: c.id, name: c.name, is_demo: c.is_demo, product_status: c.product_status, record_status: c.record_status, freshness: c.freshness, variants: c.variants }));
+---
+<Base title="Crypto card rewards & cost calculator" description="Estimate the net recurring value of a crypto card for your country, spending and fee profile. Deterministic, sourced, no sign-up." canonicalPath="/calculator">
+  <h1>Rewards &amp; cost calculator</h1>
+  <p class="muted">Estimated net recurring value = calculable recurring rewards − recurring fees − calculable variable fees. One-off fees and bonuses are shown separately. Unknown costs make a result <em>partial</em>; they are never counted as zero. Engine version {CALC_VERSION}.</p>
+
+  <form id="calc" class="card" novalidate>
+    <div class="grid cols-2">
+      <div class="field"><label for="c-country">Country of residence</label><select id="c-country"><option value="">Choose</option>{['AT','BE','CH','DE','DK','ES','FI','FR','GB','IE','IT','NL','NO','PL','PT','SE'].map((c) => <option value={c}>{c}</option>)}</select></div>
+      <div class="field"><label for="c-currency">Reference currency</label><select id="c-currency"><option>EUR</option><option>USD</option><option>GBP</option><option>CHF</option></select></div>
+      <div class="field"><label for="c-spend">Monthly card spend</label><input id="c-spend" type="number" inputmode="decimal" min="0" step="1" value="1000" /></div>
+      <div class="field"><label for="c-eligible">Share of spend that earns rewards (%)</label><input id="c-eligible" type="number" inputmode="numeric" min="0" max="100" value="90" /></div>
+      <div class="field"><label for="c-fx">Share of spend in foreign currency (%)</label><input id="c-fx" type="number" inputmode="numeric" min="0" max="100" value="10" /></div>
+      <div class="field"><label for="c-atm-n">ATM withdrawals per month</label><input id="c-atm-n" type="number" inputmode="numeric" min="0" value="1" /></div>
+      <div class="field"><label for="c-atm-a">ATM total per month</label><input id="c-atm-a" type="number" inputmode="decimal" min="0" value="100" /></div>
+      <div class="field"><label for="c-months">Projection length (months)</label><input id="c-months" type="number" inputmode="numeric" min="1" max="12" value="12" /></div>
+      <div class="field"><label for="c-start">Start month</label><input id="c-start" type="month" /></div>
+    </div>
+    <fieldset style="border:0;padding:0;margin:0 0 12px"><legend style="font-weight:600;margin-bottom:6px">I would accept</legend>
+      <label class="inline"><input type="checkbox" id="c-sub" /> a paid subscription tier</label>
+      <label class="inline"><input type="checkbox" id="c-hold" /> holding tokens for a tier</label>
+      <label class="inline"><input type="checkbox" id="c-lock" /> locking / staking tokens for a tier</label>
+    </fieldset>
+    <button type="submit" class="btn primary">Calculate</button>
+  </form>
+
+  <div id="results" aria-live="polite"></div>
+  <script type="application/json" id="cards-data" set:html={JSON.stringify(payload)} />
+</Base>
+
+<style> .inline { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); margin-right: 16px; font-weight: 500; } .inline input { width: 20px; height: 20px; min-height: 0; } .res { margin-top: 12px; } .res h3 { margin: 0 0 4px; } .amt { font-variant-numeric: tabular-nums; } .neg { color: var(--bad); } </style>
+
+<script>
+  import { calculate, fromMinor, type Scenario, type CalcResult } from '../lib/calc/engine.ts';
+  const cards = JSON.parse(document.getElementById('cards-data')!.textContent || '[]');
+  const form = document.getElementById('calc') as HTMLFormElement;
+  const out = document.getElementById('results')!;
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+  const now = new Date(); $('c-start').value = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+  try { const saved = localStorage.getItem('cs.country'); if (saved) $('c-country').value = saved; } catch {}
+  const preselect = new URL(location.href).searchParams.get('card');
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+  const fmt = (minor: number, cur: string) => `${fromMinor(minor).toLocaleString('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${cur}`;
+
+  function render(results: { name: string; r: CalcResult; tierName: string }[]) {
+    if (!results.length) { out.innerHTML = '<p class="card">No card can be evaluated for these settings.</p>'; return; }
+    const order = { complete: 0, partial: 1, insufficient_data: 2, not_applicable: 3 };
+    results.sort((a, b) => order[a.r.status] - order[b.r.status] || ((b.r.totals?.net ?? -Infinity) - (a.r.totals?.net ?? -Infinity)));
+    out.innerHTML = results.map(({ name, r, tierName }) => {
+      const t = r.totals;
+      const head = `<h3>${esc(name)} <span class="muted">· ${esc(tierName)}</span> <span class="badge ${r.status === 'complete' ? 'ok' : r.status === 'not_applicable' ? 'bad' : 'unk'}">${r.status.replace('_', ' ')}</span> <span class="badge ${r.eligibility === 'eligible' ? 'ok' : r.eligibility === 'ineligible' ? 'bad' : 'unk'}">${r.eligibility.replace('_', ' ')}</span></h3>`;
+      if (r.status === 'not_applicable' || !t) return `<div class="card res">${head}<p class="muted">${r.reasons.map(esc).join(' ')}</p></div>`;
+      const li = (xs: string[]) => xs.length ? `<ul>${xs.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
+      return `<div class="card res">${head}
+        <dl class="kv">
+          <dt>Rewards (${r.months.length} mo)</dt><dd class="amt">${fmt(t.rewards, r.currency)}</dd>
+          <dt>Recurring fees</dt><dd class="amt">− ${fmt(t.recurringFees, r.currency)}</dd>
+          <dt>Variable fees</dt><dd class="amt">− ${fmt(t.variableFees, r.currency)}</dd>
+          <dt><strong>Estimated net${r.status === 'partial' ? ' (partial)' : ''}</strong></dt><dd class="amt ${t.net < 0 ? 'neg' : ''}"><strong>${fmt(t.net, r.currency)}</strong></dd>
+          ${r.oneOff.fees.map((f) => `<dt>One-off: ${esc(f.label)}</dt><dd class="amt">${f.amount === null ? 'unknown' : fmt(f.amount, f.unit)}</dd>`).join('')}
+          ${r.oneOff.bonuses.map((b) => `<dt>One-off: ${esc(b.label)}</dt><dd class="amt">${b.amount === null ? (b.status === 'excluded' ? 'not valued' : `in ${esc(b.unit)}`) : fmt(b.amount, b.unit)}</dd>`).join('')}
+          ${r.nativeUnitRewards.map((n) => `<dt>${esc(n.label)}</dt><dd>${fmt(n.amount ?? 0, r.currency)}-equivalent at spend time, paid in ${esc(n.unit)} — not in the net total</dd>`).join('')}
+        </dl>
+        ${r.unknownCosts.length ? `<p><strong>Unknown costs (not counted):</strong></p>${li(r.unknownCosts)}` : ''}
+        ${r.reasons.length ? `<p><strong>Notes:</strong></p>${li(r.reasons)}` : ''}
+        <details><summary>Assumptions &amp; month-by-month</summary>${li(r.assumptions)}
+          <div class="table-wrap"><table><thead><tr><th>Month</th><th>Rewards</th><th>Fees</th><th>Net</th></tr></thead><tbody>${r.months.map((m) => `<tr><td>${m.month}</td><td class="amt">${fmt(m.rewards, r.currency)}</td><td class="amt">${fmt(m.recurringFees + m.variableFees, r.currency)}</td><td class="amt">${fmt(m.net, r.currency)}</td></tr>`).join('')}</tbody></table></div>
+        </details>
+        <p class="muted" style="font-size:0.85rem">Data verified: ${r.dataVerifiedAt ? r.dataVerifiedAt.slice(0, 10) : 'not verified'} · engine ${r.calcVersion}. Estimates compare published conditions; they are not a promise of return.</p>
+      </div>`;
+    }).join('');
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const s: Scenario = {
+      country: $('c-country').value, currency: $('c-currency').value,
+      monthlySpend: Number($('c-spend').value) || 0, eligibleShare: (Number($('c-eligible').value) || 0) / 100,
+      foreignCurrencyShare: (Number($('c-fx').value) || 0) / 100,
+      atmWithdrawals: { count: Number($('c-atm-n').value) || 0, totalAmount: Number($('c-atm-a').value) || 0 },
+      acceptsSubscription: $('c-sub').checked, acceptsHolding: $('c-hold').checked, acceptsLock: $('c-lock').checked,
+      startDate: `${$('c-start').value || '2026-01'}-01`, months: Number($('c-months').value) || 12,
+    };
+    if (!s.country) { out.innerHTML = '<p class="card">Choose your country first — availability is judged before anything else.</p>'; return; }
+    const results: { name: string; r: CalcResult; tierName: string }[] = [];
+    for (const c of cards) {
+      if (preselect && c.id !== preselect) continue;
+      for (const v of c.variants) for (const t of v.tiers) results.push({ name: c.name, tierName: `${v.region_label} · ${t.name}`, r: calculate(c, v, t, s) });
+    }
+    render(results);
+  });
+</script>

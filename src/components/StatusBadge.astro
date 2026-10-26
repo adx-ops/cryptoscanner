@@ -1,0 +1,6 @@
+---
+interface Props { s: string }
+const { s } = Astro.props;
+const cls = s === 'verified' || s === 'calculated' ? 'ok' : s === 'unknown' || s === 'hypothesis' ? 'unk' : 'bad';
+---
+<span class={`badge ${cls}`}>{s}</span>
