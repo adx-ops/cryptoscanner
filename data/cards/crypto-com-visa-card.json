@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "id": "crypto-com-visa-card",
+  "slug": "crypto-com-visa-card",
+  "name": "Crypto.com Visa Card",
+  "brand": "Crypto.com",
+  "provider_id": "crypto-com",
+  "issuer": { "name": "Foris MT Limited (Malta), Visa Principal Member and e-money institution", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": ["virtual", "physical"],
+  "custody": "custodial",
+  "funding": { "mechanism": "prefund_fiat", "conversion": "at_topup", "supported_assets_note": "Top up from the Crypto Wallet, Cash Account or another debit/credit card; crypto is converted to local fiat before loading, it cannot be loaded directly. Aggregated top-up limit €25,000/month.", "evidence": ["ev-cdc-eea-cards"] },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "crypto-com-visa-card-eea",
+      "region_label": "EEA",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "The page is the /eea edition with EUR pricing but lists no eligible countries; restricted markets are referred to an external FAQ. No country is marked eligible until an official list is read.",
+        "evidence": ["ev-cdc-eea-cards"],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [],
+        "stages_note": "Applying requires a Crypto.com account and joining 'Level Up' (the plan determines which card tier can be requested). Identity-verification details not stated on the page read.",
+        "evidence": ["ev-cdc-eea-cards"],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "midnight-blue",
+          "name": "Midnight Blue",
+          "access": { "type": "free", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+          "fees": [
+            { "type": "issuance", "kind": "unknown", "status": "unknown" },
+            { "type": "subscription", "kind": "none", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "fx", "kind": "unknown", "status": "unknown", "conditions": "Meta description claims zero FX fees; body says rates vary by jurisdiction and tier and 'fees may apply'. Treated as unknown." },
+            { "type": "atm_withdrawal", "kind": "unknown", "status": "unknown", "free_allowance": { "amount": { "amount": 200, "currency": "EUR" }, "period": "month" }, "conditions": "€200/month free; fee above the allowance not stated on the page (Help Centre)." },
+            { "type": "topup", "kind": "unknown", "status": "unknown" }
+          ],
+          "rewards": [
+            { "type": "base", "percent": 0, "payout": { "kind": "token", "code": "CRO" }, "requires": "none", "conditions": "0% everyday CRO rewards on the free tier; 'up to 5%' applies to travel-category rewards only.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "conditional_max", "percent": 5, "payout": { "kind": "token", "code": "CRO" }, "requires": "none", "conditions": "Travel rewards up to 5% (eligible travel merchants; details on page footnotes).", "status": "verified", "evidence": ["ev-cdc-eea-cards"] }
+          ],
+          "limits": [
+            { "type": "atm_withdrawal", "amount": { "amount": 10000, "currency": "EUR" }, "period": "month", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "topup", "amount": { "amount": 25000, "currency": "EUR" }, "period": "month", "status": "verified", "evidence": ["ev-cdc-eea-cards"] }
+          ]
+        },
+        {
+          "id": "ruby-steel",
+          "name": "Ruby Steel",
+          "access": { "type": "subscription", "amount": { "amount": 3.99, "currency": "EUR" }, "period": "month", "note": "Alternatives: €39.90/year, or a €450 CRO lock-up for 12 months instead of the subscription.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+          "fees": [
+            { "type": "issuance", "kind": "unknown", "status": "unknown" },
+            { "type": "subscription", "kind": "fixed", "amount": { "amount": 3.99, "currency": "EUR" }, "period": "month", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "fx", "kind": "unknown", "status": "unknown" },
+            { "type": "atm_withdrawal", "kind": "unknown", "status": "unknown", "free_allowance": { "amount": { "amount": 400, "currency": "EUR" }, "period": "month" }, "conditions": "€400/month free; fee above not stated." },
+            { "type": "topup", "kind": "unknown", "status": "unknown" }
+          ],
+          "rewards": [
+            { "type": "base", "percent": 1.5, "payout": { "kind": "token", "code": "CRO" }, "requires": "subscription", "cap": { "amount": { "amount": 750, "currency": "USD" }, "period": "month" }, "conditions": "1.5% everyday CRO rewards, capped at USD 750 rewards per month; some merchant categories excluded.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "conditional_max", "percent": 20, "payout": { "kind": "token", "code": "CRO" }, "requires": "subscription", "conditions": "Travel rewards up to 20%.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "non_monetary", "payout": { "kind": "other" }, "description": "Spotify and Truth+ subscription rebates for 3 months, credited in CRO.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] }
+          ]
+        },
+        {
+          "id": "jade-green-royal-indigo",
+          "name": "Jade Green / Royal Indigo",
+          "access": { "type": "subscription", "amount": { "amount": 24.99, "currency": "EUR" }, "period": "month", "note": "Alternatives: €249.90/year, or a €4,500 CRO lock-up for 12 months.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+          "fees": [
+            { "type": "issuance", "kind": "unknown", "status": "unknown" },
+            { "type": "subscription", "kind": "fixed", "amount": { "amount": 24.99, "currency": "EUR" }, "period": "month", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "fx", "kind": "unknown", "status": "unknown" },
+            { "type": "atm_withdrawal", "kind": "unknown", "status": "unknown", "free_allowance": { "amount": { "amount": 800, "currency": "EUR" }, "period": "month" }, "conditions": "€800/month free; fee above not stated." },
+            { "type": "topup", "kind": "unknown", "status": "unknown" }
+          ],
+          "rewards": [
+            { "type": "base", "percent": 2.5, "payout": { "kind": "token", "code": "CRO" }, "requires": "subscription", "cap": { "amount": { "amount": 1500, "currency": "USD" }, "period": "month" }, "conditions": "2.5% everyday CRO rewards, capped at USD 1,500 per month.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "conditional_max", "percent": 25, "payout": { "kind": "token", "code": "CRO" }, "requires": "subscription", "conditions": "Travel rewards up to 25%.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "non_monetary", "payout": { "kind": "other" }, "description": "Spotify, Netflix and Truth+ rebates for 6 months; airport lounge access (annual subscribers, 2 visits/year); priority support.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] }
+          ]
+        },
+        {
+          "id": "icy-white-rose-gold",
+          "name": "Icy White / Rose Gold",
+          "access": { "type": "lock", "token": "CRO", "token_amount": 45000, "lock_months": 12, "note": "€45,000 worth of CRO locked for 12 months (token_amount here is the EUR value, not a CRO quantity).", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+          "fees": [
+            { "type": "issuance", "kind": "unknown", "status": "unknown" },
+            { "type": "subscription", "kind": "none", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "fx", "kind": "unknown", "status": "unknown" },
+            { "type": "atm_withdrawal", "kind": "unknown", "status": "unknown", "free_allowance": { "amount": { "amount": 800, "currency": "EUR" }, "period": "month" } },
+            { "type": "topup", "kind": "unknown", "status": "unknown" }
+          ],
+          "rewards": [
+            { "type": "base", "percent": 3.5, "payout": { "kind": "token", "code": "CRO" }, "requires": "lock", "cap": { "amount": { "amount": 3000, "currency": "USD" }, "period": "month" }, "conditions": "3.5% up to USD 3,000/month, then 0.5%.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "conditional_max", "percent": 30, "payout": { "kind": "token", "code": "CRO" }, "requires": "lock", "conditions": "Travel rewards up to 30%.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] }
+          ]
+        },
+        {
+          "id": "obsidian",
+          "name": "Obsidian",
+          "access": { "type": "lock", "token": "CRO", "token_amount": 450000, "lock_months": 12, "note": "€450,000 worth of CRO locked for 12 months (EUR value).", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+          "fees": [
+            { "type": "issuance", "kind": "unknown", "status": "unknown" },
+            { "type": "subscription", "kind": "none", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "fx", "kind": "unknown", "status": "unknown" },
+            { "type": "atm_withdrawal", "kind": "unknown", "status": "unknown", "free_allowance": { "amount": { "amount": 1000, "currency": "EUR" }, "period": "month" } },
+            { "type": "topup", "kind": "unknown", "status": "unknown" }
+          ],
+          "rewards": [
+            { "type": "base", "percent": 4.5, "payout": { "kind": "token", "code": "CRO" }, "requires": "lock", "cap": { "amount": { "amount": 5000, "currency": "USD" }, "period": "month" }, "conditions": "4.5% up to USD 5,000/month, then 1%.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
+            { "type": "conditional_max", "percent": 40, "payout": { "kind": "token", "code": "CRO" }, "requires": "lock", "conditions": "Travel rewards up to 40%.", "status": "verified", "evidence": ["ev-cdc-eea-cards"] }
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-cdc-eea-cards",
+      "url": "https://crypto.com/eea/cards",
+      "title": "Crypto.com Visa Card — EEA product page (tier table, FAQ, disclaimers)",
+      "source_type": "pricing_page",
+      "excerpt": "Tier table: Midnight Blue free / 0% everyday; Ruby Steel €3.99/mo or €39.90/yr or €450 lock-up, 1.5% up to USD 750/mo; Jade/Indigo €24.99/mo or €249.90/yr or €4,500 lock-up, 2.5% up to USD 1,500; Icy/Rose Gold €45,000 lock-up 3.5% up to USD 3,000 then 0.5%; Obsidian €450,000 lock-up 4.5% up to USD 5,000 then 1%. Free ATM €200/€400/€800/€800/€1,000. Issuer Foris MT Limited. Prepaid card.",
+      "accessed_at": "2026-10-26T20:20:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": { "currency": "EUR", "note": "EEA edition; no country list" },
+      "verification": "contradictory",
+      "contradiction_note": "Page says 'Visa' in title/footer but 'Prepaid Mastercard Card' in FAQ answers; meta claims zero FX fees while body says fees may apply. Record keeps Visa (issuer licence statement) and FX = unknown."
+    }
+  ],
+  "links": { "official_url": "https://crypto.com/eea/cards", "affiliate": { "program_id": null, "status": "none", "url": null } },
+  "freshness": { "last_content_verified_at": "2026-10-26T20:20:00Z", "last_auto_check_at": null },
+  "changelog": [
+    { "date": "2026-10-26T20:20:00Z", "field": "*", "reason": "Initial record from the EEA product page (single read). Help Centre fee articles not reachable; FX, top-up and ATM-overage fees remain unknown. Eligible country list missing.", "evidence": ["ev-cdc-eea-cards"], "actor": "claude" }
+  ],
+  "editorial": {
+    "summary": "Prepaid Visa issued by Foris MT (Malta) for the EEA. The free tier earns no everyday rewards; paid tiers from €3.99/month earn 1.5–4.5% in CRO with monthly USD caps, or require 12-month CRO lock-ups from €450 to €450,000.",
+    "good_for": ["People who accept a monthly fee or a 12-month CRO lock-up in exchange for CRO rewards", "Streaming-subscription rebates on Ruby and above"],
+    "not_for": ["Anyone who wants rewards without a fee or token lock (free tier earns 0% everyday)", "Anyone who needs certainty on FX, top-up and ATM-overage fees before choosing (not stated on the page)"],
+    "watch_outs": ["Rewards and lock-ups are in CRO; their value moves with the token price. No appreciation is assumed anywhere on this site.", "Caps are stated in USD while pricing is in EUR.", "Eligibility: the page gives no country list; confirm with the provider.", "The page contradicts itself on the card network (Visa vs Mastercard) and on FX fees."]
+  }
+}

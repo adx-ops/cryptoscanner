@@ -211,7 +211,10 @@ export function calculate(card: CardRecord, variant: Variant, tier: Tier, s: Sce
 
       let earned = pct(eligibleSpend, r.percent);
       const monthCap = capAmountForMonth(r);
-      if (monthCap !== null) earned = Math.min(earned, monthCap);
+      if (monthCap !== null) {
+        earned = Math.min(earned, monthCap);
+        if (r.cap && r.cap.amount.currency !== variant.currency && i === 0) base.assumptions.push(`Reward cap stated in ${r.cap.amount.currency} applied 1:1 in ${variant.currency} (no FX conversion).`);
+      }
       if (r.cap && r.cap.period === 'year') {
         const used = yearlyCapUsed.get(r) ?? 0;
         const room = Math.max(0, toMinor(r.cap.amount.amount) - used);
