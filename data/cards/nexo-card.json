@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nexo-card",
+  "slug": "nexo-card",
+  "name": "Nexo Card",
+  "brand": "Nexo",
+  "provider_id": "nexo",
+  "issuer": {
+    "name": "DiPocket UAB",
+    "status": "verified",
+    "evidence": [
+      "ev-nexo-card-page"
+    ]
+  },
+  "network": "mastercard",
+  "category": "crypto_backed_credit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "at_spend",
+    "supported_assets_note": "Two modes switchable at any time: Credit Mode spends against a crypto-backed credit line without selling assets; Debit Mode spends stablecoins, crypto or FiatX balances with automatic conversion.",
+    "evidence": [
+      "ev-nexo-card-page"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": 1.9,
+    "ltv_percent": "unknown",
+    "liquidation_risk": "Credit Mode borrows against crypto collateral; rate stated as 'from 1.9%' per year and varies by region, loyalty tier and other factors. Margin-call/LTV terms not stated on the pages read.",
+    "evidence": [
+      "ev-nexo-card-page"
+    ]
+  },
+  "variants": [
+    {
+      "id": "nexo-card-europe",
+      "region_label": "EEA, Andorra, Monaco, UK (+ selected other jurisdictions)",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "AD",
+          "MC",
+          "GB",
+          "AR"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "Applicants must pass identity verification with a supported ID; EEA residents can only use EEA-issued documents (no driving licences).",
+        "usage_note": "Help centre: 'residents of selected European countries, including the EEA, Andorra, Monaco and the United Kingdom, as well as residents of Argentina and other selected jurisdictions'. The EEA is expanded by us into member states; 'other selected jurisdictions' are not listed. The support site footer says its information is not intended for residents of AR, PE, CO, UK or US — contradiction with the article for AR and UK, kept as 'to confirm with the provider'. Personal accounts only.",
+        "evidence": [
+          "ev-nexo-who-can-order",
+          "ev-nexo-card-page"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "phone",
+          "email",
+          "proof_of_address"
+        ],
+        "stages_note": "Identity verification (document live photo + liveness selfie + phone) at account level before any product. Regulatory questions (PEP, TIN, source of funds, expected volume) depending on country. Proof of address needed when changing country of residence. Virtual card needs ≥$50 portfolio; physical card needs ≥$5,000 portfolio, Gold or Platinum tier and an active virtual card.",
+        "evidence": [
+          "ev-nexo-setup",
+          "ev-nexo-who-can-order"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "base",
+          "name": "Base loyalty tier",
+          "access": {
+            "type": "free",
+            "note": "Loyalty tier is set by the ratio of NEXO tokens to the rest of the portfolio; Base requires none.",
+            "status": "verified",
+            "evidence": [
+              "ev-nexo-card-page"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card free; $50 minimum portfolio to activate (spendable, not a fee). Physical card free incl. shipping but requires Gold tier and $5,000 portfolio.",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page",
+                "ev-nexo-who-can-order"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "none",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No monthly or annual card fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 0.2,
+              "period": "per_transaction",
+              "conditions": "EEA/UK/CH currencies: 0.2% weekdays, 0.7% weekends; rest of world 2% weekdays, 2.5% weekends. Modelled with the weekday EEA rate; weekend and non-European spend costs more.",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "min": {
+                "amount": 1.99,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 200,
+                  "currency": "EUR"
+                },
+                "period": "month"
+              },
+              "conditions": "Free monthly ATM allowance by tier: Base €200, Silver €400, Gold €1,000, Platinum €2,000; above it 2% per withdrawal, minimum €1.99. Page hero says 'up to €2,000' without tiers — FAQ figures used.",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "conditions": "Card spends from the account balance or credit line; no separate card top-up fee stated. Debit Mode conversion spreads not stated.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.5,
+              "payout": {
+                "kind": "token",
+                "code": "NEXO"
+              },
+              "requires": "none",
+              "conditions": "Credit Mode only; requires a portfolio above $5,000 in digital assets. Base tier: 0.5% in NEXO or 0.1% in BTC (choice can be changed). No cap stated. Debit Mode cashback not stated.",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "NEXO"
+              },
+              "requires": "holding",
+              "conditions": "Platinum tier (highest NEXO-to-portfolio ratio): 2% in NEXO or 0.5% in BTC. Silver 0.7%/0.2%, Gold 1%/0.3%.",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "description": "Interest on unspent/uncollateralised balances ('up to 13%' for Loyalty members; rate varies by region and tier) — a savings product feature, not a card reward; not valued here.",
+              "status": "verified",
+              "evidence": [
+                "ev-nexo-card-page"
+              ]
+            }
+          ],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-nexo-card-page",
+      "url": "https://nexo.com/nexo-card",
+      "title": "Nexo Card product page + FAQ",
+      "source_type": "pricing_page",
+      "excerpt": "Credit/Debit modes; virtual card free ($50 min balance), physical free (Gold + $5,000); no monthly/annual/inactivity fees; ATM free €200/400/1,000/2,000 by tier then 2% min €1.99; FX 0.2%/0.7% EEA-UK-CH weekdays/weekends, 2%/2.5% elsewhere; cashback by tier 0.5%/0.7%/1%/2% NEXO or 0.1/0.2/0.3/0.5% BTC, requires >$5,000 portfolio, Credit Mode; borrowing from 1.9%; issued by DiPocket UAB.",
+      "accessed_at": "2026-10-26T19:57:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-nexo-who-can-order",
+      "url": "https://support.nexo.com/article/who-can-order-the-nexo-card",
+      "title": "Who can order the Nexo Card (help centre)",
+      "source_type": "eligibility_page",
+      "excerpt": "Available to residents of selected European countries incl. EEA, Andorra, Monaco, UK, plus Argentina and other selected jurisdictions; check eligibility in the Card section. Virtual: ≥$50 portfolio. Physical: ≥$5,000, Gold/Platinum, active virtual card. Personal accounts only; one virtual + one physical.",
+      "accessed_at": "2026-10-27T11:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "Page footer: information 'not intended for residents of Argentina, Peru, Colombia, the United Kingdom, or the United States' while the article names AR and UK as eligible."
+    },
+    {
+      "id": "ev-nexo-setup",
+      "url": "https://support.nexo.com/article/how-to-set-up-a-nexo-account",
+      "title": "How to set up a Nexo account (help centre)",
+      "source_type": "help_center",
+      "excerpt": "Identity verification: residential address, legal name, regulatory info (PEP, TIN, purpose, expected volume depending on country), live photo of ID (passport, ID card, residence permit; driver licence not for EEA residents), liveness selfie, phone verification. EEA registrations on/after 2026-06-30 may face extra national requirements.",
+      "accessed_at": "2026-10-27T11:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://nexo.com/nexo-card",
+    "affiliate": {
+      "program_id": "nexo-affiliate",
+      "status": "terms_verified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-10-27T11:05:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-10-27T11:05:00Z",
+      "field": "*",
+      "reason": "Initial record from product page (fetch) and two help-centre articles (browser read). Single read; second read required before publication.",
+      "evidence": [
+        "ev-nexo-card-page",
+        "ev-nexo-who-can-order"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Mastercard with a Credit Mode (spend against a crypto-backed credit line, from 1.9%/yr) and a Debit Mode. No card fees, low EEA FX fee, but cashback (0.5–2% in NEXO) needs a portfolio above $5,000 and Credit Mode, with the rate driven by how much NEXO you hold.",
+    "good_for": [
+      "Residents of the EEA, Andorra, Monaco or the UK who already hold a sizeable portfolio on Nexo",
+      "Low FX cost on weekday spending in European currencies",
+      "People who want to spend without selling crypto (Credit Mode) and understand the borrowing risk"
+    ],
+    "not_for": [
+      "Anyone with less than $5,000 on the platform who wants cashback",
+      "People who do not want to hold NEXO tokens for a better rate",
+      "Anyone uncomfortable with a crypto-collateralised credit line"
+    ],
+    "watch_outs": [
+      "Credit Mode is borrowing: interest accrues and collateral can be liquidated; LTV and margin-call terms are not on the pages read.",
+      "Cashback is paid in NEXO or BTC; value moves with the token. No appreciation assumed.",
+      "Weekend FX is 0.7% (EEA) and non-European spend costs 2–2.5%.",
+      "Help-centre footer and article disagree on Argentina and the UK."
+    ]
+  }
+}

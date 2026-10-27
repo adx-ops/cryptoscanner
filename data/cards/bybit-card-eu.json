@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bybit-card-eu",
+  "slug": "bybit-card-eu",
+  "name": "Bybit Card (EU)",
+  "brand": "Bybit EU",
+  "provider_id": "bybit",
+  "issuer": {
+    "name": "Harmoniie SAS (ACPR, CIB 17478) with Moorwand Ltd under a Mastercard licence",
+    "status": "verified",
+    "evidence": [
+      "ev-bybit-eu-cards"
+    ]
+  },
+  "network": "mastercard",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "No separate card balance: spending is deducted from the Bybit EU Funding Account; crypto converted at spend with a 0.9% conversion fee on top of spot trading fees.",
+    "evidence": [
+      "ev-bybit-eu-cards"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "bybit-card-eea",
+      "region_label": "EEA",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Page: 'proof of address from an eligible EEA country, issued within the last 3 months'; the list of eligible EEA countries is not published on the page, so the EEA member list is recorded as a hypothesis. Applications may be declined at Bybit's discretion.",
+        "evidence": [
+          "ev-bybit-eu-cards"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "proof_of_address"
+        ],
+        "stages_note": "Identity Verification Lv. 2 plus proof of address (<3 months) before applying. Document list for Lv. 2 not on the card page.",
+        "evidence": [
+          "ev-bybit-eu-cards"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": {
+            "type": "free",
+            "status": "verified",
+            "evidence": [
+              "ev-bybit-eu-cards"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card free; physical card $5 or 5 USDC (issuance/replacement).",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No application or annual fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "1% on top of Mastercard's exchange rate.",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 0.9,
+              "period": "per_transaction",
+              "conditions": "0.9% crypto conversion fee on top of Spot trading fees (applies when spending crypto rather than fiat).",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "conditions": "2% after a monthly free ATM limit of $100 (stated in USD).",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "conditions": "Spends from the Funding Account; no separate top-up fee stated (deposit/purchase fees on the exchange side not covered).",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "unknown-see-rewards-page"
+              },
+              "requires": "none",
+              "conditions": "1% cashback on eligible spending, no monthly cap. Payout asset not stated on this page (a January 2026 press release mentions Bitcoin cashback; not verified on an official page).",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 10,
+              "payout": {
+                "kind": "token",
+                "code": "unknown-see-rewards-page"
+              },
+              "requires": "none",
+              "conditions": "VIP tiers earn 2%–10% subject to monthly caps; VIP status depends on Bybit's VIP programme (trading volume/assets), details on the Rewards page not read.",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "signup_bonus",
+              "fixed": {
+                "amount": 120,
+                "currency": "EUR"
+              },
+              "payout": {
+                "kind": "other"
+              },
+              "conditions": "New-user welcome package: 'up to €120 cashback in your first 30 days', first month of eligible subscriptions refunded up to €50, trading-fee vouchers. T&Cs apply; no end date stated; maximum, not a guaranteed amount.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-bybit-eu-cards"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-bybit-eu-cards",
+      "url": "https://www.bybit.eu/en-EU/cards/",
+      "title": "Bybit Card EU product page + FAQ (browser read; page renders client-side)",
+      "source_type": "pricing_page",
+      "excerpt": "Eligibility: ID Verification Lv.2 + EEA proof of address <3 months. Fees FAQ: FX 1% over Mastercard rate; crypto conversion 0.9% + spot fees; annual/inactivity/cancellation none; virtual issuance none, physical $5; ATM 2% after $100/month free. Cashback 1% uncapped; VIP 2–10% with monthly caps. Welcome: up to €120 in 30 days. Issuer Harmoniie SAS / Moorwand, Mastercard.",
+      "accessed_at": "2026-10-27T11:15:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "EEA page; fees partly stated in USD"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.bybit.eu/en-EU/cards/",
+    "affiliate": {
+      "program_id": "bybit-affiliate",
+      "status": "terms_verified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-10-27T11:15:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-10-27T11:15:00Z",
+      "field": "*",
+      "reason": "Initial record from the EU card page read in a browser (single read). Rewards page and VIP caps not yet read.",
+      "evidence": [
+        "ev-bybit-eu-cards"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Mastercard debit card of Bybit EU (issued by Harmoniie SAS, France) for EEA residents: no annual fee, 1% uncapped cashback from day one, 1% FX fee and 0.9% crypto conversion fee; VIP tiers earn more with caps.",
+    "good_for": [
+      "EEA residents who already trade on Bybit EU",
+      "Simple 1% cashback without holding a platform token",
+      "Apple Pay / Google Pay users"
+    ],
+    "not_for": [
+      "Spending crypto directly without accepting a 0.9% conversion fee on top of trading fees",
+      "Frequent foreign-currency spend (1% FX)",
+      "Anyone who needs the cashback asset and VIP caps confirmed before choosing"
+    ],
+    "watch_outs": [
+      "Payout asset of the cashback is not stated on the card page.",
+      "Welcome offer is 'up to' amounts with unspecified terms and no end date.",
+      "ATM allowance and physical card fee are stated in USD on a EUR product page."
+    ]
+  }
+}
