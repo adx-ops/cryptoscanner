@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "nexo-affiliate",
+  "provider_id": "nexo",
+  "program_name": "Nexo Affiliate Program (Affiliate track / Business track)",
+  "program_url": "https://nexo.com/affiliate",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "website",
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "Form (name, email, role, contact via Telegram/WhatsApp/LinkedIn); individual review; 'Request invitation' suggests selectivity; no minimum audience.",
+  "our_status": "terms_verified",
+  "paid_action": "Share of fee revenue: trading fees, credit interest/loan volume, yield, futures; 'Nexo Card transactions' listed without a rate.",
+  "validation_conditions": "Not stated.",
+  "commission": {
+    "model_note": "Up to 50% of trading fees; up to 50% of interest revenue or up to 4% of loan volume; up to 10% of yield; card rate not stated; varies by track, region, tier.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "revenue_share": {
+    "included_products": "Exchange, credit, yield, futures, card (rate unstated), private clients",
+    "duration_note": "not stated",
+    "exclusions": "Products not available in all jurisdictions"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "bank transfer or crypto",
+    "frequency": "withdrawal typically once every 30 days",
+    "holdbacks_note": "not stated"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Affiliate track on Impact; Business track on Nexo Partner Portal. Some products cannot be advertised freely; no channel rules published.",
+  "allowed_countries_note": "Not stated; product availability varies by jurisdiction.",
+  "internal_score": {
+    "audience_fit": 5,
+    "acceptance_conditions": 3,
+    "evidence_reliability": 3,
+    "tracking_available": 4,
+    "validation_probability_label": "unknown",
+    "payout_delay_label": "medium",
+    "net_commission_label": "unknown"
+  },
+  "evidence": [
+    {
+      "url": "https://nexo.com/affiliate",
+      "title": "Nexo Affiliate Program page + FAQ",
+      "accessed_at": "2026-10-26T21:30:00Z",
+      "excerpt": "Two tracks; up to 50% of fee revenue; Nexo Card transactions listed as a revenue source without a rate; withdrawals every 30 days."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Card eligibility itself needs >$5,000 portfolio for cashback; commission depends on referred users' fee-generating activity."
+}

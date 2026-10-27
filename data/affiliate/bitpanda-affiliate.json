@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "bitpanda-affiliate",
+  "provider_id": "bitpanda",
+  "program_name": "Bitpanda Affiliate Programme",
+  "program_url": "https://www.bitpanda.com/en/affiliate",
+  "legal_entity": "Bitpanda GmbH (footer)",
+  "type": "hybrid",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Apply via app.impact.com sign-up; eligibility criteria not published on the page.",
+  "our_status": "identified",
+  "paid_action": "'Commission for every referred user' — qualifying action not defined publicly.",
+  "validation_conditions": "Not stated.",
+  "commission": {
+    "model_note": "CPA and revenue-share options depending on traffic source; no rates published.",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "not stated",
+    "frequency": "not stated"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "FAQ headings mention PPC and country restrictions but answers were not retrievable.",
+  "allowed_countries_note": "Not retrievable.",
+  "internal_score": {
+    "audience_fit": 5,
+    "acceptance_conditions": 3,
+    "evidence_reliability": 2,
+    "tracking_available": 4,
+    "validation_probability_label": "unknown",
+    "payout_delay_label": "unknown",
+    "net_commission_label": "unknown"
+  },
+  "evidence": [
+    {
+      "url": "https://www.bitpanda.com/en/affiliate",
+      "title": "Bitpanda Affiliate Programme page",
+      "accessed_at": "2026-10-26T21:30:00Z",
+      "excerpt": "CPA and Revenue Share options; apply via Impact; FAQ answers not in extracted content."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Terms must be read inside Impact after application; nothing more is public."
+}

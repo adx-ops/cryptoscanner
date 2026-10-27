@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "gnosis-pay-referral",
+  "provider_id": "gnosis-pay",
+  "program_name": "Gnosis Pay referral (ended; now via wallet partners)",
+  "program_url": "https://help.gnosispay.com/hc/en-us/articles/39632770793364-How-the-Gnosis-Pay-Referral-Program-Works",
+  "type": "unknown",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Direct programme ended 22-04-2025; referral offers are run by partner wallet apps in Europe and LATAM with their own terms.",
+  "our_status": "not_applicable",
+  "paid_action": "Unknown (partner-app specific).",
+  "commission": {
+    "model_note": "No Gnosis Pay publisher programme. Partner apps unnamed on the page.",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "unknown",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "verified"
+  },
+  "evidence": [
+    {
+      "url": "https://help.gnosispay.com/hc/en-us/articles/39632770793364-How-the-Gnosis-Pay-Referral-Program-Works",
+      "title": "How the Gnosis Pay Referral Program Works",
+      "accessed_at": "2026-10-26T21:30:00Z",
+      "excerpt": "Direct referral program ended 22-04-2025; rewards hosted by partner apps (Europe, LATAM)."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Listed without monetisation: the card can still be the best option for a visitor."
+}

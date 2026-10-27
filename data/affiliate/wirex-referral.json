@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "wirex-referral",
+  "provider_id": "wirex",
+  "program_name": "Wirex 'Earn Bitcoin' referral programme",
+  "program_url": "https://wirexapp.com/affiliate",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Must be an existing Wirex customer with at least one active card; enabled from the account's 'Earn Bitcoin' section.",
+  "our_status": "identified",
+  "paid_action": "Referred users' card load transactions.",
+  "validation_conditions": "Not stated.",
+  "commission": {
+    "model_note": "10% of gross fees from referrals in year 1, then 5% for two more years (page elsewhere says 'forever' — inconsistent). Paid in BTC. Referee gets 25% off first plastic card.",
+    "status": "contradictory"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "BTC to Wirex account",
+    "frequency": "'immediate'"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "No publisher programme found; personal referral requires holding the product. No T&C link on the page.",
+  "allowed_countries_note": "Not stated.",
+  "internal_score": {
+    "audience_fit": 4,
+    "acceptance_conditions": 2,
+    "evidence_reliability": 2,
+    "tracking_available": 2,
+    "validation_probability_label": "unknown",
+    "payout_delay_label": "short",
+    "net_commission_label": "unknown"
+  },
+  "evidence": [
+    {
+      "url": "https://wirexapp.com/affiliate",
+      "title": "Wirex referral page",
+      "accessed_at": "2026-10-26T21:30:00Z",
+      "excerpt": "10% of gross fees year 1 then 5% for two years; requires an active card; BTC payouts."
+    }
+  ],
+  "verification": "contradictory",
+  "notes": "Personal referral, not a publisher programme: requires David to be a Wirex customer. Decision needed before any use."
+}
