@@ -81,9 +81,11 @@ const canonical = site && canonicalPath ? new URL(canonicalPath, site).toString(
   .container { width: 100%; max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
   .demo-banner { background: var(--warn-bg); color: var(--warn-fg); padding: 10px 16px; text-align: center; font-size: 0.9rem; }
   .site-header { border-bottom: 1px solid var(--line); background: var(--bg-2); position: sticky; top: 0; z-index: 5; }
-  .site-header nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; max-width: 1040px; margin: 0 auto; }
-  .site-header ul { list-style: none; display: flex; gap: 2px; margin: 0; padding: 0; flex-wrap: wrap; }
-  .site-header li a { display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 10px; text-decoration: none; color: var(--fg); border-radius: 8px; font-weight: 500; font-size: 0.95rem; }
+  .site-header nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 16px; max-width: 1040px; margin: 0 auto; flex-wrap: wrap; }
+  .site-header ul { list-style: none; display: flex; gap: 2px; margin: 0; padding: 0; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; max-width: 100%; }
+  .site-header ul::-webkit-scrollbar { display: none; }
+  @media (max-width: 599px) { .site-header ul { width: 100%; margin-left: -10px; padding-right: 16px; } }
+  .site-header li a { display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 10px; text-decoration: none; color: var(--fg); border-radius: 8px; font-weight: 500; font-size: 0.95rem; white-space: nowrap; }
   .site-header li a:hover { background: var(--accent-soft); }
   .brand { font-family: var(--font-display); font-weight: 800; text-decoration: none; color: var(--fg); font-size: 1.05rem; letter-spacing: 0.08em; }
   .brand span { color: var(--accent); }
