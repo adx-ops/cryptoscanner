@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "crypto-com-affiliate",
+  "provider_id": "crypto-com",
+  "program_name": "Crypto.com Affiliate Program",
+  "program_url": "https://crypto.com/affiliate",
+  "type": "hybrid",
+  "allowed_channels": [
+    "website",
+    "social",
+    "email",
+    "unknown"
+  ],
+  "application_conditions": "Any platform; no website required. Apply via Impact.com; review about one week; partner handbook after approval.",
+  "our_status": "terms_verified",
+  "paid_action": "Referring new customers; each commissionable action validated before payment (per-product actions in contract).",
+  "validation_conditions": "Only Crypto.com-communicated new-customer incentives allowed; other codes may make referrals untrackable.",
+  "commission": {
+    "model_note": "'Up to 50%' revenue share across products plus product bonuses; fixed plan based on referred customers and trading volume; per-product rates only in the contract. Nothing stated for the card specifically.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "revenue_share": {
+    "included_products": "Not itemised publicly",
+    "duration_note": "Earnings from a referred customer generally run 180–365 days after KYC completion",
+    "exclusions": "Unknown"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "not stated",
+    "frequency": "monthly after validation",
+    "holdbacks_note": "validation period not specified"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Cannot be based in or promote to countries where affiliate marketing is prohibited or the app is unavailable (list in contract). Brand bidding and email rules not stated.",
+  "allowed_countries_note": "List in contract; not public.",
+  "evidence": [
+    {
+      "url": "https://crypto.com/affiliate",
+      "title": "Crypto.com Affiliate Program page + FAQ",
+      "accessed_at": "2026-10-26T21:30:00Z",
+      "excerpt": "Earn up to 50% across products; monthly payouts; apply via Impact.com; review ~1 week; earnings window 180–365 days after KYC."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Card-specific commission unknown: revenue share is driven by trading activity, not card orders. Do not count a card order as revenue."
+}

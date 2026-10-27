@@ -1,16 +1,22 @@
 ---
-import { knownCountries } from '../lib/data.ts';
-// Country names: a small built-in map for Europe-first launch; falls back to the ISO code.
-const NAMES: Record<string, string> = { AT: 'Austria', BE: 'Belgium', BG: 'Bulgaria', CH: 'Switzerland', CY: 'Cyprus', CZ: 'Czechia', DE: 'Germany', DK: 'Denmark', EE: 'Estonia', ES: 'Spain', FI: 'Finland', FR: 'France', GB: 'United Kingdom', GR: 'Greece', HR: 'Croatia', HU: 'Hungary', IE: 'Ireland', IS: 'Iceland', IT: 'Italy', LI: 'Liechtenstein', LT: 'Lithuania', LU: 'Luxembourg', LV: 'Latvia', MT: 'Malta', NL: 'Netherlands', NO: 'Norway', PL: 'Poland', PT: 'Portugal', RO: 'Romania', SE: 'Sweden', SI: 'Slovenia', SK: 'Slovakia', US: 'United States' };
-const codes = [...new Set([...Object.keys(NAMES), ...knownCountries()])].sort((a, b) => (NAMES[a] ?? a).localeCompare(NAMES[b] ?? b));
+import countries from '../lib/countries.json';
+import { allCards } from '../lib/data.ts';
+// Worldwide selector (ICU region names). Countries with at least one card listing them as allowed are grouped first.
+const NAMES = countries as Record<string, string>;
+const withData = new Set<string>();
+for (const c of allCards()) for (const v of c.variants) v.eligibility.residence_allowed.forEach((x) => withData.add(x));
+const byName = (a: string, b: string) => (NAMES[a] ?? a).localeCompare(NAMES[b] ?? b);
+const first = [...withData].filter((c) => NAMES[c]).sort(byName);
+const rest = Object.keys(NAMES).filter((c) => !withData.has(c)).sort(byName);
 ---
 <div class="field">
   <label for="country">Country of residence</label>
   <select id="country" name="country" autocomplete="country">
     <option value="">Choose your country</option>
-    {codes.map((c) => <option value={c}>{NAMES[c] ?? c}</option>)}
+    {first.length > 0 && <optgroup label="Countries with at least one listed card">{first.map((c) => <option value={c}>{NAMES[c]}</option>)}</optgroup>}
+    <optgroup label="All countries">{rest.map((c) => <option value={c}>{NAMES[c]}</option>)}</optgroup>
   </select>
-  <p class="muted" style="font-size:0.85rem;margin:6px 0 0">Availability is judged on published residence rules, not on where the card network is accepted. Stored on this device only.</p>
+  <p class="hint">Judged on each provider's published residence rules, never on where the card network is accepted. Your choice stays on this device.</p>
 </div>
 <script>
   const KEY = 'cs.country';

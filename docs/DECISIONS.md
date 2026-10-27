@@ -28,3 +28,15 @@ Why: no entity, no domain, no consent design yet. Contact page drafts a mailto; 
 
 ## 2026-10-26 — Demo records are fictional brands, not real card names
 Why: unverified figures attached to real brands would be misinformation even in a demo.
+
+## 2026-10-27 — Scope stays "cards only" until the affiliate matrix says otherwise
+David: "where affiliate income is most likely". Nobody can know that without the matrix; the six programmes read so far pay on referred users' *trading/fee activity*, not on card orders (Crypto.com, Nexo, Bybit), or are personal-referral only (Wirex), or have no publisher programme (Gnosis Pay), or publish no rates (Bitpanda). Revisit after 15 records.
+
+## 2026-10-27 — Affiliation only (no claim portal, no sponsored placements, no user reviews)
+David's choice. Keeps the site static and operations near zero.
+
+## 2026-10-27 — Dark-first visual identity, bold uppercase display type, single mint accent
+David's choice ("sombre, bold, fintech"). Light theme kept as system/explicit option. Fonts: Archivo (display), IBM Plex Sans (body), IBM Plex Mono (badges/figures) via Google Fonts with system fallbacks.
+
+## 2026-10-27 — Worldwide country selector, Europe-first verification
+David asked for "whole world from the start". The data model is worldwide (variants per region, 'to_confirm' default), so the selector lists all ICU regions, grouped by "has at least one listed card". Verification capacity stays Europe-first; non-European variants are added only when a provider publishes its own country list (e.g. Gnosis Pay AR/BR/CO). Country pages only when ≥5 verified cards are available there.

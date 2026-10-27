@@ -7,10 +7,11 @@ const cards = allCards();
 ---
 <Base title="Compare crypto cards by country, rewards and fees" description="Find a crypto card that fits your country and spending — with rewards and fees clearly explained, sourced and dated." canonicalPath="/">
   <section class="hero">
+    <p class="eyebrow">Independent · sourced · dated</p>
     <h1>Find a crypto card that fits your country and spending</h1>
-    <p class="muted">Rewards, fees, availability by residence and identity-check requirements — compared from published conditions, with sources and dates. No sign-up, no wallet connection.</p>
+    <p class="lede">Rewards, fees, availability by residence and identity checks, compared from published conditions. Every figure carries its source and verification date. No sign-up, no wallet connection.</p>
     <CountrySelect />
-    <p class="muted" style="font-size:0.85rem">Independent comparison funded by affiliate links on some cards. Commissions never change the ranking. <a href="/how-we-make-money">How it works</a>.</p>
+    <p class="hint">Funded by affiliate links on some cards. Commissions never change the ranking. <a href="/how-we-make-money">How it works</a>.</p>
   </section>
 
   <section aria-labelledby="catalogue">
@@ -44,13 +45,15 @@ const cards = allCards();
 </Base>
 
 <style>
-  .hero { padding-top: 8px; }
+  .hero { padding-top: 12px; max-width: 46rem; }
+  .lede { font-size: 1.05rem; color: var(--muted); max-width: 40rem; margin: 0 0 18px; }
   .toolbar { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
   .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .filters select { width: auto; }
-  .chk { display: inline-flex; align-items: center; gap: 6px; min-height: var(--tap); padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; font-weight: 500; cursor: pointer; background: var(--card); }
+  .chk { display: inline-flex; align-items: center; gap: 6px; min-height: var(--tap); padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; font-weight: 500; cursor: pointer; background: var(--card); font-size: 0.92rem; }
+  .chk:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
   .chk input { width: 18px; height: 18px; min-height: 0; margin: 0; }
-  .compare-bar { position: sticky; bottom: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; margin: 16px -16px 0; background: var(--card); border-top: 1px solid var(--line); }
+  .compare-bar { position: sticky; bottom: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); margin: 16px -16px 0; background: var(--bg-2); border-top: 1px solid var(--line); }
 </style>
 
 <script>

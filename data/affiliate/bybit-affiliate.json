@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "bybit-affiliate",
+  "provider_id": "bybit",
+  "program_name": "Bybit Affiliate Program",
+  "program_url": "https://www.bybit.com/en/help-center/article/Bybit-Affiliate-Program-General-FAQ",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "website",
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "Publishers/creators with a qualifying website or app, or customers with a trader network; apply at affiliates.bybit.com; approval by Bybit team.",
+  "our_status": "terms_verified",
+  "paid_action": "Share of trading-fee profit (fees − maker rebates − bonuses) from referred users who actively trade.",
+  "validation_conditions": "Referred users receiving other Bybit rebates/incentives may not count; relationship may end after 180 days without trading.",
+  "commission": {
+    "model_note": "Standard base rate not published; VIP accounts capped at 50% total rebate; Master-affiliate override 10% of sub-affiliate rebate. Card not mentioned as commissionable.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "Affiliate Portal → Bybit account → external wallet",
+    "frequency": "daily by 04:00 UTC"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Page dated 2026-09-19. EU entity (Bybit EU) status for affiliates not stated; EEA card is a separate Bybit EU product.",
+  "allowed_countries_note": "Not stated.",
+  "evidence": [
+    {
+      "url": "https://www.bybit.com/en/help-center/article/Bybit-Affiliate-Program-General-FAQ",
+      "title": "Bybit Affiliate Program – General FAQ",
+      "accessed_at": "2026-10-26T21:30:00Z",
+      "excerpt": "Trading-fee profit share; daily payouts; VIP cap 50%; no card mention; last updated 2026-09-19."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Revenue depends on trading, not card orders. Whether Bybit EU (EEA card) runs the same programme is unknown."
+}
