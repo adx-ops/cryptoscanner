@@ -40,3 +40,6 @@ David's choice ("sombre, bold, fintech"). Light theme kept as system/explicit op
 
 ## 2026-10-27 — Worldwide country selector, Europe-first verification
 David asked for "whole world from the start". The data model is worldwide (variants per region, 'to_confirm' default), so the selector lists all ICU regions, grouped by "has at least one listed card". Verification capacity stays Europe-first; non-European variants are added only when a provider publishes its own country list (e.g. Gnosis Pay AR/BR/CO). Country pages only when ≥5 verified cards are available there.
+
+## 2026-10-27 — Publishing entity: EOTM (David's structure); budget 0 €; no domain yet
+David: entity will be "EOTM". Country, legal form, registration and contact mailbox not yet provided → /legal keeps the "publisher not yet designated" notice and PUBLIC_PUBLISHER_NAME stays empty until verified facts arrive. Budget confirmed at 0 € (no domain, no paid hosting, no API). Domain: none for now; "CryptoScanner" remains a working name. GitHub: David agreed to a repo under adx-ops (to be created by him: adx-ops/cryptoscanner, private, empty).
