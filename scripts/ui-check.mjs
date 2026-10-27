@@ -33,7 +33,7 @@ const ok = (name, cond, detail = '') => { results.push({ name, pass: !!cond, det
 
 const browser = await chromium.launch();
 const widths = [360, 390, 430, 768, 1440];
-const pages = ['/', '/compare', '/calculator', '/cards/demo-alpha-debit', '/methodology', '/how-we-make-money', '/contact', '/legal'];
+const pages = ['/', '/compare', '/calculator', '/cards/demo-alpha-debit', '/methodology', '/how-we-make-money', '/contact', '/legal', '/graveyard'];
 
 // 1) Layout: no horizontal page overflow, no console errors, fonts loaded or fallback.
 for (const w of widths) {
