@@ -28,7 +28,7 @@ const kycLabel = { required: 'ID verification required', not_required_initially:
     <dt>Conditional max</dt><dd>{rs.max}</dd>
     {rs.promo !== '—' && <><dt>Promotion</dt><dd>{rs.promo}</dd></>}
     <dt>Recurring cost</dt><dd>{recurringCostSummary(tier)} {unknowns > 0 && <span class="badge unk">{unknowns} fee{unknowns > 1 ? 's' : ''} unknown</span>}</dd>
-    <dt>Verification</dt><dd>{kycLabel} <span class="muted">({variant.kyc.editorial_level})</span></dd>
+    <dt>Verification</dt><dd>{kycLabel} <span class="muted">({variant.kyc.editorial_level === 'unknown' ? 'level not documented' : variant.kyc.editorial_level})</span></dd>
   </dl>
   <footer class="tile-actions">
     <label class="compare-check"><input type="checkbox" class="compare-toggle" value={card.slug} disabled={!available} /> Compare</label>

@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-10-27.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-10-28.",
   "target": {
     "min": 15,
     "max": 50
@@ -8,16 +8,16 @@
     {
       "provider": "Bitpanda",
       "product": "Bitpanda Card",
-      "status": "validated",
+      "status": "published",
       "record": "data/cards/bitpanda-card.json",
-      "note": "Single read of product page + help FAQ. Second read pending before publication."
+      "note": "Two independent reads (2026-10-26, 2026-10-28) agree. Page-internal contradictions (2% vs 1%; €5.90 vs €9.90) documented."
     },
     {
       "provider": "Gnosis Pay",
       "product": "Gnosis Pay Card",
-      "status": "validated",
+      "status": "published",
       "record": "data/cards/gnosis-pay-card.json",
-      "note": "Help-centre articles read. No current cashback programme documented; monthly fee unknown."
+      "note": "Two reads of fees and countries agree; KYC guide read 2026-10-28. No current cashback programme; monthly fee not stated (unknown)."
     },
     {
       "provider": "Crypto.com",

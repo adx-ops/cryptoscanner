@@ -1,7 +1,7 @@
 // Single data access layer. Pages never read JSON files directly.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import type { CardRecord, Variant, Tier, Fee } from './types.ts';
+import type { CardRecord, Variant, Tier, Fee, Reward } from './types.ts';
 
 export const DATASET: 'verified' | 'demo' = (import.meta.env.PUBLIC_DATASET === 'verified') ? 'verified' : 'demo';
 export const IS_DEMO = DATASET === 'demo';
@@ -54,13 +54,21 @@ export function defaultVariantAndTier(c: CardRecord): { variant: Variant; tier: 
   return { variant, tier };
 }
 
-/** Human summary of the base reward for list cards: base % and conditional max %, kept separate. */
+/** Display name for a payout unit. Technical codes used in records map to plain words. */
+export function payoutLabel(p: { kind: string; code?: string }): string {
+  if (p.code === 'same-asset-as-spend') return 'the asset you spend';
+  if (!p.code || p.code.startsWith('unknown')) return p.kind === 'fiat' ? 'fiat' : 'an unstated asset';
+  return p.code;
+}
+
+/** Human summary of rewards for list cards: base % and conditional max %, kept separate.
+ *  Stale or contradictory rewards are never summarised as current offers. */
 export function rewardSummary(tier: Tier): { base: string; max: string; promo: string } {
-  const base = tier.rewards.find((r) => r.type === 'base');
-  const maxes = tier.rewards.filter((r) => r.type === 'conditional_max');
-  const promos = tier.rewards.filter((r) => r.type === 'promotional');
-  const fmt = (r?: { percent?: number; payout: { kind: string; code?: string } }) =>
-    r && r.percent !== undefined ? `${r.percent}% in ${r.payout.code ?? r.payout.kind}` : 'unknown';
+  const live = tier.rewards.filter((r) => r.status !== 'stale' && r.status !== 'contradictory');
+  const base = live.find((r) => r.type === 'base');
+  const maxes = live.filter((r) => r.type === 'conditional_max');
+  const promos = live.filter((r) => r.type === 'promotional');
+  const fmt = (r?: Reward) => (r && r.percent !== undefined ? `${r.percent}% in ${payoutLabel(r.payout)}` : 'none documented');
   const maxPct = maxes.length ? Math.max(...maxes.map((r) => r.percent ?? 0)) : null;
   return {
     base: fmt(base),

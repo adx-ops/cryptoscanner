@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
-import { allCards, outboundLink, isAvailableOption } from '../../lib/data.ts';
+import { allCards, outboundLink, isAvailableOption, payoutLabel } from '../../lib/data.ts';
 import type { Fee, Reward, CardRecord } from '../../lib/types.ts';
 export function getStaticPaths() { return allCards().map((c) => ({ params: { slug: c.slug }, props: { card: c } })); }
 const { card } = Astro.props as { card: CardRecord };
@@ -19,7 +19,7 @@ const feeText = (f: Fee) => {
 };
 const rewardText = (r: Reward) => {
   const amt = r.percent !== undefined ? `${r.percent}%` : r.fixed ? money(r.fixed) : '';
-  const unit = r.payout.code ?? r.payout.kind;
+  const unit = payoutLabel(r.payout);
   const cap = r.cap ? `, capped at ${money(r.cap.amount)}/${r.cap.period}` : '';
   const req = r.requires && r.requires !== 'none' ? `, requires ${r.requires}` : '';
   const win = r.valid_until ? `, until ${r.valid_until}` : '';
