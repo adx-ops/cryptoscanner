@@ -1,6 +1,6 @@
 # Resume state
 
-Updated: 2026-10-28 12:40 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
+Updated: 2026-10-28 18:50 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
 
 ## Environment (verified 2026-10-26)
 - Claude cloud workspace (Linux), Node 22.23.4, npm 10.9.9, Python 3.13, git 2.43. Files/shell/web search/web fetch available.
@@ -30,7 +30,11 @@ Updated: 2026-10-28 12:40 (Europe/Berlin). Keep this file short; it is the hand-
 | /calculator (client-side engine) | tested | ui-check + engine tests |
 | /methodology, /how-we-make-money, /legal, /contact | implemented | build only |
 | Mobile rendering 360–1440 | verified | ui-check: no horizontal overflow on 8 pages × 5 widths; screenshots |
-| Verified card records | 2 `published` (Bitpanda, Gnosis Pay: two independent reads each), 3 `validated` (Crypto.com EEA, Nexo, Bybit EU) | `npm run validate` 7 records 0 errors; verified build = 2 card pages |
+| Verified card records | 2 `published` (Bitpanda, Gnosis Pay), 5 `validated` (Crypto.com EEA, Nexo, Bybit EU, KAST, RedotPay) | `npm run validate` 9 records 0 errors |
+| Candidates list (discovery) | seeded: 55 entries with priority formula | data/candidates.json |
+| Agent run prompts + publication policy | written | agents/*.md, docs/PUBLICATION-POLICY.md |
+| Auto-merge of agent PRs | configured, not yet exercised (no agent PR yet) | .github/workflows/auto-merge.yml |
+| GitHub Pages deploy (verified build, noindex, base path /cryptoscanner) | configured; deploy job fails until Pages is enabled in repo settings | .github/workflows/deploy-pages.yml |
 | Affiliate matrix | 6 programmes recorded (3 terms_verified, 2 identified, 1 not_applicable), none applied | data/affiliate/*.json |
 | Promotion expiry (date-based) | tested | scripts/expire-promos.ts, 4 tests, dry-run shows demo promo expiring 2027-01-01 |
 | Graveyard page | tested | /graveyard, empty state, ui-check |
@@ -38,17 +42,18 @@ Updated: 2026-10-28 12:40 (Europe/Berlin). Keep this file short; it is the hand-
 | Structured data, analytics | not started | — |
 
 ## Integrations
-GitHub repo: active · CI: tested (green run on GitHub) · scheduled expiry: configured (first scheduled run pending) · hosting: planned · analytics: planned · affiliate dashboards: none.
+GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-check in Chromium) · scheduled expiry: configured · auto-merge: configured · Pages: configured, blocked on repo setting · scheduled Claude runs (research / second read / discovery): NOT created — auto mode refused; prompts in docs/SCHEDULED-TASKS.md for David to create · analytics: planned · affiliate dashboards: none.
 
 ## Decisions awaited from David
-1. (done) GitHub repo created — public; consider private.
+1. Create the three scheduled tasks in claude.ai from docs/SCHEDULED-TASKS.md (auto mode refuses to create them).
+1b. Enable GitHub Pages: repo Settings → Pages → Source "GitHub Actions" (then the deploy workflow publishes the noindex verified build at adx-ops.github.io/cryptoscanner).
 2. Budget: 0 € confirmed (2026-10-27).
 3. Publishing entity: EOTM (2026-10-27). Missing: country, legal form, registration, contact mailbox.
 4. Priority launch country within Europe — assumed none (EEA-wide, DE/FR first for verification).
 5. Notification channel for exceptions — assumed this chat.
 
 ## Next work (in order)
-1. Second reads for Crypto.com EEA (needs help-centre fees + country list), Nexo, Bybit EU (rewards/VIP page) → `published`.
+1. Once scheduled tasks exist: watch the first research and second-read runs end-to-end; fix the prompts from what they do wrong. Until then, continue second reads by hand (Crypto.com EEA, Nexo, Bybit EU, KAST, RedotPay).
 2. New records: Wirex, Coinbase, MetaMask, Kraken (Krak), Deblock, Plutus — official sources only, validated → published after a second read.
 3. Hosting: GitHub Pages (free) for a noindex preview on a github.io subdomain, or wait for a domain. Decision needed from David before anything public.
 4. Freshness policy document (per field type); founder dashboard (5 questions) as a static page built from data + CI state.
