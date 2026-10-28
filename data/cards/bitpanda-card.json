@@ -5,15 +5,31 @@
   "name": "Bitpanda Card",
   "brand": "Bitpanda",
   "provider_id": "bitpanda",
-  "issuer": { "name": "Transact Payments Malta Limited (Visa Europe licence)", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
+  "issuer": {
+    "name": "Transact Payments Malta Limited (Visa Europe licence)",
+    "status": "verified",
+    "evidence": [
+      "ev-bitpanda-card-page"
+    ]
+  },
   "network": "visa",
   "category": "debit",
-  "record_status": "validated",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
-  "form_factors": ["virtual", "physical"],
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
   "custody": "custodial",
-  "funding": { "mechanism": "spend_from_balance", "conversion": "at_spend", "supported_assets_note": "Main payment asset + optional fallback asset; all cryptocurrencies and precious metals listed on Bitpanda, plus EUR (Crypto Indices excluded). Converted to EUR at the time of payment.", "evidence": ["ev-bitpanda-card-page"] },
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Main payment asset + optional fallback asset; all cryptocurrencies and precious metals listed on Bitpanda, plus EUR (Crypto Indices excluded). Converted to EUR at the time of payment.",
+    "evidence": [
+      "ev-bitpanda-card-page"
+    ]
+  },
   "credit_terms": null,
   "variants": [
     {
@@ -21,11 +37,37 @@
       "region_label": "Euro area",
       "currency": "EUR",
       "eligibility": {
-        "residence_allowed": ["AT", "BE", "BG", "CY", "DE", "EE", "ES", "FI", "FR", "GR", "HR", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PT", "SI", "SK"],
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "CY",
+          "DE",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GR",
+          "HR",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "PT",
+          "SI",
+          "SK"
+        ],
         "residence_excluded": [],
         "default_for_unlisted": "to_confirm",
         "usage_note": "Source states 'residence in a euro-area country (where the euro is the primary currency)' without a list; the country list above is the ECB euro-area membership (21 countries, Bulgaria since 2026). Fee tables also show SEK/NOK/DKK columns, but the page does not state that the card is offered in those markets.",
-        "evidence": ["ev-bitpanda-card-page", "ev-bitpanda-faq", "ev-ecb-euro-area"],
+        "evidence": [
+          "ev-bitpanda-card-page",
+          "ev-bitpanda-faq",
+          "ev-ecb-euro-area"
+        ],
         "status": "calculated"
       },
       "kyc": {
@@ -33,30 +75,145 @@
         "editorial_level": "unknown",
         "requirements": [],
         "stages_note": "A verified Bitpanda account is required to order; customers verified via 'Bankident' cannot order a card. Document list and thresholds not stated. An open 'proof of funds' request disables the card until approved.",
-        "evidence": ["ev-bitpanda-card-page", "ev-bitpanda-faq"],
+        "evidence": [
+          "ev-bitpanda-card-page",
+          "ev-bitpanda-faq"
+        ],
         "status": "verified"
       },
       "tiers": [
         {
           "id": "standard",
           "name": "Standard",
-          "access": { "type": "free", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
+          "access": {
+            "type": "free",
+            "status": "verified",
+            "evidence": [
+              "ev-bitpanda-card-page"
+            ]
+          },
           "fees": [
-            { "type": "issuance", "kind": "none", "conditions": "Account opening free; first card free.", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
-            { "type": "delivery", "kind": "none", "conditions": "Initial shipment free. Additional physical card €10; replacement €5.90 in the fee table (FAQ on lost cards says €9.90 — inconsistent on the page).", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
-            { "type": "subscription", "kind": "none", "conditions": "Monthly cost: free.", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
-            { "type": "renewal", "kind": "none", "conditions": "Expired card renewal free.", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
-            { "type": "fx", "kind": "none", "period": "per_transaction", "conditions": "€0 FX fee from Bitpanda; Visa mark-up applies on the exchange rate (amount not stated).", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
-            { "type": "atm_withdrawal", "kind": "percent", "percent": 2, "min": { "amount": 2, "currency": "EUR" }, "period": "per_transaction", "conditions": "2% or €2, whichever is higher; local ATM operators may add their own fees.", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
-            { "type": "topup", "kind": "unknown", "status": "unknown" },
-            { "type": "conversion", "kind": "unknown", "status": "unknown" }
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Account opening free; first card free.",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "none",
+              "conditions": "Initial shipment free. Additional physical card €10; replacement €5.90 in the fee table (FAQ on lost cards says €9.90 — inconsistent on the page).",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "Monthly cost: free.",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page"
+              ]
+            },
+            {
+              "type": "renewal",
+              "kind": "none",
+              "conditions": "Expired card renewal free.",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "€0 FX fee from Bitpanda; Visa mark-up applies on the exchange rate (amount not stated).",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "min": {
+                "amount": 2,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "conditions": "2% or €2, whichever is higher; local ATM operators may add their own fees.",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "status": "unknown"
+            }
           ],
           "rewards": [
-            { "type": "base", "percent": 1, "payout": { "kind": "token", "code": "same-asset-as-spend" }, "requires": "none", "excluded_categories": ["payments made with EUR/fiat", "precious metals", "stablecoins (e.g. USDT, USDC, EUROCV)", "Bitpanda Stocks"], "conditions": "Flat 1% on purchases paid with cryptocurrency, paid in the same cryptocurrency used for the purchase. No cap stated.", "status": "verified", "evidence": ["ev-bitpanda-card-page", "ev-bitpanda-faq"] }
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "same-asset-as-spend"
+              },
+              "requires": "none",
+              "excluded_categories": [
+                "payments made with EUR/fiat",
+                "precious metals",
+                "stablecoins (e.g. USDT, USDC, EUROCV)",
+                "Bitpanda Stocks"
+              ],
+              "conditions": "Flat 1% on purchases paid with cryptocurrency, paid in the same cryptocurrency used for the purchase. No cap stated.",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page",
+                "ev-bitpanda-faq"
+              ]
+            }
           ],
           "limits": [
-            { "type": "atm_withdrawal", "amount": { "amount": 500, "currency": "EUR" }, "period": "per_day", "status": "verified", "evidence": ["ev-bitpanda-card-page"] },
-            { "type": "spend", "amount": { "amount": 10000, "currency": "EUR" }, "period": "per_day", "note": "Weekly €70,000, monthly €280,000; minimum payment €1.", "status": "verified", "evidence": ["ev-bitpanda-card-page"] }
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 500,
+                "currency": "EUR"
+              },
+              "period": "per_day",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page"
+              ]
+            },
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 10000,
+                "currency": "EUR"
+              },
+              "period": "per_day",
+              "note": "Weekly €70,000, monthly €280,000; minimum payment €1.",
+              "status": "verified",
+              "evidence": [
+                "ev-bitpanda-card-page"
+              ]
+            }
           ]
         }
       ]
@@ -69,12 +226,15 @@
       "title": "Bitpanda Card — product page, fee table, limits, FAQ",
       "source_type": "pricing_page",
       "excerpt": "Fee table (EUR column): account opening free, monthly free, initial shipment free, non-EUR FX €0 from Bitpanda + Visa mark-up, ATM min 2% or €2. '1% cashback on all crypto asset spending'. Eligibility FAQ: verified account + residence in a euro-area country.",
-      "accessed_at": "2026-10-26T19:57:00Z",
+      "accessed_at": "2026-10-28T11:45:00Z",
       "effective_from": null,
       "expires_at": null,
-      "scope": { "currency": "EUR", "note": "Euro-area residents as stated by the page" },
+      "scope": {
+        "currency": "EUR",
+        "note": "Euro-area residents as stated by the page"
+      },
       "verification": "contradictory",
-      "contradiction_note": "Page metadata says 'up to 2% cashback' while body and FAQ state a flat 1%; replacement card fee is €5.90 in the table and €9.90 in the lost-card FAQ. Record uses 1% and leaves replacement fee unmodelled."
+      "contradiction_note": "Page metadata says 'up to 2% cashback' while body and FAQ state a flat 1%; replacement card fee is €5.90 in the table and €9.90 in the lost-card FAQ. Both contradictions confirmed on the second read (2026-10-28). Record uses 1% and leaves the replacement fee unmodelled."
     },
     {
       "id": "ev-bitpanda-faq",
@@ -85,31 +245,77 @@
       "accessed_at": "2026-10-26T19:58:00Z",
       "effective_from": null,
       "expires_at": null,
-      "scope": { "currency": "EUR" },
+      "scope": {
+        "currency": "EUR"
+      },
       "verification": "verified"
     },
     {
       "id": "ev-ecb-euro-area",
       "url": "https://www.ecb.europa.eu/euro/intro/html/index.en.html",
       "title": "ECB — the euro area members",
-      "source_type": "third_party",
+      "source_type": "reference",
       "excerpt": "21 euro-area countries; Bulgaria adopted the euro in 2026. Used only to expand 'euro-area country' into ISO codes.",
       "accessed_at": "2026-10-26T19:59:00Z",
       "effective_from": null,
       "expires_at": null,
-      "scope": { "note": "Reference list, not a Bitpanda source" },
+      "scope": {
+        "note": "Reference list, not a Bitpanda source"
+      },
       "verification": "verified"
     }
   ],
-  "links": { "official_url": "https://www.bitpanda.com/en/card", "affiliate": { "program_id": null, "status": "none", "url": null } },
-  "freshness": { "last_content_verified_at": "2026-10-26T19:59:00Z", "last_auto_check_at": null },
+  "links": {
+    "official_url": "https://www.bitpanda.com/en/card",
+    "affiliate": {
+      "program_id": null,
+      "status": "none",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-10-28T11:45:00Z",
+    "last_auto_check_at": null
+  },
   "changelog": [
-    { "date": "2026-10-26T19:59:00Z", "field": "*", "reason": "Initial record from official product page and help centre FAQ (single read; second read required before publication).", "evidence": ["ev-bitpanda-card-page", "ev-bitpanda-faq"], "actor": "claude" }
+    {
+      "date": "2026-10-26T19:59:00Z",
+      "field": "*",
+      "reason": "Initial record from official product page and help centre FAQ (single read; second read required before publication).",
+      "evidence": [
+        "ev-bitpanda-card-page",
+        "ev-bitpanda-faq"
+      ],
+      "actor": "claude"
+    },
+    {
+      "date": "2026-10-28T11:45:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "published",
+      "reason": "Second independent read of the product page on 2026-10-28: all recorded figures confirmed (eligibility wording, fee table, limits, 1% cashback and exclusions, issuer). Two page-internal contradictions persist and are shown on the card page.",
+      "evidence": [
+        "ev-bitpanda-card-page"
+      ],
+      "actor": "claude"
+    }
   ],
   "editorial": {
     "summary": "Visa debit card for euro-area residents with a verified Bitpanda account; no monthly or issuance fee, 1% cashback paid in the crypto you spend (fiat, metals and stablecoin payments earn nothing).",
-    "good_for": ["Euro-area residents who already hold crypto on Bitpanda", "Spending without a monthly fee", "Earning cashback in the asset you spend rather than a platform token"],
-    "not_for": ["Residents outside the euro area (not stated as available)", "People who mainly spend stablecoins or EUR (no cashback)", "Frequent ATM users (2% / €2 minimum)"],
-    "watch_outs": ["Conversion spread when a crypto asset is sold to EUR at payment is not stated; the net value shown is partial.", "Page says 'up to 2%' in its metadata but documents only a flat 1%.", "Spending crypto is usually a taxable event; the provider gives no tax advice and neither do we."]
+    "good_for": [
+      "Euro-area residents who already hold crypto on Bitpanda",
+      "Spending without a monthly fee",
+      "Earning cashback in the asset you spend rather than a platform token"
+    ],
+    "not_for": [
+      "Residents outside the euro area (not stated as available)",
+      "People who mainly spend stablecoins or EUR (no cashback)",
+      "Frequent ATM users (2% / €2 minimum)"
+    ],
+    "watch_outs": [
+      "Conversion spread when a crypto asset is sold to EUR at payment is not stated; the net value shown is partial.",
+      "Page says 'up to 2%' in its metadata but documents only a flat 1%.",
+      "Spending crypto is usually a taxable event; the provider gives no tax advice and neither do we."
+    ]
   }
 }

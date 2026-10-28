@@ -6,274 +6,911 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "schema_version", "id", "slug", "name", "brand", "provider_id", "category",
-    "record_status", "product_status", "is_demo", "form_factors", "custody",
-    "variants", "evidence", "links", "freshness", "changelog", "editorial"
+    "schema_version",
+    "id",
+    "slug",
+    "name",
+    "brand",
+    "provider_id",
+    "category",
+    "record_status",
+    "product_status",
+    "is_demo",
+    "form_factors",
+    "custody",
+    "variants",
+    "evidence",
+    "links",
+    "freshness",
+    "changelog",
+    "editorial"
   ],
   "properties": {
-    "schema_version": { "const": "1.0.0" },
-    "id": { "$ref": "#/$defs/slug" },
-    "slug": { "$ref": "#/$defs/slug" },
-    "name": { "type": "string", "minLength": 1 },
-    "brand": { "type": "string", "minLength": 1 },
-    "provider_id": { "$ref": "#/$defs/slug" },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "#/$defs/slug"
+    },
+    "slug": {
+      "$ref": "#/$defs/slug"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brand": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider_id": {
+      "$ref": "#/$defs/slug"
+    },
     "issuer": {
-      "type": "object", "additionalProperties": false,
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
-        "name": { "type": "string" },
-        "status": { "$ref": "#/$defs/verification" },
-        "evidence": { "$ref": "#/$defs/evidenceRefs" }
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/verification"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidenceRefs"
+        }
       }
     },
-    "network": { "enum": ["visa", "mastercard", "other", "unknown"] },
+    "network": {
+      "enum": [
+        "visa",
+        "mastercard",
+        "other",
+        "unknown"
+      ]
+    },
     "category": {
       "description": "Debit, prepaid, credit and crypto-backed credit lines are never merged into one cashback figure.",
-      "enum": ["debit", "prepaid", "credit", "crypto_backed_credit"]
+      "enum": [
+        "debit",
+        "prepaid",
+        "credit",
+        "crypto_backed_credit"
+      ]
     },
     "record_status": {
       "description": "Editorial pipeline state. Only 'published' records appear in public recommendations.",
-      "enum": ["candidate", "validated", "needs_review", "published", "stale", "rejected", "retired"]
+      "enum": [
+        "candidate",
+        "validated",
+        "needs_review",
+        "published",
+        "stale",
+        "rejected",
+        "retired"
+      ]
     },
-    "product_status": { "enum": ["active", "waitlist", "suspended", "closed", "unknown"] },
-    "is_demo": { "type": "boolean", "description": "true = demonstration data, never shown as verified and never indexable." },
-    "form_factors": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["virtual", "physical"] } },
-    "custody": { "enum": ["custodial", "self_custodial", "hybrid", "unknown"] },
+    "product_status": {
+      "enum": [
+        "active",
+        "waitlist",
+        "suspended",
+        "closed",
+        "unknown"
+      ]
+    },
+    "is_demo": {
+      "type": "boolean",
+      "description": "true = demonstration data, never shown as verified and never indexable."
+    },
+    "form_factors": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "virtual",
+          "physical"
+        ]
+      }
+    },
+    "custody": {
+      "enum": [
+        "custodial",
+        "self_custodial",
+        "hybrid",
+        "unknown"
+      ]
+    },
     "funding": {
-      "type": "object", "additionalProperties": false,
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
-        "mechanism": { "enum": ["prefund_fiat", "prefund_crypto", "spend_from_balance", "credit_line", "unknown"] },
-        "conversion": { "enum": ["at_spend", "at_topup", "manual", "unknown"] },
-        "supported_assets_note": { "type": "string" },
-        "evidence": { "$ref": "#/$defs/evidenceRefs" }
+        "mechanism": {
+          "enum": [
+            "prefund_fiat",
+            "prefund_crypto",
+            "spend_from_balance",
+            "credit_line",
+            "unknown"
+          ]
+        },
+        "conversion": {
+          "enum": [
+            "at_spend",
+            "at_topup",
+            "manual",
+            "unknown"
+          ]
+        },
+        "supported_assets_note": {
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidenceRefs"
+        }
       }
     },
     "credit_terms": {
       "description": "Only for credit / crypto_backed_credit. Own financing scenario; cashback never hides interest or liquidation risk.",
-      "type": ["object", "null"], "additionalProperties": false,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
       "properties": {
-        "apr_percent": { "$ref": "#/$defs/numOrUnknown" },
-        "ltv_percent": { "$ref": "#/$defs/numOrUnknown" },
-        "liquidation_risk": { "type": "string" },
-        "evidence": { "$ref": "#/$defs/evidenceRefs" }
+        "apr_percent": {
+          "$ref": "#/$defs/numOrUnknown"
+        },
+        "ltv_percent": {
+          "$ref": "#/$defs/numOrUnknown"
+        },
+        "liquidation_risk": {
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidenceRefs"
+        }
       }
     },
-    "variants": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/variant" } },
-    "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/variant"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
     "links": {
-      "type": "object", "additionalProperties": false, "required": ["official_url", "affiliate"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "official_url",
+        "affiliate"
+      ],
       "properties": {
-        "official_url": { "type": "string", "format": "uri" },
+        "official_url": {
+          "type": "string",
+          "format": "uri"
+        },
         "affiliate": {
-          "type": "object", "additionalProperties": false, "required": ["status"],
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
           "properties": {
-            "program_id": { "type": ["string", "null"] },
+            "program_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
             "status": {
               "description": "Only 'tracking_tested' or later may expose a monetised link. Before that the official link is used and labelled non-monetised.",
-              "enum": ["none", "identified", "terms_verified", "application_prepared", "application_sent", "accepted", "tracking_tested", "payment_observed"]
+              "enum": [
+                "none",
+                "identified",
+                "terms_verified",
+                "application_prepared",
+                "application_sent",
+                "accepted",
+                "tracking_tested",
+                "payment_observed"
+              ]
             },
-            "url": { "type": ["string", "null"], "format": "uri" }
+            "url": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "uri"
+            }
           }
         }
       }
     },
     "freshness": {
-      "type": "object", "additionalProperties": false, "required": ["last_content_verified_at"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "last_content_verified_at"
+      ],
       "properties": {
-        "last_content_verified_at": { "type": ["string", "null"], "format": "date-time", "description": "Human/content verification date. Never replaced by an automatic check date." },
-        "last_auto_check_at": { "type": ["string", "null"], "format": "date-time" }
+        "last_content_verified_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Human/content verification date. Never replaced by an automatic check date."
+        },
+        "last_auto_check_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
       }
     },
     "changelog": {
       "type": "array",
       "items": {
-        "type": "object", "additionalProperties": false, "required": ["date", "field", "reason"],
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "field",
+          "reason"
+        ],
         "properties": {
-          "date": { "type": "string", "format": "date-time" },
-          "field": { "type": "string" },
-          "from": {}, "to": {},
-          "reason": { "type": "string" },
-          "evidence": { "$ref": "#/$defs/evidenceRefs" },
-          "actor": { "type": "string" }
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "field": {
+            "type": "string"
+          },
+          "from": {},
+          "to": {},
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "$ref": "#/$defs/evidenceRefs"
+          },
+          "actor": {
+            "type": "string"
+          }
         }
       }
     },
     "editorial": {
-      "type": "object", "additionalProperties": false,
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
-        "good_for": { "type": "array", "items": { "type": "string" } },
-        "not_for": { "type": "array", "items": { "type": "string" } },
-        "watch_outs": { "type": "array", "items": { "type": "string" } },
-        "summary": { "type": "string" }
+        "good_for": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "not_for": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "watch_outs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "summary": {
+          "type": "string"
+        }
       }
     }
   },
   "$defs": {
-    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
-    "iso2": { "type": "string", "pattern": "^[A-Z]{2}$" },
-    "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
-    "verification": { "enum": ["verified", "calculated", "hypothesis", "unknown", "stale", "contradictory"] },
-    "numOrUnknown": { "oneOf": [{ "type": "number" }, { "const": "unknown" }] },
-    "evidenceRefs": { "type": "array", "items": { "type": "string", "pattern": "^ev-" } },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "iso2": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "verification": {
+      "enum": [
+        "verified",
+        "calculated",
+        "hypothesis",
+        "unknown",
+        "stale",
+        "contradictory"
+      ]
+    },
+    "numOrUnknown": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "const": "unknown"
+        }
+      ]
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^ev-"
+      }
+    },
     "money": {
-      "type": "object", "additionalProperties": false, "required": ["amount", "currency"],
-      "properties": { "amount": { "type": "number", "minimum": 0 }, "currency": { "$ref": "#/$defs/currency" } }
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "currency": {
+          "$ref": "#/$defs/currency"
+        }
+      }
     },
-    "period": { "enum": ["once", "month", "year", "per_transaction", "per_day"] },
+    "period": {
+      "enum": [
+        "once",
+        "month",
+        "year",
+        "per_transaction",
+        "per_day"
+      ]
+    },
     "evidence": {
-      "type": "object", "additionalProperties": false,
-      "required": ["id", "url", "title", "source_type", "accessed_at", "verification"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "url",
+        "title",
+        "source_type",
+        "accessed_at",
+        "verification"
+      ],
       "properties": {
-        "id": { "type": "string", "pattern": "^ev-[a-z0-9-]+$" },
-        "url": { "type": "string", "format": "uri" },
-        "title": { "type": "string" },
-        "source_type": { "enum": ["official_terms", "pricing_page", "eligibility_page", "issuer_doc", "affiliate_program", "help_center", "third_party", "demo"] },
-        "excerpt": { "type": "string", "maxLength": 400, "description": "Short probative excerpt or section reference. Not a copy of the page." },
-        "accessed_at": { "type": "string", "format": "date-time" },
-        "effective_from": { "type": ["string", "null"], "format": "date" },
-        "expires_at": { "type": ["string", "null"], "format": "date" },
+        "id": {
+          "type": "string",
+          "pattern": "^ev-[a-z0-9-]+$"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "official_terms",
+            "pricing_page",
+            "eligibility_page",
+            "issuer_doc",
+            "affiliate_program",
+            "help_center",
+            "reference",
+            "third_party",
+            "demo"
+          ],
+          "description": "'reference' = official non-provider source used only to expand a stated scope (e.g. a central bank's member list); 'third_party' = competitor/press, discovery only, never for publication."
+        },
+        "excerpt": {
+          "type": "string",
+          "maxLength": 400,
+          "description": "Short probative excerpt or section reference. Not a copy of the page."
+        },
+        "accessed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "effective_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "expires_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
         "scope": {
-          "type": "object", "additionalProperties": false,
+          "type": "object",
+          "additionalProperties": false,
           "properties": {
-            "countries": { "type": "array", "items": { "$ref": "#/$defs/iso2" } },
-            "currency": { "$ref": "#/$defs/currency" },
-            "note": { "type": "string" }
-          }
-        },
-        "verification": { "$ref": "#/$defs/verification" },
-        "contradiction_note": { "type": "string" }
-      }
-    },
-    "variant": {
-      "type": "object", "additionalProperties": false,
-      "required": ["id", "region_label", "currency", "eligibility", "kyc", "tiers"],
-      "properties": {
-        "id": { "$ref": "#/$defs/slug" },
-        "region_label": { "type": "string", "description": "Human label, e.g. 'EEA', 'UK', 'Switzerland'. Never conflate Europe / EU / EEA / UK / CH." },
-        "currency": { "$ref": "#/$defs/currency" },
-        "eligibility": {
-          "type": "object", "additionalProperties": false, "required": ["residence_allowed", "residence_excluded", "default_for_unlisted"],
-          "properties": {
-            "residence_allowed": { "type": "array", "items": { "$ref": "#/$defs/iso2" }, "uniqueItems": true },
-            "residence_excluded": { "type": "array", "items": { "$ref": "#/$defs/iso2" }, "uniqueItems": true },
-            "default_for_unlisted": { "enum": ["to_confirm", "ineligible"], "description": "What a country absent from both lists means. Never 'eligible'." },
-            "nationality_restrictions_note": { "type": "string" },
-            "delivery_countries": { "type": "array", "items": { "$ref": "#/$defs/iso2" } },
-            "usage_note": { "type": "string" },
-            "evidence": { "$ref": "#/$defs/evidenceRefs" },
-            "status": { "$ref": "#/$defs/verification" }
-          }
-        },
-        "kyc": {
-          "type": "object", "additionalProperties": false, "required": ["initial_verification", "editorial_level", "status"],
-          "properties": {
-            "initial_verification": { "enum": ["required", "not_required_initially", "unknown"] },
-            "editorial_level": {
-              "description": "Editorial grid (light/standard/enhanced), explained on /methodology. Not an official classification.",
-              "enum": ["light", "standard", "enhanced", "unknown"]
+            "countries": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/iso2"
+              }
             },
-            "requirements": { "type": "array", "items": { "enum": ["id_document", "selfie", "proof_of_address", "source_of_funds", "phone", "email", "other"] } },
-            "thresholds_note": { "type": "string" },
-            "stages_note": { "type": "string", "description": "Account creation / order / activation / top-up / usage checked separately." },
-            "evidence": { "$ref": "#/$defs/evidenceRefs" },
-            "status": { "$ref": "#/$defs/verification" }
-          }
-        },
-        "tiers": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/tier" } }
-      }
-    },
-    "tier": {
-      "type": "object", "additionalProperties": false,
-      "required": ["id", "name", "access", "fees", "rewards"],
-      "properties": {
-        "id": { "$ref": "#/$defs/slug" },
-        "name": { "type": "string" },
-        "access": {
-          "type": "object", "additionalProperties": false, "required": ["type", "status"],
-          "properties": {
-            "type": { "enum": ["free", "subscription", "holding", "lock"] },
-            "amount": { "$ref": "#/$defs/money" },
-            "period": { "$ref": "#/$defs/period" },
-            "token": { "type": "string" },
-            "token_amount": { "type": "number" },
-            "lock_months": { "type": "number" },
-            "note": { "type": "string" },
-            "evidence": { "$ref": "#/$defs/evidenceRefs" },
-            "status": { "$ref": "#/$defs/verification" }
-          }
-        },
-        "fees": { "type": "array", "items": { "$ref": "#/$defs/fee" } },
-        "rewards": { "type": "array", "items": { "$ref": "#/$defs/reward" } },
-        "limits": {
-          "type": "array",
-          "items": {
-            "type": "object", "additionalProperties": false, "required": ["type", "status"],
-            "properties": {
-              "type": { "enum": ["spend", "atm_withdrawal", "topup", "other"] },
-              "amount": { "$ref": "#/$defs/money" },
-              "period": { "$ref": "#/$defs/period" },
-              "note": { "type": "string" },
-              "evidence": { "$ref": "#/$defs/evidenceRefs" },
-              "status": { "$ref": "#/$defs/verification" }
+            "currency": {
+              "$ref": "#/$defs/currency"
+            },
+            "note": {
+              "type": "string"
             }
           }
         },
-        "mobile_wallets": { "type": "array", "items": { "enum": ["apple_pay", "google_pay", "samsung_pay"] } },
-        "mobile_wallets_status": { "$ref": "#/$defs/verification" }
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "contradiction_note": {
+          "type": "string"
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "region_label",
+        "currency",
+        "eligibility",
+        "kyc",
+        "tiers"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/slug"
+        },
+        "region_label": {
+          "type": "string",
+          "description": "Human label, e.g. 'EEA', 'UK', 'Switzerland'. Never conflate Europe / EU / EEA / UK / CH."
+        },
+        "currency": {
+          "$ref": "#/$defs/currency"
+        },
+        "eligibility": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "residence_allowed",
+            "residence_excluded",
+            "default_for_unlisted"
+          ],
+          "properties": {
+            "residence_allowed": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/iso2"
+              },
+              "uniqueItems": true
+            },
+            "residence_excluded": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/iso2"
+              },
+              "uniqueItems": true
+            },
+            "default_for_unlisted": {
+              "enum": [
+                "to_confirm",
+                "ineligible"
+              ],
+              "description": "What a country absent from both lists means. Never 'eligible'."
+            },
+            "nationality_restrictions_note": {
+              "type": "string"
+            },
+            "delivery_countries": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/iso2"
+              }
+            },
+            "usage_note": {
+              "type": "string"
+            },
+            "evidence": {
+              "$ref": "#/$defs/evidenceRefs"
+            },
+            "status": {
+              "$ref": "#/$defs/verification"
+            }
+          }
+        },
+        "kyc": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "initial_verification",
+            "editorial_level",
+            "status"
+          ],
+          "properties": {
+            "initial_verification": {
+              "enum": [
+                "required",
+                "not_required_initially",
+                "unknown"
+              ]
+            },
+            "editorial_level": {
+              "description": "Editorial grid (light/standard/enhanced), explained on /methodology. Not an official classification.",
+              "enum": [
+                "light",
+                "standard",
+                "enhanced",
+                "unknown"
+              ]
+            },
+            "requirements": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "id_document",
+                  "selfie",
+                  "proof_of_address",
+                  "source_of_funds",
+                  "phone",
+                  "email",
+                  "other"
+                ]
+              }
+            },
+            "thresholds_note": {
+              "type": "string"
+            },
+            "stages_note": {
+              "type": "string",
+              "description": "Account creation / order / activation / top-up / usage checked separately."
+            },
+            "evidence": {
+              "$ref": "#/$defs/evidenceRefs"
+            },
+            "status": {
+              "$ref": "#/$defs/verification"
+            }
+          }
+        },
+        "tiers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/tier"
+          }
+        }
+      }
+    },
+    "tier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "access",
+        "fees",
+        "rewards"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/slug"
+        },
+        "name": {
+          "type": "string"
+        },
+        "access": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "status"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "free",
+                "subscription",
+                "holding",
+                "lock"
+              ]
+            },
+            "amount": {
+              "$ref": "#/$defs/money"
+            },
+            "period": {
+              "$ref": "#/$defs/period"
+            },
+            "token": {
+              "type": "string"
+            },
+            "token_amount": {
+              "type": "number"
+            },
+            "lock_months": {
+              "type": "number"
+            },
+            "note": {
+              "type": "string"
+            },
+            "evidence": {
+              "$ref": "#/$defs/evidenceRefs"
+            },
+            "status": {
+              "$ref": "#/$defs/verification"
+            }
+          }
+        },
+        "fees": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fee"
+          }
+        },
+        "rewards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reward"
+          }
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "type",
+              "status"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "spend",
+                  "atm_withdrawal",
+                  "topup",
+                  "other"
+                ]
+              },
+              "amount": {
+                "$ref": "#/$defs/money"
+              },
+              "period": {
+                "$ref": "#/$defs/period"
+              },
+              "note": {
+                "type": "string"
+              },
+              "evidence": {
+                "$ref": "#/$defs/evidenceRefs"
+              },
+              "status": {
+                "$ref": "#/$defs/verification"
+              }
+            }
+          }
+        },
+        "mobile_wallets": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "apple_pay",
+              "google_pay",
+              "samsung_pay"
+            ]
+          }
+        },
+        "mobile_wallets_status": {
+          "$ref": "#/$defs/verification"
+        }
       }
     },
     "fee": {
-      "type": "object", "additionalProperties": false,
-      "required": ["type", "kind", "status"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "kind",
+        "status"
+      ],
       "properties": {
-        "type": { "enum": ["issuance", "delivery", "renewal", "subscription", "topup", "conversion", "fx", "atm_withdrawal", "inactivity", "other"] },
+        "type": {
+          "enum": [
+            "issuance",
+            "delivery",
+            "renewal",
+            "subscription",
+            "topup",
+            "conversion",
+            "fx",
+            "atm_withdrawal",
+            "inactivity",
+            "other"
+          ]
+        },
         "kind": {
           "description": "'none' = verified absence of fee. 'unknown' = not established; blocks a complete net value.",
-          "enum": ["none", "fixed", "percent", "fixed_plus_percent", "unknown"]
+          "enum": [
+            "none",
+            "fixed",
+            "percent",
+            "fixed_plus_percent",
+            "unknown"
+          ]
         },
-        "amount": { "$ref": "#/$defs/money" },
-        "percent": { "type": "number", "minimum": 0 },
-        "min": { "$ref": "#/$defs/money" },
-        "max": { "$ref": "#/$defs/money" },
-        "period": { "$ref": "#/$defs/period" },
+        "amount": {
+          "$ref": "#/$defs/money"
+        },
+        "percent": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min": {
+          "$ref": "#/$defs/money"
+        },
+        "max": {
+          "$ref": "#/$defs/money"
+        },
+        "period": {
+          "$ref": "#/$defs/period"
+        },
         "free_allowance": {
-          "type": "object", "additionalProperties": false,
-          "properties": { "amount": { "$ref": "#/$defs/money" }, "count": { "type": "integer" }, "period": { "$ref": "#/$defs/period" } }
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "amount": {
+              "$ref": "#/$defs/money"
+            },
+            "count": {
+              "type": "integer"
+            },
+            "period": {
+              "$ref": "#/$defs/period"
+            }
+          }
         },
-        "conditions": { "type": "string" },
-        "evidence": { "$ref": "#/$defs/evidenceRefs" },
-        "status": { "$ref": "#/$defs/verification" }
+        "conditions": {
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidenceRefs"
+        },
+        "status": {
+          "$ref": "#/$defs/verification"
+        }
       }
     },
     "reward": {
-      "type": "object", "additionalProperties": false,
-      "required": ["type", "status", "payout"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "status",
+        "payout"
+      ],
       "properties": {
         "type": {
           "description": "Displayed separately: base accessible reward, conditional maximum, temporary promotion, one-off signup bonus, non-monetary perk.",
-          "enum": ["base", "conditional_max", "promotional", "signup_bonus", "non_monetary"]
+          "enum": [
+            "base",
+            "conditional_max",
+            "promotional",
+            "signup_bonus",
+            "non_monetary"
+          ]
         },
-        "percent": { "type": "number", "minimum": 0 },
-        "fixed": { "$ref": "#/$defs/money" },
+        "percent": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fixed": {
+          "$ref": "#/$defs/money"
+        },
         "payout": {
-          "type": "object", "additionalProperties": false, "required": ["kind"],
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind"
+          ],
           "properties": {
-            "kind": { "enum": ["fiat", "token", "points", "other"] },
-            "code": { "type": "string", "description": "ISO currency for fiat, ticker for token, scheme name for points." }
+            "kind": {
+              "enum": [
+                "fiat",
+                "token",
+                "points",
+                "other"
+              ]
+            },
+            "code": {
+              "type": "string",
+              "description": "ISO currency for fiat, ticker for token, scheme name for points."
+            }
           }
         },
-        "requires": { "enum": ["none", "subscription", "holding", "lock"], "default": "none" },
-        "cap": {
-          "type": "object", "additionalProperties": false, "required": ["amount", "period"],
-          "properties": { "amount": { "$ref": "#/$defs/money" }, "period": { "$ref": "#/$defs/period" } }
+        "requires": {
+          "enum": [
+            "none",
+            "subscription",
+            "holding",
+            "lock"
+          ],
+          "default": "none"
         },
-        "min_spend": { "$ref": "#/$defs/money" },
-        "excluded_categories": { "type": "array", "items": { "type": "string" } },
-        "conditions": { "type": "string" },
-        "valid_from": { "type": ["string", "null"], "format": "date" },
-        "valid_until": { "type": ["string", "null"], "format": "date", "description": "Promotion expiry is applied at this date without needing a new page read." },
-        "description": { "type": "string" },
-        "evidence": { "$ref": "#/$defs/evidenceRefs" },
-        "status": { "$ref": "#/$defs/verification" }
+        "cap": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "amount",
+            "period"
+          ],
+          "properties": {
+            "amount": {
+              "$ref": "#/$defs/money"
+            },
+            "period": {
+              "$ref": "#/$defs/period"
+            }
+          }
+        },
+        "min_spend": {
+          "$ref": "#/$defs/money"
+        },
+        "excluded_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditions": {
+          "type": "string"
+        },
+        "valid_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "valid_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date",
+          "description": "Promotion expiry is applied at this date without needing a new page read."
+        },
+        "description": {
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidenceRefs"
+        },
+        "status": {
+          "$ref": "#/$defs/verification"
+        }
       }
     }
   }
