@@ -1,6 +1,6 @@
 ---
 import type { CardRecord } from '../lib/types.ts';
-import { defaultVariantAndTier, rewardSummary, recurringCostSummary, unknownFeeCount, isAvailableOption } from '../lib/data.ts';
+import { defaultVariantAndTier, rewardSummary, recurringCostSummary, unknownFeeCount, isAvailableOption, url } from '../lib/data.ts';
 interface Props { card: CardRecord }
 const { card } = Astro.props;
 const { variant, tier } = defaultVariantAndTier(card);
@@ -16,7 +16,7 @@ const kycLabel = { required: 'ID verification required', not_required_initially:
   data-available={available ? '1' : '0'}>
   <header class="tile-head">
     <div>
-      <h3><a href={`/cards/${card.slug}`}>{card.name}</a></h3>
+      <h3><a href={url(`/cards/${card.slug}`)}>{card.name}</a></h3>
       <p class="muted small">{card.category.replace('_', ' ')} · {variant.region_label}</p>
     </div>
     {available
@@ -32,7 +32,7 @@ const kycLabel = { required: 'ID verification required', not_required_initially:
   </dl>
   <footer class="tile-actions">
     <label class="compare-check"><input type="checkbox" class="compare-toggle" value={card.slug} disabled={!available} /> Compare</label>
-    <a class="btn" href={`/cards/${card.slug}`}>Details</a>
+    <a class="btn" href={url(`/cards/${card.slug}`)}>Details</a>
   </footer>
 </article>
 

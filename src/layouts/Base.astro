@@ -1,10 +1,10 @@
 ---
-import { IS_DEMO } from '../lib/data.ts';
+import { IS_DEMO, NOINDEX, url } from '../lib/data.ts';
 interface Props { title: string; description: string; noindex?: boolean; canonicalPath?: string }
 const { title, description, noindex = false, canonicalPath } = Astro.props;
 const site = import.meta.env.PUBLIC_SITE_URL;
-const robots = (IS_DEMO || noindex) ? 'noindex, nofollow' : 'index, follow';
-const canonical = site && canonicalPath ? new URL(canonicalPath, site).toString() : null;
+const robots = (IS_DEMO || NOINDEX || noindex) ? 'noindex, nofollow' : 'index, follow';
+const canonical = site && canonicalPath ? new URL(url(canonicalPath), site).toString() : null;
 ---
 <!doctype html>
 <html lang="en">
@@ -31,13 +31,13 @@ const canonical = site && canonicalPath ? new URL(canonicalPath, site).toString(
     )}
     <header class="site-header">
       <nav aria-label="Main">
-        <a class="brand" href="/">CRYPTO<span>SCANNER</span></a>
+        <a class="brand" href={url('/')}>CRYPTO<span>SCANNER</span></a>
         <ul>
-          <li><a href="/compare">Compare</a></li>
-          <li><a href="/calculator">Calculator</a></li>
-          <li><a href="/methodology">Method</a></li>
-          <li><a href="/how-we-make-money">Funding</a></li>
-          <li><a href="/graveyard">Graveyard</a></li>
+          <li><a href={url('/compare')}>Compare</a></li>
+          <li><a href={url('/calculator')}>Calculator</a></li>
+          <li><a href={url('/methodology')}>Method</a></li>
+          <li><a href={url('/how-we-make-money')}>Funding</a></li>
+          <li><a href={url('/graveyard')}>Graveyard</a></li>
         </ul>
       </nav>
     </header>
@@ -47,7 +47,7 @@ const canonical = site && canonicalPath ? new URL(canonicalPath, site).toString(
     <footer class="site-footer">
       <div class="container">
         <p>CryptoScanner compares published card conditions. It does not hold funds, run identity checks or submit applications. Listing a card is not a guarantee that an issuer will accept you. Nothing here is financial, legal or tax advice.</p>
-        <p>Some outbound links may be affiliate links; they are marked and never change the editorial ranking. <a href="/how-we-make-money">How we make money</a> · <a href="/methodology">Methodology</a> · <a href="/contact">Report an error</a> · <a href="/legal">Legal &amp; privacy</a></p>
+        <p>Some outbound links may be affiliate links; they are marked and never change the editorial ranking. <a href={url('/how-we-make-money')}>How we make money</a> · <a href={url('/methodology')}>Methodology</a> · <a href={url('/contact')}>Report an error</a> · <a href={url('/legal')}>Legal &amp; privacy</a></p>
       </div>
     </footer>
   </body>

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { url } from '../lib/data.ts';
 const PUBLISHER = import.meta.env.PUBLIC_PUBLISHER_NAME || '';
 ---
 <Base title="Legal notice & privacy" description="Publisher information, disclaimers and privacy practices of CryptoScanner." canonicalPath="/legal" noindex={true}>
@@ -11,7 +12,7 @@ const PUBLISHER = import.meta.env.PUBLIC_PUBLISHER_NAME || '';
   <h2>Nature of the service</h2>
   <p>CryptoScanner compares publicly available conditions of card products. It does not hold funds, provide payment services, run identity checks, submit applications, or give personalised financial, legal or tax advice. Figures are estimates based on published conditions at the stated verification date and may be outdated; always check the provider's current terms before deciding. Listing a product is not a recommendation to use it and not a guarantee of acceptance.</p>
   <h2>Affiliate links</h2>
-  <p>Some links are affiliate links, marked as such; see <a href="/how-we-make-money">how we make money</a>.</p>
+  <p>Some links are affiliate links, marked as such; see <a href={url('/how-we-make-money')}>how we make money</a>.</p>
   <h2>Privacy</h2>
   <p>This site needs no account. Your country choice and comparison selection are stored only in your browser (local storage) and can be cleared at any time. Shareable URLs contain card identifiers only. No analytics or tracking is active in this build; if usage measurement is added it will be described here, limited to aggregated, non-identifying events, and subject to the consent rules that apply. Error reports you send by email are used only to correct the site.</p>
 </Base>

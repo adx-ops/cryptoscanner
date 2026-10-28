@@ -1,0 +1,901 @@
+{
+  "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "provider": "Wirex",
+      "product": "Wirex Card",
+      "slug": "wirex-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "referral only",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 3
+    },
+    {
+      "provider": "Laso",
+      "product": "Laso Finance Card",
+      "slug": "laso-finance-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 3
+    },
+    {
+      "provider": "Goblin",
+      "product": "Goblin Card",
+      "slug": "goblin-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 3
+    },
+    {
+      "provider": "Freedomia",
+      "product": "Freedomia Card",
+      "slug": "freedomia-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 3
+    },
+    {
+      "provider": "Pinto",
+      "product": "Pinto Pay",
+      "slug": "pinto-pay",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 3
+    },
+    {
+      "provider": "Coinbase",
+      "product": "Coinbase Card",
+      "slug": "coinbase-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "MetaMask",
+      "product": "MetaMask Card",
+      "slug": "metamask-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "ether.fi",
+      "product": "ether.fi Cash",
+      "slug": "ether-fi-cash",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Bitget Wallet",
+      "product": "Bitget Wallet Card",
+      "slug": "bitget-wallet-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "COCA",
+      "product": "COCA Card",
+      "slug": "coca-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Ready",
+      "product": "Ready Card",
+      "slug": "ready-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Kraken",
+      "product": "Krak Card",
+      "slug": "krak-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Deblock",
+      "product": "Deblock Card",
+      "slug": "deblock-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Plutus",
+      "product": "Plutus Card",
+      "slug": "plutus-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Trastra",
+      "product": "Trastra Card",
+      "slug": "trastra-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Holyheld",
+      "product": "Holyheld Card",
+      "slug": "holyheld-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Bleap",
+      "product": "Bleap Card",
+      "slug": "bleap-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Oobit",
+      "product": "Oobit Crypto Card",
+      "slug": "oobit-crypto-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Revolut",
+      "product": "Revolut Metal Card",
+      "slug": "revolut-metal-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Plasma",
+      "product": "Plasma One Card",
+      "slug": "plasma-one-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "BitMart",
+      "product": "BitMart Card",
+      "slug": "bitmart-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Binance",
+      "product": "Binance Visa Card",
+      "slug": "binance-visa-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Solayer",
+      "product": "Solayer Emerald Card",
+      "slug": "solayer-emerald-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Fold",
+      "product": "Fold Bitcoin Credit Card",
+      "slug": "fold-bitcoin-credit-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Avalanche",
+      "product": "Avalanche Card International",
+      "slug": "avalanche-card-international",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Xapo",
+      "product": "Xapo Bank Card",
+      "slug": "xapo-bank-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "ZEN.COM",
+      "product": "ZEN.COM Pro Card",
+      "slug": "zencom-pro-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Slash",
+      "product": "Slash Platinum Card",
+      "slug": "slash-platinum-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Karma",
+      "product": "Karma Card",
+      "slug": "karma-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Kolo",
+      "product": "Kolo Card",
+      "slug": "kolo-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "IZIPAY",
+      "product": "IZIPAY Virtual Crypto Card",
+      "slug": "izipay-virtual-crypto-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Vepay",
+      "product": "Vepay Card",
+      "slug": "vepay-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Prive",
+      "product": "Prive Card",
+      "slug": "prive-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Amulets",
+      "product": "Amulets Card",
+      "slug": "amulets-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Avici",
+      "product": "Avici Card",
+      "slug": "avici-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Nocturne",
+      "product": "Nocturne Aurora Card",
+      "slug": "nocturne-aurora-card",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "WooCard",
+      "product": "WooCard",
+      "slug": "woocard",
+      "seen_in": [
+        "cryptocards.so 2026-10-28 (sponsored list)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": 2
+    },
+    {
+      "provider": "Bitpanda",
+      "product": "Bitpanda Card",
+      "slug": "bitpanda-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "publisher programme",
+      "status": "published",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 0
+    },
+    {
+      "provider": "Gnosis Pay",
+      "product": "Gnosis Pay Card",
+      "slug": "gnosis-pay-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "none seen",
+      "status": "published",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 0
+    },
+    {
+      "provider": "Crypto.com",
+      "product": "Crypto.com Visa Card (EEA)",
+      "slug": "crypto-com-visa-card-eea",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "publisher programme",
+      "status": "validated",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 0
+    },
+    {
+      "provider": "Nexo",
+      "product": "Nexo Card",
+      "slug": "nexo-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "publisher programme",
+      "status": "validated",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 0
+    },
+    {
+      "provider": "Bybit EU",
+      "product": "Bybit Card (EEA)",
+      "slug": "bybit-card-eea",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "publisher programme",
+      "status": "validated",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 0
+    },
+    {
+      "provider": "KAST",
+      "product": "KAST Card",
+      "slug": "kast-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "referral only",
+      "status": "validated",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 0
+    },
+    {
+      "provider": "RedotPay",
+      "product": "RedotPay Card",
+      "slug": "redotpay-card",
+      "seen_in": [
+        "brief 2026-10-26"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "publisher programme",
+      "status": "validated",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-28",
+      "priority": 0
+    },
+    {
+      "provider": "WaldenPay",
+      "product": "WaldenPay Virtual Card",
+      "slug": "waldenpay-virtual-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 2,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -1
+    },
+    {
+      "provider": "SolCard",
+      "product": "SolCard",
+      "slug": "solcard",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 2,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -1
+    },
+    {
+      "provider": "Bing",
+      "product": "Bing Card",
+      "slug": "bing-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 2,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -1
+    },
+    {
+      "provider": "OffGrid",
+      "product": "OffGrid Cash",
+      "slug": "offgrid-cash",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -3
+    },
+    {
+      "provider": "Trocador",
+      "product": "Trocador prepaid cards",
+      "slug": "trocador-prepaid-cards",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -3
+    },
+    {
+      "provider": "Agora",
+      "product": "Agora Card",
+      "slug": "agora-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -3
+    },
+    {
+      "provider": "UTORG",
+      "product": "UTORG Card",
+      "slug": "utorg-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -3
+    },
+    {
+      "provider": "Kripicard",
+      "product": "Kripicard",
+      "slug": "kripicard",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -3
+    },
+    {
+      "provider": "Sovrae",
+      "product": "Sovrae Card",
+      "slug": "sovrae-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -3
+    },
+    {
+      "provider": "MaxSwap",
+      "product": "MaxSwap Virtual Card",
+      "slug": "maxswap-virtual-card",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -3
+    },
+    {
+      "provider": "Kardpay",
+      "product": "Kardpay",
+      "slug": "kardpay",
+      "seen_in": [
+        "cardpilled 2026-09-23",
+        "cryptoslate 2026-10-22"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "priority": -3
+    }
+  ]
+}

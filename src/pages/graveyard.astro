@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { allCards } from '../lib/data.ts';
+import { allCards, url } from '../lib/data.ts';
 // Cards that are no longer an available option: suspended, closed, or retired records.
 // They stay documented (with their history) but never appear as recommendations.
 const gone = allCards().filter((c) => c.product_status === 'suspended' || c.product_status === 'closed' || c.record_status === 'retired');
@@ -15,7 +15,7 @@ const gone = allCards().filter((c) => c.product_status === 'suspended' || c.prod
     <div class="grid cols-2">
       {gone.map((c) => (
         <article class="card">
-          <h3 style="margin:0 0 4px"><a href={`/cards/${c.slug}`}>{c.name}</a></h3>
+          <h3 style="margin:0 0 4px"><a href={url(`/cards/${c.slug}`)}>{c.name}</a></h3>
           <p class="muted" style="margin:0 0 8px">{c.brand} · {c.category.replace('_', ' ')}</p>
           <p style="margin:0"><span class="badge bad">{c.product_status === 'active' ? c.record_status : c.product_status}</span> {c.changelog.length ? <span class="muted">last change {c.changelog.at(-1)?.date.slice(0, 10)}: {c.changelog.at(-1)?.reason}</span> : null}</p>
         </article>

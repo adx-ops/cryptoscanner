@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import type { Fee } from '../lib/types.ts';
-import { allCards, defaultVariantAndTier, rewardSummary, recurringCostSummary, outboundLink, isAvailableOption } from '../lib/data.ts';
+import { allCards, defaultVariantAndTier, rewardSummary, recurringCostSummary, outboundLink, isAvailableOption, url } from '../lib/data.ts';
 // Static page: all cards are embedded, the client picks the ones in ?cards= (slugs only).
 const cards = allCards().filter(isAvailableOption).map((c) => {
   const { variant, tier } = defaultVariantAndTier(c);
@@ -27,7 +27,7 @@ const rowLabels = cards[0] ? Object.keys(cards[0].rows) : [];
 ---
 <Base title="Compare crypto cards side by side" description="Side-by-side comparison of crypto card rewards, fees, availability and verification requirements." canonicalPath="/compare" noindex={true}>
   <h1>Compare cards</h1>
-  <p class="muted">Pick two or three cards from the <a href="/">catalogue</a>. Values come from the default free tier of each card's first regional variant; see each card page for other tiers.</p>
+  <p class="muted">Pick two or three cards from the <a href={url('/')}>catalogue</a>. Values come from the default free tier of each card's first regional variant; see each card page for other tiers.</p>
   <div id="picker" class="card" style="margin-bottom:16px">
     <p style="margin-top:0"><strong>Select cards</strong> (2–3)</p>
     <div class="picks">
@@ -65,9 +65,9 @@ const rowLabels = cards[0] ? Object.keys(cards[0].rows) : [];
   function apply(sel: string[]) {
     document.querySelectorAll<HTMLElement>('[data-col]').forEach((el) => { el.hidden = !sel.includes(el.dataset.col!); });
     wrap.hidden = sel.length < 2; hint.hidden = sel.length >= 2;
-    const url = new URL(location.href);
-    if (sel.length) url.searchParams.set('cards', sel.join(',')); else url.searchParams.delete('cards');
-    history.replaceState(null, '', url);
+    const u = new URL(location.href);
+    if (sel.length) u.searchParams.set('cards', sel.join(',')); else u.searchParams.delete('cards');
+    history.replaceState(null, '', u);
   }
   const initial = (new URL(location.href).searchParams.get('cards') || '').split(',').filter(Boolean).slice(0, 3);
   boxes.forEach((b) => { b.checked = initial.includes(b.value); b.addEventListener('change', () => {

@@ -5,6 +5,10 @@ import type { CardRecord, Variant, Tier, Fee, Reward } from './types.ts';
 
 export const DATASET: 'verified' | 'demo' = (import.meta.env.PUBLIC_DATASET === 'verified') ? 'verified' : 'demo';
 export const IS_DEMO = DATASET === 'demo';
+export const NOINDEX = import.meta.env.PUBLIC_NOINDEX === '1';
+/** Prefix a root-relative path with the deployment base path (GitHub Pages project sites). */
+export const BASE: string = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+export function url(path: string): string { return `${BASE}${path.startsWith('/') ? path : '/' + path}`; }
 
 const dir = IS_DEMO ? 'data/demo/cards' : 'data/cards';
 
