@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kast-card",
+  "slug": "kast-card",
+  "name": "KAST Card",
+  "brand": "KAST",
+  "provider_id": "kast",
+  "issuer": {
+    "name": "Not named ('licensed partners')",
+    "status": "unknown",
+    "evidence": [
+      "ev-kast-home"
+    ]
+  },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "USD account funded with stablecoins (USDT/USDC on 10+ chains) and other tokens; non-stablecoin tokens are auto-converted at 2–7% depending on the token (rates on a separate page).",
+    "evidence": [
+      "ev-kast-fees",
+      "ev-kast-home"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "kast-card-global",
+      "region_label": "Not published (availability 'may vary by jurisdiction')",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "No official country list found: the site says availability may vary by jurisdiction and is subject to regulatory approval; the fee article mentions a $2 Standard fee for 'certain countries' without naming them. Eligibility is 'to confirm' everywhere until a list is published.",
+        "evidence": [
+          "ev-kast-home",
+          "ev-kast-fees"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [],
+        "stages_note": "Site refers to identity verification and a 'Verify' step; documents and thresholds not stated on the pages read. Not a no-KYC product.",
+        "evidence": [
+          "ev-kast-home"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": {
+            "type": "free",
+            "note": "$2/year in 'certain countries' (not named).",
+            "status": "verified",
+            "evidence": [
+              "ev-kast-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 100,
+                "currency": "USD"
+              },
+              "period": "once",
+              "conditions": "Physical card $100 on Standard; 2 virtual cards free then $2 each.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "Standard annual fee free ($2 in unnamed countries).",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "Non-USD card spend 2.0%; USD spend free.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 3,
+                "currency": "USD"
+              },
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "$3 + 2% (plus 2% FX if non-USD); max $250 per withdrawal incl. fees; max 3 withdrawals per rolling 24 h.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "conditions": "Stablecoin deposits free; other tokens auto-converted at 2–7%.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "2–7% depending on token (lowest rate modelled); not applied when depositing stablecoins.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 0.5,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Declined-transaction fee $0.50 (insufficient balance only); $0.10 low-authorisation fee on non-USD transactions under $25. Not modelled.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "conditions": "No inactivity fee stated, but a virtual-only account is cancelled if no $5 deposit within 2 weeks of activation.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1.5,
+              "payout": {
+                "kind": "fiat",
+                "code": "USD"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 30,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "conditions": "1.5% cashback 'in dollars' on eligible purchases up to $2,000 eligible spend per month (= $30 cap, calculated); some merchant categories excluded. The help article instead says 'up to 3%' on 2025 spend for Standard — treated as a past programme.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-home",
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "description": "'Reserve' rewards on USD balances (8% Standard, introductory, ends 2027-07-01 per site; a news item says step-down from January 2027) — a balance reward, not a card reward; not valued.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-kast-home"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "Max 3 per rolling 24 h.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 1000,
+              "currency": "USD"
+            },
+            "period": "year",
+            "status": "verified",
+            "evidence": [
+              "ev-kast-home",
+              "ev-kast-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "1 physical and 1 virtual card free per year; additional physical $250.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 1000,
+                "currency": "USD"
+              },
+              "period": "year",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 3,
+                "currency": "USD"
+              },
+              "percent": 2,
+              "period": "per_transaction",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "fiat",
+                "code": "USD"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 200,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "conditions": "2% up to $10,000 eligible spend per month (= $200, calculated); plus KAST Points worth 1% of eligible spend (no guaranteed monetary value).",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-home"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "private",
+          "name": "Private",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 10000,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Help article calls this tier 'Luxe'; site calls it 'Private'. A 'Limited' tier ($5,000 once-off) appears only in the help article.",
+            "status": "contradictory",
+            "evidence": [
+              "ev-kast-home",
+              "ev-kast-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "1 physical (plated gold) and 1 virtual free per year; additional physical $1,000.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 10000,
+                "currency": "USD"
+              },
+              "period": "year",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 3,
+                "currency": "USD"
+              },
+              "percent": 2,
+              "period": "per_transaction",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 3,
+              "payout": {
+                "kind": "fiat",
+                "code": "USD"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 1200,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "conditions": "3% up to $40,000 eligible spend per month (= $1,200, calculated); KAST Points worth 2% of eligible spend.",
+              "status": "verified",
+              "evidence": [
+                "ev-kast-home"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-kast-home",
+      "url": "https://www.kast.xyz/",
+      "title": "KAST landing page (tiers, cashback, Reserve, FAQ)",
+      "source_type": "pricing_page",
+      "excerpt": "Standard free / 1.5% up to $2,000 monthly eligible spend; Premium $1,000/yr / 2% up to $10,000; Private $10,000/yr / 3% up to $40,000; VISA Platinum/Infinite; cards 'through regulated partners'; availability varies by jurisdiction; Reserve 8–12% introductory, ends 1 July 2027.",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "contradictory",
+      "contradiction_note": "Reserve step-down date: site says 1 July 2027, an Aug 2026 news item says January 2027; site tier names (Premium/Private) differ from the help article (Premium/Limited/Luxe) and cashback figures differ (1.5/2/3% vs 'up to 3/7/10% on 2025 spend')."
+    },
+    {
+      "id": "ev-kast-fees",
+      "url": "https://kastofficial1747979614.zendesk.com/hc/en-us/articles/14487759471503",
+      "title": "CARDS, ACCOUNT FEES & CONDITIONS (KAST help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Annual: Standard free ($2 certain countries), Premium $1,000, Limited $5,000 once, Luxe $10,000. Physical card $100 (Standard); additional $100/$250/$1,000. Virtual: 2 free then $2. Stablecoin deposit free. Non-USD spend 2% FX. Token auto-conversion 2–7%. ATM $3 + 2% (+2% FX non-USD), $250 max, 3 per 24 h. Declined 50c, low-auth 10c.",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.kast.xyz/",
+    "affiliate": {
+      "program_id": "kast-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-10-28T12:10:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-10-28T12:10:00Z",
+      "field": "*",
+      "reason": "Initial record from the landing page and the official fee article (single read). No country list; issuer not named; tier naming and cashback figures differ between the two official pages.",
+      "evidence": [
+        "ev-kast-home",
+        "ev-kast-fees"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "USD stablecoin account with a Visa card. Standard tier is free with 1.5% USD cashback on the first $2,000 of monthly spend, but a physical card costs $100, non-USD spend carries a 2% FX fee and ATM withdrawals cost $3 + 2%. Paid tiers ($1,000 and $10,000 a year) raise the rate and the caps.",
+    "good_for": [
+      "People who hold stablecoins and spend mostly in USD",
+      "Virtual-card users (2 free on Standard) with Apple/Google Pay"
+    ],
+    "not_for": [
+      "Euro-zone spenders (2% FX on every non-USD purchase)",
+      "Anyone who needs a published country list or a named issuer before choosing",
+      "Cash withdrawals"
+    ],
+    "watch_outs": [
+      "Issuer not named; custody statements on the site are inconsistent.",
+      "Official pages disagree on tier names and cashback figures; this record uses the lower, current landing-page rates.",
+      "'Reserve' balance rewards are introductory and their end date is contradictory (Jan vs Jul 2027).",
+      "A virtual-only account is cancelled if not funded with $5 within two weeks."
+    ]
+  }
+}

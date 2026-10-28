@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "redotpay-affiliate",
+  "provider_id": "redotpay",
+  "program_name": "RedotPay Affiliate Program",
+  "program_url": "https://www.redotpay.com/affiliates",
+  "type": "hybrid",
+  "allowed_channels": [
+    "website",
+    "social",
+    "email",
+    "unknown"
+  ],
+  "application_conditions": "Apply via app/website, complete identity verification, approval. Levels LV1 (0–9 referrals), LV2 (10–29), LV3 (30+), Exclusive for KOLs/affiliates after 100 card activations (blog, 2025-03-28).",
+  "our_status": "terms_verified",
+  "paid_action": "Card application (instant commission), card activation (one-time), referred users' transactions (monthly, settled after 30 days), Tier-2 10% of referral's commission for 365 days.",
+  "validation_conditions": "Transaction commissions settled after 30 days. Rates per level shown as an image on the blog (unreadable).",
+  "commission": {
+    "model_note": "'Up to 40% commission' headline; card activation and application commissions amounts not published in text; transaction commission % not published.",
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "revenue_share": {
+    "included_products": "Card transactions",
+    "duration_note": "Tier-2 for 365 days; direct duration not stated",
+    "exclusions": "Unknown"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "not stated (likely in-app balance)",
+    "frequency": "application commissions instant; transaction earnings monthly",
+    "holdbacks_note": "30-day settlement"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "verified"
+  },
+  "rules_note": "Marketing kit (banners, email templates, social posts). No region or channel restrictions published; 47 non-issuance regions apply to users.",
+  "allowed_countries_note": "'100+ countries'; no list.",
+  "evidence": [
+    {
+      "url": "https://www.redotpay.com/affiliates",
+      "title": "RedotPay Affiliates landing page",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "excerpt": "Up to 40% commission; instant commission per card application; monthly transaction earnings; dashboard with referral links; apply via app, KYC, approval."
+    },
+    {
+      "url": "https://www.redotpay.com/blog/maximize-your-earnings-exploring-redotpays-four-reward-programs",
+      "title": "Four reward programs (blog, 2025-03-28)",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "excerpt": "Referral (anyone), KOL, Affiliate (institutions/marketers, tracking links + dashboard), Redot Angels; levels LV1–LV3 + Exclusive after 100 activations; Tier-2 10% for 365 days."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Strongest card-order-based programme found so far: pays on card application/activation, not only on trading. Rates unknown until inside the dashboard. Requires David's own KYC with RedotPay to join."
+}

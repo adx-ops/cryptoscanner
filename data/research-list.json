@@ -70,14 +70,16 @@
     {
       "provider": "KAST",
       "product": "KAST Card",
-      "status": "identified",
-      "record": null
+      "status": "validated",
+      "record": "data/cards/kast-card.json",
+      "note": "Landing page + official fee article read 2026-10-28. No country list, issuer unnamed, official pages disagree on tier names/cashback. KYC required."
     },
     {
       "provider": "RedotPay",
       "product": "RedotPay Card",
-      "status": "identified",
-      "record": null
+      "status": "validated",
+      "record": "data/cards/redotpay-card.json",
+      "note": "Issuance, top-up and 47-region exclusion list from help centre (2026-07/08). FX/ATM/limits only in an image → unknown. Affiliate programme pays on card application/activation (rates not public)."
     },
     {
       "provider": "Bitget Wallet",
@@ -135,5 +137,100 @@
       "status": "identified",
       "record": null
     }
-  ]
+  ],
+  "no_kyc_track": {
+    "_note": "Cards marketed as no-KYC / low-KYC, from discovery articles (cardpilled 2026-09-23, cryptoslate 2026-10-22). Nothing here is verified. Inclusion rule (brief §5): a card enters the catalogue only if the issuer or operator is named, official terms state the verification stage and limits, and the product is active. Anonymous-by-design prepaid cards with undisclosed issuers fail that rule; 'no initial KYC with thresholds' can pass.",
+    "candidates": [
+      {
+        "product": "WaldenPay Virtual Card",
+        "claim": "no ID; $10 issuance; 3–5% top-up fees (third-party)",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "SolCard",
+        "claim": "virtual Mastercard without ID, $5,000/month (third-party); no-KYC Visa cancelled June 2025",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "Bing Card",
+        "claim": "virtual tier without photo ID; reports of frozen funds (third-party)",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "OffGrid Cash",
+        "claim": "no-KYC behind $49–$197/yr subscription",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "Trocador prepaid cards",
+        "claim": "reseller, no document",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "Laso Finance Card",
+        "claim": "non-reloadable up to $1,000; operator described as FinCEN-registered MSB",
+        "issuer_disclosed": true,
+        "status": "identified"
+      },
+      {
+        "product": "Goblin Card",
+        "claim": "$350 entry; KYC level 0 per KYCnot.me",
+        "issuer_disclosed": true,
+        "status": "identified"
+      },
+      {
+        "product": "Freedomia Card",
+        "claim": "subscription-gated, Delaware LLC",
+        "issuer_disclosed": true,
+        "status": "identified"
+      },
+      {
+        "product": "Agora Card",
+        "claim": "$90 virtual / $500 physical one-time",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "UTORG Card",
+        "claim": "low-KYC, EEA/Ukraine, €0 annual",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "Kripicard",
+        "claim": "minimal info to open, more verification to raise limits",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "Pinto Pay",
+        "claim": "low-KYC, terms reserve right to demand ID; not US",
+        "issuer_disclosed": true,
+        "status": "identified"
+      },
+      {
+        "product": "Sovrae Card",
+        "claim": "pre-verified on purchase; $89/$349 one-time",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "MaxSwap Virtual Card",
+        "claim": "email-only onboarding; $50 card",
+        "issuer_disclosed": false,
+        "status": "identified"
+      },
+      {
+        "product": "Kardpay",
+        "claim": "low-KYC, $29–$299/yr",
+        "issuer_disclosed": false,
+        "status": "identified"
+      }
+    ]
+  }
 }

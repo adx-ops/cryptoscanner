@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "kast-referral",
+  "provider_id": "kast",
+  "program_name": "KAST referral codes (personal)",
+  "program_url": "https://www.kast.xyz/",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Referral codes are given to KAST users; no publisher/affiliate programme page found on kast.xyz or its help centre (search 2026-10-28). The Awin 'KastKing' listing is a fishing-gear brand, not KAST.",
+  "our_status": "identified",
+  "paid_action": "Unknown; third-party pages mention a $10 sign-up bonus for the referee.",
+  "commission": {
+    "model_note": "Not published.",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "evidence": [
+    {
+      "url": "https://www.kast.xyz/",
+      "title": "KAST landing page",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "excerpt": "No affiliate/partner section found in the extracted text."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Contact KAST for a publisher programme once the site exists; no outreach without David's instruction."
+}
