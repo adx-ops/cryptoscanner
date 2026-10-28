@@ -1,0 +1,51 @@
+# Scheduled, deterministic, reversible: marks promotions/evidence past their published end date
+# as 'stale' (no page is read). If anything changed, it opens a pull request for review instead
+# of committing to main directly — the publication decision stays human until a rule is approved.
+# Schedule: daily 05:17 UTC (06:17/07:17 Berlin). Can also be run by hand (workflow_dispatch).
+# Disable: GitHub → Actions → this workflow → "Disable workflow".
+name: Expire promotions
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: expire-promos
+  cancel-in-progress: false
+jobs:
+  expire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Apply date-based expiry
+        id: expire
+        run: |
+          set +e
+          node --experimental-strip-types scripts/expire-promos.ts | tee expire.log
+          code=${PIPESTATUS[0]}
+          set -e
+          echo "changed=$([ "$code" = "2" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          if [ "$code" != "0" ] && [ "$code" != "2" ]; then exit "$code"; fi
+      - name: Validate after changes
+        if: steps.expire.outputs.changed == 'true'
+        run: npm run validate && npm test
+      - name: Open a pull request with the changes
+        if: steps.expire.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: auto/expire-promos
+          title: 'Expire promotions past their end date'
+          commit-message: 'chore(data): mark expired promotions as stale (date-based)'
+          body: |
+            Automated, date-based expiry (no page read). Review the diff, then merge.
+            The run log (which rewards/evidence expired) is in the Actions job output.
+          labels: data, automated
+          delete-branch: true
