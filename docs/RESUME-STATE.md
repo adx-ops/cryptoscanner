@@ -34,7 +34,7 @@ Updated: 2026-10-28 18:50 (Europe/Berlin). Keep this file short; it is the hand-
 | Candidates list (discovery) | seeded: 55 entries with priority formula | data/candidates.json |
 | Agent run prompts + publication policy | written | agents/*.md, docs/PUBLICATION-POLICY.md |
 | Auto-merge of agent PRs | configured, not yet exercised (no agent PR yet) | .github/workflows/auto-merge.yml |
-| GitHub Pages deploy (verified build, noindex, base path /cryptoscanner) | configured; deploy job fails until Pages is enabled in repo settings | .github/workflows/deploy-pages.yml |
+| GitHub Pages deploy (verified build, noindex, base path /cryptoscanner) | active | run 40742521004 green; page fetched: title, noindex, 2 cards, links under /cryptoscanner/ |
 | Affiliate matrix | 6 programmes recorded (3 terms_verified, 2 identified, 1 not_applicable), none applied | data/affiliate/*.json |
 | Promotion expiry (date-based) | tested | scripts/expire-promos.ts, 4 tests, dry-run shows demo promo expiring 2027-01-01 |
 | Graveyard page | tested | /graveyard, empty state, ui-check |
@@ -42,11 +42,11 @@ Updated: 2026-10-28 18:50 (Europe/Berlin). Keep this file short; it is the hand-
 | Structured data, analytics | not started | — |
 
 ## Integrations
-GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-check in Chromium) · scheduled expiry: configured · auto-merge: configured · Pages: configured, blocked on repo setting · scheduled Claude runs CREATED 2026-10-28 with David's explicit authorisation (permission mode auto): research trig_01K3xU7cbJTPcQDM5FsYDrJn (weekdays 06:41 Berlin, first run 2026-10-29), second-read trig_014y1sqpUccM2ArRRaAALQqe (daily 07:23), discovery trig_017W5QY5f3CRgK4Y1Vvvgybt (Mondays 05:49). None has fired yet → status 'configured' until a PR exists · analytics: planned · affiliate dashboards: none.
+GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-check in Chromium) · scheduled expiry: configured · auto-merge: configured · Pages: ACTIVE — David enabled it 2026-10-28 19:10; manual run 40742521004 green; https://adx-ops.github.io/cryptoscanner/ serves the verified build (2 cards, noindex, links under /cryptoscanner/) — verified by fetch · scheduled Claude runs CREATED 2026-10-28 with David's explicit authorisation (permission mode auto): research trig_01K3xU7cbJTPcQDM5FsYDrJn (weekdays 06:41 Berlin, first run 2026-10-29), second-read trig_014y1sqpUccM2ArRRaAALQqe (daily 07:23), discovery trig_017W5QY5f3CRgK4Y1Vvvgybt (Mondays 05:49). None has fired yet → status 'configured' until a PR exists · analytics: planned · affiliate dashboards: none.
 
 ## Decisions awaited from David
 1. (done 2026-10-28) three scheduled tasks created.
-1b. Enable GitHub Pages: repo Settings → Pages → Source "GitHub Actions" — the Pages API path is blocked by Claude's GitHub proxy, so this one click is David's.
+1b. (done 2026-10-28) GitHub Pages enabled by David; repo is public again (Pages on the free plan needs a public repo).
 2. No paid services (confirmed 2026-10-27).
 3. Publishing entity: the publishing entity (2026-10-27). Missing: country, legal form, registration, contact mailbox.
 4. Priority launch country within Europe — assumed none (EEA-wide, DE/FR first for verification).
@@ -55,5 +55,5 @@ GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-che
 ## Next work (in order)
 1. Once scheduled tasks exist: watch the first research and second-read runs end-to-end; fix the prompts from what they do wrong. Until then, continue second reads by hand (Crypto.com EEA, Nexo, Bybit EU, KAST, RedotPay).
 2. New records: Wirex, Coinbase, MetaMask, Kraken (Krak), Deblock, Plutus — official sources only, validated → published after a second read.
-3. Hosting: GitHub Pages (free) for a noindex preview on a github.io subdomain, or wait for a domain. Decision needed from David before anything public.
+3. Hosting: done (GitHub Pages, noindex). Next: move brief + internal affiliate scores out of the public repo if David wants; domain later.
 4. Freshness policy document (per field type); founder dashboard (5 questions) as a static page built from data + CI state.
