@@ -1,6 +1,6 @@
 # CLAUDE.md — CryptoScanner
 
-Read first: `docs/RESUME-STATE.md` (where we are), then `docs/DECISIONS.md`. The full brief is `docs/BRIEF-2026-10-26.txt`; do not paste it into agents.
+Read first: `docs/RESUME-STATE.md` (where we are), then `docs/DECISIONS.md`. The founder's brief is kept privately (Claude Project); its operative rules are in this file and docs/PUBLICATION-POLICY.md.
 
 Rules that override convenience:
 - Unknown is never zero, free, available, no-KYC or risk-free. The schema and `scripts/validate-data.ts` enforce this; keep them that way.

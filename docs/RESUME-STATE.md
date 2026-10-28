@@ -48,7 +48,7 @@ GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-che
 1. (done 2026-10-28) three scheduled tasks created.
 1b. (done 2026-10-28) GitHub Pages enabled by David; repo is public again (Pages on the free plan needs a public repo).
 2. No paid services (confirmed 2026-10-27).
-3. Publishing entity: the publishing entity (2026-10-27). Missing: country, legal form, registration, contact mailbox.
+3. Publishing entity chosen 2026-10-27 (name in private project notes). Missing: country, legal form, registration, contact mailbox.
 4. Priority launch country within Europe — assumed none (EEA-wide, DE/FR first for verification).
 5. Notification channel for exceptions — assumed this chat.
 

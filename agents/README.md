@@ -4,7 +4,7 @@ Two different things (brief §13):
 
 **A. Build-time help** — what Claude does *during a working session* with David (research, code, checks). Nothing here runs by itself.
 
-**B. Unattended runs** — scheduled Claude sessions (David's claude.ai scheduled tasks, 0 € extra) that start fresh, attach the GitHub repo, follow one prompt file below, and leave a pull request. GitHub Actions (free) then validates, and merges automatically only when the rule-based conditions in `docs/PUBLICATION-POLICY.md` hold. A run is "active" only once a real scheduled firing has produced a PR (see `docs/RESUME-STATE.md` → Integrations).
+**B. Unattended runs** — scheduled Claude sessions (claude.ai scheduled tasks, no extra cost) that start fresh, attach the GitHub repo, follow one prompt file below, and leave a pull request. GitHub Actions (free) then validates, and merges automatically only when the rule-based conditions in `docs/PUBLICATION-POLICY.md` hold. A run is "active" only once a real scheduled firing has produced a PR (see `docs/RESUME-STATE.md` → Integrations).
 
 | Run | Prompt file | Cadence | Output | Autonomy class |
 |---|---|---|---|---|
