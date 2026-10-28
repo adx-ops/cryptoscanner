@@ -17,13 +17,30 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run validate
-      - run: npm test
-      - run: npm run check
-      - run: npm run build
+      # Each step appends its output to the job summary, which is readable through the API
+      # (raw logs are not reachable from Claude's environment).
+      - name: Validate data
+        run: set -o pipefail; npm run validate 2>&1 | tee -a step.log
+      - name: Unit tests
+        run: set -o pipefail; npm test 2>&1 | tail -20 | tee -a step.log
+      - name: Type check
+        run: set -o pipefail; npm run check 2>&1 | tee -a step.log
+      - name: Build (demo dataset)
+        run: set -o pipefail; npm run build 2>&1 | tee -a step.log
+      - name: Build (verified dataset, Pages layout)
+        env:
+          PUBLIC_DATASET: verified
+          PUBLIC_SITE_URL: https://adx-ops.github.io
+          PUBLIC_BASE_PATH: /cryptoscanner
+          PUBLIC_NOINDEX: "1"
+        run: set -o pipefail; npx astro build 2>&1 | tee -a step.log
       - name: Install Chromium for Playwright
         run: npx playwright install --with-deps chromium
       - run: npm run ui-check
+      - name: Publish step output to the job summary
+        if: always()
+        run: |
+          { echo '## Step output (last 120 lines)'; echo '```'; tail -120 step.log 2>/dev/null; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
