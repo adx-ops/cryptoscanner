@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0.0",
+  "id": "redotpay-card",
+  "slug": "redotpay-card",
+  "name": "RedotPay Card",
+  "brand": "RedotPay",
+  "provider_id": "redotpay",
+  "issuer": {
+    "name": "Not named",
+    "status": "unknown",
+    "evidence": [
+      "ev-redot-card"
+    ]
+  },
+  "network": "unknown",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "Stablecoin-based card; card top-up by credit/debit card costs 3% (min 1 USD). Crypto deposit fees not read.",
+    "evidence": [
+      "ev-redot-card",
+      "ev-redot-topup"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "redotpay-card-global",
+      "region_label": "Worldwide except a published exclusion list",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [
+          "AF",
+          "AL",
+          "BY",
+          "BA",
+          "BV",
+          "BF",
+          "BI",
+          "CF",
+          "CD",
+          "HR",
+          "CU",
+          "ER",
+          "ET",
+          "GW",
+          "HT",
+          "IN",
+          "ID",
+          "IR",
+          "IQ",
+          "XK",
+          "LB",
+          "LR",
+          "LY",
+          "CN",
+          "ML",
+          "ME",
+          "MA",
+          "MM",
+          "NP",
+          "AN",
+          "NI",
+          "KP",
+          "MK",
+          "RU",
+          "RS",
+          "SG",
+          "SI",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "TR",
+          "UA",
+          "US",
+          "VE",
+          "YE",
+          "ZW"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Official article (2026-08-28) lists 47 regions where cards are NOT issued (incl. Croatia, Slovenia, Singapore, Turkey, USA, India). No positive list is published, so other countries stay 'to confirm'. ISO mapping is ours (Kosovo→XK, Netherlands Antilles→AN).",
+        "evidence": [
+          "ev-redot-restrictions"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "unknown",
+        "editorial_level": "unknown",
+        "requirements": [],
+        "stages_note": "Identity verification exists (verification page, Sumsub logo, FAQ about rejected verification) but the stage and documents are not stated on the pages read. Not established as a no-KYC product.",
+        "evidence": [
+          "ev-redot-home"
+        ],
+        "status": "unknown"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": {
+            "type": "free",
+            "status": "verified",
+            "evidence": [
+              "ev-redot-card"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "period": "once",
+              "conditions": "Virtual card 10 USD; physical card 100 USD; deducted from balance.",
+              "status": "verified",
+              "evidence": [
+                "ev-redot-issuance"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'No annual fees' (physical card section).",
+              "status": "verified",
+              "evidence": [
+                "ev-redot-card"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 3,
+              "min": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Top-up by credit/debit card: 3%, minimum 1 USD. Crypto top-up fee not read.",
+              "status": "verified",
+              "evidence": [
+                "ev-redot-topup"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "inactivity",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-redot-home",
+      "url": "https://www.redotpay.com/",
+      "title": "RedotPay homepage",
+      "source_type": "issuer_doc",
+      "excerpt": "Virtual and physical stablecoin-based cards; 'fintech service provider and not a bank'; verification page and Sumsub logo; no card fees or rewards stated.",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-redot-card",
+      "url": "https://www.redotpay.com/card",
+      "title": "RedotPay Crypto Card page",
+      "source_type": "pricing_page",
+      "excerpt": "Physical card 'no annual fees'; virtual card with Apple Pay/Google Pay; 130M+ merchants; network and issuer not named.",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-redot-issuance",
+      "url": "https://helpcenter.redotpay.com/fr/articles/10566200-y-a-t-il-des-frais-pour-obtenir-une-carte",
+      "title": "Is there a fee to get a card? (help centre, FR, 2026-07-27)",
+      "source_type": "help_center",
+      "excerpt": "Virtual card 10 USD, physical card 100 USD, deducted from balance; 5 USD welcome reward usable for spending only.",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-redot-topup",
+      "url": "https://helpcenter.redotpay.com/en/articles/10621401",
+      "title": "Is there a fee for adding funds by card? (help centre, 2026-08-28)",
+      "source_type": "help_center",
+      "excerpt": "Card top-up fee 3% of the amount, minimum 1 USD; waived under 1 USD.",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-redot-restrictions",
+      "url": "https://helpcenter.redotpay.com/fr/articles/14254838-restrictions-d-emission-de-carte",
+      "title": "Card issuance restrictions (help centre, FR, 2026-08-28)",
+      "source_type": "eligibility_page",
+      "excerpt": "47 regions where residents cannot get virtual or physical cards nor use them as billing address (sanctions and network restrictions), incl. US, India, China, Turkey, Singapore, Croatia, Slovenia, Ukraine, Russia.",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-redot-fees-img",
+      "url": "https://helpcenter.redotpay.com/fr/articles/10339271-limites-et-frais-de-la-carte-redotpay",
+      "title": "Card limits and fees (help centre, FR, 2026-07-24) — figures are in an image",
+      "source_type": "help_center",
+      "excerpt": "Article body says 'detailed overview' but all amounts are inside a screenshot image that text extraction cannot read. FX, ATM and limits therefore remain unknown until read in a browser.",
+      "accessed_at": "2026-10-28T12:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "unknown"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.redotpay.com/card",
+    "affiliate": {
+      "program_id": "redotpay-affiliate",
+      "status": "terms_verified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-10-28T12:10:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-10-28T12:10:00Z",
+      "field": "*",
+      "reason": "Initial record from homepage, card page and three help-centre articles (single read). FX/ATM/limits are in an image on the fees article and still unknown; issuer and network not named; KYC stage not stated.",
+      "evidence": [
+        "ev-redot-issuance",
+        "ev-redot-topup",
+        "ev-redot-restrictions"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Stablecoin prepaid card (network and issuer not named) available outside a 47-region exclusion list that includes the US, India, China and Turkey. Virtual card 10 USD, physical 100 USD, no annual fee, 3% fee on card top-ups; FX and ATM fees not readable yet; no cashback documented.",
+    "good_for": [
+      "Residents of countries not served by European issuers who need a stablecoin-funded card",
+      "Virtual-card users with Apple/Google Pay"
+    ],
+    "not_for": [
+      "Residents of the US, India, Turkey, Singapore, Croatia or Slovenia (not issued)",
+      "Anyone who wants a named issuer and a readable fee schedule before choosing",
+      "Cashback seekers (none documented)"
+    ],
+    "watch_outs": [
+      "Issuer and card network are not disclosed on the pages read.",
+      "FX and ATM fees are published only as an image; treated as unknown.",
+      "Identity verification stage not stated; this is not established as a no-KYC card.",
+      "A 16-year-olds eligibility article exists in the help centre — age rules to verify before any recommendation."
+    ]
+  }
+}
