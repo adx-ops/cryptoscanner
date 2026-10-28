@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
-import { allCards, outboundLink, isAvailableOption, payoutLabel } from '../../lib/data.ts';
+import { allCards, outboundLink, isAvailableOption, payoutLabel, url } from '../../lib/data.ts';
 import type { Fee, Reward, CardRecord } from '../../lib/types.ts';
 export function getStaticPaths() { return allCards().map((c) => ({ params: { slug: c.slug }, props: { card: c } })); }
 const { card } = Astro.props as { card: CardRecord };
@@ -28,7 +28,7 @@ const rewardText = (r: Reward) => {
 };
 ---
 <Base title={`${card.name} — rewards, fees, availability`} description={card.editorial.summary ?? `${card.name}: rewards, fees, availability by country and identity-check requirements, with sources.`} canonicalPath={`/cards/${card.slug}`}>
-  <p><a href="/">← All cards</a></p>
+  <p><a href={url('/')}>← All cards</a></p>
   <h1>{card.name}</h1>
   <p class="muted">{card.brand} · {card.category.replace('_', ' ')} · {card.form_factors.join(' + ')} · custody: {card.custody.replace('_', '-')}{card.network && card.network !== 'unknown' ? ` · ${card.network}` : ''}</p>
   {!available && <p class="card" style="border-color:var(--bad)"><strong>This product is {card.product_status}.</strong> It is kept for reference and is not an available option.</p>}
@@ -50,7 +50,7 @@ const rewardText = (r: Reward) => {
       {v.eligibility.nationality_restrictions_note && <><br />Nationality: {v.eligibility.nationality_restrictions_note}</>}
       {v.eligibility.usage_note && <><br />Usage: {v.eligibility.usage_note}</>}</p>
       <h3>Identity verification</h3>
-      <p>{v.kyc.initial_verification.replace(/_/g, ' ')} <StatusBadge s={v.kyc.status} /> · editorial level: <strong>{v.kyc.editorial_level}</strong> (<a href="/methodology#kyc">what this means</a>)<br />
+      <p>{v.kyc.initial_verification.replace(/_/g, ' ')} <StatusBadge s={v.kyc.status} /> · editorial level: <strong>{v.kyc.editorial_level}</strong> (<a href={url('/methodology#kyc')}>what this means</a>)<br />
       {v.kyc.requirements?.length ? `Documents: ${v.kyc.requirements.join(', ').replace(/_/g, ' ')}.` : ''} {v.kyc.stages_note} {v.kyc.thresholds_note}</p>
 
       {v.tiers.map((t) => (
@@ -85,11 +85,11 @@ const rewardText = (r: Reward) => {
   </section>
 
   <section class="card" style="margin-top:16px">
-    <p style="margin:0 0 10px"><a class="btn" href={`/calculator?card=${card.slug}`}>Estimate your net value</a></p>
+    <p style="margin:0 0 10px"><a class="btn" href={url(`/calculator?card=${card.slug}`)}>Estimate your net value</a></p>
     {available
       ? <a class="btn primary" href={link.href} rel={link.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">{link.monetised ? `Go to ${card.brand} (affiliate link)` : `Go to ${card.brand} official site (not an affiliate link)`}</a>
       : <span class="btn" aria-disabled="true">Not available</span>}
-    <p class="muted" style="font-size:0.85rem;margin-bottom:0">Listing here does not guarantee the issuer will accept you. <a href="/contact">Report an error</a>.</p>
+    <p class="muted" style="font-size:0.85rem;margin-bottom:0">Listing here does not guarantee the issuer will accept you. <a href={url('/contact')}>Report an error</a>.</p>
   </section>
 </Base>
 <style> h3 { font-size: 1.05rem; margin: 18px 0 6px; } h4 { margin: 12px 0 4px; font-size: 0.95rem; } ul { padding-left: 20px; } </style>

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { url } from '../lib/data.ts';
 ---
 <Base title="How we make money" description="CryptoScanner is funded by affiliate commissions on some provider links. Here is exactly how that works and what it does not change." canonicalPath="/how-we-make-money">
   <h1>How we make money</h1>
@@ -13,5 +14,5 @@ import Base from '../layouts/Base.astro';
   </ul>
   <h2>Where we stand</h2>
   <p>Affiliate programmes are listed on each card as a status: none, identified, terms verified, applied, accepted, tracking tested, payment observed. We only call a link "affiliate" once access is confirmed. We never fabricate referral codes.</p>
-  <p>Questions or concerns: <a href="/contact">contact us</a>.</p>
+  <p>Questions or concerns: <a href={url('/contact')}>contact us</a>.</p>
 </Base>

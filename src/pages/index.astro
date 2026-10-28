@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import CountrySelect from '../components/CountrySelect.astro';
 import CardTile from '../components/CardTile.astro';
-import { allCards } from '../lib/data.ts';
+import { allCards, url } from '../lib/data.ts';
 const cards = allCards();
 ---
 <Base title="Compare crypto cards by country, rewards and fees" description="Find a crypto card that fits your country and spending — with rewards and fees clearly explained, sourced and dated." canonicalPath="/">
@@ -11,7 +11,7 @@ const cards = allCards();
     <h1>Find a crypto card that fits your country and spending</h1>
     <p class="lede">Rewards, fees, availability by residence and identity checks, compared from published conditions. Every figure carries its source and verification date. No sign-up, no wallet connection.</p>
     <CountrySelect />
-    <p class="hint">Funded by affiliate links on some cards. Commissions never change the ranking. <a href="/how-we-make-money">How it works</a>.</p>
+    <p class="hint">Funded by affiliate links on some cards. Commissions never change the ranking. <a href={url('/how-we-make-money')}>How it works</a>.</p>
   </section>
 
   <section aria-labelledby="catalogue">
@@ -40,7 +40,7 @@ const cards = allCards();
 
   <div class="compare-bar" id="compare-bar" hidden>
     <span id="compare-count">0 selected</span>
-    <a class="btn primary" id="compare-go" href="/compare" aria-disabled="true">Compare</a>
+    <a class="btn primary" id="compare-go" href={url('/compare')} aria-disabled="true">Compare</a>
   </div>
 </Base>
 
@@ -128,7 +128,7 @@ const cards = allCards();
     bar.hidden = s.length === 0;
     cc.textContent = `${s.length} selected (max 3)`;
     go.setAttribute('aria-disabled', s.length < 2 ? 'true' : 'false');
-    go.href = `/compare?cards=${s.join(',')}`;
+    go.href = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/compare?cards=${s.join(',')}`;
   });
   render();
 </script>
