@@ -2,6 +2,8 @@
 # Runs on every push and pull request. Free on GitHub-hosted runners for public repos
 # and within the free minutes for private ones (verify current quotas before relying on it).
 name: CI
+permissions:
+  contents: write
 on:
   push:
     branches: [main]
@@ -27,6 +29,10 @@ jobs:
         run: set -o pipefail; npm run check 2>&1 | tee -a step.log
       - name: Build (demo dataset)
         run: set -o pipefail; npm run build 2>&1 | tee -a step.log
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: UI checks (Chromium, 5 widths + interactions)
+        run: set -o pipefail; npm run ui-check 2>&1 | tee -a step.log
       - name: Build (verified dataset, Pages layout)
         env:
           PUBLIC_DATASET: verified
@@ -34,13 +40,16 @@ jobs:
           PUBLIC_BASE_PATH: /cryptoscanner
           PUBLIC_NOINDEX: "1"
         run: set -o pipefail; npx astro build 2>&1 | tee -a step.log
-      - name: Install Chromium for Playwright
-        run: npx playwright install --with-deps chromium
-      - run: npm run ui-check
-      - name: Publish step output to the job summary
+      - name: Publish step output (job summary + commit comment on failure)
         if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           { echo '## Step output (last 120 lines)'; echo '```'; tail -120 step.log 2>/dev/null; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          if [ "${{ job.status }}" != "success" ]; then
+            body="CI failed on $GITHUB_SHA (run $GITHUB_RUN_ID). Last lines:\n\n\`\`\`\n$(tail -60 step.log | grep -E 'FAIL|ERROR|error|Error' | tail -40)\n\`\`\`"
+            gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA/comments" -f body="$(printf "$body")" >/dev/null || true
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
