@@ -42,11 +42,11 @@ Updated: 2026-10-28 18:50 (Europe/Berlin). Keep this file short; it is the hand-
 | Structured data, analytics | not started | — |
 
 ## Integrations
-GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-check in Chromium) · scheduled expiry: configured · auto-merge: configured · Pages: configured, blocked on repo setting · scheduled Claude runs (research / second read / discovery): NOT created — auto mode refused; prompts in docs/SCHEDULED-TASKS.md for David to create · analytics: planned · affiliate dashboards: none.
+GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-check in Chromium) · scheduled expiry: configured · auto-merge: configured · Pages: configured, blocked on repo setting · scheduled Claude runs CREATED 2026-10-28 with David's explicit authorisation (permission mode auto): research trig_01K3xU7cbJTPcQDM5FsYDrJn (weekdays 06:41 Berlin, first run 2026-10-29), second-read trig_014y1sqpUccM2ArRRaAALQqe (daily 07:23), discovery trig_017W5QY5f3CRgK4Y1Vvvgybt (Mondays 05:49). None has fired yet → status 'configured' until a PR exists · analytics: planned · affiliate dashboards: none.
 
 ## Decisions awaited from David
-1. Create the three scheduled tasks in claude.ai from docs/SCHEDULED-TASKS.md (auto mode refuses to create them).
-1b. Enable GitHub Pages: repo Settings → Pages → Source "GitHub Actions" (then the deploy workflow publishes the noindex verified build at adx-ops.github.io/cryptoscanner).
+1. (done 2026-10-28) three scheduled tasks created.
+1b. Enable GitHub Pages: repo Settings → Pages → Source "GitHub Actions" — the Pages API path is blocked by Claude's GitHub proxy, so this one click is David's.
 2. No paid services (confirmed 2026-10-27).
 3. Publishing entity: the publishing entity (2026-10-27). Missing: country, legal form, registration, contact mailbox.
 4. Priority launch country within Europe — assumed none (EEA-wide, DE/FR first for verification).

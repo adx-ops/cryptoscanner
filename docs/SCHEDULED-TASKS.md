@@ -1,6 +1,6 @@
-# Scheduled tasks to create in claude.ai (one-time, by David)
+# Scheduled tasks (created 2026-10-28 with David's explicit authorisation)
 
-Claude's auto mode refuses to create scheduled tasks on its own ("Scheduled Task Write"), so these three are created by hand in claude.ai → Scheduled tasks → New. Each one starts a fresh Claude session in the same cloud environment as this project. Set "Automatically approve" if the organisation allows it; otherwise a run stops at the first action needing approval (clone, push) and does nothing.
+Created from the working session after David's go-ahead. Kept here so they can be recreated if deleted (claude.ai → Scheduled tasks → New). Each one starts a fresh Claude session in the same cloud environment as this project. Set "Automatically approve" if the organisation allows it; otherwise a run stops at the first action needing approval (clone, push) and does nothing.
 
 ## 1. CryptoScanner — research run
 - Schedule: weekdays 06:41, Europe/Berlin (`CRON_TZ=Europe/Berlin 41 6 * * 1-5`)
