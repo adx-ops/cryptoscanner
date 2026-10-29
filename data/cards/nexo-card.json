@@ -14,7 +14,7 @@
   },
   "network": "mastercard",
   "category": "crypto_backed_credit",
-  "record_status": "validated",
+  "record_status": "needs_review",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -257,7 +257,7 @@
       "title": "Nexo Card product page + FAQ",
       "source_type": "pricing_page",
       "excerpt": "Credit/Debit modes; virtual card free ($50 min balance), physical free (Gold + $5,000); no monthly/annual/inactivity fees; ATM free €200/400/1,000/2,000 by tier then 2% min €1.99; FX 0.2%/0.7% EEA-UK-CH weekdays/weekends, 2%/2.5% elsewhere; cashback by tier 0.5%/0.7%/1%/2% NEXO or 0.1/0.2/0.3/0.5% BTC, requires >$5,000 portfolio, Credit Mode; borrowing from 1.9%; issued by DiPocket UAB.",
-      "accessed_at": "2026-10-26T19:57:00Z",
+      "accessed_at": "2026-10-29T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -313,6 +313,19 @@
         "ev-nexo-who-can-order"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-10-29T06:30:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "needs_review",
+      "reason": "Second read on 2026-10-29. https://nexo.com/nexo-card re-read: every value it sources is confirmed (issuer DiPocket UAB; no monthly/annual/inactivity fee; virtual card free with $50 minimum balance; physical free with Gold tier and >$5,000 portfolio; ATM free €200/400/1,000/2,000 by tier then 2% min €1.99; FX 0.2%/0.7% EEA-UK-CH weekdays/weekends, 2%/2.5% elsewhere; cashback Credit Mode only, >$5,000 portfolio, 0.5/0.7/1/2% NEXO or 0.1/0.2/0.3/0.5% BTC, no cap stated; borrowing from 1.9%; card offered now). NOT re-read: https://support.nexo.com/article/who-can-order-the-nexo-card and https://support.nexo.com/article/how-to-set-up-a-nexo-account return only an empty application shell to the fetcher (client-rendered help centre), so the country list (incl. AD, MC, GB, AR), the AR/UK footer contradiction and the KYC requirement list could not be independently confirmed. No value changed. Needs a browser read of the two help-centre articles before publication.",
+      "evidence": [
+        "ev-nexo-card-page",
+        "ev-nexo-who-can-order",
+        "ev-nexo-setup"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
