@@ -14,7 +14,7 @@
   },
   "network": "mastercard",
   "category": "debit",
-  "record_status": "validated",
+  "record_status": "needs_review",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -274,6 +274,50 @@
         "ev-bybit-eu-cards"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-10-29T06:30:00Z",
+      "field": "evidence.ev-bybit-eu-cards",
+      "reason": "Second read on 2026-10-29: https://www.bybit.eu/en-EU/cards/ is rendered client-side and the fetcher received the Bybit homepage instead (no card content). Primary evidence could not be re-read. Official help-centre article https://www.bybit.eu/en-EU/help-center/article/FAQ-Bybit-Card-General-Inquiries (page dated 2026-10-02) was read instead and differs from the record on three fields (entries below). No value overwritten.",
+      "evidence": [
+        "ev-bybit-eu-cards"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-29T06:30:00Z",
+      "field": "variants[0].eligibility.residence_allowed",
+      "from": "30 EEA states incl. MT (hypothesis: full EEA list)",
+      "to": "29 countries, Malta explicitly excluded (https://www.bybit.eu/en-EU/help-center/article/FAQ-Bybit-Card-General-Inquiries)",
+      "reason": "Help-centre FAQ lists AT BE BG CY CZ DE DK ES EE FI FR GR HR HU IE IS IT LI LT LU LV NL NO PL PT RO SK SI SE and states Malta is excluded. Record keeps the old list pending review.",
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-29T06:30:00Z",
+      "field": "variants[0].tiers[0].fees[atm_withdrawal].free_allowance",
+      "from": "USD 100 per month",
+      "to": "EUR 100 per month (https://www.bybit.eu/en-EU/help-center/article/FAQ-Bybit-Card-General-Inquiries)",
+      "reason": "Help-centre FAQ: \"2% Bybit Card ATM withdrawal fee for the amount that exceeds 100 EUR in the EU each month\". Card page (first read) stated $100. Currency of the allowance differs; old value kept.",
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-29T06:30:00Z",
+      "field": "variants[0].kyc",
+      "from": "Identity Verification Lv. 2 + proof of address (<3 months) for everyone",
+      "to": "Proof of address required only if the identity document is not from an EEA country; accepted IDs: EEA national ID, passport, residence permit (≥6 months validity), driving licence; no verification level named (https://www.bybit.eu/en-EU/help-center/article/FAQ-Bybit-Card-General-Inquiries)",
+      "reason": "KYC stage wording differs between the card page (first read) and the help-centre FAQ. Old value kept.",
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-29T06:30:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "needs_review",
+      "reason": "Second read on 2026-10-29: primary page unreadable by the fetcher and the official help-centre FAQ differs on eligibility (Malta), ATM allowance currency and KYC stage. Also confirmed by the FAQ: Mastercard debit, Apple Pay / Google Pay (+ Samsung Pay), funding from the Funding Account, card active. Not on the FAQ: issuer names, cashback figures, FX and conversion fees, welcome offer.",
+      "evidence": [
+        "ev-bybit-eu-cards"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {

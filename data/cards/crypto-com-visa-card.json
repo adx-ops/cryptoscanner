@@ -133,7 +133,7 @@
       "title": "Crypto.com Visa Card — EEA product page (tier table, FAQ, disclaimers)",
       "source_type": "pricing_page",
       "excerpt": "Tier table: Midnight Blue free / 0% everyday; Ruby Steel €3.99/mo or €39.90/yr or €450 lock-up, 1.5% up to USD 750/mo; Jade/Indigo €24.99/mo or €249.90/yr or €4,500 lock-up, 2.5% up to USD 1,500; Icy/Rose Gold €45,000 lock-up 3.5% up to USD 3,000 then 0.5%; Obsidian €450,000 lock-up 4.5% up to USD 5,000 then 1%. Free ATM €200/€400/€800/€800/€1,000. Issuer Foris MT Limited. Prepaid card.",
-      "accessed_at": "2026-10-26T20:20:00Z",
+      "accessed_at": "2026-10-29T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": { "currency": "EUR", "note": "EEA edition; no country list" },
@@ -142,9 +142,10 @@
     }
   ],
   "links": { "official_url": "https://crypto.com/eea/cards", "affiliate": { "program_id": null, "status": "none", "url": null } },
-  "freshness": { "last_content_verified_at": "2026-10-26T20:20:00Z", "last_auto_check_at": null },
+  "freshness": { "last_content_verified_at": "2026-10-29T06:30:00Z", "last_auto_check_at": null },
   "changelog": [
-    { "date": "2026-10-26T20:20:00Z", "field": "*", "reason": "Initial record from the EEA product page (single read). Help Centre fee articles not reachable; FX, top-up and ATM-overage fees remain unknown. Eligible country list missing.", "evidence": ["ev-cdc-eea-cards"], "actor": "claude" }
+    { "date": "2026-10-26T20:20:00Z", "field": "*", "reason": "Initial record from the EEA product page (single read). Help Centre fee articles not reachable; FX, top-up and ATM-overage fees remain unknown. Eligible country list missing.", "evidence": ["ev-cdc-eea-cards"], "actor": "claude" },
+    { "date": "2026-10-29T06:30:00Z", "field": "freshness.last_content_verified_at", "from": "2026-10-26T20:20:00Z", "to": "2026-10-29T06:30:00Z", "reason": "Second independent read on 2026-10-29 of https://crypto.com/eea/cards/: every value the page sources is confirmed — tier prices (free / €3.99 or €39.90/yr or €450 lock / €24.99 or €249.90/yr or €4,500 lock / €45,000 lock / €450,000 lock, 12 months), everyday CRO rewards 0/1.5/2.5/3.5/4.5% with caps USD 750/1,500/3,000/5,000 and post-cap 0.5%/1%, travel rewards up to 5/20/25/30/40%, free ATM €200/400/800/800/1,000 per month, ATM limit €10,000/month, top-up limit €25,000/month, issuer Foris MT Limited (Visa Principal Member, MFSA e-money licence), prepaid, Apply Now live. Still no eligible-country list and no KYC detail on the page; Visa/Mastercard and FX-fee contradictions unchanged and already modelled conservatively (FX unknown). Not modelled (omission, not a contradiction): permanent streaming rebates and lounge access on the €45,000 and €450,000 tiers. NOT published: the validator refuses a published variant whose eligibility is unknown (no country list on any official page read) and whose KYC is a hypothesis (page states only that Level Up membership is required). Record stays validated until an official eligibility list and KYC article are read; no value changed.", "evidence": ["ev-cdc-eea-cards"], "actor": "second-read-run" }
   ],
   "editorial": {
     "summary": "Prepaid Visa issued by Foris MT (Malta) for the EEA. The free tier earns no everyday rewards; paid tiers from €3.99/month earn 1.5–4.5% in CRO with monthly USD caps, or require 12-month CRO lock-ups from €450 to €450,000.",
