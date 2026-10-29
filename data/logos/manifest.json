@@ -1,0 +1,13 @@
+{
+  "_note": "Brand marks shown on card faces, keyed by provider_id. A logo file (public/logos/<provider_id>.svg|png) is used only when it was taken from an official source recorded here with the date; otherwise the site renders a monogram. 'color' is the brand's own primary colour taken from the same source; absent → default face. Logos stay the trademarks of their owners and identify the products compared (nominative use); any removal request is honoured.",
+  "marks": {
+    "bitpanda": { "brand": "Bitpanda", "logo": null, "color": null, "source_url": null, "accessed_at": null },
+    "gnosis-pay": { "brand": "Gnosis Pay", "logo": null, "color": null, "source_url": null, "accessed_at": null },
+    "nexo": { "brand": "Nexo", "logo": null, "color": null, "source_url": null, "accessed_at": null },
+    "crypto-com": { "brand": "Crypto.com", "logo": null, "color": null, "source_url": null, "accessed_at": null },
+    "bybit": { "brand": "Bybit", "logo": null, "color": null, "source_url": null, "accessed_at": null },
+    "kast": { "brand": "KAST", "logo": null, "color": null, "source_url": null, "accessed_at": null },
+    "redotpay": { "brand": "RedotPay", "logo": null, "color": null, "source_url": null, "accessed_at": null },
+    "wirex": { "brand": "Wirex", "logo": null, "color": null, "source_url": null, "accessed_at": null }
+  }
+}

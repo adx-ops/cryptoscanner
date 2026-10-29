@@ -1,0 +1,68 @@
+---
+import type { CardRecord } from '../lib/types.ts';
+import BrandMark from './BrandMark.astro';
+import { defaultVariantAndTier, payoutLabel } from '../lib/data.ts';
+import { tintHue, brandColorFor } from '../lib/branding.ts';
+// A card rendered as a card: ISO 7810 proportions, the brand mark where a real card carries it,
+// and the one figure people scan for (base cashback) set large. Everything else lives in the panel below.
+interface Props { card: CardRecord; size?: 'tile' | 'hero' | 'mini'; decorative?: boolean }
+const { card, size = 'tile', decorative = false } = Astro.props;
+const { variant, tier } = defaultVariantAndTier(card);
+const live = tier.rewards.filter((r) => r.status !== 'stale' && r.status !== 'contradictory');
+const base = live.find((r) => r.type === 'base');
+const maxes = live.filter((r) => r.type === 'conditional_max');
+const maxPct = maxes.length ? Math.max(...maxes.map((r) => r.percent ?? 0)) : null;
+const figure = base && base.percent !== undefined ? `${base.percent}%` : null;
+const sub = !figure
+  ? (base ? 'rate not stated on official pages' : 'none documented on official pages')
+  : `cashback in ${payoutLabel(base!.payout)}${maxPct !== null && maxPct > (base!.percent ?? 0) ? `, up to ${maxPct}%` : ''}`;
+const network = card.network && card.network !== 'unknown' && card.network !== 'other' ? card.network.charAt(0).toUpperCase() + card.network.slice(1) : null;
+const brandColor = brandColorFor(card.provider_id);
+const style = brandColor ? `--tint:${brandColor}` : `--tint:hsl(${tintHue(card.provider_id)} 55% 58%)`;
+// Short region for the face chip: the full label lives in the panel and on the card page.
+const full = variant.region_label;
+const cut = full.search(/[(,+]/);
+const shortRegion = cut > 0 ? `${full.slice(0, cut).trim()} +` : full;
+const markSize = size === 'hero' ? 44 : size === 'mini' ? 24 : 34;
+---
+<div class={`face face-${size}`} style={style} aria-hidden={decorative ? 'true' : undefined}>
+  <div class="face-top">
+    <span class="face-brand"><BrandMark providerId={card.provider_id} brand={card.brand} size={markSize} /> <span class="face-brand-name">{card.brand}</span></span>
+    {network && <span class="face-net">{network}</span>}
+  </div>
+  <span class="chip" aria-hidden="true"></span>
+  <div class="face-bottom">
+    <span class="face-name">{card.name}</span>
+    <div class="face-row">
+      <div class="face-figure-wrap">
+        {figure ? <span class="face-figure num">{figure}</span> : <span class="face-figure face-figure-text">No cashback</span>}
+        <span class="face-sub">{sub}</span>
+      </div>
+      <span class="face-region" title={full}>{shortRegion}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .face { position: relative; aspect-ratio: 1.586; width: 100%; border-radius: var(--r-face); padding: 7% 7% 6.5%; display: flex; flex-direction: column; justify-content: space-between; color: #f3f5f9; overflow: hidden; isolation: isolate;
+    background: radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--tint) 62%, transparent), transparent 62%), radial-gradient(70% 60% at 0% 100%, color-mix(in srgb, var(--tint) 22%, transparent), transparent 70%), linear-gradient(155deg, var(--face-a), var(--face-b));
+    box-shadow: var(--shadow-face); border: 1px solid rgba(255, 255, 255, 0.08); container-type: inline-size; }
+  .face::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.045) 48%, transparent 58%); pointer-events: none; }
+  .face-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .face-brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+  .face-brand-name { font-weight: 700; font-size: clamp(0.85rem, 4.6cqi, 1.1rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .face-net { font-weight: 700; font-stretch: 112%; font-size: clamp(0.72rem, 3.8cqi, 0.95rem); color: rgba(243, 245, 249, 0.72); letter-spacing: 0.01em; }
+  .chip { width: 12%; aspect-ratio: 1.3; border-radius: 16%; background: linear-gradient(135deg, #e8d49a, #b58f3e 55%, #e2c98a); opacity: 0.9; position: absolute; left: 7%; top: 40%; }
+  .chip::before { content: ""; position: absolute; inset: 30% 0; border-top: 1px solid rgba(60, 40, 0, 0.45); border-bottom: 1px solid rgba(60, 40, 0, 0.45); }
+  .face-bottom { display: flex; flex-direction: column; gap: 2px; }
+  .face-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; }
+  .face-figure-wrap { display: flex; flex-direction: column; min-width: 0; }
+  .face-name { font-weight: 500; font-size: clamp(0.78rem, 4cqi, 1rem); color: rgba(243, 245, 249, 0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .face-figure { font-weight: 800; font-stretch: 118%; font-size: clamp(1.8rem, 13cqi, 3.2rem); line-height: 1; letter-spacing: -0.04em; margin-top: 2px; }
+  .face-sub { font-size: clamp(0.68rem, 3.4cqi, 0.85rem); color: rgba(243, 245, 249, 0.72); line-height: 1.25; }
+  .face-figure-text { font-size: clamp(1.1rem, 7cqi, 1.8rem); letter-spacing: -0.02em; }
+  .face-region { max-width: 46%; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: clamp(0.7rem, 3.6cqi, 0.85rem); padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.22); white-space: nowrap; flex: none; }
+  .face-mini .chip, .face-mini .face-sub, .face-mini .face-region, .face-mini .face-name { display: none; }
+  .face-mini .face-brand-name { font-size: 0.8rem; }
+  .face-mini { padding: 6% 7%; }
+</style>

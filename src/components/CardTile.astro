@@ -1,5 +1,6 @@
 ---
 import type { CardRecord } from '../lib/types.ts';
+import CardFace from './CardFace.astro';
 import { defaultVariantAndTier, rewardSummary, recurringCostSummary, unknownFeeCount, isAvailableOption, url } from '../lib/data.ts';
 interface Props { card: CardRecord }
 const { card } = Astro.props;
@@ -8,41 +9,50 @@ const rs = rewardSummary(tier);
 const unknowns = unknownFeeCount(tier);
 const available = isAvailableOption(card);
 const kycLabel = { required: 'ID verification required', not_required_initially: 'No initial ID check', unknown: 'Verification: unknown' }[variant.kyc.initial_verification];
+const cost = recurringCostSummary(tier);
+const verified = card.freshness.last_content_verified_at?.slice(0, 10);
+const promo = rs.promo !== '—' ? rs.promo : null;
 ---
 <article class="card tile" data-card={card.slug}
   data-allowed={variant.eligibility.residence_allowed.join(',')}
   data-excluded={variant.eligibility.residence_excluded.join(',')}
   data-default={variant.eligibility.default_for_unlisted}
   data-available={available ? '1' : '0'}>
-  <header class="tile-head">
-    <div>
-      <h3><a href={url(`/cards/${card.slug}`)}>{card.name}</a></h3>
-      <p class="muted small">{card.category.replace('_', ' ')} · {variant.region_label}</p>
-    </div>
-    {available
-      ? <span class="badge elig-badge">Select a country</span>
-      : <span class="badge bad">Not available ({card.product_status})</span>}
-  </header>
-  <dl class="kv">
-    <dt>Base reward</dt><dd>{rs.base}</dd>
-    <dt>Conditional max</dt><dd>{rs.max}</dd>
-    {rs.promo !== '—' && <><dt>Promotion</dt><dd>{rs.promo}</dd></>}
-    <dt>Recurring cost</dt><dd>{recurringCostSummary(tier)} {unknowns > 0 && <span class="badge unk">{unknowns} fee{unknowns > 1 ? 's' : ''} unknown</span>}</dd>
-    <dt>Verification</dt><dd>{kycLabel} <span class="muted">({variant.kyc.editorial_level === 'unknown' ? 'level not documented' : variant.kyc.editorial_level})</span></dd>
-  </dl>
-  <footer class="tile-actions">
-    <label class="compare-check"><input type="checkbox" class="compare-toggle" value={card.slug} disabled={!available} /> Compare</label>
-    <a class="btn" href={url(`/cards/${card.slug}`)}>Details</a>
-  </footer>
+  <h3 class="sr-only">{card.name}</h3>
+  <a class="face-link" href={url(`/cards/${card.slug}`)} aria-label={`${card.name}: details`}><CardFace card={card} /></a>
+  <div class="strip">
+    <p class="elig-row">
+      {available
+        ? <span class="badge elig-badge">Select a country</span>
+        : <span class="badge bad">Not available ({card.product_status})</span>}
+      {promo && <span class="badge ok">Promo {promo}</span>}
+    </p>
+    <dl class="facts">
+      <div><dt>Base reward</dt><dd>{rs.base}</dd></div>
+      <div><dt>Monthly cost</dt><dd>{cost}{unknowns > 0 && <> <span class="badge unk">{unknowns} fee{unknowns > 1 ? 's' : ''} unknown</span></>}</dd></div>
+      <div><dt>Identity check</dt><dd>{kycLabel}</dd></div>
+      <div><dt>Sources checked</dt><dd>{verified ?? 'not yet'}</dd></div>
+    </dl>
+    <footer class="tile-actions">
+      <label class="compare-check"><input type="checkbox" class="compare-toggle" value={card.slug} disabled={!available} /> Compare</label>
+      <a class="btn" href={url(`/cards/${card.slug}`)}>Details</a>
+    </footer>
+  </div>
 </article>
 
 <style>
-  .tile h3 { margin: 0; font-size: 1.05rem; }
-  .tile h3 a { color: var(--fg); text-decoration: none; }
-  .tile-head { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 10px; }
-  .small { font-size: 0.85rem; margin: 2px 0 0; }
-  .tile-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; gap: 8px; }
-  .compare-check { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); font-weight: 600; cursor: pointer; }
-  .compare-check input { width: 22px; height: 22px; min-height: 0; }
-  .tile[data-elig="ineligible"] { opacity: 0.6; }
+  .tile { padding: 10px 10px 14px; display: flex; flex-direction: column; gap: 12px; }
+  .face-link { display: block; text-decoration: none; color: inherit; border-radius: var(--r-face); }
+  .face-link:hover { filter: brightness(1.06); }
+  .strip { padding: 0 8px; display: flex; flex-direction: column; gap: 12px; }
+  .elig-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; margin: 0; font-size: 0.9rem; }
+  .facts div { min-width: 0; }
+  .facts dt { color: var(--muted); font-size: 0.78rem; margin-bottom: 2px; }
+  .facts dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+  .tile-actions { display: flex; justify-content: space-between; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; }
+  .compare-check { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); font-weight: 600; cursor: pointer; margin: 0; }
+  .compare-check input { width: 22px; height: 22px; min-height: 0; margin: 0; accent-color: var(--accent); }
+  .tile[data-elig="ineligible"] { opacity: 0.55; }
+  .tile[data-elig="eligible"] { border-color: color-mix(in srgb, var(--ok) 45%, var(--line)); }
 </style>

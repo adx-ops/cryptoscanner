@@ -2,23 +2,31 @@
 import Base from '../layouts/Base.astro';
 import CountrySelect from '../components/CountrySelect.astro';
 import CardTile from '../components/CardTile.astro';
-import { allCards, url } from '../lib/data.ts';
+import CardFace from '../components/CardFace.astro';
+import { allCards, isAvailableOption, url } from '../lib/data.ts';
 const cards = allCards();
+const fan = cards.filter(isAvailableOption).slice(0, 3);
 ---
-<Base title="Compare crypto cards by country, rewards and fees" description="Find a crypto card that fits your country and spending — with rewards and fees clearly explained, sourced and dated." canonicalPath="/">
+<Base title="Compare crypto cards by country, cashback and fees" description="Crypto cards compared on cashback, fees, availability by country and identity checks — from the providers' published conditions, sourced and dated." canonicalPath="/">
   <section class="hero">
-    <p class="eyebrow">Independent · sourced · dated</p>
-    <h1>Find a crypto card that fits your country and spending</h1>
-    <p class="lede">Rewards, fees, availability by residence and identity checks, compared from published conditions. Every figure carries its source and verification date. No sign-up, no wallet connection.</p>
-    <CountrySelect />
-    <p class="hint">Funded by affiliate links on some cards. Commissions never change the ranking. <a href={url('/how-we-make-money')}>How it works</a>.</p>
+    <div class="hero-copy">
+      <h1>Crypto cards, compared on what matters: cashback, fees, your country.</h1>
+      <p class="lede">Every figure comes from the provider's own published conditions, with its source and the date it was checked. Unknown stays unknown — never shown as zero or free.</p>
+      <CountrySelect />
+      <p class="hint">Funded by affiliate links on some cards. Commissions never change the ranking. <a href={url('/how-we-make-money')}>How it works</a>.</p>
+    </div>
+    {fan.length > 0 && (
+      <div class={`fan fan-n${fan.length}`} aria-hidden="true">
+        {fan.map((c, i) => <div class={`fan-item fan-${i}`}><CardFace card={c} size="hero" decorative /></div>)}
+      </div>
+    )}
   </section>
 
-  <section aria-labelledby="catalogue">
+  <section aria-labelledby="catalogue" class="catalogue">
     <div class="toolbar">
-      <h2 id="catalogue" style="margin:0">Cards <span class="muted" id="count">({cards.length})</span></h2>
+      <h2 id="catalogue">Cards <span class="muted num" id="count">({cards.length})</span></h2>
       <div class="filters">
-        <label class="chk"><input type="checkbox" id="f-eligible" /> Only available in my country</label>
+        <label class="chk"><input type="checkbox" id="f-eligible" /> Available in my country</label>
         <label class="chk"><input type="checkbox" id="f-nokyc" /> No initial ID check</label>
         <label class="chk"><input type="checkbox" id="f-free" /> No subscription</label>
         <select id="sort" aria-label="Sort by">
@@ -32,7 +40,7 @@ const cards = allCards();
     {cards.length === 0 && (
       <div class="card"><p><strong>No verified cards yet.</strong> The catalogue only lists cards whose conditions were checked against official sources. Coverage will be published as records are verified.</p></div>
     )}
-    <div class="grid cols-2" id="list">
+    <div class="grid cols-3" id="list">
       {cards.map((c) => <CardTile card={c} />)}
     </div>
     <p id="empty" class="card" hidden>No card matches these filters for the selected country. Try removing a filter.</p>
@@ -45,16 +53,35 @@ const cards = allCards();
 </Base>
 
 <style>
-  .hero { padding-top: 12px; max-width: 46rem; }
-  .lede { font-size: 1.05rem; color: var(--muted); max-width: 40rem; margin: 0 0 18px; }
-  .toolbar { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+  .hero { display: grid; gap: 28px; padding: 20px 0 8px; align-items: center; }
+  .hero h1 { margin-top: 8px; }
+  .hero-copy { max-width: 36rem; }
+  /* Three real card faces, fanned like a hand of cards. Pure CSS, static (no motion). */
+  .fan { position: relative; height: 230px; width: 100%; max-width: 420px; margin: 0 auto; }
+  .fan-item { position: absolute; width: 72%; left: 14%; top: 10%; transform-origin: 50% 120%; }
+  .fan-0 { transform: rotate(-10deg) translateX(-10%); z-index: 1; }
+  .fan-1 { transform: rotate(0deg) translateY(-6%); z-index: 3; }
+  .fan-2 { transform: rotate(10deg) translateX(10%); z-index: 2; }
+  .fan-n2 .fan-0 { transform: rotate(-7deg) translateX(-12%); } .fan-n2 .fan-1 { transform: rotate(5deg) translateX(8%); }
+  .fan-n1 .fan-0 { transform: none; }
+  .fan::before { content: ""; position: absolute; inset: 10% 5%; border-radius: 50%; background: radial-gradient(closest-side, var(--accent-soft), transparent); filter: blur(24px); }
+  @media (min-width: 860px) {
+    .hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; padding-top: 36px; }
+    .fan { height: 340px; max-width: none; }
+    .fan-item { width: 76%; left: 12%; top: 12%; }
+  }
+  .catalogue { margin-top: 36px; }
+  .toolbar { display: flex; flex-direction: column; gap: 12px; margin: 0 0 16px; }
+  .toolbar h2 { margin: 0; }
+  @media (min-width: 860px) { .toolbar { flex-direction: row; align-items: center; justify-content: space-between; } }
   .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .filters select { width: auto; }
-  .chk { display: inline-flex; align-items: center; gap: 6px; min-height: var(--tap); padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; font-weight: 500; cursor: pointer; background: var(--card); font-size: 0.92rem; }
+  .chk { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); padding: 0 14px; border: 1px solid var(--line-strong); border-radius: 999px; font-weight: 500; cursor: pointer; background: var(--surface); font-size: 0.92rem; margin: 0; }
   .chk:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
-  .chk input { width: 18px; height: 18px; min-height: 0; margin: 0; }
+  .chk input { width: 18px; height: 18px; min-height: 0; margin: 0; accent-color: var(--accent); }
   .compare-bar[hidden] { display: none; }
-  .compare-bar { position: sticky; bottom: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); margin: 16px -16px 0; background: var(--bg-2); border-top: 1px solid var(--line); }
+  .compare-bar { position: sticky; bottom: 12px; z-index: 4; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 10px 10px 18px; margin: 20px auto 0; max-width: 480px; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 999px; box-shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.6); font-weight: 600; }
+  .compare-bar .btn { border-radius: 999px; }
 </style>
 
 <script>
@@ -103,6 +130,7 @@ const cards = allCards();
     const rank = { eligible: 0, none: 1, to_confirm: 1, ineligible: 2 } as const;
     const key = (t: HTMLElement) => {
       if (sort.value === 'reward') { const m = /Base reward\s*([\d.]+)%/.exec(t.textContent || ''); return -(m ? parseFloat(m[1]) : 0); }
+      if (sort.value === 'verified') { const m = /Sources checked\s*(\d{4}-\d{2}-\d{2})/.exec(t.textContent || ''); return m ? -Date.parse(m[1]) : 0; }
       return 0;
     };
     tiles().sort((a, b) => rank[a.dataset.elig as keyof typeof rank] - rank[b.dataset.elig as keyof typeof rank] || key(a) - key(b) || (a.textContent || '').localeCompare(b.textContent || '')).forEach((t) => list.appendChild(t));

@@ -1,0 +1,14 @@
+---
+import { logoFor, initialsFor } from '../lib/branding.ts';
+interface Props { providerId: string; brand: string; size?: number; class?: string }
+const { providerId, brand, size = 36, class: cls = '' } = Astro.props;
+const logo = logoFor(providerId);
+---
+{logo
+  ? <img class={`bm ${cls}`} src={logo} alt="" width={size} height={size} loading="lazy" decoding="async" style={`--bm:${size}px`} />
+  : <span class={`bm bm-mono ${cls}`} aria-hidden="true" style={`--bm:${size}px`}>{initialsFor(brand)}</span>}
+
+<style>
+  .bm { width: var(--bm); height: var(--bm); border-radius: 22%; object-fit: contain; background: #fff; padding: 3px; flex: none; }
+  .bm-mono { display: inline-flex; align-items: center; justify-content: center; background: var(--accent); color: var(--accent-fg); font-weight: 800; font-stretch: 110%; font-size: calc(var(--bm) * 0.42); letter-spacing: -0.02em; padding: 0; }
+</style>

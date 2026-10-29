@@ -2,17 +2,20 @@
 import Base from '../layouts/Base.astro';
 import { allCards, isAvailableOption } from '../lib/data.ts';
 import { CALC_VERSION } from '../lib/calc/engine.ts';
+import countries from '../lib/countries.json';
+const NAMES = countries as Record<string, string>;
+const codes = Object.keys(NAMES).sort((a, b) => NAMES[a].localeCompare(NAMES[b]));
 // The engine runs in the browser with the same code tested in src/lib/calc. No model, no network.
 const cards = allCards().filter(isAvailableOption);
 const payload = cards.map((c) => ({ id: c.id, name: c.name, is_demo: c.is_demo, product_status: c.product_status, record_status: c.record_status, freshness: c.freshness, variants: c.variants }));
 ---
 <Base title="Crypto card rewards & cost calculator" description="Estimate the net recurring value of a crypto card for your country, spending and fee profile. Deterministic, sourced, no sign-up." canonicalPath="/calculator">
-  <h1>Rewards &amp; cost calculator</h1>
-  <p class="muted">Estimated net recurring value = calculable recurring rewards − recurring fees − calculable variable fees. One-off fees and bonuses are shown separately. Unknown costs make a result <em>partial</em>; they are never counted as zero. Engine version {CALC_VERSION}.</p>
+  <h1>What a card is worth to you</h1>
+  <p class="lede">Net value = rewards you can actually earn − recurring fees − the variable fees your habits trigger, over the months you choose. One-off fees and bonuses are listed separately. An unknown cost makes a result <em>partial</em>; it is never counted as zero.</p>
 
   <form id="calc" class="card" novalidate>
     <div class="grid cols-2">
-      <div class="field"><label for="c-country">Country of residence</label><select id="c-country"><option value="">Choose</option>{['AT','BE','CH','DE','DK','ES','FI','FR','GB','IE','IT','NL','NO','PL','PT','SE'].map((c) => <option value={c}>{c}</option>)}</select></div>
+      <div class="field"><label for="c-country">Country of residence</label><select id="c-country" autocomplete="country"><option value="">Choose your country</option>{codes.map((c) => <option value={c}>{NAMES[c]}</option>)}</select></div>
       <div class="field"><label for="c-currency">Reference currency</label><select id="c-currency"><option>EUR</option><option>USD</option><option>GBP</option><option>CHF</option></select></div>
       <div class="field"><label for="c-spend">Monthly card spend</label><input id="c-spend" type="number" inputmode="decimal" min="0" step="1" value="1000" /></div>
       <div class="field"><label for="c-eligible">Share of spend that earns rewards (%)</label><input id="c-eligible" type="number" inputmode="numeric" min="0" max="100" value="90" /></div>
@@ -27,14 +30,24 @@ const payload = cards.map((c) => ({ id: c.id, name: c.name, is_demo: c.is_demo, 
       <label class="inline"><input type="checkbox" id="c-hold" /> holding tokens for a tier</label>
       <label class="inline"><input type="checkbox" id="c-lock" /> locking / staking tokens for a tier</label>
     </fieldset>
-    <button type="submit" class="btn primary">Calculate</button>
+    <button type="submit" class="btn primary">Calculate</button> <span class="hint" style="display:inline">Engine {CALC_VERSION} · runs on this device, nothing is sent.</span>
   </form>
 
   <div id="results" aria-live="polite"></div>
   <script type="application/json" id="cards-data" set:html={JSON.stringify(payload)} />
 </Base>
 
-<style> .inline { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); margin-right: 16px; font-weight: 500; } .inline input { width: 20px; height: 20px; min-height: 0; } .res { margin-top: 12px; } .res h3 { margin: 0 0 4px; } .amt { font-variant-numeric: tabular-nums; } .neg { color: var(--bad); } </style>
+<style>
+  #calc { margin-top: 8px; }
+  .inline { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); margin-right: 16px; font-weight: 500; } .inline input { width: 20px; height: 20px; min-height: 0; accent-color: var(--accent); }
+  .res { margin-top: 14px; }
+  .res h3 { margin: 0 0 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .net { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 0 0 12px; padding: 14px 16px; border-radius: 12px; background: var(--surface-2); }
+  .net-fig { font-weight: 800; font-stretch: 115%; font-size: 2rem; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .net-lbl { color: var(--muted); font-size: 0.9rem; }
+  .amt { font-variant-numeric: tabular-nums; } .neg { color: var(--bad); }
+  .res details { margin-top: 10px; }
+</style>
 
 <script>
   import { calculate, fromMinor, type Scenario, type CalcResult } from '../lib/calc/engine.ts';
@@ -58,11 +71,11 @@ const payload = cards.map((c) => ({ id: c.id, name: c.name, is_demo: c.is_demo, 
       if (r.status === 'not_applicable' || !t) return `<div class="card res">${head}<p class="muted">${r.reasons.map(esc).join(' ')}</p></div>`;
       const li = (xs: string[]) => xs.length ? `<ul>${xs.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
       return `<div class="card res">${head}
+        <p class="net"><span class="net-fig ${t.net < 0 ? 'neg' : ''}">${t.net < 0 ? '−' : ''}${fmt(Math.abs(t.net), r.currency)}</span><span class="net-lbl">estimated net over ${r.months.length} month${r.months.length === 1 ? '' : 's'}${r.status === 'partial' ? ' — partial: unknown costs not counted' : ''}</span></p>
         <dl class="kv">
-          <dt>Rewards (${r.months.length} mo)</dt><dd class="amt">${fmt(t.rewards, r.currency)}</dd>
+          <dt>Rewards</dt><dd class="amt">${fmt(t.rewards, r.currency)}</dd>
           <dt>Recurring fees</dt><dd class="amt">− ${fmt(t.recurringFees, r.currency)}</dd>
           <dt>Variable fees</dt><dd class="amt">− ${fmt(t.variableFees, r.currency)}</dd>
-          <dt><strong>Estimated net${r.status === 'partial' ? ' (partial)' : ''}</strong></dt><dd class="amt ${t.net < 0 ? 'neg' : ''}"><strong>${fmt(t.net, r.currency)}</strong></dd>
           ${r.oneOff.fees.map((f) => `<dt>One-off: ${esc(f.label)}</dt><dd class="amt">${f.amount === null ? 'unknown' : fmt(f.amount, f.unit)}</dd>`).join('')}
           ${r.oneOff.bonuses.map((b) => `<dt>One-off: ${esc(b.label)}</dt><dd class="amt">${b.amount === null ? (b.status === 'excluded' ? 'not valued' : `in ${esc(b.unit)}`) : fmt(b.amount, b.unit)}</dd>`).join('')}
           ${r.nativeUnitRewards.map((n) => `<dt>${esc(n.label)}</dt><dd>${fmt(n.amount ?? 0, r.currency)}-equivalent at spend time, paid in ${esc(n.unit)} — not in the net total</dd>`).join('')}

@@ -4,6 +4,7 @@ import { url } from '../lib/data.ts';
 import { CALC_VERSION } from '../lib/calc/engine.ts';
 ---
 <Base title="Methodology — how cards are selected, verified and ranked" description="How CryptoScanner selects crypto cards, verifies conditions against official sources, classifies identity checks and ranks cards without letting commissions interfere." canonicalPath="/methodology">
+<div class="prose">
   <h1>Methodology</h1>
   <h2>What we compare</h2>
   <p>Cards that let you spend crypto-funded balances or crypto-backed credit at merchants. We separate four product types because their risks differ: <strong>debit</strong> (spend a balance you hold with the provider), <strong>prepaid</strong> (load first, spend later), <strong>credit</strong> and <strong>crypto-backed credit lines</strong> (you borrow against collateral; interest and liquidation risk apply). A cashback rate never mixes these mechanisms.</p>
@@ -23,4 +24,5 @@ import { CALC_VERSION } from '../lib/calc/engine.ts';
   <p>Each record shows when its content was last verified by reading the source — distinct from any automatic check. Promotions expire on their published date even if a page cannot be re-read. Records whose sources changed are marked for review and their claims downgraded until re-verified.</p>
   <h2>Corrections</h2>
   <p>Spotted an error? <a href={url('/contact')}>Tell us</a> with the page and the official source; corrections are logged on the card's page.</p>
+</div>
 </Base>
