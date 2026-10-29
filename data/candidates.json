@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other.",
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "entries": [
     {
       "provider": "Wirex",
@@ -13,10 +13,10 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 3
+      "last_seen": "2026-10-29",
+      "priority": 0
     },
     {
       "provider": "Laso",
@@ -30,10 +30,11 @@
       "no_kyc_claim": true,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 3
+      "last_seen": "2026-10-29",
+      "priority": 3,
+      "blocked_reason": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule."
     },
     {
       "provider": "Goblin",
@@ -47,10 +48,11 @@
       "no_kyc_claim": true,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 3
+      "last_seen": "2026-10-29",
+      "priority": 3,
+      "blocked_reason": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage)."
     },
     {
       "provider": "Freedomia",
@@ -64,10 +66,11 @@
       "no_kyc_claim": true,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 3
+      "last_seen": "2026-10-29",
+      "priority": 3,
+      "blocked_reason": "Blocked 2026-10-29: freedomia.io/terms (last updated 2026-10-07) and /faq are client-rendered — only section headings retrievable; no legal entity, issuer, fee or country text obtainable. Official affiliation page exists (freedomia.io/affiliation, not read). Retry with a browser session."
     },
     {
       "provider": "Pinto",
@@ -81,10 +84,11 @@
       "no_kyc_claim": true,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 3
+      "last_seen": "2026-10-29",
+      "priority": 3,
+      "blocked_reason": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule."
     },
     {
       "provider": "Coinbase",
