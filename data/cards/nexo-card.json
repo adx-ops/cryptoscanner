@@ -14,7 +14,7 @@
   },
   "network": "mastercard",
   "category": "crypto_backed_credit",
-  "record_status": "needs_review",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -271,7 +271,7 @@
       "title": "Who can order the Nexo Card (help centre)",
       "source_type": "eligibility_page",
       "excerpt": "Available to residents of selected European countries incl. EEA, Andorra, Monaco, UK, plus Argentina and other selected jurisdictions; check eligibility in the Card section. Virtual: ≥$50 portfolio. Physical: ≥$5,000, Gold/Platinum, active virtual card. Personal accounts only; one virtual + one physical.",
-      "accessed_at": "2026-10-27T11:05:00Z",
+      "accessed_at": "2026-10-29T15:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -284,7 +284,7 @@
       "title": "How to set up a Nexo account (help centre)",
       "source_type": "help_center",
       "excerpt": "Identity verification: residential address, legal name, regulatory info (PEP, TIN, purpose, expected volume depending on country), live photo of ID (passport, ID card, residence permit; driver licence not for EEA residents), liveness selfie, phone verification. EEA registrations on/after 2026-06-30 may face extra national requirements.",
-      "accessed_at": "2026-10-27T11:05:00Z",
+      "accessed_at": "2026-10-29T15:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -300,7 +300,7 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-10-27T11:05:00Z",
+    "last_content_verified_at": "2026-10-29T15:40:00Z",
     "last_auto_check_at": null
   },
   "changelog": [
@@ -326,6 +326,19 @@
         "ev-nexo-setup"
       ],
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-29T15:40:00Z",
+      "field": "record_status",
+      "from": "needs_review",
+      "to": "published",
+      "reason": "Second read on 2026-10-29 in a browser (the help centre is client-rendered and unreadable by the fetcher): 'Who can order the Nexo Card' and 'How to set up a Nexo account' confirmed word for word (EEA + Andorra + Monaco + UK + Argentina + other selected jurisdictions; $50 virtual / $5,000 + Gold/Platinum physical; personal accounts only; EEA-issued ID only, no driving licence; liveness selfie; phone verification). The product page had already been re-confirmed by the scheduled second-read run the same morning. AR/UK footer contradiction persists and stays displayed.",
+      "evidence": [
+        "ev-nexo-who-can-order",
+        "ev-nexo-setup",
+        "ev-nexo-card-page"
+      ],
+      "actor": "claude (browser second read)"
     }
   ],
   "editorial": {

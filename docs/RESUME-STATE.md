@@ -1,6 +1,6 @@
 # Resume state
 
-Updated: 2026-10-28 18:50 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
+Updated: 2026-10-29 16:45 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
 
 ## Environment (verified 2026-10-26)
 - Claude cloud workspace (Linux), Node 22.23.4, npm 10.9.9, Python 3.13, git 2.43. Files/shell/web search/web fetch available.
@@ -30,10 +30,10 @@ Updated: 2026-10-28 18:50 (Europe/Berlin). Keep this file short; it is the hand-
 | /calculator (client-side engine) | tested | ui-check + engine tests |
 | /methodology, /how-we-make-money, /legal, /contact | implemented | build only |
 | Mobile rendering 360–1440 | verified | ui-check: no horizontal overflow on 8 pages × 5 widths; screenshots |
-| Verified card records | 2 `published` (Bitpanda, Gnosis Pay), 5 `validated` (Crypto.com EEA, Nexo, Bybit EU, KAST, RedotPay) | `npm run validate` 9 records 0 errors |
+| Verified card records | 3 `published` (Bitpanda, Gnosis Pay, Nexo), 5 `validated` (Crypto.com EEA, Bybit EU, KAST, RedotPay, Wirex EEA) | `npm run validate` 10 records 0 errors; verified build = 3 card pages |
 | Candidates list (discovery) | seeded: 55 entries with priority formula | data/candidates.json |
 | Agent run prompts + publication policy | written | agents/*.md, docs/PUBLICATION-POLICY.md |
-| Auto-merge of agent PRs | configured, not yet exercised (no agent PR yet) | .github/workflows/auto-merge.yml |
+| Auto-merge of agent PRs | ACTIVE — PR #1 and #2 merged automatically 2026-10-29 after green CI | .github/workflows/auto-merge.yml; now also triggers deploy + CI on main |
 | GitHub Pages deploy (verified build, noindex, base path /cryptoscanner) | active | run 40742521004 green; page fetched: title, noindex, 2 cards, links under /cryptoscanner/ |
 | Affiliate matrix | 6 programmes recorded (3 terms_verified, 2 identified, 1 not_applicable), none applied | data/affiliate/*.json |
 | Promotion expiry (date-based) | tested | scripts/expire-promos.ts, 4 tests, dry-run shows demo promo expiring 2027-01-01 |
@@ -42,7 +42,7 @@ Updated: 2026-10-28 18:50 (Europe/Berlin). Keep this file short; it is the hand-
 | Structured data, analytics | not started | — |
 
 ## Integrations
-GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-check in Chromium) · scheduled expiry: configured · auto-merge: configured · Pages: ACTIVE — David enabled it 2026-10-28 19:10; manual run 40742521004 green; https://adx-ops.github.io/cryptoscanner/ serves the verified build (2 cards, noindex, links under /cryptoscanner/) — verified by fetch · scheduled Claude runs CREATED 2026-10-28 with David's explicit authorisation (permission mode auto): research trig_01K3xU7cbJTPcQDM5FsYDrJn (weekdays 06:41 Berlin, first run 2026-10-29), second-read trig_014y1sqpUccM2ArRRaAALQqe (daily 07:23), discovery trig_017W5QY5f3CRgK4Y1Vvvgybt (Mondays 05:49). None has fired yet → status 'configured' until a PR exists · analytics: planned · affiliate dashboards: none.
+GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-check in Chromium) · scheduled expiry: configured · auto-merge: configured · Pages: ACTIVE — David enabled it 2026-10-28 19:10; manual run 40742521004 green; https://adx-ops.github.io/cryptoscanner/ serves the verified build (2 cards, noindex, links under /cryptoscanner/) — verified by fetch · scheduled Claude runs CREATED 2026-10-28 with David's explicit authorisation (permission mode auto): research trig_01K3xU7cbJTPcQDM5FsYDrJn (weekdays 06:41 Berlin, first run 2026-10-29), second-read trig_014y1sqpUccM2ArRRaAALQqe (daily 07:23), discovery trig_017W5QY5f3CRgK4Y1Vvvgybt (Mondays 05:49). Research run fired 2026-10-29 06:01 → PR #1 (Wirex validated, 4 no-KYC candidates blocked with reasons), auto-merged; second-read run fired 06:30 → PR #2 (Crypto.com reconfirmed, Nexo/Bybit needs_review), auto-merged; expire-promos scheduled run green. Status: ACTIVE. Known limits learned: gh token invalid in scheduled sessions (GitHub connector used), client-rendered help centres unreadable by the fetcher (needs_browser_read), fetch provenance requires search-first · analytics: planned · affiliate dashboards: none.
 
 ## Decisions awaited from David
 1. (done 2026-10-28) three scheduled tasks created.
@@ -53,7 +53,7 @@ GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-che
 5. Notification channel for exceptions — assumed this chat.
 
 ## Next work (in order)
-1. Once scheduled tasks exist: watch the first research and second-read runs end-to-end; fix the prompts from what they do wrong. Until then, continue second reads by hand (Crypto.com EEA, Nexo, Bybit EU, KAST, RedotPay).
+1. Browser second reads (needs_browser_read): Bybit EU FAQ + fee schedule (≥ 2026-10-30), RedotPay fee image, Crypto.com help centre (fees + country list). Wirex: confirm whether the EEA Mastercard continues after the Wirex One redirect before publishing.
 2. New records: Wirex, Coinbase, MetaMask, Kraken (Krak), Deblock, Plutus — official sources only, validated → published after a second read.
 3. Hosting: done (GitHub Pages, noindex). Next: move brief + internal affiliate scores out of the public repo if David wants; domain later.
 4. Freshness policy document (per field type); founder dashboard (5 questions) as a static page built from data + CI state.

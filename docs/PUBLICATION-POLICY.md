@@ -10,7 +10,8 @@ candidate → validated → published, with needs_review, stale, rejected, retir
 2. Every evidence entry is an official source (`official_terms`, `pricing_page`, `eligibility_page`, `issuer_doc`, `help_center`, `affiliate_program`) or an official `reference` (e.g. a central bank's member list used only to expand a stated scope). No `third_party`, no `demo`.
 3. `product_status` is `active` or `waitlist`.
 4. The validator passes (`npm run validate`) — it enforces: unknown never modelled as free, promo dates present, credit products carry credit terms, affiliate URL only with confirmed access.
-5. Contradictions between official pages are allowed only if the record models the conservative value and states the contradiction in `contradiction_note` (shown on the card page).
+5. Contradictions between official pages are allowed only if the record models the governing value and states the contradiction in `contradiction_note` (shown on the card page). Governing value: the dedicated, dated fee schedule or terms document beats a marketing/landing page; when neither is dated or dedicated, the value least favourable to the user is modelled.
+6. A page that returns an empty shell to the fetcher is *unreadable*, not *unchanged*: it does not count as a read, and it does not trigger `needs_review` by itself. Such records carry `needs_browser_read` in the research list and wait for a session with a browser.
 
 ## What unattended runs may do without a human
 - Add `validated` records (never published) — merged automatically when CI is green.

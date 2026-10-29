@@ -29,9 +29,9 @@
     {
       "provider": "Nexo",
       "product": "Nexo Card",
-      "status": "validated",
+      "status": "published",
       "record": "data/cards/nexo-card.json",
-      "note": "Product page read twice (2026-10-27, 2026-10-29), all values agree. The two help-centre articles (eligibility, KYC) are client-rendered and could not be re-read by the 2026-10-29 run → record needs_review; browser read needed. Contradiction AR/UK between article and footer kept in evidence."
+      "note": "Published 2026-10-29 after a browser second read of both help-centre articles; AR/UK footer contradiction displayed."
     },
     {
       "provider": "Wirex",
@@ -45,7 +45,8 @@
       "product": "Bybit Card (EEA)",
       "status": "validated",
       "record": "data/cards/bybit-card-eu.json",
-      "note": "EU card page read in browser 2026-10-27; client-rendered, not readable by the 2026-10-29 second-read run. Official help-centre FAQ (2026-10-02) differs: Malta excluded, ATM allowance 100 EUR (not USD), proof of address only for non-EEA IDs → record needs_review. Rewards/VIP caps page not yet read; cashback payout asset unknown."
+      "note": "Help-centre FAQ + fee schedule read in browser 2026-10-29; three landing-page contradictions recorded (FX, ATM currency, physical card fee). Needs a browser second read ≥24 h later to publish.",
+      "needs_browser_read": true
     },
     {
       "provider": "Coinbase",

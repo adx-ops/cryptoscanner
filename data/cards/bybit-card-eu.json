@@ -14,7 +14,7 @@
   },
   "network": "mastercard",
   "category": "debit",
-  "record_status": "needs_review",
+  "record_status": "validated",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -25,7 +25,7 @@
   "funding": {
     "mechanism": "spend_from_balance",
     "conversion": "at_spend",
-    "supported_assets_note": "No separate card balance: spending is deducted from the Bybit EU Funding Account; crypto converted at spend with a 0.9% conversion fee on top of spot trading fees.",
+    "supported_assets_note": "No separate card balance: spending is deducted from the Bybit EU Funding Account. Supported: EUR and USDC, BTC, ETH, MNT, GRAM, XRP, EURC with a user-set payment priority; crypto converted at spend with a 0.9% conversion fee.",
     "evidence": [
       "ev-bybit-eu-cards"
     ]
@@ -41,24 +41,24 @@
           "AT",
           "BE",
           "BG",
-          "HR",
           "CY",
           "CZ",
+          "DE",
           "DK",
+          "ES",
           "EE",
           "FI",
           "FR",
-          "DE",
           "GR",
+          "HR",
           "HU",
-          "IS",
           "IE",
+          "IS",
           "IT",
-          "LV",
           "LI",
           "LT",
           "LU",
-          "MT",
+          "LV",
           "NL",
           "NO",
           "PL",
@@ -66,27 +66,27 @@
           "RO",
           "SK",
           "SI",
-          "ES",
           "SE"
         ],
-        "residence_excluded": [],
-        "default_for_unlisted": "to_confirm",
-        "usage_note": "Page: 'proof of address from an eligible EEA country, issued within the last 3 months'; the list of eligible EEA countries is not published on the page, so the EEA member list is recorded as a hypothesis. Applications may be declined at Bybit's discretion.",
-        "evidence": [
-          "ev-bybit-eu-cards"
+        "residence_excluded": [
+          "MT"
         ],
-        "status": "hypothesis"
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Official FAQ (updated 2026-10-02) lists 29 supported EEA countries and states 'Malta is excluded'. Applications may be declined at Bybit EU's discretion.",
+        "evidence": [
+          "ev-bybit-faq"
+        ],
+        "status": "verified"
       },
       "kyc": {
         "initial_verification": "required",
         "editorial_level": "standard",
         "requirements": [
-          "id_document",
-          "proof_of_address"
+          "id_document"
         ],
-        "stages_note": "Identity Verification Lv. 2 plus proof of address (<3 months) before applying. Document list for Lv. 2 not on the card page.",
+        "stages_note": "Card application requires its own, 'more stringent' identity verification even if the Bybit EU account is verified: EEA national ID, passport, residence permit (≥6 months validity) or driving licence. Proof of address is required only when the identity document is not from an EEA country (FAQ 2026-10-02). Billing address, mobile number and security questions must be completed before online/overseas transactions.",
         "evidence": [
-          "ev-bybit-eu-cards"
+          "ev-bybit-faq"
         ],
         "status": "verified"
       },
@@ -105,9 +105,10 @@
             {
               "type": "issuance",
               "kind": "none",
-              "conditions": "Virtual card free; physical card $5 or 5 USDC (issuance/replacement).",
-              "status": "verified",
+              "conditions": "Virtual card: no fee. Physical card: first issuance free 'until further notice', replacement 5 EUR (fee schedule 2026-10-08). The landing page states $5 / 5 USDC for the physical card — contradiction shown.",
+              "status": "contradictory",
               "evidence": [
+                "ev-bybit-fees",
                 "ev-bybit-eu-cards"
               ]
             },
@@ -122,6 +123,7 @@
               "conditions": "No application or annual fee.",
               "status": "verified",
               "evidence": [
+                "ev-bybit-fees",
                 "ev-bybit-eu-cards"
               ]
             },
@@ -130,17 +132,19 @@
               "kind": "none",
               "status": "verified",
               "evidence": [
+                "ev-bybit-fees",
                 "ev-bybit-eu-cards"
               ]
             },
             {
               "type": "fx",
               "kind": "percent",
-              "percent": 1,
+              "percent": 0.5,
               "period": "per_transaction",
-              "conditions": "1% on top of Mastercard's exchange rate.",
-              "status": "verified",
+              "conditions": "Fees & Limits schedule (2026-10-08): 0.5% on top of Mastercard's rate, FX padding 0%. The card landing page FAQ says 1%; the dated fee schedule is the governing document and is modelled; contradiction shown.",
+              "status": "contradictory",
               "evidence": [
+                "ev-bybit-fees",
                 "ev-bybit-eu-cards"
               ]
             },
@@ -149,9 +153,10 @@
               "kind": "percent",
               "percent": 0.9,
               "period": "per_transaction",
-              "conditions": "0.9% crypto conversion fee on top of Spot trading fees (applies when spending crypto rather than fiat).",
+              "conditions": "0.9% on top of Bybit EU's One-Click Sell rate for transactions funded with non-fiat assets; minimum conversion 1 EUR/USD.",
               "status": "verified",
               "evidence": [
+                "ev-bybit-fees",
                 "ev-bybit-eu-cards"
               ]
             },
@@ -163,14 +168,15 @@
               "free_allowance": {
                 "amount": {
                   "amount": 100,
-                  "currency": "USD"
+                  "currency": "EUR"
                 },
                 "period": "month"
               },
-              "conditions": "2% after a monthly free ATM limit of $100 (stated in USD).",
+              "conditions": "2% after the first 100 EUR each month (fee schedule 2026-10-08 and FAQ 2026-10-02; the landing page says $100). ATM operators may add their own fees.",
               "status": "verified",
               "evidence": [
-                "ev-bybit-eu-cards"
+                "ev-bybit-fees",
+                "ev-bybit-faq"
               ]
             },
             {
@@ -180,6 +186,15 @@
               "status": "hypothesis",
               "evidence": [
                 "ev-bybit-eu-cards"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "none",
+              "conditions": "Card cancellation fee: none (fee schedule).",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-fees"
               ]
             }
           ],
@@ -230,9 +245,38 @@
           ],
           "mobile_wallets": [
             "apple_pay",
-            "google_pay"
+            "google_pay",
+            "samsung_pay"
           ],
-          "mobile_wallets_status": "verified"
+          "mobile_wallets_status": "verified",
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 5000,
+                "currency": "EUR"
+              },
+              "period": "per_day",
+              "note": "Tier 1: 5,000 EUR per transaction and per day, 10,000/month, 60,000/year; Tier 2 (upgrade on request): 10,000/day, 25,000/month; Tier 3 (VIP): 15,000/day, 50,000/month.",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 2000,
+                "currency": "EUR"
+              },
+              "period": "per_day",
+              "note": "Physical card: 2,000 EUR per transaction and per day; 2,000/5,000/10,000 per month by tier.",
+              "status": "verified",
+              "evidence": [
+                "ev-bybit-fees"
+              ]
+            }
+          ]
         }
       ]
     }
@@ -250,6 +294,35 @@
       "scope": {
         "note": "EEA page; fees partly stated in USD"
       },
+      "verification": "contradictory",
+      "contradiction_note": "Landing page FAQ says FX 1%, ATM allowance $100 and physical card $5/5 USDC; the dated help-centre fee schedule (2026-10-08) says FX 0.5%, 100 EUR and 5 EUR replacement with free first issuance. The fee schedule is modelled; both shown."
+    },
+    {
+      "id": "ev-bybit-faq",
+      "url": "https://www.bybit.eu/en-EU/help-center/article/FAQ-Bybit-Card-General-Inquiries",
+      "title": "FAQ — Bybit Card General Inquiries (help centre, updated 2026-10-02)",
+      "source_type": "help_center",
+      "excerpt": "Mastercard debit; 29 supported EEA countries listed, 'Malta is excluded'; ID: EEA national ID, passport, residence permit (≥6 months) or driving licence; proof of address only if the ID is not from the EEA; Apple/Google/Samsung Pay; EUR + USDC/BTC/ETH/MNT/GRAM/XRP/EURC; ATM 2% above 100 EUR/month; card valid 3 years; tier follows VIP level.",
+      "accessed_at": "2026-10-29T15:40:00Z",
+      "effective_from": "2026-10-02",
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bybit-fees",
+      "url": "https://www.bybit.eu/en-EU/help-center/article/Fees-and-Spending-Limits-Bybit-Card",
+      "title": "Fees and Limits (Bybit Card) (help centre, updated 2026-10-08)",
+      "source_type": "pricing_page",
+      "excerpt": "FX 0.5% over Mastercard rate, FX padding 0%; crypto conversion 0.9% over One-Click Sell rate, min 1 EUR/USD; annual/inactivity/cancellation none; virtual issuance none; physical first issuance free until further notice, replacement 5 EUR; ATM 2% after first 100 EUR monthly; spending tiers 5,000/10,000/15,000 EUR per day; ATM 2,000 EUR per day.",
+      "accessed_at": "2026-10-29T15:40:00Z",
+      "effective_from": "2026-10-08",
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
       "verification": "verified"
     }
   ],
@@ -262,7 +335,7 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-10-27T11:15:00Z",
+    "last_content_verified_at": "2026-10-29T15:40:00Z",
     "last_auto_check_at": null
   },
   "changelog": [
@@ -318,6 +391,18 @@
         "ev-bybit-eu-cards"
       ],
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-29T15:40:00Z",
+      "field": "*",
+      "from": "needs_review",
+      "to": "validated",
+      "reason": "Browser read of the official FAQ (2026-10-02) and Fees & Limits schedule (2026-10-08) on 2026-10-29: eligibility now a verified 29-country list (Malta excluded); KYC: proof of address only for non-EEA ID; FX 0.5% (landing page: 1%), ATM allowance 100 EUR (landing page: $100), physical first issuance free / replacement 5 EUR (landing page: $5) — contradictions recorded, fee schedule modelled. Limits and Samsung Pay added. Publication requires a second read of these two articles ≥24 h later (browser needed).",
+      "evidence": [
+        "ev-bybit-faq",
+        "ev-bybit-fees"
+      ],
+      "actor": "claude (browser read)"
     }
   ],
   "editorial": {
