@@ -1,0 +1,710 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wirex-card",
+  "slug": "wirex-card",
+  "name": "Wirex Card (EEA)",
+  "brand": "Wirex",
+  "provider_id": "wirex",
+  "issuer": {
+    "name": "Transact Payments Malta Limited (programme manager: Wirex UAB)",
+    "status": "verified",
+    "evidence": [
+      "ev-wirex-eea-issuer-terms"
+    ]
+  },
+  "network": "mastercard",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "E-money card linked to the user's Wirex fiat or crypto accounts; the issuer terms call it 'an e-money product; it is not a credit, charge or debit card' although Wirex markets it as 'Wirex Debit Mastercard'. Exchange rates 'vary by currency pair and available liquidity'; the associated exchange fees are shown only in the app.",
+    "evidence": [
+      "ev-wirex-eea-issuer-terms",
+      "ev-wirex-fees"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "wirex-card-eea",
+      "region_label": "EEA (except Cyprus and Liechtenstein)",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE"
+        ],
+        "residence_excluded": [
+          "CY",
+          "LI"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Issuer terms: applicants must be 18+ and 'resident in the European Economic Area (but not in Cyprus or Liechtenstein)'. The 28 allowed codes are our expansion of 'EEA' (27 EU members + Iceland + Norway); the source gives no country list. UK, Switzerland and non-EEA countries are served by other Wirex entities/terms and are not covered by this variant. The consumer landing page wirexapp.com/personal now redirects to wirex.one ('Wirex One'), whose supported-country list was not read.",
+        "evidence": [
+          "ev-wirex-eea-issuer-terms"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "phone",
+          "proof_of_address"
+        ],
+        "thresholds_note": "No threshold-based tiers: the card 'can be used only once KYC is completed successfully' (issuer terms clause 3.5). Proof of source of funds may be requested at any time.",
+        "stages_note": "Account creation with email + phone (SMS); identity verification starts when upgrading to 'Starter' level: government photo ID, selfie/liveness 'depending on your country of residence', proof of address 'may be requested'. Card Terms accepted at card order; a minimum balance may be required to order (amount shown in app). Typically completed within 5 minutes per help centre.",
+        "evidence": [
+          "ev-wirex-kyc",
+          "ev-wirex-eea-issuer-terms",
+          "ev-wirex-order"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": {
+            "type": "free",
+            "note": "Free plan for all Wirex users ('Standard Entry'). A 'Standard Enhanced' tier (1% Cryptoback) requires locking 150,000 WXT for 180 days and is modelled as a conditional maximum.",
+            "evidence": [
+              "ev-wirex-xtras-pricing"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Card issuance free in every region of the fee schedule (virtual and physical).",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "EUR"
+              },
+              "conditions": "EEA: DHL World Mail (not trackable) EUR 5; DHL Express (trackable) EUR 15. Replacement card fee mentioned in the issuer terms but no amount published.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees",
+                "ev-wirex-eea-issuer-terms"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "Standard plan is free.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-xtras-pricing"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "Not established. The fee schedule lists no FX line; the help-centre benefits article claims 'no annual or foreign exchange fees'; the issuer terms say 'You may also be charged a foreign exchange Fee as set out in the Fees & Limits Schedule' with conversion at a Scheme rate; exchange fees between accounts are 'viewed in the app'. Treated as unknown until the official schedule states it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 200,
+                  "currency": "EUR"
+                },
+                "period": "month"
+              },
+              "conditions": "Fee schedule (EEA column): free up to EUR 200 per month, then 2%. The benefits article says 'up to $200 in fee-free withdrawals globally' (currency differs). Third-party ATM operator fees may apply. Virtual card cannot withdraw cash.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees",
+                "ev-wirex-benefits"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "SEPA (EUR) bank transfers are free per the fee schedule. Card top-ups: 'the fee in amount of 0% or more will apply' depending on currency and country (not established). Crypto deposits: network fees.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.5,
+              "payout": {
+                "kind": "token",
+                "code": "WXT"
+              },
+              "requires": "none",
+              "conditions": "Cryptoback on card purchases, paid in WXT. No cap, minimum spend or exclusion list established (the 'transactions not eligible for Cryptoback' article could not be fetched). Payout timing not stated.",
+              "description": "Cryptoback 0.5% (Standard Entry)",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-xtras-pricing",
+                "ev-wirex-benefits"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "WXT"
+              },
+              "requires": "lock",
+              "conditions": "'Standard Enhanced': lock 150,000 WXT for 180 days. No fee for the upgrade beyond the lock.",
+              "description": "Cryptoback 1% with 150,000 WXT locked",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-xtras-pricing"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "Virtual and plastic: max purchase EUR 30k, EUR 30k per month (Metal: EUR 75k per month). 'Limits may vary depending on region or currency.'",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-limits"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 500,
+                "currency": "EUR"
+              },
+              "period": "per_day",
+              "note": "Plastic/Metal: EUR 500 per day, EUR 5k per month. Virtual: no cash withdrawal.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-limits"
+              ]
+            }
+          ],
+          "mobile_wallets_status": "unknown"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 9.99,
+              "currency": "EUR"
+            },
+            "period": "month",
+            "note": "EUR 9.99/month or EUR 102/year. 'Premium Enhanced' (2%) and 'Premium Ultimate' (3%) add a 180-day WXT lock of 250,000 / 750,000 WXT on top of the subscription.",
+            "evidence": [
+              "ev-wirex-xtras-pricing"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Card issuance free in every region of the fee schedule.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "EUR"
+              },
+              "conditions": "EEA: DHL World Mail EUR 5; DHL Express EUR 15. Fee schedule does not distinguish plans.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 9.99,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "conditions": "EUR 9.99 per month or EUR 102 per year, paid in euros. Pricing article mentions 'discounted fees for certain transactions' without details.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-xtras-pricing"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "Not established (see Standard tier). No plan-specific FX allowance is published on the pages read.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 200,
+                  "currency": "EUR"
+                },
+                "period": "month"
+              },
+              "conditions": "Fee schedule does not distinguish plans: free up to EUR 200 per month (EEA), then 2%. A plan-specific allowance may exist in the app but is not published on the pages read.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "SEPA (EUR) bank transfers free. Card top-ups '0% or more' depending on currency and country (not established).",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "WXT"
+              },
+              "requires": "subscription",
+              "conditions": "'Premium Entry' Cryptoback on in-store and online card purchases, paid in WXT. The benefits article states 3% for Premium (see contradiction note on evidence); the conservative pricing-page value is modelled.",
+              "description": "Cryptoback 1% (Premium Entry)",
+              "status": "contradictory",
+              "evidence": [
+                "ev-wirex-xtras-pricing",
+                "ev-wirex-benefits"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 3,
+              "payout": {
+                "kind": "token",
+                "code": "WXT"
+              },
+              "requires": "lock",
+              "conditions": "'Premium Ultimate': subscription plus 750,000 WXT locked for 180 days (2% at 250,000 WXT, 'Premium Enhanced').",
+              "description": "Cryptoback up to 3% with 750,000 WXT locked",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-xtras-pricing"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "Limits article is by card type (virtual/plastic/metal), not by plan.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-limits"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 500,
+                "currency": "EUR"
+              },
+              "period": "per_day",
+              "note": "Plastic/Metal: EUR 500 per day, EUR 5k per month.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-limits"
+              ]
+            }
+          ],
+          "mobile_wallets_status": "unknown"
+        },
+        {
+          "id": "elite",
+          "name": "Elite",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 29.99,
+              "currency": "EUR"
+            },
+            "period": "month",
+            "note": "EUR 29.99/month or EUR 306/year. 'Elite Enhanced' (6%) and 'Elite Ultimate' (8%) add a 180-day WXT lock of 1,500,000 / 7,500,000 WXT.",
+            "evidence": [
+              "ev-wirex-xtras-pricing"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Card issuance free in every region of the fee schedule.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "EUR"
+              },
+              "conditions": "EEA: DHL World Mail EUR 5; DHL Express EUR 15. Fee schedule does not distinguish plans.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 29.99,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "conditions": "EUR 29.99 per month or EUR 306 per year, paid in euros.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-xtras-pricing"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "Not established (see Standard tier).",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 200,
+                  "currency": "EUR"
+                },
+                "period": "month"
+              },
+              "conditions": "Fee schedule does not distinguish plans: free up to EUR 200 per month (EEA), then 2%.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "SEPA (EUR) bank transfers free. Card top-ups '0% or more' depending on currency and country (not established).",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "WXT"
+              },
+              "requires": "subscription",
+              "conditions": "'Elite Entry' Cryptoback on in-store and online card purchases, paid in WXT. The benefits article says only 'up to 8%' for Elite.",
+              "description": "Cryptoback 4% (Elite Entry)",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-xtras-pricing",
+                "ev-wirex-benefits"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 8,
+              "payout": {
+                "kind": "token",
+                "code": "WXT"
+              },
+              "requires": "lock",
+              "conditions": "'Elite Ultimate': subscription plus 7,500,000 WXT locked for 180 days (6% at 1,500,000 WXT, 'Elite Enhanced').",
+              "description": "Cryptoback up to 8% with 7,500,000 WXT locked",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-xtras-pricing",
+                "ev-wirex-benefits"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "Limits article is by card type, not by plan; Metal card EUR 75k per month, 'can be increased upon request'.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-limits"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 500,
+                "currency": "EUR"
+              },
+              "period": "per_day",
+              "note": "Plastic/Metal: EUR 500 per day, EUR 5k per month.",
+              "status": "verified",
+              "evidence": [
+                "ev-wirex-limits"
+              ]
+            }
+          ],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-wirex-eea-issuer-terms",
+      "url": "https://help.wirexapp.com/article/mastercard-issuer-terms-new-eea-1556",
+      "title": "Wirex Debit Mastercard Terms and Conditions (EEA issuer terms, help centre)",
+      "source_type": "official_terms",
+      "excerpt": "'Your Card is issued by us' = Transact Payments Malta Limited (MFSA-authorised EMI); Program Manager Wirex UAB (Lithuania). Applicants 18+ and 'resident in the European Economic Area (but not in Cyprus or Liechtenstein)'. E-money product, 'not a credit, charge or debit card'. FX fee 'as set out in the Fees & Limits Schedule'; card usable only after KYC. No effective date.",
+      "accessed_at": "2026-10-29T05:55:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "EEA customers only; other regions have separate issuer terms (e.g. 'global' terms naming Wirex Limited / Singapore)."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-wirex-fees",
+      "url": "https://help.wirexapp.com/article/wirex-fees-1379",
+      "title": "Wirex Fees (help centre fee schedule, by region)",
+      "source_type": "pricing_page",
+      "excerpt": "Card issuance free in all regions; ATM free up to EUR 200/month (EEA) then 2%; delivery EEA EUR 5 (DHL World Mail) / EUR 15 (DHL Express); SEPA/Faster Payments/ACH/PIX transfers free; card funding '0% or more' by currency/country; exchange fees 'can be viewed in the app'; GBP 30 administrative fee for ToS violations. No FX fee line, no plan prices, no replacement fee amount, no date.",
+      "accessed_at": "2026-10-29T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR",
+        "note": "EEA column of a multi-region table"
+      },
+      "verification": "verified",
+      "contradiction_note": "FX: schedule lists no FX fee; benefits article claims none; issuer terms allow one 'as set out in the Fees & Limits Schedule'. Modelled as unknown."
+    },
+    {
+      "id": "ev-wirex-xtras-pricing",
+      "url": "https://help.wirexapp.com/article/x-tras-pricing-plans-and-tiers-1337",
+      "title": "X-tras pricing: plans and tiers (help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Standard free; Premium EUR 9.99/month or EUR 102/year; Elite EUR 29.99/month or EUR 306/year, paid in euros. Cryptoback: Standard Entry 0.5% / Enhanced 1% (150k WXT); Premium Entry 1% / Enhanced 2% (250k) / Ultimate 3% (750k); Elite Entry 4% / Enhanced 6% (1.5m) / Ultimate 8% (7.5m); locks of 180 days, no fee for tier upgrades. Table typo '250,00'. No region stated, no date.",
+      "accessed_at": "2026-10-29T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified",
+      "contradiction_note": "Read of 2026-10-26 (research list) noted plan payments 'in WXT only'; this read states euro subscriptions. Benefits article states Premium 3% and Elite 'up to 8%' versus Entry rates 1% / 4% here."
+    },
+    {
+      "id": "ev-wirex-benefits",
+      "url": "https://help.wirexapp.com/article/benefits-of-the-wirex-card-explained-1301",
+      "title": "Benefits of the Wirex card explained (help centre)",
+      "source_type": "help_center",
+      "excerpt": "Cryptoback in WXT on all purchases: Elite 'up to 8%', Premium 3%, Standard 0.5%; 'no annual or foreign exchange fees'; 'up to $200 in fee-free withdrawals globally'; virtual card in app, physical card at Visa/Mastercard acceptance points. No issuer, no countries, no date.",
+      "accessed_at": "2026-10-29T05:53:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "Premium 3% here vs 1% Entry on the pricing page; '$200' ATM allowance here vs 'EUR 200' (EEA) on the fee schedule; 'no foreign exchange fees' vs issuer terms allowing an FX fee."
+    },
+    {
+      "id": "ev-wirex-limits",
+      "url": "https://help.wirexapp.com/article/wirex-limits-1380",
+      "title": "Wirex Limits (help centre)",
+      "source_type": "help_center",
+      "excerpt": "Virtual/Plastic/Metal: max purchase EUR 30k; per month EUR 30k/30k/75k; cash withdrawal per day N/A/EUR 500/EUR 500; per month N/A/EUR 5k/EUR 5k. SEPA up to EUR 50,000 per day. Card top-up min USD 12; unconfirmed card USD 15,000/day, confirmed USD 25,000/day. 'Limits may vary depending on region or currency'; 'all limits are subject to change'. No date.",
+      "accessed_at": "2026-10-29T05:56:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-wirex-kyc",
+      "url": "https://help.wirexapp.com/article/how-to-verify-your-identity-1190",
+      "title": "How to verify your identity (help centre)",
+      "source_type": "help_center",
+      "excerpt": "Verification starts 'when you elevate your status to Starter': phone number confirmed by SMS, government-issued photo ID, selfie and liveness check 'depending on your country of residence', proof of residential address 'may be requested'. 'Typically, verification is completed within 5 minutes.' No country list, no date.",
+      "accessed_at": "2026-10-29T05:58:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-wirex-order",
+      "url": "https://help.wirexapp.com/article/how-to-order-a-wirex-card-1302",
+      "title": "How to order a Wirex card (help centre)",
+      "source_type": "help_center",
+      "excerpt": "Physical: 'Get Physical Card', accept Card Terms, top up if prompted, choose delivery option, pay the delivery fee from an account; 'we do not charge any additional fees'; a minimum balance may be required ('exact amount required will be displayed in the app'); delivery several days to four weeks. Virtual: immediate. One physical card at a time. Availability 'varies by region'. No date.",
+      "accessed_at": "2026-10-29T05:59:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-wirex-one-post",
+      "url": "https://www.wirexapp.com/post/wirex-one-launches-publicly-on-arc-bringing-stablecoin-private-banking-to-the-mass-affluent-market",
+      "title": "Wirex One launches publicly on Arc (company blog post, 'Sep 16', year not shown)",
+      "source_type": "issuer_doc",
+      "excerpt": "'Wirex One' stablecoin neobank 'available globally*', 'Stablecoin-funded card with up to 8% cashback in USD**', 'fee-free FX and ATM withdrawals globally'; 'supervised by' El Salvador's Superintendency of the Financial System. Silent on whether the existing Wirex card continues. wirexapp.com/personal redirected (302) to wirex.one on 2026-10-29.",
+      "accessed_at": "2026-10-29T06:00:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Not used for any fee or reward value; recorded for product-status context only."
+      },
+      "verification": "hypothesis",
+      "contradiction_note": "Marketing claims (fee-free FX, up to 8% in USD) relate to Wirex One, not to the EEA Mastercard documented here; they are not modelled."
+    }
+  ],
+  "links": {
+    "official_url": "https://wirexapp.com",
+    "affiliate": {
+      "program_id": "wirex-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-10-29T06:00:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-10-29T06:02:00Z",
+      "field": "*",
+      "reason": "Initial record from official help-centre pages (EEA issuer terms, fee schedule, X-tras pricing, limits, KYC, card ordering). Single read; second read required before publication. FX fee left unknown (official pages disagree). Product status 'active' from live help-centre order flow and terms, but the consumer landing page now redirects to Wirex One — needs David's review.",
+      "evidence": [
+        "ev-wirex-eea-issuer-terms",
+        "ev-wirex-fees",
+        "ev-wirex-xtras-pricing",
+        "ev-wirex-limits",
+        "ev-wirex-kyc",
+        "ev-wirex-order",
+        "ev-wirex-one-post"
+      ],
+      "actor": "claude (scheduled research run)"
+    }
+  ],
+  "editorial": {
+    "summary": "E-money Mastercard issued by Transact Payments Malta for EEA residents (except Cyprus and Liechtenstein), programme-managed by Wirex UAB. Free Standard plan with 0.5% Cryptoback in WXT; Premium (EUR 9.99/month) and Elite (EUR 29.99/month) plans raise the base rate to 1% and 4%, and locking large amounts of WXT for 180 days raises it to 3% / 8%. Card issuance free, ATM free up to EUR 200 per month then 2%. The foreign-exchange fee could not be established from the official pages, which disagree.",
+    "good_for": [
+      "EEA residents who want a free card with a small token-denominated reward",
+      "Users already holding WXT who can lock it for higher Cryptoback"
+    ],
+    "not_for": [
+      "Anyone who needs a documented FX fee before spending abroad (not established)",
+      "Residents of Cyprus, Liechtenstein, the UK or Switzerland (other entities/terms, not covered here)",
+      "Users who want rewards in fiat: Cryptoback is paid in WXT"
+    ],
+    "watch_outs": [
+      "Official pages disagree on Cryptoback for Premium (1% vs 3%), on the ATM allowance currency ($200 vs EUR 200) and on whether an FX fee exists; conservative values modelled, FX unknown.",
+      "wirexapp.com/personal now redirects to wirex.one ('Wirex One', a new platform supervised in El Salvador); whether the EEA Mastercard documented here continues unchanged is not stated — product status to be confirmed.",
+      "Higher Cryptoback tiers require locking 150,000 to 7,500,000 WXT for 180 days; the WXT price is not part of this record.",
+      "Card top-ups by external card can carry a fee ('0% or more'); only SEPA transfers are stated as free."
+    ]
+  }
+}
