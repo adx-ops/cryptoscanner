@@ -17,3 +17,4 @@ Run `npm run validate`, `npm test`, `npm run check`, `npm run build` (both `PUBL
 ## Known environment limits (learned from the first runs)
 - If `gh` reports an invalid token, open the pull request and add labels through the GitHub connector tools; say so in the report.
 - A client-rendered page that returns an empty shell is "unreadable", not "unchanged": keep the record `validated`, add `"needs_browser_read": true` to its entry in `data/research-list.json`, and list the URLs in the report. Use `needs_review` only when a value actually differs between reads.
+- WebFetch only accepts URLs that appeared in the conversation through WebSearch or a previous WebFetch; a URL copied from a repository file triggers a permission request that nobody answers in an unattended run. Always reach a stored evidence URL by first running a WebSearch restricted to its domain (e.g. `site:help.gnosispay.com fees`) and fetching the URL the search returns.
