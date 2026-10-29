@@ -13,3 +13,7 @@ For every `data/cards/*.json` with `record_status: "validated"` whose `freshness
 
 ## Checks and hand-off
 Run `npm run validate`, `npm test`, `npm run check`, `npm run build` (both `PUBLIC_DATASET=demo` default and `PUBLIC_DATASET=verified npx astro build`). Branch `agent/second-read-<YYYYMMDD-HHMM>`, commit, push, `gh pr create --label automated --label auto-merge --title "Second read <date>: <slugs>" --body "<per record: published / needs_review and why>"`. Do not merge. Report: what got published, what needs review and the exact differences, anything needing David.
+
+## Known environment limits (learned from the first runs)
+- If `gh` reports an invalid token, open the pull request and add labels through the GitHub connector tools; say so in the report.
+- A client-rendered page that returns an empty shell is "unreadable", not "unchanged": keep the record `validated`, add `"needs_browser_read": true` to its entry in `data/research-list.json`, and list the URLs in the report. Use `needs_review` only when a value actually differs between reads.

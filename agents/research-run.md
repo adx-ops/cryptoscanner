@@ -19,3 +19,8 @@ If a candidate cannot be documented from official sources (no fee page, issuer u
 4. Run `npm run validate`, `npm test`, `npm run check`, `npm run build` — all must pass.
 5. Create a branch `agent/research-<YYYYMMDD-HHMM>`, commit with a message listing the records added/blocked, push, and open a pull request with `gh pr create --label automated --label auto-merge --title "Research run <date>: <providers>" --body "<what was read, what is unknown, contradictions, anything needing a human>"`. Do not merge it yourself.
 6. Finish with a short report: records written (with their main unknowns), candidates blocked and why, and anything that needs David's decision. No invented figures anywhere.
+
+## Known environment limits (learned from the first runs)
+- If `gh` reports an invalid token, open the pull request and add labels through the GitHub connector tools instead; say so in the report.
+- Help centres rendered client-side (Nexo, Bybit, Laso, Freedomia, Pinto Pay…) return an empty shell to WebFetch. Do not guess their content: record the page as unreadable, set the candidate `blocked` or the field `unknown`, and add `"needs_browser_read": true` to the candidate so a working session with a browser pane picks it up.
+- When blocking a candidate, write the reason in `data/candidates.json` → `blocked_reason` (one line) — the PR body is not enough.

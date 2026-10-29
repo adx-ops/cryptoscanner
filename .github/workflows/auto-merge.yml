@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write
 jobs:
   merge:
     if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
@@ -21,7 +22,13 @@ jobs:
         run: |
           prs=$(gh api "repos/$REPO/commits/$SHA/pulls" --jq '.[] | select(.head.ref | startswith("agent/")) | select([.labels[].name] | index("auto-merge")) | .number')
           if [ -z "$prs" ]; then echo "No qualifying agent PR for $SHA"; exit 0; fi
+          merged=0
           for n in $prs; do
             echo "Merging PR #$n"
-            gh pr merge "$n" --repo "$REPO" --squash --delete-branch
+            gh pr merge "$n" --repo "$REPO" --squash --delete-branch && merged=1
           done
+          # A merge made with GITHUB_TOKEN does not trigger push workflows, so start the deploy explicitly.
+          if [ "$merged" = "1" ]; then
+            gh workflow run deploy-pages.yml --repo "$REPO" --ref main && echo "Deploy triggered"
+            gh workflow run ci.yml --repo "$REPO" --ref main || true
+          fi
