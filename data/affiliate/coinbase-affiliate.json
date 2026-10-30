@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "coinbase-affiliate",
+  "provider_id": "coinbase",
+  "program_name": "Coinbase Affiliate Program",
+  "program_url": "https://www.coinbase.com/affiliates",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "website",
+    "unknown"
+  ],
+  "application_conditions": "Apply via the affiliate application on the page. 'We are no longer accepting applications from UK affiliates.' Other eligibility criteria not published.",
+  "our_status": "identified",
+  "paid_action": "New customers joining Coinbase through the affiliate's promotion ('join' not defined on the page). Coinbase Card is not mentioned as a paid action.",
+  "validation_conditions": "Not stated.",
+  "commission": {
+    "model_note": "'50% of your referrees' trading fees' for the first 3 months of each referee. No fixed amounts.",
+    "percent": 50,
+    "status": "verified"
+  },
+  "revenue_share": {
+    "included_products": "Trading fees only, per the page. Card activity not mentioned.",
+    "duration_note": "First 3 months of each referee's trading fees."
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "Local currency via PayPal or bank account",
+    "frequency": "not stated"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Channels named on the page: linking in articles, creating content, placing ads on your website. Tracking via Impact software and custom deep links. No terms link found on the page; the help-centre programme article was unreadable to the fetcher on 2026-10-30.",
+  "allowed_countries_note": "UK affiliates no longer accepted; no other restriction published.",
+  "evidence": [
+    {
+      "url": "https://www.coinbase.com/affiliates",
+      "title": "Coinbase Affiliates (official programme page)",
+      "accessed_at": "2026-10-30T05:46:30Z",
+      "excerpt": "50% of referees' trading fees for 3 months; Impact tracking; PayPal/bank payout; UK applications closed."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Publisher programme exists but pays on trading fees, not on card issuance. Decision for David: whether a trading-fee programme fits a card comparator. No application made."
+}
