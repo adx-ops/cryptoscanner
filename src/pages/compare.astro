@@ -31,7 +31,7 @@ const rowLabels = cards[0] ? Object.keys(cards[0].rows) : [];
   <h1>Compare cards side by side</h1>
   <p class="lede">Pick two or three cards. Values come from the default free tier of each card's first regional variant; each card page lists the other tiers.</p>
   <div id="picker" class="picks">
-    {cards.map((c) => <label class="chk"><input type="checkbox" value={c.slug} /> <BrandMark providerId={c.rec.provider_id} brand={c.rec.brand} size={22} /> {c.name}</label>)}
+    {cards.map((c) => <label class="chk"><input type="checkbox" value={c.slug} /> <BrandMark providerId={c.rec.provider_id} brand={c.rec.brand} size={26} onSurface /> <span class="pick-name">{c.name}</span></label>)}
   </div>
   <p id="hint" class="card">Select at least two cards to compare.</p>
   <div class="table-wrap" id="table-wrap" hidden>
@@ -55,6 +55,7 @@ const rowLabels = cards[0] ? Object.keys(cards[0].rows) : [];
   .chk:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
   .chk input { width: 18px; height: 18px; min-height: 0; margin: 0; accent-color: var(--accent); }
   .th-face { width: 150px; margin-bottom: 8px; }
+  .pick-name { font-weight: 500; }
   #cmp thead th { color: var(--fg); font-size: 0.95rem; font-weight: 700; vertical-align: bottom; }
   #cmp th[scope="row"] { position: sticky; left: 0; background: var(--surface); min-width: 110px; }
   #hint { margin-top: 0; }

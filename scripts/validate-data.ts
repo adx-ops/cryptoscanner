@@ -123,6 +123,21 @@ for (const file of [...listJson(join(ROOT, 'data/affiliate')), ...listJson(join(
   if (!validateProgram(p)) for (const e of validateProgram.errors ?? []) errors.push(`${rel}: ${e.instancePath || '/'} ${e.message}`);
 }
 
+// Brand marks: a logo file may only be used with a recorded official source and date; every recorded file must exist.
+{
+  const manifestFile = join(ROOT, 'data/logos/manifest.json');
+  if (existsSync(manifestFile)) {
+    const marks = (loadJson(manifestFile) as { marks: Record<string, { logo?: string | null; source_url?: string | null; accessed_at?: string | null; color?: string | null }> }).marks;
+    for (const [id, m] of Object.entries(marks)) {
+      if (!m.logo) continue;
+      if (!m.source_url || !m.accessed_at) errors.push(`data/logos/manifest.json: ${id} has a logo file without source_url/accessed_at`);
+      if (!existsSync(join(ROOT, 'public/logos', m.logo))) errors.push(`data/logos/manifest.json: ${id} references missing file public/logos/${m.logo}`);
+      if (m.color && !/^#[0-9a-f]{6}$/i.test(m.color)) errors.push(`data/logos/manifest.json: ${id} color must be a 6-digit hex`);
+    }
+    for (const f of readdirSync(join(ROOT, 'public/logos'))) if (f.endsWith('.svg') && !Object.values(marks).some((m) => m.logo === f)) errors.push(`public/logos/${f} is not recorded in data/logos/manifest.json`);
+  }
+}
+
 for (const w of warnings) console.warn('WARN ', w);
 for (const e of errors) console.error('ERROR', e);
 console.log(`validate-data: ${cardFiles.length} card record(s) checked, ${errors.length} error(s), ${warnings.length} warning(s)`);

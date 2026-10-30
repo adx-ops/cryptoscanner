@@ -1,14 +1,26 @@
 ---
-import { logoFor, initialsFor } from '../lib/branding.ts';
-interface Props { providerId: string; brand: string; size?: number; class?: string }
-const { providerId, brand, size = 36, class: cls = '' } = Astro.props;
+import { logoFor, initialsFor, shapeFor } from '../lib/branding.ts';
+// Official logo when one is sourced in data/logos/manifest.json, otherwise a monogram.
+// Logos are stored white-on-transparent for the dark card faces; `onSurface` wraps them in a dark pill
+// so they stay readable on light panels (compare picker, light theme).
+interface Props { providerId: string; brand: string; size?: number; onSurface?: boolean; class?: string }
+const { providerId, brand, size = 36, onSurface = false, class: cls = '' } = Astro.props;
 const logo = logoFor(providerId);
+const shape = shapeFor(providerId);
 ---
-{logo
-  ? <img class={`bm ${cls}`} src={logo} alt="" width={size} height={size} loading="lazy" decoding="async" style={`--bm:${size}px`} />
-  : <span class={`bm bm-mono ${cls}`} aria-hidden="true" style={`--bm:${size}px`}>{initialsFor(brand)}</span>}
+{logo && shape === 'wordmark'
+  ? <span class={`bm-word ${onSurface ? 'on-surface' : ''} ${cls}`} style={`--bm:${size}px`}><img src={logo} alt={brand} height={size} loading="lazy" decoding="async" /></span>
+  : logo
+    ? <span class={`bm-markwrap ${onSurface ? 'on-surface' : ''} ${cls}`} style={`--bm:${size}px`}><img class="bm" src={logo} alt="" width={size} height={size} loading="lazy" decoding="async" /><span class="bm-name">{brand}</span></span>
+    : <span class={`bm-markwrap ${cls}`} style={`--bm:${size}px`}><span class="bm bm-mono" aria-hidden="true">{initialsFor(brand)}</span><span class="bm-name">{brand}</span></span>}
 
 <style>
-  .bm { width: var(--bm); height: var(--bm); border-radius: 22%; object-fit: contain; background: #fff; padding: 3px; flex: none; }
+  .bm-word { display: inline-flex; align-items: center; height: var(--bm); min-width: 0; }
+  .bm-word img { height: calc(var(--bm) * 0.72); width: auto; max-width: 100%; display: block; }
+  .bm-word.on-surface { background: var(--face-b); border-radius: 8px; padding: 0 10px; }
+  .bm-markwrap { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+  .bm { width: var(--bm); height: var(--bm); border-radius: 22%; object-fit: contain; flex: none; padding: 2px; }
+  .bm-markwrap.on-surface .bm { background: var(--face-b); }
   .bm-mono { display: inline-flex; align-items: center; justify-content: center; background: var(--accent); color: var(--accent-fg); font-weight: 800; font-stretch: 110%; font-size: calc(var(--bm) * 0.42); letter-spacing: -0.02em; padding: 0; }
+  .bm-name { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 </style>

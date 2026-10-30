@@ -27,7 +27,7 @@ const markSize = size === 'hero' ? 44 : size === 'mini' ? 24 : 34;
 ---
 <div class={`face face-${size}`} style={style} aria-hidden={decorative ? 'true' : undefined}>
   <div class="face-top">
-    <span class="face-brand"><BrandMark providerId={card.provider_id} brand={card.brand} size={markSize} /> <span class="face-brand-name">{card.brand}</span></span>
+    <span class="face-brand"><BrandMark providerId={card.provider_id} brand={card.brand} size={markSize} /></span>
     {network && <span class="face-net">{network}</span>}
   </div>
   <span class="chip" aria-hidden="true"></span>
@@ -45,12 +45,12 @@ const markSize = size === 'hero' ? 44 : size === 'mini' ? 24 : 34;
 
 <style>
   .face { position: relative; aspect-ratio: 1.586; width: 100%; border-radius: var(--r-face); padding: 7% 7% 6.5%; display: flex; flex-direction: column; justify-content: space-between; color: #f3f5f9; overflow: hidden; isolation: isolate;
-    background: radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--tint) 62%, transparent), transparent 62%), radial-gradient(70% 60% at 0% 100%, color-mix(in srgb, var(--tint) 22%, transparent), transparent 70%), linear-gradient(155deg, var(--face-a), var(--face-b));
+    background: radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, color-mix(in srgb, var(--tint) 72%, #fff) 62%, transparent), transparent 62%), radial-gradient(70% 60% at 0% 100%, color-mix(in srgb, var(--tint) 22%, transparent), transparent 70%), linear-gradient(155deg, var(--face-a), var(--face-b));
     box-shadow: var(--shadow-face); border: 1px solid rgba(255, 255, 255, 0.08); container-type: inline-size; }
   .face::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.045) 48%, transparent 58%); pointer-events: none; }
   .face-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
   .face-brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
-  .face-brand-name { font-weight: 700; font-size: clamp(0.85rem, 4.6cqi, 1.1rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .face-brand { font-size: clamp(0.85rem, 4.6cqi, 1.1rem); }
   .face-net { font-weight: 700; font-stretch: 112%; font-size: clamp(0.72rem, 3.8cqi, 0.95rem); color: rgba(243, 245, 249, 0.72); letter-spacing: 0.01em; }
   .chip { width: 12%; aspect-ratio: 1.3; border-radius: 16%; background: linear-gradient(135deg, #e8d49a, #b58f3e 55%, #e2c98a); opacity: 0.9; position: absolute; left: 7%; top: 40%; }
   .chip::before { content: ""; position: absolute; inset: 30% 0; border-top: 1px solid rgba(60, 40, 0, 0.45); border-bottom: 1px solid rgba(60, 40, 0, 0.45); }
@@ -63,6 +63,6 @@ const markSize = size === 'hero' ? 44 : size === 'mini' ? 24 : 34;
   .face-figure-text { font-size: clamp(1.1rem, 7cqi, 1.8rem); letter-spacing: -0.02em; }
   .face-region { max-width: 46%; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: clamp(0.7rem, 3.6cqi, 0.85rem); padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.22); white-space: nowrap; flex: none; }
   .face-mini .chip, .face-mini .face-sub, .face-mini .face-region, .face-mini .face-name { display: none; }
-  .face-mini .face-brand-name { font-size: 0.8rem; }
+  .face-mini .face-brand { font-size: 0.8rem; }
   .face-mini { padding: 6% 7%; }
 </style>

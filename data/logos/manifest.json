@@ -1,13 +1,81 @@
 {
-  "_note": "Brand marks shown on card faces, keyed by provider_id. A logo file (public/logos/<provider_id>.svg|png) is used only when it was taken from an official source recorded here with the date; otherwise the site renders a monogram. 'color' is the brand's own primary colour taken from the same source; absent → default face. Logos stay the trademarks of their owners and identify the products compared (nominative use); any removal request is honoured.",
+  "_note": "Brand marks shown on card faces, keyed by provider_id. A logo file (public/logos/<file>) is used only when it was taken from an official source recorded here with the date; otherwise the site renders a monogram. shape: wordmark (horizontal lockup, shown alone) or mark (symbol, shown next to the brand name). 'color' is the brand's own colour observed on the same official page (button or header colour); absent → default tint. Logos stay the trademarks of their owners and identify the products compared (nominative use); any removal request is honoured.",
   "marks": {
-    "bitpanda": { "brand": "Bitpanda", "logo": null, "color": null, "source_url": null, "accessed_at": null },
-    "gnosis-pay": { "brand": "Gnosis Pay", "logo": null, "color": null, "source_url": null, "accessed_at": null },
-    "nexo": { "brand": "Nexo", "logo": null, "color": null, "source_url": null, "accessed_at": null },
-    "crypto-com": { "brand": "Crypto.com", "logo": null, "color": null, "source_url": null, "accessed_at": null },
-    "bybit": { "brand": "Bybit", "logo": null, "color": null, "source_url": null, "accessed_at": null },
-    "kast": { "brand": "KAST", "logo": null, "color": null, "source_url": null, "accessed_at": null },
-    "redotpay": { "brand": "RedotPay", "logo": null, "color": null, "source_url": null, "accessed_at": null },
-    "wirex": { "brand": "Wirex", "logo": null, "color": null, "source_url": null, "accessed_at": null }
+    "bitpanda": {
+      "brand": "Bitpanda",
+      "logo": "bitpanda.svg",
+      "shape": "wordmark",
+      "color": "#103e36",
+      "source_url": "https://www.bitpanda.com/en/bitpanda-card",
+      "asset_url": "https://a.storyblok.com/f/176646/300x88/e191121310/website_header-logo-01.svg",
+      "accessed_at": "2026-10-30",
+      "note": "Header logo of the official site (white version as served). Colour: the site's primary button background."
+    },
+    "gnosis-pay": {
+      "brand": "Gnosis Pay",
+      "logo": "gnosis-pay.svg",
+      "shape": "wordmark",
+      "color": "#CBFB6C",
+      "source_url": "https://gnosispay.com/",
+      "accessed_at": "2026-10-30",
+      "note": "Inline header SVG (aria-label 'Gnosis Pay'). Mark colour switched from #07052C to white for dark faces; accent #CBFB6C kept as published."
+    },
+    "nexo": {
+      "brand": "Nexo",
+      "logo": "nexo.svg",
+      "shape": "wordmark",
+      "color": null,
+      "source_url": "https://nexo.com/crypto-card",
+      "accessed_at": "2026-10-30",
+      "note": "Inline header SVG (data-testid 'logo', currentColor) rendered white. No brand colour observed on the page (black buttons) — default tint."
+    },
+    "crypto-com": {
+      "brand": "Crypto.com",
+      "logo": "crypto-com.svg",
+      "shape": "wordmark",
+      "color": "#1199fa",
+      "source_url": "https://crypto.com/eea/cards",
+      "asset_url": "https://mkt-site-asset.crypto.com/assets/logo/crypto-com.svg",
+      "accessed_at": "2026-10-30",
+      "note": "Header logo file as served (fill #F7F9FA). Colour: the site's primary button background rgb(17,153,250)."
+    },
+    "bybit": {
+      "brand": "Bybit",
+      "logo": "bybit.svg",
+      "shape": "wordmark",
+      "color": "#F7A600",
+      "source_url": "https://www.bybit.eu/en-EU/cards/",
+      "accessed_at": "2026-10-30",
+      "note": "Header logo (inline data: SVG, white + #F7A600) decoded as served."
+    },
+    "kast": {
+      "brand": "KAST",
+      "logo": "kast.svg",
+      "shape": "wordmark",
+      "color": null,
+      "source_url": "https://www.kast.xyz/",
+      "asset_url": "https://www.kast.xyz/_next/static/media/kast-lockup-white.281agcucb42yg.svg",
+      "accessed_at": "2026-10-30",
+      "note": "Header lockup (white) as served. Site is black/white; no brand colour recorded."
+    },
+    "redotpay": {
+      "brand": "RedotPay",
+      "logo": "redotpay.svg",
+      "shape": "wordmark",
+      "color": "#EB0028",
+      "source_url": "https://www.redotpay.com/",
+      "asset_url": "https://staticsource1.redotpay.com/web/img/logo.svg",
+      "accessed_at": "2026-10-30",
+      "note": "Header logo file as served (fill #EB0028)."
+    },
+    "wirex": {
+      "brand": "Wirex",
+      "logo": "wirex.svg",
+      "shape": "mark",
+      "color": "#9e9eff",
+      "source_url": "https://www.wirex.one/",
+      "accessed_at": "2026-10-30",
+      "note": "The W symbol taken from the 'W | ONE' header lockup of wirex.one (wirexapp.com/personal redirects there). Only the W path kept; 'ONE' omitted because the card record is 'Wirex'. Colour: header link colour rgb(158,158,255)."
+    }
   }
 }

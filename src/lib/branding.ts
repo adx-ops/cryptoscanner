@@ -1,13 +1,18 @@
 import manifest from '../../data/logos/manifest.json';
 import { url } from './data.ts';
 
-export interface BrandMarkInfo { brand: string; logo: string | null; color: string | null; source_url: string | null; accessed_at: string | null }
+export interface BrandMarkInfo { brand: string; logo: string | null; shape?: 'wordmark' | 'mark'; color: string | null; source_url: string | null; accessed_at: string | null }
 const MARKS = (manifest as { marks: Record<string, BrandMarkInfo> }).marks;
 
 /** Official logo path for a provider, or null when no sourced file is recorded (→ monogram). */
 export function logoFor(providerId: string): string | null {
   const m = MARKS[providerId];
   return m?.logo && m.source_url && m.accessed_at ? url(`/logos/${m.logo}`) : null;
+}
+
+/** 'wordmark' (horizontal lockup, shown alone) or 'mark' (symbol, shown with the brand name). */
+export function shapeFor(providerId: string): 'wordmark' | 'mark' {
+  return MARKS[providerId]?.shape === 'mark' ? 'mark' : 'wordmark';
 }
 
 /** Brand colour recorded from an official source, or null. */
