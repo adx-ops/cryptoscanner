@@ -14,7 +14,7 @@
   },
   "network": "visa",
   "category": "prepaid",
-  "record_status": "validated",
+  "record_status": "needs_review",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -438,7 +438,7 @@
       "title": "KAST landing page (tiers, cashback, Reserve, FAQ)",
       "source_type": "pricing_page",
       "excerpt": "Standard free / 1.5% up to $2,000 monthly eligible spend; Premium $1,000/yr / 2% up to $10,000; Private $10,000/yr / 3% up to $40,000; VISA Platinum/Infinite; cards 'through regulated partners'; availability varies by jurisdiction; Reserve 8–12% introductory, ends 1 July 2027.",
-      "accessed_at": "2026-10-28T12:10:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -484,6 +484,18 @@
         "ev-kast-fees"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-10-30T06:30:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "needs_review",
+      "reason": "Second independent read on 2026-10-30. https://www.kast.xyz/ re-read: tiers Standard free / Premium $1,000/yr / Private $10,000/yr, cashback 1.5% / 2% / 3% in USD on eligible spend up to $2,000 / $10,000 / $40,000 per month, KAST Points 1% / 2%, Visa Platinum / Infinite, 'cards through regulated partners' (issuer still unnamed), 'availability may vary by jurisdiction' (still no country list), Reserve 8-12% introductory 'offer ends 1 July 2027' (page now also cites an Aug 2026 press release with 4-8% from January 2027: contradiction unchanged). DIFFERENCE on field variants[0].tiers[standard].fees[type=issuance]: recorded 100 USD for a physical card on Standard (source ev-kast-fees, read 2026-10-28); the landing page now states for Standard '2 free cards (virtual or physical)' and https://www.kast.xyz/en/membership states 'Standard members pay $40 to ship physical cards'. Old value kept; not overwritten. UNREACHABLE: the fee article ev-kast-fees could not be re-read. The KAST help centre has moved from kastofficial1747979614.zendesk.com to concierge.kast.xyz (same article now at https://concierge.kast.xyz/hc/en-us/articles/9850062738703-What-Are-the-Fees-and-Conditions-for-KAST-Cards-and-Accounts), which returns a client error to the fetcher; the stored zendesk URL no longer appears in any search. Fees that rely on that article (FX 2%, ATM $3 + 2%, token auto-conversion 2-7%, declined 50c, low-auth 10c, $2/yr in certain countries, Luxe/Limited tier names) could not be confirmed. Also unchanged blockers: eligibility unknown (no country list), KYC hypothesis, issuer unnamed — the validator would refuse publication regardless. Needs David: confirm the Standard physical-card cost on the new help centre (browser read) and decide whether to replace the evidence URL.",
+      "evidence": [
+        "ev-kast-home",
+        "ev-kast-fees"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
