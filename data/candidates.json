@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other.",
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "entries": [
     {
       "provider": "Wirex",
@@ -101,10 +101,10 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-10-30",
+      "priority": 0
     },
     {
       "provider": "MetaMask",
@@ -117,10 +117,10 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-10-30",
+      "priority": 0
     },
     {
       "provider": "ether.fi",

@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "coinbase-card",
+  "slug": "coinbase-card",
+  "name": "Coinbase Card (EEA + UK)",
+  "brand": "Coinbase",
+  "provider_id": "coinbase",
+  "issuer": {
+    "status": "unknown",
+    "evidence": [
+      "ev-coinbase-card-eu-faq",
+      "ev-coinbase-legal-eea"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "unknown",
+    "supported_assets_note": "Spends from the Coinbase account balance (crypto or e-money). The EU FAQ does not state at which moment crypto is converted; the en-gb landing page says crypto is 'automatically converted to Pound Sterling' for purchases and ATM withdrawals but its legal text is US-only.",
+    "evidence": [
+      "ev-coinbase-card-eu-faq",
+      "ev-coinbase-card-gb-landing"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "coinbase-card-eea-uk",
+      "region_label": "EEA + UK",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "GB"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "The help-centre FAQ 'Coinbase Card for the EU' names 31 countries (all 30 EEA states + the UK; ISO mapping is ours) and says Coinbase is 'working on expanding the offer to additional markets'. No date on the page. Card use is blocked in certain countries (the 'Use your Coinbase Card' article lists e.g. China, Russia, Turkey, Ukraine). Requires an existing Coinbase account.",
+        "evidence": [
+          "ev-coinbase-card-eu-faq",
+          "ev-coinbase-card-use"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "proof_of_address"
+        ],
+        "stages_note": "No card-specific KYC article for the EU. The card FAQ requires an existing Coinbase account and confirmation of your information in the app; the general UK/EU identity-verification article says accounts have limited functionality until verification is complete (passport, national ID, residence permit or driving licence; selfie and proof of address issued within 3 months may be requested). Treated as a hypothesis until a card-specific statement is read.",
+        "evidence": [
+          "ev-coinbase-card-eu-faq",
+          "ev-coinbase-id-verification"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Coinbase Card",
+          "access": {
+            "type": "free",
+            "note": "No access condition stated beyond holding a Coinbase account. Whether a monthly or annual card fee exists is not stated on the EU pages read (see subscription fee = unknown).",
+            "evidence": [
+              "ev-coinbase-card-eu-faq"
+            ],
+            "status": "hypothesis"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "FAQ: no fee for the physical card.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinbase-card-eu-faq"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "conditions": "FAQ: 'no transaction fees for spending with the Coinbase Card'; buying and selling crypto 'includes a price spread'. Whether a spread applies when crypto is converted at spend is not stated for the EU card.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "Not stated on any EU page read. The FAQ says the card works internationally and refers to Coinbase's general pricing and fees disclosures (page unreadable to the fetcher on 2026-10-30).",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "FAQ: 1.5% of ATM transactions. ATM operator fees not addressed.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinbase-card-eu-faq"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "No separate top-up: the card spends the Coinbase account balance. Fees for funding the Coinbase account (deposits, crypto purchases with spread) are not documented here.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": []
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-coinbase-card-eu-faq",
+      "url": "https://help.coinbase.com/en/coinbase/trading-and-funding/other/coinbase-card-faq",
+      "title": "Coinbase Card for the EU (help centre FAQ)",
+      "source_type": "help_center",
+      "excerpt": "Visa debit card offered to customers in 30 named European countries + the UK; 'working on expanding the offer to additional markets'. No fee for the physical card; no transaction fees for spending; 1.5% of ATM transactions. Limits visible only in-app. Legacy cards (issued before 17 Jan 2023) worked until 20 Mar 2023. Issuer, FX fee, rewards not stated.",
+      "accessed_at": "2026-10-30T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "EEA + UK. Undated article."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinbase-card-gb-landing",
+      "url": "https://www.coinbase.com/en-gb/card",
+      "title": "Coinbase Card landing page (en-gb locale)",
+      "source_type": "pricing_page",
+      "excerpt": "'Crypto rewards is an optional Coinbase offer'; 'no transaction fees' but 'other fees may apply, and will be shared during sign-up'; issuer 'Pathward, N.A., Member FDIC', 'powered by Marqeta'; 'available in all US states except Hawaii'; converts crypto to Pound Sterling for purchases and ATM withdrawals.",
+      "accessed_at": "2026-10-30T05:38:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "en-gb locale serves US legal text"
+      },
+      "verification": "contradictory",
+      "contradiction_note": "The en-gb page mixes GBP conversion with US-only eligibility and the US issuer (Pathward). The EU help-centre FAQ lists 31 European countries and names no issuer. Governing value for eligibility: the dedicated FAQ; issuer for the EEA/UK card remains unknown; rewards are not modelled for the EEA/UK card."
+    },
+    {
+      "id": "ev-coinbase-card-use",
+      "url": "https://help.coinbase.com/en/coinbase/trading-and-funding/coinbase-card/use-cb-card",
+      "title": "Use your Coinbase Card (help centre)",
+      "source_type": "help_center",
+      "excerpt": "'Spending limits vary between customers' (visible in-app); card usable at Visa merchants except specific categories; list of countries where the card cannot be used (incl. China, Russia, Turkey, Ukraine); physical card arrives in 2–3 weeks. No FX or ATM fee stated.",
+      "accessed_at": "2026-10-30T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Region not specified in the article"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinbase-card-us-overview",
+      "url": "https://help.coinbase.com/en/coinbase/trading-and-funding/coinbase-card/cb-card",
+      "title": "Coinbase Card — Debit card overview (help centre, US)",
+      "source_type": "help_center",
+      "excerpt": "'US residents (excluding Hawaii) can spend crypto (including USDC) and US dollars wherever Visa Cards are accepted.' Topic headings only for rewards, limits, eligibility, identity verification. US-only; not used for EEA/UK values.",
+      "accessed_at": "2026-10-30T05:41:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "note": "US product; read for scope only"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinbase-card-us-apply",
+      "url": "https://help.coinbase.com/en/coinbase/trading-and-funding/coinbase-card/cb-card-apply",
+      "title": "Coinbase Card — Apply for a debit card from Coinbase (help centre, US)",
+      "source_type": "help_center",
+      "excerpt": "US residents excluding Hawaii; identity verification during application (SSN, W2 may be requested); no application fee, no credit check; 'no Coinbase transaction fees, but a spread applies when you buy, sell, or trade crypto'; 'other fees may apply' per the Cardholder Agreement. US-only; not used for EEA/UK values.",
+      "accessed_at": "2026-10-30T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "note": "US product; read for scope only"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinbase-legal-eea",
+      "url": "https://www.coinbase.com/legal/eea",
+      "title": "Coinbase Legal — EEA documents index",
+      "source_type": "official_terms",
+      "excerpt": "Coinbase Ireland Ltd, 'an electronic money institution authorised and regulated by the Central Bank of Ireland', issues the e-money in Coinbase accounts. Coinbase Card is covered by service-specific terms inside the Retail User Agreement (Ireland/Europe); no separate cardholder agreement and no card issuer named on the index. The user agreement itself was unreadable to the fetcher (client error).",
+      "accessed_at": "2026-10-30T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "EEA"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinbase-id-verification",
+      "url": "https://help.coinbase.com/en-gb/coinbase/getting-started/getting-started-with-coinbase/id-doc-verification",
+      "title": "Verify your identity on Coinbase (help centre, UK/EU)",
+      "source_type": "help_center",
+      "excerpt": "Accepted: passport, government photo ID, national identity card (UK/EU), residence permits, driving licences; no expired IDs. Selfie 'may be required'; proof of address (bank/credit-card statement, utility bill) may be requested, issued within three months. 'Accounts have limited functionality until verification is complete.' Not card-specific.",
+      "accessed_at": "2026-10-30T05:46:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Account-level KYC, UK/EU article"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinbase-affiliates",
+      "url": "https://www.coinbase.com/affiliates",
+      "title": "Coinbase Affiliates (official programme page)",
+      "source_type": "affiliate_program",
+      "excerpt": "'50% of your referrees' trading fees' for the first 3 months; tracking via Impact software and custom deep links; paid in local currency via PayPal or bank account; 'We are no longer accepting applications from UK affiliates'. Cookie window, payout threshold and card-specific terms not stated.",
+      "accessed_at": "2026-10-30T05:46:30Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://help.coinbase.com/en/coinbase/trading-and-funding/other/coinbase-card-faq",
+    "affiliate": {
+      "program_id": "coinbase-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-10-30T05:46:30Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-10-30T05:47:00Z",
+      "field": "*",
+      "reason": "Initial record (unattended research run) from the help-centre FAQ 'Coinbase Card for the EU', the 'Use your Coinbase Card' article, the EEA legal index, the UK/EU identity-verification article and the affiliates page. Single read; second read ≥24 h later required before publication. US-only articles read for scope only. The Ireland/Europe user agreement and the pricing-and-fees disclosures were unreadable to the fetcher (client error) — not counted as reads.",
+      "evidence": [
+        "ev-coinbase-card-eu-faq",
+        "ev-coinbase-card-use",
+        "ev-coinbase-legal-eea",
+        "ev-coinbase-id-verification"
+      ],
+      "actor": "claude (scheduled research run)"
+    }
+  ],
+  "editorial": {
+    "summary": "Custodial Visa debit card spending the Coinbase account balance, offered in the 30 EEA countries and the UK according to the help centre. Free physical card, no spending fee stated, 1.5% ATM fee. Issuer, FX fee, conversion spread at spend and any card subscription are not disclosed on the pages read; no rewards are documented for the EEA/UK card.",
+    "good_for": [
+      "Existing Coinbase customers in the EEA or UK who want to spend their balance directly",
+      "Users who value a large, regulated provider (Coinbase Ireland Ltd is an EMI authorised by the Central Bank of Ireland)"
+    ],
+    "not_for": [
+      "Anyone expecting cashback in Europe: rewards appear only on US-oriented pages",
+      "Frequent ATM users (1.5% per withdrawal, no free allowance stated)",
+      "Anyone who needs to know the FX mark-up before applying — not published on the pages read"
+    ],
+    "watch_outs": [
+      "The EEA/UK card issuer is not named on any readable official page — treated as unknown.",
+      "The en-gb landing page shows US eligibility, a US issuer and 'optional' crypto rewards; the EU FAQ contradicts it on eligibility and says nothing about rewards.",
+      "FX fee and conversion spread at spend are unknown — the calculator cannot produce a complete net value.",
+      "Spending and ATM limits are only visible inside the app."
+    ]
+  }
+}

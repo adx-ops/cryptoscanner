@@ -1,0 +1,559 @@
+{
+  "schema_version": "1.0.0",
+  "id": "metamask-card",
+  "slug": "metamask-card",
+  "name": "MetaMask Card",
+  "brand": "MetaMask",
+  "provider_id": "metamask",
+  "issuer": {
+    "name": "Monovate (spelling as on the FAQ; region of the statement not specified)",
+    "status": "hypothesis",
+    "evidence": [
+      "ev-metamask-faq",
+      "ev-metamask-what-is"
+    ]
+  },
+  "network": "mastercard",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "The card draws on tokens the user delegates from a self-custodial MetaMask wallet under a spending cap; tokens are converted to fiat at the time of each transaction. Delegable tokens per the getting-started page: Linea (mUSD, USDC, USDT, wETH, EURe, GBPe), Solana (USDC, USDT), Base (USDC, USDT), Monad (USDC); mUSD from a linked Money Account.",
+    "evidence": [
+      "ev-metamask-what-is",
+      "ev-metamask-security",
+      "ev-metamask-getting-started"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "metamask-card-international",
+      "region_label": "International (26 EEA countries, UK, CH, Crown dependencies, Latin America, Canada, Gulf)",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AD",
+          "AR",
+          "AT",
+          "BH",
+          "BE",
+          "BR",
+          "BG",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "HR",
+          "CY",
+          "DK",
+          "DO",
+          "SV",
+          "FI",
+          "FR",
+          "DE",
+          "GI",
+          "GR",
+          "GT",
+          "GG",
+          "HU",
+          "IS",
+          "IE",
+          "IM",
+          "IT",
+          "JE",
+          "LI",
+          "LU",
+          "MT",
+          "MX",
+          "MC",
+          "NL",
+          "NO",
+          "OM",
+          "PA",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "CH",
+          "GB",
+          "UY"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "The 'What is MetaMask Card?' support page lists 48 eligible countries by name (ISO mapping is ours). Czechia, Estonia, Latvia and Lithuania are NOT on the list. United States: 'not currently available for sign-ups', waitlist only (existing US holders keep their cards). Proof of residency is required to sign up; 'ineligible regions limit sign-ups, not spending'. Undated page.",
+        "evidence": [
+          "ev-metamask-what-is",
+          "ev-metamask-faq"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "email",
+          "phone",
+          "proof_of_address",
+          "other"
+        ],
+        "stages_note": "Sign-up: e-mail + password, phone confirmation, then KYC run by the programme manager Crypto Life (privacy policy hosted by Baanx); 'proof of residency is required to sign up'. The exact identity documents (ID type, selfie) are not listed on any page read. No credit check (debit product).",
+        "evidence": [
+          "ev-metamask-security",
+          "ev-metamask-getting-started"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "virtual",
+          "name": "Virtual card (Free tier)",
+          "access": {
+            "type": "free",
+            "note": "'The Virtual card is free to use, with no yearly fees.' Annual subscription $0 in the fee table.",
+            "evidence": [
+              "ev-metamask-fees",
+              "ev-metamask-what-is"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "No issuance line in the fee table; the virtual card is described as 'free to use' but a one-off issuance fee is neither stated nor denied.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Fee table: annual subscription $0 for the Free tier; 'no annual fees or maintenance fees'.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees",
+                "ev-metamask-faq"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'Delegating funds for spending: no fee, no minimum balance.' Network gas applies at spend (typically about $0.01–0.02 on Linea, variable; Monad gas sponsored).",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees",
+                "ev-metamask-using"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 0.875,
+              "period": "per_transaction",
+              "conditions": "Worst case modelled. Fee table by token: stablecoin in the cardholder's local currency 0%; stablecoin in the merchant's local currency 0%; stablecoin in a currency matching neither 0.5% (Argentina exception); DeFi/tokenised-yield tokens (e.g. aUSDC) 0% up to $1,200/month then 0.5%; other crypto (e.g. wETH) 0.875%.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "'Foreign transaction (cross-border)': 1%, charged when the merchant is outside the cardholder's country.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "2% per withdrawal; the ATM operator may charge an extra fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "mUSD"
+              },
+              "requires": "none",
+              "conditions": "'Card transactions earn 1% mUSD back on all eligible transactions'; 'eligible' is not defined on the pages read. Claimed from the Money Account (MetaMask Mobile) or the card dashboard; payout frequency not stated. The pages read were displayed with the region selector on 'United States'; whether the same rate applies to all 48 eligible countries is not stated. Separate US-only Blackbird dining rewards ($FLY) and a travel offer (4% + 1% mUSD via Entravel) are not modelled.",
+              "description": "1% mUSD back",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-metamask-faq",
+                "ev-metamask-using",
+                "ev-metamask-getting-started"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 15000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "$10,000 per transaction; $15,000 per day (amounts stated in USD).",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 1000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "$1,000 per transaction and per day; ATM network limits may apply.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "hypothesis"
+        },
+        {
+          "id": "metal",
+          "name": "Metal card (orders paused)",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 199,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Annual membership $199, auto-renewing, cancellable; 14-day full refund on the order. 'Orders for the MetaMask Metal card are temporarily paused as of June 2nd, 2026' — not available to new users; existing holders keep their benefits.",
+            "evidence": [
+              "ev-metamask-fees",
+              "ev-metamask-metal"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not listed separately from the $199 annual membership. Replacement of the physical card: $99.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 199,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "Metal annual subscription $199.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Delegation free; network gas applies at spend.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 0.875,
+              "period": "per_transaction",
+              "conditions": "Same token ladder as the Free tier (0% local-currency stablecoins, 0.5% other-currency stablecoins, 0.875% other crypto).",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "No foreign-transaction fee, 'subject to fair usage' (not defined).",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees",
+                "ev-metamask-metal"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 1200,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "conditions": "No fee up to $1,200 per month, then 2%; ATM operator fees may apply.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "mUSD"
+              },
+              "requires": "subscription",
+              "conditions": "1% mUSD back after the first $10,000 spent each year. Region caveat as for the Free tier.",
+              "description": "1% mUSD back (after the 3% band)",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-metamask-metal",
+                "ev-metamask-using"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 3,
+              "payout": {
+                "kind": "token",
+                "code": "mUSD"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 300,
+                  "currency": "USD"
+                },
+                "period": "year"
+              },
+              "conditions": "3% mUSD back on the first $10,000 spent each year (cap of $300/year is our calculation: 3% × $10,000), then 1%. Metal orders paused since 2 June 2026.",
+              "description": "3% mUSD back on the first $10,000 per year",
+              "status": "calculated",
+              "evidence": [
+                "ev-metamask-metal",
+                "ev-metamask-using"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "$20,000 per transaction; $30,000 per day.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 5000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "$1,000 per transaction; $5,000 per day.",
+              "status": "verified",
+              "evidence": [
+                "ev-metamask-fees"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "hypothesis"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-metamask-fees",
+      "url": "https://support.metamask.io/trade/metamask-card/limits-and-fees/",
+      "title": "MetaMask Card limits and fees (support centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Free / Metal: annual $0 / $199; replacement n/a / $99; FX 1% / none (fair usage); ATM 2% / free to $1,200/month then 2%. Token fees: local-currency stablecoin 0%; mismatched-currency stablecoin 0.5%; DeFi tokens free to $1,200/month then 0.5%; other crypto 0.875%; delegation free; gas ≈ $0.01. Limits $10k/tx $15k/day (Free), $20k/tx $30k/day (Metal); ATM $1k/tx, $1k or $5k/day.",
+      "accessed_at": "2026-10-30T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Undated; amounts in USD; distinguishes US / non-US cardholders only for stablecoin conversion"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-metamask-faq",
+      "url": "https://support.metamask.io/trade/metamask-card/card-faq/",
+      "title": "MetaMask Card FAQs (support centre, region selector on United States)",
+      "source_type": "help_center",
+      "excerpt": "'Crypto Life is the provider of the MetaMask Card'; card issuer 'Monovate'; 'Mastercard operates the payment network'. 'Proof of residency is required to sign up'; 'ineligible regions limit sign-ups, not spending'; no credit check. 'Card transactions earn 1% mUSD back on all eligible transactions.' Virtual card: no annual or maintenance fees. Blackbird dining: 5X $FLY (7X Metal).",
+      "accessed_at": "2026-10-30T05:51:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Page displayed for the United States region"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-metamask-what-is",
+      "url": "https://support.metamask.io/trade/metamask-card/what-is-metamask-card/",
+      "title": "What is MetaMask Card? (support centre)",
+      "source_type": "eligibility_page",
+      "excerpt": "48 eligible countries listed by name (EEA except CZ/EE/LV/LT, UK, CH, AD, MC, GI, GG, IM, JE, CA, 10 Latin-American countries, BH, OM). US 'not currently available for sign-ups' (waitlist). Crypto Life 'a card program manager with Mastercard'. Tokens converted to fiat at each transaction. Virtual card 'free to use, with no yearly fees'; Metal 'not currently available for new users'.",
+      "accessed_at": "2026-10-30T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Undated"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-metamask-security",
+      "url": "https://support.metamask.io/trade/metamask-card/security-privacy/",
+      "title": "MetaMask Card — Security and privacy (support centre)",
+      "source_type": "help_center",
+      "excerpt": "'you need to fill out KYC (Know Your Customer) while setting up your MetaMask Card'; Crypto Life manages KYC and processes personal data (privacy policy PDF hosted by Baanx, 2025); MetaMask has no access to those details. 'MetaMask Card does not have custody over your tokens'; card linked to the wallet only through a spending limit. Issuer of record and licences not stated.",
+      "accessed_at": "2026-10-30T05:53:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Page displayed for the United States region"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-metamask-metal",
+      "url": "https://support.metamask.io/trade/metamask-card/metal-card/",
+      "title": "MetaMask Metal card (support centre)",
+      "source_type": "help_center",
+      "excerpt": "$199 per year, auto-renewing, cancellable; 14-day refund. 'Orders for the MetaMask Metal card are temporarily paused as of June 2nd, 2026.' 3% mUSD back on the first $10,000 spent each year, then 1%; no foreign transaction fees; higher ATM and spending limits.",
+      "accessed_at": "2026-10-30T05:54:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Page displayed for the United States region"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-metamask-using",
+      "url": "https://support.metamask.io/trade/metamask-card/using/",
+      "title": "Spend & earn rewards with MetaMask Card (support centre)",
+      "source_type": "help_center",
+      "excerpt": "Virtual 1% mUSD back on eligible transactions; Metal 3% on first $10,000/year then 1%; rewards claimed from the Money Account or card dashboard, frequency not stated. Travel via Entravel: 4% + 1% (Virtual) / + 3% (Metal). Blackbird $FLY at US restaurants. Linea gas ≈ $0.02; wETH 0.875% swap fee. Apple Pay and Google Wallet supported. Only US users can view the virtual card PIN.",
+      "accessed_at": "2026-10-30T05:56:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Page displayed for the United States region"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-metamask-getting-started",
+      "url": "https://support.metamask.io/trade/metamask-card/getting-started-with-card/",
+      "title": "Get started with MetaMask Card (support centre)",
+      "source_type": "help_center",
+      "excerpt": "Sign-up in MetaMask Mobile ≥ 8.0 (Money → Card) or via a personal link to the Crypto Life web dashboard: e-mail + password, phone confirmation, identity verification (KYC), proof of residency. Delegable tokens: Linea (mUSD, USDC, USDT, wETH, EURe, GBPe), Solana (USDC, USDT), Base (USDC, USDT), Monad (USDC). US sign-ups 'temporarily paused'.",
+      "accessed_at": "2026-10-30T05:58:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Page displayed for the United States region"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://support.metamask.io/trade/metamask-card/what-is-metamask-card/",
+    "affiliate": {
+      "program_id": null,
+      "status": "none",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-10-30T05:58:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-10-30T06:00:00Z",
+      "field": "*",
+      "reason": "Initial record (unattended research run) from seven support-centre articles. Single read; second read ≥24 h later required before publication. All articles were served with the region selector on 'United States'; region-specific wording for EEA/UK cardholders could not be displayed by the fetcher, so the issuer and the reward rate are kept as hypotheses. metamask.io/card redirects to metamask.com/card, which could not be fetched (provenance rule). The 'manage-crypto/card/using' URL returned an empty canonical stub (not counted as a read).",
+      "evidence": [
+        "ev-metamask-fees",
+        "ev-metamask-what-is",
+        "ev-metamask-faq"
+      ],
+      "actor": "claude (scheduled research run)"
+    }
+  ],
+  "editorial": {
+    "summary": "Self-custodial Mastercard debit card drawing on tokens delegated from a MetaMask wallet, converted at spend. Virtual card with no annual fee, 1% foreign-transaction fee, 2% ATM fee, 0–0.875% conversion fee depending on the token, 1% mUSD back. Available in 48 countries incl. most of the EEA (not CZ/EE/LV/LT), UK and Switzerland; the $199/year Metal tier (3% back on the first $10,000, no FX fee) has had orders paused since June 2026.",
+    "good_for": [
+      "Self-custody users who hold stablecoins (EURe/GBPe/USDC) on Linea, Base, Solana or Monad",
+      "Everyday spending in the cardholder's own currency with local-currency stablecoins (0% conversion fee stated)"
+    ],
+    "not_for": [
+      "Residents of Czechia, Estonia, Latvia or Lithuania (not on the eligibility list)",
+      "Anyone wanting the Metal tier today (orders paused since 2 June 2026)",
+      "Frequent ATM users on the free tier (2% per withdrawal, no free allowance)"
+    ],
+    "watch_outs": [
+      "Every support page read was displayed for the United States region; EEA/UK-specific wording (issuer of record, reward eligibility) could not be confirmed — issuer and rewards are hypotheses.",
+      "The issuer is named only as 'Monovate' on the FAQ; no licence or regulated entity is stated for the EEA/UK.",
+      "Fees and limits are stated in USD even for non-US cardholders; the variant currency EUR is editorial.",
+      "'Eligible transactions' for the 1% mUSD back is not defined; payout frequency not stated.",
+      "mUSD is MetaMask's own stablecoin — rewards are paid in a token, not fiat."
+    ]
+  }
+}

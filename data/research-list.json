@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-10-29.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-10-30.",
   "target": {
     "min": 15,
     "max": 50
@@ -51,15 +51,16 @@
     {
       "provider": "Coinbase",
       "product": "Coinbase Card",
-      "status": "identified",
-      "record": null,
-      "note": "European availability to verify (historically limited)."
+      "status": "validated",
+      "record": "data/cards/coinbase-card.json",
+      "note": "EEA+UK record from the help-centre FAQ 'Coinbase Card for the EU' read 2026-10-30: 31 countries (30 EEA + UK), free physical card, no spending fee, ATM 1.5%. Issuer, FX, conversion spread and subscription unknown; no rewards documented for Europe (en-gb landing page shows US content — contradiction recorded). User agreement and pricing disclosures unreadable to the fetcher. Affiliate: publisher programme on trading fees (data/affiliate/coinbase-affiliate.json), UK affiliates closed."
     },
     {
       "provider": "MetaMask",
       "product": "MetaMask Card",
-      "status": "identified",
-      "record": null
+      "status": "validated",
+      "record": "data/cards/metamask-card.json",
+      "note": "Record from seven support-centre articles read 2026-10-30 (all displayed for the US region): 48 countries (EEA minus CZ/EE/LV/LT, UK, CH, others), virtual card $0/year, FX 1%, ATM 2%, conversion 0–0.875% by token, 1% mUSD back (hypothesis for non-US); Metal $199/year with orders paused since 2026-06-02. Issuer 'Monovate' hypothesis. No publisher affiliate or card referral programme found on official pages (MetaMask Rewards is a user points programme, not read)."
     },
     {
       "provider": "ether.fi",
