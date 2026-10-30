@@ -554,7 +554,7 @@
       "title": "Wirex Debit Mastercard Terms and Conditions (EEA issuer terms, help centre)",
       "source_type": "official_terms",
       "excerpt": "'Your Card is issued by us' = Transact Payments Malta Limited (MFSA-authorised EMI); Program Manager Wirex UAB (Lithuania). Applicants 18+ and 'resident in the European Economic Area (but not in Cyprus or Liechtenstein)'. E-money product, 'not a credit, charge or debit card'. FX fee 'as set out in the Fees & Limits Schedule'; card usable only after KYC. No effective date.",
-      "accessed_at": "2026-10-29T05:55:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -568,7 +568,7 @@
       "title": "Wirex Fees (help centre fee schedule, by region)",
       "source_type": "pricing_page",
       "excerpt": "Card issuance free in all regions; ATM free up to EUR 200/month (EEA) then 2%; delivery EEA EUR 5 (DHL World Mail) / EUR 15 (DHL Express); SEPA/Faster Payments/ACH/PIX transfers free; card funding '0% or more' by currency/country; exchange fees 'can be viewed in the app'; GBP 30 administrative fee for ToS violations. No FX fee line, no plan prices, no replacement fee amount, no date.",
-      "accessed_at": "2026-10-29T05:52:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -584,7 +584,7 @@
       "title": "X-tras pricing: plans and tiers (help centre)",
       "source_type": "pricing_page",
       "excerpt": "Standard free; Premium EUR 9.99/month or EUR 102/year; Elite EUR 29.99/month or EUR 306/year, paid in euros. Cryptoback: Standard Entry 0.5% / Enhanced 1% (150k WXT); Premium Entry 1% / Enhanced 2% (250k) / Ultimate 3% (750k); Elite Entry 4% / Enhanced 6% (1.5m) / Ultimate 8% (7.5m); locks of 180 days, no fee for tier upgrades. Table typo '250,00'. No region stated, no date.",
-      "accessed_at": "2026-10-29T05:50:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -599,7 +599,7 @@
       "title": "Benefits of the Wirex card explained (help centre)",
       "source_type": "help_center",
       "excerpt": "Cryptoback in WXT on all purchases: Elite 'up to 8%', Premium 3%, Standard 0.5%; 'no annual or foreign exchange fees'; 'up to $200 in fee-free withdrawals globally'; virtual card in app, physical card at Visa/Mastercard acceptance points. No issuer, no countries, no date.",
-      "accessed_at": "2026-10-29T05:53:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -612,7 +612,7 @@
       "title": "Wirex Limits (help centre)",
       "source_type": "help_center",
       "excerpt": "Virtual/Plastic/Metal: max purchase EUR 30k; per month EUR 30k/30k/75k; cash withdrawal per day N/A/EUR 500/EUR 500; per month N/A/EUR 5k/EUR 5k. SEPA up to EUR 50,000 per day. Card top-up min USD 12; unconfirmed card USD 15,000/day, confirmed USD 25,000/day. 'Limits may vary depending on region or currency'; 'all limits are subject to change'. No date.",
-      "accessed_at": "2026-10-29T05:56:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -626,7 +626,7 @@
       "title": "How to verify your identity (help centre)",
       "source_type": "help_center",
       "excerpt": "Verification starts 'when you elevate your status to Starter': phone number confirmed by SMS, government-issued photo ID, selfie and liveness check 'depending on your country of residence', proof of residential address 'may be requested'. 'Typically, verification is completed within 5 minutes.' No country list, no date.",
-      "accessed_at": "2026-10-29T05:58:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -638,7 +638,7 @@
       "title": "How to order a Wirex card (help centre)",
       "source_type": "help_center",
       "excerpt": "Physical: 'Get Physical Card', accept Card Terms, top up if prompted, choose delivery option, pay the delivery fee from an account; 'we do not charge any additional fees'; a minimum balance may be required ('exact amount required will be displayed in the app'); delivery several days to four weeks. Virtual: immediate. One physical card at a time. Availability 'varies by region'. No date.",
-      "accessed_at": "2026-10-29T05:59:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -650,7 +650,7 @@
       "title": "Wirex One launches publicly on Arc (company blog post, 'Sep 16', year not shown)",
       "source_type": "issuer_doc",
       "excerpt": "'Wirex One' stablecoin neobank 'available globally*', 'Stablecoin-funded card with up to 8% cashback in USD**', 'fee-free FX and ATM withdrawals globally'; 'supervised by' El Salvador's Superintendency of the Financial System. Silent on whether the existing Wirex card continues. wirexapp.com/personal redirected (302) to wirex.one on 2026-10-29.",
-      "accessed_at": "2026-10-29T06:00:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -669,7 +669,7 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-10-29T06:00:00Z",
+    "last_content_verified_at": "2026-10-30T06:30:00Z",
     "last_auto_check_at": null
   },
   "changelog": [
@@ -687,6 +687,24 @@
         "ev-wirex-one-post"
       ],
       "actor": "claude (scheduled research run)"
+    },
+    {
+      "date": "2026-10-30T06:30:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-10-29T06:00:00Z",
+      "to": "2026-10-30T06:30:00Z",
+      "reason": "Second independent read on 2026-10-30 of all seven evidence pages: every material value is confirmed. Issuer terms (1556): Transact Payments Malta Limited, MFSA-authorised EMI, Program Manager Wirex UAB (Lithuania, 305118023), clause 3.1 '18 or older' and 'resident in the European Economic Area (but not in Cyprus or Liechtenstein)', clause 2.3 e-money product 'not a credit, charge or debit card', clause 15.2 FX fee 'as set out in the Fees & Limits Schedule', clause 3.5 KYC gate, clause 13.5 replacement fee amount not stated. Fee schedule (1379, EEA column): card issuance free, PIN change free, ATM 'Free up to 200 EUR monthly, 2% thereafter', delivery DHL World Mail 5 EUR / DHL Express 15 EUR, SEPA free, card funding '0% or more', exchange fees 'viewed in the app', GBP 30 administrative fee, no FX line, no replacement or inactivity fee, no date. X-tras pricing (1337): Standard free, Premium EUR 9.99/month or EUR 102/year, Elite EUR 29.99/month or EUR 306/year in euros; Cryptoback 0.5/1 (150k WXT), 1/2 (250k)/3 (750k), 4/6 (1.5m)/8 (7.5m), 180-day locks, typo '250,00' still present. Benefits (1301): Elite 'up to 8%', Premium 3%, Standard 0.5% in WXT, 'no annual or foreign exchange fees', 'up to $200 fee-free ATM withdrawals globally' — contradictions unchanged and already modelled conservatively (Premium 1% Entry, EUR 200, FX unknown). Limits (1380): EUR 30k/30k/75k, ATM EUR 500/day and 5k/month, SEPA 50,000 EUR/day, top-up min 12 USD — identical. KYC (1190) and card ordering (1302): wording identical; order flow live (product active). Wirex One post: unchanged, silent on the EEA card. NOT published, two reasons for David: (1) the validator refuses a published tier whose base reward status is 'contradictory' (Premium Entry 1% vs 3% on the benefits article) — policy rule 5 allows publication because the dedicated pricing page is the governing value and the contradiction is displayed, but changing that status is an editorial decision this run may not take; (2) product status: wirexapp.com/personal redirects to wirex.one and no official page states whether the EEA Mastercard continues — the help-centre order flow and EEA issuer terms are still live. No value changed.",
+      "evidence": [
+        "ev-wirex-eea-issuer-terms",
+        "ev-wirex-fees",
+        "ev-wirex-xtras-pricing",
+        "ev-wirex-benefits",
+        "ev-wirex-limits",
+        "ev-wirex-kyc",
+        "ev-wirex-order",
+        "ev-wirex-one-post"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {

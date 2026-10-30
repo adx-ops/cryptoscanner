@@ -193,7 +193,7 @@
       "title": "RedotPay homepage",
       "source_type": "issuer_doc",
       "excerpt": "Virtual and physical stablecoin-based cards; 'fintech service provider and not a bank'; verification page and Sumsub logo; no card fees or rewards stated.",
-      "accessed_at": "2026-10-28T12:10:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -205,7 +205,7 @@
       "title": "RedotPay Crypto Card page",
       "source_type": "pricing_page",
       "excerpt": "Physical card 'no annual fees'; virtual card with Apple Pay/Google Pay; 130M+ merchants; network and issuer not named.",
-      "accessed_at": "2026-10-28T12:10:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -217,7 +217,7 @@
       "title": "Is there a fee to get a card? (help centre, FR, 2026-07-27)",
       "source_type": "help_center",
       "excerpt": "Virtual card 10 USD, physical card 100 USD, deducted from balance; 5 USD welcome reward usable for spending only.",
-      "accessed_at": "2026-10-28T12:10:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -231,7 +231,7 @@
       "title": "Is there a fee for adding funds by card? (help centre, 2026-08-28)",
       "source_type": "help_center",
       "excerpt": "Card top-up fee 3% of the amount, minimum 1 USD; waived under 1 USD.",
-      "accessed_at": "2026-10-28T12:10:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -245,7 +245,7 @@
       "title": "Card issuance restrictions (help centre, FR, 2026-08-28)",
       "source_type": "eligibility_page",
       "excerpt": "47 regions where residents cannot get virtual or physical cards nor use them as billing address (sanctions and network restrictions), incl. US, India, China, Turkey, Singapore, Croatia, Slovenia, Ukraine, Russia.",
-      "accessed_at": "2026-10-28T12:10:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -257,7 +257,7 @@
       "title": "Card limits and fees (help centre, FR, 2026-07-24) — figures are in an image",
       "source_type": "help_center",
       "excerpt": "Article body says 'detailed overview' but all amounts are inside a screenshot image that text extraction cannot read. FX, ATM and limits therefore remain unknown until read in a browser.",
-      "accessed_at": "2026-10-28T12:10:00Z",
+      "accessed_at": "2026-10-30T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -273,7 +273,7 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-10-28T12:10:00Z",
+    "last_content_verified_at": "2026-10-30T06:30:00Z",
     "last_auto_check_at": null
   },
   "changelog": [
@@ -287,6 +287,22 @@
         "ev-redot-restrictions"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-10-30T06:30:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-10-28T12:10:00Z",
+      "to": "2026-10-30T06:30:00Z",
+      "reason": "Second independent read on 2026-10-30 of all six evidence pages (EN versions of the same help-centre articles): every value the record states is confirmed — virtual card 10 USD, physical card 100 USD deducted from balance, 5 USD welcome reward spending-only (article dated 2026-07-27); card top-up 3% min 1 USD, waived under 1 USD (2026-08-28); 'no annual fees' on the card page and 'no card management, monthly, or annual fees' (article 10566233, 2026-07-28); 47 excluded regions identical name for name (2026-08-28), 'cannot be registered as billing addresses', 'global sanctions and card network restrictions'; Apple Pay / Google Pay; 130M+ merchants; 'fintech service provider and not a bank'; issuer and network still unnamed ('leading card networks'); KYC stage still not stated (Verification link, Sumsub logo only). The fees article 10339271 (2026-07-24) still carries every figure inside an image with empty alt text — unreadable, unchanged. NOT published: the validator refuses a published variant whose KYC status is unknown; issuer and network are also unknown. No value changed. New official information found but NOT added by this run (research-run / David): help-centre article 'Can I Withdraw Cash from an ATM' (https://helpcenter.redotpay.com/en/articles/10622095-can-i-withdraw-cash-from-an-atm-and-are-there-any-fees, 2026-07-27) states ATM 2% on USD cards up to 10,000 USD/month then 3% (HKD cards 2%), transactions in another currency 1.2%, crypto conversion 1%, no fee in the card's currency — these would fill the FX and ATM 'unknown' fields after a research read. The homepage footer now shows a regulatory statement: 'Inscripto bajo el N° 144 en el Registro de PSAV de la CNV (República Argentina)' and a Hong Kong Money Lender's Licence No. 1715/2025 — new regulatory statement, for David's attention.",
+      "evidence": [
+        "ev-redot-home",
+        "ev-redot-card",
+        "ev-redot-issuance",
+        "ev-redot-topup",
+        "ev-redot-restrictions",
+        "ev-redot-fees-img"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {

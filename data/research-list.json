@@ -38,7 +38,7 @@
       "product": "Wirex Card",
       "status": "validated",
       "record": "data/cards/wirex-card.json",
-      "note": "EEA record from help-centre pages read 2026-10-29: issuer Transact Payments Malta (Mastercard), EEA minus CY/LI, Standard free / Premium €9.99 / Elite €29.99 per month paid in EUR (2026-10-26 read said WXT), Cryptoback 0.5/1/4% entry up to 1/3/8% with WXT locks, ATM free to €200/month then 2%. FX unknown (pages disagree). wirexapp.com/personal now redirects to wirex.one — product status to confirm. Affiliate: personal referral only (data/affiliate/wirex-referral.json), no publisher programme found."
+      "note": "EEA record from help-centre pages read 2026-10-29 and re-read 2026-10-30: all seven pages agree (issuer Transact Payments Malta / Mastercard, EEA minus CY/LI, Standard free / Premium €9.99 / Elite €29.99 per month in EUR, Cryptoback 0.5/1/4% entry up to 1/3/8% with WXT locks, ATM free to €200/month then 2%, FX unknown — pages disagree). Not published pending David: validator refuses the 'contradictory' Premium base reward (1% vs 3%), and wirexapp.com/personal redirects to wirex.one (EEA card continuation not stated; order flow still live). Affiliate: personal referral only (data/affiliate/wirex-referral.json), no publisher programme found."
     },
     {
       "provider": "Bybit EU",
@@ -74,14 +74,16 @@
       "product": "KAST Card",
       "status": "validated",
       "record": "data/cards/kast-card.json",
-      "note": "Landing page + official fee article read 2026-10-28. No country list, issuer unnamed, official pages disagree on tier names/cashback. KYC required."
+      "note": "Landing page + official fee article read 2026-10-28. Second read 2026-10-30: landing page confirms tiers/cashback/caps, but now states '2 free cards (virtual or physical)' for Standard (membership page: '$40 to ship') vs the recorded $100 physical card → record needs_review. Help centre moved to concierge.kast.xyz (fetcher gets a client error; stored zendesk URL dead) → fee article needs a browser read. No country list, issuer unnamed, KYC stage not stated.",
+      "needs_browser_read": true
     },
     {
       "provider": "RedotPay",
       "product": "RedotPay Card",
       "status": "validated",
       "record": "data/cards/redotpay-card.json",
-      "note": "Issuance, top-up and 47-region exclusion list from help centre (2026-07/08). FX/ATM/limits only in an image → unknown. Affiliate programme pays on card application/activation (rates not public)."
+      "note": "Two independent reads (2026-10-28, 2026-10-30) of homepage, card page and four help-centre articles agree on every value (issuance 10/100 USD, top-up 3% min 1 USD, no annual fee, 47-region exclusion list). Not publishable: KYC stage unknown, issuer and network unnamed. Fees article figures still in an image (browser read). New official ATM/FX article found (2% ATM USD cards to 10k/month then 3%, 1.2% foreign currency, 1% conversion) — to be read by a research run. Homepage footer shows CNV Argentina PSAV registration No. 144 and HK Money Lender's Licence 1715/2025 (new regulatory statement). Affiliate programme pays on card application/activation (rates not public).",
+      "needs_browser_read": true
     },
     {
       "provider": "Bitget Wallet",
