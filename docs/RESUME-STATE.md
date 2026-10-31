@@ -1,6 +1,6 @@
 # Resume state
 
-Updated: 2026-10-30 21:20 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
+Updated: 2026-10-31 19:30 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
 
 ## Environment (verified 2026-10-26)
 - Claude cloud workspace (Linux), Node 22.23.4, npm 10.9.9, Python 3.13, git 2.43. Files/shell/web search/web fetch available.
@@ -23,14 +23,14 @@ Updated: 2026-10-30 21:20 (Europe/Berlin). Keep this file short; it is the hand-
 | Feature | Status | Proof |
 |---|---|---|
 | Data schema + validation | tested | `npm run validate` output |
-| Calculator engine | tested | `npm test` 13/13 |
+| Calculator engine | tested; reward caps can be stated on spend (`cap.basis: spend`, 2026-10-31) | `npm test` 18/18 |
 | Home: country select, filters, sort, compare selection | tested | ui-check 69/69, docs/screenshots |
 | /compare side-by-side (2–3 cards, slugs in URL) | tested | ui-check |
 | /cards/[slug] with sources, statuses, changelog | tested | ui-check |
 | /calculator (client-side engine) | tested | ui-check + engine tests |
 | /methodology, /how-we-make-money, /legal, /contact | implemented | build only |
 | Mobile rendering 360–1440 | verified | ui-check: no horizontal overflow on 8 pages × 5 widths; screenshots |
-| Verified card records | 3 `published` (Bitpanda, Gnosis Pay, Nexo), 6 `validated` (Crypto.com EEA, Bybit EU, RedotPay, Wirex EEA, Coinbase EEA+UK, MetaMask), 1 `needs_review` (KAST, 2026-10-30) | `npm run validate` 12 records 0 errors; verified build = 3 card pages |
+| Verified card records | 3 `published` (Bitpanda, Gnosis Pay, Nexo), 5 `validated` (Crypto.com EEA — spend caps + fees from the Europe fee schedule since PR #6, Bybit EU, RedotPay, Wirex EEA, MetaMask), 2 `needs_review` (KAST 2026-10-30; Coinbase 2026-10-31, KYC article differs between reads) | `npm run validate` 12 records 0 errors; verified build = 3 card pages |
 | Visual identity v2 (ink & brass, card faces, self-hosted Archivo) | tested | ui-check 74/74 on 2026-10-30; screenshots in docs/screenshots |
 | Official logos with provenance | 8 providers recorded (data/logos/manifest.json, public/logos/*.svg), validator enforces source+date | `npm run validate` |
 | Candidates list (discovery) | seeded: 55 entries with priority formula | data/candidates.json |
@@ -55,7 +55,7 @@ GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-che
 5. Notification channel for exceptions — assumed this chat.
 
 ## Next work (in order)
-1. Browser second reads (needs_browser_read): Bybit EU FAQ + fee schedule (≥ 2026-10-30), RedotPay fee image, Crypto.com help centre (fees + country list). Wirex: wirex.one (2026-10-30 browser visit) still advertises a 'Wirex Card / Debit Card' as principal Visa and Mastercard member — the EEA product pages must be re-read on wirex.one before publishing. KAST: needs_review since the 2026-10-30 second read (see Project doc claude/second-read-run-2026-10-30.md).
+1. Browser second reads (needs_browser_read): Bybit EU card landing page https://www.bybit.eu/en-EU/cards/ (cashback, VIP, welcome, issuer — FAQ + fee schedule already re-read by the fetcher 2026-10-31), RedotPay fee image, Crypto.com help centre (fees + country list). Wirex: wirex.one (2026-10-30 browser visit) still advertises a 'Wirex Card / Debit Card' as principal Visa and Mastercard member — the EEA product pages must be re-read on wirex.one before publishing. KAST: needs_review since the 2026-10-30 second read (see Project doc claude/second-read-run-2026-10-30.md). Coinbase: needs_review since 2026-10-31 — research run to read the EU KYC article (id-doc-verification-eu). Crypto.com: second read of the Europe fee schedule (help.crypto.com/en/articles/5977463…) ≥ 2026-11-01, then still needs an official country list + KYC article.
 1b. Logos: Coinbase and MetaMask marks not yet sourced (monogram fallback); fetch from their official pages in a browser session and record in data/logos/manifest.json.
 2. New records: Wirex, Coinbase, MetaMask, Kraken (Krak), Deblock, Plutus — official sources only, validated → published after a second read.
 3. Hosting: done (GitHub Pages, noindex). Next: move brief + internal affiliate scores out of the public repo if David wants; domain later.
