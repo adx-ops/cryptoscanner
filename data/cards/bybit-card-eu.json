@@ -303,7 +303,7 @@
       "title": "FAQ — Bybit Card General Inquiries (help centre, updated 2026-10-02)",
       "source_type": "help_center",
       "excerpt": "Mastercard debit; 29 supported EEA countries listed, 'Malta is excluded'; ID: EEA national ID, passport, residence permit (≥6 months) or driving licence; proof of address only if the ID is not from the EEA; Apple/Google/Samsung Pay; EUR + USDC/BTC/ETH/MNT/GRAM/XRP/EURC; ATM 2% above 100 EUR/month; card valid 3 years; tier follows VIP level.",
-      "accessed_at": "2026-10-29T15:40:00Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": "2026-10-02",
       "expires_at": null,
       "scope": {
@@ -317,7 +317,7 @@
       "title": "Fees and Limits (Bybit Card) (help centre, updated 2026-10-08)",
       "source_type": "pricing_page",
       "excerpt": "FX 0.5% over Mastercard rate, FX padding 0%; crypto conversion 0.9% over One-Click Sell rate, min 1 EUR/USD; annual/inactivity/cancellation none; virtual issuance none; physical first issuance free until further notice, replacement 5 EUR; ATM 2% after first 100 EUR monthly; spending tiers 5,000/10,000/15,000 EUR per day; ATM 2,000 EUR per day.",
-      "accessed_at": "2026-10-29T15:40:00Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": "2026-10-08",
       "expires_at": null,
       "scope": {
@@ -336,7 +336,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-10-29T15:40:00Z",
-    "last_auto_check_at": null
+    "last_auto_check_at": "2026-10-31T06:40:00Z"
   },
   "changelog": [
     {
@@ -403,6 +403,16 @@
         "ev-bybit-fees"
       ],
       "actor": "claude (browser read)"
+    },
+    {
+      "date": "2026-10-31T06:40:00Z",
+      "field": "evidence.ev-bybit-faq, evidence.ev-bybit-fees",
+      "reason": "Second read on 2026-10-31 (fetcher, 39 h after the browser read): FAQ (last updated 2026-10-02) and Fees & Limits (last updated 2026-10-08) are unchanged and confirm every value they source — 29 EEA countries with Malta excluded; Mastercard debit; KYC: EEA national ID / passport / residence permit (≥6 months) / driving licence, proof of address only for non-EEA ID, no verification level named; FX 0.5% over Mastercard rate, padding 0%; conversion 0.9% over One-Click Sell, min 1 EUR/USD; annual/inactivity/cancellation none; virtual issuance free; physical first issuance free until further notice, replacement 5 EUR; ATM 2% above 100 EUR/month; spend 5,000/10,000/15,000 EUR per day and 10,000/25,000/50,000 per month by tier; ATM 2,000 EUR per day, 2,000/5,000/10,000 per month; Apple/Google/Samsung Pay; 3-year validity; tier follows VIP level. NOT published: https://www.bybit.eu/en-EU/cards/ still returns the homepage shell to the fetcher, so the values it alone sources (1% cashback, VIP 2–10%, welcome offer up to €120, issuer Harmoniie SAS / Moorwand Ltd) have a single read. The Rewards FAQ (2026-10-03, not record evidence) describes cashback as points × 0.002 EUR paid in the selected currency (USDC by default) without stating a percentage. Record stays validated; needs a browser read of the card page.",
+      "evidence": [
+        "ev-bybit-faq",
+        "ev-bybit-fees"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
