@@ -69,6 +69,20 @@ test('cap is applied before summing: large spend hits the monthly cap', () => {
   assert.equal(r.months[0].rewards, toMinor(20)); // 1% of 10000 = 100 → capped at 20
 });
 
+test('cap stated on spend: reward ceiling is cap × rate, not the cap amount', () => {
+  const a = clone(alpha);
+  const v = a.variants[0];
+  const tier = v.tiers[0];
+  const base = tier.rewards.find((r) => r.type === 'base')!;
+  base.cap = { amount: { amount: 750, currency: 'EUR' }, period: 'month', basis: 'spend' };
+  // 1% on the first 750 of spend → 7.50, even with 10,000 eligible spend
+  const r = calculate(a, v, tier, { ...baseScenario, monthlySpend: 10000, eligibleShare: 1, startDate: '2027-02-01' });
+  assert.equal(r.months[0].rewards, toMinor(7.5));
+  // below the spend cap the rate applies in full: 1% of 500 = 5.00
+  const small = calculate(a, v, tier, { ...baseScenario, monthlySpend: 500, eligibleShare: 1, startDate: '2027-02-01' });
+  assert.equal(small.months[0].rewards, toMinor(5));
+});
+
 test('paid tier excluded unless the user accepts a subscription; included when accepted with fee netted', () => {
   const v = alpha.variants[0];
   const plus = v.tiers[1];

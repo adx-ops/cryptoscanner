@@ -23,7 +23,7 @@ const feeShort = (type: Fee['type']) => { const f = dt.fees.find((x) => x.type =
 const rewardText = (r: Reward) => {
   const amt = r.percent !== undefined ? `${r.percent}%` : r.fixed ? money(r.fixed) : '';
   const unit = payoutLabel(r.payout);
-  const cap = r.cap ? `, capped at ${money(r.cap.amount)}/${r.cap.period}` : '';
+  const cap = r.cap ? (r.cap.basis === 'spend' ? `, on the first ${money(r.cap.amount)} of spend/${r.cap.period}` : `, capped at ${money(r.cap.amount)}/${r.cap.period}`) : '';
   const req = r.requires && r.requires !== 'none' ? `, requires ${r.requires}` : '';
   const win = r.valid_until ? `, until ${r.valid_until}` : '';
   const excl = r.excluded_categories?.length ? `; excludes ${r.excluded_categories.join(', ')}` : '';

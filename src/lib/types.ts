@@ -49,7 +49,7 @@ export interface Reward {
   fixed?: Money;
   payout: { kind: 'fiat' | 'token' | 'points' | 'other'; code?: string };
   requires?: Requires;
-  cap?: { amount: Money; period: Period };
+  cap?: { amount: Money; period: Period; basis?: 'reward' | 'spend' };
   min_spend?: Money;
   excluded_categories?: string[];
   conditions?: string;
