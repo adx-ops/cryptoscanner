@@ -872,6 +872,11 @@
             },
             "period": {
               "$ref": "#/$defs/period"
+            },
+            "basis": {
+              "enum": ["reward", "spend"],
+              "default": "reward",
+              "description": "'reward' (default): the cap is the maximum reward amount per period. 'spend': the cap is the spend amount that earns rewards per period (reward ceiling = cap × rate)."
             }
           }
         },

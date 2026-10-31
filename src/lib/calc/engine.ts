@@ -87,9 +87,15 @@ function isActiveInMonth(r: Reward, month: string): boolean {
   if (r.valid_until && r.valid_until < first) return false;
   return true;
 }
+/** Reward ceiling implied by a cap: the cap itself, or cap × rate when the cap is stated on spend. */
+function capRewardMinor(r: Reward): number {
+  if (!r.cap) return 0;
+  const capMinor = toMinor(r.cap.amount.amount);
+  return r.cap.basis === 'spend' ? pct(capMinor, r.percent ?? 0) : capMinor;
+}
 function capAmountForMonth(r: Reward): number | null {
   if (!r.cap) return null;
-  if (r.cap.period === 'month') return toMinor(r.cap.amount.amount);
+  if (r.cap.period === 'month') return capRewardMinor(r);
   if (r.cap.period === 'year') return null; // handled cumulatively
   return null;
 }
@@ -217,7 +223,7 @@ export function calculate(card: CardRecord, variant: Variant, tier: Tier, s: Sce
       }
       if (r.cap && r.cap.period === 'year') {
         const used = yearlyCapUsed.get(r) ?? 0;
-        const room = Math.max(0, toMinor(r.cap.amount.amount) - used);
+        const room = Math.max(0, capRewardMinor(r) - used);
         earned = Math.min(earned, room);
         yearlyCapUsed.set(r, used + earned);
       }

@@ -24,7 +24,7 @@
       "product": "Crypto.com Visa Card (EEA)",
       "status": "validated",
       "record": "data/cards/crypto-com-visa-card.json",
-      "note": "Three reads (2026-10-26, 2026-10-29, 2026-10-31) of the EEA product page agree on all values it states. 2026-10-31: needs_review — the official Europe fee article (help.crypto.com, readable by the fetcher) defines the monthly reward caps as SPEND caps (\"Rewards apply to the first USD 750\") vs the modelled reward caps; it also states the fees the record has as unknown (physical card €4.99/€24.99, top-up 1%, ATM 2% above allowance, FX 0.2% EU/UK / 2% outside, inactivity €5→€6). Research run: read the fee article twice ≥24 h apart and model it; still no official country list or KYC article."
+      "note": "Three reads (2026-10-26, 2026-10-29, 2026-10-31) of the EEA product page agree on all values it states. 2026-10-31 (David's decision): the official Europe fee schedule (help.crypto.com, readable by the fetcher) governs — reward caps modelled as SPEND caps (cap.basis 'spend': first USD 750/1,500/3,000/5,000 per month) and fees modelled from its first read (issuance €4.99/€24.99, card top-up 1%, ATM 2% above allowance, FX 0.2% EU/UK / 2% outside with €400/€800 allowances, none on top tiers, inactivity €6). Second read of the fee schedule ≥24 h later still needed; publication also blocked by eligibility unknown (no official country list) and KYC hypothesis."
     },
     {
       "provider": "Nexo",
