@@ -14,7 +14,7 @@
   },
   "network": "visa",
   "category": "debit",
-  "record_status": "validated",
+  "record_status": "needs_review",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -163,7 +163,7 @@
       "title": "Coinbase Card for the EU (help centre FAQ)",
       "source_type": "help_center",
       "excerpt": "Visa debit card offered to customers in 30 named European countries + the UK; 'working on expanding the offer to additional markets'. No fee for the physical card; no transaction fees for spending; 1.5% of ATM transactions. Limits visible only in-app. Legacy cards (issued before 17 Jan 2023) worked until 20 Mar 2023. Issuer, FX fee, rewards not stated.",
-      "accessed_at": "2026-10-30T05:40:00Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -177,7 +177,7 @@
       "title": "Coinbase Card landing page (en-gb locale)",
       "source_type": "pricing_page",
       "excerpt": "'Crypto rewards is an optional Coinbase offer'; 'no transaction fees' but 'other fees may apply, and will be shared during sign-up'; issuer 'Pathward, N.A., Member FDIC', 'powered by Marqeta'; 'available in all US states except Hawaii'; converts crypto to Pound Sterling for purchases and ATM withdrawals.",
-      "accessed_at": "2026-10-30T05:38:00Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -192,7 +192,7 @@
       "title": "Use your Coinbase Card (help centre)",
       "source_type": "help_center",
       "excerpt": "'Spending limits vary between customers' (visible in-app); card usable at Visa merchants except specific categories; list of countries where the card cannot be used (incl. China, Russia, Turkey, Ukraine); physical card arrives in 2–3 weeks. No FX or ATM fee stated.",
-      "accessed_at": "2026-10-30T05:44:00Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -206,7 +206,7 @@
       "title": "Coinbase Card — Debit card overview (help centre, US)",
       "source_type": "help_center",
       "excerpt": "'US residents (excluding Hawaii) can spend crypto (including USDC) and US dollars wherever Visa Cards are accepted.' Topic headings only for rewards, limits, eligibility, identity verification. US-only; not used for EEA/UK values.",
-      "accessed_at": "2026-10-30T05:41:00Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -223,7 +223,7 @@
       "title": "Coinbase Card — Apply for a debit card from Coinbase (help centre, US)",
       "source_type": "help_center",
       "excerpt": "US residents excluding Hawaii; identity verification during application (SSN, W2 may be requested); no application fee, no credit check; 'no Coinbase transaction fees, but a spread applies when you buy, sell, or trade crypto'; 'other fees may apply' per the Cardholder Agreement. US-only; not used for EEA/UK values.",
-      "accessed_at": "2026-10-30T05:44:00Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -268,7 +268,7 @@
       "title": "Coinbase Affiliates (official programme page)",
       "source_type": "affiliate_program",
       "excerpt": "'50% of your referrees' trading fees' for the first 3 months; tracking via Impact software and custom deep links; paid in local currency via PayPal or bank account; 'We are no longer accepting applications from UK affiliates'. Cookie window, payout threshold and card-specific terms not stated.",
-      "accessed_at": "2026-10-30T05:46:30Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -285,7 +285,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-10-30T05:46:30Z",
-    "last_auto_check_at": null
+    "last_auto_check_at": "2026-10-31T06:40:00Z"
   },
   "changelog": [
     {
@@ -299,6 +299,49 @@
         "ev-coinbase-id-verification"
       ],
       "actor": "claude (scheduled research run)"
+    },
+    {
+      "date": "2026-10-31T06:40:00Z",
+      "field": "evidence.ev-coinbase-card-eu-faq, ev-coinbase-card-use, ev-coinbase-card-gb-landing, ev-coinbase-card-us-overview, ev-coinbase-card-us-apply, ev-coinbase-affiliates",
+      "reason": "Second read on 2026-10-31 (25 h after the first): the EU FAQ confirms the same 31 countries (30 EEA + UK), Visa debit, no physical card fee, no transaction fees for spending, 1.5% ATM fee, spread on buy/sell, no issuer, no rewards for Europe, legacy dates 17 Jan / 20 Mar 2023, no page date. \"Use your Coinbase Card\": same 27 blocked countries, 2–3 weeks delivery, limits in-app. en-gb landing page: unchanged (Pathward, N.A. / Marqeta, US states except Hawaii, GBP conversion, \"crypto rewards is an optional offer\"). US articles and affiliates page (50% of trading fees for 3 months, UK programme closed) unchanged.",
+      "evidence": [
+        "ev-coinbase-card-eu-faq",
+        "ev-coinbase-card-use",
+        "ev-coinbase-card-gb-landing",
+        "ev-coinbase-affiliates"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-31T06:40:00Z",
+      "field": "evidence.ev-coinbase-legal-eea",
+      "reason": "Re-read on 2026-10-31 of https://www.coinbase.com/legal/eea returned only a disclaimer (digital assets outside the Irish FSPO scope); the document index, the Coinbase Ireland Ltd e-money statement and the card-terms reference seen on 2026-10-30 were not in the fetched text. Treated as unreadable (partial render), not as a change; accessed_at not updated. Issuer stays unknown.",
+      "evidence": [
+        "ev-coinbase-legal-eea"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-31T06:40:00Z",
+      "field": "variants[0].kyc.requirements",
+      "from": "[\"id_document\",\"selfie\",\"proof_of_address\"] — first read of the en-gb identity-verification article: passport, government photo ID, national identity card (UK/EU), residence permits, driving licences; selfie may be required; proof of address (bank statement, utility bill) issued within three months may be requested",
+      "to": "Second read of https://help.coinbase.com/en-gb/coinbase/getting-started/getting-started-with-coinbase/id-doc-verification: accepted documents are \"Passport (UK only)\", \"Government-issued photo ID (UK only)\", \"National Identity Card (UK only)\"; residence permits and driving licences not listed; selfie mentioned only for account recovery or additional security; no proof-of-address documents or three-month recency stated",
+      "reason": "The KYC article differs between the two reads (likely region-dependent rendering; the page is not card-specific and the record already carries KYC as a hypothesis). Old value kept. The EU-specific article https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/id-doc-verification-eu exists and should be read by the research run.",
+      "evidence": [
+        "ev-coinbase-id-verification"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-10-31T06:40:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "needs_review",
+      "reason": "Second read on 2026-10-31: KYC requirements differ between reads of the identity-verification article (see entry above); legal index unreadable. All card-specific values (countries, fees, network) confirmed. No value overwritten. Publication was in any case blocked by the validator (KYC hypothesis).",
+      "evidence": [
+        "ev-coinbase-id-verification"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {

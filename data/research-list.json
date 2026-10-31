@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-10-30.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-10-31.",
   "target": {
     "min": 15,
     "max": 50
@@ -24,7 +24,7 @@
       "product": "Crypto.com Visa Card (EEA)",
       "status": "validated",
       "record": "data/cards/crypto-com-visa-card.json",
-      "note": "Two independent reads (2026-10-26, 2026-10-29) of the EEA product page agree on all values it states. Publication blocked by the validator: eligibility unknown (no country list on the page; Help Centre articles unreachable) and KYC hypothesis. Needs an official eligibility list + KYC article. Visa/Mastercard and FX contradictions documented."
+      "note": "Three reads (2026-10-26, 2026-10-29, 2026-10-31) of the EEA product page agree on all values it states. 2026-10-31: needs_review — the official Europe fee article (help.crypto.com, readable by the fetcher) defines the monthly reward caps as SPEND caps (\"Rewards apply to the first USD 750\") vs the modelled reward caps; it also states the fees the record has as unknown (physical card €4.99/€24.99, top-up 1%, ATM 2% above allowance, FX 0.2% EU/UK / 2% outside, inactivity €5→€6). Research run: read the fee article twice ≥24 h apart and model it; still no official country list or KYC article."
     },
     {
       "provider": "Nexo",
@@ -45,7 +45,7 @@
       "product": "Bybit Card (EEA)",
       "status": "validated",
       "record": "data/cards/bybit-card-eu.json",
-      "note": "Help-centre FAQ + fee schedule read in browser 2026-10-29; three landing-page contradictions recorded (FX, ATM currency, physical card fee). Needs a browser second read ≥24 h later to publish.",
+      "note": "Help-centre FAQ (2026-10-02) + fee schedule (2026-10-08) read in browser 2026-10-29 and re-read by the fetcher 2026-10-31: unchanged, all sourced values confirmed. Not published: the card landing page (sole source for 1% cashback, VIP 2–10%, welcome offer, issuer Harmoniie SAS / Moorwand) is still a homepage shell to the fetcher — browser read needed. Rewards FAQ (2026-10-03) describes points × 0.002 EUR paid in the selected currency (USDC default). T&C article points to https://www.bybit.eu/legal/bybit-card/Bybit-EU-Card-T-C (not read: fetch permission).",
       "needs_browser_read": true
     },
     {
@@ -53,7 +53,8 @@
       "product": "Coinbase Card",
       "status": "validated",
       "record": "data/cards/coinbase-card.json",
-      "note": "EEA+UK record from the help-centre FAQ 'Coinbase Card for the EU' read 2026-10-30: 31 countries (30 EEA + UK), free physical card, no spending fee, ATM 1.5%. Issuer, FX, conversion spread and subscription unknown; no rewards documented for Europe (en-gb landing page shows US content — contradiction recorded). User agreement and pricing disclosures unreadable to the fetcher. Affiliate: publisher programme on trading fees (data/affiliate/coinbase-affiliate.json), UK affiliates closed."
+      "note": "EEA+UK record from the help-centre FAQ read 2026-10-30 and re-read 2026-10-31: 31 countries, free physical card, no spending fee, ATM 1.5% confirmed; en-gb landing (US content) and affiliates page unchanged. 2026-10-31: needs_review — the en-gb identity-verification article changed between reads (UK-only document list, no proof of address / residence permit / driving licence); legal/eea index unreadable on re-read. Issuer, FX, conversion spread and subscription still unknown. Research run: read the EU-specific KYC article (id-doc-verification-eu) and the EU verification levels FAQ. Affiliate: publisher programme on trading fees (data/affiliate/coinbase-affiliate.json), UK affiliates closed.",
+      "needs_browser_read": true
     },
     {
       "provider": "MetaMask",

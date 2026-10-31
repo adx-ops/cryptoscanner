@@ -8,7 +8,7 @@
   "issuer": { "name": "Foris MT Limited (Malta), Visa Principal Member and e-money institution", "status": "verified", "evidence": ["ev-cdc-eea-cards"] },
   "network": "visa",
   "category": "prepaid",
-  "record_status": "validated",
+  "record_status": "needs_review",
   "product_status": "active",
   "is_demo": false,
   "form_factors": ["virtual", "physical"],
@@ -133,19 +133,36 @@
       "title": "Crypto.com Visa Card — EEA product page (tier table, FAQ, disclaimers)",
       "source_type": "pricing_page",
       "excerpt": "Tier table: Midnight Blue free / 0% everyday; Ruby Steel €3.99/mo or €39.90/yr or €450 lock-up, 1.5% up to USD 750/mo; Jade/Indigo €24.99/mo or €249.90/yr or €4,500 lock-up, 2.5% up to USD 1,500; Icy/Rose Gold €45,000 lock-up 3.5% up to USD 3,000 then 0.5%; Obsidian €450,000 lock-up 4.5% up to USD 5,000 then 1%. Free ATM €200/€400/€800/€800/€1,000. Issuer Foris MT Limited. Prepaid card.",
-      "accessed_at": "2026-10-29T06:30:00Z",
+      "accessed_at": "2026-10-31T06:40:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": { "currency": "EUR", "note": "EEA edition; no country list" },
       "verification": "contradictory",
       "contradiction_note": "Page says 'Visa' in title/footer but 'Prepaid Mastercard Card' in FAQ answers; meta claims zero FX fees while body says fees may apply. Record keeps Visa (issuer licence statement) and FX = unknown."
+    },
+    {
+      "id": "ev-cdc-eea-fees",
+      "url": "https://help.crypto.com/en/articles/5977463-crypto-com-prepaid-visa-card-fees-and-limits-europe-for-users-with-a-residential-address-in-europe",
+      "title": "Crypto.com Prepaid Visa Card Fees and Limits (Europe, residential address in Europe) — Help Centre",
+      "source_type": "help_center",
+      "excerpt": "Physical card Midnight €4.99, Ruby €24.99 (<6 months monthly) else free; card top-up 1% (min €20); ATM 2% above €200/400/800/800/1,000 per month; FX 0.2% EU/UK, 2% outside (Ruby/Jade free outside up to €400/€800 per month); inactivity €5/month after 12 months (€6 from 1 Oct 2026); ATM €2,000/day, €10,000/month. \"Rewards apply to the first USD 750 / 1,500 / 3,000 / 5,000\" per month by tier.",
+      "accessed_at": "2026-10-31T06:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": { "currency": "EUR", "note": "Europe edition; no date beyond 'updated over 2 weeks ago'; no country list" },
+      "verification": "contradictory",
+      "contradiction_note": "The fee article describes the monthly reward caps as a cap on SPEND ('Rewards apply to the first USD 750' for Ruby, etc.) while the EEA product page says 'earn up to USD 750/mo', which the record models as a cap on REWARDS. Values not changed in this run; needs David."
     }
   ],
   "links": { "official_url": "https://crypto.com/eea/cards", "affiliate": { "program_id": null, "status": "none", "url": null } },
-  "freshness": { "last_content_verified_at": "2026-10-29T06:30:00Z", "last_auto_check_at": null },
+  "freshness": { "last_content_verified_at": "2026-10-29T06:30:00Z", "last_auto_check_at": "2026-10-31T06:40:00Z" },
   "changelog": [
     { "date": "2026-10-26T20:20:00Z", "field": "*", "reason": "Initial record from the EEA product page (single read). Help Centre fee articles not reachable; FX, top-up and ATM-overage fees remain unknown. Eligible country list missing.", "evidence": ["ev-cdc-eea-cards"], "actor": "claude" },
-    { "date": "2026-10-29T06:30:00Z", "field": "freshness.last_content_verified_at", "from": "2026-10-26T20:20:00Z", "to": "2026-10-29T06:30:00Z", "reason": "Second independent read on 2026-10-29 of https://crypto.com/eea/cards/: every value the page sources is confirmed — tier prices (free / €3.99 or €39.90/yr or €450 lock / €24.99 or €249.90/yr or €4,500 lock / €45,000 lock / €450,000 lock, 12 months), everyday CRO rewards 0/1.5/2.5/3.5/4.5% with caps USD 750/1,500/3,000/5,000 and post-cap 0.5%/1%, travel rewards up to 5/20/25/30/40%, free ATM €200/400/800/800/1,000 per month, ATM limit €10,000/month, top-up limit €25,000/month, issuer Foris MT Limited (Visa Principal Member, MFSA e-money licence), prepaid, Apply Now live. Still no eligible-country list and no KYC detail on the page; Visa/Mastercard and FX-fee contradictions unchanged and already modelled conservatively (FX unknown). Not modelled (omission, not a contradiction): permanent streaming rebates and lounge access on the €45,000 and €450,000 tiers. NOT published: the validator refuses a published variant whose eligibility is unknown (no country list on any official page read) and whose KYC is a hypothesis (page states only that Level Up membership is required). Record stays validated until an official eligibility list and KYC article are read; no value changed.", "evidence": ["ev-cdc-eea-cards"], "actor": "second-read-run" }
+    { "date": "2026-10-29T06:30:00Z", "field": "freshness.last_content_verified_at", "from": "2026-10-26T20:20:00Z", "to": "2026-10-29T06:30:00Z", "reason": "Second independent read on 2026-10-29 of https://crypto.com/eea/cards/: every value the page sources is confirmed — tier prices (free / €3.99 or €39.90/yr or €450 lock / €24.99 or €249.90/yr or €4,500 lock / €45,000 lock / €450,000 lock, 12 months), everyday CRO rewards 0/1.5/2.5/3.5/4.5% with caps USD 750/1,500/3,000/5,000 and post-cap 0.5%/1%, travel rewards up to 5/20/25/30/40%, free ATM €200/400/800/800/1,000 per month, ATM limit €10,000/month, top-up limit €25,000/month, issuer Foris MT Limited (Visa Principal Member, MFSA e-money licence), prepaid, Apply Now live. Still no eligible-country list and no KYC detail on the page; Visa/Mastercard and FX-fee contradictions unchanged and already modelled conservatively (FX unknown). Not modelled (omission, not a contradiction): permanent streaming rebates and lounge access on the €45,000 and €450,000 tiers. NOT published: the validator refuses a published variant whose eligibility is unknown (no country list on any official page read) and whose KYC is a hypothesis (page states only that Level Up membership is required). Record stays validated until an official eligibility list and KYC article are read; no value changed.", "evidence": ["ev-cdc-eea-cards"], "actor": "second-read-run" },
+    { "date": "2026-10-31T06:40:00Z", "field": "evidence.ev-cdc-eea-cards", "reason": "Third read on 2026-10-31 of https://crypto.com/eea/cards/: every value the page sources is unchanged — tier prices (free / €3.99 or €39.90/yr or €450 lock / €24.99 or €249.90/yr or €4,500 lock / €45,000 lock / €450,000 lock, 12 months), everyday CRO rewards 0/1.5/2.5/3.5/4.5% with 'earn up to USD 750/1,500/3,000/5,000 per month' and post-cap 0.5%/1%, travel rewards up to 5/20/25/30/40%, free ATM €200/400/800/800/1,000, ATM limit €10,000/month, top-up limit €25,000/month, issuer Foris MT Limited (Visa Principal Member, MFSA e-money), prepaid, Level Up required, Apply link live. Still no country list and no KYC statement; Visa/Mastercard and FX contradictions unchanged.", "evidence": ["ev-cdc-eea-cards"], "actor": "second-read-run" },
+    { "date": "2026-10-31T06:40:00Z", "field": "variants[0].tiers[ruby-steel|jade-green-royal-indigo|icy-white-rose-gold|obsidian].rewards[base].cap", "from": "Cap on rewards: USD 750 / 1,500 / 3,000 / 5,000 of CRO rewards per month (product page wording 'earn up to USD 750/mo')", "to": "Cap on spend: 'Rewards apply to the first USD 750 / 1,500 / 3,000 / 5,000' of monthly spending (https://help.crypto.com/en/articles/5977463-crypto-com-prepaid-visa-card-fees-and-limits-europe-for-users-with-a-residential-address-in-europe)", "reason": "The official Europe fee article (dedicated fee schedule, governing over the marketing page per publication policy rule 5) defines the monthly cap as the spend amount that earns rewards, not the reward amount. At 1.5% this changes the Ruby Steel monthly reward ceiling from USD 750 to USD 11.25. Old value kept; needs David before any change.", "evidence": ["ev-cdc-eea-fees", "ev-cdc-eea-cards"], "actor": "second-read-run" },
+    { "date": "2026-10-31T06:40:00Z", "field": "variants[0].tiers[*].fees[issuance|fx|atm_withdrawal|topup]", "from": "unknown", "to": "Stated on the Europe fee article: physical card Midnight €4.99 / Ruby €24.99 (free after 6 months of monthly Plus, for annual subscribers and lock-ups); card top-up 1% (min €20); ATM 2% above the free allowance; FX 0.2% within EU/UK and 2% outside (Ruby: free outside up to €400/month; Jade/Indigo: up to €800/month; higher tiers: no fee); inactivity €5/month after 12 months (€6 from 1 Oct 2026)", "reason": "Not a contradiction: the record models these fees as unknown. Values NOT filled in by this run (second-read runs never add values); recorded for the research run, which must read the article twice ≥24 h apart before modelling.", "evidence": ["ev-cdc-eea-fees"], "actor": "second-read-run" },
+    { "date": "2026-10-31T06:40:00Z", "field": "record_status", "from": "validated", "to": "needs_review", "reason": "Second read on 2026-10-31: the official Europe fee article defines the monthly reward caps as spend caps, contradicting the modelled reward caps (see entry above). No value overwritten. Publication was in any case blocked (eligibility unknown, KYC hypothesis).", "evidence": ["ev-cdc-eea-fees", "ev-cdc-eea-cards"], "actor": "second-read-run" }
   ],
   "editorial": {
     "summary": "Prepaid Visa issued by Foris MT (Malta) for the EEA. The free tier earns no everyday rewards; paid tiers from €3.99/month earn 1.5–4.5% in CRO with monthly USD caps, or require 12-month CRO lock-ups from €450 to €450,000.",
