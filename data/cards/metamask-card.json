@@ -418,7 +418,7 @@
       "title": "MetaMask Card limits and fees (support centre)",
       "source_type": "pricing_page",
       "excerpt": "Free / Metal: annual $0 / $199; replacement n/a / $99; FX 1% / none (fair usage); ATM 2% / free to $1,200/month then 2%. Token fees: local-currency stablecoin 0%; mismatched-currency stablecoin 0.5%; DeFi tokens free to $1,200/month then 0.5%; other crypto 0.875%; delegation free; gas ≈ $0.01. Limits $10k/tx $15k/day (Free), $20k/tx $30k/day (Metal); ATM $1k/tx, $1k or $5k/day.",
-      "accessed_at": "2026-10-30T05:50:00Z",
+      "accessed_at": "2026-11-01T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -433,7 +433,7 @@
       "title": "MetaMask Card FAQs (support centre, region selector on United States)",
       "source_type": "help_center",
       "excerpt": "'Crypto Life is the provider of the MetaMask Card'; card issuer 'Monovate'; 'Mastercard operates the payment network'. 'Proof of residency is required to sign up'; 'ineligible regions limit sign-ups, not spending'; no credit check. 'Card transactions earn 1% mUSD back on all eligible transactions.' Virtual card: no annual or maintenance fees. Blackbird dining: 5X $FLY (7X Metal).",
-      "accessed_at": "2026-10-30T05:51:00Z",
+      "accessed_at": "2026-11-01T06:35:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -447,7 +447,7 @@
       "title": "What is MetaMask Card? (support centre)",
       "source_type": "eligibility_page",
       "excerpt": "48 eligible countries listed by name (EEA except CZ/EE/LV/LT, UK, CH, AD, MC, GI, GG, IM, JE, CA, 10 Latin-American countries, BH, OM). US 'not currently available for sign-ups' (waitlist). Crypto Life 'a card program manager with Mastercard'. Tokens converted to fiat at each transaction. Virtual card 'free to use, with no yearly fees'; Metal 'not currently available for new users'.",
-      "accessed_at": "2026-10-30T05:52:00Z",
+      "accessed_at": "2026-11-01T06:35:30Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -461,7 +461,7 @@
       "title": "MetaMask Card — Security and privacy (support centre)",
       "source_type": "help_center",
       "excerpt": "'you need to fill out KYC (Know Your Customer) while setting up your MetaMask Card'; Crypto Life manages KYC and processes personal data (privacy policy PDF hosted by Baanx, 2025); MetaMask has no access to those details. 'MetaMask Card does not have custody over your tokens'; card linked to the wallet only through a spending limit. Issuer of record and licences not stated.",
-      "accessed_at": "2026-10-30T05:53:00Z",
+      "accessed_at": "2026-11-01T06:36:30Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -475,7 +475,7 @@
       "title": "MetaMask Metal card (support centre)",
       "source_type": "help_center",
       "excerpt": "$199 per year, auto-renewing, cancellable; 14-day refund. 'Orders for the MetaMask Metal card are temporarily paused as of June 2nd, 2026.' 3% mUSD back on the first $10,000 spent each year, then 1%; no foreign transaction fees; higher ATM and spending limits.",
-      "accessed_at": "2026-10-30T05:54:00Z",
+      "accessed_at": "2026-11-01T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -489,7 +489,7 @@
       "title": "Spend & earn rewards with MetaMask Card (support centre)",
       "source_type": "help_center",
       "excerpt": "Virtual 1% mUSD back on eligible transactions; Metal 3% on first $10,000/year then 1%; rewards claimed from the Money Account or card dashboard, frequency not stated. Travel via Entravel: 4% + 1% (Virtual) / + 3% (Metal). Blackbird $FLY at US restaurants. Linea gas ≈ $0.02; wETH 0.875% swap fee. Apple Pay and Google Wallet supported. Only US users can view the virtual card PIN.",
-      "accessed_at": "2026-10-30T05:56:00Z",
+      "accessed_at": "2026-11-01T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -503,7 +503,7 @@
       "title": "Get started with MetaMask Card (support centre)",
       "source_type": "help_center",
       "excerpt": "Sign-up in MetaMask Mobile ≥ 8.0 (Money → Card) or via a personal link to the Crypto Life web dashboard: e-mail + password, phone confirmation, identity verification (KYC), proof of residency. Delegable tokens: Linea (mUSD, USDC, USDT, wETH, EURe, GBPe), Solana (USDC, USDT), Base (USDC, USDT), Monad (USDC). US sign-ups 'temporarily paused'.",
-      "accessed_at": "2026-10-30T05:58:00Z",
+      "accessed_at": "2026-11-01T06:37:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -521,8 +521,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-10-30T05:58:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-01T06:38:00Z",
+    "last_auto_check_at": "2026-11-01T06:38:00Z"
   },
   "changelog": [
     {
@@ -535,6 +535,23 @@
         "ev-metamask-faq"
       ],
       "actor": "claude (scheduled research run)"
+    },
+    {
+      "date": "2026-11-01T06:38:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-10-30T05:58:00Z",
+      "to": "2026-11-01T06:38:00Z",
+      "reason": "Second independent read on 2026-11-01 (48 h after the first) of all seven support-centre articles, every value confirmed: limits-and-fees — Free $0 / Metal $199 per year, replacement n/a / $99, cross-border 1% / none (fair usage), ATM 2% / free to $1,200 per month then 2%, stablecoin in cardholder's or merchant's local currency 0%, mismatched-currency stablecoin 0.5% (Argentina exception), DeFi tokens 0% to $1,200 per month then 0.5%, other crypto 0.875%, delegation free, gas ≈ $0.01, spend $10,000/tx $15,000/day (Free) and $20,000/tx $30,000/day (Metal), ATM $1,000/tx and $1,000 or $5,000/day; what-is — the same 48 countries (CZ/EE/LV/LT absent), US sign-ups closed with waitlist, Metal 'not currently available for new users', virtual card 'free to use, with no yearly fees'; FAQ — 'Crypto Life is the provider', 'Monovate is the card issuer and Mastercard operates the payment network', proof of residency required, ineligible regions limit sign-ups not spending, no credit check, '1% mUSD back on all eligible transactions', no annual or maintenance fees; metal-card — $199 auto-renewing, 14-day refund, orders paused as of 2 June 2026, 3% on the first $10,000 per year then 1%, no FX fee; security-privacy — KYC at setup run by Crypto Life (Baanx privacy policy), no custody; getting-started — Mobile ≥ 8.0, e-mail + password, phone, KYC, proof of residency, delegable tokens Linea (mUSD, USDC, USDT, wETH, EURe, GBPe), Solana (USDC, USDT), Base (USDC, USDT), Monad (USDC), US sign-ups paused; using — 1% / 3%-then-1%, claim from Money Account or dashboard (no frequency), Entravel 4% + 1% / + 3%, Blackbird 5X / 7X $FLY, Linea gas ≈ $0.02, wETH swap 0.875%, Apple Pay and Google Wallet, US-only virtual PIN. All pages still display 'guidance for United States' and carry no date beyond the 2026 copyright. NOT published: the validator refuses a published tier whose base reward is a hypothesis, and this record keeps the 1% mUSD reward, the issuer 'Monovate' and the mobile wallets as hypotheses because the EEA/UK-region wording could not be displayed; this run never upgrades a field status. Needs David's decision (or a research run reading the pages with an EEA region) before publication.",
+      "evidence": [
+        "ev-metamask-fees",
+        "ev-metamask-faq",
+        "ev-metamask-what-is",
+        "ev-metamask-security",
+        "ev-metamask-metal",
+        "ev-metamask-using",
+        "ev-metamask-getting-started"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {

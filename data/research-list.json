@@ -24,7 +24,7 @@
       "product": "Crypto.com Visa Card (EEA)",
       "status": "validated",
       "record": "data/cards/crypto-com-visa-card.json",
-      "note": "Three reads (2026-10-26, 2026-10-29, 2026-10-31) of the EEA product page agree on all values it states. 2026-10-31 (David's decision): the official Europe fee schedule (help.crypto.com, readable by the fetcher) governs — reward caps modelled as SPEND caps (cap.basis 'spend': first USD 750/1,500/3,000/5,000 per month) and fees modelled from its first read (issuance €4.99/€24.99, card top-up 1%, ATM 2% above allowance, FX 0.2% EU/UK / 2% outside with €400/€800 allowances, none on top tiers, inactivity €6). Second read of the fee schedule ≥24 h later still needed; publication also blocked by eligibility unknown (no official country list) and KYC hypothesis."
+      "note": "Three reads (2026-10-26, 2026-10-29, 2026-10-31) of the EEA product page agree on all values it states. 2026-10-31 (David's decision): the official Europe fee schedule (help.crypto.com, readable by the fetcher) governs — reward caps modelled as SPEND caps (cap.basis 'spend': first USD 750/1,500/3,000/5,000 per month) and fees modelled from its first read (issuance €4.99/€24.99, card top-up 1%, ATM 2% above allowance, FX 0.2% EU/UK / 2% outside with €400/€800 allowances, none on top tiers, inactivity €6). Second read of the fee schedule done 2026-11-01 (24 h 04 min after the first): all fees and the spend-cap wording confirmed; product page read a fourth time, unchanged. Publication still blocked by eligibility unknown (no official country list read) and KYC hypothesis — research run must read the restricted-markets FAQ and a KYC article."
     },
     {
       "provider": "Nexo",
@@ -45,7 +45,7 @@
       "product": "Bybit Card (EEA)",
       "status": "validated",
       "record": "data/cards/bybit-card-eu.json",
-      "note": "Help-centre FAQ (2026-10-02) + fee schedule (2026-10-08) read in browser 2026-10-29 and re-read by the fetcher 2026-10-31: unchanged, all sourced values confirmed. Not published: the card landing page (sole source for 1% cashback, VIP 2–10%, welcome offer, issuer Harmoniie SAS / Moorwand) is still a homepage shell to the fetcher — browser read needed. Rewards FAQ (2026-10-03) describes points × 0.002 EUR paid in the selected currency (USDC default). T&C article points to https://www.bybit.eu/legal/bybit-card/Bybit-EU-Card-T-C (not read: fetch permission).",
+      "note": "Help-centre FAQ (2026-10-02) + fee schedule (2026-10-08) read in browser 2026-10-29 and re-read by the fetcher 2026-10-31: unchanged, all sourced values confirmed. Not published: the card landing page (sole source for 1% cashback, VIP 2–10%, welcome offer, issuer Harmoniie SAS / Moorwand) is still a homepage shell to the fetcher — browser read needed. Rewards FAQ (2026-10-03) describes points × 0.002 EUR paid in the selected currency (USDC default). T&C article points to https://www.bybit.eu/legal/bybit-card/Bybit-EU-Card-T-C (not read: fetch permission). 2026-11-01: FAQ + fee schedule re-read a third time, unchanged; landing page still a homepage shell to the fetcher — browser read still needed.",
       "needs_browser_read": true
     },
     {
@@ -61,7 +61,7 @@
       "product": "MetaMask Card",
       "status": "validated",
       "record": "data/cards/metamask-card.json",
-      "note": "Record from seven support-centre articles read 2026-10-30 (all displayed for the US region): 48 countries (EEA minus CZ/EE/LV/LT, UK, CH, others), virtual card $0/year, FX 1%, ATM 2%, conversion 0–0.875% by token, 1% mUSD back (hypothesis for non-US); Metal $199/year with orders paused since 2026-06-02. Issuer 'Monovate' hypothesis. No publisher affiliate or card referral programme found on official pages (MetaMask Rewards is a user points programme, not read)."
+      "note": "Record from seven support-centre articles read 2026-10-30 (all displayed for the US region): 48 countries (EEA minus CZ/EE/LV/LT, UK, CH, others), virtual card $0/year, FX 1%, ATM 2%, conversion 0–0.875% by token, 1% mUSD back (hypothesis for non-US); Metal $199/year with orders paused since 2026-06-02. Issuer 'Monovate' hypothesis. No publisher affiliate or card referral programme found on official pages (MetaMask Rewards is a user points programme, not read). Second read 2026-11-01 (fetcher, 48 h later): all seven articles unchanged, every value confirmed; still displayed for the US region. Not published: base reward (1% mUSD), issuer (Monovate) and mobile wallets remain hypotheses pending an EEA-region read or David's decision — the run does not upgrade field statuses."
     },
     {
       "provider": "ether.fi",
