@@ -1,21 +1,24 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other.",
-  "updated": "2026-10-30",
+  "updated": "2026-11-02",
   "entries": [
     {
       "provider": "Wirex",
       "product": "Wirex Card",
       "slug": "wirex-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "cryptoslate.com/crypto-cards/europe 2026-11-02",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "coingape.com/crypto-cards/best 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -95,31 +98,36 @@
       "product": "Coinbase Card",
       "slug": "coinbase-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "cryptoslate.com/crypto-cards/europe 2026-11-02",
+        "coingape.com/crypto-cards/best 2026-11-02",
+        "crypto.news/best-crypto-cards 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
+      "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-30",
-      "priority": 0
+      "last_seen": "2026-11-02",
+      "priority": 0,
+      "affiliate_hint_note": "Impact (sjv.io) tracking link seen on crypto.news 2026-11-02; unverified"
     },
     {
       "provider": "MetaMask",
       "product": "MetaMask Card",
       "slug": "metamask-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-30",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -127,80 +135,87 @@
       "product": "ether.fi Cash",
       "slug": "ether-fi-cash",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "coingape.com/crypto-cards/best 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 6
     },
     {
       "provider": "Bitget Wallet",
       "product": "Bitget Wallet Card",
       "slug": "bitget-wallet-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4
     },
     {
       "provider": "COCA",
       "product": "COCA Card",
       "slug": "coca-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4
     },
     {
       "provider": "Ready",
       "product": "Ready Card",
       "slug": "ready-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4,
+      "discovery_note": "Listed as 'currently unavailable' (Ready Lite, Ready Metal) by spendnode.io on 2026-11-02; unverified"
     },
     {
       "provider": "Kraken",
       "product": "Krak Card",
       "slug": "krak-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4
     },
     {
       "provider": "Deblock",
@@ -223,16 +238,17 @@
       "product": "Plutus Card",
       "slug": "plutus-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4
     },
     {
       "provider": "Trastra",
@@ -271,32 +287,34 @@
       "product": "Bleap Card",
       "slug": "bleap-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4
     },
     {
       "provider": "Oobit",
       "product": "Oobit Crypto Card",
       "slug": "oobit-crypto-card",
       "seen_in": [
-        "cryptocards.so 2026-10-28 (sponsored list)"
+        "cryptocards.so 2026-10-28 (sponsored list)",
+        "crypto.news/best-crypto-cards 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": null,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4
     },
     {
       "provider": "Revolut",
@@ -319,16 +337,17 @@
       "product": "Plasma One Card",
       "slug": "plasma-one-card",
       "seen_in": [
-        "cryptocards.so 2026-10-28 (sponsored list)"
+        "cryptocards.so 2026-10-28 (sponsored list)",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": null,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4
     },
     {
       "provider": "BitMart",
@@ -479,16 +498,17 @@
       "product": "Kolo Card",
       "slug": "kolo-card",
       "seen_in": [
-        "cryptocards.so 2026-10-28 (sponsored list)"
+        "cryptocards.so 2026-10-28 (sponsored list)",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": null,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-02",
+      "priority": 4
     },
     {
       "provider": "IZIPAY",
@@ -607,15 +627,16 @@
       "product": "Bitpanda Card",
       "slug": "bitpanda-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "published",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -623,15 +644,17 @@
       "product": "Gnosis Pay Card",
       "slug": "gnosis-pay-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "coingape.com/crypto-cards/best 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "none seen",
       "status": "published",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -639,15 +662,19 @@
       "product": "Crypto.com Visa Card (EEA)",
       "slug": "crypto-com-visa-card-eea",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "cryptoslate.com/crypto-cards/europe 2026-11-02",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "coingape.com/crypto-cards/best 2026-11-02",
+        "crypto.news/best-crypto-cards 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 5,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -655,15 +682,19 @@
       "product": "Nexo Card",
       "slug": "nexo-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "cryptoslate.com/crypto-cards/europe 2026-11-02",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "coingape.com/crypto-cards/best 2026-11-02",
+        "crypto.news/best-crypto-cards 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 5,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -671,15 +702,17 @@
       "product": "Bybit Card (EEA)",
       "slug": "bybit-card-eea",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "coingape.com/crypto-cards/best 2026-11-02",
+        "crypto.news/best-crypto-cards 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -687,15 +720,17 @@
       "product": "KAST Card",
       "slug": "kast-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "coingape.com/crypto-cards/best 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -703,15 +738,16 @@
       "product": "RedotPay Card",
       "slug": "redotpay-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-02",
       "priority": 0
     },
     {
@@ -899,6 +935,336 @@
       "status": "identified",
       "first_seen": "2026-10-28",
       "last_seen": "2026-10-28",
+      "priority": -3
+    },
+    {
+      "provider": "Uphold",
+      "product": "Uphold Card",
+      "slug": "uphold-card",
+      "seen_in": [
+        "cryptoslate.com/crypto-cards/europe 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "operator_named": true,
+      "discovery_note": "Directory names Cross River Bank as issuer (US); EEA availability unknown",
+      "priority": 2
+    },
+    {
+      "provider": "Gemini",
+      "product": "Gemini Credit Card",
+      "slug": "gemini-credit-card",
+      "seen_in": [
+        "coingape.com/crypto-cards/best 2026-11-02",
+        "crypto.news/best-crypto-cards 2026-11-02"
+      ],
+      "cross_listing_count": 2,
+      "no_kyc_claim": false,
+      "affiliate_hint": "publisher programme",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "operator_named": true,
+      "discovery_note": "Directory names WebBank as issuer; US-only credit card; Impact (sjv.io) link seen on crypto.news; scope decision needed",
+      "priority": 7
+    },
+    {
+      "provider": "BitPay",
+      "product": "BitPay Card",
+      "slug": "bitpay-card",
+      "seen_in": [
+        "coingape.com/crypto-cards/best 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "operator_named": true,
+      "discovery_note": "Directory names Metropolitan Commercial Bank; US-only (SSN required per directory)",
+      "priority": 2
+    },
+    {
+      "provider": "Zypto",
+      "product": "Zypto Card",
+      "slug": "zypto-card",
+      "seen_in": [
+        "coingape.com/crypto-cards/best 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Bitget",
+      "product": "Bitget Card",
+      "slug": "bitget-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "discovery_note": "Exchange card, distinct from Bitget Wallet Card",
+      "priority": 2
+    },
+    {
+      "provider": "MEXC",
+      "product": "MEXC Global Card",
+      "slug": "mexc-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Gate",
+      "product": "Gate Card",
+      "slug": "gate-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "KuCoin",
+      "product": "KuCard",
+      "slug": "kucard",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Tria",
+      "product": "Tria Card",
+      "slug": "tria-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Rizon",
+      "product": "Rizon Card",
+      "slug": "rizon-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "1inch",
+      "product": "1inch Card",
+      "slug": "1inch-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "discovery_note": "Directory says KYC handled by Baanx; issuer not named",
+      "priority": 2
+    },
+    {
+      "provider": "Xplace",
+      "product": "Xplace Card",
+      "slug": "xplace-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Hyperbeat",
+      "product": "Hyperbeat Pay Card",
+      "slug": "hyperbeat-pay-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Ledger",
+      "product": "Ledger CL Card",
+      "slug": "ledger-cl-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Pionex",
+      "product": "Pionex Card",
+      "slug": "pionex-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Payy",
+      "product": "Payy Card",
+      "slug": "payy-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Peanut",
+      "product": "Peanut Card",
+      "slug": "peanut-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Tuyo",
+      "product": "Tuyo Card",
+      "slug": "tuyo-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "priority": 2
+    },
+    {
+      "provider": "Jupiter",
+      "product": "Jupiter Global Card",
+      "slug": "jupiter-global-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "operator_named": true,
+      "discovery_note": "Directory says issuer is Rain or DCS by country, KYC via Sumsub",
+      "priority": 2
+    },
+    {
+      "provider": "UnCash",
+      "product": "UnCash Card",
+      "slug": "uncash-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "affiliate_hint": "unknown",
+      "status": "rejected",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "operator_named": false,
+      "rejected_reason": "Reported closed by spendnode.io (Mastercard disabled ~90% of cards on 2026-02-08, operator said operations effectively over). Directory claim, not verified against an official source. Also 'anonymous' card with undisclosed operator: out of scope.",
+      "priority": -3
+    },
+    {
+      "provider": "CinCin",
+      "product": "CinCin Card",
+      "slug": "cincin-card",
+      "seen_in": [
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "affiliate_hint": "unknown",
+      "status": "rejected",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "operator_named": false,
+      "rejected_reason": "Reported closed by spendnode.io (stopped working March 2026 after sponsor bank was contacted by a journalist). Directory claim, not verified against an official source. Also no-KYC card with undisclosed sponsor bank: out of scope.",
       "priority": -3
     }
   ]
