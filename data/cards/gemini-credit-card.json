@@ -16,7 +16,7 @@
   },
   "network": "mastercard",
   "category": "credit",
-  "record_status": "validated",
+  "record_status": "rejected",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -374,6 +374,14 @@
         "ev-gemini-application"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-02T18:05:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "rejected",
+      "reason": "Out of scope (David, 2026-11-02): US-only products are not listed; the catalogue targets the EEA. Record kept for history; it will not be researched further or published.",
+      "actor": "david"
     }
   ],
   "editorial": {
