@@ -1,0 +1,840 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ether-fi-cash",
+  "slug": "ether-fi-cash",
+  "name": "ether.fi Cash Card",
+  "brand": "ether.fi",
+  "provider_id": "ether-fi",
+  "issuer": {
+    "name": "Third National (under licence from Visa) — international programme; programme operated by Ether.Fi Cash Ltd.",
+    "status": "verified",
+    "evidence": [
+      "ev-etherfi-cardholder-agreement-intl"
+    ]
+  },
+  "network": "visa",
+  "category": "crypto_backed_credit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "unknown",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "unknown",
+    "supported_assets_note": "'Borrow Mode': purchases are funded by USDC borrowed through the Aave LendGateway (Optimism) against assets in the user's Vault (USDC/USDT/EURC/frxUSD, liquidUSD/liquidEUR, weETH/WETH, eBTC, ETHFI, OP, tokenised stocks…); a 'Direct Pay' mode spending from the Vault balance also exists but is not described in detail on the pages read. Settlement currency USD or EUR.",
+    "evidence": [
+      "ev-etherfi-collateral",
+      "ev-etherfi-cardholder-agreement-intl",
+      "ev-etherfi-fx"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": "unknown",
+    "ltv_percent": 81,
+    "liquidation_risk": "Borrowing interest accrues (rate not stated on the help page; 'check the app or the GitBook parameters page'). Product LTV is per collateral asset: 81% stablecoins (USDC, USDT, EURC, frxUSD), 80% liquidUSD/liquidReserve/liquidEUR, 55% weETH/WETH, 52% eBTC, 50% liquidETH/liquidBTC, 20% ETHFI/sETHFI/OP. Legacy Cash DebtManager: 50% of collateral liquidated first when the position exceeds its limit, remainder if still unhealthy; liquidation thresholds 95% stablecoins, 75% weETH/WETH, 70% liquid ETH/BTC, 50% OP/ETHFI, with 1–5% liquidation bonus to the liquidator. The agreement lists a 'Liquidation Fee (Reserved)' and a returned-payment fee.",
+    "evidence": [
+      "ev-etherfi-collateral",
+      "ev-etherfi-cardholder-agreement-intl"
+    ]
+  },
+  "variants": [
+    {
+      "id": "ether-fi-cash-international",
+      "region_label": "International (non-US) — 86 listed countries incl. most of the EEA, UK, CH",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AD",
+          "AG",
+          "AR",
+          "AU",
+          "AT",
+          "BS",
+          "BH",
+          "BD",
+          "BB",
+          "BE",
+          "BZ",
+          "BO",
+          "BR",
+          "VG",
+          "BG",
+          "CA",
+          "KY",
+          "CL",
+          "CO",
+          "CR",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "DM",
+          "DO",
+          "EC",
+          "SV",
+          "FR",
+          "DE",
+          "GI",
+          "GR",
+          "GG",
+          "GT",
+          "GY",
+          "HN",
+          "HK",
+          "HU",
+          "IS",
+          "IE",
+          "IM",
+          "IT",
+          "JP",
+          "JE",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MV",
+          "MT",
+          "MX",
+          "MC",
+          "NZ",
+          "NG",
+          "NO",
+          "OM",
+          "PW",
+          "PA",
+          "PY",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "RO",
+          "SA",
+          "SC",
+          "SG",
+          "SK",
+          "SI",
+          "KR",
+          "ES",
+          "KN",
+          "LC",
+          "VC",
+          "SR",
+          "SE",
+          "CH",
+          "TW",
+          "TH",
+          "TT",
+          "TC",
+          "AE",
+          "GB",
+          "UY",
+          "VU"
+        ],
+        "residence_excluded": [
+          "EE",
+          "FI",
+          "IN",
+          "ID",
+          "MY",
+          "NL",
+          "ZA",
+          "TR"
+        ],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "International cardholder agreement: 'strictly prohibited for use by U.S. persons'; users must not be blocked or sanctioned by the US government; 18 years or older.",
+        "usage_note": "Countries named by the help centre as able to receive a physical card (no ISO codes; mapping is ours) plus Belgium and Ireland (eligible, virtual card only — no physical delivery). 'If a jurisdiction is not listed, you cannot apply' → unlisted = ineligible. Malaysia and South Africa appear in the availability list AND in the prohibited-jurisdictions list: modelled as excluded (least favourable). Puerto Rico is listed but is a US territory covered by the US-persons prohibition — left out. Colombia is listed as eligible while the restricted-regions page lists Colombia among countries where 'spending is unsupported'. Spending unsupported in KP, IR, RU, SY, CU, VE, MM, UA, CO. The United States (31 listed states, issuer not read) is a separate programme under a different agreement — not modelled here. Lists carry no date and are 'subject to change'.",
+        "evidence": [
+          "ev-etherfi-countries",
+          "ev-etherfi-restricted-regions",
+          "ev-etherfi-cardholder-agreement-intl"
+        ],
+        "status": "contradictory"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "proof_of_address",
+          "other"
+        ],
+        "stages_note": "KYC during account setup; 'Approval is required before a Cash card can be issued'. Government-issued passport, national ID or driving licence; 'advanced liveness check' selfie; proof of address (<3 months) 'in some cases'; a card-issuer questionnaire and extra documents may be requested by jurisdiction. Most reviews within 48 h. Crypto deposits need no verification; bank transfers need a separate bank-transfer verification. Provider not named.",
+        "evidence": [
+          "ev-etherfi-kyc"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "core",
+          "name": "Core",
+          "access": {
+            "type": "free",
+            "note": "Starting level for everyone.",
+            "status": "verified",
+            "evidence": [
+              "ev-etherfi-membership"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 50,
+                "currency": "USD"
+              },
+              "conditions": "Physical card $50 for Core (no free physical card; max 1). Virtual card: 1 free then $10 each (max 5) — 'some regions charge Core members $10 for their first virtual card' (regions not named). Modelled on the physical card.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Core membership is free; no card annual fee stated.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-membership",
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Applies to transactions in a currency other than USD or EUR, rate set at settlement. Help centre: Core 0.5% added FX fee. Cardholder agreement (fee info 'as of April 15th, 2025'): base 1% foreign transaction fee plus 'up to an additional 50bps' for Core. The dated agreement governs: 1.5% modelled.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-etherfi-fx",
+                "ev-etherfi-cardholder-agreement-intl"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "free_allowance": {
+                "count": 10,
+                "period": "month"
+              },
+              "conditions": "'Free, up to 10 withdrawals per month' for Core; the fee beyond the allowance is in a separate article not read. Limits: $5,000 per withdrawal, 5 attempts and $25,000 per rolling 24 h (all levels).",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 3,
+              "payout": {
+                "kind": "token",
+                "code": "ETHFI"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 2000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "conditions": "3% on the first $2,000 of USD card spend per calendar month, then 1% to $3,000 and 0.5% above. EUR purchases: 3% on the first $800 equivalent, 1% to $1,500, 0.1% above (shared monthly counter). Paid in ETHFI at the price when the purchase clears, locked 7 days, then claimable. Excluded transaction types/merchants listed in a separate article (not read); refunds reverse cashback.",
+              "description": "3% cashback in ETHFI on the first $2,000/month",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-cashback",
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "none",
+              "conditions": "Visa Signature benefits; ether.fi Travel: 5% plus discounts on hotels and flights (all levels).",
+              "description": "Visa Signature benefits, ether.fi Travel",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 25000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "Rolling 24 h; $5,000 per withdrawal; 5 attempts per 24 h (declined attempts count). Same for every level.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-atm-limits"
+              ]
+            }
+          ],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        },
+        {
+          "id": "luxe",
+          "name": "Luxe",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 199,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Alternatively free by holding: 5K points to activate and 5K points/month, or $15K in Liquid vaults, or 30K ETHFI staked.",
+            "status": "verified",
+            "evidence": [
+              "ev-etherfi-membership"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "1 free physical card (then $100, max 2); 4 free virtual cards (then $10, max 10).",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 199,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "Annual purchase valid 12 months; waived when the points/Liquid/ETHFI thresholds are met.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-membership",
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.25,
+              "period": "per_transaction",
+              "conditions": "Help centre: Luxe 0.25%. Cardholder agreement: base 1% plus 'up to an additional 25bps' for Luxe. Dated agreement governs: 1.25% modelled. Non-USD/EUR transactions only.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-etherfi-fx",
+                "ev-etherfi-cardholder-agreement-intl"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "free_allowance": {
+                "count": 10,
+                "period": "month"
+              },
+              "conditions": "'Free, up to 10 withdrawals per month'; fee beyond the allowance not read.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 3,
+              "payout": {
+                "kind": "token",
+                "code": "ETHFI"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 10000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "conditions": "3% on the first $10,000 of USD spend per month, then 1% to $20,000 and 0.5% above; EUR: 3% to $3,000, 1% to $6,000, 0.1% above. Paid in ETHFI, 7-day lock.",
+              "description": "3% cashback in ETHFI on the first $10,000/month",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-cashback",
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 10,
+              "payout": {
+                "kind": "token",
+                "code": "ETHFI"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 10,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "conditions": "Category cashback 10% up to $10 per month (categories not named on the page read).",
+              "description": "10% category cashback, max $10/month",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits"
+              ]
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        },
+        {
+          "id": "pinnacle",
+          "name": "Pinnacle",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 999,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Alternatively free by holding: 25K points, or $100K in Liquid vaults, or 150K ETHFI staked.",
+            "status": "verified",
+            "evidence": [
+              "ev-etherfi-membership"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "2 free physical cards (then $100, max 4); 10 free virtual cards (then $10, max 50).",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 999,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "Annual purchase valid 12 months; waived when the points/Liquid/ETHFI thresholds are met.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-membership",
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Help centre: 'None' for Pinnacle. Cardholder agreement states a base 1% foreign transaction fee without a Pinnacle exemption. Dated agreement governs: 1% modelled. Non-USD/EUR transactions only.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-etherfi-fx",
+                "ev-etherfi-cardholder-agreement-intl"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'Free, unlimited' for Pinnacle (ATM operator fees may apply). Limits $5,000 per withdrawal, $25,000 per rolling 24 h.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits",
+                "ev-etherfi-atm-limits"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 3,
+              "payout": {
+                "kind": "token",
+                "code": "ETHFI"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 50000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "conditions": "3% on the first $50,000 of USD spend per month, then 1% to $80,000 and 0.5% above; EUR: 3% to $16,000, 1% to $26,000, 0.1% above. Paid in ETHFI, 7-day lock.",
+              "description": "3% cashback in ETHFI on the first $50,000/month",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-cashback",
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 20,
+              "payout": {
+                "kind": "token",
+                "code": "ETHFI"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 20,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "conditions": "Category cashback 20% up to $20 per month (categories not named on the page read).",
+              "description": "20% category cashback, max $20/month",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits"
+              ]
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        },
+        {
+          "id": "vip",
+          "name": "VIP",
+          "access": {
+            "type": "holding",
+            "token": "ETHFI",
+            "token_amount": 500000,
+            "note": "500K ETHFI staked or $500K in Liquid vaults; no annual purchase offered.",
+            "status": "verified",
+            "evidence": [
+              "ev-etherfi-membership"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "2 free physical cards (max 2); 50 free virtual cards.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Holding-gated; no annual purchase.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-membership"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Help centre: 'None' for VIP. Cardholder agreement: base 1% foreign transaction fee without a VIP exemption. Dated agreement governs: 1% modelled.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-etherfi-fx",
+                "ev-etherfi-cardholder-agreement-intl"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'Free, unlimited' for VIP.",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-benefits"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "ETHFI"
+              },
+              "requires": "holding",
+              "cap": {
+                "amount": {
+                  "amount": 50000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "conditions": "4% on the first $50,000 of USD spend per month (EUR: first $16,000); 'lower rates apply above these thresholds' (not stated). Paid in ETHFI, 7-day lock.",
+              "description": "4% cashback in ETHFI on the first $50,000/month",
+              "status": "verified",
+              "evidence": [
+                "ev-etherfi-cashback",
+                "ev-etherfi-benefits"
+              ]
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-etherfi-countries",
+      "url": "https://help.ether.fi/en/articles/758780-in-which-countries-is-the-cash-card-available",
+      "title": "In which countries is the Cash card available? (help centre)",
+      "source_type": "eligibility_page",
+      "excerpt": "87 countries/territories named where a physical card is available (incl. FR, DE, IT, ES, PL, SE, NO, CH, GB, LI, IS…); Belgium and Ireland eligible without physical delivery; 31 US states listed; 'If a jurisdiction is not listed, you cannot apply for a Cash card at this time'. No date ('Updated this week').",
+      "accessed_at": "2026-11-02T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "Lists Malaysia, South Africa, Utah and Wyoming as available while the restricted-regions article names them as prohibited jurisdictions. Modelled as excluded."
+    },
+    {
+      "id": "ev-etherfi-restricted-regions",
+      "url": "https://help.ether.fi/en/articles/262373-in-which-regions-is-cash-available-in-for-personal-use",
+      "title": "Where is Ether.Fi cash currently unavailable? (help centre)",
+      "source_type": "eligibility_page",
+      "excerpt": "Prohibited jurisdictions: Estonia, Finland, India, Indonesia, Malaysia, Netherlands, South Africa, Turkey; 20 US states incl. Utah and Wyoming. Spending unsupported: North Korea, Iran, Russia, Syria, Cuba, Venezuela, Myanmar, Ukraine, Colombia. Unlisted jurisdictions 'may still be restricted'. No date ('Updated over 3 weeks ago').",
+      "accessed_at": "2026-11-02T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "Colombia is 'spending unsupported' here but listed as an eligible country for the card on the availability article."
+    },
+    {
+      "id": "ev-etherfi-cardholder-agreement-intl",
+      "url": "https://etherfi.gitbook.io/etherfi/legal/ether.fi-legal/ether.fi-cash-cardholder-agreement-ltd.-international",
+      "title": "ether.fi Cash Cardholder Agreement — Ltd. (International), last modified September 8, 2026",
+      "source_type": "official_terms",
+      "excerpt": "Card 'issued by Third National pursuant to a license from Visa'; programme by Ether.Fi Cash Ltd.; Puerto Rico law. 'Strictly prohibited for use by U.S. persons'; 18+. 'Credit extended through decentralized borrowing protocols'. Fees 'accurate as of April 15th, 2025': base 1% foreign transaction fee, Core up to +50 bps, Luxe up to +25 bps; Fee Schedule linked (not read); 30 days' notice.",
+      "accessed_at": "2026-11-02T05:50:00Z",
+      "effective_from": "2026-09-08",
+      "expires_at": null,
+      "scope": {
+        "note": "International (non-US) programme"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-etherfi-benefits",
+      "url": "https://help.ether.fi/en/articles/304368-what-are-the-benefits-of-a-personal-cash-credit-card",
+      "title": "What are the benefits of a personal Cash credit card? (help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Visa Signature. Cashback 3% on first $2,000 (Core) / $10,000 (Luxe) / $50,000 (Pinnacle), 4% on $50,000 (VIP); EUR caps $800/$3,000/$16,000. Category cashback Luxe 10% to $10/mo, Pinnacle 20% to $20, VIP 30% to $30. Virtual card $10 after free ones; physical $50 (Core) / $100 (Luxe, Pinnacle). ATM 'Free, up to 10 withdrawals per month' (Core, Luxe), 'Free, unlimited' (Pinnacle, VIP). No date.",
+      "accessed_at": "2026-11-02T05:46:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-etherfi-membership",
+      "url": "https://help.ether.fi/en/articles/303625-how-do-membership-levels-work",
+      "title": "How do membership levels work? (help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Core: free starting level. Luxe: 5K points to activate + 5K/month, or $15K Liquid, or 30K ETHFI staked, or $199/yr. Pinnacle: 25K points, or $100K Liquid, or 150K ETHFI, or $999/yr. VIP: $500K Liquid or 500K ETHFI staked, no annual purchase. Points: Cash 1,000 per $1k spent; reset monthly. No date ('Updated over 2 weeks ago').",
+      "accessed_at": "2026-11-02T05:46:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-etherfi-cashback",
+      "url": "https://help.ether.fi/en/articles/262374-how-does-cashback-work",
+      "title": "How does cashback work? (help centre)",
+      "source_type": "official_terms",
+      "excerpt": "'Eligible cashback is earned in ETHFI'; converted at clearing price, 7-day lock. Monthly bands: Core 3% first $2,000 / 1% to $3,000 / 0.5% above; Luxe 3% to $10,000 / 1% to $20,000 / 0.5%; Pinnacle 3% to $50,000 / 1% to $80,000 / 0.5%; VIP 4% to $50,000. EUR bands lower ($800/$3,000/$16,000; 0.1% top band). Shared USD+EUR counter, resets monthly. Exclusions in a separate article.",
+      "accessed_at": "2026-11-02T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-etherfi-fx",
+      "url": "https://help.ether.fi/en/articles/304414-what-s-the-foreign-exchange-fx-rate-used-on-cash-transactions",
+      "title": "What's the foreign exchange (FX) rate used on Cash transactions? (help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "'FX rates apply when you make a transaction in a currency other than USD or EUR'; rate set at settlement; prevailing base rate plus a margin by tier: Core 0.5%, Luxe 0.25%, Pinnacle none, VIP none. No date ('Updated over 2 weeks ago').",
+      "accessed_at": "2026-11-02T05:49:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "The cardholder agreement states a base 1% foreign transaction fee plus up to 50 bps (Core) / 25 bps (Luxe); this article shows only 0.5% / 0.25% / none. The dated agreement is modelled (1.5% / 1.25% / 1%)."
+    },
+    {
+      "id": "ev-etherfi-atm-limits",
+      "url": "https://help.ether.fi/en/articles/303623-are-there-any-fees-or-limits",
+      "title": "What are the ATM withdrawal limits for personal Cash cards? (help centre)",
+      "source_type": "help_center",
+      "excerpt": "'Up to $5,000 per withdrawal'; 'Up to 5 withdrawal attempts in a rolling 24-hour period' (declined attempts count); 'Up to $25,000 in a rolling 24-hour period'; 'The same limits apply to every membership level'; PIN required. No fee amounts on this page. No date ('Updated this week').",
+      "accessed_at": "2026-11-02T05:49:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-etherfi-collateral",
+      "url": "https://help.ether.fi/en/articles/304388-how-does-collateral-and-borrowing-work",
+      "title": "How does collateral and borrowing work? (help centre)",
+      "source_type": "help_center",
+      "excerpt": "Aave LendGateway (Optimism) Product LTVs: 81% USDC/USDT/EURC/frxUSD, 80% liquidUSD/liquidReserve/liquidEUR, 75% liquidRWA, 55% weETH/WETH, 52% eBTC, 50% liquidETH/liquidBTC, 20% ETHFI/sETHFI/OP. Interest accrues (rate not stated). Legacy liquidation: '50% of your total collateral is liquidated first'; thresholds 95/75/70/50%, bonuses 1–5%. GitBook parameters 'last updated on August 27, 2026'.",
+      "accessed_at": "2026-11-02T05:49:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-etherfi-kyc",
+      "url": "https://help.ether.fi/en/articles/269731-kyc-process-and-requirements",
+      "title": "KYC process and requirements (help centre)",
+      "source_type": "help_center",
+      "excerpt": "'You will complete KYC during account setup'; 'Approval is required before a Cash card can be issued'; passport, national ID or driving licence; 'advanced liveness check'; proof of address dated within 3 months 'in some cases'; card-issuer questionnaire possible; most reviews within 48 h; crypto deposits need no verification. No date ('Updated over a week ago').",
+      "accessed_at": "2026-11-02T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-etherfi-affiliates",
+      "url": "https://www.ether.fi/affiliates",
+      "title": "ether.fi Affiliate Program (official page)",
+      "source_type": "affiliate_program",
+      "excerpt": "'Open to all users'; qualifying referral = sign-up via link + Cash card activation + $100 personal spend. Tiered: new-member bonus $10–$20, high-spender bonus $15–$25, 0.1–0.3% cashback on referral spending, 20–25% physical-card commission, 50% card-fee commission, 5–12.5% yield rev share. Paid in USDC on the 15th of the following month. 'Additional program rules may apply'.",
+      "accessed_at": "2026-11-02T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.ether.fi",
+    "affiliate": {
+      "program_id": "ether-fi-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-02T05:52:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-02T05:55:00Z",
+      "field": "*",
+      "reason": "Initial record from nine official ether.fi pages (help-centre articles on countries, restricted regions, benefits, membership levels, cashback, FX, ATM limits, collateral/borrowing, KYC; the international cardholder agreement; the affiliate page) read by the unattended research run. Crypto-collateralised Visa credit line; four membership levels. Contradictions recorded: FX (help 0.5/0.25/0 % vs agreement 1 % + 50/25 bps), eligibility (MY, ZA, UT, WY listed both available and prohibited; CO eligible but spending unsupported). Not read: Fee Schedule linked from the agreement, ATM fee beyond the free allowance, cashback exclusion list, US programme agreement/issuer, borrowing APR. Single read; second read required before publication.",
+      "evidence": [
+        "ev-etherfi-countries",
+        "ev-etherfi-cardholder-agreement-intl",
+        "ev-etherfi-benefits",
+        "ev-etherfi-cashback"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Visa card funded by a crypto-collateralised USDC credit line (or direct payment from an on-chain Vault), available in 86 listed countries outside the US including most of the EEA, the UK and Switzerland. Free Core level pays 3% in ETHFI on the first $2,000 a month; paid Luxe ($199/yr) and Pinnacle ($999/yr) levels raise the 3% band to $10,000 and $50,000. Foreign-currency fee and several other fees are contradictory or unknown across official pages.",
+    "good_for": [
+      "Holders of ETH/weETH, stablecoins or ether.fi Liquid vaults who want to spend without selling (borrow mode)",
+      "Residents of the listed EEA countries, the UK and Switzerland who accept a USD/EUR-settled card and ETHFI-denominated cashback",
+      "High spenders willing to pay for Luxe or Pinnacle to lift the 3% band"
+    ],
+    "not_for": [
+      "US persons (prohibited under the international agreement; a separate US programme exists and is not documented here)",
+      "Residents of Estonia, Finland, the Netherlands, Turkey, India, Indonesia, Malaysia or South Africa (prohibited)",
+      "Anyone who wants cashback in fiat or a stablecoin: rewards are paid in ETHFI after a 7-day lock",
+      "Borrowers who cannot absorb liquidation of their collateral if prices fall"
+    ],
+    "watch_outs": [
+      "Foreign-transaction fee is contradictory: the help centre says 0.5% (Core) / 0.25% (Luxe) / none (Pinnacle, VIP) while the dated cardholder agreement states a base 1% plus up to 50/25 bps — the agreement's higher figures are modelled.",
+      "The Fee Schedule referenced by the agreement, the ATM fee after 10 free withdrawals, the top-up fee and the borrowing APR were not read — recorded as unknown, never as free.",
+      "Malaysia and South Africa are listed both as available and as prohibited; Colombia is eligible but spending there is 'unsupported'.",
+      "Cashback steps down to 1% then 0.5% (0.1% for EUR) above the monthly bands; EUR bands are far lower ($800 for Core).",
+      "Borrow mode carries liquidation risk; legacy terms liquidate 50% of collateral first."
+    ]
+  }
+}

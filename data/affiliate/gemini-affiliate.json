@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "gemini-affiliate",
+  "provider_id": "gemini",
+  "program_name": "Gemini Affiliate Program",
+  "program_url": "https://support.gemini.com/hc/en-us/articles/360048537792-Does-Gemini-have-an-Affiliate-program",
+  "type": "cpa",
+  "allowed_channels": [
+    "website",
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "Application via the 'Affiliate Application' link, reviewed by Gemini. Named audiences: influencers / content creators / community leaders, Gemini users, organisations 'whose values align'. Other criteria not published.",
+  "our_status": "identified",
+  "paid_action": "'$25 per converted account' when a new user 'places a trade'. The Gemini Credit Card is not named as a paid action; the credit-card referral terms explicitly exclude 'marketing affiliates' from the $50 cardholder referral offer.",
+  "validation_conditions": "New user must place a trade. Window and other conditions not stated.",
+  "commission": {
+    "model_note": "Flat CPA: $25 per converted (trading) account. No card-specific payout found.",
+    "amount": 25,
+    "currency": "USD",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "'your preferred currency of choice' (not detailed)",
+    "frequency": "not stated"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Performance tracked 'via the Impact platform' (consistent with the Impact sjv.io link seen on crypto.news during discovery). No programme terms document linked from the article. A separate cardholder-only referral programme pays $50 per referred friend (max 50/year, $5,000/year) — not usable by a publisher.",
+  "allowed_countries_note": "Not stated. The credit card itself is US-only.",
+  "evidence": [
+    {
+      "url": "https://support.gemini.com/hc/en-us/articles/360048537792-Does-Gemini-have-an-Affiliate-program",
+      "title": "Does Gemini have an Affiliate program? (support centre)",
+      "accessed_at": "2026-11-02T05:49:00Z",
+      "excerpt": "$25 per converted account when a new user places a trade; Impact tracking; application reviewed by Gemini."
+    },
+    {
+      "url": "https://www.gemini.com/legal/credit-card-referral-program-terms",
+      "title": "Gemini Credit Card Referral Program Terms (December 19, 2025)",
+      "accessed_at": "2026-11-02T05:49:00Z",
+      "excerpt": "Cardholder referral: $50 referrer / $50 referee, $250 bonus at the 5th referral, max 50 referrals and $5,000 per year; 'Gemini Credit Card marketing affiliates are not eligible to participate'."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Publisher programme exists (CPA on trading accounts) but does not pay on the credit card. Decision for David: whether a US-only trading CPA fits the comparator at all. No application made."
+}

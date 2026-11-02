@@ -142,11 +142,12 @@
       "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "publisher programme",
+      "status": "validated",
       "first_seen": "2026-10-26",
       "last_seen": "2026-11-02",
-      "priority": 6
+      "priority": 0,
+      "affiliate_hint_note": "Official affiliate programme at ether.fi/affiliates (pays on card activation + $100 spend), read 2026-11-02"
     },
     {
       "provider": "Bitget Wallet",
@@ -965,12 +966,13 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "publisher programme",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-02",
       "operator_named": true,
       "discovery_note": "Directory names WebBank as issuer; US-only credit card; Impact (sjv.io) link seen on crypto.news; scope decision needed",
-      "priority": 7
+      "priority": 0,
+      "affiliate_hint_note": "Official Gemini Affiliate Program confirmed 2026-11-02 ($25 CPA on trading accounts via Impact; credit card not a paid action)"
     },
     {
       "provider": "BitPay",
