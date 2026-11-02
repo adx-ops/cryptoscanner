@@ -35,6 +35,9 @@ const availabilityText = allowedCount ? `${allowedCount} countr${allowedCount ==
 const fx = feeShort('fx'); const atm = feeShort('atm_withdrawal');
 const baseReward = dt.rewards.find((r) => r.type === 'base' && r.status !== 'stale' && r.status !== 'contradictory');
 const sub = dt.fees.find((f) => f.type === 'subscription');
+const ct = card.credit_terms as { apr_percent?: number | 'unknown'; ltv_percent?: number | 'unknown'; ltv_min_percent?: number | 'unknown'; liquidation_risk?: string } | null | undefined;
+const pct = (v?: number | 'unknown') => (typeof v === 'number' ? `${v}%` : 'Unknown — not published');
+const ltvText = ct ? (typeof ct.ltv_min_percent === 'number' && typeof ct.ltv_percent === 'number' ? `${ct.ltv_min_percent}–${ct.ltv_percent}% depending on the collateral asset` : pct(ct.ltv_percent)) : '';
 const meta = [card.category.replace('_', ' '), card.form_factors.join(' + '), card.custody.replace('_', '-'), card.network && card.network !== 'unknown' ? card.network : null].filter(Boolean) as string[];
 ---
 <Base title={`${card.name} — rewards, fees, availability`} description={card.editorial.summary ?? `${card.name}: rewards, fees, availability by country and identity-check requirements, with sources.`} canonicalPath={`/cards/${card.slug}`}>
@@ -73,6 +76,18 @@ const meta = [card.category.replace('_', ' '), card.form_factors.join(' + '), ca
     <section class="card"><h2>Not for</h2><ul>{(card.editorial.not_for ?? []).map((x) => <li>{x}</li>)}</ul></section>
     {card.editorial.watch_outs?.length ? <section class="card watch"><h2>Watch out</h2><ul>{card.editorial.watch_outs.map((x) => <li>{x}</li>)}</ul></section> : null}
   </div>
+
+  {ct && (
+    <section class="card watch credit-terms" aria-labelledby="credit-terms">
+      <h2 id="credit-terms">Borrowing terms</h2>
+      <p>This card spends borrowed money{card.category === 'crypto_backed_credit' ? ' secured by your crypto' : ''}. Interest and liquidation risk come before any cashback.</p>
+      <dl class="glance-grid">
+        <div><dt>Interest rate (APR)</dt><dd>{pct(ct.apr_percent)} <StatusBadge s={typeof ct.apr_percent === 'number' ? 'verified' : 'unknown'} /></dd></div>
+        {card.category === 'crypto_backed_credit' && <div><dt>Maximum loan-to-value</dt><dd>{ltvText} <StatusBadge s={typeof ct.ltv_percent === 'number' ? 'verified' : 'unknown'} /></dd></div>}
+      </dl>
+      {ct.liquidation_risk && <p class="small">{ct.liquidation_risk}</p>}
+    </section>
+  )}
 
   {card.variants.map((v) => (
     <section class="variant">

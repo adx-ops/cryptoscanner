@@ -53,5 +53,5 @@
     }
   ],
   "verification": "hypothesis",
-  "notes": "Programme pays on card activation and spend — relevant to the comparator. Terms not fully documented (general Terms of Use only). No application made; payout in USDC to an on-chain Vault needs David's decision."
+  "notes": "Programme pays on card activation and spend — relevant to the comparator. Terms not fully documented (general Terms of Use only). No application made; payout in USDC to an on-chain Vault needs David's decision. 2026-11-02 (David): USDC payout to an ether.fi Cash Vault accepted, account to be opened in David's own name by David. No application made; applying still needs David's explicit go-ahead."
 }

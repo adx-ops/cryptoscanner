@@ -39,7 +39,8 @@
     "evidence": [
       "ev-etherfi-collateral",
       "ev-etherfi-cardholder-agreement-intl"
-    ]
+    ],
+    "ltv_min_percent": 20
   },
   "variants": [
     {
@@ -216,8 +217,8 @@
               "kind": "percent",
               "percent": 1.5,
               "period": "per_transaction",
-              "conditions": "Applies to transactions in a currency other than USD or EUR, rate set at settlement. Help centre: Core 0.5% added FX fee. Cardholder agreement (fee info 'as of April 15th, 2025'): base 1% foreign transaction fee plus 'up to an additional 50bps' for Core. The dated agreement governs: 1.5% modelled.",
-              "status": "contradictory",
+              "conditions": "Applies to transactions in a currency other than USD or EUR, rate set at settlement. Help centre: Core 0.5% added FX fee. Cardholder agreement (fee info 'as of April 15th, 2025'): base 1% foreign transaction fee plus 'up to an additional 50bps' for Core. Governing value (David, 2026-11-02, policy rule 5): the dated cardholder agreement — 1.5% modelled. The help-centre figure is shown as a contradiction.",
+              "status": "verified",
               "evidence": [
                 "ev-etherfi-fx",
                 "ev-etherfi-cardholder-agreement-intl"
@@ -347,8 +348,8 @@
               "kind": "percent",
               "percent": 1.25,
               "period": "per_transaction",
-              "conditions": "Help centre: Luxe 0.25%. Cardholder agreement: base 1% plus 'up to an additional 25bps' for Luxe. Dated agreement governs: 1.25% modelled. Non-USD/EUR transactions only.",
-              "status": "contradictory",
+              "conditions": "Help centre: Luxe 0.25%. Cardholder agreement: base 1% plus 'up to an additional 25bps' for Luxe. Governing value (David, 2026-11-02, policy rule 5): the dated cardholder agreement — 1.25% modelled. Non-USD/EUR transactions only. The help-centre figure is shown as a contradiction.",
+              "status": "verified",
               "evidence": [
                 "ev-etherfi-fx",
                 "ev-etherfi-cardholder-agreement-intl"
@@ -474,8 +475,8 @@
               "kind": "percent",
               "percent": 1,
               "period": "per_transaction",
-              "conditions": "Help centre: 'None' for Pinnacle. Cardholder agreement states a base 1% foreign transaction fee without a Pinnacle exemption. Dated agreement governs: 1% modelled. Non-USD/EUR transactions only.",
-              "status": "contradictory",
+              "conditions": "Help centre: 'None' for Pinnacle. Cardholder agreement states a base 1% foreign transaction fee without a Pinnacle exemption. Governing value (David, 2026-11-02, policy rule 5): the dated cardholder agreement — 1% modelled. Non-USD/EUR transactions only. The help-centre figure is shown as a contradiction.",
+              "status": "verified",
               "evidence": [
                 "ev-etherfi-fx",
                 "ev-etherfi-cardholder-agreement-intl"
@@ -589,8 +590,8 @@
               "kind": "percent",
               "percent": 1,
               "period": "per_transaction",
-              "conditions": "Help centre: 'None' for VIP. Cardholder agreement: base 1% foreign transaction fee without a VIP exemption. Dated agreement governs: 1% modelled.",
-              "status": "contradictory",
+              "conditions": "Help centre: 'None' for VIP. Cardholder agreement: base 1% foreign transaction fee without a VIP exemption. Governing value (David, 2026-11-02, policy rule 5): the dated cardholder agreement — 1% modelled. The help-centre figure is shown as a contradiction.",
+              "status": "verified",
               "evidence": [
                 "ev-etherfi-fx",
                 "ev-etherfi-cardholder-agreement-intl"
@@ -814,6 +815,25 @@
         "ev-etherfi-cashback"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-02T20:27:00Z",
+      "field": "variants[].tiers[].fees[fx].status",
+      "from": "contradictory",
+      "to": "verified",
+      "reason": "David's decision 2026-11-02 under publication policy rule 5: the dated cardholder agreement governs the FX fee (1.5% Core, 1.25% Luxe, 1% Pinnacle, 1% VIP); the help-centre figures stay recorded in ev-etherfi-fx.contradiction_note and are shown on the card page. Values unchanged.",
+      "actor": "david"
+    },
+    {
+      "date": "2026-11-02T20:27:00Z",
+      "field": "credit_terms.ltv_min_percent",
+      "from": null,
+      "to": 20,
+      "reason": "David's decision 2026-11-02: show the per-asset maximum LTV as a range (20% ETHFI/sETHFI/OP to 81% stablecoins) rather than the single best-case 81%. Range taken from ev-etherfi-collateral, already in liquidation_risk.",
+      "evidence": [
+        "ev-etherfi-collateral"
+      ],
+      "actor": "david"
     }
   ],
   "editorial": {
