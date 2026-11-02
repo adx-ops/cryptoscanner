@@ -3,7 +3,7 @@
 You are working on CryptoScanner (repo adx-ops/cryptoscanner). You start with no memory. Setup: `add_repo` (owner adx-ops, repo cryptoscanner, access push) → clone → `register_repo_root` → read `CLAUDE.md` and `docs/PUBLICATION-POLICY.md` → `npm ci && npm run validate && npm test` (stop and report if they fail).
 
 ## Task
-For every `data/cards/*.json` with `record_status: "validated"` whose `freshness.last_content_verified_at` is more than 24 hours old (process at most 3 per run, oldest first):
+For every `data/cards/*.json` with `record_status: "validated"` whose `freshness.last_content_verified_at` is more than 24 hours old (process at most 3 per run, oldest first). **Skip** a record whose entry in `data/research-list.json` carries `"needs_browser_read": true` or `"awaiting_decision"` (David, 2026-11-02): the fetcher cannot lift those blockers, and re-reading them first starves the other records. List the skipped slugs in the report in one line. A browser session or David's decision clears the flag; then the record re-enters the rotation.
 1. Re-read every evidence URL in the record with WebFetch, asking it to report the exact figures for: eligibility wording / country list, each fee, each reward (rate, cap, conditions, payout asset, dates), KYC requirements, issuer, product status.
 2. Compare with the record field by field.
    - **All material values confirmed** (fees, rewards, eligibility, KYC stage, issuer, status): set `record_status: "published"`, set `freshness.last_content_verified_at` to now, update `accessed_at` on the re-read evidence, append a changelog entry `{"field":"record_status","from":"validated","to":"published","reason":"Second independent read on <date>: all material values confirmed.","actor":"second-read-run"}`.

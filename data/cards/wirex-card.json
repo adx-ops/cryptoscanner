@@ -338,9 +338,9 @@
                 "code": "WXT"
               },
               "requires": "subscription",
-              "conditions": "'Premium Entry' Cryptoback on in-store and online card purchases, paid in WXT. The benefits article states 3% for Premium (see contradiction note on evidence); the conservative pricing-page value is modelled.",
+              "conditions": "'Premium Entry' Cryptoback on in-store and online card purchases, paid in WXT. Governing value: the dedicated X-tras pricing page (1%). The benefits article states 3% for Premium; that contradiction is shown with the evidence (policy rule 5).",
               "description": "Cryptoback 1% (Premium Entry)",
-              "status": "contradictory",
+              "status": "verified",
               "evidence": [
                 "ev-wirex-xtras-pricing",
                 "ev-wirex-benefits"
@@ -723,6 +723,22 @@
         "ev-wirex-one-post"
       ],
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-02T18:05:00Z",
+      "field": "variants[0].tiers[1].rewards[0].status",
+      "from": "contradictory",
+      "to": "verified",
+      "reason": "David's decision 2026-11-02 under publication policy rule 5: the dedicated X-tras pricing page governs (1% Premium Entry); the 3% on the undated benefits article stays recorded in ev-wirex-benefits.contradiction_note and is shown on the card page. Value unchanged (1%).",
+      "actor": "david"
+    },
+    {
+      "date": "2026-11-02T18:05:00Z",
+      "field": "product_status",
+      "from": "active",
+      "to": "active",
+      "reason": "David's decision 2026-11-02: kept 'active' — the EEA issuer terms and the physical-card order flow are still online; wirexapp.com/personal redirects to wirex.one and no official page states the EEA Mastercard continues unchanged. Re-checked at every read.",
+      "actor": "david"
     }
   ],
   "editorial": {
@@ -737,8 +753,8 @@
       "Users who want rewards in fiat: Cryptoback is paid in WXT"
     ],
     "watch_outs": [
-      "Official pages disagree on Cryptoback for Premium (1% vs 3%), on the ATM allowance currency ($200 vs EUR 200) and on whether an FX fee exists; conservative values modelled, FX unknown.",
-      "wirexapp.com/personal now redirects to wirex.one ('Wirex One', a new platform supervised in El Salvador); whether the EEA Mastercard documented here continues unchanged is not stated — product status to be confirmed.",
+      "Official pages disagree on Cryptoback for Premium (1% on the pricing page, 3% on a help article), on the ATM allowance currency ($200 vs EUR 200) and on whether an FX fee exists; the pricing page's 1% is shown, FX unknown.",
+      "wirexapp.com/personal now redirects to wirex.one ('Wirex One', a new platform supervised in El Salvador). The EEA terms and card ordering documented here are still online, so the card is listed as active; no official page yet says whether it continues unchanged.",
       "Higher Cryptoback tiers require locking 150,000 to 7,500,000 WXT for 180 days; the WXT price is not part of this record.",
       "Card top-ups by external card can carry a fee ('0% or more'); only SEPA transfers are stated as free."
     ]

@@ -966,13 +966,14 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "publisher programme",
-      "status": "validated",
+      "status": "rejected",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-02",
       "operator_named": true,
       "discovery_note": "Directory names WebBank as issuer; US-only credit card; Impact (sjv.io) link seen on crypto.news; scope decision needed",
       "priority": 0,
-      "affiliate_hint_note": "Official Gemini Affiliate Program confirmed 2026-11-02 ($25 CPA on trading accounts via Impact; credit card not a paid action)"
+      "affiliate_hint_note": "Official Gemini Affiliate Program confirmed 2026-11-02 ($25 CPA on trading accounts via Impact; credit card not a paid action)",
+      "rejected_reason": "Out of scope (David, 2026-11-02): US-only products are not listed; the catalogue targets the EEA. Official eligibility read 2026-11-02: US only."
     },
     {
       "provider": "BitPay",
@@ -988,7 +989,7 @@
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-02",
       "operator_named": true,
-      "discovery_note": "Directory names Metropolitan Commercial Bank; US-only (SSN required per directory)",
+      "discovery_note": "Directory names Metropolitan Commercial Bank; US-only (SSN required per directory); reported US-only by a directory — to be rejected by the research run if the official eligibility page confirms it (scope decision 2026-11-02)",
       "priority": 2
     },
     {
@@ -1250,7 +1251,7 @@
       "last_seen": "2026-11-02",
       "operator_named": false,
       "rejected_reason": "Reported closed by spendnode.io (Mastercard disabled ~90% of cards on 2026-02-08, operator said operations effectively over). Directory claim, not verified against an official source. Also 'anonymous' card with undisclosed operator: out of scope.",
-      "priority": -3
+      "priority": 0
     },
     {
       "provider": "CinCin",
@@ -1267,7 +1268,7 @@
       "last_seen": "2026-11-02",
       "operator_named": false,
       "rejected_reason": "Reported closed by spendnode.io (stopped working March 2026 after sponsor bank was contacted by a journalist). Directory claim, not verified against an official source. Also no-KYC card with undisclosed sponsor bank: out of scope.",
-      "priority": -3
+      "priority": 0
     }
   ]
 }
