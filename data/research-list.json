@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-10-31.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-02.",
   "target": {
     "min": 15,
     "max": 50
@@ -66,9 +66,17 @@
     {
       "provider": "ether.fi",
       "product": "ether.fi Cash",
-      "status": "identified",
-      "record": null,
-      "note": "Credit-type product; needs credit_terms."
+      "status": "validated",
+      "record": "data/cards/ether-fi-cash.json",
+      "note": "International (non-US) record from nine official pages read 2026-11-02 (help centre: countries, restricted regions, benefits, membership, cashback, FX, ATM limits, collateral; international cardholder agreement on GitBook; affiliate page). Crypto-collateralised Visa credit line issued by Third National; Core free 3% ETHFI on first $2,000/month, Luxe $199/yr, Pinnacle $999/yr, VIP holding. Contradictions: FX (help 0.5/0.25/0% vs agreement 1% + 50/25 bps → agreement modelled), MY/ZA/UT/WY both available and prohibited, CO eligible but spending unsupported. Unknown: Fee Schedule linked from the agreement, ATM fee beyond 10 free/month, top-up fee, borrowing APR, cashback exclusion list, US programme issuer. Affiliate: official programme pays on card activation + $100 spend (data/affiliate/ether-fi-affiliate.json), payout in USDC on-chain. Second read required before publication."
+    },
+    {
+      "provider": "Gemini",
+      "product": "Gemini Credit Card",
+      "status": "validated",
+      "record": "data/cards/gemini-credit-card.json",
+      "note": "US-only unsecured Mastercard World Elite credit card issued by WebBank; record from seven official pages read 2026-11-02 (landing page, rewards agreement 2026-03-04, rewards-tiers article, product overview, application process, referral terms, affiliate article). No annual fee, no FX fee (landing page), 1% base / 4% gas-EV-transit on first $300 spend / 3% dining / 2% groceries, paid in chosen crypto (BTC default). Unknown: APR, cash-advance, late and returned-payment fees — the WebBank cardholder agreement PDF (CFPB, 2026-04-01) is returned as binary data by the fetcher (browser or PDF download needed). Affiliate: $25 CPA on trading accounts via Impact, card not a paid action (data/affiliate/gemini-affiliate.json). Decision for David: US-only product in a Europe-first catalogue (candidate note 'scope decision needed').",
+      "needs_browser_read": true
     },
     {
       "provider": "KAST",

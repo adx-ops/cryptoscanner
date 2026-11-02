@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "ether-fi-affiliate",
+  "provider_id": "ether-fi",
+  "program_name": "ether.fi Affiliate Program",
+  "program_url": "https://www.ether.fi/affiliates",
+  "type": "hybrid",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "'Open to all users': start from ether.fi/app/cash/affiliate (an ether.fi account is implied); no approval step described. Multiple referral links allowed.",
+  "our_status": "identified",
+  "paid_action": "Qualifying referral = sign-up through the link + Cash card activation + $100 or more of personal spending ('Sign-up alone does not qualify'). Card activation and spend are the paid actions, which fits a card comparator.",
+  "validation_conditions": "Referral must activate the Cash card and reach $100+ personal spend. Tier upgrades require both all-time and rolling-90-day referral counts (Tier 2: 50 / 10; Tier 3: 100 / 20; Tier 4: 500 / 50), reviewed monthly.",
+  "commission": {
+    "model_note": "Tiered hybrid: new-member bonus $10 / $15 / $20 / $20 and high-spender bonus $15 / $20 / $25 / $25 per qualifying referral (Tier 1–4); 0.1–0.3% cashback on referral spending; 20–25% physical-card commission; 50% card-fee commission; 5–12.5% Liquid and staked yield revenue share; 20% second-degree revenue share from Tier 2.",
+    "amount": 10,
+    "currency": "USD",
+    "tiers_note": "Tier 1 figures recorded as the base (amount = new-member bonus). Page's '$867,000' figure is a projection for 500 referrals/month, stated as an estimate.",
+    "status": "verified"
+  },
+  "revenue_share": {
+    "included_products": "Card fees (50%), physical cards (20–25%), referral spending cashback (0.1–0.3%), Liquid and staked yield (5–12.5%).",
+    "duration_note": "Not stated.",
+    "exclusions": "Not stated."
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "USDC 'directly into your Vault with Cash'",
+    "frequency": "15th of the following month"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "verified"
+  },
+  "rules_note": "Page links the general Terms of Use (etherfi.gitbook.io) and says 'Additional program rules may apply'; no affiliate-specific agreement found. 'Products may not be available in all jurisdictions.' Payout requires an ether.fi Vault/Cash account (on-chain USDC), which is a payout-destination decision for David.",
+  "allowed_countries_note": "Not stated.",
+  "evidence": [
+    {
+      "url": "https://www.ether.fi/affiliates",
+      "title": "ether.fi Affiliate Program (official page)",
+      "accessed_at": "2026-11-02T05:52:00Z",
+      "excerpt": "Open to all users; qualifying referral = sign-up + card activation + $100 spend; tiered bonuses $10–$25, 50% card-fee commission, 20–25% physical-card commission, yield rev share; USDC payout on the 15th of the following month."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Programme pays on card activation and spend — relevant to the comparator. Terms not fully documented (general Terms of Use only). No application made; payout in USDC to an on-chain Vault needs David's decision."
+}
