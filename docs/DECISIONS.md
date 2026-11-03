@@ -63,3 +63,6 @@ David's three choices:
 2. **LTV shown as a range**: new optional schema field `credit_terms.ltv_min_percent`; ether.fi = 20–81% depending on the collateral asset (`ltv_percent` stays the maximum).
 3. **Affiliate payout in USDC to an ether.fi Cash Vault: accepted**, account in David's own name, opened by David. No application is filed without David's explicit go-ahead.
 Also: the card page had no section for `credit_terms`. Credit and crypto-backed credit cards now show a "Borrowing terms" block (APR, maximum LTV, liquidation risk) above the regional details, so cashback never hides interest or liquidation risk.
+
+## 2026-11-03 — ether.fi eligibility: least favourable reading governs
+David chose the same mechanism as Wirex: `eligibility.status` `contradictory` → `verified`, modelling the least favourable reading of the two official lists (Malaysia, South Africa excluded; Colombia — eligible but "spending unsupported" — moved to excluded; Puerto Rico and US states out of scope). The contradictions stay in the evidence `contradiction_note` and are shown on the card page. With this, the validator accepts the record as publishable; publication stays with the second-read run.

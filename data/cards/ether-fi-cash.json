@@ -67,7 +67,6 @@
           "CA",
           "KY",
           "CL",
-          "CO",
           "CR",
           "HR",
           "CY",
@@ -143,17 +142,18 @@
           "MY",
           "NL",
           "ZA",
-          "TR"
+          "TR",
+          "CO"
         ],
         "default_for_unlisted": "ineligible",
         "nationality_restrictions_note": "International cardholder agreement: 'strictly prohibited for use by U.S. persons'; users must not be blocked or sanctioned by the US government; 18 years or older.",
-        "usage_note": "Countries named by the help centre as able to receive a physical card (no ISO codes; mapping is ours) plus Belgium and Ireland (eligible, virtual card only — no physical delivery). 'If a jurisdiction is not listed, you cannot apply' → unlisted = ineligible. Malaysia and South Africa appear in the availability list AND in the prohibited-jurisdictions list: modelled as excluded (least favourable). Puerto Rico is listed but is a US territory covered by the US-persons prohibition — left out. Colombia is listed as eligible while the restricted-regions page lists Colombia among countries where 'spending is unsupported'. Spending unsupported in KP, IR, RU, SY, CU, VE, MM, UA, CO. The United States (31 listed states, issuer not read) is a separate programme under a different agreement — not modelled here. Lists carry no date and are 'subject to change'.",
+        "usage_note": "Countries named by the help centre as able to receive a physical card (no ISO codes; mapping is ours) plus Belgium and Ireland (eligible, virtual card only — no physical delivery). 'If a jurisdiction is not listed, you cannot apply' → unlisted = ineligible. Malaysia and South Africa appear in the availability list AND in the prohibited-jurisdictions list: modelled as excluded (least favourable). Puerto Rico is listed but is a US territory covered by the US-persons prohibition — left out. Colombia is listed as eligible while the restricted-regions page lists Colombia among countries where 'spending is unsupported': modelled as excluded (least favourable). Spending unsupported in KP, IR, RU, SY, CU, VE, MM, UA, CO. The United States (31 listed states, issuer not read) is a separate programme under a different agreement — not modelled here. Lists carry no date and are 'subject to change'. Governing value (David, 2026-11-03, policy rule 5): the least favourable reading of the two official lists; contradictions shown with the evidence.",
         "evidence": [
           "ev-etherfi-countries",
           "ev-etherfi-restricted-regions",
           "ev-etherfi-cardholder-agreement-intl"
         ],
-        "status": "contradictory"
+        "status": "verified"
       },
       "kyc": {
         "initial_verification": "required",
@@ -855,6 +855,18 @@
         "ev-etherfi-affiliates"
       ],
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-03T11:17:00Z",
+      "field": "variants[0].eligibility.status",
+      "from": "contradictory",
+      "to": "verified",
+      "reason": "David's decision 2026-11-03 under publication policy rule 5 (same mechanism as Wirex on 2026-11-02): the record models the least favourable reading of the availability and restricted-regions articles (MY, ZA excluded; Puerto Rico and US states out of scope; Colombia moved from allowed to excluded (eligible but spending unsupported = least favourable)); the contradictions stay in ev-etherfi-countries and ev-etherfi-restricted-regions contradiction_note and are shown on the card page. Both reads (2026-11-02, 2026-11-03) agree on every listed country.",
+      "evidence": [
+        "ev-etherfi-countries",
+        "ev-etherfi-restricted-regions"
+      ],
+      "actor": "david"
     }
   ],
   "editorial": {
