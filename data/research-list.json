@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-02.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-03.",
   "target": {
     "min": 15,
     "max": 50
@@ -24,7 +24,7 @@
       "product": "Crypto.com Visa Card (EEA)",
       "status": "validated",
       "record": "data/cards/crypto-com-visa-card.json",
-      "note": "Three reads (2026-10-26, 2026-10-29, 2026-10-31) of the EEA product page agree on all values it states. 2026-10-31 (David's decision): the official Europe fee schedule (help.crypto.com, readable by the fetcher) governs — reward caps modelled as SPEND caps (cap.basis 'spend': first USD 750/1,500/3,000/5,000 per month) and fees modelled from its first read (issuance €4.99/€24.99, card top-up 1%, ATM 2% above allowance, FX 0.2% EU/UK / 2% outside with €400/€800 allowances, none on top tiers, inactivity €6). Second read of the fee schedule done 2026-11-01 (24 h 04 min after the first): all fees and the spend-cap wording confirmed; product page read a fourth time, unchanged. Publication still blocked by eligibility unknown (no official country list read) and KYC hypothesis — research run must read the restricted-markets FAQ and a KYC article."
+      "note": "Three reads (2026-10-26, 2026-10-29, 2026-10-31) of the EEA product page agree on all values it states. 2026-10-31 (David's decision): the official Europe fee schedule (help.crypto.com, readable by the fetcher) governs — reward caps modelled as SPEND caps (cap.basis 'spend': first USD 750/1,500/3,000/5,000 per month) and fees modelled from its first read (issuance €4.99/€24.99, card top-up 1%, ATM 2% above allowance, FX 0.2% EU/UK / 2% outside with €400/€800 allowances, none on top tiers, inactivity €6). Second read of the fee schedule done 2026-11-01 (24 h 04 min after the first): all fees and the spend-cap wording confirmed; product page read a fourth time, unchanged. Publication still blocked by eligibility unknown (no official country list read) and KYC hypothesis — research run must read the restricted-markets FAQ and a KYC article. 2026-11-03: third read of the Europe fee schedule and fifth read of the EEA product page — all values confirmed, unchanged; last_content_verified_at updated. Still blocked by eligibility unknown (the product page points to a separate restricted-markets FAQ, not yet read) and KYC hypothesis."
     },
     {
       "provider": "Nexo",
@@ -61,14 +61,14 @@
       "product": "MetaMask Card",
       "status": "validated",
       "record": "data/cards/metamask-card.json",
-      "note": "Record from seven support-centre articles read 2026-10-30 (all displayed for the US region): 48 countries (EEA minus CZ/EE/LV/LT, UK, CH, others), virtual card $0/year, FX 1%, ATM 2%, conversion 0–0.875% by token, 1% mUSD back (hypothesis for non-US); Metal $199/year with orders paused since 2026-06-02. Issuer 'Monovate' hypothesis. No publisher affiliate or card referral programme found on official pages (MetaMask Rewards is a user points programme, not read). Second read 2026-11-01 (fetcher, 48 h later): all seven articles unchanged, every value confirmed; still displayed for the US region. Not published: base reward (1% mUSD), issuer (Monovate) and mobile wallets remain hypotheses pending an EEA-region read or David's decision — the run does not upgrade field statuses."
+      "note": "Record from seven support-centre articles read 2026-10-30 (all displayed for the US region): 48 countries (EEA minus CZ/EE/LV/LT, UK, CH, others), virtual card $0/year, FX 1%, ATM 2%, conversion 0–0.875% by token, 1% mUSD back (hypothesis for non-US); Metal $199/year with orders paused since 2026-06-02. Issuer 'Monovate' hypothesis. No publisher affiliate or card referral programme found on official pages (MetaMask Rewards is a user points programme, not read). Second read 2026-11-01 (fetcher, 48 h later): all seven articles unchanged, every value confirmed; still displayed for the US region. Not published: base reward (1% mUSD), issuer (Monovate) and mobile wallets remain hypotheses pending an EEA-region read or David's decision — the run does not upgrade field statuses. 2026-11-03: third read (fetcher, 48 h later) of all seven articles — every value confirmed, still 'guidance for United States'; last_content_verified_at updated. Still not published: base reward, issuer and mobile wallets remain hypotheses pending an EEA-region read or David's decision."
     },
     {
       "provider": "ether.fi",
       "product": "ether.fi Cash",
       "status": "validated",
       "record": "data/cards/ether-fi-cash.json",
-      "note": "International (non-US) record from nine official pages read 2026-11-02 (help centre: countries, restricted regions, benefits, membership, cashback, FX, ATM limits, collateral; international cardholder agreement on GitBook; affiliate page). Crypto-collateralised Visa credit line issued by Third National; Core free 3% ETHFI on first $2,000/month, Luxe $199/yr, Pinnacle $999/yr, VIP holding. Contradictions: FX (help 0.5/0.25/0% vs agreement 1% + 50/25 bps → agreement modelled), MY/ZA/UT/WY both available and prohibited, CO eligible but spending unsupported. Unknown: Fee Schedule linked from the agreement, ATM fee beyond 10 free/month, top-up fee, borrowing APR, cashback exclusion list, US programme issuer. Affiliate: official programme pays on card activation + $100 spend (data/affiliate/ether-fi-affiliate.json), payout in USDC on-chain. Second read required before publication."
+      "note": "International (non-US) record from nine official pages read 2026-11-02 (help centre: countries, restricted regions, benefits, membership, cashback, FX, ATM limits, collateral; international cardholder agreement on GitBook; affiliate page). Crypto-collateralised Visa credit line issued by Third National; Core free 3% ETHFI on first $2,000/month, Luxe $199/yr, Pinnacle $999/yr, VIP holding. Contradictions: FX (help 0.5/0.25/0% vs agreement 1% + 50/25 bps → agreement modelled), MY/ZA/UT/WY both available and prohibited, CO eligible but spending unsupported. Unknown: Fee Schedule linked from the agreement, ATM fee beyond 10 free/month, top-up fee, borrowing APR, cashback exclusion list, US programme issuer. Affiliate: official programme pays on card activation + $100 spend (data/affiliate/ether-fi-affiliate.json), payout in USDC on-chain. Second read required before publication. 2026-11-03: second independent read (24 h 40 min later) of all ten pages — every material value confirmed (86 countries identical, prohibited list identical, all fees/rewards/levels/KYC/issuer unchanged); last_content_verified_at updated. The agreement's 'Fee Schedule' link resolves to the ATM-limits article (no fee amounts), so ATM overage / top-up / APR stay unknown. NOT published: eligibility status 'contradictory' (MY/ZA/UT/WY available and prohibited; CO) is refused by the validator for published records — David to decide whether to set eligibility 'verified' with the contradiction shown (record already models the least favourable value) or to adapt the validator."
     },
     {
       "provider": "Gemini",
@@ -96,8 +96,10 @@
     {
       "provider": "Bitget Wallet",
       "product": "Bitget Wallet Card",
-      "status": "identified",
-      "record": null
+      "status": "validated",
+      "record": "data/cards/bitget-wallet-card.json",
+      "note": "EEA+UK record (Immersve-issued virtual Mastercard, USD balance prefunded with USDC on Base) from 8 official pages read 2026-11-03: product page, card-reward page, academy application guide (2026-10-13), EU launch article (2025-06-18, 31-country list), '0 Fees' article (2025-11-17), Mainland China fees and APAC physical-card help articles (other regions, not applied). 2% assetback / 3% booster in a chosen asset, no annual or monthly fee, KYC in-app. Unknown: Europe FX, top-up, ATM and issuance fees — the Europe 'Fees' help-centre article exists (sidebar) but bare /helpCenter/<id> URLs redirect to the download page and the Europe article URL did not surface in search; FX/top-up fees are refunded only within a 400 USD monthly spend cap. Regulated issuer not named (Immersve = partner, hypothesis). Contradiction: 'no top-up fees' (2025-06) vs refund-within-cap (2025-11). Affiliate: an 'Affiliate Program' link exists in the site menu and a 'How to use a referral code' article in the Europe help section — neither read, no affiliate record written. Second read required before publication.",
+      "needs_browser_read": true
     },
     {
       "provider": "COCA",
@@ -148,6 +150,13 @@
       "product": "Bleap Card",
       "status": "identified",
       "record": null
+    },
+    {
+      "provider": "Plasma",
+      "product": "Plasma One Card",
+      "status": "validated",
+      "record": "data/cards/plasma-one-card.json",
+      "note": "Global record (USD stablecoin account, Visa card issued by Rain, accounts by Bridge entities for US / EEA / rest of world) from 13 official pages read 2026-11-03: product page plasma.org/personal, Rewards Addendum (effective 2026-09-26), 11 help-centre articles (tiers, Lite/Core/Platinum, fees, cards, countries, fiat rails, KYC, referral). Tiers: Lite free (2% XPL on first $500/month), Core $199/yr or 20,000 XPL lock (3% first $1,000), Platinum 100,000 XPL lock (4% first $3,000, 0% FX). FX 1%/0.5%/0% + Visa ~1% on Lite/Core; stablecoin deposit 0.15–0.75%; fiat on/off-ramp fees per rail. Unknown: ATM fee (all tiers), positive country list (only exclusions and 31 US states published; EEA/UK implied by Bridge Building Sp. z o.o. and SEPA/FPS rails). Contradictions: Lite '$0' vs regional annual cost 'shown in the app'; Platinum lock 100,000 'currently' vs 'rises to 150,000 after launch'; Platinum article still shows the 3% referral boost replaced by a $300 upgrade bonus; physical cards 'coming soon' vs product page. Affiliate: personal referral only (data/affiliate/plasma-one-referral.json), no publisher programme found. Second read required before publication."
     }
   ],
   "no_kyc_track": {
