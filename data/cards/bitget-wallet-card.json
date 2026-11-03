@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bitget-wallet-card",
+  "slug": "bitget-wallet-card",
+  "name": "Bitget Wallet Card",
+  "brand": "Bitget Wallet",
+  "provider_id": "bitget-wallet",
+  "issuer": {
+    "name": "Immersve (card issuing partner for Europe and LATAM; regulated issuing entity not named)",
+    "status": "hypothesis",
+    "evidence": [
+      "ev-bgw-academy-apply",
+      "ev-bgw-blog-eu",
+      "ev-bgw-card-page"
+    ]
+  },
+  "network": "mastercard",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "unknown",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "Europe/LATAM (Immersve) cards are 'funded via USDC on the Base network'; the card page also lists USDT, ETH and SOL as top-up assets. Top-ups are converted to a USD card balance (0-fees article: 'USDC/USDT top-ups converted to USD'). Spending in EUR/GBP therefore involves a currency conversion.",
+    "evidence": [
+      "ev-bgw-academy-apply",
+      "ev-bgw-card-page",
+      "ev-bgw-blog-0fees"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "bitget-wallet-card-eea-uk",
+      "region_label": "EEA + UK (Immersve-issued Mastercard)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "GB"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Card page (2026): 'Europe: EEA and UK'. The 2025-06-18 launch article names the 31 countries listed here (UK + all 30 EEA members) as eligible regions. The 2026-10-13 academy guide says 'the supported country list is determined dynamically within the Bitget Wallet app'. Other regions (LATAM, APAC, South Africa, Pakistan, Bangladesh, Mainland China) use different issuing partners and are not modelled in this variant.",
+        "evidence": [
+          "ev-bgw-card-page",
+          "ev-bgw-blog-eu",
+          "ev-bgw-academy-apply"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "other"
+        ],
+        "stages_note": "KYC inside the Bitget Wallet app before the card is issued: 18+; passport, driver's licence or national ID plus face verification; country, address, contact details and estimated monthly spend declared. 'No credit checks or staking required.' Approval 'as little as one minute' / 'within 3 minutes'. Proof of address not mentioned for Europe.",
+        "evidence": [
+          "ev-bgw-academy-apply",
+          "ev-bgw-blog-eu",
+          "ev-bgw-card-page"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": {
+            "type": "free",
+            "note": "'0 annual fee', 'no monthly card fee'. Single tier; the 3% 'Booster' assetback is a conditional upgrade, not a paid tier.",
+            "evidence": [
+              "ev-bgw-card-page",
+              "ev-bgw-academy-apply"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "No issuance fee stated for the European virtual card on any page read (the Mainland China fee article states none; the APAC physical card costs $49, $25 until 2026-12-31 — other regions, not applied).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'0 annual fee. No interest markup, no monthly card fee, no hidden charges' (card page); 'No annual fee' (academy guide); 'No annual fees' (EU launch article).",
+              "status": "verified",
+              "evidence": [
+                "ev-bgw-card-page",
+                "ev-bgw-academy-apply",
+                "ev-bgw-blog-eu"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "Standard FX rate for Europe not published on any page read: the Europe 'Fees' help-centre article could not be reached (see research list). The '0 Fees' programme refunds 'any FX fee charged' on spend within a monthly cap of 400 USD (600 USD for MOEW campaign members); 'standard fee rates apply' above it. Settlement 'closely matches Google's live rates'. Mainland China article: FX 'usually around 1%' — other region, not applied.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Virtual-only card in Europe; a 'Refunds and cash withdrawals' help article exists for the Europe/Africa/LATAM section but could not be reached. APAC physical card: 1% or 5 USD minimum — other region, not applied.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "EU launch article (2025-06-18): 'no top-up fees'. '0 Fees' article (2025-11-17): top-up/conversion fees on USDC/USDT 'refunded when you spend' within the 400 USD monthly cap, standard rates above it — implying a standard top-up fee exists whose rate is not published for Europe (Mainland China: 1%). Treated as unknown; contradiction between 'no top-up fees' and 'refunded within a cap' recorded.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "other",
+                "code": "chosen asset: BTC, XAUT, tokenized US stocks/ETFs or USDC"
+              },
+              "requires": "none",
+              "excluded_categories": [
+                "certain merchant category codes (Assetback MCC Rules, help centre article 816 — not read)",
+                "refunded, reversed or cancelled transactions"
+              ],
+              "conditions": "'All cardholders get 2% base assetback' in the reward asset of choice (BTC, gold/XAUT, NVDA/TSLA/GOOGL/S&P 500 tokens, USDC), changeable once per calendar month. Redeemable T+7 days after purchase once ≥ 1 USDC in value. 'Reward limits' mentioned, amounts not stated. The assetback 'typically covers most top-up and currency conversion fees'.",
+              "description": "Base assetback 2%",
+              "status": "verified",
+              "evidence": [
+                "ev-bgw-card-page",
+                "ev-bgw-card-reward",
+                "ev-bgw-academy-apply"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 3,
+              "payout": {
+                "kind": "other",
+                "code": "chosen asset: BTC, XAUT, tokenized US stocks/ETFs or USDC"
+              },
+              "requires": "none",
+              "conditions": "'Booster Tier' 3%: for new users, or for cardholders reaching the monthly spending threshold stated as '$200–$400' in the card-page FAQ ('current upgrade conditions and limits appear on the card page' in the app). Caps not published.",
+              "description": "Booster assetback 3%",
+              "status": "verified",
+              "evidence": [
+                "ev-bgw-card-page",
+                "ev-bgw-card-reward",
+                "ev-bgw-academy-apply"
+              ]
+            },
+            {
+              "type": "signup_bonus",
+              "fixed": {
+                "amount": 20,
+                "currency": "USD"
+              },
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "none",
+              "conditions": "'Win up to $20' for new cardholders completing 'a few qualified transactions'; 'bonus amounts may vary'; official rules not read. Recorded at the advertised maximum — treat as a hypothesis.",
+              "description": "Welcome bonus up to $20",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-bgw-card-reward"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-bgw-card-page",
+      "url": "https://web3.bitget.com/en/card",
+      "title": "Bitget Wallet Card — 'Your everyday spending card' (official product page)",
+      "source_type": "issuer_doc",
+      "excerpt": "'Card issuing partners vary by region'; '0 annual fee', 'No interest markup, no monthly card fee, no hidden charges'; 'Earn up to 3% assetback': 2% base for all, 3% for new users or those reaching the monthly spend threshold ($200–$400 per FAQ); reward assets BTC, gold, US stocks, USDC; exclusions per Assetback MCC Rules (article 816). Regions: 'Europe: EEA and UK', LATAM, APAC, ZA, PK, BD.",
+      "accessed_at": "2026-11-03T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bgw-academy-apply",
+      "url": "https://web3.bitget.com/en/academy/how-to-apply-for-the-bitget-wallet-card-step-by-step-guide-for-new-users",
+      "title": "How to Apply for the Bitget Wallet Card: Step-by-Step Guide (Bitget Wallet Academy, 2026-10-13)",
+      "source_type": "help_center",
+      "excerpt": "Issuing partners: DCS Card Centre (Asia), Fiat24 (Mainland China), Immersve (Europe & LATAM). Immersve cards 'funded via USDC on the Base network', virtual only. 'The supported country list is determined dynamically within the Bitget Wallet app.' 18+, KYC in-app with passport, national ID or driver's licence. 'No annual fee'. Assetback 2% Base / 3% Booster, redeemable T+7, min 1 USDC.",
+      "accessed_at": "2026-11-03T05:52:00Z",
+      "effective_from": "2026-10-13",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bgw-blog-eu",
+      "url": "https://web3.bitget.com/en/blog/articles/bitget-wallet-card-eu",
+      "title": "Spend Seamlessly with Bitget Wallet Card (official blog, EU/UK launch, 2025-06-18)",
+      "source_type": "issuer_doc",
+      "excerpt": "Mastercard card with Immersve, 'live in the United Kingdom and the European Union'; eligible regions listed: UK + AT BE BG HR CY CZ DK EE FI FR DE GR HU IS IE IT LV LI LT LU MT NL NO PL PT RO SK SI ES SE. 'No annual fees, no top-up fees, and competitive exchange rates.' Top-ups in USDC (Base). KYC: ID + face verification, ~3 minutes. 5% BGB campaign 2025-06-25 → 2025-09-30 (ended).",
+      "accessed_at": "2026-11-03T05:55:00Z",
+      "effective_from": "2025-06-18",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "GB"
+        ],
+        "note": "Launch article; the regulated issuing entity is not named ('Immersve's infrastructure and Mastercard's regulatory framework')"
+      },
+      "verification": "verified",
+      "contradiction_note": "States 'no top-up fees' while the 2025-11-17 '0 Fees' article describes top-up/conversion fees refunded only within a 400 USD monthly cap, with 'standard fee rates' above it. Top-up fee therefore modelled as unknown."
+    },
+    {
+      "id": "ev-bgw-blog-0fees",
+      "url": "https://web3.bitget.com/blog/articles/card-0-fees",
+      "title": "Spend Freely with 0 Fees: Now Live on Bitget Wallet Card (official blog, 2025-11-17)",
+      "source_type": "issuer_doc",
+      "excerpt": "FX fees on spending 'fully refunded' and USDC/USDT top-up/conversion fees refunded when spent, 'up to 400 USD per month (or 600 USD if you joined the MOEW card campaign)'; 'standard fee rates apply' above the cap; cap resets 00:00 UTC+8 on the 1st; refunds T+1 to T+3, withdrawable above 1 USDC; all cardholders worldwide; no end date stated; no markup on Google real-time rate.",
+      "accessed_at": "2026-11-03T05:56:00Z",
+      "effective_from": "2025-11-17",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bgw-card-reward",
+      "url": "https://web3.bitget.com/card-reward",
+      "title": "Bitget Wallet Card — assetback and welcome bonus page",
+      "source_type": "official_terms",
+      "excerpt": "'Earn up to 3% assetback': 2% base for all cardholders, 3% for new users or on reaching the monthly spending threshold (amount not stated; rules 'displayed on the Bitget Wallet Card page'). Assets BTC, XAUT, NVDA, TSLA, GOOGL, USDC. 'Win up to $20' welcome bonus after 'a few qualified transactions', 'bonus amounts may vary'. Physical cards only in 8 APAC countries.",
+      "accessed_at": "2026-11-03T05:54:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bgw-help-fees-cn",
+      "url": "https://web3.bitget.com/es-AR/helpCenter/241",
+      "title": "Fees | Mainland China (help centre) — other region, read for structure only",
+      "source_type": "pricing_page",
+      "excerpt": "Mainland China (Fiat24) card: no issuance, annual or purchase fees; 1% top-up fee (100 USDC → 99 USD on the card); FX 'usually around 1%' versus market rate. Sidebar shows a separate 'Fees' article for Europe, Africa & LATAM that could not be reached (bare /helpCenter/<id> URLs redirect to the download page).",
+      "accessed_at": "2026-11-03T05:53:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "CN"
+        ],
+        "note": "Not applicable to the EEA/UK variant; values not applied"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bgw-help-physical-apac",
+      "url": "https://web3.bitget.com/es-AR/helpCenter/675",
+      "title": "Physical card FAQ | APAC (help centre) — other region, not applied",
+      "source_type": "pricing_page",
+      "excerpt": "APAC (DCS) physical card: $49, $25 until 2026-12-31; FX 1.7%, conversion 0.05%; ATM 1% or 5 USD minimum; spend limit 50,000 USD/day; ATM 3,000 USD per withdrawal, 10,000/day, 100,000/month. Eligible: citizens or residents of 8 APAC countries.",
+      "accessed_at": "2026-11-03T05:56:00Z",
+      "effective_from": null,
+      "expires_at": "2026-12-31",
+      "scope": {
+        "note": "APAC only; shows that fee levels differ by issuing partner — Europe figures remain unknown"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bgw-help-sidebar",
+      "url": "https://web3.bitget.com/es-AR/helpCenter/274",
+      "title": "Help centre sidebar — Europe, Africa & LATAM card section (article list only)",
+      "source_type": "help_center",
+      "excerpt": "Section lists: How to apply and verify my identity; Top-up FAQ; How to use a referral code; Fees; Linking payment methods; Adding your card to Google Pay / Apple Pay; Refunds and cash withdrawals; Lost seed phrase and card freezing; How to set your card PIN. None of these Europe articles could be fetched (URLs not discoverable by search; bare IDs redirect).",
+      "accessed_at": "2026-11-03T05:56:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Proves the existence of a Europe fee schedule not yet read"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://web3.bitget.com/en/card",
+    "affiliate": {
+      "program_id": null,
+      "status": "none",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-03T05:56:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-03T05:58:00Z",
+      "field": "*",
+      "reason": "Initial EEA+UK record from 8 official pages (product page, card-reward page, academy application guide 2026-10-13, EU launch article 2025-06-18, '0 Fees' article 2025-11-17, three help-centre pages of which two concern other regions). Single read. Europe fee schedule (help-centre 'Fees' article) unreachable: FX, top-up, ATM and issuance fees unknown. Regulated issuer not named (Immersve = partner).",
+      "evidence": [
+        "ev-bgw-card-page",
+        "ev-bgw-academy-apply",
+        "ev-bgw-blog-eu",
+        "ev-bgw-blog-0fees"
+      ],
+      "actor": "claude (research run)"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual Mastercard for EEA and UK residents, issued through Bitget Wallet's partner Immersve and prefunded with USDC on Base into a USD balance. 2% 'assetback' on all spend (3% for new users or above a monthly spend threshold) paid in a chosen asset (BTC, gold, tokenized US stocks or USDC), no annual or monthly fee. The European fee schedule (FX, top-up, cash withdrawal) is not published on any page the run could read: FX and top-up fees are refunded only within a 400 USD monthly spend cap, and standard rates apply above it.",
+    "good_for": [
+      "EEA/UK residents who already hold USDC on Base and want a free virtual Mastercard with Apple Pay / Google Pay",
+      "Small monthly spend (under the 400 USD fee-refund cap) where FX and top-up fees are refunded",
+      "Users who want rewards in BTC, gold or tokenized stocks rather than a provider token"
+    ],
+    "not_for": [
+      "Anyone who needs a physical card in Europe (virtual only; physical cards exist only in 8 APAC countries)",
+      "Spending above 400 USD a month without knowing the standard FX and top-up rates (not published for Europe)",
+      "Users who need a named regulated issuer: only the partner Immersve is named"
+    ],
+    "watch_outs": [
+      "The card balance is in USD; EUR/GBP purchases are currency conversions whose standard rate is not published for Europe (Mainland China article: ~1%; APAC: 1.7% + 0.05%).",
+      "'No top-up fees' (2025 launch article) conflicts with the 2025-11 '0 Fees' programme that refunds top-up fees only within a monthly cap — both pages are official; the fee is modelled as unknown.",
+      "The Booster 3% rate depends on a monthly spend threshold stated only as '$200–$400' in a FAQ; the current rule is 'displayed on the card page' in the app.",
+      "Reward limits ('reward limits', 'applicable limits') are mentioned but never quantified.",
+      "Issuer status is a hypothesis: Immersve is named as issuing partner, the licensed Mastercard issuer is not.",
+      "The welcome bonus 'up to $20' is recorded at its maximum with status hypothesis; rules not read.",
+      "Help-centre articles are only readable under a locale path (e.g. /es-AR/helpCenter/<id>); the Europe Fees article needs a browser read."
+    ]
+  }
+}
