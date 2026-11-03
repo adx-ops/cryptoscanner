@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "plasma-one-referral",
+  "provider_id": "plasma",
+  "program_name": "Plasma One referral programme (Rewards Addendum)",
+  "program_url": "https://www.plasma.org/plasma-one-cashback-and-referral-terms",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "In-app referral code for existing Plasma One account holders with an active card in good standing; no publisher or affiliate programme found on plasma.org or the help centre.",
+  "our_status": "identified",
+  "paid_action": "Qualifying referral = registration with the code, no prior Plasma One account, identity verification completed, card activated and an eligible purchase made. Then: referral cashback on the friend's spend, plus one-time spend bonuses and upgrade bonuses.",
+  "validation_conditions": "Earning period starts when the friend redeems the code (not at first purchase); Lite and Core earn for 3 months, Platinum for 6 months. 'Applicable limits' apply, amounts not published. Users in excluded countries (list in the Help Center, not read) are not eligible for spend bonuses. No Platinum bonus and no XPL-lock Core bonus where referrer or referred user is a UK resident.",
+  "commission": {
+    "model_note": "Referral cashback by the referrer's tier: Lite 0.25%, Core 1%, Platinum 1% of the referred user's eligible card spend, paid in XPL. One-time spend bonuses (first-spend, high-spend) and Core/Platinum upgrade bonuses paid as Spending Credit; amounts 'in the Help Center' except the Platinum upgrade bonus stated as $300 in spend credit. Second-degree rewards: a percentage of second-level spend bonuses, one level only.",
+    "percent": 0.25,
+    "tiers_note": "Lite rate recorded as the base. The Platinum article still shows a 3% 'Platinum Referral Cashback Boost' (90 days or $300) that the referral article (2026-09-23) and the Addendum (2026-09-26) say is replaced by the $300 upgrade bonus for registrations on or after 2026-09-26.",
+    "status": "contradictory"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "Referral cashback in XPL to the Plasma One account; bonuses as revocable Spending Credit (no cash value, cannot be withdrawn or converted, forfeited on account closure)",
+    "frequency": "Weekly (currently Thursdays), after a pending period of several days"
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Governed by the Plasma One Rewards Addendum (effective 2026-09-26) and the Terms of Service (arbitration, class-action waiver). Programs may be modified or terminated prospectively. Operator Plasma states it is 'not a regulated financial institution'; card issued by Rain, accounts by Bridge entities. UK users: additional disclaimers at plasma.org/uk-disclaimer.",
+  "allowed_countries_note": "Must reside where the Programs are available; excluded countries for spend bonuses are listed in the Help Center (not read). UK residents excluded from Platinum and XPL-lock Core upgrade bonuses.",
+  "evidence": [
+    {
+      "url": "https://www.plasma.org/plasma-one-cashback-and-referral-terms",
+      "title": "Plasma One Rewards Addendum (effective 26 September 2026)",
+      "accessed_at": "2026-11-03T05:39:00Z",
+      "excerpt": "Qualifying referral: registration with code, no prior account, ID verification, card activation. Referral cashback rate and cap by tier (Help Center); spend bonuses and upgrade bonuses as Spending Credit; second-degree rewards one level; Platinum Upgrade Bonus replaces the Platinum Referral Boost from 2026-09-26; UK exclusions."
+    },
+    {
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15506794-how-does-referral-cashback-work",
+      "title": "How does referral cashback work? (help centre, 23 Sep 2026)",
+      "accessed_at": "2026-11-03T05:45:00Z",
+      "excerpt": "Lite 0.25%, Core 1%, Platinum 1%; 3 months (Lite, Core) or 6 months (Platinum) per referral; paid weekly in XPL; $300 spend-credit bonus when a referred friend upgrades to Platinum, replacing the former 3% boost."
+    },
+    {
+      "url": "https://www.plasma.org/personal",
+      "title": "Plasma One product page (tier table)",
+      "accessed_at": "2026-11-03T05:38:00Z",
+      "excerpt": "Referral rewards row: Lite 0.25%, Core 1%, Platinum 1%."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Personal referral programme only: requires holding a Plasma One account and card, pays in XPL and non-withdrawable Spending Credit. No publisher/affiliate programme found (WebSearch 2026-11-03). Not suitable as a comparator affiliate link without David's decision; no application made, nobody contacted."
+}

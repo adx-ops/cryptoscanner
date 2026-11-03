@@ -1,0 +1,769 @@
+{
+  "schema_version": "1.0.0",
+  "id": "plasma-one-card",
+  "slug": "plasma-one-card",
+  "name": "Plasma One Card",
+  "brand": "Plasma One",
+  "provider_id": "plasma",
+  "issuer": {
+    "name": "Rain (Visa Principal Member)",
+    "status": "verified",
+    "evidence": [
+      "ev-plasma-personal",
+      "ev-plasma-rewards-addendum"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "unknown",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "unknown",
+    "supported_assets_note": "Stablecoin account (USDT deposits; other assets swapped on deposit) with fiat on-ramps per region (USD ACH/wire, EUR SEPA, GBP FPS, MXN SPEI, BRL PIX, COP Bre-B). Account services 'powered by Bridge' (Bridge Building Inc. US / Bridge Building Sp. z o.o. EEA / Bridge Building Limited elsewhere). The site states 'Plasma One does not custody your assets' but the mechanism is not documented on the pages read; custody left unknown.",
+    "evidence": [
+      "ev-plasma-personal",
+      "ev-plasma-fees",
+      "ev-plasma-rewards-addendum"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "plasma-one-card-global",
+      "region_label": "Global (EEA, UK, 31 US states and others; no positive country list published)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [
+          "CU",
+          "IR",
+          "KP",
+          "RU",
+          "SY",
+          "UA",
+          "VE"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "The countries article is written at ID-document level: documents from the 7 excluded countries 'are not supported'; documents from BY, CN, IN, IQ, IL, MM, NP, NI, TR, VN, NG, LK may fail but residence in a supported country with proof of address may still allow eligibility.",
+        "usage_note": "No positive list of supported countries is published: the official countries article (last updated 2026-05-11) names only unsupported countries, 31 supported US states (not WA, AZ) and comprehensive-sanctions jurisdictions. EEA and UK availability is implied only by the contracting entities (Bridge Building Sp. z o.o. for EEA residents; UK disclaimer page) and by EUR SEPA / GBP FPS rails. Marketing '180+ countries' refers to Visa acceptance, not eligibility. A separate fiat-rails article (2026-09-18) lists 25 further countries/territories without fiat deposit or withdrawal (incl. JP, TN, DZ, LB, IQ, AF) — not an account exclusion, so not modelled here.",
+        "evidence": [
+          "ev-plasma-countries",
+          "ev-plasma-fiat-countries",
+          "ev-plasma-rewards-addendum"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "proof_of_address"
+        ],
+        "stages_note": "Identity verification (automated, third-party provider not named, up to 5 minutes) before a card can be activated: full legal name, date of birth, country, residential address; passport / national ID / photo ID (original document); liveness check by short video movement capture; proof of address issued within 3 months only in certain countries (not listed). Under-18s rejected. Human review of automated outcomes can be requested.",
+        "evidence": [
+          "ev-plasma-kyc",
+          "ev-plasma-rewards-addendum"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "lite",
+          "name": "Lite",
+          "access": {
+            "type": "free",
+            "note": "Homepage tier table: card cost '$0' and 'Free'. Lite help article: annual cost 'shown in the app for your region'; where a Lite fee applies, accounts created before it took effect stay free. Modelled as free, status contradictory.",
+            "evidence": [
+              "ev-plasma-personal",
+              "ev-plasma-lite",
+              "ev-plasma-rewards-addendum"
+            ],
+            "status": "contradictory"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "conditions": "Virtual card activation: in most regions a $10 deposit is required (stated as 'not a fee', stays spendable); in some regions a $10 card fee applies instead, shown in the app before activation. Modelled as the least favourable case. Physical card not available on Lite.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-lite",
+                "ev-plasma-tier-system",
+                "ev-plasma-cards"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "conditions": "Lite article: annual cost 'shown in the app for your region' — no amount published; homepage says $0.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "Plasma FX markup +1% on card spend in a non-account currency, plus the Visa network FX fee stated as '~1%'. Modelled as 2% in total (approximate network component).",
+              "status": "calculated",
+              "evidence": [
+                "ev-plasma-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No ATM fee or allowance stated on any page read; ATM withdrawals are listed only as excluded from cashback.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.75,
+              "period": "per_transaction",
+              "conditions": "Stablecoin/crypto deposit: Plasma fee 0.15%–0.75% (modelled at the top of the range) plus network, bridge and swap fees shown in the app. Fiat on-ramp instead: EUR SEPA $0.50, GBP FPS $0.50, USD ACH $1, USD wire $15 per deposit on Lite. Additional fees above $250,000 deposits/month.",
+              "status": "calculated",
+              "evidence": [
+                "ev-plasma-fees"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Bank withdrawal (off-ramp) on Lite: 1% + rail fee for EUR SEPA, GBP FPS, USD wire, MXN, BRL; USD ACH 0.75% + ACH fee; COP 1% + $1.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "XPL"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 500,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "excluded_categories": [
+                "ATM withdrawals and cash advances",
+                "peer-to-peer transfers",
+                "currency exchange",
+                "tax payments",
+                "gift cards, prepaid cards, money orders",
+                "gambling and quasi-cash",
+                "crypto purchases or sales",
+                "wire and balance transfers",
+                "spend funded by Spending Credit"
+              ],
+              "conditions": "2% on the first $500 of monthly card spend, then 0.1% above $500. Accrues in USD, paid weekly (Thursdays) in XPL (or Spending Credit at Plasma's election) after a pending period of several days. Rates 'variable and may change prospectively' under the Rewards Addendum (effective 2026-09-26).",
+              "description": "Base cashback in XPL",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-lite",
+                "ev-plasma-rewards-addendum",
+                "ev-plasma-personal"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "core",
+          "name": "Core",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 199,
+              "currency": "USD"
+            },
+            "period": "year",
+            "token": "XPL",
+            "token_amount": 20000,
+            "lock_months": 12,
+            "note": "Either $199 per year (billed annually from the USD cash balance) or lock 20,000 XPL for 12 months (no early unlock, no yield on locked XPL). Modelled on the subscription path; the lock alternative is recorded in token/token_amount/lock_months. Reverts to Lite if not renewed; manual downgrade not possible.",
+            "evidence": [
+              "ev-plasma-core",
+              "ev-plasma-tier-system",
+              "ev-plasma-rewards-addendum"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Up to 2 virtual cards free; first physical card free ('coming soon'); no $10 activation deposit/fee on Core. Additional or replacement physical card $40.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-core",
+                "ev-plasma-cards",
+                "ev-plasma-tier-system"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 20,
+                "currency": "USD"
+              },
+              "conditions": "Standard delivery of the physical card $20 (express $50); shipping not included in the free first card. Physical cards 'coming soon'.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-cards"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 199,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "$199 per year, or 20,000 XPL locked for 12 months instead.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-core",
+                "ev-plasma-tier-system"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Plasma FX markup +0.5% plus the Visa network FX fee stated as '~1%'. Modelled as 1.5% in total (approximate network component).",
+              "status": "calculated",
+              "evidence": [
+                "ev-plasma-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No ATM fee or allowance stated on any page read.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.75,
+              "period": "per_transaction",
+              "conditions": "Stablecoin/crypto deposit: Plasma fee 0.15%–0.75% (modelled at the top of the range) plus network, bridge and swap fees. Fiat on-ramp instead: EUR SEPA $0.40, GBP FPS $0.40, USD ACH $0.50, USD wire $15 per deposit on Core.",
+              "status": "calculated",
+              "evidence": [
+                "ev-plasma-fees"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "conditions": "Bank withdrawal (off-ramp) on Core: USD wire 0.5% + wire fee; EUR SEPA, GBP FPS, MXN, BRL 0.25% + rail fee; USD ACH 0.35% + ACH fee; COP 0.25% + $1. Modelled at the highest rail.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 3,
+              "payout": {
+                "kind": "token",
+                "code": "XPL"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 1000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "excluded_categories": [
+                "ATM withdrawals and cash advances",
+                "peer-to-peer transfers",
+                "currency exchange",
+                "tax payments",
+                "gift cards, prepaid cards, money orders",
+                "gambling and quasi-cash",
+                "crypto purchases or sales",
+                "wire and balance transfers",
+                "spend funded by Spending Credit"
+              ],
+              "conditions": "3% on the first $1,000 of monthly card spend, then 2% ($1,001–$2,000), 1% ($2,001–$3,000), 0.25% above $3,000. Paid weekly in XPL after a pending period. Rates variable under the Rewards Addendum.",
+              "description": "Base cashback in XPL",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-core",
+                "ev-plasma-rewards-addendum"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 5,
+              "payout": {
+                "kind": "token",
+                "code": "XPL"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 250,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "conditions": "AI category: 5% on the first $250 of monthly spend at eligible AI merchants (e.g. ChatGPT, Claude, Cursor), 4% from $251 to $500, 1% above $500. Merchant list in the help centre.",
+              "description": "AI merchant cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-core",
+                "ev-plasma-rewards-addendum"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "fiat",
+                "code": "USD"
+              },
+              "requires": "subscription",
+              "conditions": "Up to $8 per month toward a ChatGPT Go subscription, paid as a USD rebate to the USD cash balance; Visa Signature benefits (Signature card required); Visa Airport Companion lounge programme; priority support.",
+              "description": "AI subscription credit and Visa Signature perks",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-core",
+                "ev-plasma-tier-system"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "platinum",
+          "name": "Platinum",
+          "access": {
+            "type": "lock",
+            "token": "XPL",
+            "token_amount": 100000,
+            "lock_months": 12,
+            "note": "Lock 100,000 XPL for 12 months; no USD subscription option. Platinum article: 100,000 is an introductory amount rising to 150,000 XPL after the first 30 days from launch; the tier-system article (2026-09-23) and the Addendum say the post-launch amount is 'set by Plasma and listed in the Help Center'. Launch date not stated — current amount unresolved, modelled at 100,000.",
+            "evidence": [
+              "ev-plasma-platinum",
+              "ev-plasma-tier-system",
+              "ev-plasma-rewards-addendum"
+            ],
+            "status": "contradictory"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Up to 3 virtual cards free; first physical card free. Additional or replacement physical card $120.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-platinum",
+                "ev-plasma-cards"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "none",
+              "conditions": "Standard delivery free; express delivery $30. Physical cards 'coming soon'.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-cards"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No USD subscription offered for Platinum; access only by locking XPL (opportunity cost and price risk of the locked tokens are not a fee and are not modelled).",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-platinum",
+                "ev-plasma-tier-system"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'No FX fee is charged on Platinum card spend': Plasma markup 0% and Plasma covers the Visa network FX fee while the tier is active.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-fees",
+                "ev-plasma-personal"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No ATM fee or allowance stated on any page read ('no added Plasma fees' is not specific to ATMs).",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.75,
+              "period": "per_transaction",
+              "conditions": "Stablecoin/crypto deposit: Plasma fee 0.15%–0.75% stated as the same on all tiers (modelled at the top of the range) plus network, bridge and swap fees. Fiat on-ramp instead: EUR SEPA $0.30, GBP FPS $0.30, USD ACH $0.50, USD wire $10 per deposit — despite the wording 'Platinum removes Plasma's added onramp fees'.",
+              "status": "calculated",
+              "evidence": [
+                "ev-plasma-fees"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "percent",
+              "percent": 0.2,
+              "period": "per_transaction",
+              "conditions": "Bank withdrawal (off-ramp) on Platinum: USD wire 0.2% + wire fee; USD ACH, EUR SEPA, GBP FPS, MXN, BRL 0.10% + rail fee; COP 0.10% + $1. Modelled at the highest rail.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "XPL"
+              },
+              "requires": "lock",
+              "cap": {
+                "amount": {
+                  "amount": 3000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "excluded_categories": [
+                "ATM withdrawals and cash advances",
+                "peer-to-peer transfers",
+                "currency exchange",
+                "tax payments",
+                "gift cards, prepaid cards, money orders",
+                "gambling and quasi-cash",
+                "crypto purchases or sales",
+                "wire and balance transfers",
+                "spend funded by Spending Credit"
+              ],
+              "conditions": "4% on the first $3,000 of monthly card spend, then 3% ($3,000–$10,000), 2% ($10,000–$15,000), 1% above $15,000. Paid weekly in XPL after a pending period. Rates variable under the Rewards Addendum.",
+              "description": "Base cashback in XPL",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-platinum",
+                "ev-plasma-rewards-addendum"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 10,
+              "payout": {
+                "kind": "token",
+                "code": "XPL"
+              },
+              "requires": "lock",
+              "cap": {
+                "amount": {
+                  "amount": 500,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "conditions": "AI category: 10% on the first $500 of monthly spend at eligible AI merchants, 5% from $500 to $1,000, 1% above. Airline category: 10% on the first $500 of monthly partner-airline spend (rate above $500 not stated). Homepage: 'up to $600/year flight cashback' — not found in the help articles read.",
+              "description": "AI and partner-airline cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-platinum",
+                "ev-plasma-personal",
+                "ev-plasma-rewards-addendum"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "fiat",
+                "code": "USD"
+              },
+              "requires": "lock",
+              "conditions": "Up to $20/month toward ChatGPT Plus and up to $20/month toward Claude Pro, paid as USD rebates; unlimited Priority Pass lounge access (1,900+ lounges, guests charged by Priority Pass); Visa Infinite benefits (Infinite card required); VIP support.",
+              "description": "AI subscription credits, Priority Pass, Visa Infinite perks",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-platinum",
+                "ev-plasma-tier-system"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-plasma-personal",
+      "url": "https://www.plasma.org/personal",
+      "title": "Plasma One — 'The Stablecoin Card for Everyday Money' (product page; plasma.to/one redirects here)",
+      "source_type": "issuer_doc",
+      "excerpt": "'The Plasma One Card is issued by Rain, a Visa Principal Member, pursuant to a license from Visa'; account services 'powered by Bridge'; tier table Lite/Core/Platinum: base cashback 2%/3%/4%, AI 5%/10%, Lite card cost $0, referral 0.25%/1%/1%, Platinum 'FX fee covered'; Apple Pay / Google Pay 'subject to regional rules'; Bridge Building Inc. (US), Sp. z o.o. (EEA), Limited (other).",
+      "accessed_at": "2026-11-03T05:38:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Marketing page; 'virtual and physical cards' and 'up to $600/year flight cashback' not confirmed by the help centre"
+      },
+      "verification": "verified",
+      "contradiction_note": "Says cards are 'available as virtual and physical cards' and Lite card cost '$0'; the help centre says physical cards are 'coming soon' and Lite's annual cost is 'shown in the app for your region'."
+    },
+    {
+      "id": "ev-plasma-rewards-addendum",
+      "url": "https://www.plasma.org/plasma-one-cashback-and-referral-terms",
+      "title": "Plasma One Rewards Addendum (effective 26 September 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Effective September 26, 2026. Card issued by Rain under a Visa licence; accounts by Bridge (Bridge Building Inc. / Sp. z o.o. for EEA / Limited). Cashback accrues in USD, paid in XPL or Spending Credit; rates, caps, lock amounts and prices 'in the Help Center'. Exclusions listed. Lite free; Core by annual USD fee or 12-month XPL lock; Platinum by XPL lock only. 18+, ID verification.",
+      "accessed_at": "2026-11-03T05:39:00Z",
+      "effective_from": "2026-09-26",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-tiers-compare",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15505873-comparing-lite-core-and-platinum",
+      "title": "Comparing Lite, Core and Platinum (help centre, 18 Sep 2026)",
+      "source_type": "help_center",
+      "excerpt": "Directory article pointing to the tier, cashback, fees, cards and perks articles; states that rates, amounts, limits and perks are 'the parameters currently in effect' and may change prospectively under the Rewards Addendum.",
+      "accessed_at": "2026-11-03T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-tier-system",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15505864-how-the-plasma-one-tier-system-works",
+      "title": "How the Plasma One tier system works (help centre, 23 Sep 2026)",
+      "source_type": "help_center",
+      "excerpt": "Lite free ($10 deposit to activate the virtual card in most regions, $10 card fee in some regions); Core $199/year or lock 20,000 XPL for 12 months; Platinum lock 100,000 XPL for 12 months ('currently'), no USD option. Locks cannot be unlocked early. Base cashback up to 2%/3%/4%; AI 5%/10%; airline 10% (Platinum). Reverts to Lite if not renewed; no manual downgrade.",
+      "accessed_at": "2026-11-03T05:41:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-lite",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15506168-how-does-lite-work",
+      "title": "How does Lite work? (help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Annual cost 'shown in the app for your region'; accounts created before a regional Lite fee took effect stay free. Cashback in XPL: 2% on the first $500 of monthly spend, 0.1% above; weekly payouts (Thursdays), pending period. $10 deposit (most regions) or $10 card fee (some regions) to activate. 1 virtual card included; physical card not available on Lite. Referral 0.25% for 3 months.",
+      "accessed_at": "2026-11-03T05:41:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Lite's annual cost is regional and 'shown in the app' while the product page states '$0' — modelled as free with status contradictory."
+    },
+    {
+      "id": "ev-plasma-core",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15506332-how-does-core-work",
+      "title": "How does Core work? (help centre, 18 Sep 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "$199 per year or lock 20,000 XPL for 12 months. Cashback in XPL: 3% first $1,000/month, 2% $1,001–$2,000, 1% $2,001–$3,000, 0.25% above. AI merchants: 5% first $250, 4% $251–$500, 1% above. Referral 1% for 3 months. Up to $8/month ChatGPT Go rebate. Up to 2 free virtual cards; 1 free physical card ('coming soon'); Visa Signature; priority support.",
+      "accessed_at": "2026-11-03T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-platinum",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15506476-how-does-platinum-work",
+      "title": "How does Platinum work? (help centre, 18 Sep 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "Lock 100,000 XPL for 12 months — 'promotional rate that rises to 150,000 XPL after the first 30 days from launch'. Cashback in XPL: 4% first $3,000/month, 3% to $10,000, 2% to $15,000, 1% above. AI: 10% first $500, 5% to $1,000, 1% above. Airline: 10% first $500. Referral 1% for 6 months; 'Platinum Referral Cashback Boost' 3% for 90 days or $300. $20 + $20/month AI rebates; Priority Pass.",
+      "accessed_at": "2026-11-03T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "Still describes the 3% Platinum Referral Cashback Boost, which the referral article (23 Sep 2026) and the Rewards Addendum (26 Sep 2026) say is replaced by a flat $300 upgrade bonus for registrations on or after 26 Sep 2026. Lock amount 100,000 'rising to 150,000' vs tier-system article '100,000 currently'."
+    },
+    {
+      "id": "ev-plasma-fees",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15506070-what-are-the-fees-on-plasma-one",
+      "title": "What are the fees on Plasma One? (help centre, undated — 'updated over 2 weeks ago')",
+      "source_type": "pricing_page",
+      "excerpt": "FX on card spend: Plasma markup Lite +1%, Core +0.5%, Platinum 0%; Visa network FX ~1% (Lite, Core), none on Platinum. On-ramp per deposit (Lite/Core/Platinum): USD ACH $1/$0.50/$0.50, USD wire $15/$15/$10, GBP FPS and EUR SEPA $0.50/$0.40/$0.30. Off-ramp: SEPA, FPS 1%/0.25%/0.10% + rail fee; USD wire 1%/0.5%/0.2%. Stablecoin deposit: 0.15%–0.75% + network fees. No ATM figures.",
+      "accessed_at": "2026-11-03T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-countries",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/14703938-which-countries-and-us-states-does-plasma-one-support",
+      "title": "Which countries and US states does Plasma One support? (help centre, last updated 11 May 2026)",
+      "source_type": "eligibility_page",
+      "excerpt": "Unsupported (documents not supported): Cuba, Iran, North Korea, Russia, Syria, Ukraine, Venezuela. Document-level blocks, residence may still qualify with proof of address: BY, CN, IN, IQ, IL, MM, NP, NI, TR, VN, NG, LK. 31 supported US states listed; Washington and Arizona unsupported. No positive country list; EEA/UK not mentioned except in the sanctions sentence.",
+      "accessed_at": "2026-11-03T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-fiat-countries",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15180607-which-countries-does-plasma-one-support-for-fiat-deposits-and-withdrawals",
+      "title": "Which countries does Plasma One support for fiat deposits and withdrawals? (help centre, 18 Sep 2026)",
+      "source_type": "help_center",
+      "excerpt": "Fiat available 'in most countries, with exceptions': 25 countries/territories without fiat rails (incl. AF, DZ, BY, CN, CU, IR, IQ, JP, LB, LY, MM, KP, RU, SY, TN, VE, YE, occupied Ukrainian territories); US ACH/FedWire unavailable for 12 countries (BD, BT, HT, KE, XK, MA, MZ, NP, NE, PK, QA, ZW); SEPA/FPS/SWIFT unavailable for CF, ER, ML. US: all states except New York.",
+      "accessed_at": "2026-11-03T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Fiat rails only; not an account-eligibility list"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-kyc",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/14285201-what-documents-do-i-need-for-identity-verification",
+      "title": "What documents do I need for identity verification? (help centre, 2 Sep 2026)",
+      "source_type": "help_center",
+      "excerpt": "Full legal name, date of birth, country, residential address; passport, national ID or photo ID (original, unexpired, all corners visible); proof of address issued within 3 months 'in certain countries'; liveness check by 'a short video movement capture'; automated third-party provider (not named), up to 5 minutes; under-18s can reapply at 18; human review available.",
+      "accessed_at": "2026-11-03T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-cards",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15506874-how-many-cards-can-i-have",
+      "title": "How many cards can I have? (help centre, undated — 'updated over a week ago')",
+      "source_type": "pricing_page",
+      "excerpt": "Virtual: Lite 1, Core up to 2, Platinum up to 3 free; additional virtual 'coming soon, at an additional cost'. Physical: Lite not available; Core first card free ('coming soon'), additional/replacement $40, standard delivery $20, express $50; Platinum first free, additional/replacement $120, standard delivery free, express $30. Physical cards 'coming soon' overall; delivery fees shown in the app.",
+      "accessed_at": "2026-11-03T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-referral",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15506794-how-does-referral-cashback-work",
+      "title": "How does referral cashback work? (help centre, 23 Sep 2026)",
+      "source_type": "help_center",
+      "excerpt": "Referral cashback by the referrer's tier: Lite 0.25%, Core 1%, Platinum 1%; Lite/Core earn for 3 months, Platinum 6 months; paid weekly in XPL. Friend must join with the code, verify identity, activate a card and make an eligible purchase. $300 spend-credit bonus when a referred friend upgrades to Platinum, 'replaces the former 3% Platinum boost'. Caps: 'applicable limits', not listed.",
+      "accessed_at": "2026-11-03T05:45:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.plasma.org/personal",
+    "affiliate": {
+      "program_id": "plasma-one-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-03T05:45:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-03T05:46:00Z",
+      "field": "*",
+      "reason": "Initial record from 13 official pages (product page, Rewards Addendum, 11 help-centre articles) read by the unattended research run on 2026-11-03. Single read; second read ≥ 24 h later required before publication. Country list unknown (no positive list published), ATM fee unknown on all tiers, Lite annual cost and Platinum lock amount contradictory between pages.",
+      "evidence": [
+        "ev-plasma-personal",
+        "ev-plasma-rewards-addendum",
+        "ev-plasma-fees",
+        "ev-plasma-countries"
+      ],
+      "actor": "claude (research run)"
+    }
+  ],
+  "editorial": {
+    "summary": "Stablecoin account with a Visa card issued by Rain, run by Plasma (not a regulated institution) with Bridge entities for the US, the EEA and the rest of the world. Cashback is paid in the XPL token: 2% (Lite, first $500/month), 3% (Core, $199/year or 20,000 XPL locked), 4% (Platinum, 100,000 XPL locked), stepping down above the monthly bands. FX is 1%/0.5%/0% plus Visa's ~1% on the two lower tiers. No official country list and no ATM fee is published.",
+    "good_for": [
+      "Spending USDT-funded balances with a tiered XPL cashback and no FX fee on Platinum",
+      "Users who already hold XPL and accept a 12-month lock to unlock Core or Platinum",
+      "Heavy spending on AI subscriptions (5–10% category cashback) and on partner airlines (Platinum)"
+    ],
+    "not_for": [
+      "Anyone who needs a published list of eligible countries before applying — only exclusions and US states are stated",
+      "Users who want cashback in fiat or a stable asset: payouts are in XPL (or revocable Spending Credit), converted at payout price",
+      "ATM users: no ATM fee or allowance is published anywhere read"
+    ],
+    "watch_outs": [
+      "Eligibility status is unknown: the countries article names only unsupported countries and US states; EEA/UK service is implied by the Bridge contracting entities and SEPA/FPS rails, not stated.",
+      "Lite is '$0' on the product page but its annual cost is 'shown in the app for your region' in the help centre; a $10 deposit or (in some regions) a $10 card fee is needed to activate the virtual card.",
+      "Platinum's lock amount is stated as 100,000 XPL 'currently' and as an introductory amount rising to 150,000 XPL 30 days after launch; locked XPL earns nothing, cannot be unlocked early and 'may lose' value to zero.",
+      "Physical cards are 'coming soon' per the help centre although the product page advertises them; only virtual cards are modelled.",
+      "The Platinum article still describes a 3% referral boost that the Rewards Addendum (26 Sep 2026) replaced with a $300 upgrade bonus; the Addendum governs.",
+      "Yield ('up to 6%') comes from third-party DeFi vaults with stated risk of total loss; it is not a card feature and is not modelled.",
+      "FX modelled as Plasma markup plus Visa's '~1%' network fee (approximate); top-up modelled at the top of the 0.15–0.75% range."
+    ]
+  }
+}
