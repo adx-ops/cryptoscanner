@@ -163,6 +163,11 @@
           "$ref": "#/$defs/numOrUnknown"
         },
         "ltv_percent": {
+          "description": "Maximum loan-to-value the provider states (best collateral).",
+          "$ref": "#/$defs/numOrUnknown"
+        },
+        "ltv_min_percent": {
+          "description": "Lowest per-asset maximum LTV when it varies by collateral; shown as a range with ltv_percent.",
           "$ref": "#/$defs/numOrUnknown"
         },
         "liquidation_risk": {

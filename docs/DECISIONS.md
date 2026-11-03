@@ -56,3 +56,13 @@ David's four choices (asked after the 2026-11-02 runs):
 2. **Wirex Premium base Cryptoback: the dedicated X-tras pricing page governs (1%)** under policy rule 5; the 3% on the undated benefits article stays in `contradiction_note` and is shown on the card page. Status `contradictory` → `verified`, value unchanged.
 3. **Wirex product status stays `active`, with a note**: the EEA issuer terms and the card order flow are still online even though wirexapp.com/personal redirects to wirex.one. Every read re-checks it.
 4. **Second-read rotation skips records flagged `needs_browser_read` or `awaiting_decision`** in `data/research-list.json` (agents/second-read-run.md), so that unblocked records (MetaMask, Crypto.com, ether.fi, Wirex) get read.
+
+## 2026-11-02 — ether.fi: FX from the dated agreement, LTV as a range, USDC payout accepted; borrowing terms shown on card pages
+David's three choices:
+1. **FX fee: the dated cardholder agreement governs** (1.5% Core, 1.25% Luxe, 1% Pinnacle and VIP) under policy rule 5; the help-centre figures (0.5% / 0.25% / none) stay in `ev-etherfi-fx.contradiction_note`, shown on the card page. Status `contradictory` → `verified`, values unchanged.
+2. **LTV shown as a range**: new optional schema field `credit_terms.ltv_min_percent`; ether.fi = 20–81% depending on the collateral asset (`ltv_percent` stays the maximum).
+3. **Affiliate payout in USDC to an ether.fi Cash Vault: accepted**, account in David's own name, opened by David. No application is filed without David's explicit go-ahead.
+Also: the card page had no section for `credit_terms`. Credit and crypto-backed credit cards now show a "Borrowing terms" block (APR, maximum LTV, liquidation risk) above the regional details, so cashback never hides interest or liquidation risk.
+
+## 2026-11-03 — ether.fi eligibility: least favourable reading governs
+David chose the same mechanism as Wirex: `eligibility.status` `contradictory` → `verified`, modelling the least favourable reading of the two official lists (Malaysia, South Africa excluded; Colombia — eligible but "spending unsupported" — moved to excluded; Puerto Rico and US states out of scope). The contradictions stay in the evidence `contradiction_note` and are shown on the card page. With this, the validator accepts the record as publishable; publication stays with the second-read run.
