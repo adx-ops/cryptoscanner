@@ -556,7 +556,7 @@
       "title": "Plasma One — 'The Stablecoin Card for Everyday Money' (product page; plasma.to/one redirects here)",
       "source_type": "issuer_doc",
       "excerpt": "'The Plasma One Card is issued by Rain, a Visa Principal Member, pursuant to a license from Visa'; account services 'powered by Bridge'; tier table Lite/Core/Platinum: base cashback 2%/3%/4%, AI 5%/10%, Lite card cost $0, referral 0.25%/1%/1%, Platinum 'FX fee covered'; Apple Pay / Google Pay 'subject to regional rules'; Bridge Building Inc. (US), Sp. z o.o. (EEA), Limited (other).",
-      "accessed_at": "2026-11-03T05:38:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -571,7 +571,7 @@
       "title": "Plasma One Rewards Addendum (effective 26 September 2026)",
       "source_type": "official_terms",
       "excerpt": "Effective September 26, 2026. Card issued by Rain under a Visa licence; accounts by Bridge (Bridge Building Inc. / Sp. z o.o. for EEA / Limited). Cashback accrues in USD, paid in XPL or Spending Credit; rates, caps, lock amounts and prices 'in the Help Center'. Exclusions listed. Lite free; Core by annual USD fee or 12-month XPL lock; Platinum by XPL lock only. 18+, ID verification.",
-      "accessed_at": "2026-11-03T05:39:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": "2026-09-26",
       "expires_at": null,
       "scope": {},
@@ -583,7 +583,7 @@
       "title": "Comparing Lite, Core and Platinum (help centre, 18 Sep 2026)",
       "source_type": "help_center",
       "excerpt": "Directory article pointing to the tier, cashback, fees, cards and perks articles; states that rates, amounts, limits and perks are 'the parameters currently in effect' and may change prospectively under the Rewards Addendum.",
-      "accessed_at": "2026-11-03T05:40:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -595,7 +595,7 @@
       "title": "How the Plasma One tier system works (help centre, 23 Sep 2026)",
       "source_type": "help_center",
       "excerpt": "Lite free ($10 deposit to activate the virtual card in most regions, $10 card fee in some regions); Core $199/year or lock 20,000 XPL for 12 months; Platinum lock 100,000 XPL for 12 months ('currently'), no USD option. Locks cannot be unlocked early. Base cashback up to 2%/3%/4%; AI 5%/10%; airline 10% (Platinum). Reverts to Lite if not renewed; no manual downgrade.",
-      "accessed_at": "2026-11-03T05:41:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -607,7 +607,7 @@
       "title": "How does Lite work? (help centre)",
       "source_type": "pricing_page",
       "excerpt": "Annual cost 'shown in the app for your region'; accounts created before a regional Lite fee took effect stay free. Cashback in XPL: 2% on the first $500 of monthly spend, 0.1% above; weekly payouts (Thursdays), pending period. $10 deposit (most regions) or $10 card fee (some regions) to activate. 1 virtual card included; physical card not available on Lite. Referral 0.25% for 3 months.",
-      "accessed_at": "2026-11-03T05:41:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -620,7 +620,7 @@
       "title": "How does Core work? (help centre, 18 Sep 2026)",
       "source_type": "pricing_page",
       "excerpt": "$199 per year or lock 20,000 XPL for 12 months. Cashback in XPL: 3% first $1,000/month, 2% $1,001–$2,000, 1% $2,001–$3,000, 0.25% above. AI merchants: 5% first $250, 4% $251–$500, 1% above. Referral 1% for 3 months. Up to $8/month ChatGPT Go rebate. Up to 2 free virtual cards; 1 free physical card ('coming soon'); Visa Signature; priority support.",
-      "accessed_at": "2026-11-03T05:42:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -632,7 +632,7 @@
       "title": "How does Platinum work? (help centre, 18 Sep 2026)",
       "source_type": "pricing_page",
       "excerpt": "Lock 100,000 XPL for 12 months — 'promotional rate that rises to 150,000 XPL after the first 30 days from launch'. Cashback in XPL: 4% first $3,000/month, 3% to $10,000, 2% to $15,000, 1% above. AI: 10% first $500, 5% to $1,000, 1% above. Airline: 10% first $500. Referral 1% for 6 months; 'Platinum Referral Cashback Boost' 3% for 90 days or $300. $20 + $20/month AI rebates; Priority Pass.",
-      "accessed_at": "2026-11-03T05:44:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -645,7 +645,7 @@
       "title": "What are the fees on Plasma One? (help centre, undated — 'updated over 2 weeks ago')",
       "source_type": "pricing_page",
       "excerpt": "FX on card spend: Plasma markup Lite +1%, Core +0.5%, Platinum 0%; Visa network FX ~1% (Lite, Core), none on Platinum. On-ramp per deposit (Lite/Core/Platinum): USD ACH $1/$0.50/$0.50, USD wire $15/$15/$10, GBP FPS and EUR SEPA $0.50/$0.40/$0.30. Off-ramp: SEPA, FPS 1%/0.25%/0.10% + rail fee; USD wire 1%/0.5%/0.2%. Stablecoin deposit: 0.15%–0.75% + network fees. No ATM figures.",
-      "accessed_at": "2026-11-03T05:43:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -659,7 +659,7 @@
       "title": "Which countries and US states does Plasma One support? (help centre, last updated 11 May 2026)",
       "source_type": "eligibility_page",
       "excerpt": "Unsupported (documents not supported): Cuba, Iran, North Korea, Russia, Syria, Ukraine, Venezuela. Document-level blocks, residence may still qualify with proof of address: BY, CN, IN, IQ, IL, MM, NP, NI, TR, VN, NG, LK. 31 supported US states listed; Washington and Arizona unsupported. No positive country list; EEA/UK not mentioned except in the sanctions sentence.",
-      "accessed_at": "2026-11-03T05:43:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -671,7 +671,7 @@
       "title": "Which countries does Plasma One support for fiat deposits and withdrawals? (help centre, 18 Sep 2026)",
       "source_type": "help_center",
       "excerpt": "Fiat available 'in most countries, with exceptions': 25 countries/territories without fiat rails (incl. AF, DZ, BY, CN, CU, IR, IQ, JP, LB, LY, MM, KP, RU, SY, TN, VE, YE, occupied Ukrainian territories); US ACH/FedWire unavailable for 12 countries (BD, BT, HT, KE, XK, MA, MZ, NP, NE, PK, QA, ZW); SEPA/FPS/SWIFT unavailable for CF, ER, ML. US: all states except New York.",
-      "accessed_at": "2026-11-03T05:44:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -685,7 +685,7 @@
       "title": "What documents do I need for identity verification? (help centre, 2 Sep 2026)",
       "source_type": "help_center",
       "excerpt": "Full legal name, date of birth, country, residential address; passport, national ID or photo ID (original, unexpired, all corners visible); proof of address issued within 3 months 'in certain countries'; liveness check by 'a short video movement capture'; automated third-party provider (not named), up to 5 minutes; under-18s can reapply at 18; human review available.",
-      "accessed_at": "2026-11-03T05:43:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -697,7 +697,7 @@
       "title": "How many cards can I have? (help centre, undated — 'updated over a week ago')",
       "source_type": "pricing_page",
       "excerpt": "Virtual: Lite 1, Core up to 2, Platinum up to 3 free; additional virtual 'coming soon, at an additional cost'. Physical: Lite not available; Core first card free ('coming soon'), additional/replacement $40, standard delivery $20, express $50; Platinum first free, additional/replacement $120, standard delivery free, express $30. Physical cards 'coming soon' overall; delivery fees shown in the app.",
-      "accessed_at": "2026-11-03T05:44:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -711,7 +711,7 @@
       "title": "How does referral cashback work? (help centre, 23 Sep 2026)",
       "source_type": "help_center",
       "excerpt": "Referral cashback by the referrer's tier: Lite 0.25%, Core 1%, Platinum 1%; Lite/Core earn for 3 months, Platinum 6 months; paid weekly in XPL. Friend must join with the code, verify identity, activate a card and make an eligible purchase. $300 spend-credit bonus when a referred friend upgrades to Platinum, 'replaces the former 3% Platinum boost'. Caps: 'applicable limits', not listed.",
-      "accessed_at": "2026-11-03T05:45:00Z",
+      "accessed_at": "2026-11-04T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -727,8 +727,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-03T05:45:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-04T06:36:00Z",
+    "last_auto_check_at": "2026-11-04T06:36:00Z"
   },
   "changelog": [
     {
@@ -742,6 +742,14 @@
         "ev-plasma-countries"
       ],
       "actor": "claude (research run)"
+    },
+    {
+      "date": "2026-11-04T06:36:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "validated",
+      "reason": "Second independent read on 2026-11-04 (fetcher, 25 h after the 2026-11-03 first read) of all 13 evidence pages: every material value confirmed — issuer Rain (Visa Principal Member) / Bridge entities incl. Bridge Building Sp. z o.o. for the EEA; Lite free with $10 activation deposit (or $10 card fee in some regions) and annual cost 'shown in the app for your region'; Core $199 per year or 20,000 XPL locked 12 months; Platinum 100,000 XPL locked 12 months ('rises to 150,000 after the first 30 days from launch' still shown); cashback bands 2 %/0.1 % – 3/2/1/0.25 % – 4/3/2/1 %; AI 5/4/1 % and 10/5/1 %; airline 10 %; FX markup 1 %/0.5 %/0 % plus Visa ~1 % (none on Platinum); on-ramp/off-ramp fee tables, stablecoin deposit 0.15–0.75 %, card counts and delivery fees, KYC documents, exclusion lists all unchanged; no ATM fee published anywhere. Addendum still effective 2026-09-26. NOT published: eligibility remains 'unknown' (still no positive country list; EEA/UK implied only by contracting entities and rails) and Lite access remains 'contradictory' ($0 on the product page vs regional cost in the app). Minor: the fiat-rails article lists 26 entries without fiat rails (the first read counted 25; Gaza Strip and West Bank are separate entries) — not modelled, excerpt count only.",
+      "actor": "second-read-run"
     }
   ],
   "editorial": {

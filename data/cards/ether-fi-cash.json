@@ -653,7 +653,7 @@
       "title": "In which countries is the Cash card available? (help centre)",
       "source_type": "eligibility_page",
       "excerpt": "87 countries/territories named where a physical card is available (incl. FR, DE, IT, ES, PL, SE, NO, CH, GB, LI, IS…); Belgium and Ireland eligible without physical delivery; 31 US states listed; 'If a jurisdiction is not listed, you cannot apply for a Cash card at this time'. No date ('Updated this week').",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -666,7 +666,7 @@
       "title": "Where is Ether.Fi cash currently unavailable? (help centre)",
       "source_type": "eligibility_page",
       "excerpt": "Prohibited jurisdictions: Estonia, Finland, India, Indonesia, Malaysia, Netherlands, South Africa, Turkey; 20 US states incl. Utah and Wyoming. Spending unsupported: North Korea, Iran, Russia, Syria, Cuba, Venezuela, Myanmar, Ukraine, Colombia. Unlisted jurisdictions 'may still be restricted'. No date ('Updated over 3 weeks ago').",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -693,7 +693,7 @@
       "title": "What are the benefits of a personal Cash credit card? (help centre)",
       "source_type": "pricing_page",
       "excerpt": "Visa Signature. Cashback 3% on first $2,000 (Core) / $10,000 (Luxe) / $50,000 (Pinnacle), 4% on $50,000 (VIP); EUR caps $800/$3,000/$16,000. Category cashback Luxe 10% to $10/mo, Pinnacle 20% to $20, VIP 30% to $30. Virtual card $10 after free ones; physical $50 (Core) / $100 (Luxe, Pinnacle). ATM 'Free, up to 10 withdrawals per month' (Core, Luxe), 'Free, unlimited' (Pinnacle, VIP). No date.",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -707,7 +707,7 @@
       "title": "How do membership levels work? (help centre)",
       "source_type": "pricing_page",
       "excerpt": "Core: free starting level. Luxe: 5K points to activate + 5K/month, or $15K Liquid, or 30K ETHFI staked, or $199/yr. Pinnacle: 25K points, or $100K Liquid, or 150K ETHFI, or $999/yr. VIP: $500K Liquid or 500K ETHFI staked, no annual purchase. Points: Cash 1,000 per $1k spent; reset monthly. No date ('Updated over 2 weeks ago').",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -719,7 +719,7 @@
       "title": "How does cashback work? (help centre)",
       "source_type": "official_terms",
       "excerpt": "'Eligible cashback is earned in ETHFI'; converted at clearing price, 7-day lock. Monthly bands: Core 3% first $2,000 / 1% to $3,000 / 0.5% above; Luxe 3% to $10,000 / 1% to $20,000 / 0.5%; Pinnacle 3% to $50,000 / 1% to $80,000 / 0.5%; VIP 4% to $50,000. EUR bands lower ($800/$3,000/$16,000; 0.1% top band). Shared USD+EUR counter, resets monthly. Exclusions in a separate article.",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -733,7 +733,7 @@
       "title": "What's the foreign exchange (FX) rate used on Cash transactions? (help centre)",
       "source_type": "pricing_page",
       "excerpt": "'FX rates apply when you make a transaction in a currency other than USD or EUR'; rate set at settlement; prevailing base rate plus a margin by tier: Core 0.5%, Luxe 0.25%, Pinnacle none, VIP none. No date ('Updated over 2 weeks ago').",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -746,7 +746,7 @@
       "title": "What are the ATM withdrawal limits for personal Cash cards? (help centre)",
       "source_type": "help_center",
       "excerpt": "'Up to $5,000 per withdrawal'; 'Up to 5 withdrawal attempts in a rolling 24-hour period' (declined attempts count); 'Up to $25,000 in a rolling 24-hour period'; 'The same limits apply to every membership level'; PIN required. No fee amounts on this page. No date ('Updated this week').",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -760,7 +760,7 @@
       "title": "How does collateral and borrowing work? (help centre)",
       "source_type": "help_center",
       "excerpt": "Aave LendGateway (Optimism) Product LTVs: 81% USDC/USDT/EURC/frxUSD, 80% liquidUSD/liquidReserve/liquidEUR, 75% liquidRWA, 55% weETH/WETH, 52% eBTC, 50% liquidETH/liquidBTC, 20% ETHFI/sETHFI/OP. Interest accrues (rate not stated). Legacy liquidation: '50% of your total collateral is liquidated first'; thresholds 95/75/70/50%, bonuses 1–5%. GitBook parameters 'last updated on August 27, 2026'.",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -772,7 +772,7 @@
       "title": "KYC process and requirements (help centre)",
       "source_type": "help_center",
       "excerpt": "'You will complete KYC during account setup'; 'Approval is required before a Cash card can be issued'; passport, national ID or driving licence; 'advanced liveness check'; proof of address dated within 3 months 'in some cases'; card-issuer questionnaire possible; most reviews within 48 h; crypto deposits need no verification. No date ('Updated over a week ago').",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -784,7 +784,7 @@
       "title": "ether.fi Affiliate Program (official page)",
       "source_type": "affiliate_program",
       "excerpt": "'Open to all users'; qualifying referral = sign-up via link + Cash card activation + $100 personal spend. Tiered: new-member bonus $10–$20, high-spender bonus $15–$25, 0.1–0.3% cashback on referral spending, 20–25% physical-card commission, 50% card-fee commission, 5–12.5% yield rev share. Paid in USDC on the 15th of the following month. 'Additional program rules may apply'.",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-04T06:38:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -801,7 +801,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-11-03T06:27:00Z",
-    "last_auto_check_at": "2026-11-03T06:27:00Z"
+    "last_auto_check_at": "2026-11-04T06:38:00Z"
   },
   "changelog": [
     {
@@ -867,6 +867,14 @@
         "ev-etherfi-restricted-regions"
       ],
       "actor": "david"
+    },
+    {
+      "date": "2026-11-04T06:38:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "validated",
+      "reason": "Third read on 2026-11-04 (fetcher, 24 h 11 min after the 2026-11-03 read) of 10 of the 11 evidence pages: every material value they carry confirmed — 86 named countries identical (mapping to the 84 modelled codes unchanged, Belgium/Ireland virtual-only, Malaysia/South Africa/Colombia/Puerto Rico still excluded), prohibited list identical, cashback bands and caps, category cashback, membership thresholds and prices ($199 / $999), card counts and prices, ATM 'free up to 10 / unlimited' and $5,000 / $25,000 limits, help-centre FX margins 0.5 % / 0.25 % / none / none, KYC steps, LTV 81 % max / 20 % min (the LTV table now lists further assets — WHYPE 45 %, beHYPE 40 %, QQQx 66 %, SPYx 67 %, PAXG 68 %, TBLLx 70 % — within the modelled range), affiliate programme terms. NOT re-read: ev-etherfi-cardholder-agreement-intl (gitbook, Ltd. International) — the fetcher refused the URL for lack of provenance (not an empty shell, not a differing value); it is the governing source for the issuer and the modelled FX fees (1 % base + 50/25 bps), so publication waits for a read of that page (browser or next run). last_content_verified_at left at 2026-11-03 for that reason. Note for David: the gitbook also serves 'ether.fi Cash Cardholder Agreement (International)' at /etherfi/ether.fi-legal/ether.fi-cash-cardholder-agreement-international (Last Modified April 15, 2025), which states a 1 % foreign transaction fee without any per-level bps — the Ltd. document must be re-read to confirm the 50/25 bps wording still stands.",
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
