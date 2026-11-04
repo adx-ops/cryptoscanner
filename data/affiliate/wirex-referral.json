@@ -40,10 +40,16 @@
     {
       "url": "https://wirexapp.com/affiliate",
       "title": "Wirex referral page",
-      "accessed_at": "2026-10-26T21:30:00Z",
+      "accessed_at": "2026-11-04T07:10:00Z",
       "excerpt": "10% of gross fees year 1 then 5% for two years; requires an active card; BTC payouts."
+    },
+    {
+      "url": "https://help.wirexapp.com/article/wirex-affiliate-faq-1325",
+      "title": "Wirex Affiliate FAQ (help centre)",
+      "accessed_at": "2026-11-04T07:10:00Z",
+      "excerpt": "Individuals and businesses welcome; apply via Impact (app.impact.com), approval 'within five business days'; same terms for all affiliates (rates not stated); revenue visible in Impact by the 15th, paid on the 29th; links fail with cookie/GA blockers; 'Offline'/'Other' partner types not accepted."
     }
   ],
   "verification": "contradictory",
-  "notes": "Personal referral, not a publisher programme: requires David to be a Wirex customer. Decision needed before any use."
+  "notes": "Personal referral, not a publisher programme: requires David to be a Wirex customer. Decision needed before any use. 2026-11-04: a publisher track exists on Impact (Wirex Affiliate FAQ) besides the personal referral — rates not public; worth a separate programme file once David decides to apply (card published since 2026-11-04)."
 }

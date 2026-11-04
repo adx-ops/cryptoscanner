@@ -10,13 +10,13 @@
   "allowed_channels": [
     "unknown"
   ],
-  "application_conditions": "Apply via app.impact.com sign-up; eligibility criteria not published on the page.",
+  "application_conditions": "'Apply now' → Impact sign-up (https://app.impact.com/campaign-promo-signup/Bitpanda1649085811694.brand). Support FAQ: register with the same e-mail as your Bitpanda user account; send the exact link where you plan to promote; an Affiliate Manager reviews and e-mails approval; panel inside the Bitpanda account. No website required (social channels accepted). Restrictions: no PPC on search engines; German affiliates may not refer German residents; Affiliate and Tell-a-Friend are mutually exclusive (2026-11-04).",
   "our_status": "identified",
   "paid_action": "'Commission for every referred user' — qualifying action not defined publicly.",
   "validation_conditions": "Not stated.",
   "commission": {
-    "model_note": "CPA and revenue-share options depending on traffic source; no rates published.",
-    "status": "unknown"
+    "model_note": "CPA and revenue-share options depending on traffic source (affiliate page, no rates); support FAQ states 'up to 20% revenue share' on referred customers' purchases. Card not named as a commissionable action.",
+    "status": "hypothesis"
   },
   "attribution": {
     "mechanism": "tracking_link",
@@ -41,10 +41,16 @@
     {
       "url": "https://www.bitpanda.com/en/affiliate",
       "title": "Bitpanda Affiliate Programme page",
-      "accessed_at": "2026-10-26T21:30:00Z",
+      "accessed_at": "2026-11-04T07:10:00Z",
       "excerpt": "CPA and Revenue Share options; apply via Impact; FAQ answers not in extracted content."
+    },
+    {
+      "url": "https://support.bitpanda.com/hc/en-us/articles/360000054720-Frequently-asked-questions-about-the-Affiliate-Program",
+      "title": "Bitpanda Affiliate Programme FAQ (support)",
+      "accessed_at": "2026-11-04T07:10:00Z",
+      "excerpt": "Up to 20% revenue share on referred customers' purchases, paid to the default Bitpanda fiat wallet before the end of the following month; cookie tracking; no card mention; German affiliates cannot refer German residents."
     }
   ],
   "verification": "hypothesis",
-  "notes": "Terms must be read inside Impact after application; nothing more is public."
+  "notes": "Terms must be read inside Impact after application; nothing more is public. 2026-11-04: requires a Bitpanda user account under the same e-mail; a German-resident affiliate could not monetise German visitors — check David's entity country before applying."
 }
