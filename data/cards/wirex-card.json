@@ -14,7 +14,7 @@
   },
   "network": "mastercard",
   "category": "prepaid",
-  "record_status": "validated",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -554,7 +554,7 @@
       "title": "Wirex Debit Mastercard Terms and Conditions (EEA issuer terms, help centre)",
       "source_type": "official_terms",
       "excerpt": "'Your Card is issued by us' = Transact Payments Malta Limited (MFSA-authorised EMI); Program Manager Wirex UAB (Lithuania). Applicants 18+ and 'resident in the European Economic Area (but not in Cyprus or Liechtenstein)'. E-money product, 'not a credit, charge or debit card'. FX fee 'as set out in the Fees & Limits Schedule'; card usable only after KYC. No effective date.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-04T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -568,7 +568,7 @@
       "title": "Wirex Fees (help centre fee schedule, by region)",
       "source_type": "pricing_page",
       "excerpt": "Card issuance free in all regions; ATM free up to EUR 200/month (EEA) then 2%; delivery EEA EUR 5 (DHL World Mail) / EUR 15 (DHL Express); SEPA/Faster Payments/ACH/PIX transfers free; card funding '0% or more' by currency/country; exchange fees 'can be viewed in the app'; GBP 30 administrative fee for ToS violations. No FX fee line, no plan prices, no replacement fee amount, no date.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-04T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -584,7 +584,7 @@
       "title": "X-tras pricing: plans and tiers (help centre)",
       "source_type": "pricing_page",
       "excerpt": "Standard free; Premium EUR 9.99/month or EUR 102/year; Elite EUR 29.99/month or EUR 306/year, paid in euros. Cryptoback: Standard Entry 0.5% / Enhanced 1% (150k WXT); Premium Entry 1% / Enhanced 2% (250k) / Ultimate 3% (750k); Elite Entry 4% / Enhanced 6% (1.5m) / Ultimate 8% (7.5m); locks of 180 days, no fee for tier upgrades. Table typo '250,00'. No region stated, no date.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-04T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -599,7 +599,7 @@
       "title": "Benefits of the Wirex card explained (help centre)",
       "source_type": "help_center",
       "excerpt": "Cryptoback in WXT on all purchases: Elite 'up to 8%', Premium 3%, Standard 0.5%; 'no annual or foreign exchange fees'; 'up to $200 in fee-free withdrawals globally'; virtual card in app, physical card at Visa/Mastercard acceptance points. No issuer, no countries, no date.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-04T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -612,7 +612,7 @@
       "title": "Wirex Limits (help centre)",
       "source_type": "help_center",
       "excerpt": "Virtual/Plastic/Metal: max purchase EUR 30k; per month EUR 30k/30k/75k; cash withdrawal per day N/A/EUR 500/EUR 500; per month N/A/EUR 5k/EUR 5k. SEPA up to EUR 50,000 per day. Card top-up min USD 12; unconfirmed card USD 15,000/day, confirmed USD 25,000/day. 'Limits may vary depending on region or currency'; 'all limits are subject to change'. No date.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-04T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -626,7 +626,7 @@
       "title": "How to verify your identity (help centre)",
       "source_type": "help_center",
       "excerpt": "Verification starts 'when you elevate your status to Starter': phone number confirmed by SMS, government-issued photo ID, selfie and liveness check 'depending on your country of residence', proof of residential address 'may be requested'. 'Typically, verification is completed within 5 minutes.' No country list, no date.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-04T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -638,7 +638,7 @@
       "title": "How to order a Wirex card (help centre)",
       "source_type": "help_center",
       "excerpt": "Physical: 'Get Physical Card', accept Card Terms, top up if prompted, choose delivery option, pay the delivery fee from an account; 'we do not charge any additional fees'; a minimum balance may be required ('exact amount required will be displayed in the app'); delivery several days to four weeks. Virtual: immediate. One physical card at a time. Availability 'varies by region'. No date.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-04T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -669,8 +669,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-02T06:31:00Z",
-    "last_auto_check_at": "2026-11-02T06:31:00Z"
+    "last_content_verified_at": "2026-11-04T06:33:00Z",
+    "last_auto_check_at": "2026-11-04T06:33:00Z"
   },
   "changelog": [
     {
@@ -739,6 +739,14 @@
       "to": "active",
       "reason": "David's decision 2026-11-02: kept 'active' — the EEA issuer terms and the physical-card order flow are still online; wirexapp.com/personal redirects to wirex.one and no official page states the EEA Mastercard continues unchanged. Re-checked at every read.",
       "actor": "david"
+    },
+    {
+      "date": "2026-11-04T06:33:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "published",
+      "reason": "Second independent read on 2026-11-04 (fetcher, 48 h after the 2026-11-02 read; first reads 2026-10-29/30): all material values confirmed on the seven help-centre pages — issuer Transact Payments Malta Limited (MFSA EMI) / programme manager Wirex UAB, eligibility 18+ resident in the EEA except Cyprus and Liechtenstein, e-money card usable only after KYC (ID, selfie/liveness by country, proof of address on request), Standard free / Premium EUR 9.99 per month or EUR 102 per year / Elite EUR 29.99 per month or EUR 306 per year, Cryptoback 0.5/1 % – 1/2/3 % – 4/6/8 % with 150k/250k/750k/1.5m/7.5m WXT locks of 180 days, issuance free, delivery EUR 5 / EUR 15, ATM free to EUR 200 per month then 2 %, SEPA free, FX still not stated (unknown), limits unchanged. Known contradictions unchanged (benefits article: Premium 3 %, '$200' ATM allowance, 'no FX fees') and shown on the card page per policy rule 5 and David's 2026-11-02 decisions. Not re-read: ev-wirex-one-post (hypothesis, context only, no value depends on it) — its URL could not be surfaced by search; another official Wirex One post (May 8) read instead is silent on the EEA card. The marketing page wirexapp.com/eea/en/card still advertises the Wirex card (Visa/Mastercard, 'up to 8 %').",
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
