@@ -37,7 +37,7 @@ Updated: 2026-10-31 19:30 (Europe/Berlin). Keep this file short; it is the hand-
 | Agent run prompts + publication policy | written | agents/*.md, docs/PUBLICATION-POLICY.md |
 | Auto-merge of agent PRs | ACTIVE — PR #1 and #2 merged automatically 2026-10-29 after green CI | .github/workflows/auto-merge.yml; now also triggers deploy + CI on main |
 | GitHub Pages deploy (verified build, noindex, base path /cryptoscanner) | active | run 40742521004 green; page fetched: title, noindex, 2 cards, links under /cryptoscanner/ |
-| Affiliate matrix | 6 programmes recorded (3 terms_verified, 2 identified, 1 not_applicable), none applied | data/affiliate/*.json |
+| Affiliate matrix | 14 programmes recorded (3 terms_verified, 11 identified), none applied; 0 monetised links. Tooling 2026-11-04: `npm run affiliate-status` (consistency, in CI), `npm run affiliate-link` (only entry point for a confirmed URL, tested), weekly affiliate run (agents/affiliate-run.md), docs/AFFILIATE-STATUS.md. Applications need David (entity details, payout, KYC on portals). | `npm test` 24/24, `npm run affiliate-status` 0 problems |
 | Promotion expiry (date-based) | tested | scripts/expire-promos.ts, 4 tests, dry-run shows demo promo expiring 2027-01-01 |
 | Graveyard page | tested | /graveyard, empty state, ui-check |
 | Sitemap | implemented | @astrojs/sitemap only when PUBLIC_SITE_URL set and dataset=verified; verified with a test URL |

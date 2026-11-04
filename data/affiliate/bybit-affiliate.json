@@ -47,5 +47,5 @@
     }
   ],
   "verification": "verified",
-  "notes": "Revenue depends on trading, not card orders. Whether Bybit EU (EEA card) runs the same programme is unknown."
+  "notes": "Revenue depends on trading, not card orders. Whether Bybit EU (EEA card) runs the same programme is unknown. 2026-11-04: the Bybit Affiliate Program T&C article (help centre, bybit.tr mirror) returns 'This article is currently not supported on this site' to the fetcher — needs_browser_read for the terms; General FAQ not re-read (client-rendered)."
 }

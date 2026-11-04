@@ -51,8 +51,14 @@
       "title": "Crypto.com Affiliate Program page + FAQ",
       "accessed_at": "2026-10-26T21:30:00Z",
       "excerpt": "Earn up to 50% across products; monthly payouts; apply via Impact.com; review ~1 week; earnings window 180–365 days after KYC."
+    },
+    {
+      "url": "https://help.crypto.com/en/articles/6124767-crypto-com-exchange-affiliate-program",
+      "title": "Crypto.com Exchange Affiliate Programme (help centre, 2026-07-20)",
+      "accessed_at": "2026-11-04T07:10:00Z",
+      "excerpt": "Exchange programme: form at crypto.com/exchange/affiliate; needs a 'considerable social presence'; up to 50% of referees' trading fees; paid daily in USDC to the Exchange account; Broker Programme members excluded; the Visa Card is not named as commissionable."
     }
   ],
   "verification": "verified",
-  "notes": "Card-specific commission unknown: revenue share is driven by trading activity, not card orders. Do not count a card order as revenue."
+  "notes": "Card-specific commission unknown: revenue share is driven by trading activity, not card orders. Do not count a card order as revenue. 2026-11-04: the Exchange affiliate programme is trading-only and selective; the Impact-based app programme (crypto.com/affiliate) remains the relevant route for the card, card commission still unknown."
 }

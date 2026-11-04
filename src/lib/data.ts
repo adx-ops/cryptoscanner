@@ -3,11 +3,13 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import type { CardRecord, Variant, Tier, Fee, Reward } from './types.ts';
 
-export const DATASET: 'verified' | 'demo' = (import.meta.env.PUBLIC_DATASET === 'verified') ? 'verified' : 'demo';
+// import.meta.env is injected by Astro/Vite; under plain node (scripts, tests) it is undefined.
+const ENV: Record<string, string | undefined> = (import.meta as { env?: Record<string, string | undefined> }).env ?? {};
+export const DATASET: 'verified' | 'demo' = (ENV.PUBLIC_DATASET === 'verified') ? 'verified' : 'demo';
 export const IS_DEMO = DATASET === 'demo';
-export const NOINDEX = import.meta.env.PUBLIC_NOINDEX === '1';
+export const NOINDEX = ENV.PUBLIC_NOINDEX === '1';
 /** Prefix a root-relative path with the deployment base path (GitHub Pages project sites). */
-export const BASE: string = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+export const BASE: string = (ENV.BASE_URL || '/').replace(/\/$/, '');
 export function url(path: string): string { return `${BASE}${path.startsWith('/') ? path : '/' + path}`; }
 
 const dir = IS_DEMO ? 'data/demo/cards' : 'data/cards';

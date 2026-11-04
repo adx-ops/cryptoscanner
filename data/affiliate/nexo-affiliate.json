@@ -11,7 +11,7 @@
     "social",
     "unknown"
   ],
-  "application_conditions": "Form (name, email, role, contact via Telegram/WhatsApp/LinkedIn); individual review; 'Request invitation' suggests selectivity; no minimum audience.",
+  "application_conditions": "'Request invitation' → on-page form (nexo.com/eea/affiliate#form): first name, last name, email, 'What best describes you?' (Adviser / KOL-Creator / Affiliate-Media / Other), preferred contact besides email (Telegram / WhatsApp / LinkedIn), checkbox 'I have a Nexo Partner reference'. Partnership Team replies 'within one business day'. No minimum audience; judged on fit and 'Value First' standard. Affiliate track then runs on Impact, Business track on Nexo Partner Portal (2026-11-04).",
   "our_status": "terms_verified",
   "paid_action": "Share of fee revenue: trading fees, credit interest/loan volume, yield, futures; 'Nexo Card transactions' listed without a rate.",
   "validation_conditions": "Not stated.",
@@ -48,10 +48,16 @@
     {
       "url": "https://nexo.com/affiliate",
       "title": "Nexo Affiliate Program page + FAQ",
-      "accessed_at": "2026-10-26T21:30:00Z",
+      "accessed_at": "2026-11-04T07:10:00Z",
       "excerpt": "Two tracks; up to 50% of fee revenue; Nexo Card transactions listed as a revenue source without a rate; withdrawals every 30 days."
+    },
+    {
+      "url": "https://nexo.com/eea/affiliate",
+      "title": "Nexo Affiliate Program (EEA page) + form",
+      "accessed_at": "2026-11-04T07:10:00Z",
+      "excerpt": "Up to 50% of fee revenue; 'Nexo Card: earnings on client transactions' (no rate); card issued by DiPocket UAB; payouts bank transfer or crypto, withdrawal once every 30 days; form fields: name, email, role, Telegram/WhatsApp/LinkedIn, partner reference."
     }
   ],
   "verification": "verified",
-  "notes": "Card eligibility itself needs >$5,000 portfolio for cashback; commission depends on referred users' fee-generating activity."
+  "notes": "Card eligibility itself needs >$5,000 portfolio for cashback; commission depends on referred users' fee-generating activity. 2026-11-04: application form fields recorded; second programme to apply to (card transactions are a named revenue source)."
 }

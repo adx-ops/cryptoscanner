@@ -24,6 +24,8 @@ jobs:
       # (raw logs are not reachable from Claude's environment).
       - name: Validate data
         run: set -o pipefail; npm run validate 2>&1 | tee -a step.log
+      - name: Affiliate pipeline consistency
+        run: set -o pipefail; npm run affiliate-status 2>&1 | tee -a step.log
       - name: Unit tests
         run: set -o pipefail; npm test 2>&1 | tail -20 | tee -a step.log
       - name: Type check

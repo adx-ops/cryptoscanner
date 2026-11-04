@@ -16,7 +16,9 @@
     "test": "node --experimental-strip-types --test \"src/lib/**/*.test.ts\" \"scripts/**/*.test.ts\"",
     "expire": "node --experimental-strip-types scripts/expire-promos.ts",
     "ui-check": "node scripts/ui-check.mjs",
-    "preview-export": "python3 scripts/export-preview.py dist ../preview"
+    "preview-export": "python3 scripts/export-preview.py dist ../preview",
+    "affiliate-status": "node --experimental-strip-types scripts/affiliate-status.ts",
+    "affiliate-link": "node --experimental-strip-types scripts/set-affiliate-link.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
