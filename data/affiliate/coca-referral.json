@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "coca-referral",
+  "provider_id": "coca",
+  "program_name": "COCA Refer a Friend Campaign",
+  "program_url": "https://help.coca.xyz/support/solutions/articles/205000042721-refer-a-friend-campaign",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "In-app referral link or code for registered COCA users who have completed KYC. No publisher, affiliate or partner programme and no partner contact found on help.coca.xyz or docs.coca.xyz (search and pages read 2026-11-04).",
+  "our_status": "identified",
+  "paid_action": "Qualified referral = a new user (no previous COCA registration or wallet) signs up with the link/code, orders a COCA card (virtual or physical), spends at least $100 cumulatively and makes at least 3 card payments at different merchants, all within 30 days of registering. Eligible purchases follow the Loyalty Program exclusions (ATM, gift cards, gambling, P2P…).",
+  "validation_conditions": "Rewards credited automatically once the friend qualifies, claimable 14 days later within the Monthly Claim Capacity ('automatically increases as needed'). One reward per friend. Clawback if the friend closes the account within 60 days of payout or if qualifying transactions are reversed or charged back. Deleting the referrer's account forfeits all pending and issued rewards. Rewards cannot be withdrawn as cash outside the app.",
+  "commission": {
+    "model_note": "Flat $20 to the referrer and $10 to the friend per qualified referral, in USD or EUR depending on the account's currency settings. No stated cap on the number of referrals.",
+    "amount": 20,
+    "currency": "USD",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "Claims minimum $1.00, one claim per 24 hours (Loyalty Program rules)",
+    "method": "Credited to the referrer's USD or EUR COCA account; claimable in-app only",
+    "frequency": "Per qualified referral, claimable 14 days after crediting"
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Terms effective 2026-05-01, last updated 2026-10-26. 'COCA's interpretation of these rules is final and binding'; governed by 'the laws of the jurisdiction in which COCA operates' — jurisdiction and legal entity not named. COCA may change, suspend or end the campaign at any time. Participation implies acceptance of the Loyalty Program Terms, Terms of Use and Privacy Policy.",
+  "allowed_countries_note": "Referrer and friend must be able to order a COCA card, i.e. reside in one of the 73 listed card countries (Tier System Terms §1.2).",
+  "evidence": [
+    {
+      "url": "https://help.coca.xyz/support/solutions/articles/205000042721-refer-a-friend-campaign",
+      "title": "Refer a Friend Campaign (help centre; effective 1 May 2026, last updated 26 Oct 2026)",
+      "accessed_at": "2026-11-04T05:49:00Z",
+      "excerpt": "Referrer $20, friend $10 (USD or EUR) when the friend orders a card, spends ≥ $100 and makes ≥ 3 payments at different merchants within 30 days; claimable after 14 days; one reward per friend; 60-day clawback; account deletion forfeits rewards. No partner programme mentioned."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Personal referral programme only: requires holding a verified COCA account; rewards are in-app balance, not a payout to a publisher. No publisher/affiliate programme found. Not usable as a comparator affiliate link without David's decision; no application made, nobody contacted."
+}

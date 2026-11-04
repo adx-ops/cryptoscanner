@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other.",
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "entries": [
     {
       "provider": "Wirex",
@@ -178,11 +178,11 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "referral only ($20/$10 in-app)",
+      "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
-      "priority": 4
+      "last_seen": "2026-11-04",
+      "priority": 0
     },
     {
       "provider": "Ready",
@@ -213,11 +213,12 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official publisher programme (kraken.com/affiliate); card commissions coming soon",
+      "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
-      "priority": 4
+      "last_seen": "2026-11-04",
+      "priority": 0,
+      "needs_browser_read": true
     },
     {
       "provider": "Deblock",

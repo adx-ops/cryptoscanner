@@ -1,0 +1,1251 @@
+{
+  "schema_version": "1.0.0",
+  "id": "coca-card",
+  "slug": "coca-card",
+  "name": "COCA Card",
+  "brand": "COCA",
+  "provider_id": "coca",
+  "issuer": {
+    "name": "Not disclosed — card 'provided in collaboration with Wirex' (issuing entity not named)",
+    "status": "hypothesis",
+    "evidence": [
+      "ev-coca-virtual-physical",
+      "ev-coca-mica"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "unknown",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "unknown",
+    "supported_assets_note": "Card spends a USD or EUR 'Banking Account' balance topped up by SEPA/USD bank transfer to a personal IBAN, by card from another bank, or by stablecoin deposit on several blockchains (list only in-app). Whether stablecoin deposits are converted at top-up or held as stablecoins is not stated. The crypto wallet is MPC non-custodial (keys not held by COCA); the banking balance is described only as one 'you control' running on unnamed 'regulated payment infrastructure' — custody of the card balance left unknown.",
+    "evidence": [
+      "ev-coca-docs-banking",
+      "ev-coca-topup",
+      "ev-coca-mica"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "coca-card-global",
+      "region_label": "Global (73 listed residence countries incl. EEA, UK, CH)",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AD",
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GI",
+          "GR",
+          "GG",
+          "HU",
+          "IS",
+          "IE",
+          "IM",
+          "IT",
+          "JE",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "MD",
+          "MC",
+          "ME",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "CH",
+          "UA",
+          "GB",
+          "AU",
+          "AZ",
+          "GE",
+          "HK",
+          "IL",
+          "JP",
+          "KZ",
+          "MO",
+          "MY",
+          "NZ",
+          "OM",
+          "PH",
+          "SA",
+          "KR",
+          "TW",
+          "TH",
+          "AE",
+          "UZ",
+          "GH",
+          "KE",
+          "NG",
+          "ZA",
+          "UG",
+          "AR",
+          "BR",
+          "CL",
+          "CO",
+          "EC",
+          "SV",
+          "MX",
+          "PA",
+          "PE"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "Residence governs: 'you need to select the country of your residence, not the country of your citizenship'.",
+        "usage_note": "Positive list of 73 countries/territories published identically in the Tier System Terms (§1.2) and the ordering article: 41 in Europe (all 30 EEA states plus AD, CH, GB, GI, GG, IM, JE, MC, MD, ME, UA), 18 in Asia/Oceania/Middle East, 5 in Africa, 9 in Latin America. EUR bank accounts (IBAN) are limited to 28 countries (25 EU states — not HR, CY — plus Iceland, Norway and the UK; no EUR account for AD, CH, LI, GI, GG, IM, JE, MC, MD, ME, UA) and require app version 3.0.0 or higher. The United States is not listed. Limits are expressed in EUR and claim capacities in USD.",
+        "evidence": [
+          "ev-coca-tier-terms",
+          "ev-coca-order"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "proof_of_address"
+        ],
+        "stages_note": "Verification starts when adding the card product ('Add Products'), before any card is issued: government-issued passport, ID card or driving licence plus proof of address (bank document, utility bill dated within 6 months, government document, lease or employer letter); 'typically up to 20 minutes'. Selfie/liveness not mentioned. The non-custodial crypto wallet itself can be used without verification. 18+ for the loyalty programme.",
+        "evidence": [
+          "ev-coca-order",
+          "ev-coca-tier-terms"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "starter",
+          "name": "Starter",
+          "access": {
+            "type": "free",
+            "note": "Default tier: no stake, no fee.",
+            "evidence": [
+              "ev-coca-tier-terms"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card",
+                "ev-coca-order"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Not itemised: an initial top-up equivalent to €50 'covers delivery and card issuance', the remainder becoming card balance; the delivery cost itself is not published.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No monthly or annual fee on any tier: docs state 'Zero annual fees' and the Tier System Terms table lists no recurring fee; tiers are unlocked by staking COCA tokens, not by a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-docs-banking",
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. Docs: 'Zero FX fees on direct currency pairs' (other pairs not addressed); help centre 'What is COCA?': the wallet 'eliminates monthly and foreign exchange charges'. Marketing statements without a dated fee schedule — not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. 'What is COCA?' (help centre, undated marketing text) describes 'fee-free ATM withdrawals up to $250 globally'; the limits article and the Tier System Terms give only cash-withdrawal limits (€850/day, €5,000/month, 5/day) and no fee or allowance. Not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Top-up by crypto deposit (supported assets and networks shown only in-app), SEPA/USD bank transfer to a personal IBAN, or card from another bank. No top-up, conversion or deposit fee is published on any page read.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 15,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "cash-related transactions and ATM withdrawals",
+                "crypto purchases",
+                "gambling",
+                "government and judicial payments",
+                "refunded or cancelled transactions",
+                "professional services and timeshares",
+                "payment intermediaries (PayPal, Alipay, WeChat Pay, Wise, Revolut, Skrill, Neteller, Cash App, Venmo and similar)",
+                "MCC list in section 7 of the Tier System Terms"
+              ],
+              "conditions": "1% cashback on eligible card payments with no stated limit on qualifying spend, but rewards can only be claimed up to the tier's Monthly Claim Capacity of $15 (Starter tier bonus); unclaimed amounts carry over, one claim per 24 h, minimum $1, pending 14 days, expire after 12 months. Credited 'in stablecoins (e.g., USDC, EURC)' to the USD or EUR banking balance (§3.4) — elsewhere described as paid in USD or EUR. Payments via Curve earn a flat 1% on tiers below Premium+ (from 2026-04-01). Tier System Terms effective 2025-09-01, last updated 2026-09-01; rates may change at any time.",
+              "description": "Base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "none",
+              "conditions": "5% APY on USD balances up to an unstated tier cap (2% above); EUR balances earn no APY. No subscription rebate on Starter.",
+              "description": "Balance APY",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "promotional",
+              "percent": 8,
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 24,
+                  "currency": "USD"
+                },
+                "period": "once",
+                "basis": "reward"
+              },
+              "conditions": "Welcome Cashback Drop: new users who register between 2 and 30 November 2026, complete KYC and reside in a card country earn 8% on their first three eligible COCA Card transactions, capped at $300 of eligible spend in total ($24 maximum). Afterwards the standard 1% (or the user's tier rate) applies. Excludes crypto purchases, top-ups, transfers, cash withdrawals and cash-like transactions. Can be combined with the referral programme.",
+              "valid_from": "2026-11-02",
+              "valid_until": "2026-11-30",
+              "description": "Welcome Cashback Drop (November 2026)",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-welcome-promo"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€30,000 per transaction, per day and per month; €75,000 per 3 months; €100,000 per 6 months. Elite members can request an increase in-app.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 5000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€850 and 5 withdrawals per day; €5,000 per month.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": {
+            "type": "holding",
+            "token": "COCA",
+            "token_amount": 300,
+            "note": "Stake 300 COCA (≈ $470 per the Terms' own indicative USD values). Staked tokens are locked for the duration of tier membership, cannot be partially unstaked and earn no APY; cancelling returns the user to Starter with a 30-day cooldown. Modelled as a holding requirement because no fixed lock period is stated.",
+            "evidence": [
+              "ev-coca-tier-terms"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card",
+                "ev-coca-order"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Not itemised: an initial top-up equivalent to €50 'covers delivery and card issuance', the remainder becoming card balance; the delivery cost itself is not published.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No monthly or annual fee on any tier: docs state 'Zero annual fees' and the Tier System Terms table lists no recurring fee; tiers are unlocked by staking COCA tokens, not by a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-docs-banking",
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. Docs: 'Zero FX fees on direct currency pairs' (other pairs not addressed); help centre 'What is COCA?': the wallet 'eliminates monthly and foreign exchange charges'. Marketing statements without a dated fee schedule — not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. 'What is COCA?' (help centre, undated marketing text) describes 'fee-free ATM withdrawals up to $250 globally'; the limits article and the Tier System Terms give only cash-withdrawal limits (€850/day, €5,000/month, 5/day) and no fee or allowance. Not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Top-up by crypto deposit (supported assets and networks shown only in-app), SEPA/USD bank transfer to a personal IBAN, or card from another bank. No top-up, conversion or deposit fee is published on any page read.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 3,
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "cap": {
+                "amount": {
+                  "amount": 25,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "cash-related transactions and ATM withdrawals",
+                "crypto purchases",
+                "gambling",
+                "government and judicial payments",
+                "refunded or cancelled transactions",
+                "professional services and timeshares",
+                "payment intermediaries (PayPal, Alipay, WeChat Pay, Wise, Revolut, Skrill, Neteller, Cash App, Venmo and similar)",
+                "MCC list in section 7 of the Tier System Terms"
+              ],
+              "conditions": "3% cashback on eligible card payments with no stated limit on qualifying spend, but rewards can only be claimed up to the tier's Monthly Claim Capacity of $25 (tier bonus plus $1 per 100 COCA staked, at the 300 COCA entry stake); unclaimed amounts carry over, one claim per 24 h, minimum $1, pending 14 days, expire after 12 months. Credited 'in stablecoins (e.g., USDC, EURC)' to the USD or EUR banking balance (§3.4) — elsewhere described as paid in USD or EUR. Payments via Curve earn a flat 1% on tiers below Premium+ (from 2026-04-01). Tier System Terms effective 2025-09-01, last updated 2026-09-01; rates may change at any time.",
+              "description": "Base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "conditions": "50% rebate on 1 eligible subscription category (charge of $70 or less per subscription per category per calendar month; the part above $70 is excluded), counted within the Monthly Claim Capacity. 5% APY on USD balances up to an unstated tier cap (2% above; EUR balances earn no APY). Priority support and COCA Travel hotel discounts on Premium and above.",
+              "description": "Subscription rebate, balance APY and perks",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€30,000 per transaction, per day and per month; €75,000 per 3 months; €100,000 per 6 months. Elite members can request an increase in-app.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 5000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€850 and 5 withdrawals per day; €5,000 per month.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "standard-plus",
+          "name": "Standard+",
+          "access": {
+            "type": "holding",
+            "token": "COCA",
+            "token_amount": 1000,
+            "note": "Stake 1,000 COCA (≈ $1,500 per the Terms' own indicative USD values). Staked tokens are locked for the duration of tier membership, cannot be partially unstaked and earn no APY; cancelling returns the user to Starter with a 30-day cooldown. Modelled as a holding requirement because no fixed lock period is stated.",
+            "evidence": [
+              "ev-coca-tier-terms"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card",
+                "ev-coca-order"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Not itemised: an initial top-up equivalent to €50 'covers delivery and card issuance', the remainder becoming card balance; the delivery cost itself is not published.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No monthly or annual fee on any tier: docs state 'Zero annual fees' and the Tier System Terms table lists no recurring fee; tiers are unlocked by staking COCA tokens, not by a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-docs-banking",
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. Docs: 'Zero FX fees on direct currency pairs' (other pairs not addressed); help centre 'What is COCA?': the wallet 'eliminates monthly and foreign exchange charges'. Marketing statements without a dated fee schedule — not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. 'What is COCA?' (help centre, undated marketing text) describes 'fee-free ATM withdrawals up to $250 globally'; the limits article and the Tier System Terms give only cash-withdrawal limits (€850/day, €5,000/month, 5/day) and no fee or allowance. Not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Top-up by crypto deposit (supported assets and networks shown only in-app), SEPA/USD bank transfer to a personal IBAN, or card from another bank. No top-up, conversion or deposit fee is published on any page read.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4,
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "cap": {
+                "amount": {
+                  "amount": 35,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "cash-related transactions and ATM withdrawals",
+                "crypto purchases",
+                "gambling",
+                "government and judicial payments",
+                "refunded or cancelled transactions",
+                "professional services and timeshares",
+                "payment intermediaries (PayPal, Alipay, WeChat Pay, Wise, Revolut, Skrill, Neteller, Cash App, Venmo and similar)",
+                "MCC list in section 7 of the Tier System Terms"
+              ],
+              "conditions": "4% cashback on eligible card payments with no stated limit on qualifying spend, but rewards can only be claimed up to the tier's Monthly Claim Capacity of $35 (tier bonus plus $1 per 100 COCA staked, at the 1,000 COCA entry stake); unclaimed amounts carry over, one claim per 24 h, minimum $1, pending 14 days, expire after 12 months. Credited 'in stablecoins (e.g., USDC, EURC)' to the USD or EUR banking balance (§3.4) — elsewhere described as paid in USD or EUR. Payments via Curve earn a flat 1% on tiers below Premium+ (from 2026-04-01). Tier System Terms effective 2025-09-01, last updated 2026-09-01; rates may change at any time.",
+              "description": "Base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "conditions": "50% rebate on 2 eligible subscription categories (charge of $70 or less per subscription per category per calendar month; the part above $70 is excluded), counted within the Monthly Claim Capacity. 5% APY on USD balances up to an unstated tier cap (2% above; EUR balances earn no APY). Priority support and COCA Travel hotel discounts on Premium and above.",
+              "description": "Subscription rebate, balance APY and perks",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€30,000 per transaction, per day and per month; €75,000 per 3 months; €100,000 per 6 months. Elite members can request an increase in-app.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 5000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€850 and 5 withdrawals per day; €5,000 per month.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "access": {
+            "type": "holding",
+            "token": "COCA",
+            "token_amount": 3000,
+            "note": "Stake 3,000 COCA (≈ $4,700 per the Terms' own indicative USD values). Staked tokens are locked for the duration of tier membership, cannot be partially unstaked and earn no APY; cancelling returns the user to Starter with a 30-day cooldown. Modelled as a holding requirement because no fixed lock period is stated.",
+            "evidence": [
+              "ev-coca-tier-terms"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card free; plastic card free on Premium, Premium+ and Elite (Tier System Terms table). The ordering article asks every physical-card order for an initial top-up equivalent to €50 that remains spendable balance after delivery and issuance costs.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card",
+                "ev-coca-order"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Not itemised: an initial top-up equivalent to €50 'covers delivery and card issuance', the remainder becoming card balance; the delivery cost itself is not published.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No monthly or annual fee on any tier: docs state 'Zero annual fees' and the Tier System Terms table lists no recurring fee; tiers are unlocked by staking COCA tokens, not by a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-docs-banking",
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. Docs: 'Zero FX fees on direct currency pairs' (other pairs not addressed); help centre 'What is COCA?': the wallet 'eliminates monthly and foreign exchange charges'. Marketing statements without a dated fee schedule — not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. 'What is COCA?' (help centre, undated marketing text) describes 'fee-free ATM withdrawals up to $250 globally'; the limits article and the Tier System Terms give only cash-withdrawal limits (€850/day, €5,000/month, 5/day) and no fee or allowance. Not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Top-up by crypto deposit (supported assets and networks shown only in-app), SEPA/USD bank transfer to a personal IBAN, or card from another bank. No top-up, conversion or deposit fee is published on any page read.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 5,
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "cap": {
+                "amount": {
+                  "amount": 60,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "cash-related transactions and ATM withdrawals",
+                "crypto purchases",
+                "gambling",
+                "government and judicial payments",
+                "refunded or cancelled transactions",
+                "professional services and timeshares",
+                "payment intermediaries (PayPal, Alipay, WeChat Pay, Wise, Revolut, Skrill, Neteller, Cash App, Venmo and similar)",
+                "MCC list in section 7 of the Tier System Terms"
+              ],
+              "conditions": "5% cashback on eligible card payments with no stated limit on qualifying spend, but rewards can only be claimed up to the tier's Monthly Claim Capacity of $60 (tier bonus plus $1 per 100 COCA staked, at the 3,000 COCA entry stake); unclaimed amounts carry over, one claim per 24 h, minimum $1, pending 14 days, expire after 12 months. Credited 'in stablecoins (e.g., USDC, EURC)' to the USD or EUR banking balance (§3.4) — elsewhere described as paid in USD or EUR. Payments via Curve earn a flat 1% on tiers below Premium+ (from 2026-04-01). Tier System Terms effective 2025-09-01, last updated 2026-09-01; rates may change at any time.",
+              "description": "Base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "conditions": "50% rebate on 2 eligible subscription categories (charge of $70 or less per subscription per category per calendar month; the part above $70 is excluded), counted within the Monthly Claim Capacity. 5% APY on USD balances up to an unstated tier cap (2% above; EUR balances earn no APY). Priority support and COCA Travel hotel discounts on Premium and above.",
+              "description": "Subscription rebate, balance APY and perks",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€30,000 per transaction, per day and per month; €75,000 per 3 months; €100,000 per 6 months. Elite members can request an increase in-app.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 5000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€850 and 5 withdrawals per day; €5,000 per month.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "premium-plus",
+          "name": "Premium+",
+          "access": {
+            "type": "holding",
+            "token": "COCA",
+            "token_amount": 10000,
+            "note": "Stake 10,000 COCA (≈ $15,000 per the Terms' own indicative USD values). Staked tokens are locked for the duration of tier membership, cannot be partially unstaked and earn no APY; cancelling returns the user to Starter with a 30-day cooldown. Modelled as a holding requirement because no fixed lock period is stated.",
+            "evidence": [
+              "ev-coca-tier-terms"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card free; plastic card free on Premium, Premium+ and Elite (Tier System Terms table). The ordering article asks every physical-card order for an initial top-up equivalent to €50 that remains spendable balance after delivery and issuance costs.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card",
+                "ev-coca-order"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Not itemised: an initial top-up equivalent to €50 'covers delivery and card issuance', the remainder becoming card balance; the delivery cost itself is not published.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No monthly or annual fee on any tier: docs state 'Zero annual fees' and the Tier System Terms table lists no recurring fee; tiers are unlocked by staking COCA tokens, not by a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-docs-banking",
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. Docs: 'Zero FX fees on direct currency pairs' (other pairs not addressed); help centre 'What is COCA?': the wallet 'eliminates monthly and foreign exchange charges'. Marketing statements without a dated fee schedule — not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. 'What is COCA?' (help centre, undated marketing text) describes 'fee-free ATM withdrawals up to $250 globally'; the limits article and the Tier System Terms give only cash-withdrawal limits (€850/day, €5,000/month, 5/day) and no fee or allowance. Not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Top-up by crypto deposit (supported assets and networks shown only in-app), SEPA/USD bank transfer to a personal IBAN, or card from another bank. No top-up, conversion or deposit fee is published on any page read.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 6,
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "cap": {
+                "amount": {
+                  "amount": 140,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "cash-related transactions and ATM withdrawals",
+                "crypto purchases",
+                "gambling",
+                "government and judicial payments",
+                "refunded or cancelled transactions",
+                "professional services and timeshares",
+                "payment intermediaries (PayPal, Alipay, WeChat Pay, Wise, Revolut, Skrill, Neteller, Cash App, Venmo and similar)",
+                "MCC list in section 7 of the Tier System Terms"
+              ],
+              "conditions": "6% cashback on eligible card payments with no stated limit on qualifying spend, but rewards can only be claimed up to the tier's Monthly Claim Capacity of $140 (tier bonus plus $1 per 100 COCA staked, at the 10,000 COCA entry stake); unclaimed amounts carry over, one claim per 24 h, minimum $1, pending 14 days, expire after 12 months. Credited 'in stablecoins (e.g., USDC, EURC)' to the USD or EUR banking balance (§3.4) — elsewhere described as paid in USD or EUR. Payments via Curve earn a flat 1% on tiers below Premium+ (from 2026-04-01). Tier System Terms effective 2025-09-01, last updated 2026-09-01; rates may change at any time.",
+              "description": "Base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "conditions": "50% rebate on 3 eligible subscription categories (charge of $70 or less per subscription per category per calendar month; the part above $70 is excluded), counted within the Monthly Claim Capacity. 5% APY on USD balances up to an unstated tier cap (2% above; EUR balances earn no APY). Priority support and COCA Travel hotel discounts on Premium and above.",
+              "description": "Subscription rebate, balance APY and perks",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€30,000 per transaction, per day and per month; €75,000 per 3 months; €100,000 per 6 months. Elite members can request an increase in-app.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 5000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€850 and 5 withdrawals per day; €5,000 per month.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "elite",
+          "name": "Elite",
+          "access": {
+            "type": "holding",
+            "token": "COCA",
+            "token_amount": 30000,
+            "note": "Stake 30,000 COCA (≈ $47,000 per the Terms' own indicative USD values). Staked tokens are locked for the duration of tier membership, cannot be partially unstaked and earn no APY; cancelling returns the user to Starter with a 30-day cooldown. Modelled as a holding requirement because no fixed lock period is stated.",
+            "evidence": [
+              "ev-coca-tier-terms"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card free; plastic card free on Premium, Premium+ and Elite (Tier System Terms table). The ordering article asks every physical-card order for an initial top-up equivalent to €50 that remains spendable balance after delivery and issuance costs.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card",
+                "ev-coca-order"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Not itemised: an initial top-up equivalent to €50 'covers delivery and card issuance', the remainder becoming card balance; the delivery cost itself is not published.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No monthly or annual fee on any tier: docs state 'Zero annual fees' and the Tier System Terms table lists no recurring fee; tiers are unlocked by staking COCA tokens, not by a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-docs-banking",
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. Docs: 'Zero FX fees on direct currency pairs' (other pairs not addressed); help centre 'What is COCA?': the wallet 'eliminates monthly and foreign exchange charges'. Marketing statements without a dated fee schedule — not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No fee schedule published. 'What is COCA?' (help centre, undated marketing text) describes 'fee-free ATM withdrawals up to $250 globally'; the limits article and the Tier System Terms give only cash-withdrawal limits (€850/day, €5,000/month, 5/day) and no fee or allowance. Not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Top-up by crypto deposit (supported assets and networks shown only in-app), SEPA/USD bank transfer to a personal IBAN, or card from another bank. No top-up, conversion or deposit fee is published on any page read.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 8,
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "cap": {
+                "amount": {
+                  "amount": 350,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "cash-related transactions and ATM withdrawals",
+                "crypto purchases",
+                "gambling",
+                "government and judicial payments",
+                "refunded or cancelled transactions",
+                "professional services and timeshares",
+                "payment intermediaries (PayPal, Alipay, WeChat Pay, Wise, Revolut, Skrill, Neteller, Cash App, Venmo and similar)",
+                "MCC list in section 7 of the Tier System Terms"
+              ],
+              "conditions": "8% cashback on eligible card payments with no stated limit on qualifying spend, but rewards can only be claimed up to the tier's Monthly Claim Capacity of $350 (tier bonus plus $1 per 100 COCA staked, at the 30,000 COCA entry stake); unclaimed amounts carry over, one claim per 24 h, minimum $1, pending 14 days, expire after 12 months. Credited 'in stablecoins (e.g., USDC, EURC)' to the USD or EUR banking balance (§3.4) — elsewhere described as paid in USD or EUR. Payments via Curve earn a flat 1% on tiers below Premium+ (from 2026-04-01). Tier System Terms effective 2025-09-01, last updated 2026-09-01; rates may change at any time.",
+              "description": "Base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other",
+                "code": "USD/EUR balance (stablecoin per T&C §3.4)"
+              },
+              "requires": "holding",
+              "conditions": "50% rebate on 4 eligible subscription categories (charge of $70 or less per subscription per category per calendar month; the part above $70 is excluded), counted within the Monthly Claim Capacity. 5% APY on USD balances up to an unstated tier cap (2% above; EUR balances earn no APY). Priority support and COCA Travel hotel discounts on Premium and above.",
+              "description": "Subscription rebate, balance APY and perks",
+              "status": "verified",
+              "evidence": [
+                "ev-coca-tier-terms"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€30,000 per transaction, per day and per month; €75,000 per 3 months; €100,000 per 6 months. Elite members can request an increase in-app.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 5000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "€850 and 5 withdrawals per day; €5,000 per month.",
+              "evidence": [
+                "ev-coca-limits",
+                "ev-coca-tier-terms",
+                "ev-coca-docs-card"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-coca-tier-terms",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000042710-tier-system-terms-conditions",
+      "title": "Tier System Terms & Conditions (help centre; effective 1 Sep 2025, last updated 1 Sep 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Six tiers by COCA stake 0/300/1,000/3,000/10,000/30,000: cashback 1/3/4/5/6/8%, Monthly Claim Capacity $15/25/35/60/140/350, plastic card $5 (three lower tiers) or free, 50% subscription rebate (≤$70), 5% USD APY. Card for residents of 73 listed countries; EUR accounts for 28. No FX, ATM, top-up or delivery fee; no issuer or legal entity named. Appendix: card limits.",
+      "accessed_at": "2026-11-04T05:41:00Z",
+      "effective_from": "2025-09-01",
+      "expires_at": null,
+      "scope": {
+        "note": "Global terms; limits in EUR, claim capacities in USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "Cashback is 'credited in stablecoins (e.g., USDC, EURC)' to USD/EUR balances in §3.4 but 'paid in USD or EUR' elsewhere. Page 'Modified on 12 Oct' while the text says last updated 1 Sep 2026."
+    },
+    {
+      "id": "ev-coca-limits",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000042688-coca-debit-card-limits",
+      "title": "COCA Debit Card Limits (help centre, modified 27 Oct)",
+      "source_type": "help_center",
+      "excerpt": "Purchase: €30,000 per transaction, per day and per month; €75,000 per 3 months; €100,000 per 6 months; count unlimited for Visa cards. Cash withdrawal: €850 per day, €5,000 per month, 5 per day. Elite members may request a higher limit via Card Details → Visa Card Limits. No fees on the page.",
+      "accessed_at": "2026-11-04T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coca-docs-card",
+      "url": "https://docs.coca.xyz/coca/banking-account/coca-card",
+      "title": "COCA Card (docs.coca.xyz)",
+      "source_type": "pricing_page",
+      "excerpt": "Virtual and physical debit card; Apple Pay and Google Pay. 'COCA Virtual Card is free for all tiers'; physical card $5 for Starter, Standard, Standard+ and free for Premium, Premium+, Elite. Same purchase and ATM limits as the help centre; 'Visa Card Limits' menu. No FX, ATM, top-up or monthly fee mentioned; issuer not named.",
+      "accessed_at": "2026-11-04T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coca-docs-banking",
+      "url": "https://docs.coca.xyz/coca/banking-account/overview.md",
+      "title": "Banking Account — Overview (docs.coca.xyz)",
+      "source_type": "pricing_page",
+      "excerpt": "USD and EUR (SEPA) banking account with personal IBAN; top-up by bank transfer, by card from another bank, or with supported stablecoins on multiple blockchains. 'Zero FX fees on direct currency pairs', 'Zero annual fees', free virtual card. Card availability depends on country of residence. Issuer, licence, KYC and other fees not stated.",
+      "accessed_at": "2026-11-04T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coca-virtual-physical",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000042687-virtual-card-and-physical-card",
+      "title": "Virtual Card and Physical card (help centre, modified 27 Oct)",
+      "source_type": "help_center",
+      "excerpt": "'The COCA Card is provided in collaboration with Wirex.' Works wherever Visa/Mastercard are accepted; virtual and physical options; 3D Secure by SMS only. No fee figures.",
+      "accessed_at": "2026-11-04T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coca-order",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000042704-how-do-i-order-a-coca-card-",
+      "title": "How do I order a COCA card? (help centre, modified 12 Oct)",
+      "source_type": "eligibility_page",
+      "excerpt": "Residence country (not citizenship); KYC: passport, ID card or driving licence plus proof of address (bank document, utility bill ≤ 6 months, lease, employer letter); 'typically up to 20 minutes'. Virtual card usable once approved; physical card needs an initial top-up 'equivalent to €50 to cover delivery and card issuance', remainder becomes balance. Same 73-country list as the Tier Terms.",
+      "accessed_at": "2026-11-04T05:45:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coca-topup",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000042705-how-to-top-up-the-card-",
+      "title": "How to top-up the card? (help centre, modified 29 Apr)",
+      "source_type": "help_center",
+      "excerpt": "Two methods: crypto deposit from an external wallet to the address linked to the card (supported assets and networks listed in-app only) and bank transfer to the account details shown. No fees, minimums, processing times or conversion details stated.",
+      "accessed_at": "2026-11-04T05:46:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coca-mica",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000067145-mica-regulation-and-coca",
+      "title": "MiCA Regulation and COCA (help centre, modified 13 Jul)",
+      "source_type": "help_center",
+      "excerpt": "'COCA is non-custodial', 'Your private keys are not held by COCA'; the wallet 'is not licensed as a MiCA Crypto-Asset Service Provider (CASP)' and is described as generally outside MiCA custodial provisions. Card and payment services run through 'the appropriate regulated payment infrastructure' — provider, regulator and legal entity not named.",
+      "accessed_at": "2026-11-04T05:47:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coca-what-is",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000042682-what-is-coca-",
+      "title": "What is COCA? (help centre, modified 3 Mar)",
+      "source_type": "help_center",
+      "excerpt": "MPC non-custodial wallet with a non-custodial debit card (virtual and physical) offered to users in the EEA, the UK and APAC. Describes transactions as fee-free 'including ATM withdrawals up to $250 globally' and says the wallet 'eliminates monthly and foreign exchange charges'. No entity, network or fee schedule.",
+      "accessed_at": "2026-11-04T05:48:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Marketing claims of free ATM withdrawals (≤ $250) and no FX charges are not backed by any fee schedule; the Tier Terms and the limits article state limits only. Fees kept unknown."
+    },
+    {
+      "id": "ev-coca-referral",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000042721-refer-a-friend-campaign",
+      "title": "Refer a Friend Campaign (help centre; effective 1 May 2026, last updated 26 Oct 2026)",
+      "source_type": "affiliate_program",
+      "excerpt": "Referrer $20 and friend $10 (USD or EUR) when the new user orders a card, spends ≥ $100 cumulatively and makes ≥ 3 payments at different merchants within 30 days of registering; claimable after 14 days; clawback if the friend closes within 60 days. No publisher or partner programme mentioned.",
+      "accessed_at": "2026-11-04T05:49:00Z",
+      "effective_from": "2026-05-01",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coca-welcome-promo",
+      "url": "https://help.coca.xyz/support/solutions/articles/205000076080-coca-welcome-cashback-drop-promo-terms-conditions",
+      "title": "COCA Welcome Cashback Drop Promo — Terms & Conditions (help centre, modified 2 Nov)",
+      "source_type": "official_terms",
+      "excerpt": "'The promotion runs from 2 November 2026 to 30 November 2026.' New users registering in the period, KYC completed, located in a card country: 8% on the first three eligible card transactions, capped at $300 of eligible spend ($24 maximum), then the standard 1% or tier rate. Paid to the USD or EUR account.",
+      "accessed_at": "2026-11-04T05:50:00Z",
+      "effective_from": "2026-11-02",
+      "expires_at": "2026-11-30",
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://docs.coca.xyz/coca/banking-account/coca-card",
+    "affiliate": {
+      "program_id": "coca-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-04T05:50:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-04T05:55:00Z",
+      "field": "*",
+      "reason": "Initial record from 11 official pages (docs.coca.xyz card and banking overview; help.coca.xyz Tier System Terms, limits, virtual/physical card, ordering, top-up, MiCA, What is COCA, Refer a Friend, Welcome Cashback Drop) read by the unattended research run on 2026-11-04. Single read; second read ≥ 24 h later required before publication. Unknown: FX, ATM, top-up and delivery fees (no fee schedule published), issuing entity and COCA legal entity, custody of the fiat balance. Cashback effectively capped by the Monthly Claim Capacity.",
+      "evidence": [
+        "ev-coca-tier-terms",
+        "ev-coca-docs-card",
+        "ev-coca-order"
+      ],
+      "actor": "claude (research run)"
+    }
+  ],
+  "editorial": {
+    "summary": "Non-custodial MPC wallet with a USD/EUR banking account and a debit card 'provided in collaboration with Wirex' (issuing entity not named), available to residents of 73 listed countries including the EEA, UK and Switzerland. Cashback 1% to 8% across six tiers unlocked by staking 300 to 30,000 COCA tokens, but claims are limited to a Monthly Claim Capacity of $15 (Starter) to $350 (Elite). No annual fee; virtual card free, plastic $5 on the three lower tiers. No fee schedule is published: FX, ATM, top-up and delivery fees are unknown despite marketing claims of zero FX and free ATM withdrawals up to $250.",
+    "good_for": [
+      "Residents of the 73 listed countries who want a free virtual card with 1% cashback and no annual fee",
+      "Holders of COCA tokens willing to stake them for higher cashback rates and the 50% subscription rebate",
+      "Users who value a non-custodial crypto wallet alongside a EUR/USD IBAN account"
+    ],
+    "not_for": [
+      "Anyone who needs published FX, ATM and top-up fees before choosing a card — none exist",
+      "High spenders expecting uncapped cashback: the Monthly Claim Capacity ($15 on Starter) limits what can be claimed each month",
+      "Users who require a named regulated issuer: the issuing entity and the COCA legal entity are not disclosed on the pages read"
+    ],
+    "watch_outs": [
+      "Issuer not named: the card is 'provided in collaboration with Wirex'; the legal entity behind COCA, the e-money/payment provider and the regulator are not stated anywhere read. The MiCA article says the wallet is not a licensed CASP.",
+      "Network recorded as Visa from the limits article ('Visa cards', 'Visa Card Limits' menu); marketing text says 'Visa/Mastercard'.",
+      "No fee schedule: 'zero FX fees on direct currency pairs' and 'fee-free ATM withdrawals up to $250' are marketing statements; the FX, ATM, top-up and delivery fees are modelled as unknown.",
+      "Cashback is nominally unlimited but can only be claimed up to the Monthly Claim Capacity ($15/$25/$35/$60/$140/$350 by tier, +$1 per 100 COCA staked); unclaimed amounts carry over, pending 14 days, expire after 12 months, and are paid in stablecoins/USD/EUR per contradictory wording.",
+      "Tier access requires staking COCA tokens that are locked for the whole membership, cannot be partially unstaked and earn nothing; the USD values in the Terms are indicative and move with the token price.",
+      "Physical card order requires an initial top-up equivalent to €50 covering delivery and issuance (remainder spendable); the Terms list a $5 plastic fee on the three lower tiers — fee component not itemised.",
+      "Payments through Curve earn a flat 1% below Premium+ (from 2026-04-01). The 'What is COCA?' article (March) and the Tier Terms differ on free ATM and FX; the Terms govern and state nothing.",
+      "Welcome Cashback Drop (8% on first three transactions, max $24) runs 2–30 November 2026 for new users only."
+    ]
+  }
+}
