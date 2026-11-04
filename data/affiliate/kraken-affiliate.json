@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "kraken-affiliate",
+  "provider_id": "kraken",
+  "program_name": "Kraken Affiliate Program (Krak card commissions 'coming soon')",
+  "program_url": "https://www.kraken.com/affiliate",
+  "type": "hybrid",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Two tracks: 'Direct with Kraken' (in-house, creators/KOLs; application form on the page: email, social links, target countries, Kraken Public ID; reply 'within 5 business days') and Impact (media networks, content sites, traditional affiliates; sign-up via app.impact.com campaign Kraken.brand). Terms: https://www.kraken.com/legal/affiliate-agreement (not read).",
+  "our_status": "identified",
+  "paid_action": "Commissions on 'eligible activity from users who sign up via your link' — ongoing activity, 'not just their first deposit'. Products currently covered: Kraken Consumer, Kraken Pro (spot, margin, futures), Kraken DEX (up to 50%), Kraken Prop (25%). Krak (debit card) and Kraken Earn: 'Coming soon' — the card is NOT yet commissionable.",
+  "validation_conditions": "Eligible activity not defined on the page; rates 'vary by product, region, and affiliate profile' and are negotiated at onboarding (rev share, CPA). Geographic restrictions mentioned generically.",
+  "commission": {
+    "model_note": "Revenue share up to 50% on eligible volume for exchange products; rev share or CPA negotiated per partner. No rate published for the Krak/Kraken Card (coming soon).",
+    "percent": 50,
+    "tiers_note": "'Up to' headline rate for exchange products; the card product is listed without a rate.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "Not stated (in-house track pays on demand once a threshold is reached)",
+    "method": "In-house track: USDC to the partner's Kraken account; Impact track: fiat to a bank or USDC",
+    "frequency": "Monthly by default (in-house) or Impact's standard schedule"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Affiliate agreement at kraken.com/legal/affiliate-agreement not read (channel rules, brand bidding, country exclusions unknown). Contracting entity not named on the page (footer: Payward, Inc.). Partners receive 'a unique referral link and tracking pixel'.",
+  "allowed_countries_note": "Not listed; the application asks which countries the affiliate targets. Card commissions not yet available in any region.",
+  "evidence": [
+    {
+      "url": "https://www.kraken.com/affiliate",
+      "title": "Kraken Affiliate Program (kraken.com/affiliate)",
+      "accessed_at": "2026-11-04T06:20:00Z",
+      "excerpt": "'Earn up to 50% commission' — 'Commission rates vary by product, region, and affiliate profile.' Kraken Consumer / Pro / DEX up to 50%, Prop 25%; Krak 'Crypto debit card with up to 2% cashback' and Kraken Earn: 'Coming soon'. Direct track (USDC, monthly, account manager) or Impact track (fiat). Unique referral link and tracking pixel. Terms: kraken.com/legal/affiliate-agreement."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Official publisher programme exists but the card is explicitly 'coming soon' for commissions. Candidate for David's decision once card commissions open; no application made, nobody contacted."
+}

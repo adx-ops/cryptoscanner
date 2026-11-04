@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-03.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-04.",
   "target": {
     "min": 15,
     "max": 50
@@ -104,8 +104,9 @@
     {
       "provider": "COCA",
       "product": "COCA Card",
-      "status": "identified",
-      "record": null
+      "status": "validated",
+      "record": "data/cards/coca-card.json",
+      "note": "Global record (73 listed residence countries incl. all EEA, UK, CH; EUR variant) from 11 official pages read 2026-11-04: docs.coca.xyz (card, banking overview), help.coca.xyz (Tier System Terms effective 2025-09-01/updated 2026-09-01, limits, virtual/physical card, ordering + KYC, top-up, MiCA, What is COCA, Refer a Friend, Welcome Cashback Drop 2–30 Nov 2026). Six tiers by COCA stake (0–30,000): cashback 1–8% but claims capped by a Monthly Claim Capacity $15–$350; no annual fee; virtual free, plastic $5 on lower tiers vs €50 initial top-up covering delivery/issuance. Unknown: FX, ATM, top-up, delivery fees (no fee schedule; marketing says zero FX and free ATM ≤ $250), issuing entity (card 'provided in collaboration with Wirex'), COCA legal entity, custody of the fiat balance. Affiliate: personal referral only ($20/$10), data/affiliate/coca-referral.json; no publisher programme found. Second read required before publication."
     },
     {
       "provider": "Ready",
@@ -116,8 +117,10 @@
     {
       "provider": "Kraken",
       "product": "Krak Card",
-      "status": "identified",
-      "record": null
+      "status": "validated",
+      "record": "data/cards/krak-card.json",
+      "note": "UK + EEA record (Mastercard issued by Monavate Limited / UAB Monavate; e-money Payward Services Ltd / Payward Ireland Ltd) from 7 official Kraken pages read 2026-11-04 (card FAQ, cashback overview, getting started, spending article — all 2026-10-08 —, launch blog 2026-07-13, verification documents article, US krak.app/card for the regional split) plus the EFTA reference page to expand 'EEA' to 30 countries. No monthly fee, no FX markup on the Mastercard rate, no Kraken ATM fee, GBP/EUR 4.99 replacement; variable unpublished spread when crypto/non-base fiat is sold to pay. Cashback 0/0.5/1/1.5/2% by 30-day average balance (0/200/1,000/10,000/50,000) in GBP/EUR or BTC, no caps; welcome Max rate 30 days. Unknown: issuance, delivery, top-up fees, spread size, spend/ATM limit tables (support.krak.app not fetchable without browser provenance), Kraken verification level required, Metal card terms. US 'Krak Card' (Visa, Lead Bank) is a different out-of-scope product. Affiliate: official Kraken programme exists (data/affiliate/kraken-affiliate.json) but Krak card commissions 'coming soon'. Second read required before publication.",
+      "needs_browser_read": true
     },
     {
       "provider": "Deblock",

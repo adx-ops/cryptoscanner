@@ -1,0 +1,1790 @@
+{
+  "schema_version": "1.0.0",
+  "id": "krak-card",
+  "slug": "krak-card",
+  "name": "Kraken Card (Krak Card)",
+  "brand": "Kraken",
+  "provider_id": "kraken",
+  "issuer": {
+    "name": "Monavate Limited (UK, FCA FRN 901097) / UAB Monavate (EEA, Bank of Lithuania LB002139); e-money by Payward Services Limited (UK) and Payward Ireland Limited (EEA)",
+    "status": "verified",
+    "evidence": [
+      "ev-kraken-card-blog"
+    ]
+  },
+  "network": "mastercard",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Spends the Krak Everyday balance: cash (GBP/EUR base currency; USD can also be held) and '600+' crypto and cash currencies in a user-set spending order, converted to the base currency at the time of spending with a variable spread; one payment can draw on several balances. Balances held with Kraken (Payward entities) — custodial. Top-up by Apple Pay, Google Pay or bank transfer depending on region.",
+    "evidence": [
+      "ev-kraken-card-spending",
+      "ev-kraken-card-faq",
+      "ev-kraken-card-blog"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "kraken-card-eea",
+      "region_label": "EEA",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LV",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "IS",
+          "LI",
+          "NO"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Official wording: 'currently available to verified Kraken users in the UK and EEA' (FAQ, 2026-10-08) and 'only available to individual clients located in the United Kingdom and EEA' (getting-started article). No country-by-country list is published; the 30 EEA states are expanded from the EFTA reference page (EU member states plus Iceland, Liechtenstein and Norway; Switzerland is not party). Individual EEA countries may still be excluded by Kraken's own service availability — to confirm. Business accounts excluded. Base currency EUR; cards issued by UAB Monavate (Bank of Lithuania LB002139), e-money by Payward Ireland Limited (Central Bank of Ireland).",
+        "evidence": [
+          "ev-kraken-card-faq",
+          "ev-kraken-card-getting-started",
+          "ev-kraken-card-blog",
+          "ev-efta-eea-states"
+        ],
+        "status": "calculated"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "proof_of_address"
+        ],
+        "stages_note": "A 'verified personal Kraken account' is required before ordering the card ('no new account, no new verification' for the Krak app). The card articles do not say which Kraken verification level is needed; the general document requirements article (2026-10-28) lists a government ID (passport, driving licence or national ID) and a proof of address dated within 3 months (no P.O. boxes), face photo required only for ZA/US residents or ZA/US bank funding. Level needed for the card: hypothesis.",
+        "evidence": [
+          "ev-kraken-card-getting-started",
+          "ev-kraken-card-faq",
+          "ev-kraken-verification-docs"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "starter",
+          "name": "Starter",
+          "access": {
+            "type": "free",
+            "note": "Default tier; earns no cashback.",
+            "evidence": [
+              "ev-kraken-card-cashback"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "EUR"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee EUR 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0,
+              "payout": {
+                "kind": "fiat",
+                "code": "EUR"
+              },
+              "requires": "none",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Starter tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least €0 — the only tier earning 0%. Rate locked at merchant settlement, paid in the card's primary currency (EUR) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 2,
+              "payout": {
+                "kind": "fiat",
+                "code": "EUR"
+              },
+              "requires": "none",
+              "conditions": "Welcome gift: new customers 'may receive Max Rewards for 30 days' after opening a Krak account (2% cashback at the Max rate, plus a 1% salary match 'in eligible regions'). 'Geographic restrictions apply'; no start/end date published, so not modelled as a dated promotion.",
+              "description": "Welcome offer — Max rewards for 30 days",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 150,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "note": "EEA cumulative contactless limit €150 before a PIN is required.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "lite",
+          "name": "Lite",
+          "access": {
+            "type": "holding",
+            "token": "any asset (combined Krak/Kraken/Kraken Pro balance)",
+            "token_amount": 200,
+            "note": "30-day rolling average combined balance of at least €200 across Krak, Kraken and Kraken Pro (any crypto or cash), recalculated daily and reassessed every 30 days. No token to buy or lock.",
+            "evidence": [
+              "ev-kraken-card-cashback",
+              "ev-kraken-card-faq"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "EUR"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee EUR 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.5,
+              "payout": {
+                "kind": "fiat",
+                "code": "EUR"
+              },
+              "requires": "holding",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Lite tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least €200. Rate locked at merchant settlement, paid in the card's primary currency (EUR) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 150,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "note": "EEA cumulative contactless limit €150 before a PIN is required.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "access": {
+            "type": "holding",
+            "token": "any asset (combined Krak/Kraken/Kraken Pro balance)",
+            "token_amount": 1000,
+            "note": "30-day rolling average combined balance of at least €1,000 across Krak, Kraken and Kraken Pro (any crypto or cash), recalculated daily and reassessed every 30 days. No token to buy or lock.",
+            "evidence": [
+              "ev-kraken-card-cashback",
+              "ev-kraken-card-faq"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "EUR"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee EUR 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "fiat",
+                "code": "EUR"
+              },
+              "requires": "holding",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Pro tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least €1,000. Rate locked at merchant settlement, paid in the card's primary currency (EUR) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 150,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "note": "EEA cumulative contactless limit €150 before a PIN is required.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "elite",
+          "name": "Elite",
+          "access": {
+            "type": "holding",
+            "token": "any asset (combined Krak/Kraken/Kraken Pro balance)",
+            "token_amount": 10000,
+            "note": "30-day rolling average combined balance of at least €10,000 across Krak, Kraken and Kraken Pro (any crypto or cash), recalculated daily and reassessed every 30 days. No token to buy or lock.",
+            "evidence": [
+              "ev-kraken-card-cashback",
+              "ev-kraken-card-faq"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "EUR"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee EUR 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1.5,
+              "payout": {
+                "kind": "fiat",
+                "code": "EUR"
+              },
+              "requires": "holding",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Elite tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least €10,000. Rate locked at merchant settlement, paid in the card's primary currency (EUR) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 150,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "note": "EEA cumulative contactless limit €150 before a PIN is required.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "access": {
+            "type": "holding",
+            "token": "any asset (combined Krak/Kraken/Kraken Pro balance)",
+            "token_amount": 50000,
+            "note": "30-day rolling average combined balance of at least €50,000 across Krak, Kraken and Kraken Pro (any crypto or cash), recalculated daily and reassessed every 30 days. No token to buy or lock.",
+            "evidence": [
+              "ev-kraken-card-cashback",
+              "ev-kraken-card-faq"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "EUR"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee EUR 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "fiat",
+                "code": "EUR"
+              },
+              "requires": "holding",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Max tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least €50,000. Rate locked at merchant settlement, paid in the card's primary currency (EUR) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 150,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "note": "EEA cumulative contactless limit €150 before a PIN is required.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "kraken-card-uk",
+      "region_label": "UK",
+      "currency": "GBP",
+      "eligibility": {
+        "residence_allowed": [
+          "GB"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "'Currently available to verified Kraken users in the UK and EEA' (FAQ). UK card issued by Monavate Limited (FCA FRN 901097); e-money by Payward Services Limited (FCA FRN 1010381). Business accounts excluded. Crown dependencies not mentioned.",
+        "evidence": [
+          "ev-kraken-card-faq",
+          "ev-kraken-card-getting-started",
+          "ev-kraken-card-blog"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "proof_of_address"
+        ],
+        "stages_note": "A 'verified personal Kraken account' is required before ordering the card ('no new account, no new verification' for the Krak app). The card articles do not say which Kraken verification level is needed; the general document requirements article (2026-10-28) lists a government ID (passport, driving licence or national ID) and a proof of address dated within 3 months (no P.O. boxes), face photo required only for ZA/US residents or ZA/US bank funding. Level needed for the card: hypothesis.",
+        "evidence": [
+          "ev-kraken-card-getting-started",
+          "ev-kraken-card-faq",
+          "ev-kraken-verification-docs"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "starter",
+          "name": "Starter",
+          "access": {
+            "type": "free",
+            "note": "Default tier; earns no cashback.",
+            "evidence": [
+              "ev-kraken-card-cashback"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "GBP"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee GBP 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0,
+              "payout": {
+                "kind": "fiat",
+                "code": "GBP"
+              },
+              "requires": "none",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Starter tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least £0 — the only tier earning 0%. Rate locked at merchant settlement, paid in the card's primary currency (GBP) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 2,
+              "payout": {
+                "kind": "fiat",
+                "code": "GBP"
+              },
+              "requires": "none",
+              "conditions": "Welcome gift: new customers 'may receive Max Rewards for 30 days' after opening a Krak account (2% cashback at the Max rate, plus a 1% salary match 'in eligible regions'). 'Geographic restrictions apply'; no start/end date published, so not modelled as a dated promotion.",
+              "description": "Welcome offer — Max rewards for 30 days",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 300,
+                "currency": "GBP"
+              },
+              "period": "per_transaction",
+              "note": "UK contactless limit £300.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "lite",
+          "name": "Lite",
+          "access": {
+            "type": "holding",
+            "token": "any asset (combined Krak/Kraken/Kraken Pro balance)",
+            "token_amount": 200,
+            "note": "30-day rolling average combined balance of at least £200 across Krak, Kraken and Kraken Pro (any crypto or cash), recalculated daily and reassessed every 30 days. No token to buy or lock.",
+            "evidence": [
+              "ev-kraken-card-cashback",
+              "ev-kraken-card-faq"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "GBP"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee GBP 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.5,
+              "payout": {
+                "kind": "fiat",
+                "code": "GBP"
+              },
+              "requires": "holding",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Lite tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least £200. Rate locked at merchant settlement, paid in the card's primary currency (GBP) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 300,
+                "currency": "GBP"
+              },
+              "period": "per_transaction",
+              "note": "UK contactless limit £300.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "access": {
+            "type": "holding",
+            "token": "any asset (combined Krak/Kraken/Kraken Pro balance)",
+            "token_amount": 1000,
+            "note": "30-day rolling average combined balance of at least £1,000 across Krak, Kraken and Kraken Pro (any crypto or cash), recalculated daily and reassessed every 30 days. No token to buy or lock.",
+            "evidence": [
+              "ev-kraken-card-cashback",
+              "ev-kraken-card-faq"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "GBP"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee GBP 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "fiat",
+                "code": "GBP"
+              },
+              "requires": "holding",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Pro tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least £1,000. Rate locked at merchant settlement, paid in the card's primary currency (GBP) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 300,
+                "currency": "GBP"
+              },
+              "period": "per_transaction",
+              "note": "UK contactless limit £300.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "elite",
+          "name": "Elite",
+          "access": {
+            "type": "holding",
+            "token": "any asset (combined Krak/Kraken/Kraken Pro balance)",
+            "token_amount": 10000,
+            "note": "30-day rolling average combined balance of at least £10,000 across Krak, Kraken and Kraken Pro (any crypto or cash), recalculated daily and reassessed every 30 days. No token to buy or lock.",
+            "evidence": [
+              "ev-kraken-card-cashback",
+              "ev-kraken-card-faq"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "GBP"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee GBP 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1.5,
+              "payout": {
+                "kind": "fiat",
+                "code": "GBP"
+              },
+              "requires": "holding",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Elite tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least £10,000. Rate locked at merchant settlement, paid in the card's primary currency (GBP) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 300,
+                "currency": "GBP"
+              },
+              "period": "per_transaction",
+              "note": "UK contactless limit £300.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "access": {
+            "type": "holding",
+            "token": "any asset (combined Krak/Kraken/Kraken Pro balance)",
+            "token_amount": 50000,
+            "note": "30-day rolling average combined balance of at least £50,000 across Krak, Kraken and Kraken Pro (any crypto or cash), recalculated daily and reassessed every 30 days. No token to buy or lock.",
+            "evidence": [
+              "ev-kraken-card-cashback",
+              "ev-kraken-card-faq"
+            ],
+            "status": "verified"
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not stated for the UK/EEA card: the FAQ says 'no annual, monthly or transaction fees, and no hidden charges' and lists only a replacement fee, but no page read states that the first virtual or physical card is free (the US Krak Card page does, for the US product only).",
+              "status": "unknown"
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered to the residential address on the Kraken account; delivery fee and time not stated for the UK/EEA (replacement cards arrive in 7–10 days).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'There are no annual, monthly or transaction fees, and no hidden charges' (FAQ, 2026-10-08). Rewards tiers depend on average balance, not on a subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'We pass on the Mastercard exchange rate without a markup' (FAQ); spending article: foreign spend is charged at the Mastercard rate 'without additional fees from our side'. Applies to spend from the base-currency balance; paying from another fiat or from crypto triggers a conversion with a variable spread (see conversion fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-spending"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "A 'variable spread' applies when assets (crypto or non-base fiat) are sold to complete a card transaction; no figure or range is published on the pages read. Spending from the base-currency cash balance avoids it.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Kraken charges nothing for ATM withdrawals; third-party ATM operator fees may apply. ATM limits vary by region and are shown in the app (not published on the pages read).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq",
+                "ev-kraken-card-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Everyday balance topped up by Apple Pay, Google Pay or bank transfer depending on region; no top-up fee is stated on the pages read. Some deposit methods carry a 3-day withdrawal hold.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "GBP"
+              },
+              "period": "once",
+              "conditions": "Card replacement fee GBP 4.99 (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "fiat",
+                "code": "GBP"
+              },
+              "requires": "holding",
+              "excluded_categories": [
+                "ATM withdrawals",
+                "refunds, reversals and cancelled transactions",
+                "chargebacks",
+                "transactions under £0.49 / €0.49",
+                "non-purchase transactions (funding, money transfers, wire transfers)"
+              ],
+              "conditions": "Max tier: 30-day rolling average combined balance across Krak, Kraken and Kraken Pro of at least £50,000. Rate locked at merchant settlement, paid in the card's primary currency (GBP) or in BTC at the settlement-time price, available once the merchant finalises (typically within 24 h). 'There are currently no monthly caps or earning limits.' Tier reassessed every 30 days; deposits raise the average gradually.",
+              "description": "Krak Rewards base cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-kraken-card-cashback",
+                "ev-kraken-card-faq"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "other",
+              "amount": {
+                "amount": 300,
+                "currency": "GBP"
+              },
+              "period": "per_transaction",
+              "note": "UK contactless limit £300.",
+              "evidence": [
+                "ev-kraken-card-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "note": "Daily, weekly and monthly spend limits and ATM limits apply, vary by region and are shown in the app; the published limit tables (Card Management article on support.krak.app) could not be read by the fetcher.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "note": "Maximum three virtual cards per rolling 30-day period.",
+              "evidence": [
+                "ev-kraken-card-getting-started"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-kraken-card-faq",
+      "url": "https://support.kraken.com/articles/kraken-card-faqs",
+      "title": "Kraken Card: Frequently Asked Questions (support centre, updated 8 Oct 2026)",
+      "source_type": "help_center",
+      "excerpt": "'Currently available to verified Kraken users in the UK and EEA'; Mastercard. 'No annual, monthly or transaction fees, and no hidden charges'; spread when selling assets; 'We pass on the Mastercard exchange rate without a markup'; no Kraken ATM fee; GBP/EUR 4.99 replacement. Tiers Starter 0% / Lite 200 0.5% / Pro 1,000 1% / Elite 10,000 1.5% / Max 50,000 2%. Contactless UK £300, EEA €150.",
+      "accessed_at": "2026-11-04T06:02:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "UK and EEA"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kraken-card-cashback",
+      "url": "https://support.kraken.com/articles/kraken-card-cashback-overview",
+      "title": "Kraken Card cashback overview (support centre, updated 8 Oct 2026)",
+      "source_type": "help_center",
+      "excerpt": "Tiers by 30-day average balance across Krak, Kraken and Kraken Pro: Starter 0%, Lite 200 0.5%, Pro 1,000 1%, Elite 10,000 1.5%, Max 50,000 2% (GBP/EUR); rate locked at merchant settlement; payout in GBP/EUR or BTC. 'There are currently no monthly caps or earning limits.' Excluded: ATM, refunds, reversals, chargebacks, < 0.49, funding, transfers. Welcome: Max rewards 30 days, 1% salary match.",
+      "accessed_at": "2026-11-04T06:06:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "UK and EEA"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kraken-card-getting-started",
+      "url": "https://support.kraken.com/gb/articles/getting-started-kraken-card",
+      "title": "Getting Started with Kraken Card (support centre, updated 8 Oct 2026)",
+      "source_type": "eligibility_page",
+      "excerpt": "'Kraken Debit Card is only available to individual clients located in the United Kingdom and EEA' with a verified personal Kraken account; business accounts excluded. Order in the Kraken app, manage in the Krak app ('no new account, no new verification'). Virtual card first, physical card to the residential address on the account; three virtual cards per rolling 30 days. Apple/Google Wallet.",
+      "accessed_at": "2026-11-04T06:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "UK and EEA"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kraken-card-spending",
+      "url": "https://support.kraken.com/ua/articles/spending-with-your-kraken-card",
+      "title": "Spending With Your Kraken Card (support centre, Ukrainian locale, updated 8 Oct 2026)",
+      "source_type": "help_center",
+      "excerpt": "Spending order across crypto and cash balances, converted to the base currency (GBP for UK, EUR for eurozone customers) at the time of spending; foreign-currency spend charged at the Mastercard exchange rate 'without additional fees from our side'; paying from another fiat currency requires a conversion. ATM withdrawals wherever Mastercard is accepted; no limits or fees stated.",
+      "accessed_at": "2026-11-04T06:08:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kraken-card-blog",
+      "url": "https://blog.kraken.com/product/kraken-card/introducing-the-kraken-card",
+      "title": "Your Kraken balance, ready to spend: the Kraken Card is here (Kraken blog, 13 Jul 2026, modified 25 Aug 2026)",
+      "source_type": "issuer_doc",
+      "excerpt": "Live for 'eligible customers across the UK and EEA'. UK: issued by Monavate Limited (FCA FRN 901097), e-money by Payward Services Limited (FRN 1010381). EEA: issued by UAB Monavate (Bank of Lithuania LB002139), e-money by Payward Ireland Limited (Central Bank of Ireland). Mastercard. Up to 2% cashback weekly in BTC, EUR or GBP; no Kraken transaction or ATM fees; variable spread.",
+      "accessed_at": "2026-11-04T06:04:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "UK and EEA"
+      },
+      "verification": "verified",
+      "contradiction_note": "Blog says cashback is 'paid weekly'; the cashback overview says it becomes available once the merchant finalises the transaction (typically within 24 h). Modelled per the support article."
+    },
+    {
+      "id": "ev-kraken-verification-docs",
+      "url": "https://support.kraken.com/articles/360000672203",
+      "title": "Document requirements for verification (support centre, updated 28 Oct 2026)",
+      "source_type": "help_center",
+      "excerpt": "Proof of address with name and address dated within 3 months (no P.O. boxes, no mobile phone bills); government ID: passport, driving licence or national identity card (front and back); face photo required for South Africa/US residents or ZA/US bank funding; SSN/ITIN for US clients. Verification levels and the level required for the card are not stated.",
+      "accessed_at": "2026-11-04T06:10:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Generic Kraken account verification, not card-specific"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-krak-card-us",
+      "url": "https://krak.app/card",
+      "title": "Krak Card product page (krak.app, served to a US visitor)",
+      "source_type": "official_terms",
+      "excerpt": "US product only: Visa debit card issued by Lead Bank for 'eligible U.S. residents in most states' (not NY, ME, MA, IN); Krak is 'a financial technology company, not a bank'. Up to 2% cashback in USD or BTC, Metal card for the Max tier ($50,000 average assets). Not the UK/EEA product; used only to document the US/EEA split and the Krak/Kraken naming.",
+      "accessed_at": "2026-11-04T06:01:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "note": "Out-of-scope US variant; not modelled"
+      },
+      "verification": "verified",
+      "contradiction_note": "The US page shows a Visa card issued by Lead Bank; the UK/EEA pages show a Mastercard issued by Monavate. Different products under the Krak/Kraken Card names."
+    },
+    {
+      "id": "ev-efta-eea-states",
+      "url": "https://www.efta.int/eea-relations-eu/eea-institutions-two-pillar-structure/eea-efta-states",
+      "title": "EEA EFTA States (EFTA Secretariat)",
+      "source_type": "reference",
+      "excerpt": "'The EU Member States, together with three of the EFTA States' — Iceland, Liechtenstein and Norway — form the EEA; 'the other EFTA State, Switzerland, is not party to the EEA Agreement.' Used only to expand the provider's stated scope 'EEA' into 30 countries.",
+      "accessed_at": "2026-11-04T06:12:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Reference for the EEA expansion only"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://support.kraken.com/articles/kraken-card-faqs",
+    "affiliate": {
+      "program_id": "kraken-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-04T06:12:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-04T06:15:00Z",
+      "field": "*",
+      "reason": "Initial record from 7 official Kraken pages (card FAQ, cashback overview, getting-started, spending article, launch blog post with issuers, verification documents article, US Krak Card page for the regional split) plus the EFTA reference page used to expand 'EEA' to 30 countries, read by the unattended research run on 2026-11-04. Single read; second read ≥ 24 h later required before publication. Unknown: issuance, delivery and top-up fees, the size of the conversion spread, published spend/ATM limit tables (support.krak.app unreadable without browser provenance), the Kraken verification level required for the card, Metal card terms (krak.app/card/metal not read).",
+      "evidence": [
+        "ev-kraken-card-faq",
+        "ev-kraken-card-cashback",
+        "ev-kraken-card-blog"
+      ],
+      "actor": "claude (research run)"
+    }
+  ],
+  "editorial": {
+    "summary": "Kraken's Mastercard debit card for verified personal Kraken customers in the UK (issued by Monavate Limited) and the EEA (UAB Monavate), spending crypto and cash balances converted at the time of purchase. No monthly fee, no FX markup on the Mastercard rate and no Kraken ATM fee; a variable, unpublished spread applies when crypto or non-base fiat is sold to pay. Cashback 0% to 2% in GBP/EUR or BTC by 30-day average balance (0.5% from £/€200, 1% from 1,000, 1.5% from 10,000, 2% from 50,000) with no cap; new Krak accounts get the 2% Max rate for 30 days. Issuance, delivery and top-up fees are not published. The US 'Krak Card' (Visa, Lead Bank) is a different, out-of-scope product.",
+    "good_for": [
+      "Existing Kraken customers in the UK or EEA who want to spend exchange balances without a monthly fee or FX markup",
+      "Users holding at least £/€1,000 to £/€50,000 across Kraken products, who unlock 1% to 2% uncapped cashback without staking a token",
+      "Travellers: Mastercard exchange rate without markup and no Kraken-side ATM fee"
+    ],
+    "not_for": [
+      "Low-balance users: the Starter tier (under £/€200 average) earns 0% cashback",
+      "Anyone who needs the conversion spread, issuance, delivery and top-up fees in writing — none are published",
+      "Self-custody users: balances are held by Kraken (Payward) entities",
+      "Users who want cashback paid in a token other than BTC or in a stablecoin"
+    ],
+    "watch_outs": [
+      "Two products share the name: the UK/EEA 'Kraken Card' (Mastercard, Monavate) and the US 'Krak Card' (Visa, Lead Bank). Only the UK/EEA card is modelled; the FAQ says the Kraken and Krak cards differ 'only in design'.",
+      "Eligibility is stated only as 'UK and EEA'; the 30-country EEA list is our expansion from the EFTA reference and individual countries may be excluded by Kraken's service availability — to confirm.",
+      "A 'variable spread' applies whenever an asset is sold to complete a payment; its size is not published. Spending from the GBP/EUR cash balance avoids it.",
+      "Cashback tier is set at merchant settlement, not at purchase, and BTC payouts are converted at the settlement-time price.",
+      "The welcome offer (Max rewards for 30 days, 1% salary match) carries 'geographic restrictions' and no dates; the UK legal disclaimer states Kraken's services are unregulated and not covered by the FSCS.",
+      "Spend and ATM limit tables, issuance/delivery fees and the required Kraken verification level were not readable on the pages reached; Metal card terms not read."
+    ]
+  }
+}
