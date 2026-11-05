@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-04.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-05.",
   "target": {
     "min": 15,
     "max": 50
@@ -112,8 +112,10 @@
     {
       "provider": "Ready",
       "product": "Ready Card",
-      "status": "identified",
-      "record": null
+      "status": "blocked",
+      "record": null,
+      "note": "Blocked 2026-11-05: official help centre 'Crypto to fiat with Ready debit card' (updated 2026-07-16) states 'Ready Cards are not available to order' — no new virtual or physical cards during the transition to 'a new card program with a new card partner', no launch date or waitlist; Ready App Terms (Argent Labs Limited, London) name no card issuer. Fee article and 'Why is my card being deactivated?' return a client error to the fetcher. Product status unclear, issuer undisclosed → no record. Re-check when the new card programme is announced.",
+      "needs_browser_read": true
     },
     {
       "provider": "Kraken",
@@ -133,8 +135,9 @@
     {
       "provider": "Plutus",
       "product": "Plutus Card",
-      "status": "identified",
-      "record": null
+      "status": "blocked",
+      "record": null,
+      "note": "Blocked 2026-11-05: card spending is suspended. Official 'Plutus Q1 Migration FAQ' (blog, 2026-02-20): Modulr contract terminated, 'card spending is not possible', new banking partner 'only revealed once the related features are live', new card 'this summer'; PlutusLite help article: cards unavailable, upgrading to a card account 'temporarily unavailable'; EEA T&C (effective 2025-02-20, updated 2025-04-08) §10.1: card and current account 'temporarily unavailable as we transition to a new banking partner'; UK T&C still say 'via Modulr'. premium.plutus.it (2026-07-31): new plan prices from 2026-09-14 (Lite £1.99, Starter £9.99, Everyday £19.99, Premium FX card £29.99/month, GBP only) and rewards renamed PLUS in-app points, contradicting plutus.it/plans (6.99/9.99/19.99 '£/€', PLU token). No page read confirms the new card is live (Nov 2026). Fee page (plutus.it/fees) read: 2.5% non-domestic POS, 2.5% ATM, €/£9.99 physical card, reward-eligible spend £/€250/500/1,000 by plan. Supported countries page: UK + 28 EEA countries (Slovakia listed as both supported and restricted; Estonia and Norway restricted). Issuer of the future card undisclosed, product status unclear → no record."
     },
     {
       "provider": "Trastra",
@@ -152,8 +155,10 @@
     {
       "provider": "Bleap",
       "product": "Bleap Card",
-      "status": "identified",
-      "record": null
+      "status": "validated",
+      "record": "data/cards/bleap-card.json",
+      "note": "EEA+CH record (Mastercard debit issued by Unlimit EU Ltd, Central Bank of Cyprus EMI; programme manager Bleap SIA, Latvia) from 14 official pages read 2026-11-05: homepage/FAQ, two live versions of the EEA Cardholder Terms (Bleap Finance Sp. z o.o. 2026-05-25 / Bleap SIA 2026-06-28), Cashback Terms (2026-05-25), Pricing Disclosure (2026-03-12), Fee Schedule (2026-09-01), seven help-centre articles, Mastercard blog. No Bleap card/monthly/conversion/FX fee; ATM free within a hard €400 / 3 withdrawals per 30 days limit; cashback in USDC 1% (first €3,000 eligible spend/month), 20% on listed streaming/AI/gaming subscriptions with per-merchant caps, 3% Uber/Bolt/food delivery (€500/month per service); 2% restaurants promo ended 2026-05-31. KYC 'Highest' level (ID + selfie + proof of address + questionnaire). Unknown: fiat top-up cost (undisclosed spread + possible minimum fee), physical card price and delivery fee (physical card only via referrals), mobile wallets, per-country availability (EEA/CH wording only; IT/ES cited as possibly not yet served). Contradictions: homepage 2% restaurants undated vs terms ended; blog 'up to 2%' vs 1%/20%. Affiliate: official Ambassador Program page exists but unreadable to the fetcher (data/affiliate/bleap-ambassador.json, identified, terms unknown); in-app referral programme with amounts shown only in-app. Second read required before publication.",
+      "needs_browser_read": true
     },
     {
       "provider": "Plasma",
