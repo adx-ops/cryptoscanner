@@ -1,0 +1,544 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bleap-card",
+  "slug": "bleap-card",
+  "name": "Bleap Card",
+  "brand": "Bleap",
+  "provider_id": "bleap",
+  "issuer": {
+    "name": "Unlimit EU Ltd",
+    "status": "verified",
+    "evidence": [
+      "ev-bleap-cardholder-terms-sia",
+      "ev-bleap-cardholder-terms-eea"
+    ]
+  },
+  "network": "mastercard",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Card payments are debited from the user's non-custodial Bleap Wallet (MPC key shares), which must hold supported stable assets 'such as USDC or EURE'; a USD-denominated request debits USD, a EUR request debits EUR, and Bleap may use another held currency when the requested one is insufficient. Non-stable crypto holdings cannot be spent directly.",
+    "evidence": [
+      "ev-bleap-wallet-balances",
+      "ev-bleap-cardholder-terms-sia",
+      "ev-bleap-home"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "bleap-card-eea-ch",
+      "region_label": "EEA + Switzerland",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "Cards cannot be issued to holders of 45 listed nationalities regardless of residence (incl. United States, Turkey, United Arab Emirates, Nigeria, South Africa, Pakistan, Philippines, Viet Nam, Morocco, Jordan, Lebanon, Panama, Jamaica, Barbados, Trinidad and Tobago, Cayman Islands, Albania, Kosovo, Cuba, Iran, Syria, Venezuela…), plus sanctions-list screening.",
+        "usage_note": "Official wording: cardholders must be 'resident in the EEA or Switzerland' (Cardholder Terms, updated 2026-06-28; help article 2026-07-03). No country-by-country list is published, so the list is left empty and every country is 'to confirm'. The help article warns that some EEA residents (Italy and Spain are given as examples) 'may not yet have access' because of 'regulatory compliance and partner agreements'; such accounts see a 'Coming soon' label in the Cards tab. The homepage also mentions Mexico and Brazil (not covered by these EEA terms; no separate terms read).",
+        "evidence": [
+          "ev-bleap-eligibility",
+          "ev-bleap-cardholder-terms-sia"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "proof_of_address",
+          "other"
+        ],
+        "thresholds_note": "Verification levels: Self-custody (no verification; wallet, trading, DeFi vaults), Basic (selfie + government ID; bank-transfer buy/sell with monthly limits), Higher (+ proof of address issued within 3 months), Highest (+ questionnaire; full access). Limits per level are not published ('check Account Limits in the app').",
+        "stages_note": "The wallet itself works without verification; the card requires the 'Highest' verification level plus the eligibility criteria (a 'Get Card' button appears when the account qualifies). Bleap may request further documents, e.g. a residence permit for non-EEA nationals. Ongoing checks required by Bleap or the issuer Unlimit.",
+        "evidence": [
+          "ev-bleap-kyc",
+          "ev-bleap-cardholder-terms-sia"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Bleap Card",
+          "access": {
+            "type": "free",
+            "note": "Single tier; no plans or subscriptions published.",
+            "status": "verified",
+            "evidence": [
+              "ev-bleap-cardholder-terms-sia",
+              "ev-bleap-home"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card: 'Card issuance: free' (homepage); Cardholder Terms: 'We do not charge any Bleap card fees' (no issuance, monthly, usage or exchange fees). The physical card is currently obtainable only through the referral programme (friend completes KYC and makes 3 card payments of €10 or more); its price, if any, is not stated.",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-home",
+                "ev-bleap-cardholder-terms-sia",
+                "ev-bleap-physical-card"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered 'typically within two weeks'; delivery fee not stated on any page read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-bleap-physical-card"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'No monthly or annual fee' (homepage); 'no issuance, monthly, usage, or exchange fees' (Cardholder Terms).",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-home",
+                "ev-bleap-cardholder-terms-sia"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Stablecoin-to-fiat conversion at payment: 0% (homepage); 'No fees are charged by Bleap when paying with card' (Fee Schedule, 2026-09-01). Buying stablecoins to fund the wallet carries an undisclosed spread — see top-up.",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-home",
+                "ev-bleap-fee-schedule",
+                "ev-bleap-cardholder-terms-sia"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Non-EUR/USD payments are converted at the Mastercard network rate 'with no additional FX markup from Bleap' (Cardholder Terms); homepage: 'Foreign exchange fee (non-EUR transactions): none'. Mastercard scheme fees, merchant surcharges and taxes may still apply and are the cardholder's responsibility.",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-cardholder-terms-sia",
+                "ev-bleap-home"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 400,
+                  "currency": "EUR"
+                },
+                "count": 3,
+                "period": "month"
+              },
+              "conditions": "No Bleap ATM fee: 'ATM withdrawals: free, up to €400 per month' (homepage) and 'no … usage fees' (Cardholder Terms). The €400 / 3 withdrawals per rolling 30 days is a hard limit, not a fee threshold — 'transactions above a limit are declined' (Card Limits article). ATM operator surcharges may apply.",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-home",
+                "ev-bleap-card-limits",
+                "ev-bleap-cardholder-terms-sia"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Funding the wallet: crypto transfers in are free apart from network gas (homepage, Fee Schedule); SEPA / SEPA Instant purchases of stablecoins carry a 0% processing fee but 'a small spread' is added to the displayed price and 'a minimum processing fee may apply' below an unstated threshold (Fee Schedule 2026-09-01, Pricing Disclosure 2026-03-12). Because the spread and minimum are not quantified, the fiat top-up cost is recorded as unknown.",
+              "status": "unknown",
+              "evidence": [
+                "ev-bleap-fee-schedule",
+                "ev-bleap-pricing-disclosure",
+                "ev-bleap-home"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 3000,
+                  "currency": "EUR"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "valid_from": "2026-02-12",
+              "valid_until": null,
+              "excluded_categories": [
+                "money transfers and funding, stored-value loads, cash disbursements",
+                "financial institutions, securities, insurance, savings bonds, Curve cards",
+                "gambling, casinos and betting",
+                "government and tax payments",
+                "utilities (electricity, gas, water, sanitation)",
+                "postal services, gift shops, software/IT services, professional and business services",
+                "charitable and political organisations, hospitals, art dealers",
+                "cash-like transactions (gift cards, currency exchange, P2P)"
+              ],
+              "conditions": "Default rate on all eligible merchants: 1%, credited in USDC to the Bleap Wallet once the transaction settles. Caps apply to the eligible payment amount, not to the cashback: €500 ($600) per transaction and €3,000 ($3,600) per month (i.e. at most about €30 of cashback per month at this rate). Rates, caps and offers can be 'changed, suspended, or withdrawn at any time, without prior notice'. Clawback on refunds, reversals or breach.",
+              "description": "1% cashback in USDC on everyday spending",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-cashback-terms",
+                "ev-bleap-limits-all",
+                "ev-bleap-home"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 20,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "valid_from": "2026-02-12",
+              "valid_until": null,
+              "conditions": "20% only at listed subscription merchants, with per-merchant caps on the eligible payment amount: streaming — Netflix €20/month, Amazon Prime €10/month, YouTube Premium €20/month, Disney+ €200/year; AI — ChatGPT €30/month, Gemini €20/month, Claude €250/year; gaming — Xbox Game Pass €30/month, PlayStation Plus €220/year, Nintendo Switch Online €80/year, Steam €80/year. No end date stated; changeable without notice.",
+              "description": "20% on listed streaming, AI and gaming subscriptions (capped per merchant)",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-cashback-terms",
+                "ev-bleap-limits-all"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 3,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 500,
+                  "currency": "EUR"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "valid_from": "2026-02-12",
+              "valid_until": null,
+              "conditions": "3% at Uber and Bolt (transportation) and at Just Eat, Deliveroo, Uber Eats, Glovo and Bolt Food (delivery): eligible payment capped at €50 ($60) per transaction and €500 ($600) per month, applied separately to each service. No end date stated.",
+              "description": "3% on listed ride-hailing and food-delivery services",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-cashback-terms",
+                "ev-bleap-limits-all"
+              ]
+            },
+            {
+              "type": "promotional",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 1000,
+                  "currency": "EUR"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "valid_from": "2026-02-12",
+              "valid_until": "2026-05-31",
+              "conditions": "Promotional 2% at restaurants and supermarkets, eligible payment capped at €250 per transaction and €1,000 per month; ran 12 Feb – 31 May 2026 per the Cashback Terms. ENDED. The homepage still advertises 'Restaurants and supermarkets: 2%' without dates (see contradiction).",
+              "description": "2% restaurants & supermarkets promotion (ended 2026-05-31)",
+              "status": "stale",
+              "evidence": [
+                "ev-bleap-cashback-terms"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 15000,
+                "currency": "EUR"
+              },
+              "period": "per_day",
+              "note": "Card payments / online purchases: €10,000 per transaction, €15,000 per day, €30,000 per rolling 30 days. Limits may change with account status and regulation.",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-card-limits",
+                "ev-bleap-limits-all"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 400,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "3 withdrawals and €400 per rolling 30 days; transactions above the limit are declined.",
+              "status": "verified",
+              "evidence": [
+                "ev-bleap-card-limits",
+                "ev-bleap-limits-all"
+              ]
+            }
+          ],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-bleap-home",
+      "url": "https://www.bleap.finance/",
+      "title": "Bleap — homepage and FAQ (Digital Account & Cashback Card)",
+      "source_type": "pricing_page",
+      "excerpt": "Mastercard card: issuance free, no monthly/annual fee, 0% conversion at payment, no FX fee on non-EUR transactions, ATM free up to €400/month, bank-transfer and crypto top-ups free. Cashback 20% streaming/gaming/AI, 3% rides & delivery, 2% restaurants & supermarkets, 1% everything else, in USDC. Europe + Mexico/Brazil. MPC self-custody. CASP licence 2026-06-25. Undated.",
+      "accessed_at": "2026-11-05T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Marketing page; undated."
+      },
+      "verification": "verified",
+      "contradiction_note": "Lists 'Restaurants and supermarkets: 2%' without dates, whereas the Cashback Terms (updated 2026-05-25) date that rate 12/02/2026–31/05/2026. The dated terms govern: the 2% is modelled as an ended promotion. Savings yield stated as 'up to 8%' on the homepage vs 'up to 4% APY' in its own FAQ (not modelled)."
+    },
+    {
+      "id": "ev-bleap-cardholder-terms-sia",
+      "url": "https://www.bleap.finance/en-us/legal-agreements/bleap-cardholder-terms-eea-bleap-sia",
+      "title": "Bleap Cardholder Terms (EEA) — Bleap SIA (updated 28 June 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Issuer Unlimit EU Ltd (HE 328641), 'licensed and regulated by the Central Bank of Cyprus as an Electronic Money Institution'; Mastercard debit, physical/virtual/tokenised; programme manager Bleap SIA (Latvia). 18+, resident in the EEA or Switzerland, restricted nationalities excluded. 'We do not charge any Bleap card fees'; Mastercard rate, no FX markup; ATM operator fees may apply; non-custodial.",
+      "accessed_at": "2026-11-05T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Governing law Latvia; issuer matters under Unlimit's terms."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-cardholder-terms-eea",
+      "url": "https://www.bleap.finance/en-us/legal-agreements/bleap-cardholder-terms-eea",
+      "title": "Bleap Cardholder Terms (EEA) — Bleap Finance Sp. z o.o. (updated 25 May 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Earlier version with Bleap Finance Sp. z o.o. (Poland) as programme manager; same issuer Unlimit EU Ltd (Central Bank of Cyprus EMI), same Mastercard debit card, same eligibility (18+, EEA or CH residents, restricted nationalities) and fee wording (no Bleap issuance, monthly, usage or exchange fees; Mastercard rate without FX markup; ATM operator fees may apply). Governing law Latvia.",
+      "accessed_at": "2026-11-05T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Two versions of the EEA cardholder terms are live simultaneously (programme manager Bleap Finance Sp. z o.o., updated 2026-05-25, vs Bleap SIA, updated 2026-06-28). Material values (issuer, network, eligibility, fees) are identical; the later Bleap SIA version is treated as governing."
+    },
+    {
+      "id": "ev-bleap-eligibility",
+      "url": "https://help.bleap.finance/en/articles/11088792-am-i-eligible-for-card",
+      "title": "Am I eligible for Card? (help centre, 3 July 2026)",
+      "source_type": "eligibility_page",
+      "excerpt": "Card unavailable to users who 'reside outside of the EEA or Switzerland, regardless of their nationality' and to holders of 45 listed restricted nationalities (incl. US, TR, AE, NG, ZA, PK). No positive country list; some EEA residents (e.g. Italy, Spain) 'may not yet have access' because of regulatory compliance and partner agreements; 'Coming soon' label when not enabled.",
+      "accessed_at": "2026-11-05T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-cashback-terms",
+      "url": "https://www.bleap.finance/legal-agreements/cashback-terms-and-conditions",
+      "title": "Bleap Cashback Terms and Conditions (updated 25 May 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Caps 'apply to the maximum eligible payment amount, not the maximum cashback payable'. Default 1% (€500/tx, €3,000/month) from 12/02/2026, no end date; Uber/Bolt and food delivery 3% (€50/tx, €500/month per service); streaming/AI/gaming subscriptions 20% with per-merchant caps; promos: restaurants & supermarkets 2% 12/02–31/05/2026, OnlyFans 20% to 28/02/2026. Paid in USDC.",
+      "accessed_at": "2026-11-05T05:46:00Z",
+      "effective_from": "2026-02-12",
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR",
+        "note": "USD equivalents also listed ($600 / $3,600 etc.)."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-card-limits",
+      "url": "https://help.bleap.finance/en/articles/11729680-card-limits",
+      "title": "Card Limits (help centre, 8 July 2025)",
+      "source_type": "help_center",
+      "excerpt": "ATM withdrawals: 3 per month, €400 per month. Card payments/online purchases: €10,000 single, €15,000 daily, €30,000 monthly. Outgoing bank transfers €3,000/€5,000/€10,000; incoming €2,000/€5,000/€7,000. Monthly = rolling 30-day window; 'transactions above a limit are declined'; limits may change with account status and regulation. No fees stated.",
+      "accessed_at": "2026-11-05T05:47:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-limits-all",
+      "url": "https://help.bleap.finance/en/articles/15566380-what-limits-exist-in-bleap",
+      "title": "What limits exist in Bleap? (help centre, undated — 'updated yesterday' on 2026-11-05)",
+      "source_type": "help_center",
+      "excerpt": "Repeats the card limits (ATM 3/€400 per month; card €10,000/€15,000/€30,000) and the cashback grid 'Feb 2026 → ongoing' (1% default €500/tx €3,000/mo; 3% transport & delivery €50/€500 per service; 20% subscriptions with per-merchant caps). Account limits 'can vary — check Account Limits in the app'. Monthly counts: 5 cashback withdrawals, 30 exchanges. No ATM/FX/card fee mentioned.",
+      "accessed_at": "2026-11-05T05:48:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-kyc",
+      "url": "https://help.bleap.finance/en/articles/11322326-kyc-guide",
+      "title": "Identity Verification Guide (help centre, 18 August 2025)",
+      "source_type": "help_center",
+      "excerpt": "Levels: Self-custody (no verification), Basic (selfie + live photo of passport/national ID), Higher (+ proof of address ≤ 3 months), Highest (+ questionnaire; full access). 'Card access requires Highest Verification plus eligibility criteria' — 'Get Card' button appears when eligible. Extra documents may be requested (e.g. residence permit). Provider and minimum age not stated.",
+      "accessed_at": "2026-11-05T05:47:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-fee-schedule",
+      "url": "https://help.bleap.finance/en/articles/12097920-fee-schedule",
+      "title": "Fee Schedule (help centre, 1 September 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "'No fees are charged by Bleap when paying with card.' SEPA / SEPA Instant buy and sell: 0% processing fee; 'a minimum processing fee may apply' below a threshold. Spread: 'a small amount added to the displayed price' on buy, sell and bridge (no figure). Network fee shown separately. No cash-out fee. Card issuance, physical, delivery, ATM and FX fees not covered.",
+      "accessed_at": "2026-11-05T05:49:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-pricing-disclosure",
+      "url": "https://www.bleap.finance/legal-agreements/pricing-disclosure",
+      "title": "Pricing Disclosure (crypto services; updated 12 March 2026)",
+      "source_type": "official_terms",
+      "excerpt": "SEPA/SEPA Instant buy 0%, sell 0%; minimum fee may apply below a threshold; blockchain network fee as a separate line; 'small spread' on buy/sell/bridge (no percentage); stablecoins fixed at 1 EUR / 1 USD per unit; non-stablecoin prices refresh every 10 s. No card fees on this page. © Bleap LTD 2026.",
+      "accessed_at": "2026-11-05T05:46:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-physical-card",
+      "url": "https://help.bleap.finance/en/articles/17213661-how-can-i-obtain-a-physical-bleap-card",
+      "title": "How can I obtain a physical Bleap card? (help centre, undated)",
+      "source_type": "help_center",
+      "excerpt": "Physical card 'available only through the referral program': the referred friend must create an account via the link, complete KYC and make at least three card payments of €10 or more; 'no alternative methods at this time'. Delivery typically within two weeks, varying by location. Fee and shipping countries not stated.",
+      "accessed_at": "2026-11-05T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-wallet-balances",
+      "url": "https://help.bleap.finance/en/articles/15820587-how-does-the-bleap-debit-card-use-wallet-balances-for-payments",
+      "title": "How does the Bleap debit card use wallet balances for payments? (help centre, undated)",
+      "source_type": "help_center",
+      "excerpt": "Balance 'must be funded with supported stable assets, such as USDC or EURE'; USD requests debit USD, EUR requests debit EUR; Bleap may use another held currency when the requested one is insufficient; crypto holdings cannot be used directly. Conversion order, rate and fee not described (links to the Fee Schedule).",
+      "accessed_at": "2026-11-05T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-referral",
+      "url": "https://help.bleap.finance/en/articles/15060196-conditions-referrals-program",
+      "title": "Conditions — Referrals Program (help centre, undated)",
+      "source_type": "affiliate_program",
+      "excerpt": "Personal referral programme: referred user registers via the link, completes KYC, tops up by bank transfer and makes at least 3 card purchases of a minimum amount ('at least five euros (€10)' — inconsistent); reward amounts shown only in-app; max five referral rewards per user; quasi-cash and crypto deposits excluded; changeable without notice. No publisher programme mentioned.",
+      "accessed_at": "2026-11-05T05:48:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-bleap-mastercard-blog",
+      "url": "https://www.bleap.finance/en-us/blog/bleap-and-mastercard",
+      "title": "Bleap and Mastercard (company blog, 16 April 2025, updated 27 October 2026)",
+      "source_type": "issuer_doc",
+      "excerpt": "'Partnered with Mastercard to launch a non-custodial debit card' for stablecoin spending at 150M+ merchants; 'first focus' on Europe, Latin America planned; 'up to 2% cashback'; no issuer named; no fees listed.",
+      "accessed_at": "2026-11-05T05:49:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "States 'up to 2% cashback' while the Cashback Terms (2026-05-25) and the homepage state 1% default and up to 20% on listed subscriptions. The dated Cashback Terms govern; the blog figure is treated as outdated marketing and is not modelled."
+    }
+  ],
+  "links": {
+    "official_url": "https://www.bleap.finance/",
+    "affiliate": {
+      "program_id": "bleap-ambassador",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-05T05:50:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-05T05:50:00Z",
+      "field": "*",
+      "reason": "Initial record from 14 official Bleap pages (homepage/FAQ, two live versions of the EEA Cardholder Terms, Cashback Terms, Pricing Disclosure, Fee Schedule and seven help-centre articles, Mastercard partnership blog) read by the unattended research run — single read; a second independent read at least 24 h later is required before publication.",
+      "evidence": [
+        "ev-bleap-cardholder-terms-sia",
+        "ev-bleap-cashback-terms",
+        "ev-bleap-eligibility",
+        "ev-bleap-fee-schedule"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Non-custodial Mastercard debit card issued by Unlimit EU Ltd (Cyprus EMI) for EEA and Swiss residents, spending USDC/EURe from an MPC wallet. No Bleap card, monthly, conversion or FX fees and fee-free ATM withdrawals within a €400/month limit. Cashback in USDC: 1% on everyday spending (first €3,000 of eligible spend per month) and 20% on listed streaming, AI and gaming subscriptions with small per-merchant caps.",
+    "good_for": [
+      "EEA or Swiss residents who want to keep custody of their stablecoins and pay no card, FX or monthly fee",
+      "Subscribers to the listed streaming, AI and gaming services (20% back, capped per merchant)"
+    ],
+    "not_for": [
+      "Anyone needing more than €400 of ATM cash per month (hard limit, not a fee)",
+      "Nationals of the 45 restricted countries, including US and Turkish nationals living in the EEA",
+      "Residents of EEA countries where the card is still 'coming soon' (Italy and Spain are the provider's own examples)"
+    ],
+    "watch_outs": [
+      "No country-by-country eligibility list is published; access depends on 'regulatory compliance and partner agreements'.",
+      "Funding the wallet by SEPA involves an undisclosed spread and a possible minimum fee — top-up cost recorded as unknown.",
+      "The physical card is only obtainable through the referral programme; its price and delivery fee are not stated.",
+      "Cashback rates, caps and offers can be changed, suspended or withdrawn without prior notice; the homepage still shows a 2% restaurants rate that the terms date as ended on 2026-05-31.",
+      "Two versions of the EEA cardholder terms are live (Polish vs Latvian programme-manager entity); values are identical."
+    ]
+  }
+}

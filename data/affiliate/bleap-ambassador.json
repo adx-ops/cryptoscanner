@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "bleap-ambassador",
+  "provider_id": "bleap",
+  "program_name": "Bleap Ambassador Program (plus in-app Referrals Program)",
+  "program_url": "https://www.bleap.finance/es/about/ambassador-program",
+  "type": "unknown",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Unknown. The official page bleap.finance/about/ambassador-program exists (surfaced by search on 2026-11-05) but returned a client error to the fetcher — its content was NOT read. The help centre documents only a personal in-app Referrals Program.",
+  "our_status": "identified",
+  "paid_action": "Unknown for the Ambassador Program. Referrals Program (help centre): referred user registers via the referral link, completes KYC, tops up by bank transfer (other methods ineligible) and makes at least 3 card purchases of a minimum amount (page states 'at least five euros (€10)' — internally inconsistent).",
+  "validation_conditions": "Referrals Program: rewards credited after Bleap verifies the requirements; each person can be referred once; existing account holders ineligible; maximum five referral rewards per user; quasi-cash payments (gambling, gift cards, P2P) and crypto/wallet deposits excluded; rewards non-transferable; programme changeable or terminable without notice. Ambassador Program conditions unknown.",
+  "commission": {
+    "model_note": "Unknown. Referral reward amounts are shown only on the in-app Rewards page ('currently available campaigns'); no figure is published on the pages read.",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "unknown",
+    "method": "Referrals: 'cash or equivalent rewards' credited to the referrer's Bleap account. Ambassador Program: unknown.",
+    "frequency": "unknown"
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Help-centre page undated ('Updated over 2 weeks ago' on 2026-11-05). Support agents cannot add or change campaigns manually.",
+  "allowed_countries_note": "Referred users must pass KYC and, for the card-purchase condition, be card-eligible (EEA or Switzerland residents, restricted nationalities excluded).",
+  "evidence": [
+    {
+      "url": "https://help.bleap.finance/en/articles/15060196-conditions-referrals-program",
+      "title": "Conditions — Referrals Program (help centre, undated)",
+      "accessed_at": "2026-11-05T05:48:00Z",
+      "excerpt": "Qualifying actions: registration via link + KYC + bank-transfer top-up + at least 3 card purchases of a minimum amount; reward amounts on the in-app Rewards page; max five referral rewards per user; exclusions; changeable without notice. No publisher/affiliate programme mentioned."
+    },
+    {
+      "url": "https://www.bleap.finance/es/about/ambassador-program",
+      "title": "Bleap Ambassador Program (official page — NOT READ, client error to the fetcher)",
+      "accessed_at": "2026-11-05T05:49:00Z",
+      "excerpt": "URL surfaced by a domain-restricted search; fetch failed with a client error. Content, commission and conditions unknown — browser read needed."
+    }
+  ],
+  "verification": "unknown",
+  "notes": "Status 'identified' only because an official Ambassador Program page exists; nothing about its terms is known. Personal referral rewards are in-app balance, not a publisher payout. No application made, nobody contacted. Add needs_browser_read for the ambassador page."
+}

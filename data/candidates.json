@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other.",
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "entries": [
     {
       "provider": "Wirex",
@@ -196,11 +196,13 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "priority": 4,
-      "discovery_note": "Listed as 'currently unavailable' (Ready Lite, Ready Metal) by spendnode.io on 2026-11-02; unverified"
+      "discovery_note": "Listed as 'currently unavailable' (Ready Lite, Ready Metal) by spendnode.io on 2026-11-02; unverified",
+      "needs_browser_read": true,
+      "blocked_reason": "Blocked 2026-11-05: official help centre (help.ready.co, article updated 2026-07-16) says 'Ready Cards are not available to order' during a transition to 'a new card program with a new card partner', no date, no waitlist; issuer not named in the Ready App Terms (Argent Labs Limited); fee and card-deactivation articles return a client error to the fetcher. Product status unclear → re-check when the new programme launches."
     },
     {
       "provider": "Kraken",
@@ -248,10 +250,11 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
-      "priority": 4
+      "last_seen": "2026-11-05",
+      "priority": 4,
+      "blocked_reason": "Blocked 2026-11-05: card spending suspended since the Modulr contract termination (Plutus Q1 Migration FAQ, 2026-02-20: 'card spending is not possible', new partner unnamed until live, new card 'this summer'); EEA T&C §10.1 'temporarily unavailable'; PlutusLite: card upgrade 'temporarily unavailable'; no official page read confirms the new card is live. New plan prices from 2026-09-14 (GBP only) and PLUS in-app points contradict plutus.it/plans (PLU). Issuer undisclosed, product status unclear."
     },
     {
       "provider": "Trastra",
@@ -296,11 +299,13 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "ambassador programme page exists (unread) + in-app referral",
+      "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
-      "priority": 4
+      "last_seen": "2026-11-05",
+      "priority": 0,
+      "affiliate_hint_note": "bleap.finance/about/ambassador-program surfaced by search 2026-11-05 but returned a client error to the fetcher; help-centre Referrals Program documented (amounts in-app only). Record data/affiliate/bleap-ambassador.json.",
+      "needs_browser_read": true
     },
     {
       "provider": "Oobit",
