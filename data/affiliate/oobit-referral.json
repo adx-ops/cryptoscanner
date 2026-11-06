@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "oobit-referral",
+  "provider_id": "oobit",
+  "program_name": "Oobit Referral Program (in-app, personal)",
+  "program_url": "https://support.oobit.com/hc/en-us/articles/21467534373149-How-does-the-Oobit-Referral-Program-work",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "No application: every verified Oobit user has a promotion code under 'Invite friends, Get Rewards' in the app. The FAQ states the programme 'is for personal, non-commercial sharing with friends and family'. No publisher, affiliate, partner or ambassador programme was found on oobit.com, the FAQ, the support centre or the business site in this run.",
+  "our_status": "identified",
+  "paid_action": "Support centre: the referee enters the code, both accounts are KYC-verified, the referrer makes a qualifying payment and the referee makes a qualifying payment within 14 days of entering the code; the referee must never have used Tap to Pay. FAQ: 'USD 50 Inviter Reward when three Invitees each become a Qualified Invitee', i.e. reach at least USD 200 cumulative card payment spend within 60 days — not pro-rated, repeatable without limit.",
+  "validation_conditions": "Both parties verified; qualifying payment definition in an 'Eligibility and Overview' section and 'Full terms & conditions' not retrievable (Referral Terms page oobit.com/legal/referral-terms not readable this run). Codes expire 14 days after entry. Up to 100 referral bonuses (20,000,000 points) per user per the support centre. Referral payouts require KYC verification at the time of payout (FAQ).",
+  "commission": {
+    "model_note": "Two official descriptions disagree: support centre — 200,000 points each for referrer and referee (1,000 points = USD 1 per the Rewards Programme terms, i.e. USD 200 equivalent, usable only on in-app Tap to Pay); FAQ — USD 50 in USDT/USDC per three qualified invitees. Neither is a publisher commission.",
+    "status": "contradictory"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": 14,
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "Points convertible to spendable USDT (support centre) / 'paid in USDT or USDC depending on your jurisdiction' (FAQ); Rewards Programme terms §1.8 restrict rewards to Tap to Pay payments in the app, not withdrawable",
+    "frequency": "not stated"
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Personal, non-commercial sharing only (FAQ). Rewards Programme terms (19/10/2026) govern points: Oobit may change or end programmes with 30 days' notice; prohibited automation, scrapers and market manipulation. Support article undated.",
+  "allowed_countries_note": "Referees must pass KYC; Oobit lists 80+ countries (FAQ). Rewards paid in USDC for EEA residents, USDT elsewhere.",
+  "evidence": [
+    {
+      "url": "https://support.oobit.com/hc/en-us/articles/21467534373149-How-does-the-Oobit-Referral-Program-work",
+      "title": "How does the Oobit Referral Program work? (support centre, undated)",
+      "accessed_at": "2026-11-06T06:05:00Z",
+      "excerpt": "200,000 points each for referrer and referee; code entered in the 'Referral Code' section; both verified; qualifying payment within 14 days; referee never used Tap to Pay; up to 100 bonuses / 20,000,000 points; 'Additional terms apply'. No affiliate or partner programme mentioned."
+    },
+    {
+      "url": "https://www.oobit.com/faq",
+      "title": "Oobit FAQ — referral programme answers (undated)",
+      "accessed_at": "2026-11-06T05:58:00Z",
+      "excerpt": "'USD 50 Inviter Reward when three Invitees each become a Qualified Invitee' (USD 200 cumulative card payment spend within 60 days), paid in USDT or USDC, not pro-rated, repeatable, KYC at payout, 'personal, non-commercial sharing with friends and family'."
+    },
+    {
+      "url": "https://oobit.com/5x-rewards",
+      "title": "Oobit Rewards Programme terms (last updated 19/10/2026)",
+      "accessed_at": "2026-11-06T06:03:00Z",
+      "excerpt": "§4 points for referrals (no amounts); 1,000 points = USD 1; §1.8 rewards usable only on Tap to Pay in-app, not withdrawable or transferable."
+    }
+  ],
+  "verification": "contradictory",
+  "notes": "Personal referral only; no publisher programme identified, so no application is possible. Nobody contacted. The Referral Terms page (oobit.com/legal/referral-terms, linked from the FAQ) could not be fetched in this run — read it in the second read to resolve the USD 50 vs 200,000-points discrepancy."
+}

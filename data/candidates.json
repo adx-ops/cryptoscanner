@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "entries": [
     {
       "provider": "Wirex",
@@ -317,12 +317,15 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "operator_named": null,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "operator_named": true,
+      "affiliate_hint": "personal referral only (in-app code); no publisher programme found 2026-11-06",
+      "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-02",
-      "priority": 4
+      "last_seen": "2026-11-06",
+      "priority": 0,
+      "record": "data/cards/oobit-crypto-card.json",
+      "needs_browser_read": true,
+      "validation_note": "Validated 2026-11-06 from 7 official pages; fee page, Terms of Use, Referral Terms and support country article unreadable to the fetcher (needs browser read)."
     },
     {
       "provider": "Revolut",
@@ -513,12 +516,14 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "operator_named": null,
+      "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-02",
-      "priority": 4
+      "last_seen": "2026-11-06",
+      "priority": 4,
+      "needs_browser_read": true,
+      "blocked_reason": "Blocked 2026-11-06: operator Hardline Holding Limited (Kazakhstan, AIFC FinTech Lab AFSA-G-LA-2024-0011) and card services 'in collaboration with Signify Holdings Inc' per Terms of Use v3.0.0 (2026-07-01); card issuer bank unnamed; no card fee schedule readable (homepage gives no figures; help-centre Card Overview / Cashback Program / EUR limits / Cash Withdrawal and promo.kolo.xyz/bitcoin-cashback not reachable by the fetcher); only a restricted-country list (USD card 454905 / EUR card 442601, EUR card without ATM). Retry with a browser session; David to decide whether a Kazakhstan-licensed operator is in scope for the EEA catalogue."
     },
     {
       "provider": "IZIPAY",
@@ -1133,11 +1138,15 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "none found 2026-11-06 (AppsFlyer install link only)",
+      "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
-      "priority": 4
+      "last_seen": "2026-11-06",
+      "priority": 0,
+      "operator_named": true,
+      "record": "data/cards/xplace-card.json",
+      "needs_browser_read": true,
+      "validation_note": "Validated 2026-11-06 from homepage + membership page; docs.x.place Card Terms (US / International) and the-card/cashback/borrowing sub-pages unreadable to the fetcher (needs browser read)."
     },
     {
       "provider": "Hyperbeat",
