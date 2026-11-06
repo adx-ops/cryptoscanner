@@ -1067,7 +1067,7 @@
       "title": "Tier System Terms & Conditions (help centre; effective 1 Sep 2025, last updated 1 Sep 2026)",
       "source_type": "official_terms",
       "excerpt": "Six tiers by COCA stake 0/300/1,000/3,000/10,000/30,000: cashback 1/3/4/5/6/8%, Monthly Claim Capacity $15/25/35/60/140/350, plastic card $5 (three lower tiers) or free, 50% subscription rebate (≤$70), 5% USD APY. Card for residents of 73 listed countries; EUR accounts for 28. No FX, ATM, top-up or delivery fee; no issuer or legal entity named. Appendix: card limits.",
-      "accessed_at": "2026-11-04T05:41:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": "2025-09-01",
       "expires_at": null,
       "scope": {
@@ -1082,7 +1082,7 @@
       "title": "COCA Debit Card Limits (help centre, modified 27 Oct)",
       "source_type": "help_center",
       "excerpt": "Purchase: €30,000 per transaction, per day and per month; €75,000 per 3 months; €100,000 per 6 months; count unlimited for Visa cards. Cash withdrawal: €850 per day, €5,000 per month, 5 per day. Elite members may request a higher limit via Card Details → Visa Card Limits. No fees on the page.",
-      "accessed_at": "2026-11-04T05:40:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -1096,7 +1096,7 @@
       "title": "COCA Card (docs.coca.xyz)",
       "source_type": "pricing_page",
       "excerpt": "Virtual and physical debit card; Apple Pay and Google Pay. 'COCA Virtual Card is free for all tiers'; physical card $5 for Starter, Standard, Standard+ and free for Premium, Premium+, Elite. Same purchase and ATM limits as the help centre; 'Visa Card Limits' menu. No FX, ATM, top-up or monthly fee mentioned; issuer not named.",
-      "accessed_at": "2026-11-04T05:42:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -1108,7 +1108,7 @@
       "title": "Banking Account — Overview (docs.coca.xyz)",
       "source_type": "pricing_page",
       "excerpt": "USD and EUR (SEPA) banking account with personal IBAN; top-up by bank transfer, by card from another bank, or with supported stablecoins on multiple blockchains. 'Zero FX fees on direct currency pairs', 'Zero annual fees', free virtual card. Card availability depends on country of residence. Issuer, licence, KYC and other fees not stated.",
-      "accessed_at": "2026-11-04T05:43:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -1120,7 +1120,7 @@
       "title": "Virtual Card and Physical card (help centre, modified 27 Oct)",
       "source_type": "help_center",
       "excerpt": "'The COCA Card is provided in collaboration with Wirex.' Works wherever Visa/Mastercard are accepted; virtual and physical options; 3D Secure by SMS only. No fee figures.",
-      "accessed_at": "2026-11-04T05:44:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -1132,7 +1132,7 @@
       "title": "How do I order a COCA card? (help centre, modified 12 Oct)",
       "source_type": "eligibility_page",
       "excerpt": "Residence country (not citizenship); KYC: passport, ID card or driving licence plus proof of address (bank document, utility bill ≤ 6 months, lease, employer letter); 'typically up to 20 minutes'. Virtual card usable once approved; physical card needs an initial top-up 'equivalent to €50 to cover delivery and card issuance', remainder becomes balance. Same 73-country list as the Tier Terms.",
-      "accessed_at": "2026-11-04T05:45:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -1144,7 +1144,7 @@
       "title": "How to top-up the card? (help centre, modified 29 Apr)",
       "source_type": "help_center",
       "excerpt": "Two methods: crypto deposit from an external wallet to the address linked to the card (supported assets and networks listed in-app only) and bank transfer to the account details shown. No fees, minimums, processing times or conversion details stated.",
-      "accessed_at": "2026-11-04T05:46:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -1156,7 +1156,7 @@
       "title": "MiCA Regulation and COCA (help centre, modified 13 Jul)",
       "source_type": "help_center",
       "excerpt": "'COCA is non-custodial', 'Your private keys are not held by COCA'; the wallet 'is not licensed as a MiCA Crypto-Asset Service Provider (CASP)' and is described as generally outside MiCA custodial provisions. Card and payment services run through 'the appropriate regulated payment infrastructure' — provider, regulator and legal entity not named.",
-      "accessed_at": "2026-11-04T05:47:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -1168,7 +1168,7 @@
       "title": "What is COCA? (help centre, modified 3 Mar)",
       "source_type": "help_center",
       "excerpt": "MPC non-custodial wallet with a non-custodial debit card (virtual and physical) offered to users in the EEA, the UK and APAC. Describes transactions as fee-free 'including ATM withdrawals up to $250 globally' and says the wallet 'eliminates monthly and foreign exchange charges'. No entity, network or fee schedule.",
-      "accessed_at": "2026-11-04T05:48:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -1181,7 +1181,7 @@
       "title": "Refer a Friend Campaign (help centre; effective 1 May 2026, last updated 26 Oct 2026)",
       "source_type": "affiliate_program",
       "excerpt": "Referrer $20 and friend $10 (USD or EUR) when the new user orders a card, spends ≥ $100 cumulatively and makes ≥ 3 payments at different merchants within 30 days of registering; claimable after 14 days; clawback if the friend closes within 60 days. No publisher or partner programme mentioned.",
-      "accessed_at": "2026-11-04T05:49:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": "2026-05-01",
       "expires_at": null,
       "scope": {},
@@ -1193,7 +1193,7 @@
       "title": "COCA Welcome Cashback Drop Promo — Terms & Conditions (help centre, modified 2 Nov)",
       "source_type": "official_terms",
       "excerpt": "'The promotion runs from 2 November 2026 to 30 November 2026.' New users registering in the period, KYC completed, located in a card country: 8% on the first three eligible card transactions, capped at $300 of eligible spend ($24 maximum), then the standard 1% or tier rate. Paid to the USD or EUR account.",
-      "accessed_at": "2026-11-04T05:50:00Z",
+      "accessed_at": "2026-11-06T06:29:00Z",
       "effective_from": "2026-11-02",
       "expires_at": "2026-11-30",
       "scope": {},
@@ -1209,8 +1209,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-04T05:50:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-06T06:29:00Z",
+    "last_auto_check_at": "2026-11-06T06:29:00Z"
   },
   "changelog": [
     {
@@ -1223,6 +1223,27 @@
         "ev-coca-order"
       ],
       "actor": "claude (research run)"
+    },
+    {
+      "date": "2026-11-06T06:29:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-04T05:50:00Z",
+      "to": "2026-11-06T06:29:00Z",
+      "reason": "Second independent read on 2026-11-06 (48 h 39 min after the first) of all 11 evidence pages — every material value confirmed, no page modified since the first read (help-centre 'Modified on' stamps unchanged: Tier Terms 12 Oct, limits 27 Oct, virtual/physical 27 Oct, ordering 12 Oct, top-up 29 Apr, MiCA 13 Jul, What is COCA 3 Mar, Refer a Friend 26 Oct, Welcome Cashback Drop 2 Nov). Confirmed: Tier System Terms effective 2025-09-01 / updated 2026-09-01 — six tiers Starter / Standard / Standard+ / Premium / Premium+ / Elite at 0 / 300 / 1,000 / 3,000 / 10,000 / 30,000 COCA staked (≈ $0 / 470 / 1,500 / 4,700 / 15,000 / 47,000), cashback 1 / 3 / 4 / 5 / 6 / 8 %, Monthly Claim Capacity $15 / 25 / 35 / 60 / 140 / 350 (+ $1 per 100 COCA staked; now itemised as tier bonus + stake part), claims once per 24 h, minimum $1, pending 14 days, expire after 12 months, payout wording still 'stablecoins (USDC, EURC)' in §3.4 vs 'USD or EUR account' elsewhere (contradiction unchanged), USD balance APY 5 % up to the tier cap then 2 % (tier table says '5 %, unlimited' — page-internal inconsistency, §4 governs), no EUR APY, subscription rebate 50 % up to $70 on 0 / 1 / 2 / 2 / 3 / 4 categories, Curve flat 1 % below Premium+ from 2026-04-01, staking locked for the whole membership with a 30-day cooldown, exclusion list identical, 18+; plastic card $5 on Starter / Standard / Standard+ and free from Premium, virtual card free on every tier (Terms + docs.coca.xyz card page); eligibility — the same 73 countries/territories listed by name in the Terms §1.2 and the ordering article, one-to-one match with residence_allowed, United States still absent; EUR accounts limited to the same 28 countries, app ≥ 3.0.0; residence governs, not citizenship; KYC — passport / ID card / driving licence + proof of address (bank document, utility bill ≤ 6 months, government document, lease, employer letter), verification 'up to 20 minutes'; physical card ordered against an initial top-up equivalent to €50 covering delivery and issuance (fee component still not itemised → issuance fee stays 'contradictory' with the $5 Terms figure); limits €30,000 per transaction / day / month, €75,000 per 3 months, €100,000 per 6 months, ATM €850/day, €5,000/month, 5 withdrawals/day (limits article, docs card page, Terms appendix; limits article now adds 'subject to change'); 'The COCA Card is provided in collaboration with Wirex' verbatim, no issuing entity, no COCA legal entity, no regulator named on any page; MiCA article still 'non-custodial', 'not licensed as a MiCA CASP'; 'Zero FX Fees on Direct Pairs' and 'Zero Annual Fees' (docs overview) and 'ATM withdrawals up to $250 globally' (What is COCA) remain marketing statements — FX, ATM, top-up and delivery fees stay unknown; Apple Pay and Google Pay (docs); Refer a Friend $20 / $10, ≥ $100 cumulative, ≥ 3 merchants, 30 days, 14-day claim, 60-day clawback, effective 2026-05-01 / updated 2026-10-26; Welcome Cashback Drop 2–30 November 2026, 8 % on the first three eligible card transactions, $300 eligible spend, $24 maximum, then 1 % or the tier rate, exclusions identical (page now adds that a fully refunded transaction among the first three is replaced by the next eligible purchase). New wording not modelled: the ordering article now lists the stablecoins and chains accepted for the physical-card initial top-up (USDT on 9 chains, USDC on 10 chains incl. Base and Stellar, EURC on Ethereum, EURS on Ethereum and Polygon) while the top-up article still refers to the in-app list; Tier Terms mention promotional staking discounts counting only COCA actually staked and automatic tier upgrades (rollout September 2026). NOT published by this run although policy rule 1 (two agreeing reads ≥ 24 h apart) is now met and the validator would accept the record: the issuer is a 'hypothesis' ('Not disclosed — provided in collaboration with Wirex', no e-money or payment institution named), the plastic-card issuance fee is 'contradictory' ($5 in the Terms vs the €50 initial top-up 'to cover delivery and card issuance') without a contradiction_note under policy rule 5, and custody of the fiat balance is unknown. Following the Wirex and ether.fi precedents, upgrading a 'hypothesis' or 'contradictory' material status is David's decision; the run never upgrades a field status.",
+      "evidence": [
+        "ev-coca-tier-terms",
+        "ev-coca-limits",
+        "ev-coca-docs-card",
+        "ev-coca-docs-banking",
+        "ev-coca-virtual-physical",
+        "ev-coca-order",
+        "ev-coca-topup",
+        "ev-coca-mica",
+        "ev-coca-what-is",
+        "ev-coca-referral",
+        "ev-coca-welcome-promo"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
