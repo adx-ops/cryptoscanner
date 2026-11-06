@@ -1,0 +1,425 @@
+{
+  "schema_version": "1.0.0",
+  "id": "oobit-crypto-card",
+  "slug": "oobit-crypto-card",
+  "name": "Oobit Crypto Card",
+  "brand": "Oobit",
+  "provider_id": "oobit",
+  "issuer": {
+    "name": "ThirdNational",
+    "status": "hypothesis",
+    "evidence": [
+      "ev-oobit-spend-card-terms"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "hybrid",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Two funding routes are described: connect an external self-custody wallet (MetaMask, Trust Wallet, Phantom, Base — 'staying in crypto until you pay, with no preloading') or use the built-in Oobit wallet ('load stablecoins', 'send money to your account', buy crypto with a credit card from 10 USD). Crypto is 'converted at the time of payment' and settles to the merchant in local currency via Visa; Oobit 'uses USD as its base currency'. The Spend Card Terms describe Oobit funding each purchase and the cardholder repaying Oobit under the User Terms, at 0% interest.",
+    "evidence": [
+      "ev-oobit-crypto-card",
+      "ev-oobit-faq",
+      "ev-oobit-spend-card-terms"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "oobit-crypto-card-europe",
+      "region_label": "Europe (countries named in the Oobit FAQ)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AL",
+          "AD",
+          "AT",
+          "BE",
+          "BA",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "GE",
+          "DE",
+          "GI",
+          "GR",
+          "GG",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "MD",
+          "MC",
+          "ME",
+          "NL",
+          "MK",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "RS",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "CH",
+          "GB"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "The Spend Card Terms require the cardholder to attest that they are 'not a United States citizen' and that the card is 'intended for those outside of the United States'; US sanctions-list (OFAC) screening applies. US residents are served by a separate US programme (crypto services 'in partnership with Bakkt Financial Solutions I, LLC') not covered by this record.",
+        "usage_note": "The country list is the FAQ answer 'Is Oobit available in my country?' (Europe section, 42 names, '80+ countries across six continents'). It states where the Oobit app is available; no page read says separately where the crypto card can be issued, and the FAQ adds that users in countries without Tap to Pay stay at rewards Level 1. The list is therefore recorded as a hypothesis for card eligibility, to be confirmed on the support-centre country article (support.oobit.com/en/articles/15262464, linked from the product page, not reachable by the fetcher in this run). Non-European countries in the FAQ list (e.g. AE, SA, MX, AR, AU) are out of this variant's scope.",
+        "evidence": [
+          "ev-oobit-faq",
+          "ev-oobit-spend-card-terms",
+          "ev-oobit-crypto-card"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "proof_of_address"
+        ],
+        "thresholds_note": "FAQ: 'Verification is required to meet global compliance standards' and to unlock all payment and transfer features; 'a valid government-issued photo ID such as a passport or driver's license', 'sometimes proof of address'; a 'one-time proof of address verification' is required before the first bank transfer. Rewards Programme terms (19/10/2026): only onboarded, approved users who 'passed KYC checks' earn rewards; referral payouts require KYC at payout. No selfie step is mentioned on the pages read; no verification-free tier for the card.",
+        "stages_note": "Verification at account onboarding, usually 'within a few minutes', up to 24 hours with extra checks. Proof of address checked at the first bank transfer. The Spend Card Terms add no KYC description beyond true-and-complete information and sanctions screening.",
+        "evidence": [
+          "ev-oobit-faq",
+          "ev-oobit-rewards-terms",
+          "ev-oobit-spend-card-terms"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Oobit Crypto Card (Visa Platinum)",
+          "access": {
+            "type": "free",
+            "note": "Single tier; no plans or subscriptions on any page read. Product page: 'Oobit is a Visa Platinum card' (price/purchase protection, extended warranty, auto rental coverage listed as Visa benefits).",
+            "status": "verified",
+            "evidence": [
+              "ev-oobit-crypto-card",
+              "ev-oobit-faq"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card: 'Yes, the Oobit Crypto Card is free' (product page); 'there's no fee for the card itself' (FAQ). The Spend Card Terms reserve the possibility of 'issuance or replacement' fees without stating an amount. No physical card is described on the pages read, so no physical issuance or delivery fee is modelled.",
+              "status": "verified",
+              "evidence": [
+                "ev-oobit-crypto-card",
+                "ev-oobit-faq",
+                "ev-oobit-spend-card-terms"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "No monthly or annual fee is listed anywhere: the card 'is free', 'there's no fee for the card itself', creating an account and holding crypto are free (FAQ). No page states an explicit 'no annual fee' sentence; the dedicated fee page (oobit.com/fees#personal) could not be read by the fetcher in this run.",
+              "status": "verified",
+              "evidence": [
+                "ev-oobit-crypto-card",
+                "ev-oobit-faq"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 1,
+              "min": {
+                "amount": 0.25,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Card payment fee charged by Oobit on every purchase: 'Purchases have a 1% fee' (product page); 'Card payments have a 1% fee, with a US$0.25 minimum in most countries' (FAQ; no minimum in some markets such as Argentina); 'Oobit transaction fee: $0.25 or 1% (whichever is higher) per transaction' (Spend Card Terms). Separate in-app swap fee 0.95% of the amount (3% when the asset received is OOB) if the user converts before paying.",
+              "status": "verified",
+              "evidence": [
+                "ev-oobit-crypto-card",
+                "ev-oobit-faq",
+                "ev-oobit-spend-card-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Spend Card Terms (effective 2025-08-01): 'Foreign Exchange Fee (non USD): up to 1.5%'. Oobit 'uses USD as its base currency' (FAQ), so every EUR, GBP or CHF purchase is a non-USD transaction and the maximum 1.5% is modelled. Recorded as a hypothesis because the terms are titled 'Rain Card Terms' in the page metadata, do not name a region, and no EEA-specific card terms or the fee page could be read.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-oobit-spend-card-terms",
+                "ev-oobit-faq"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Oobit advertises 'ATM withdrawals' ('Turn crypto into cash at any contactless ATM') but no page read states an ATM fee or limit; the Spend Card Terms list 'cash advance' among possible fees without an amount and say cash advances 'are not available'. Recorded as unknown.",
+              "status": "unknown",
+              "evidence": [
+                "ev-oobit-faq",
+                "ev-oobit-spend-card-terms",
+                "ev-oobit-crypto-card"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Funding cost depends on the route and is not fully disclosed: crypto deposits — not priced on the pages read (withdrawals carry a network fee); card purchase of crypto from 10 USD — the FAQ shows no fee but gives no price or spread; in-app swap 0.95% (3% into OOB); external-wallet route — no preloading, gas not described. Recorded as unknown.",
+              "status": "unknown",
+              "evidence": [
+                "ev-oobit-faq",
+                "ev-oobit-crypto-card"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 5,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Rewards Programme terms (last updated 19/10/2026) §3.1(A): 'stablecoin rewards equal to 5% of the value of eligible transactions paid in USDT or USDC respectively, capped at a maximum spend of USD 200' — the cap carries NO period (per transaction, month or lifetime not stated) and 'eligible transactions' is undefined; the terms never mention the card and §1.8 restricts all rewards to Tap to Pay payments within the app ('cannot be withdrawn, transferred, or used outside the Oobit platform'). Product page: 'Card purchases earn … 5% with USDT' without cap. Payout USDC for EEA residents, USDT elsewhere (Europe variant includes GB/CH/NO → USDT). Excluded from the calculator until the second read resolves the scope and cap period.",
+              "description": "5% stablecoin rewards (USDC in the EEA) on eligible transactions, capped at USD 200 of spend (period not stated)",
+              "status": "contradictory",
+              "evidence": [
+                "ev-oobit-rewards-terms",
+                "ev-oobit-crypto-card"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 10,
+              "payout": {
+                "kind": "token",
+                "code": "OOB"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Rewards Programme terms §3.1(B): '10% token rewards on eligible transactions paid with OOB tokens, capped at a maximum spend of USD 5,000' — only when paying with Oobit's own OOB token; cap period not stated; rewards usable only on Tap to Pay in-app (§1.8). Product page headline '10% Cashback' / 'Card purchases earn 10% cashback with OOB'. Oobit may change offers with 30 days' notice. Not modelled: scope, cap period and token price unknown.",
+              "description": "10% in OOB tokens when paying with OOB, capped at USD 5,000 of spend (period not stated)",
+              "status": "contradictory",
+              "evidence": [
+                "ev-oobit-rewards-terms",
+                "ev-oobit-crypto-card"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "points",
+                "code": "Oobit points"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Tap to Pay points: 1x to 5x points per USD by 90-day cumulative Tap to Pay spend (Level 1 USD 0 → Level 5 USD 1,500); 1,000 points = USD 1 (about 0.1%–0.5%); redeemable only on Tap to Pay payments in the app. Applies to in-app Tap to Pay payments of at least USD 1, not stated for card purchases; users in countries without Tap to Pay stay at Level 1. Not valued.",
+              "description": "Tap to Pay points programme (levels 1x–5x, in-app use only)",
+              "status": "verified",
+              "evidence": [
+                "ev-oobit-rewards-terms"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 10000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "FAQ: card payments 'up to 10,000 USD per day', subject to change. Spend Card Terms: Oobit sets the base spending limit; the Issuer may set per-card or aggregate limits, changeable 'with or without notice', possibly to $0.",
+              "status": "verified",
+              "evidence": [
+                "ev-oobit-faq",
+                "ev-oobit-spend-card-terms"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-oobit-crypto-card",
+      "url": "https://www.oobit.com/crypto-card",
+      "title": "Oobit Crypto Card — product page (undated, © Oobit Technologies 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "'Yes, the Oobit Crypto Card is free. Purchases have a 1% fee.' 'Card purchases earn 10% cashback with OOB, 5% with USDT.' Visa network, 'Oobit is a Visa Platinum card'; Apple Pay / Google Wallet; connect MetaMask, Trust Wallet, Phantom, Base 'staying in crypto until you pay, with no preloading' or 'load stablecoins'. 'Available in 80+ countries.' No issuer, KYC, ATM or FX fee stated.",
+      "accessed_at": "2026-11-06T06:01:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Marketing page; the Austria country variant (oobit.com/crypto-card/austria) read at 05:52Z carries the same text."
+      },
+      "verification": "verified",
+      "contradiction_note": "Describes the product as 'a credit card that uses your digital assets as collateral' while its own FAQ states 'Oobit does not offer a credit line, loans, or interest' and that the card is 'classified as credit for network acceptance'. Modelled as a debit/spend-from-balance card; the credit classification is shown as a watch-out. Also says 'no preloading' (external wallet) and 'load stablecoins' (built-in wallet): both routes exist."
+    },
+    {
+      "id": "ev-oobit-faq",
+      "url": "https://www.oobit.com/faq",
+      "title": "Oobit FAQ (undated)",
+      "source_type": "help_center",
+      "excerpt": "'Card payments have a 1% fee, with a US$0.25 minimum in most countries'; 'there's no fee for the card itself'; swaps 0.95% (3% into OOB); 'Oobit uses USD as its base currency'; card limit 'up to 10,000 USD per day'; KYC: government photo ID, sometimes proof of address (before first bank transfer); 'available in 80+ countries' incl. 42 European names; Apple Pay / Google Wallet; virtual card only.",
+      "accessed_at": "2026-11-06T05:58:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Country list is app availability, not an explicit card-eligibility list."
+      },
+      "verification": "verified",
+      "contradiction_note": "Referral reward stated as 'USD 50 Inviter Reward when three Invitees each' reach USD 200 card spend within 60 days, paid in USDT/USDC, whereas the support-centre article describes 200,000 points each for referrer and referee after a qualifying payment within 14 days. Not modelled (affiliate record only)."
+    },
+    {
+      "id": "ev-oobit-spend-card-terms",
+      "url": "https://www.oobit.com/legal/rain-card-terms",
+      "title": "Oobit Spend Card Terms (page titled 'Rain Card Terms'; effective 1 August 2025)",
+      "source_type": "official_terms",
+      "excerpt": "Issuer 'ThirdNational', 'under license from Visa'; Oobit Technologies UAB provides card access; cardholder 'not a United States citizen', card 'intended for those outside of the United States'; 'Oobit transaction fee: $0.25 or 1% (whichever is higher) per transaction'; 'Foreign Exchange Fee (non USD): up to 1.5%'; returned payment $29; 0% interest 'currently'; no cash advances; law of Puerto Rico.",
+      "accessed_at": "2026-11-06T05:56:00Z",
+      "effective_from": "2025-08-01",
+      "expires_at": null,
+      "scope": {
+        "note": "Non-US cardholders; region not named. Credit-style wording (minimum payment, APR) although no credit line is offered per the FAQ."
+      },
+      "verification": "verified",
+      "contradiction_note": "Page metadata title 'Rain Card Terms' and indemnity clauses referring to 'Rain' versus body title 'Oobit Spend Card Terms' with issuer 'ThirdNational'; the product page names no issuer. Issuer recorded as a hypothesis until an EEA-specific cardholder agreement is read."
+    },
+    {
+      "id": "ev-oobit-rewards-terms",
+      "url": "https://oobit.com/5x-rewards",
+      "title": "Oobit 5X Reward Terms / Rewards Programme terms (last updated 19/10/2026)",
+      "source_type": "official_terms",
+      "excerpt": "§3.1(A) 'stablecoin rewards equal to 5% of the value of eligible transactions paid in USDT or USDC respectively, capped at a maximum spend of USD 200'; §3.1(B) '10% token rewards on eligible transactions paid with OOB tokens, capped at a maximum spend of USD 5,000'; §1.8 rewards 'restricted for use exclusively on Tap to Pay payments within the app'; 1,000 points = USD 1; USDC in EEA.",
+      "accessed_at": "2026-11-06T06:03:00Z",
+      "effective_from": "2026-10-19",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "The terms never mention the card, define 'eligible transactions' or give a period for the USD 200 / USD 5,000 spend caps, while the product page says 'Card purchases earn 10% cashback with OOB, 5% with USDT' without caps. Both rewards are recorded as contradictory and excluded from the calculator."
+    },
+    {
+      "id": "ev-oobit-referral-article",
+      "url": "https://support.oobit.com/hc/en-us/articles/21467534373149-How-does-the-Oobit-Referral-Program-work",
+      "title": "How does the Oobit Referral Program work? (support centre, undated)",
+      "source_type": "affiliate_program",
+      "excerpt": "Referrer and referee each earn 200,000 points (convertible to USDT) when the referee enters the promotion code, both accounts are verified and both make a qualifying payment within 14 days; up to 100 referral bonuses (20,000,000 points); code-based, personal sharing; no affiliate, partner or ambassador programme mentioned.",
+      "accessed_at": "2026-11-06T06:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-oobit-business",
+      "url": "https://oobit.com/business",
+      "title": "Oobit for Business — landing page and footer (© Oobit Technologies 2026)",
+      "source_type": "issuer_doc",
+      "excerpt": "Footer: 'Oobit operates through multiple entities globally. Certain features may be provided by licensed partners depending on your location.' 'US Cryptocurrency services are provided in partnership with Bakkt Financial Solutions I, LLC' (FinCEN MSB). Consumer menu: Crypto Card, ATM withdrawals, cashback; fees link oobit.com/fees#personal; help centre support.oobit.com. No EEA entity named.",
+      "accessed_at": "2026-11-06T05:53:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-oobit-gdpr",
+      "url": "https://www.oobit.com/legal/gdpr",
+      "title": "Oobit — GDPR page (undated)",
+      "source_type": "official_terms",
+      "excerpt": "Names no data controller, registration number, address or EEA licence; 'Oobit operates through multiple entities globally'; only Bakkt Financial Solutions I, LLC (US) named. The EEA operating entity and any MiCA/VASP status remain undisclosed on the pages read.",
+      "accessed_at": "2026-11-06T06:07:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.oobit.com/crypto-card",
+    "affiliate": {
+      "program_id": "oobit-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-06T06:07:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-06T06:10:00Z",
+      "field": "*",
+      "reason": "Initial record from 7 official Oobit pages (product page incl. the Austria variant, FAQ, Spend Card Terms 2025-08-01, Rewards Programme terms 2026-10-19, support-centre referral article, business landing/footer, GDPR page) read by the unattended research run — single read; a second independent read at least 24 h later is required before publication. Not readable this run: the dedicated fee page oobit.com/fees#personal, the Terms of Use, the Referral Terms and the support-centre country article (fetcher provenance restriction — URLs not surfaced by search); these must be read before publication.",
+      "evidence": [
+        "ev-oobit-crypto-card",
+        "ev-oobit-faq",
+        "ev-oobit-spend-card-terms",
+        "ev-oobit-rewards-terms"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Free virtual Visa Platinum card that spends crypto from a connected self-custody wallet or the built-in Oobit wallet, converted at the time of payment. Every purchase costs 1% (minimum US$0.25) and non-USD spending can add up to 1.5% FX, so a European user pays up to about 2.5% per transaction. The advertised 10% / 5% rewards are paid in OOB or stablecoins, capped at small spend amounts with no stated period, and can only be used on in-app Tap to Pay payments. Issuer, EEA operating entity, ATM and top-up costs are not disclosed on the pages read.",
+    "good_for": [
+      "Users who want to spend from their own MetaMask / Phantom / Trust wallet without preloading and accept a per-purchase fee",
+      "Apple Pay / Google Wallet users who need a virtual card only"
+    ],
+    "not_for": [
+      "Anyone comparing on cashback: rewards are not withdrawable, usable only on in-app Tap to Pay, and capped at USD 200 (5%) or USD 5,000 (10% in OOB) of spend with no stated period",
+      "Users spending in EUR, GBP or CHF who want to avoid FX: the account base currency is USD and the card terms allow up to 1.5% FX on top of the 1% purchase fee",
+      "Anyone needing ATM cash with a known fee, or a physical card (not confirmed on the pages read)",
+      "US citizens (excluded by the Spend Card Terms)"
+    ],
+    "watch_outs": [
+      "No card issuer is named on the product page; the Spend Card Terms (titled 'Rain Card Terms') name 'ThirdNational' for non-US cardholders — EEA applicability unconfirmed.",
+      "The EEA operating entity and its licence are not disclosed on the pages read (only Oobit Technologies UAB as card-access provider and Bakkt for the US).",
+      "The product page calls it 'a credit card that uses your digital assets as collateral' while the FAQ says there is no credit line, loan or interest; the card terms contain credit-style clauses (0% APR 'currently', minimum payment, $29 returned-payment fee).",
+      "Rewards terms never mention the card, define no period for the spend caps and restrict rewards to in-app Tap to Pay — the advertised 10% / 5% is not modelled.",
+      "Dedicated fee page, Terms of Use and support-centre country article could not be read by the fetcher in this run; ATM and top-up costs are unknown.",
+      "Referral reward described differently in the FAQ (USD 50 for three qualified invitees) and the support centre (200,000 points each)."
+    ]
+  }
+}

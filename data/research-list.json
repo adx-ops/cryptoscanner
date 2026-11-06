@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-05.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-06.",
   "target": {
     "min": 15,
     "max": 50
@@ -166,6 +166,30 @@
       "status": "validated",
       "record": "data/cards/plasma-one-card.json",
       "note": "Global record (USD stablecoin account, Visa card issued by Rain, accounts by Bridge entities for US / EEA / rest of world) from 13 official pages read 2026-11-03: product page plasma.org/personal, Rewards Addendum (effective 2026-09-26), 11 help-centre articles (tiers, Lite/Core/Platinum, fees, cards, countries, fiat rails, KYC, referral). Tiers: Lite free (2% XPL on first $500/month), Core $199/yr or 20,000 XPL lock (3% first $1,000), Platinum 100,000 XPL lock (4% first $3,000, 0% FX). FX 1%/0.5%/0% + Visa ~1% on Lite/Core; stablecoin deposit 0.15–0.75%; fiat on/off-ramp fees per rail. Unknown: ATM fee (all tiers), positive country list (only exclusions and 31 US states published; EEA/UK implied by Bridge Building Sp. z o.o. and SEPA/FPS rails). Contradictions: Lite '$0' vs regional annual cost 'shown in the app'; Platinum lock 100,000 'currently' vs 'rises to 150,000 after launch'; Platinum article still shows the 3% referral boost replaced by a $300 upgrade bonus; physical cards 'coming soon' vs product page. Affiliate: personal referral only (data/affiliate/plasma-one-referral.json), no publisher programme found. Second read required before publication. 2026-11-04: second independent read (fetcher, 25 h later) of all 13 pages — every value confirmed, unchanged (fiat-rails article: 26 entries without fiat rails, first read counted 25 — not modelled); last_content_verified_at updated. Still NOT published: eligibility unknown (no positive country list) and Lite access contradictory ($0 vs regional cost in the app) — David to decide whether to model EEA/UK eligibility from the Bridge entities/rails or wait for an official list."
+    },
+    {
+      "provider": "Oobit",
+      "product": "Oobit Crypto Card",
+      "status": "validated",
+      "record": "data/cards/oobit-crypto-card.json",
+      "note": "Europe record (free virtual Visa Platinum, spend-from-wallet, conversion at payment) from 7 official pages read 2026-11-06: product page (+ Austria variant), FAQ, Spend Card Terms (effective 2025-08-01, page titled 'Rain Card Terms', issuer 'ThirdNational', non-US cardholders, Oobit Technologies UAB), Rewards Programme terms (19/10/2026), support-centre referral article, business footer, GDPR page. Fees: card free; purchase fee 1% (min US$0.25); FX 'up to 1.5%' non-USD (hypothesis, base currency USD); daily limit $10,000; KYC photo ID (+ proof of address). Country list = FAQ app availability (42 European names, hypothesis for card eligibility). Unknown: ATM fee, top-up cost, physical card, EEA operating entity/licence. Contradictions: 'credit card … collateral' vs 'no credit line' (modelled debit); rewards terms (5% stablecoin capped at USD 200 spend, 10% OOB capped at USD 5,000 — no period, never mention the card, usable only on in-app Tap to Pay) vs product page 'Card purchases earn 10%/5%' → both rewards contradictory, excluded from the calculator; referral USD 50 (FAQ) vs 200,000 points (support). Not readable (fetcher provenance): oobit.com/fees#personal, Terms of Use, Referral Terms, support country article. Affiliate: personal referral only (data/affiliate/oobit-referral.json), no publisher programme. Second read required before publication.",
+      "needs_browser_read": true
+    },
+    {
+      "provider": "Kolo",
+      "product": "Kolo Card",
+      "status": "blocked",
+      "record": null,
+      "note": "Blocked 2026-11-06: official pages read — kolo.xyz homepage (2% BTC cashback, '0% mark-ups on USDT, USDC, EURC', Sumsub KYC, Visa, 'MiCA-ready' claim, no fee figures), Terms of Use v3.0.0 (1 July 2026, cdn.kolo.xyz: operator Hardline Holding Limited, Kazakhstan, AIFC FinTech Lab licence AFSA-G-LA-2024-0011; card services 'in collaboration with Signify Holdings Inc' (Delaware); 1% exchange-order fee; non-custodial MPC; no card fees), help-centre articles 'In which countries can I use my Kolo card' (restricted-country list only, two products Visa USD 454905 / Visa EUR 442601, EUR card has no ATM access) and 'Visa USD card risk rules' (ATM single ≤ $500, ≤ 3 per 24 h; 'conversion fee for digital assets' at payment, amount not stated). Not readable (fetcher provenance — URLs not surfaced by search): help.kolo.xyz Card Overview, Cashback Program, Visa EUR limits, Cash Withdrawal; promo.kolo.xyz/bitcoin-cashback; kolo.xyz/countries. Card issuer bank unnamed; no card fee schedule, no cashback cap/conditions, no positive country list → record not written. Operator licensed in Kazakhstan (AIFC), not in the EEA — David to decide whether such operators are in scope.",
+      "needs_browser_read": true
+    },
+    {
+      "provider": "XPlace",
+      "product": "XPlace Card",
+      "status": "validated",
+      "record": "data/cards/xplace-card.json",
+      "note": "International record (crypto-backed Visa credit card on Solana; collateral in Kamino vaults, USDC borrowed at spend; issuer Third National, programme manager Signify Holdings, Inc.; operator Pontech Group L.L.C-FZ, Dubai Meydan Free Zone) from 2 official pages read 2026-11-06: homepage (modified 2026-10-29) and membership page (2026-09-26). Tiers Basic Free / Silver $99 / Gold $249 / Platinum $999 per year; Credit Mode cashback 0.5/1/1.5/2% USDC; FX 1/0.5/0.25/0%; monthly limits $2K/$10K/$200K/$750K; vault LTVs 65–80%. Unknown: borrow APR, ATM, issuance/physical-card price, top-up/network costs, Cash Mode cashback, cashback caps, KYC documents, eligible countries (no list; separate US and International Card Terms exist on docs.x.place, not fetchable this run). Contradiction: Silver limit $20K (homepage) vs $10K (membership) — lower modelled. No affiliate/referral programme page found. Second read + Card Terms read required before publication.",
+      "needs_browser_read": true
     }
   ],
   "no_kyc_track": {

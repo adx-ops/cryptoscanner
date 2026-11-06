@@ -1,0 +1,615 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xplace-card",
+  "slug": "xplace-card",
+  "name": "XPlace Card",
+  "brand": "XPlace",
+  "provider_id": "xplace",
+  "issuer": {
+    "name": "Third National",
+    "status": "verified",
+    "evidence": [
+      "ev-xplace-home",
+      "ev-xplace-membership"
+    ]
+  },
+  "network": "visa",
+  "category": "crypto_backed_credit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "at_spend",
+    "supported_assets_note": "Two modes. 'Credit Mode': the card borrows USDC against collateral deposited in Kamino protocol vaults on Solana (cbBTC, wETH, SOL, JitoSOL, USDC, USDT, xStocks) — 'borrowing is executed by the Kamino protocol - XPlace is not the lender'; credit opens 'automatically at the point of tap'; users can 'repay, add collateral, or reduce your borrow at any time'. 'Cash Mode' spends a stablecoin balance directly. Deposits 'Always non-custodial'.",
+    "evidence": [
+      "ev-xplace-home",
+      "ev-xplace-membership"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": "unknown",
+    "ltv_percent": 80,
+    "ltv_min_percent": 65,
+    "liquidation_risk": "Borrow interest is charged by the Kamino protocol; no APR is published on the pages read (Platinum only promises 'lower borrow rates'). Vault LTVs shown on the homepage Earn section: Tether 80%, Ethereum 70%, Solana 65%, Bitcoin 65%, Jito Staked Solana 65%; 'Kamino's lending logic enforces LTV ratios' and users 'get notifications well before liquidation thresholds'; the Earn disclaimer warns of 'liquidation risk'. Cashback is earned on borrowed money, so interest can exceed the reward.",
+    "evidence": [
+      "ev-xplace-home"
+    ]
+  },
+  "variants": [
+    {
+      "id": "xplace-card-international",
+      "region_label": "International (non-US terms)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "No country or eligibility list is published on the pages read: 'services are not available in all jurisdictions'; '160+ countries' refers to Visa acceptance, not to cardholder eligibility. The site links separate 'Card Terms — US' and 'Card Terms — International User' documents on docs.x.place, which could not be fetched in this run (URLs not surfaced by search). Every country is therefore 'to confirm'; the product is not US-only.",
+        "evidence": [
+          "ev-xplace-home",
+          "ev-xplace-membership"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "thresholds_note": "Homepage: 'Download, register, verify in minutes'; the directory-independent official pages read give no document list, levels or thresholds.",
+        "stages_note": "Verification before the virtual card is created, per the homepage flow; details in the Card Terms (not read).",
+        "evidence": [
+          "ev-xplace-home"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "basic",
+          "name": "Basic",
+          "access": {
+            "type": "free",
+            "note": "Starting tier; 'The card, credit line, yield, and cashback work without a paid tier.'",
+            "status": "verified",
+            "evidence": [
+              "ev-xplace-membership",
+              "ev-xplace-home"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Virtual card 'minutes after sign-up'; physical card '7–14 business days depending on the region' ('Silver physical cards are live. Gold and Platinum coming soon'). No issuance or physical-card price is stated on the pages read; 'No origination fee' refers to the credit line.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home",
+                "ev-xplace-membership"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Basic: 'Free' annual fee (membership table and homepage tier table).",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Membership page FX column: Basic 1%.  The homepage states only '0% FX on Platinum' and, for stablecoin spending, 'No hidden spread, no FX games'. Base of the FX fee (non-USD transactions presumably) not defined on the pages read.",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "No ATM withdrawal fee, limit or availability is stated on any page read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home",
+                "ev-xplace-membership"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Funding = depositing collateral (cbBTC, wETH, SOL, JitoSOL, USDC, USDT, xStocks) into Kamino vaults or holding a stablecoin balance (Cash Mode); Solana network fees, deposit/withdrawal fees and the Kamino borrow APR are not stated on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.5,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Credit Mode cashback 0.5% for Basic — 'Real USDC, paid to your wallet at settlement. Not points, not internal credits.' FAQ: 'Up to 2% across categories and tiers'. Cash Mode cashback, caps, excluded categories and minimum spend are not stated on the pages read. Cashback is earned on borrowed spending that accrues Kamino interest (rate not published).",
+              "description": "0.5% USDC cashback in Credit Mode",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 2000,
+                "currency": "USD"
+              },
+              "period": "month",
+              "note": "Monthly limit Basic: $2,000 (membership page, 2026-09-26).",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "silver",
+          "name": "Silver",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 99,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Charged annually; 'There's no monthly option.' Upgrade possible at any time. Perks: standard concierge, 1 lounge visit/year.",
+            "status": "verified",
+            "evidence": [
+              "ev-xplace-membership",
+              "ev-xplace-home"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Virtual card 'minutes after sign-up'; physical card '7–14 business days depending on the region' ('Silver physical cards are live. Gold and Platinum coming soon'). No issuance or physical-card price is stated on the pages read; 'No origination fee' refers to the credit line.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home",
+                "ev-xplace-membership"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 99,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "Silver: $99/y (membership table and homepage tier table). Paid tiers charged annually, no monthly option.",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "conditions": "Membership page FX column: Silver 0.5%.  The homepage states only '0% FX on Platinum' and, for stablecoin spending, 'No hidden spread, no FX games'. Base of the FX fee (non-USD transactions presumably) not defined on the pages read.",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "No ATM withdrawal fee, limit or availability is stated on any page read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home",
+                "ev-xplace-membership"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Funding = depositing collateral (cbBTC, wETH, SOL, JitoSOL, USDC, USDT, xStocks) into Kamino vaults or holding a stablecoin balance (Cash Mode); Solana network fees, deposit/withdrawal fees and the Kamino borrow APR are not stated on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "subscription",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Credit Mode cashback 1% for Silver — 'Real USDC, paid to your wallet at settlement. Not points, not internal credits.' FAQ: 'Up to 2% across categories and tiers'. Cash Mode cashback, caps, excluded categories and minimum spend are not stated on the pages read. Cashback is earned on borrowed spending that accrues Kamino interest (rate not published).",
+              "description": "1% USDC cashback in Credit Mode",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 10000,
+                "currency": "USD"
+              },
+              "period": "month",
+              "note": "Monthly limit Silver: $10,000 (membership page, 2026-09-26). The homepage tier table shows $20,000 for Silver — see contradiction.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "gold",
+          "name": "Gold",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 249,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Charged annually; 'There's no monthly option.' Upgrade possible at any time. Perks: fast-track concierge, 4 lounge visits/year, 2 Fast Track/year. Physical Gold card 'coming soon'.",
+            "status": "verified",
+            "evidence": [
+              "ev-xplace-membership",
+              "ev-xplace-home"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Virtual card 'minutes after sign-up'; physical card '7–14 business days depending on the region' ('Silver physical cards are live. Gold and Platinum coming soon'). No issuance or physical-card price is stated on the pages read; 'No origination fee' refers to the credit line.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home",
+                "ev-xplace-membership"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 249,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "Gold: $249/y (membership table and homepage tier table). Paid tiers charged annually, no monthly option.",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 0.25,
+              "period": "per_transaction",
+              "conditions": "Membership page FX column: Gold 0.25%.  The homepage states only '0% FX on Platinum' and, for stablecoin spending, 'No hidden spread, no FX games'. Base of the FX fee (non-USD transactions presumably) not defined on the pages read.",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "No ATM withdrawal fee, limit or availability is stated on any page read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home",
+                "ev-xplace-membership"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Funding = depositing collateral (cbBTC, wETH, SOL, JitoSOL, USDC, USDT, xStocks) into Kamino vaults or holding a stablecoin balance (Cash Mode); Solana network fees, deposit/withdrawal fees and the Kamino borrow APR are not stated on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1.5,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "subscription",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Credit Mode cashback 1.5% for Gold — 'Real USDC, paid to your wallet at settlement. Not points, not internal credits.' FAQ: 'Up to 2% across categories and tiers'. Cash Mode cashback, caps, excluded categories and minimum spend are not stated on the pages read. Cashback is earned on borrowed spending that accrues Kamino interest (rate not published).",
+              "description": "1.5% USDC cashback in Credit Mode",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 200000,
+                "currency": "USD"
+              },
+              "period": "month",
+              "note": "Monthly limit Gold: $200,000 (membership page, 2026-09-26).",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "platinum",
+          "name": "Platinum",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 999,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Charged annually; 'There's no monthly option.' Upgrade possible at any time. Perks: VIP concierge, unlimited lounges (1,300+), 5 Fast Track/year, 'lower borrow rates' (no figure). Physical Platinum card 'coming soon'.",
+            "status": "verified",
+            "evidence": [
+              "ev-xplace-membership",
+              "ev-xplace-home"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Virtual card 'minutes after sign-up'; physical card '7–14 business days depending on the region' ('Silver physical cards are live. Gold and Platinum coming soon'). No issuance or physical-card price is stated on the pages read; 'No origination fee' refers to the credit line.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home",
+                "ev-xplace-membership"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 999,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "Platinum: $999/y (membership table and homepage tier table). Paid tiers charged annually, no monthly option.",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Membership page FX column: Platinum 0%.  The homepage states only '0% FX on Platinum' and, for stablecoin spending, 'No hidden spread, no FX games'. Base of the FX fee (non-USD transactions presumably) not defined on the pages read.",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "No ATM withdrawal fee, limit or availability is stated on any page read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home",
+                "ev-xplace-membership"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Funding = depositing collateral (cbBTC, wETH, SOL, JitoSOL, USDC, USDT, xStocks) into Kamino vaults or holding a stablecoin balance (Cash Mode); Solana network fees, deposit/withdrawal fees and the Kamino borrow APR are not stated on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "subscription",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Credit Mode cashback 2% for Platinum — 'Real USDC, paid to your wallet at settlement. Not points, not internal credits.' FAQ: 'Up to 2% across categories and tiers'. Cash Mode cashback, caps, excluded categories and minimum spend are not stated on the pages read. Cashback is earned on borrowed spending that accrues Kamino interest (rate not published).",
+              "description": "2% USDC cashback in Credit Mode",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 750000,
+                "currency": "USD"
+              },
+              "period": "month",
+              "note": "Monthly limit Platinum: $750,000 (membership page, 2026-09-26).",
+              "status": "verified",
+              "evidence": [
+                "ev-xplace-membership",
+                "ev-xplace-home"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-xplace-home",
+      "url": "https://x.place/",
+      "title": "XPlace — homepage, FAQ and footer (modified 2026-10-29)",
+      "source_type": "pricing_page",
+      "excerpt": "Visa card 'issued by Third National under a programme managed by Signify Holdings, Inc.'; operator 'Pontech Group L.L.C-FZ, operating as XPlace, registered in the Meydan Free Zone, Dubai, UAE'; Credit Mode (borrow via Kamino, 'XPlace is not the lender') and Cash Mode; Basic Free / Silver $99 / Gold $249 / Platinum $999 per year, 0.5/1/1.5/2% USDC cashback; '0% FX on Platinum'; vault LTVs 65–80%.",
+      "accessed_at": "2026-11-06T06:22:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "Homepage tier table shows a Silver monthly limit of $20,000 whereas the membership page (modified 2026-09-26) shows $10,000; neither is dated as governing — the lower value is modelled. Homepage FAQ 'Up to 2% across categories and tiers' vs tier table (2% only on Platinum): consistent, 2% is the maximum."
+    },
+    {
+      "id": "ev-xplace-membership",
+      "url": "https://x.place/membership/",
+      "title": "XPlace Membership — tier table (modified 2026-09-26)",
+      "source_type": "pricing_page",
+      "excerpt": "Basic Free, $2K/month, 0.5% Credit Mode cashback, FX 1%; Silver $99/y, $10K, 1%, FX 0.5%, 1 lounge visit/year; Gold $249/y, $200K, 1.5%, FX 0.25%, 4 lounges, 2 Fast Track; Platinum $999/y, $750K, 2%, FX 0%, unlimited lounges, 5 Fast Track, 'lower borrow rates'. Paid tiers billed annually, 'no monthly option'. Same issuer/operator footer. No ATM, issuance, Cash Mode cashback or APR figures.",
+      "accessed_at": "2026-11-06T06:26:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://x.place/",
+    "affiliate": {
+      "program_id": null,
+      "status": "none",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-06T06:26:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-06T06:30:00Z",
+      "field": "*",
+      "reason": "Initial record from 2 official XPlace pages (homepage with FAQ/footer, membership page) read by the unattended research run — single read; a second independent read at least 24 h later is required before publication. Not readable this run (fetcher provenance restriction, URLs not surfaced by search): docs.x.place Terms and Conditions, Card Terms — International User, Card Terms — US, Prohibitions, Blocked merchants; the-card, borrowing, cashback and yield sub-pages. Eligibility, KYC detail, ATM, issuance/physical-card price, Cash Mode cashback, cashback caps and the Kamino borrow APR remain unknown. No affiliate or referral programme page found (only an AppsFlyer OneLink app-install link).",
+      "evidence": [
+        "ev-xplace-home",
+        "ev-xplace-membership"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Crypto-backed Visa credit card on Solana: collateral sits in Kamino vaults and each purchase borrows USDC (Credit Mode), or a stablecoin balance is spent directly (Cash Mode). Issued by Third National under a Signify Holdings (Rain) programme; operator Pontech Group L.L.C-FZ, Dubai. Four annual tiers (Free to $999/y) with 0.5–2% USDC cashback in Credit Mode and FX from 1% down to 0%. The borrow interest rate, ATM terms, card prices and the eligible countries are not published on the pages read.",
+    "good_for": [
+      "Solana/Kamino users who already hold cbBTC, SOL, ETH or stablecoins and want to spend against them without selling",
+      "Frequent travellers considering Platinum (0% FX, lounges) who can justify $999/year"
+    ],
+    "not_for": [
+      "Anyone who wants to know the borrowing cost before applying — no APR is published",
+      "Residents of the EEA until the International Card Terms confirm eligibility (no country list)",
+      "Users needing ATM cash or a known physical-card price"
+    ],
+    "watch_outs": [
+      "Cashback is earned on borrowed USDC that accrues Kamino interest at an unpublished rate; liquidation risk if collateral falls (LTV 65–80%).",
+      "Operator is a Dubai free-zone technology company ('not a bank, licensed lender or investment firm'); EEA/UK regulatory status not stated.",
+      "Silver monthly limit shown as $20,000 on the homepage and $10,000 on the membership page.",
+      "Physical cards: only Silver live; Gold and Platinum 'coming soon'.",
+      "Card Terms (US / International) not read — eligibility, KYC and fee details may differ from marketing pages.",
+      "Site name metadata contains Cyrillic look-alike characters ('XPlaсе'); verify the domain x.place when linking."
+    ]
+  }
+}
