@@ -1,6 +1,6 @@
 name: Fetch card images
 # Downloads official card imagery recorded in data/images/manifest.json (the cloud workspace cannot
-# reach the providers' CDNs) and opens an auto-merged PR with the resized files.
+# reach the providers' CDNs), commits the resized files to main and redeploys.
 on:
   push:
     branches: [main]
@@ -15,7 +15,7 @@ on:
     - cron: '41 4 * * 1'
 permissions:
   contents: write
-  pull-requests: write
+  actions: write
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -26,11 +26,21 @@ jobs:
       - run: npm ci
       - run: npm i --no-save sharp
       - run: node scripts/fetch-card-images.mjs ${{ inputs.force && '--force' || '' }}
-      - uses: peter-evans/create-pull-request@v7
-        with:
-          branch: agent/card-images
-          title: 'Card images: fetched from official sources'
-          commit-message: 'Card images fetched from the official pages recorded in data/images/manifest.json'
-          body: 'Automated download of the images recorded in `data/images/manifest.json` (source page, asset URL and access date per entry). Resized to ≤1400px WebP.'
-          labels: auto-merge
-          add-paths: public/card-images
+      # Commit the downloaded files directly (mechanical step; provenance lives in the manifest). A push made
+      # with GITHUB_TOKEN triggers no other workflow, so CI and the deploy are dispatched explicitly.
+      - name: Commit images
+        id: commit
+        run: |
+          git config user.name 'cryptoscanner-images'
+          git config user.email 'images@users.noreply.github.com'
+          git add public/card-images
+          if git diff --cached --quiet; then echo "changed=0" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "Card images fetched from the official pages recorded in data/images/manifest.json"
+          git push
+          echo "changed=1" >> "$GITHUB_OUTPUT"
+      - name: Rebuild and deploy
+        if: steps.commit.outputs.changed == '1'
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          gh workflow run ci.yml --ref main
+          gh workflow run deploy-pages.yml --ref main
