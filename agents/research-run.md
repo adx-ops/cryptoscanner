@@ -26,3 +26,9 @@ If a candidate cannot be documented from official sources (no fee page, issuer u
 - Help centres rendered client-side (Nexo, Bybit, Laso, Freedomia, Pinto Pay…) return an empty shell to WebFetch. Do not guess their content: record the page as unreadable, set the candidate `blocked` or the field `unknown`, and add `"needs_browser_read": true` to the candidate so a working session with a browser pane picks it up.
 - When blocking a candidate, write the reason in `data/candidates.json` → `blocked_reason` (one line) — the PR body is not enough.
 - WebFetch only accepts URLs that appeared in the conversation through WebSearch or a previous WebFetch; a URL copied from a repository file triggers a permission request that nobody answers in an unattended run. Always reach a stored evidence URL by first running a WebSearch restricted to its domain (e.g. `site:help.gnosispay.com fees`) and fetching the URL the search returns.
+
+## No-KYC track (David, 2026-11-07)
+Every run also takes **one** candidate from `data/research-list.json` → `no_kyc_track.candidates` with `status: "identified"` (order: Kardpay, UTORG, Kripicard, SolCard, MaxSwap, Sovrae, Agora, Bing, OffGrid, WaldenPay, Trocador; skip any already `blocked`/`validated`). Read only the operator's official pages (terms, fees, FAQ, help centre). Apply the inclusion rule in `no_kyc_track._note` exactly:
+- operator or issuer named (legal entity), verification stage and limits stated in official terms, product active → write a record (`kyc.initial_verification: "not_required_initially"` only if the terms say so, with the thresholds that trigger checks), status `validated`;
+- otherwise set the candidate `status: "blocked"` with a `note` naming the pages read and the missing element, exactly as the 2026-10-29 Laso/Goblin/Pinto Pay entries.
+Client-rendered pages → `needs_browser_read: true`, not blocked. Never describe how to avoid checks; describe only what the provider states.
