@@ -16,19 +16,27 @@ const rest = Object.keys(NAMES).filter((c) => !withData.has(c)).sort(byName);
     {first.length > 0 && <optgroup label="Countries with at least one listed card">{first.map((c) => <option value={c}>{NAMES[c]}</option>)}</optgroup>}
     <optgroup label="All countries">{rest.map((c) => <option value={c}>{NAMES[c]}</option>)}</optgroup>
   </select>
-  <p class="hint">Judged on each provider's published residence rules, never on where the card network is accepted. Your choice stays on this device.</p>
+  <p class="hint">Judged on each provider's published residence rules, never on where the card network is accepted. Pre-filled from your browser language; your choice stays on this device.</p>
 </div>
 <script>
   const KEY = 'cs.country';
   const sel = document.getElementById('country') as HTMLSelectElement | null;
   if (sel) {
-    try { const saved = localStorage.getItem(KEY); if (saved) sel.value = saved; } catch {}
-    const apply = () => {
-      const c = sel.value;
-      try { if (c) localStorage.setItem(KEY, c); else localStorage.removeItem(KEY); } catch {}
-      document.dispatchEvent(new CustomEvent('cs:country', { detail: c }));
-    };
-    sel.addEventListener('change', apply);
+    let saved: string | null = null;
+    try { saved = localStorage.getItem(KEY); } catch {}
+    if (saved) sel.value = saved;
+    else {
+      // First visit: pre-select the country from the browser's language setting (e.g. en-US → US, pt-BR → BR).
+      // Nothing is sent anywhere; the visitor can change it.
+      const guess = (navigator.languages ?? [navigator.language]).map((l) => l.split('-')[1]?.toUpperCase()).find((c) => c && sel.querySelector(`option[value="${c}"]`));
+      if (guess) sel.value = guess;
+    }
+    const apply = () => document.dispatchEvent(new CustomEvent('cs:country', { detail: sel.value }));
+    sel.addEventListener('change', () => {
+      // Remembered only once the visitor picks a country themselves.
+      try { if (sel.value) localStorage.setItem(KEY, sel.value); else localStorage.removeItem(KEY); } catch {}
+      apply();
+    });
     apply();
   }
 </script>

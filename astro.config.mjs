@@ -16,5 +16,5 @@ export default defineConfig({
   trailingSlash: 'never',
   build: { format: 'file' },
   // Sitemap only for a verified build with a real site URL; demo builds are noindex and get none.
-  integrations: site && !isDemo && !noindex ? [sitemap({ filter: (p) => !/\/(compare|legal)\.html$/.test(p) && !/\/(compare|legal)$/.test(p) })] : [],
+  integrations: site && !isDemo && !noindex ? [sitemap({ filter: (p) => !/\/(compare|legal)(\.html)?$/.test(p) && !/\/go\//.test(p) })] : [],
 });

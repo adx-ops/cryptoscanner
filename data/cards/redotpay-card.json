@@ -9,7 +9,8 @@
     "name": "Not named",
     "status": "unknown",
     "evidence": [
-      "ev-redot-card"
+      "ev-redot-card",
+      "ev-redot-card-type"
     ]
   },
   "network": "unknown",
@@ -96,14 +97,19 @@
         "status": "verified"
       },
       "kyc": {
-        "initial_verification": "unknown",
-        "editorial_level": "unknown",
-        "requirements": [],
-        "stages_note": "Identity verification exists (verification page, Sumsub logo, FAQ about rejected verification) but the stage and documents are not stated on the pages read. Not established as a no-KYC product.",
-        "evidence": [
-          "ev-redot-home"
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "other"
         ],
-        "status": "unknown"
+        "stages_note": "Identity verification in the app before a card can be chosen (help centre 'How to Get a RedotPay Card'): personal details, photo of an original ID valid at least 3 months, face scan, residential address (no proof stated), short questionnaire on occupation/source of funds; personal statement, source of funds or wealth only if requested (14-day deadline). First read 2026-11-07 (browser); second read required before publication.",
+        "evidence": [
+          "ev-redot-get-card",
+          "ev-redot-kyc-req"
+        ],
+        "status": "verified"
       },
       "tiers": [
         {
@@ -262,6 +268,42 @@
       "expires_at": null,
       "scope": {},
       "verification": "unknown"
+    },
+    {
+      "id": "ev-redot-get-card",
+      "url": "https://helpcenter.redotpay.com/en/articles/11008771-how-to-get-a-redotpay-card",
+      "title": "How to Get a RedotPay Card (help centre, July 21, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Download the app; sign up with email, Google or Apple ID; 'Complete identity verification in the app'; add crypto; go to [Card] and choose a virtual or a physical card.",
+      "accessed_at": "2026-11-07T16:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-redot-kyc-req",
+      "url": "https://helpcenter.redotpay.com/en/articles/10920717-identity-verification-requirements",
+      "title": "Identity Verification Requirements (help centre, September 4, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Personal details, photo of an original ID valid ≥3 months, face scan, residential address, 4–5 question questionnaire; additional documents (personal statement, source of funds or wealth) only if requested; 18+; one verified account per person.",
+      "accessed_at": "2026-11-07T16:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-redot-card-type",
+      "url": "https://helpcenter.redotpay.com/en/articles/10566205-what-type-of-card-is-the-redotpay-card",
+      "title": "What Type of Card Is the RedotPay Card? (help centre, July 21, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'A stablecoin-based card … works at any merchant that accepts major card networks' — network and issuer not named.",
+      "accessed_at": "2026-11-07T16:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
     }
   ],
   "links": {
@@ -316,6 +358,14 @@
         "ev-redot-fees-img"
       ],
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-07T16:40:00Z",
+      "field": "variants[].kyc",
+      "from": "unknown",
+      "to": "required (standard)",
+      "reason": "First read (browser) of three English help-centre articles: KYC is completed in the app before choosing a card; requirements ID + face scan + address + questionnaire. Network/issuer still not named ('major card networks'). Needs a second independent read ≥24 h later (fetcher can read these Intercom pages) before publication.",
+      "actor": "claude-session (browser read)"
     }
   ],
   "editorial": {

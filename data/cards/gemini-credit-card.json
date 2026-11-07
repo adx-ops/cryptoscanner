@@ -16,7 +16,7 @@
   },
   "network": "mastercard",
   "category": "credit",
-  "record_status": "rejected",
+  "record_status": "validated",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -382,6 +382,14 @@
       "to": "rejected",
       "reason": "Out of scope (David, 2026-11-02): US-only products are not listed; the catalogue targets the EEA. Record kept for history; it will not be researched further or published.",
       "actor": "david"
+    },
+    {
+      "date": "2026-11-07T16:50:00Z",
+      "field": "record_status",
+      "from": "rejected",
+      "to": "validated",
+      "reason": "Re-opened: David made the site global on 2026-11-07 (US products in scope). Values date from the earlier read; a second independent read is required before publication.",
+      "actor": "claude-session"
     }
   ],
   "editorial": {

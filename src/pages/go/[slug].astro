@@ -1,0 +1,26 @@
+---
+// Outbound redirect: every "Get card" button points here, so a link can be switched from the official site
+// to a confirmed affiliate link by changing data only (data/cards/<slug>.json → links.affiliate, gated by
+// the affiliate status rule). Not indexed; the visitor is sent on immediately.
+import { allCards, outboundLink, url } from '../../lib/data.ts';
+import type { CardRecord } from '../../lib/types.ts';
+export function getStaticPaths() { return allCards().map((c) => ({ params: { slug: c.slug }, props: { card: c } })); }
+const { card } = Astro.props as { card: CardRecord };
+const link = outboundLink(card);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta http-equiv="refresh" content={`0; url=${link.href}`} />
+    <title>Going to {card.brand}…</title>
+    <link rel="canonical" href={link.href} />
+    <script define:vars={{ href: link.href }}>location.replace(href);</script>
+    <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#000;color:#fff;font:16px/1.5 system-ui,sans-serif;text-align:center;padding:16px}a{color:#d7ff3c}</style>
+  </head>
+  <body>
+    <p>Taking you to {card.brand}…<br /><a href={link.href} rel={link.monetised ? 'sponsored nofollow' : 'nofollow'}>Continue to {new URL(link.href).hostname}</a><br /><small>{link.monetised ? 'Affiliate link — CryptoScanner may earn a commission. It never changes the ranking.' : 'Official site — not an affiliate link.'} <a href={url(`/cards/${card.slug}`)}>Back to the card</a></small></p>
+  </body>
+</html>

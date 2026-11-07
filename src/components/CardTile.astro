@@ -40,7 +40,7 @@ const chipClass = (known: boolean, status: string) => (!known ? 'chip unk' : sta
     <footer class="tile-actions">
       <label class="compare-check"><input type="checkbox" class="compare-toggle" value={card.slug} disabled={!f.available} /> Compare</label>
       <a class="btn" href={url(`/cards/${card.slug}`)}>Details</a>
-      {f.available && <a class="btn primary get" href={link.href} rel={link.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">Get card</a>}
+      {f.available && <a class="btn primary get" href={url(`/go/${card.slug}`)} rel={link.monetised ? 'sponsored nofollow noopener' : 'nofollow noopener'} target="_blank">Get card</a>}
     </footer>
     {f.available && <p class="linknote muted">{link.monetised ? 'Affiliate link — commissions never change the ranking.' : 'Official site — not an affiliate link.'}</p>}
   </div>

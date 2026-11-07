@@ -1,6 +1,6 @@
 # Resume state
 
-Updated: 2026-11-07 13:40 (Europe/Berlin).
+Updated: 2026-11-07 17:55 (Europe/Berlin).
 
 ## Environment (verified 2026-10-26)
 - Claude cloud workspace (Linux), Node 22.23.4, npm 10.9.9, Python 3.13, git 2.43. Files/shell/web search/web fetch available.
@@ -56,6 +56,7 @@ GitHub repo: active · CI: tested (green on GitHub, run 40735738785 incl. ui-che
 5. Notification channel for exceptions — assumed this chat.
 
 ## Next work (in order)
+0. GLOBAL (2026-11-07): RedotPay second read ≥ 2026-11-08 17:40 → publish. Then global candidates. Affiliate: waiting on David (see Project doc claude/affiliation-dossier-2026-11-04.md — entity facts, contact mailbox, domain, programme sign-ups). Every Get-card button already routes through /go/<slug>.
 1. Browser second reads (needs_browser_read): Bybit EU card landing page https://www.bybit.eu/en-EU/cards/ (cashback, VIP, welcome, issuer — FAQ + fee schedule already re-read by the fetcher 2026-10-31), RedotPay fee image, Crypto.com help centre (fees + country list). Wirex: wirex.one (2026-10-30 browser visit) still advertises a 'Wirex Card / Debit Card' as principal Visa and Mastercard member — the EEA product pages must be re-read on wirex.one before publishing. KAST: needs_review since the 2026-10-30 second read (see Project doc claude/second-read-run-2026-10-30.md). Coinbase: needs_review since 2026-10-31 — research run to read the EU KYC article (id-doc-verification-eu). Crypto.com: second read of the Europe fee schedule (help.crypto.com/en/articles/5977463…) ≥ 2026-11-01, then still needs an official country list + KYC article.
 1b. Logos: Coinbase and MetaMask marks not yet sourced (monogram fallback); fetch from their official pages in a browser session and record in data/logos/manifest.json.
 2. New records: Wirex, Coinbase, MetaMask, Kraken (Krak), Deblock, Plutus — official sources only, validated → published after a second read.

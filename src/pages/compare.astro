@@ -11,7 +11,7 @@ const cards = allCards().filter(isAvailableOption).map((c) => {
   const fee = (type: Fee['type']) => { const f = tier.fees.find((x) => x.type === type); if (!f) return 'unknown'; if (f.kind === 'none') return 'none'; if (f.kind === 'unknown') return 'unknown'; return [f.amount ? `${f.amount.amount} ${f.amount.currency}` : '', f.percent !== undefined ? `${f.percent}%` : ''].filter(Boolean).join(' + ') + (f.free_allowance?.amount ? ` (first ${f.free_allowance.amount.amount} ${f.free_allowance.amount.currency}/${f.free_allowance.period ?? 'month'} free)` : ''); };
   const link = outboundLink(c);
   return {
-    slug: c.slug, name: c.name, href: link.href, monetised: link.monetised, rec: c,
+    slug: c.slug, name: c.name, href: url(`/go/${c.slug}`), monetised: link.monetised, rec: c,
     rows: {
       'Type': `${c.category.replace('_', ' ')} · ${c.form_factors.join(' + ')}`,
       'Region': variant.region_label,

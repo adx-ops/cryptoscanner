@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+import RankList from '../../components/RankList.astro';
+import CardVisual from '../../components/CardVisual.astro';
+import { allCards, url } from '../../lib/data.ts';
+import { rankCards } from '../../lib/present.ts';
+import { REGIONS, allowedIn, regionsWithCards, type Region } from '../../lib/regions.ts';
+import countries from '../../lib/countries.json';
+import type { CardRecord } from '../../lib/types.ts';
+
+export function getStaticPaths() {
+  return regionsWithCards(allCards()).map(({ region, cards }) => ({ params: { region: region.slug }, props: { region, cards } }));
+}
+const { region, cards } = Astro.props as { region: Region; cards: CardRecord[] };
+const NAMES = countries as Record<string, string>;
+const rows = rankCards(cards).filter((r) => r.facts.available);
+const top = rows[0];
+const month = new Date().toLocaleString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const note = (c: CardRecord) => {
+  const inR = allowedIn(c, region);
+  if (region.countries.length === 1) return `Residents of ${NAMES[region.countries[0]] ?? region.countries[0]} listed`;
+  return `${inR.length} of ${region.countries.length} countries listed`;
+};
+const others = regionsWithCards(allCards()).filter((r) => r.region.slug !== region.slug);
+const covered = [...new Set(cards.flatMap((c) => allowedIn(c, region)))].map((c) => NAMES[c] ?? c).sort();
+---
+<Base title={`Best crypto cards in ${region.short} (${month})`} description={`Crypto cards residents of ${region.name} can get, ranked on verified cashback and fees from the providers' official conditions. ${rows.length} verified card${rows.length === 1 ? '' : 's'}, no sponsored rankings.`} canonicalPath={`/best/${region.slug}`}>
+  <p class="crumb"><a href={url('/')}>All cards</a></p>
+  <section class="rhero">
+    <div>
+      <p class="kicker">{rows.length} verified card{rows.length === 1 ? '' : 's'} · updated {month}</p>
+      <h1>Best crypto cards in {region.short}</h1>
+      <p class="lede">Cards whose official residence rules list at least one country in {region.name}, ranked on verified base cashback and then monthly cost. Check the exact country on each card page — a listing is not a guarantee the issuer will accept you.</p>
+    </div>
+    {top && <div class="rhero-visual"><CardVisual card={top.card} size="hero" decorative /></div>}
+  </section>
+  <RankList rows={rows} note={note} />
+  <details class="covered">
+    <summary>Countries covered on this page ({covered.length})</summary>
+    <p class="muted">{covered.join(', ')}</p>
+  </details>
+  {others.length > 0 && (
+    <nav aria-label="Other regions" class="other">
+      <h2>Other regions</h2>
+      <ul class="plain region-links">{others.map(({ region: r, cards: rc }) => <li><a class="btn" href={url(`/best/${r.slug}`)}>{r.short} · {rc.length}</a></li>)}</ul>
+    </nav>
+  )}
+</Base>
+<style>
+  .crumb { margin: 16px 0 0; font-size: 0.9rem; } .crumb a { color: var(--muted); }
+  .rhero { display: grid; gap: 24px; align-items: center; margin: 8px 0 28px; }
+  @media (min-width: 900px) { .rhero { grid-template-columns: 1.2fr 0.8fr; } }
+  .rhero-visual { box-shadow: var(--shadow-face); border-radius: var(--r-face); }
+  .covered { margin-top: 18px; } .covered p { font-size: 0.88rem; }
+  .region-links { display: flex; flex-wrap: wrap; gap: 8px; }
+</style>

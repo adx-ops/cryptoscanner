@@ -4,7 +4,9 @@ import CountrySelect from '../components/CountrySelect.astro';
 import CardTile from '../components/CardTile.astro';
 import CardVisual from '../components/CardVisual.astro';
 import BrandMark from '../components/BrandMark.astro';
-import { allCards, outboundLink, url, IS_DEMO } from '../lib/data.ts';
+import RankList from '../components/RankList.astro';
+import { regionsWithCards } from '../lib/regions.ts';
+import { allCards, url, IS_DEMO } from '../lib/data.ts';
 import { rankCards, bestFor, shortRegion } from '../lib/present.ts';
 import research from '../../data/research-list.json';
 import logos from '../../data/logos/manifest.json';
@@ -14,8 +16,8 @@ const ranked = rankCards(cards);
 const picks = ranked.filter((r) => r.facts.available);
 const top = picks[0];
 const best = bestFor(ranked);
+const regions = regionsWithCards(cards);
 const rankOf = new Map(picks.map((r, i) => [r.card.slug, i + 1]));
-const chipClass = (known: boolean, status: string) => (!known ? 'chip unk' : status === 'contradictory' || status === 'stale' ? 'chip bad' : 'chip');
 
 // "Next up": names from the public research list only (no figures, no card-record data). Logos by brand name.
 const marks = (logos as { marks: Record<string, { brand: string }> }).marks;
@@ -24,12 +26,12 @@ const nextUp = IS_DEMO ? [] : (research as { entries: { provider: string; produc
   .filter((e) => (e.status === 'validated' || e.status === 'reading') && !published.has(e.product))
   .map((e) => ({ ...e, providerId: Object.entries(marks).find(([, m]) => e.provider.toLowerCase().startsWith(m.brand.toLowerCase()))?.[0] ?? null }));
 ---
-<Base title="Best crypto cards in Europe, verified" description="Crypto cards ranked on verified cashback, fees and availability by country — from the providers' published conditions, sourced and dated. No sponsored rankings." canonicalPath="/">
+<Base title="Best crypto cards worldwide, verified" description="Crypto debit and credit cards ranked on verified cashback, fees and availability in your country — from the providers' published conditions, sourced and dated. No sponsored rankings." canonicalPath="/">
   <section class="hero">
     <div class="hero-copy">
       <p class="kicker">Verified from official sources · no sponsored rankings</p>
       <h1>The best crypto cards. Verified, not sponsored.</h1>
-      <p class="lede">Cashback, fees and who can actually get the card — taken from each provider's own published conditions, with the source and the date we checked. Pick your country and see what you can order today.</p>
+      <p class="lede">Wherever you live: cashback, fees and whether you can actually get the card — taken from each provider's own published conditions, with the source and the date we checked. Pick your country, see what you can order today.</p>
       <CountrySelect />
       <div class="hero-cta">
         <a class="btn primary lg" href="#picks">See the ranking</a>
@@ -58,30 +60,11 @@ const nextUp = IS_DEMO ? [] : (research as { entries: { provider: string; produc
   {picks.length > 0 && (
     <section id="picks" aria-labelledby="picks-h" class="ranking">
       <div class="section-head">
-        <h2 id="picks-h">Top picks</h2>
-        <p class="muted">Ranked by verified base cashback, then by monthly cost. Same order for everyone — commissions never count.</p>
+        <h2 id="picks-h">Top picks <span id="picks-where" class="muted"></span></h2>
+        <p class="muted">Ranked by verified base cashback, then by monthly cost. Pick a country to see only the cards whose residents rules include it. Commissions never count.</p>
       </div>
-      <ol class="rank-list plain">
-        {picks.map(({ card, facts }, i) => { const link = outboundLink(card); return (
-          <li class="rank-row">
-            <span class="rank-n num" aria-hidden="true">{i + 1}</span>
-            <a class="rank-thumb" href={url(`/cards/${card.slug}`)} aria-hidden="true" tabindex="-1"><CardVisual card={card} size="thumb" decorative /></a>
-            <div class="rank-main">
-              <a class="rank-name" href={url(`/cards/${card.slug}`)}>{card.name}</a>
-              <span class="rank-sub muted">{shortRegion(facts.region)} · {facts.kyc.value}{facts.verified ? ` · checked ${facts.verified}` : ''}</span>
-            </div>
-            <ul class="chips rank-chips">
-              <li class={chipClass(facts.cashback.known, facts.cashback.status)}>Cashback <b>{facts.cashback.value}</b></li>
-              <li class={chipClass(facts.fx.known, facts.fx.status)}>FX <b>{facts.fx.value}</b></li>
-              <li class={chipClass(facts.cost.known, facts.cost.status)}>Monthly <b>{facts.cost.value}</b></li>
-            </ul>
-            <div class="rank-cta">
-              <a class="btn primary" href={link.href} rel={link.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">Get card</a>
-              <span class="linknote muted">{link.monetised ? 'affiliate link' : 'not an affiliate link'}</span>
-            </div>
-          </li>
-        ); })}
-      </ol>
+      <RankList rows={picks} id="rank" />
+      <p id="rank-empty" class="card" hidden>None of the verified cards lists residents of this country yet. More cards are being verified below — or check the cards marked "to confirm" in the catalogue.</p>
     </section>
   )}
 
@@ -98,6 +81,17 @@ const nextUp = IS_DEMO ? [] : (research as { entries: { provider: string; produc
           </a>
         ))}
       </div>
+    </section>
+  )}
+
+  {regions.length > 0 && (
+    <section aria-labelledby="regions-h" class="regions">
+      <h2 id="regions-h">Best by region</h2>
+      <ul class="region-grid plain">
+        {regions.map(({ region, cards: rc }) => (
+          <li><a class="region-item" href={url(`/best/${region.slug}`)}><span class="region-name">{region.short}</span><span class="muted small">{rc.length} verified card{rc.length === 1 ? '' : 's'}</span></a></li>
+        ))}
+      </ul>
     </section>
   )}
 
@@ -177,25 +171,18 @@ const nextUp = IS_DEMO ? [] : (research as { entries: { provider: string; produc
   .section-head h2 { margin-bottom: 0; }
   .section-head p { margin: 0; max-width: 44rem; }
 
-  /* Ranked rows */
-  .rank-list { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r-panel); overflow: hidden; background: var(--surface); }
-  .rank-row { display: grid; grid-template-columns: auto 92px minmax(0, 1fr); grid-template-areas: "n thumb main" "n chips chips" "n cta cta"; gap: 10px 12px; align-items: center; padding: 14px 14px; border-bottom: 1px solid var(--line); }
-  .rank-row:last-child { border-bottom: 0; }
-  .rank-n { grid-area: n; align-self: start; font-weight: 800; font-stretch: 118%; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1; color: var(--faint); width: 2ch; }
-  .rank-row:first-child .rank-n { color: var(--accent); }
-  .rank-thumb { grid-area: thumb; display: block; width: 92px; }
-  .rank-main { grid-area: main; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-  .rank-name { font-weight: 800; font-stretch: 112%; text-transform: uppercase; font-size: 1.05rem; text-decoration: none; }
-  .rank-name:hover { text-decoration: underline; }
-  .rank-sub { font-size: 0.82rem; }
-  .rank-chips { grid-area: chips; }
-  .rank-cta { grid-area: cta; display: flex; align-items: center; gap: 10px; }
-  .linknote { font-size: 0.74rem; }
-  @media (min-width: 860px) {
-    .rank-row { grid-template-columns: 3ch 110px minmax(0, 1.2fr) minmax(0, 1.4fr) auto; grid-template-areas: "n thumb main chips cta"; padding: 14px 18px; }
-    .rank-thumb { width: 110px; }
-    .rank-cta { flex-direction: column; align-items: flex-end; gap: 4px; }
-  }
+  /* Country-aware ranking */
+  :global(.rank-row.unconfirmed) { opacity: 0.55; }
+  :global(.rank-tag) { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; }
+  :global(.rank-tag[data-v="eligible"]) { color: var(--accent); }
+  :global(.rank-tag[data-v="to_confirm"]) { color: var(--muted); }
+
+  /* Regions */
+  .region-grid { display: grid; gap: 8px; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 700px) { .region-grid { grid-template-columns: repeat(4, 1fr); } }
+  .region-item { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); text-decoration: none; }
+  .region-item:hover { border-color: var(--accent); }
+  .region-name { font-weight: 800; font-stretch: 115%; text-transform: uppercase; font-size: 1.1rem; }
 
   /* Best for */
   .best-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
@@ -288,7 +275,35 @@ const nextUp = IS_DEMO ? [] : (research as { entries: { provider: string; produc
     activeCount.textContent = active ? `(${active})` : '';
   }
 
-  document.addEventListener('cs:country', (e) => { country = (e as CustomEvent<string>).detail; render(); });
+  // Top picks follow the country: rows whose provider excludes it disappear, explicitly listed ones come first.
+  const rankList = document.getElementById('rank');
+  const rankEmpty = document.getElementById('rank-empty');
+  const where = document.getElementById('picks-where');
+  const countrySel = document.getElementById('country') as HTMLSelectElement | null;
+  function renderRank() {
+    if (!rankList) return;
+    const rows = Array.from(rankList.querySelectorAll<HTMLElement>('.rank-row'));
+    const order = { eligible: 0, none: 0, to_confirm: 1, ineligible: 2 } as const;
+    rows.sort((a, b) => order[verdict(a)] - order[verdict(b)] || Number(a.dataset.pos) - Number(b.dataset.pos)).forEach((r) => rankList.appendChild(r));
+    let n = 0;
+    for (const r of rows) {
+      const v = verdict(r);
+      r.hidden = v === 'ineligible';
+      if (!r.hidden) { n++; r.querySelector('.rank-n')!.textContent = String(n); }
+      r.classList.toggle('first', n === 1 && !r.hidden);
+      r.classList.toggle('unconfirmed', v === 'to_confirm');
+      let tag = r.querySelector<HTMLElement>('.rank-tag');
+      if (!tag) { tag = document.createElement('span'); tag.className = 'rank-tag'; r.querySelector('.rank-main')?.appendChild(tag); }
+      const cname = countrySel?.options[countrySel.selectedIndex]?.text ?? country;
+      tag.textContent = v === 'eligible' ? `Available in ${cname}` : v === 'to_confirm' ? `${cname} not listed by the provider — check before applying` : '';
+      tag.dataset.v = v;
+    }
+    rankList.classList.add('ranked');
+    if (rankEmpty) rankEmpty.hidden = n > 0;
+    if (where) where.textContent = country && countrySel ? `for ${countrySel.options[countrySel.selectedIndex]?.text ?? country}` : '';
+  }
+  rankList?.querySelectorAll<HTMLElement>('.rank-row').forEach((r, i) => (r.dataset.pos = String(i)));
+  document.addEventListener('cs:country', (e) => { country = (e as CustomEvent<string>).detail; render(); renderRank(); });
   [fEligible, fNoKyc, fFree, sort].forEach((el) => el.addEventListener('change', render));
   reset.addEventListener('click', () => { fEligible.checked = fNoKyc.checked = fFree.checked = false; sort.value = 'reward'; render(); });
 
@@ -307,5 +322,7 @@ const nextUp = IS_DEMO ? [] : (research as { entries: { provider: string; produc
     go.setAttribute('aria-disabled', s.length < 2 ? 'true' : 'false');
     go.href = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/compare?cards=${s.join(',')}`;
   });
+  country = countrySel?.value ?? '';
   render();
+  renderRank();
 </script>

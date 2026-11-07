@@ -980,14 +980,14 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "publisher programme",
-      "status": "rejected",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-02",
       "operator_named": true,
       "discovery_note": "Directory names WebBank as issuer; US-only credit card; Impact (sjv.io) link seen on crypto.news; scope decision needed",
       "priority": 0,
       "affiliate_hint_note": "Official Gemini Affiliate Program confirmed 2026-11-02 ($25 CPA on trading accounts via Impact; credit card not a paid action)",
-      "rejected_reason": "Out of scope (David, 2026-11-02): US-only products are not listed; the catalogue targets the EEA. Official eligibility read 2026-11-02: US only."
+      "note": "Re-opened 2026-11-07: site is global (US in scope)."
     },
     {
       "provider": "BitPay",

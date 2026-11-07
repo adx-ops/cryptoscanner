@@ -62,7 +62,7 @@ const meta = [card.category.replace(/_/g, ' '), card.form_factors.join(' + '), c
       {card.editorial.summary && <p class="lede">{card.editorial.summary}</p>}
       <div class="cta">
         {available
-          ? <a class="btn primary lg" href={link.href} rel={link.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">Get the {card.brand} card</a>
+          ? <a class="btn primary lg" href={url(`/go/${card.slug}`)} rel={link.monetised ? 'sponsored nofollow noopener' : 'nofollow noopener'} target="_blank">Get the {card.brand} card</a>
           : <span class="btn lg" aria-disabled="true">Not available</span>}
         <a class="btn lg" href={url(`/calculator?card=${card.slug}`)}>What is it worth to me?</a>
       </div>

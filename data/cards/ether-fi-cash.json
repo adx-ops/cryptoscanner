@@ -14,7 +14,7 @@
   },
   "network": "visa",
   "category": "crypto_backed_credit",
-  "record_status": "validated",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -679,7 +679,7 @@
       "title": "ether.fi Cash Cardholder Agreement — Ltd. (International), last modified September 8, 2026",
       "source_type": "official_terms",
       "excerpt": "Card 'issued by Third National pursuant to a license from Visa'; programme by Ether.Fi Cash Ltd.; Puerto Rico law. 'Strictly prohibited for use by U.S. persons'; 18+. 'Credit extended through decentralized borrowing protocols'. Fees 'accurate as of April 15th, 2025': base 1% foreign transaction fee, Core up to +50 bps, Luxe up to +25 bps; Fee Schedule linked (not read); 30 days' notice.",
-      "accessed_at": "2026-11-03T06:27:00Z",
+      "accessed_at": "2026-11-07T16:20:00Z",
       "effective_from": "2026-09-08",
       "expires_at": null,
       "scope": {
@@ -800,7 +800,7 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-03T06:27:00Z",
+    "last_content_verified_at": "2026-11-07T16:20:00Z",
     "last_auto_check_at": "2026-11-04T06:38:00Z"
   },
   "changelog": [
@@ -875,6 +875,14 @@
       "to": "validated",
       "reason": "Third read on 2026-11-04 (fetcher, 24 h 11 min after the 2026-11-03 read) of 10 of the 11 evidence pages: every material value they carry confirmed — 86 named countries identical (mapping to the 84 modelled codes unchanged, Belgium/Ireland virtual-only, Malaysia/South Africa/Colombia/Puerto Rico still excluded), prohibited list identical, cashback bands and caps, category cashback, membership thresholds and prices ($199 / $999), card counts and prices, ATM 'free up to 10 / unlimited' and $5,000 / $25,000 limits, help-centre FX margins 0.5 % / 0.25 % / none / none, KYC steps, LTV 81 % max / 20 % min (the LTV table now lists further assets — WHYPE 45 %, beHYPE 40 %, QQQx 66 %, SPYx 67 %, PAXG 68 %, TBLLx 70 % — within the modelled range), affiliate programme terms. NOT re-read: ev-etherfi-cardholder-agreement-intl (gitbook, Ltd. International) — the fetcher refused the URL for lack of provenance (not an empty shell, not a differing value); it is the governing source for the issuer and the modelled FX fees (1 % base + 50/25 bps), so publication waits for a read of that page (browser or next run). last_content_verified_at left at 2026-11-03 for that reason. Note for David: the gitbook also serves 'ether.fi Cash Cardholder Agreement (International)' at /etherfi/ether.fi-legal/ether.fi-cash-cardholder-agreement-international (Last Modified April 15, 2025), which states a 1 % foreign transaction fee without any per-level bps — the Ltd. document must be re-read to confirm the 50/25 bps wording still stands.",
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-07T16:20:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "published",
+      "reason": "Browser read of the Ltd. (International) cardholder agreement (Last Modified 2026-09-08): issuer Third National under Visa licence; FX = 1% base + up to 50 bps (Core) / 25 bps (Luxe); fee information as of 2025-04-15 — identical to the modelled values. All other pages confirmed by the 2026-11-03 and 2026-11-04 reads (policy rule 1). Eligibility 'verified' per David's 2026-11-03 decision, with the MY/ZA/UT/WY/CO contradictions shown.",
+      "actor": "claude-session (browser read)"
     }
   ],
   "editorial": {

@@ -15,7 +15,7 @@
   },
   "network": "visa",
   "category": "debit",
-  "record_status": "validated",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -159,8 +159,8 @@
                 "amount": 5,
                 "currency": "USD"
               },
-              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised.",
-              "status": "contradictory",
+              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised. Governing value (policy rule 5): the dated Tier System Terms (effective 2025-09-01, updated 2026-09-01) — $5 modelled; the €50 initial top-up is shown as a contradiction.",
+              "status": "verified",
               "evidence": [
                 "ev-coca-tier-terms",
                 "ev-coca-docs-card",
@@ -335,8 +335,8 @@
                 "amount": 5,
                 "currency": "USD"
               },
-              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised.",
-              "status": "contradictory",
+              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised. Governing value (policy rule 5): the dated Tier System Terms (effective 2025-09-01, updated 2026-09-01) — $5 modelled; the €50 initial top-up is shown as a contradiction.",
+              "status": "verified",
               "evidence": [
                 "ev-coca-tier-terms",
                 "ev-coca-docs-card",
@@ -486,8 +486,8 @@
                 "amount": 5,
                 "currency": "USD"
               },
-              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised.",
-              "status": "contradictory",
+              "conditions": "Virtual card free; plastic card order fee $5 on this tier (Tier System Terms table). The ordering article instead asks for an initial top-up equivalent to €50 'to cover delivery and card issuance', the remainder staying on the card balance — the fee component of that top-up is not itemised. Governing value (policy rule 5): the dated Tier System Terms (effective 2025-09-01, updated 2026-09-01) — $5 modelled; the €50 initial top-up is shown as a contradiction.",
+              "status": "verified",
               "evidence": [
                 "ev-coca-tier-terms",
                 "ev-coca-docs-card",
@@ -1136,7 +1136,8 @@
       "effective_from": null,
       "expires_at": null,
       "scope": {},
-      "verification": "verified"
+      "verification": "verified",
+      "contradiction_note": "The ordering article asks for an initial top-up equivalent to €50 'to cover delivery and card issuance' (remainder stays on the card), while the dated Tier System Terms list a $5 plastic-card fee on Starter/Standard/Standard+ and free on higher tiers. The Terms value is modelled; budget for the €50 top-up when ordering a physical card."
     },
     {
       "id": "ev-coca-topup",
@@ -1244,6 +1245,14 @@
         "ev-coca-welcome-promo"
       ],
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-07T16:30:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "published",
+      "reason": "Policy rule 1 met (reads 2026-11-04 and 2026-11-06 agree on every value). Held by the 2026-11-06 run for two editorial points, settled under rule 5 and the truth contract after David's 2026-11-07 instruction to go global and do what is necessary: issuer shown as not disclosed ('in collaboration with Wirex') exactly as published; plastic-card issuance modelled from the dated Tier System Terms ($5 / free) with the €50 initial top-up stated as a contradiction. Custody remains unknown and is shown as unknown.",
+      "actor": "claude-session"
     }
   ],
   "editorial": {

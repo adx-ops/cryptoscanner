@@ -1,0 +1,58 @@
+---
+import type { CardRecord } from '../lib/types.ts';
+import CardVisual from './CardVisual.astro';
+import { defaultVariantAndTier, outboundLink, url } from '../lib/data.ts';
+import type { KeyFacts } from '../lib/present.ts';
+import { shortRegion } from '../lib/present.ts';
+// Ranked rows with a "Get card" button each. Rows carry their eligibility so the page script can hide
+// the cards a visitor cannot get in the country they picked and renumber the rest.
+interface Props { rows: { card: CardRecord; facts: KeyFacts }[]; note?: (card: CardRecord) => string | null; id?: string }
+const { rows, note, id } = Astro.props;
+const chipClass = (known: boolean, status: string) => (!known ? 'chip unk' : status === 'contradictory' || status === 'stale' ? 'chip bad' : 'chip');
+---
+<ol class="rank-list plain" id={id}>
+  {rows.map(({ card, facts }, i) => { const link = outboundLink(card); const { variant } = defaultVariantAndTier(card); const extra = note?.(card); return (
+    <li class="rank-row" data-card={card.slug}
+      data-allowed={variant.eligibility.residence_allowed.join(',')}
+      data-excluded={variant.eligibility.residence_excluded.join(',')}
+      data-default={variant.eligibility.default_for_unlisted}>
+      <span class="rank-n num" aria-hidden="true">{i + 1}</span>
+      <a class="rank-thumb" href={url(`/cards/${card.slug}`)} aria-hidden="true" tabindex="-1"><CardVisual card={card} size="thumb" decorative /></a>
+      <div class="rank-main">
+        <a class="rank-name" href={url(`/cards/${card.slug}`)}>{card.name}</a>
+        <span class="rank-sub muted">{extra ?? shortRegion(facts.region)} · {facts.kyc.value}{facts.verified ? ` · checked ${facts.verified}` : ''}</span>
+      </div>
+      <ul class="chips rank-chips">
+        <li class={chipClass(facts.cashback.known, facts.cashback.status)}>Cashback <b>{facts.cashback.value}</b></li>
+        <li class={chipClass(facts.fx.known, facts.fx.status)}>FX <b>{facts.fx.value}</b></li>
+        <li class={chipClass(facts.cost.known, facts.cost.status)}>Monthly <b>{facts.cost.value}</b></li>
+      </ul>
+      <div class="rank-cta">
+        <a class="btn primary" href={url(`/go/${card.slug}`)} rel={link.monetised ? 'sponsored nofollow noopener' : 'nofollow noopener'} target="_blank">Get card</a>
+        <span class="linknote muted">{link.monetised ? 'affiliate link' : 'not an affiliate link'}</span>
+      </div>
+    </li>
+  ); })}
+</ol>
+
+<style>
+  .rank-list { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r-panel); overflow: hidden; background: var(--surface); }
+  .rank-row { display: grid; grid-template-columns: auto 92px minmax(0, 1fr); grid-template-areas: "n thumb main" "n chips chips" "n cta cta"; gap: 10px 12px; align-items: center; padding: 14px 14px; border-bottom: 1px solid var(--line); }
+  .rank-row:last-child { border-bottom: 0; }
+  .rank-row[hidden] { display: none; }
+  .rank-n { grid-area: n; align-self: start; font-weight: 800; font-stretch: 118%; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1; color: var(--faint); width: 2ch; }
+  .rank-row.first .rank-n, .rank-list:not(.ranked) .rank-row:first-child .rank-n { color: var(--accent); }
+  .rank-thumb { grid-area: thumb; display: block; width: 92px; }
+  .rank-main { grid-area: main; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .rank-name { font-weight: 800; font-stretch: 112%; text-transform: uppercase; font-size: 1.05rem; text-decoration: none; }
+  .rank-name:hover { text-decoration: underline; }
+  .rank-sub { font-size: 0.82rem; }
+  .rank-chips { grid-area: chips; }
+  .rank-cta { grid-area: cta; display: flex; align-items: center; gap: 10px; }
+  .linknote { font-size: 0.74rem; }
+  @media (min-width: 860px) {
+    .rank-row { grid-template-columns: 3ch 110px minmax(0, 1.2fr) minmax(0, 1.4fr) auto; grid-template-areas: "n thumb main chips cta"; padding: 14px 18px; }
+    .rank-thumb { width: 110px; }
+    .rank-cta { flex-direction: column; align-items: flex-end; gap: 4px; }
+  }
+</style>
