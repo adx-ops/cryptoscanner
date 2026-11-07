@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import CardFace from '../components/CardFace.astro';
+import CardVisual from '../components/CardVisual.astro';
 import BrandMark from '../components/BrandMark.astro';
 import type { Fee } from '../lib/types.ts';
 import { allCards, defaultVariantAndTier, rewardSummary, recurringCostSummary, outboundLink, isAvailableOption, url } from '../lib/data.ts';
@@ -36,7 +36,7 @@ const rowLabels = cards[0] ? Object.keys(cards[0].rows) : [];
   <p id="hint" class="card">Select at least two cards to compare.</p>
   <div class="table-wrap" id="table-wrap" hidden>
     <table id="cmp">
-      <thead><tr><th scope="col">Criterion</th>{cards.map((c) => <th scope="col" data-col={c.slug}><div class="th-face"><CardFace card={c.rec} size="mini" decorative /></div>{c.name}</th>)}</tr></thead>
+      <thead><tr><th scope="col">Criterion</th>{cards.map((c) => <th scope="col" data-col={c.slug}><div class="th-face"><CardVisual card={c.rec} size="thumb" decorative /></div>{c.name}</th>)}</tr></thead>
       <tbody>
         {rowLabels.map((label) => (
           <tr><th scope="row">{label}</th>{cards.map((c) => <td data-col={c.slug}>{(c.rows as Record<string, string>)[label]}</td>)}</tr>

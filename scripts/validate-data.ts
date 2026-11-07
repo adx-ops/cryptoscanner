@@ -138,6 +138,20 @@ for (const file of [...listJson(join(ROOT, 'data/affiliate')), ...listJson(join(
   }
 }
 
+// Card images: every entry needs its official provenance; every file in public/card-images must be recorded.
+{
+  const manifestFile = join(ROOT, 'data/images/manifest.json');
+  if (existsSync(manifestFile)) {
+    const images = (loadJson(manifestFile) as { images: Record<string, { file?: string; source_page?: string; asset_url?: string; accessed_at?: string }> }).images;
+    for (const [slug, m] of Object.entries(images)) {
+      if (!m.file || !m.source_page || !m.asset_url || !m.accessed_at) errors.push(`data/images/manifest.json: ${slug} needs file, source_page, asset_url and accessed_at`);
+      if (!existsSync(join(ROOT, 'data/cards', `${slug}.json`))) errors.push(`data/images/manifest.json: ${slug} has no card record`);
+    }
+    const dir = join(ROOT, 'public/card-images');
+    if (existsSync(dir)) for (const f of readdirSync(dir)) if (f !== 'README.md' && !Object.values(images).some((m) => m.file === f)) errors.push(`public/card-images/${f} is not recorded in data/images/manifest.json`);
+  }
+}
+
 for (const w of warnings) console.warn('WARN ', w);
 for (const e of errors) console.error('ERROR', e);
 console.log(`validate-data: ${cardFiles.length} card record(s) checked, ${errors.length} error(s), ${warnings.length} warning(s)`);

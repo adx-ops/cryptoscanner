@@ -1,6 +1,6 @@
 # Resume state
 
-Updated: 2026-10-31 19:30 (Europe/Berlin). Keep this file short; it is the hand-off between sessions.
+Updated: 2026-11-07 13:40 (Europe/Berlin).
 
 ## Environment (verified 2026-10-26)
 - Claude cloud workspace (Linux), Node 22.23.4, npm 10.9.9, Python 3.13, git 2.43. Files/shell/web search/web fetch available.
@@ -31,7 +31,8 @@ Updated: 2026-10-31 19:30 (Europe/Berlin). Keep this file short; it is the hand-
 | /methodology, /how-we-make-money, /legal, /contact | implemented | build only |
 | Mobile rendering 360–1440 | verified | ui-check: no horizontal overflow on 8 pages × 5 widths; screenshots |
 | Verified card records | 3 `published` (Bitpanda, Gnosis Pay, Nexo), 5 `validated` (Crypto.com EEA — spend caps + fees from the Europe fee schedule since PR #6, Bybit EU, RedotPay, Wirex EEA, MetaMask), 2 `needs_review` (KAST 2026-10-30; Coinbase 2026-10-31, KYC article differs between reads) | `npm run validate` 12 records 0 errors; verified build = 3 card pages |
-| Visual identity v2 (ink & brass, card faces, self-hosted Archivo) | tested | ui-check 74/74 on 2026-10-30; screenshots in docs/screenshots |
+| Visual identity v3 (commercial: black, official product images, ranked picks with Get-card CTAs, Best-for, Being-verified strip, FAQ) | tested | ui-check 74/74 on 2026-11-07; see DECISIONS 2026-11-07 |
+| Card images pipeline (manifest + GitHub workflow fetch-card-images.yml → auto-merged PR) | configured, first run pending | data/images/manifest.json (Nexo, Bitpanda) |
 | Official logos with provenance | 8 providers recorded (data/logos/manifest.json, public/logos/*.svg), validator enforces source+date | `npm run validate` |
 | Candidates list (discovery) | seeded: 55 entries with priority formula | data/candidates.json |
 | Agent run prompts + publication policy | written | agents/*.md, docs/PUBLICATION-POLICY.md |

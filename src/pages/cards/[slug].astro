@@ -1,12 +1,15 @@
 ---
 import Base from '../../layouts/Base.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
-import CardFace from '../../components/CardFace.astro';
+import CardVisual from '../../components/CardVisual.astro';
+import { keyFacts } from '../../lib/present.ts';
 import { allCards, outboundLink, isAvailableOption, payoutLabel, defaultVariantAndTier, rewardSummary, recurringCostSummary, url } from '../../lib/data.ts';
 import type { Fee, Reward, CardRecord } from '../../lib/types.ts';
 export function getStaticPaths() { return allCards().map((c) => ({ params: { slug: c.slug }, props: { card: c } })); }
 const { card } = Astro.props as { card: CardRecord };
 const link = outboundLink(card);
+const kf = keyFacts(card);
+const chipClass = (known: boolean, status: string) => (!known ? 'chip unk' : status === 'contradictory' || status === 'stale' ? 'chip bad' : 'chip');
 const available = isAvailableOption(card);
 const { variant: dv, tier: dt } = defaultVariantAndTier(card);
 const rs = rewardSummary(dt);
@@ -38,23 +41,32 @@ const sub = dt.fees.find((f) => f.type === 'subscription');
 const ct = card.credit_terms as { apr_percent?: number | 'unknown'; ltv_percent?: number | 'unknown'; ltv_min_percent?: number | 'unknown'; liquidation_risk?: string } | null | undefined;
 const pct = (v?: number | 'unknown') => (typeof v === 'number' ? `${v}%` : 'Unknown — not published');
 const ltvText = ct ? (typeof ct.ltv_min_percent === 'number' && typeof ct.ltv_percent === 'number' ? `${ct.ltv_min_percent}–${ct.ltv_percent}% depending on the collateral asset` : pct(ct.ltv_percent)) : '';
-const meta = [card.category.replace('_', ' '), card.form_factors.join(' + '), card.custody.replace('_', '-'), card.network && card.network !== 'unknown' ? card.network : null].filter(Boolean) as string[];
+const meta = [card.category.replace(/_/g, ' '), card.form_factors.join(' + '), card.custody.replace('_', '-'), card.network && card.network !== 'unknown' ? card.network : null].filter(Boolean) as string[];
 ---
 <Base title={`${card.name} — rewards, fees, availability`} description={card.editorial.summary ?? `${card.name}: rewards, fees, availability by country and identity-check requirements, with sources.`} canonicalPath={`/cards/${card.slug}`}>
   <p class="crumb"><a href={url('/')}>All cards</a></p>
   <section class="card-hero">
-    <div class="card-hero-face"><CardFace card={card} size="hero" decorative /></div>
+    <div class="card-hero-face"><CardVisual card={card} size="hero" decorative /></div>
     <div class="card-hero-copy">
+      <p class="kicker">{card.brand}{kf.verified ? ` · sources checked ${kf.verified}` : ''}</p>
       <h1>{card.name}</h1>
-      <ul class="chips plain">{meta.map((m) => <li>{m}</li>)}</ul>
+      <ul class="chips hero-chips">
+        <li class={chipClass(kf.cashback.known, kf.cashback.status)}>Cashback <b>{kf.cashback.value}</b></li>
+        <li class={chipClass(kf.fx.known, kf.fx.status)}>FX <b>{kf.fx.value}</b></li>
+        <li class={chipClass(kf.atm.known, kf.atm.status)}>ATM <b>{kf.atm.value}</b></li>
+        <li class={chipClass(kf.cost.known, kf.cost.status)}>Monthly <b>{kf.cost.value}</b></li>
+        <li class={chipClass(kf.kyc.known, kf.kyc.status)}>{kf.kyc.value}</li>
+      </ul>
+      <ul class="meta plain">{meta.map((m) => <li>{m}</li>)}</ul>
       {!available && <p class="card alert"><strong>This product is {card.product_status}.</strong> It is kept for reference and is not an available option.</p>}
       {card.editorial.summary && <p class="lede">{card.editorial.summary}</p>}
       <div class="cta">
         {available
-          ? <a class="btn primary" href={link.href} rel={link.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">{link.monetised ? `Go to ${card.brand} (affiliate link)` : `Go to ${card.brand} (not an affiliate link)`}</a>
-          : <span class="btn" aria-disabled="true">Not available</span>}
-        <a class="btn" href={url(`/calculator?card=${card.slug}`)}>Estimate my net value</a>
+          ? <a class="btn primary lg" href={link.href} rel={link.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">Get the {card.brand} card</a>
+          : <span class="btn lg" aria-disabled="true">Not available</span>}
+        <a class="btn lg" href={url(`/calculator?card=${card.slug}`)}>What is it worth to me?</a>
       </div>
+      {available && <p class="hint">{link.monetised ? `Affiliate link: ${card.brand} may pay us a commission if you sign up. It never changes the ranking.` : 'Official site — not an affiliate link.'}</p>}
     </div>
   </section>
 
@@ -155,11 +167,12 @@ const meta = [card.category.replace('_', ' '), card.form_factors.join(' + '), ca
 <style>
   .crumb { margin: 16px 0 0; font-size: 0.9rem; } .crumb a { color: var(--muted); }
   .card-hero { display: grid; gap: 20px; margin-top: 8px; align-items: center; }
-  .card-hero-face { max-width: 440px; width: 100%; }
+  .card-hero-face { max-width: 520px; width: 100%; box-shadow: var(--shadow-face); border-radius: var(--r-face); }
   .card-hero h1 { margin-top: 0; }
   @media (min-width: 860px) { .card-hero { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; margin-top: 20px; } }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
-  .chips li { font-size: 0.82rem; font-weight: 600; color: var(--muted); border: 1px solid var(--line-strong); border-radius: 999px; padding: 3px 10px; }
+  .hero-chips { margin: 0 0 12px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+  .meta li { font-size: 0.8rem; font-weight: 600; color: var(--muted); border: 1px solid var(--line-strong); border-radius: 999px; padding: 3px 10px; text-transform: capitalize; }
   .alert { border-color: var(--bad); margin: 0 0 14px; }
   .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
   .glance { margin-top: 28px; }
@@ -173,7 +186,7 @@ const meta = [card.category.replace('_', ' '), card.form_factors.join(' + '), ca
   .verdicts h2 { margin: 0 0 8px; font-size: 1.15rem; }
   .verdicts ul { margin: 0; padding-left: 18px; } .verdicts li { margin-bottom: 6px; }
   .watch { border-color: color-mix(in srgb, var(--bad) 45%, var(--line)); }
-  .variant h2 { margin-top: 40px; }
+  .variant h2 { margin-top: 40px; text-transform: none; font-size: 1.35rem; font-stretch: 105%; }
   .variant h3 { margin-top: 0; }
   .tier { margin-top: 14px; }
   .sources h2 { margin-top: 40px; }

@@ -1,0 +1,29 @@
+---
+import type { CardRecord } from '../lib/types.ts';
+import CardFace from './CardFace.astro';
+import { cardImageFor } from '../lib/branding.ts';
+// The product picture: the provider's official image when one has been fetched with provenance
+// (data/images/manifest.json), otherwise a card face drawn from the record. Same frame either way.
+interface Props { card: CardRecord; size?: 'tile' | 'hero' | 'thumb'; decorative?: boolean }
+const { card, size = 'tile', decorative = false } = Astro.props;
+const img = cardImageFor(card.slug);
+---
+<div class={`visual visual-${size} ${img ? `has-img kind-${img.kind}` : 'no-img'}`} aria-hidden={decorative ? 'true' : undefined}>
+  {img
+    ? <img src={img.src} alt={decorative ? '' : `${card.name}`} loading={size === 'hero' ? 'eager' : 'lazy'} decoding="async" style={`object-position:${img.position}`} />
+    : <div class="face-wrap"><CardFace card={card} size={size === 'thumb' ? 'mini' : size === 'hero' ? 'hero' : 'tile'} decorative={decorative} /></div>}
+</div>
+
+<style>
+  .visual { position: relative; width: 100%; border-radius: var(--r-face); overflow: hidden; background: radial-gradient(90% 70% at 50% 100%, #1c1c1c, #050505); isolation: isolate; }
+  .visual-tile { aspect-ratio: 16 / 10; }
+  .visual-hero { aspect-ratio: 4 / 3; }
+  .visual-thumb { aspect-ratio: 1.586; border-radius: 6px; }
+  .visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .kind-render img { object-fit: contain; padding: 5%; }
+  .kind-render { background: radial-gradient(70% 60% at 50% 55%, #2a2a2a, #050505 80%); }
+  .face-wrap { position: absolute; inset: 0; display: grid; place-items: center; padding: 9%; }
+  .visual-thumb .face-wrap { padding: 0; }
+  .visual-tile .face-wrap { padding: 8% 12%; }
+  .visual-hero .face-wrap { padding: 9% 12%; }
+</style>

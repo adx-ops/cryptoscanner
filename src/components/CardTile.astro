@@ -1,58 +1,66 @@
 ---
 import type { CardRecord } from '../lib/types.ts';
-import CardFace from './CardFace.astro';
-import { defaultVariantAndTier, rewardSummary, recurringCostSummary, unknownFeeCount, isAvailableOption, url } from '../lib/data.ts';
-interface Props { card: CardRecord }
-const { card } = Astro.props;
-const { variant, tier } = defaultVariantAndTier(card);
-const rs = rewardSummary(tier);
-const unknowns = unknownFeeCount(tier);
-const available = isAvailableOption(card);
-const kycLabel = { required: 'ID verification required', not_required_initially: 'No initial ID check', unknown: 'Verification: unknown' }[variant.kyc.initial_verification];
-const cost = recurringCostSummary(tier);
-const verified = card.freshness.last_content_verified_at?.slice(0, 10);
-const promo = rs.promo !== '—' ? rs.promo : null;
+import CardVisual from './CardVisual.astro';
+import { defaultVariantAndTier, outboundLink, url } from '../lib/data.ts';
+import { keyFacts, shortRegion } from '../lib/present.ts';
+interface Props { card: CardRecord; rank?: number }
+const { card, rank } = Astro.props;
+const { variant } = defaultVariantAndTier(card);
+const f = keyFacts(card);
+const link = outboundLink(card);
+const chipClass = (known: boolean, status: string) => (!known ? 'chip unk' : status === 'contradictory' || status === 'stale' ? 'chip bad' : 'chip');
 ---
 <article class="card tile" data-card={card.slug}
   data-allowed={variant.eligibility.residence_allowed.join(',')}
   data-excluded={variant.eligibility.residence_excluded.join(',')}
   data-default={variant.eligibility.default_for_unlisted}
-  data-available={available ? '1' : '0'}>
-  <h3 class="sr-only">{card.name}</h3>
-  <a class="face-link" href={url(`/cards/${card.slug}`)} aria-label={`${card.name}: details`}><CardFace card={card} /></a>
-  <div class="strip">
+  data-available={f.available ? '1' : '0'}>
+  <a class="tile-visual" href={url(`/cards/${card.slug}`)} aria-label={`${card.name}: details`}>
+    <CardVisual card={card} size="tile" decorative />
+    {rank && <span class="rank num" aria-hidden="true">#{rank}</span>}
+  </a>
+  <div class="tile-body">
+    <div class="tile-head">
+      <h3 class="tile-name">{card.name}</h3>
+      {f.verified && <span class="verified-mark" title={`Sources checked ${f.verified}`}>Verified</span>}
+    </div>
+    <p class="tile-sub muted">{shortRegion(f.region)} · {card.category.replace('_', ' ')} · {card.custody.replace('_', '-')}</p>
     <p class="elig-row">
-      {available
+      {f.available
         ? <span class="badge elig-badge">Select a country</span>
         : <span class="badge bad">Not available ({card.product_status})</span>}
-      {promo && <span class="badge ok">Promo {promo}</span>}
     </p>
-    <dl class="facts">
-      <div><dt>Base reward</dt><dd>{rs.base}</dd></div>
-      <div><dt>Monthly cost</dt><dd>{cost}{unknowns > 0 && <> <span class="badge unk">{unknowns} fee{unknowns > 1 ? 's' : ''} unknown</span></>}</dd></div>
-      <div><dt>Identity check</dt><dd>{kycLabel}</dd></div>
-      <div><dt>Sources checked</dt><dd>{verified ?? 'not yet'}</dd></div>
-    </dl>
+    <ul class="chips facts">
+      <li class={chipClass(f.cashback.known, f.cashback.status)}>Cashback <b>{f.cashback.value}</b></li>
+      <li class={chipClass(f.fx.known, f.fx.status)}>FX <b>{f.fx.value}</b></li>
+      <li class={chipClass(f.cost.known, f.cost.status)}>Monthly <b>{f.cost.value}</b></li>
+      <li class={chipClass(f.kyc.known, f.kyc.status)}>{f.kyc.value}</li>
+    </ul>
+    <span class="sr-only">Base reward {f.cashback.percent ?? 0}% · Sources checked {f.verified ?? 'never'}</span>
     <footer class="tile-actions">
-      <label class="compare-check"><input type="checkbox" class="compare-toggle" value={card.slug} disabled={!available} /> Compare</label>
+      <label class="compare-check"><input type="checkbox" class="compare-toggle" value={card.slug} disabled={!f.available} /> Compare</label>
       <a class="btn" href={url(`/cards/${card.slug}`)}>Details</a>
+      {f.available && <a class="btn primary get" href={link.href} rel={link.monetised ? 'sponsored noopener' : 'noopener'} target="_blank">Get card</a>}
     </footer>
+    {f.available && <p class="linknote muted">{link.monetised ? 'Affiliate link — commissions never change the ranking.' : 'Official site — not an affiliate link.'}</p>}
   </div>
 </article>
 
 <style>
-  .tile { padding: 10px 10px 14px; display: flex; flex-direction: column; gap: 12px; }
-  .face-link { display: block; text-decoration: none; color: inherit; border-radius: var(--r-face); }
-  .face-link:hover { filter: brightness(1.06); }
-  .strip { padding: 0 8px; display: flex; flex-direction: column; gap: 12px; }
-  .elig-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
-  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; margin: 0; font-size: 0.9rem; }
-  .facts div { min-width: 0; }
-  .facts dt { color: var(--muted); font-size: 0.78rem; margin-bottom: 2px; }
-  .facts dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
-  .tile-actions { display: flex; justify-content: space-between; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; }
-  .compare-check { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); font-weight: 600; cursor: pointer; margin: 0; }
-  .compare-check input { width: 22px; height: 22px; min-height: 0; margin: 0; accent-color: var(--accent); }
-  .tile[data-elig="ineligible"] { opacity: 0.55; }
-  .tile[data-elig="eligible"] { border-color: color-mix(in srgb, var(--ok) 45%, var(--line)); }
+  .tile { padding: 8px 8px 12px; display: flex; flex-direction: column; gap: 12px; }
+  .tile-visual { position: relative; display: block; text-decoration: none; color: inherit; border-radius: var(--r-face); }
+  .tile-visual:hover { filter: brightness(1.08); }
+  .rank { position: absolute; top: 10px; left: 10px; font-weight: 800; font-stretch: 115%; font-size: 0.9rem; padding: 4px 9px; border-radius: 999px; background: rgba(0, 0, 0, 0.6); color: #fff; backdrop-filter: blur(6px); }
+  .tile-body { padding: 0 8px; display: flex; flex-direction: column; gap: 8px; }
+  .tile-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .tile-name { margin: 0; font-weight: 800; font-stretch: 112%; text-transform: uppercase; font-size: 1.05rem; letter-spacing: -0.01em; }
+  .tile-sub { margin: -4px 0 0; font-size: 0.82rem; text-transform: capitalize; }
+  .elig-row { margin: 0; }
+  .tile-actions { display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; margin-top: 2px; }
+  .tile-actions .get { margin-left: auto; }
+  .compare-check { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); font-weight: 600; cursor: pointer; margin: 0; font-size: 0.9rem; }
+  .compare-check input { width: 20px; height: 20px; min-height: 0; margin: 0; accent-color: var(--accent); }
+  .linknote { margin: -4px 0 0; font-size: 0.74rem; }
+  .tile[data-elig="ineligible"] { opacity: 0.5; }
+  .tile[data-elig="eligible"] { border-color: color-mix(in srgb, var(--ok) 50%, var(--line)); }
 </style>

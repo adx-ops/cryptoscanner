@@ -1,0 +1,23 @@
+{
+  "_note": "Official product imagery shown on card tiles and pages, keyed by card slug. Each entry records the official page where the image is used, the asset URL, and the access date. The files themselves are fetched and resized by .github/workflows/fetch-card-images.yml (the cloud workspace cannot download them) into public/card-images/<file>; until the file exists the site draws its own card face. 'position' is the CSS object-position used to keep the card in frame. Images stay the property of their owners and identify the products compared; removal requests are honoured.",
+  "images": {
+    "nexo-card": {
+      "file": "nexo-card.webp",
+      "kind": "scene",
+      "source_page": "https://nexo.com/crypto-card",
+      "asset_url": "https://content.nexo.com/media/crypto_card-atf_full-card-d-row.jpg",
+      "accessed_at": "2026-11-07",
+      "position": "78% 50%",
+      "note": "Hero visual of the official card page (3808×2128): dark scene, card on the right. File first exported via the browser on 2026-11-07, replaced by the workflow download."
+    },
+    "bitpanda-card": {
+      "file": "bitpanda-card.webp",
+      "kind": "render",
+      "source_page": "https://www.bitpanda.com/en/card",
+      "asset_url": "https://a.storyblok.com/f/176646/1200x1200/fa84513115/bitpanda-card.png",
+      "accessed_at": "2026-11-07",
+      "position": "50% 50%",
+      "note": "Product render used on the official card page (alt text: stack of black Bitpanda Visa Platinum cards), 1200×1200."
+    }
+  }
+}

@@ -1,4 +1,7 @@
 import manifest from '../../data/logos/manifest.json';
+import images from '../../data/images/manifest.json';
+import { existsSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { url } from './data.ts';
 
 export interface BrandMarkInfo { brand: string; logo: string | null; shape?: 'wordmark' | 'mark'; color: string | null; source_url: string | null; accessed_at: string | null }
@@ -31,4 +34,16 @@ export function tintHue(providerId: string): number {
   let h = 0;
   for (const ch of providerId) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
   return h % 360;
+}
+
+const IMAGES = (images as { images: Record<string, { file: string; kind?: string; position?: string; source_page: string; accessed_at: string }> }).images;
+// Resolved from the project root: this module is bundled at build time, so import.meta.url would point into the bundle.
+const PUBLIC_IMAGES = resolve(process.cwd(), 'public/card-images');
+
+/** Official product image for a card, only when the recorded file has actually been fetched into public/card-images. */
+export function cardImageFor(slug: string): { src: string; position: string; kind: string } | null {
+  const m = IMAGES[slug];
+  if (!m?.file || !m.source_page || !m.accessed_at) return null;
+  if (!existsSync(join(PUBLIC_IMAGES, m.file))) return null;
+  return { src: url(`/card-images/${m.file}`), position: m.position ?? '50% 50%', kind: m.kind ?? 'render' };
 }
