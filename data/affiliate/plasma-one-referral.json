@@ -10,7 +10,7 @@
     "unknown"
   ],
   "application_conditions": "In-app referral code for existing Plasma One account holders with an active card in good standing; no publisher or affiliate programme found on plasma.org or the help centre.",
-  "our_status": "identified",
+  "our_status": "accepted",
   "paid_action": "Qualifying referral = registration with the code, no prior Plasma One account, identity verification completed, card activated and an eligible purchase made. Then: referral cashback on the friend's spend, plus one-time spend bonuses and upgrade bonuses.",
   "validation_conditions": "Earning period starts when the friend redeems the code (not at first purchase); Lite and Core earn for 3 months, Platinum for 6 months. 'Applicable limits' apply, amounts not published. Users in excluded countries (list in the Help Center, not read) are not eligible for spend bonuses. No Platinum bonus and no XPL-lock Core bonus where referrer or referred user is a UK resident.",
   "commission": {
@@ -36,7 +36,7 @@
     "postback": false,
     "status": "unknown"
   },
-  "rules_note": "Governed by the Plasma One Rewards Addendum (effective 2026-09-26) and the Terms of Service (arbitration, class-action waiver). Programs may be modified or terminated prospectively. Operator Plasma states it is 'not a regulated financial institution'; card issued by Rain, accounts by Bridge entities. UK users: additional disclaimers at plasma.org/uk-disclaimer.",
+  "rules_note": "Governed by the Plasma One Rewards Addendum (effective 2026-09-26) and the Terms of Service (arbitration, class-action waiver). Programs may be modified or terminated prospectively. Operator Plasma states it is 'not a regulated financial institution'; card issued by Rain, accounts by Bridge entities. UK users: additional disclaimers at plasma.org/uk-disclaimer. Rewards Addendum (effective 2026-09-26) read 2026-11-07: prohibits 'promoting Referral Codes through unauthorized paid ads or spam', self-referral, buying/selling codes; no restriction on organic website publication. Code RPQNUY supplied by David (account holder) on 2026-11-07. Use on the website only — no paid ads, no spam.",
   "allowed_countries_note": "Must reside where the Programs are available; excluded countries for spend bonuses are listed in the Help Center (not read). UK residents excluded from Platinum and XPL-lock Core upgrade bonuses.",
   "evidence": [
     {

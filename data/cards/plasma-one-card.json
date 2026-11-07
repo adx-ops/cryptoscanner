@@ -15,7 +15,7 @@
   },
   "network": "visa",
   "category": "debit",
-  "record_status": "needs_review",
+  "record_status": "validated",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -51,13 +51,13 @@
         ],
         "default_for_unlisted": "to_confirm",
         "nationality_restrictions_note": "The countries article is written at ID-document level: documents from the 7 excluded countries 'are not supported'; documents from BY, CN, IN, IQ, IL, MM, NP, NI, TR, VN, NG, LK may fail but residence in a supported country with proof of address may still allow eligibility.",
-        "usage_note": "No positive list of supported countries is published: the official countries article (last updated 2026-05-11) names only unsupported countries, 31 supported US states (not WA, AZ) and comprehensive-sanctions jurisdictions. EEA and UK availability is implied only by the contracting entities (Bridge Building Sp. z o.o. for EEA residents; UK disclaimer page) and by EUR SEPA / GBP FPS rails. Marketing '180+ countries' refers to Visa acceptance, not eligibility. A separate fiat-rails article (2026-09-18) lists 25 further countries/territories without fiat deposit or withdrawal (incl. JP, TN, DZ, LB, IQ, AF) — not an account exclusion, so not modelled here.",
+        "usage_note": "No positive list of supported countries is published: the official countries article (last updated 2026-05-11) names only unsupported countries, 31 supported US states (not WA, AZ) and comprehensive-sanctions jurisdictions. EEA and UK availability is implied only by the contracting entities (Bridge Building Sp. z o.o. for EEA residents; UK disclaimer page) and by EUR SEPA / GBP FPS rails. Marketing '180+ countries' refers to Visa acceptance, not eligibility. A separate fiat-rails article (2026-09-18) lists 25 further countries/territories without fiat deposit or withdrawal (incl. JP, TN, DZ, LB, IQ, AF) — not an account exclusion, so not modelled here. Modelling decision 2026-11-07 (global scope): eligibility is modelled from the official exclusions (the 7 unsupported countries) with every other country 'to confirm' — no country is shown as available; status 'verified' refers to the published exclusions only.",
         "evidence": [
           "ev-plasma-countries",
           "ev-plasma-fiat-countries",
           "ev-plasma-rewards-addendum"
         ],
-        "status": "unknown"
+        "status": "verified"
       },
       "kyc": {
         "initial_verification": "required",
@@ -123,9 +123,18 @@
             },
             {
               "type": "atm_withdrawal",
-              "kind": "unknown",
-              "conditions": "No ATM fee or allowance stated on any page read; ATM withdrawals are listed only as excluded from cashback.",
-              "status": "unknown"
+              "kind": "percent",
+              "percent": 2,
+              "amount": {
+                "amount": 2,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. First read 2026-11-07.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-atm"
+              ]
             },
             {
               "type": "topup",
@@ -268,9 +277,18 @@
             },
             {
               "type": "atm_withdrawal",
-              "kind": "unknown",
-              "conditions": "No ATM fee or allowance stated on any page read.",
-              "status": "unknown"
+              "kind": "percent",
+              "percent": 2,
+              "amount": {
+                "amount": 2,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. First read 2026-11-07.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-atm"
+              ]
             },
             {
               "type": "topup",
@@ -436,9 +454,18 @@
             },
             {
               "type": "atm_withdrawal",
-              "kind": "unknown",
-              "conditions": "No ATM fee or allowance stated on any page read ('no added Plasma fees' is not specific to ATMs).",
-              "status": "unknown"
+              "kind": "percent",
+              "percent": 2,
+              "amount": {
+                "amount": 2,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. First read 2026-11-07.",
+              "status": "verified",
+              "evidence": [
+                "ev-plasma-atm"
+              ]
             },
             {
               "type": "topup",
@@ -716,14 +743,39 @@
       "expires_at": null,
       "scope": {},
       "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-atm",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/14648465-can-i-withdraw-cash-from-an-atm",
+      "title": "Can I withdraw cash from an ATM? (help centre, 'updated over a week ago')",
+      "source_type": "help_center",
+      "excerpt": "USD withdrawal $2 + 2%; balance inquiry $1; declined $1; non-USD: Plasma FX 1%/0.5%/0% + Visa FX on Lite/Core; limits per withdrawal $500/$1,000/$5,000, per day $1,000/$3,000/$25,000; physical card and PIN only.",
+      "accessed_at": "2026-11-07T19:20:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-plasma-bands",
+      "url": "https://intercom.help/plasma-6c43763cd799/en/articles/15506768-cashback-rates-and-spend-bands-by-tier",
+      "title": "Cashback rates and spend bands by tier (help centre, 'updated over a week ago')",
+      "source_type": "help_center",
+      "excerpt": "Lite 2% first $500/month then 0.1%; Core 3/2/1% bands to $3,000 then 0.25%; Platinum 4/3/2% bands to $15,000 then 1%; airline (Platinum) '10% … up to $300 semi-annually' ($3,000 semi-annual spend).",
+      "accessed_at": "2026-11-07T19:20:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Airline cashback cap: this article states $300 per half-year ($3,000 semi-annual spend); the Platinum article states the first $500 of monthly airline spend. Neither page is dated; the monthly cap (stricter — unused allowance does not carry over) is modelled under policy rule 5."
     }
   ],
   "links": {
     "official_url": "https://www.plasma.org/personal",
     "affiliate": {
       "program_id": "plasma-one-referral",
-      "status": "identified",
-      "url": null
+      "status": "accepted",
+      "url": "https://plasma.org/download/RPQNUY"
     }
   },
   "freshness": {
@@ -796,6 +848,14 @@
         "ev-plasma-personal"
       ],
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-07T19:20:00Z",
+      "field": "record_status",
+      "from": "needs_review",
+      "to": "validated",
+      "reason": "Resolved the 2026-11-07 review under policy rule 5 after David's instruction to go global and do what is necessary: ATM fees added from the official ATM article ($2 + 2%, first read — material fee, so a second read ≥24 h is required before publication); airline cap kept at the stricter monthly value with the semi-annual contradiction stated; eligibility modelled from the published exclusions (no country shown as available); Lite stays free/contradictory with its subscription unknown. Referral code supplied by David stored (programme terms allow organic website use).",
+      "actor": "claude-session"
     }
   ],
   "editorial": {
