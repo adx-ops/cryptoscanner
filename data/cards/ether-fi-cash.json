@@ -795,8 +795,8 @@
     "official_url": "https://www.ether.fi",
     "affiliate": {
       "program_id": "ether-fi-affiliate",
-      "status": "identified",
-      "url": null
+      "status": "accepted",
+      "url": "https://www.ether.fi/@6fe89e3c"
     }
   },
   "freshness": {
@@ -883,6 +883,14 @@
       "to": "published",
       "reason": "Browser read of the Ltd. (International) cardholder agreement (Last Modified 2026-09-08): issuer Third National under Visa licence; FX = 1% base + up to 50 bps (Core) / 25 bps (Luxe); fee information as of 2025-04-15 — identical to the modelled values. All other pages confirmed by the 2026-11-03 and 2026-11-04 reads (policy rule 1). Eligibility 'verified' per David's 2026-11-03 decision, with the MY/ZA/UT/WY/CO contradictions shown.",
       "actor": "claude-session (browser read)"
+    },
+    {
+      "date": "2026-11-07T19:05:00Z",
+      "field": "links.affiliate",
+      "from": "identified",
+      "to": "accepted",
+      "reason": "Referral link supplied by David (account holder); programme open to all users, no promotion restrictions on the official page. Buttons now marked 'affiliate link'. Ranking unchanged.",
+      "actor": "claude-session"
     }
   ],
   "editorial": {

@@ -10,7 +10,7 @@
     "unknown"
   ],
   "application_conditions": "'Open to all users': start from ether.fi/app/cash/affiliate (an ether.fi account is implied); no approval step described. Multiple referral links allowed.",
-  "our_status": "identified",
+  "our_status": "accepted",
   "paid_action": "Qualifying referral = sign-up through the link + Cash card activation + $100 or more of personal spending ('Sign-up alone does not qualify'). Card activation and spend are the paid actions, which fits a card comparator.",
   "validation_conditions": "Referral must activate the Cash card and reach $100+ personal spend. Tier upgrades require both all-time and rolling-90-day referral counts (Tier 2: 50 / 10; Tier 3: 100 / 20; Tier 4: 500 / 50), reviewed monthly.",
   "commission": {
@@ -42,7 +42,7 @@
     "postback": false,
     "status": "verified"
   },
-  "rules_note": "Page links the general Terms of Use (etherfi.gitbook.io) and says 'Additional program rules may apply'; no affiliate-specific agreement found. 'Products may not be available in all jurisdictions.' Payout requires an ether.fi Vault/Cash account (on-chain USDC), which is a payout-destination decision for David.",
+  "rules_note": "Page links the general Terms of Use (etherfi.gitbook.io) and says 'Additional program rules may apply'; no affiliate-specific agreement found. 'Products may not be available in all jurisdictions.' Payout requires an ether.fi Vault/Cash account (on-chain USDC), which is a payout-destination decision for David. 2026-11-07: David's referral link https://www.ether.fi/@6fe89e3c (ether.fi account holder) activated. Programme page re-read 2026-11-07: qualifying referral = $100 eligible card spend; new-member bonus $10–20, high-spender bonus $15–25, 0.1–0.3% of referral spend, physical card commission 20–25%, card fee commission 50%, yield revshare 5–12.5% by tier; paid in USDC to the Vault with Cash on the 15th of the following month. No promotion restrictions stated on the page ('Additional program rules may apply'); used on the website only — no paid ads, no spam.",
   "allowed_countries_note": "Not stated.",
   "evidence": [
     {
