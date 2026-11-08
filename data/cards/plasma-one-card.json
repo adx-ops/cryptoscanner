@@ -583,7 +583,7 @@
       "title": "Plasma One — 'The Stablecoin Card for Everyday Money' (product page; plasma.to/one redirects here)",
       "source_type": "issuer_doc",
       "excerpt": "'The Plasma One Card is issued by Rain, a Visa Principal Member, pursuant to a license from Visa'; account services 'powered by Bridge'; tier table Lite/Core/Platinum: base cashback 2%/3%/4%, AI 5%/10%, Lite card cost $0, referral 0.25%/1%/1%, Platinum 'FX fee covered'; Apple Pay / Google Pay 'subject to regional rules'; Bridge Building Inc. (US), Sp. z o.o. (EEA), Limited (other).",
-      "accessed_at": "2026-11-04T06:36:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -598,7 +598,7 @@
       "title": "Plasma One Rewards Addendum (effective 26 September 2026)",
       "source_type": "official_terms",
       "excerpt": "Effective September 26, 2026. Card issued by Rain under a Visa licence; accounts by Bridge (Bridge Building Inc. / Sp. z o.o. for EEA / Limited). Cashback accrues in USD, paid in XPL or Spending Credit; rates, caps, lock amounts and prices 'in the Help Center'. Exclusions listed. Lite free; Core by annual USD fee or 12-month XPL lock; Platinum by XPL lock only. 18+, ID verification.",
-      "accessed_at": "2026-11-07T06:42:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": "2026-09-26",
       "expires_at": null,
       "scope": {},
@@ -780,7 +780,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-11-04T06:36:00Z",
-    "last_auto_check_at": "2026-11-07T06:42:00Z"
+    "last_auto_check_at": "2026-11-08T06:45:00Z"
   },
   "changelog": [
     {
@@ -856,6 +856,16 @@
       "to": "validated",
       "reason": "Resolved the 2026-11-07 review under policy rule 5 after David's instruction to go global and do what is necessary: ATM fees added from the official ATM article ($2 + 2%, first read — material fee, so a second read ≥24 h is required before publication); airline cap kept at the stricter monthly value with the semi-annual contradiction stated; eligibility modelled from the published exclusions (no country shown as available); Lite stays free/contradictory with its subscription unknown. Referral code supplied by David stored (programme terms allow organic website use).",
       "actor": "claude-session"
+    },
+    {
+      "date": "2026-11-08T06:45:00Z",
+      "field": "evidence.ev-plasma-personal.accessed_at, evidence.ev-plasma-rewards-addendum.accessed_at",
+      "reason": "Read on 2026-11-08 06:30–06:45 UTC (fetcher). NOT a complete read: the 13 intercom.help evidence articles (tiers-compare, tier-system, lite, core, platinum, fees, countries, fiat-countries, kyc, cards, referral, atm, bands) could not be reached — the search engine does not index Plasma's Intercom workspace (nine site-restricted queries returned only other companies' help centres) and the fetcher refused the help-centre link found on the Addendum page (cross-host provenance). Unreadable, not unchanged: no value changed, last_content_verified_at not advanced, record stays validated. The ATM fee ($2 + 2%) and the cashback-bands article therefore still have a single read (2026-11-07T19:20Z); their second read (≥ 2026-11-08T19:20Z) is still required before publication. Readable today and confirmed: https://www.plasma.org/personal (first re-read since 2026-11-04 — the fetcher accepted it this time): 'The Plasma One Card is issued by Rain, a Visa Principal Member, pursuant to a license from Visa'; Bridge Building Inc. (US) / Sp. z o.o. (EEA) / Limited (others); tier table 2% / 3% / 4%, AI 5% / 10%, referral 0.25% / 1% / 1%, Lite card cost '$0', Platinum 'No added fees, FX fee covered', 'Up to $600/year flight cashback', 'up to 6% Yield on your balance', 1 / 2 / 3 free virtual cards, Apple Pay / Google Pay ('Availability depends on your region under each platform's current rules'), 'Plasma does not custody your assets'; the word 'physical' now appears only as a Virtual / Physical tab label, the sentence 'available as virtual and physical cards' quoted in the contradiction note was not found as prose today. Rewards Addendum: still 'Effective as of September 26, 2026', Lite free, Core by USD subscription or XPL lock, Platinum by lock only with the introductory-amount wording, no early unlock, 15-item exclusion list, UK upgrade-bonus rule — unchanged. Corroboration from official tier pages not in the evidence set: /personal/core states 'Core for $199 per year or lock 20,000 XPL for 12 months' and bands 3% / 2% / 1% / 0.25% (first $1,000 / next $1,000 / next $1,000 / rest); /personal/platinum states 'Get Platinum by locking 100,000 XPL' (no 150,000 or introductory wording) and bands 4% / 3% / 2% / 1% (first $3,000 / next $7,000 / next $5,000 / rest), 'Up to $600 back per year on eligible flights', 13 partner-airline logos, referral 1% for 6 months; /personal/lite '$0', 2%. Official-page differences found, not material to the modelled (conservative) values and NOT overwritten — to be stated as contradictions by David or a research run: (1) /personal/core says '5% AI cashback — Applies up to $500 in purchases per month' while the Core help article (modelled) gives 5% on the first $250 and 4% from $251 to $500 — the record models the less favourable band; (2) yield 'up to 6%' on /personal vs 'Up to 5%' on /personal/lite (not modelled). Also new, not modelled: 'Plasma One Travel Cashback Boost' supplemental terms (effective October 9, 2026; 20% on travel MCCs capped at $50 per account for 3–16 September 2026, targeted, replaces base and airline cashback; banner '20% back on flights, hotels, and more' still shown); 'Android Launch Free Core Promotion' terms (effective July 18, 2026; claim window 14–21 July 2026, six months of Core free, $100 deposit; banner still displayed with a past end date). Stale editorial text noticed, not changed: editorial.summary ends 'no ATM fee is published' and editorial.not_for still says 'ATM users: no ATM fee or allowance is published anywhere read' although atm_withdrawal was modelled on 2026-11-07 from the ATM article.",
+      "evidence": [
+        "ev-plasma-personal",
+        "ev-plasma-rewards-addendum"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
