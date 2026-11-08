@@ -199,7 +199,7 @@
       "title": "RedotPay homepage",
       "source_type": "issuer_doc",
       "excerpt": "Virtual and physical stablecoin-based cards; 'fintech service provider and not a bank'; verification page and Sumsub logo; no card fees or rewards stated.",
-      "accessed_at": "2026-10-30T06:30:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -211,7 +211,7 @@
       "title": "RedotPay Crypto Card page",
       "source_type": "pricing_page",
       "excerpt": "Physical card 'no annual fees'; virtual card with Apple Pay/Google Pay; 130M+ merchants; network and issuer not named.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -223,7 +223,7 @@
       "title": "Is there a fee to get a card? (help centre, FR, 2026-07-27)",
       "source_type": "help_center",
       "excerpt": "Virtual card 10 USD, physical card 100 USD, deducted from balance; 5 USD welcome reward usable for spending only.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -237,7 +237,7 @@
       "title": "Is there a fee for adding funds by card? (help centre, 2026-08-28)",
       "source_type": "help_center",
       "excerpt": "Card top-up fee 3% of the amount, minimum 1 USD; waived under 1 USD.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -251,7 +251,7 @@
       "title": "Card issuance restrictions (help centre, FR, 2026-08-28)",
       "source_type": "eligibility_page",
       "excerpt": "47 regions where residents cannot get virtual or physical cards nor use them as billing address (sanctions and network restrictions), incl. US, India, China, Turkey, Singapore, Croatia, Slovenia, Ukraine, Russia.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -263,7 +263,7 @@
       "title": "Card limits and fees (help centre, FR, 2026-07-24) — figures are in an image",
       "source_type": "help_center",
       "excerpt": "Article body says 'detailed overview' but all amounts are inside a screenshot image that text extraction cannot read. FX, ATM and limits therefore remain unknown until read in a browser.",
-      "accessed_at": "2026-11-02T06:31:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -275,7 +275,7 @@
       "title": "How to Get a RedotPay Card (help centre, July 21, 2026)",
       "source_type": "help_center",
       "excerpt": "Download the app; sign up with email, Google or Apple ID; 'Complete identity verification in the app'; add crypto; go to [Card] and choose a virtual or a physical card.",
-      "accessed_at": "2026-11-07T16:40:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -287,7 +287,7 @@
       "title": "Identity Verification Requirements (help centre, September 4, 2026)",
       "source_type": "help_center",
       "excerpt": "Personal details, photo of an original ID valid ≥3 months, face scan, residential address, 4–5 question questionnaire; additional documents (personal statement, source of funds or wealth) only if requested; 18+; one verified account per person.",
-      "accessed_at": "2026-11-07T16:40:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -299,7 +299,7 @@
       "title": "What Type of Card Is the RedotPay Card? (help centre, July 21, 2026)",
       "source_type": "help_center",
       "excerpt": "'A stablecoin-based card … works at any merchant that accepts major card networks' — network and issuer not named.",
-      "accessed_at": "2026-11-07T16:40:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -316,7 +316,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-10-30T06:30:00Z",
-    "last_auto_check_at": "2026-11-02T06:31:00Z"
+    "last_auto_check_at": "2026-11-08T06:45:00Z"
   },
   "changelog": [
     {
@@ -366,6 +366,23 @@
       "to": "required (standard)",
       "reason": "First read (browser) of three English help-centre articles: KYC is completed in the app before choosing a card; requirements ID + face scan + address + questionnaire. Network/issuer still not named ('major card networks'). Needs a second independent read ≥24 h later (fetcher can read these Intercom pages) before publication.",
       "actor": "claude-session (browser read)"
+    },
+    {
+      "date": "2026-11-08T06:45:00Z",
+      "field": "evidence.*.accessed_at",
+      "reason": "Fourth read on 2026-11-08 06:30–06:45 UTC (fetcher; the three FR help-centre URLs were reached as their EN equivalents 10566200 / 14254838 / 10339271, article 10621401 was served in Bengali as on 2026-11-02): all nine evidence pages reachable, every modelled value confirmed, unchanged — virtual card 10 USD, physical card 100 USD deducted from the balance, 5 USD welcome reward 'for spending only' (July 27, 2026); card top-up 3% minimum 1 USD, waived under 1 USD (28 August 2026); 'No annual fees' (card page); Apple Pay / Google Pay; 130M+ merchants; the 47 excluded regions identical name for name and code for code (August 28, 2026); KYC: 'Complete identity verification in the app' is step 3 of 5, before adding crypto and choosing a card (How to Get a RedotPay Card, July 21, 2026); Identity Verification Requirements (September 4, 2026): personal details, photo of an original ID valid at least 3 months, face scan, residential address (no proof document), 4–5 question questionnaire on occupation / source of funds, additional documents only if requested with a 14-day deadline, 18+, one verified account per person; 'major card networks' only, issuer and network still not named on any page (What Type of Card, July 21, 2026); homepage reachable again (server error on 2026-11-02): 'fintech service provider and not a bank', Verification link, Sumsub logo, no fee or reward figures. Fees article 10339271 (July 24, 2026) still carries every figure inside the same PNG (20260707-182236.png, empty alt) — unreadable, unchanged. NOT PUBLISHED: the KYC articles (ev-redot-get-card, ev-redot-kyc-req, ev-redot-card-type) were first read on 2026-11-07T16:40Z; today's read is 14 h later and does not count as the second independent read required by policy rule 1 (24 h apart). last_content_verified_at left unchanged for that reason; a read on or after 2026-11-08T16:40Z that confirms the same KYC wording completes the two-read rule and the record can be published (issuer and network not disclosed, modelled as unknown as for COCA). Also noticed, not changed: editorial.watch_outs still says 'Identity verification stage not stated' and kyc.stages_note says 'second read required before publication' — both to be refreshed at publication. New on the pages, not modelled: regulatory statements on the homepage (Argentina CNV PSAV registry N° 144; Hong Kong Money Lender's Licence No. 1715/2025 in the Credit section); nav items 'RedotPay Pro' and 'Points & Rewards' (no figures); figures '9M+ Global users', '100+ Countries'; the restrictions article links a separate 'Card Delivery Restrictions' article (14255319); the top-up article's own example (20 USD → 0.60 USD) sits below its stated 1 USD minimum (page inconsistency).",
+      "evidence": [
+        "ev-redot-home",
+        "ev-redot-card",
+        "ev-redot-issuance",
+        "ev-redot-topup",
+        "ev-redot-restrictions",
+        "ev-redot-fees-img",
+        "ev-redot-get-card",
+        "ev-redot-kyc-req",
+        "ev-redot-card-type"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {

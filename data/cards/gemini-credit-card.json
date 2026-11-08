@@ -16,7 +16,7 @@
   },
   "network": "mastercard",
   "category": "credit",
-  "record_status": "validated",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -243,7 +243,7 @@
       "title": "The Gemini Credit Card — product page",
       "source_type": "pricing_page",
       "excerpt": "'issued by WebBank'; Mastercard World Elite; 'no annual fee'; 'No foreign transaction fees'; 4% gas/EV/transit 'up to $300 in spend/month' then 1%, 3% dining, 2% groceries, 1% everything else; rewards in bitcoin or '50+ cryptos'; referral $50 per friend, $250 bonus every 5 referrals, up to 50/year. APR not stated (links to rates/fees not retrievable).",
-      "accessed_at": "2026-11-02T05:39:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -260,7 +260,7 @@
       "title": "Credit Card Crypto Rewards Program — Key Terms (dated March 4, 2026)",
       "source_type": "official_terms",
       "excerpt": "Card issued by WebBank (Utah industrial bank); programme offered by Gemini Trust Company LLC / Gemini Moonbase LLC, serviced by Gemini Constellation LLC. Gemini account required; BSA/AML verification before withdrawing rewards. Default payout bitcoin at market price; Instant vs Post-Clear rewards. Exclusions incl. cash advances, gift cards, crypto. Possible future membership fee. No percentages.",
-      "accessed_at": "2026-11-02T05:41:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": "2026-03-04",
       "expires_at": null,
       "scope": {
@@ -276,7 +276,7 @@
       "title": "Everyday Crypto Back Rewards Tiers (support centre)",
       "source_type": "help_center",
       "excerpt": "4% gas & EV charging, transit, taxis & rideshare — 'The 4% back rate is capped at $300 in monthly spend', then 1% for the rest of the calendar month; 3% dining; 2% groceries (excl. Costco, Sam's Club, Walmart, candy stores, bakeries); 1% all other. MCC assigned by merchant processor. Past promos: 5% holiday 26 Nov–7 Dec 2025; 10% at selected merchants; golf 10% to 30 Sep 2025. No date.",
-      "accessed_at": "2026-11-02T05:44:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -293,7 +293,7 @@
       "title": "Gemini Credit Card — Product Overview (support centre)",
       "source_type": "eligibility_page",
       "excerpt": "'WebBank … is the bank partner and issuer'; Mastercard 'the exclusive card network'; 'The card will have no annual fee'; 'U.S. residents in all 50 states' may apply; 'will not be available outside of the U.S.'; metal card in black, silver or rose gold; rewards paid 'at the time of purchase'. Page still quotes 'up to 3% back on dining' as the top rate (older than the 4% transit tier). No date.",
-      "accessed_at": "2026-11-02T05:46:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -310,7 +310,7 @@
       "title": "Gemini Credit Card Application Process (support centre)",
       "source_type": "help_center",
       "excerpt": "Hard inquiry on the credit report on behalf of WebBank; identity verified 'against several sources'; Experian and Clarity freezes must be lifted; 'you must also be approved for a Gemini Exchange account'; metal card mailed within 5–7 days of approval; no virtual card mentioned. No date.",
-      "accessed_at": "2026-11-02T05:47:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -326,7 +326,7 @@
       "title": "Gemini Credit Card Referral Program Terms (dated December 19, 2025)",
       "source_type": "official_terms",
       "excerpt": "Referrer $50 in crypto per approved friend who makes one eligible purchase in the first billing cycle; referee $50 on activation; $250 'bonus multiplier' on the 5th referral in a rolling 12 months; max 50 referrals and $5,000 per calendar year; 'marketing affiliates are not eligible to participate'. Cardholders only.",
-      "accessed_at": "2026-11-02T05:49:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": "2025-12-19",
       "expires_at": null,
       "scope": {
@@ -342,7 +342,7 @@
       "title": "Does Gemini have an Affiliate program? (support centre)",
       "source_type": "affiliate_program",
       "excerpt": "'The Gemini Affiliate Program': application reviewed by Gemini; unique referral link; performance tracked 'via the Impact platform'; flat '$25 per converted account' when a new user 'places a trade'; paid in 'your preferred currency of choice'. The credit card is not named as a paid action.",
-      "accessed_at": "2026-11-02T05:49:00Z",
+      "accessed_at": "2026-11-08T06:45:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -358,8 +358,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-02T05:49:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-08T06:45:00Z",
+    "last_auto_check_at": "2026-11-08T06:45:00Z"
   },
   "changelog": [
     {
@@ -390,6 +390,29 @@
       "to": "validated",
       "reason": "Re-opened: David made the site global on 2026-11-07 (US products in scope). Values date from the earlier read; a second independent read is required before publication.",
       "actor": "claude-session"
+    },
+    {
+      "date": "2026-11-08T06:45:00Z",
+      "field": "evidence.*.accessed_at, freshness.last_content_verified_at",
+      "reason": "Second independent read on 2026-11-08 (fetcher, 6 days after the 2026-11-02 first read) of all seven evidence pages — every material value confirmed, unchanged: issuer 'Issued by WebBank.' (landing) / 'WebBank, a leader in digital lending, is the bank partner and issuer' (overview) / 'a Utah state-chartered industrial bank' (rewards agreement, still dated March 4, 2026); network 'Mastercard® World Elite' (landing), 'Mastercard, the exclusive card network' (overview); 'No annual fee'; 'No foreign transaction fees'; rewards 4% gas, EV and transit 'on up to $300 in spend per month' then 1% ('The 4% back rate is capped at $300 in monthly spend', refresh on the 1st of each calendar month), 3% dining, 2% groceries (excl. Costco, Sam's Club, Walmart, candy stores, bakeries), 1% everything else, MCC decides; payout 'bitcoin, or 50+ cryptos available on Gemini', Instant vs Post-Clear rewards, Rewards Charge clawback, possible future membership fee, Vault Rewards up to 10%; eligibility 'Residents in all 50 U.S. states will be eligible to apply' and 'will not be available outside of the U.S.'; application: hard inquiry on behalf of WebBank, Experian and Clarity freezes to lift, Gemini Exchange account approval mandatory, metal card within 5–7 days; referral terms (December 19, 2025) $50 / $50 / $250 per 5 / max 50 and $5,000 per year, marketing affiliates excluded; affiliate article: $25 per converted account via Impact. Product status active ('Get started'; no waitlist or discontinuation wording). APR, cash-advance, late and returned-payment fees still unread: gemini.com/legal/cardholder-agreement now links a cardholder agreement dated September 25, 2026 (PDF on assets.ctfassets.net, not fetchable by the fetcher) — the record's reference to the 2026-04-01 CFPB filing is a stale pointer, the values stay unknown. Non-material wording differences, none overwritten: the overview labels the benefits 'World Mastercard® Benefits' (the landing page says 'Mastercard® World Elite'; DoorDash/Lyft/ID Theft/Zero Liability/Price Protection appear on the overview only, not on the landing page); the overview says 'more than 40 cryptocurrencies' vs the landing page's '50+ cryptos'; quotes 'U.S. residents in all 50 states' and 'against several sources' are paraphrases of 'Residents in all 50 U.S. states…' and 'We use several sources to verify identification'; the rewards-tiers article no longer lists the 2025 holiday and golf promotions and now names the 10% merchants (Ridge Wallet, David Protein, Create Gummies, Huron, Othership, Masa Chips, Cadence; no dates, no caps). New official information not modelled: a Business Card exists ('Consumer or Business' in the rewards agreement; /credit-card/business); the $200-for-$3,000 intro bonus was paused on 2026-01-31 (intro-promo terms dated January 27, 2026) — no sign-up bonus is offered today; pre-qualification without credit-score impact; 'Up to $5,000 credit limit, Additional income verification needed'; card editions Bitcoin / Solana / XRP / Zcash; referral rewards over $600 per year reported on Form 1099-MISC.",
+      "evidence": [
+        "ev-gemini-landing",
+        "ev-gemini-rewards-agreement",
+        "ev-gemini-rewards-tiers",
+        "ev-gemini-product-overview",
+        "ev-gemini-application",
+        "ev-gemini-referral-terms",
+        "ev-gemini-affiliate"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-08T06:45:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "published",
+      "reason": "Second independent read on 2026-11-08: all material values confirmed.",
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
