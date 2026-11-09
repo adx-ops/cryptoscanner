@@ -583,7 +583,7 @@
       "title": "Plasma One — 'The Stablecoin Card for Everyday Money' (product page; plasma.to/one redirects here)",
       "source_type": "issuer_doc",
       "excerpt": "'The Plasma One Card is issued by Rain, a Visa Principal Member, pursuant to a license from Visa'; account services 'powered by Bridge'; tier table Lite/Core/Platinum: base cashback 2%/3%/4%, AI 5%/10%, Lite card cost $0, referral 0.25%/1%/1%, Platinum 'FX fee covered'; Apple Pay / Google Pay 'subject to regional rules'; Bridge Building Inc. (US), Sp. z o.o. (EEA), Limited (other).",
-      "accessed_at": "2026-11-08T06:45:00Z",
+      "accessed_at": "2026-11-09T06:44:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -780,7 +780,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-11-04T06:36:00Z",
-    "last_auto_check_at": "2026-11-08T06:45:00Z"
+    "last_auto_check_at": "2026-11-09T06:44:00Z"
   },
   "changelog": [
     {
@@ -864,6 +864,15 @@
       "evidence": [
         "ev-plasma-personal",
         "ev-plasma-rewards-addendum"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-09T06:44:00Z",
+      "field": "evidence.ev-plasma-personal.accessed_at",
+      "reason": "Read on 2026-11-09 06:30–06:44 UTC (fetcher). NOT a complete read, for the second day running: the 13 intercom.help evidence articles could not be reached — the search engine does not index Plasma's Intercom workspace (nine site-restricted and unrestricted queries, standard and extended, returned only other companies' help centres) and the only help-centre link found on an official page (https://intercom.help/plasma-6c43763cd799/en, on the Rewards Addendum) is refused by the fetcher's provenance rule. Unreadable, not unchanged: no value changed, last_content_verified_at not advanced, record stays validated; needs_browser_read set on the research-list entry so that the rotation is not starved. The ATM fee ($2 + 2%) and the cashback-bands article still have a single read (2026-11-07T19:20Z). Readable and confirmed today: https://www.plasma.org/personal — 'The Plasma One Card is issued by Rain, a Visa Principal Member, pursuant to a license from Visa'; Bridge Building Inc. (US) / Sp. z o.o. (EEA) / Limited (others); tier table Lite 2 % / card cost '$0' / referral 0.25 % / 1 free virtual card, Core 3 % / AI 5 % / referral 1 % / ChatGPT Go / up to 2 free virtual cards, Platinum 4 % / AI 10 % / referral 1 % / Claude Pro and ChatGPT Plus / 'Up to $600/year flight cashback' / 'No added fees, FX fee covered' / up to 3 free virtual cards; 'up to 6%' yield; Apple Pay / Google Pay 'Availability depends on your region'; 'Plasma One does not custody your assets'; 'Virtual' / 'Physical' only as tab labels; no country list ('Geographic, regulatory, and other eligibility limits apply'); promo banners (Android Core offer ending 21 July 2026; '20% back on flights, hotels, and more') still displayed. The Rewards Addendum was NOT reached at its recorded URL (not in search results); the same document ('Plasma One Rewards Addendum', 'Effective as of September 26, 2026') is now served at https://www.plasma.org/plasma-one-rewards, which every 'Terms apply' link on /personal, /personal/lite, /personal/core and /personal/platinum points to — content identical to the excerpt (Lite free; Core by annual USD fee or XPL lock; Platinum by lock only, introductory lock amount for 30 days after launch, no figure; no early unlock; 15 exclusions; UK upgrade-bonus rule; cashback accrues in USD, paid in XPL or Spending Credit). Evidence URL for ev-plasma-rewards-addendum NOT changed by this run (research run / David to confirm whether the old URL redirects and update it). Corroboration from official pages not in the evidence set, unchanged from 2026-11-08: /personal/core '$199 per year or lock 20,000 XPL for 12 months', bands 3 / 2 / 1 / 0.25 %, AI '5% AI cashback — Applies up to $500 in purchases per month' (vs help article 5 % to $250 then 4 %; record models the less favourable band); /personal/platinum 'locking 100,000 XPL for 12 months' (no 150,000), bands 4 / 3 / 2 / 1 %, 13 partner airlines, 'Up to $600 back per year on eligible flights'; /personal/lite '$0', 2 %, yield 'Up to 5%'. NEW, not modelled, for David: https://www.plasma.org/plasma-one-us-card-terms ('U.S. Consumer Card Terms', last updated February 12, 2026) names 'Third National' as the Issuer in the agreement text while its footnote says Rain; US fee table — annual fee none, purchase APR 0.00 %, international transaction 1 %, late payment 2 % of the outstanding balance, cash advance none, $10 paper copy; collateralised structure (collateral in the user's own wallet). The US product may be a separate variant (credit terms) — not modelled here.",
+      "evidence": [
+        "ev-plasma-personal"
       ],
       "actor": "second-read-run"
     }
