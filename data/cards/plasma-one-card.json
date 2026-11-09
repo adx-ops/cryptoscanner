@@ -15,7 +15,7 @@
   },
   "network": "visa",
   "category": "debit",
-  "record_status": "validated",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -130,7 +130,7 @@
                 "currency": "USD"
               },
               "period": "per_transaction",
-              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. First read 2026-11-07.",
+              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. Read 2026-11-07 and 2026-11-09 (browser), identical.",
               "status": "verified",
               "evidence": [
                 "ev-plasma-atm"
@@ -284,7 +284,7 @@
                 "currency": "USD"
               },
               "period": "per_transaction",
-              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. First read 2026-11-07.",
+              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. Read 2026-11-07 and 2026-11-09 (browser), identical.",
               "status": "verified",
               "evidence": [
                 "ev-plasma-atm"
@@ -461,7 +461,7 @@
                 "currency": "USD"
               },
               "period": "per_transaction",
-              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. First read 2026-11-07.",
+              "conditions": "$2 + 2% per USD withdrawal; $1 balance inquiry; $1 per declined withdrawal; non-USD withdrawals add the tier's Plasma FX fee (and Visa FX on Lite/Core); ATM operator fees may apply. Physical card and PIN only. Read 2026-11-07 and 2026-11-09 (browser), identical.",
               "status": "verified",
               "evidence": [
                 "ev-plasma-atm"
@@ -651,7 +651,8 @@
       "effective_from": null,
       "expires_at": null,
       "scope": {},
-      "verification": "verified"
+      "verification": "verified",
+      "contradiction_note": "AI cashback on Core: plasma.org/personal/core says '5% AI cashback up to $500 per month'; the bands article says 5% on the first $250 then 4% to $500 — the lower band is modelled (rule 5)."
     },
     {
       "id": "ev-plasma-platinum",
@@ -750,7 +751,7 @@
       "title": "Can I withdraw cash from an ATM? (help centre, 'updated over a week ago')",
       "source_type": "help_center",
       "excerpt": "USD withdrawal $2 + 2%; balance inquiry $1; declined $1; non-USD: Plasma FX 1%/0.5%/0% + Visa FX on Lite/Core; limits per withdrawal $500/$1,000/$5,000, per day $1,000/$3,000/$25,000; physical card and PIN only.",
-      "accessed_at": "2026-11-07T19:20:00Z",
+      "accessed_at": "2026-11-09T20:25:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -762,7 +763,7 @@
       "title": "Cashback rates and spend bands by tier (help centre, 'updated over a week ago')",
       "source_type": "help_center",
       "excerpt": "Lite 2% first $500/month then 0.1%; Core 3/2/1% bands to $3,000 then 0.25%; Platinum 4/3/2% bands to $15,000 then 1%; airline (Platinum) '10% … up to $300 semi-annually' ($3,000 semi-annual spend).",
-      "accessed_at": "2026-11-07T19:20:00Z",
+      "accessed_at": "2026-11-09T20:25:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -779,7 +780,7 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-04T06:36:00Z",
+    "last_content_verified_at": "2026-11-09T20:25:00Z",
     "last_auto_check_at": "2026-11-09T06:44:00Z"
   },
   "changelog": [
@@ -875,10 +876,18 @@
         "ev-plasma-personal"
       ],
       "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-09T20:25:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "published",
+      "reason": "Second read (browser, 2026-11-09 ~21:20 Berlin, 50 h after the first) of the two articles that had a single read: ATM article 14648465 ($2 + 2%, $1 inquiry, $1 decline, FX 1/0.5/0%, limits $500/$1,000/$5,000 per withdrawal) and bands article 15506768 (Lite/Core/Platinum bands, AI bands, airline $300 semi-annual) — identical to 2026-11-07. All other values were confirmed by the 2026-11-04, 2026-11-07, 2026-11-08 and 2026-11-09 reads. Editorial ATM wording updated; Core AI contradiction note added. Policy rules 1–5 met.",
+      "actor": "claude-session (browser read)"
     }
   ],
   "editorial": {
-    "summary": "Stablecoin account with a Visa card issued by Rain, run by Plasma (not a regulated institution) with Bridge entities for the US, the EEA and the rest of the world. Cashback is paid in the XPL token: 2% (Lite, first $500/month), 3% (Core, $199/year or 20,000 XPL locked), 4% (Platinum, 100,000 XPL locked), stepping down above the monthly bands. FX is 1%/0.5%/0% plus Visa's ~1% on the two lower tiers. No official country list and no ATM fee is published.",
+    "summary": "Stablecoin account with a Visa card issued by Rain, run by Plasma (not a regulated institution) with Bridge entities for the US, the EEA and the rest of the world. Cashback is paid in the XPL token: 2% (Lite, first $500/month), 3% (Core, $199/year or 20,000 XPL locked), 4% (Platinum, 100,000 XPL locked), stepping down above the monthly bands. FX is 1%/0.5%/0% plus Visa's ~1% on the two lower tiers. No official country list and ATM withdrawals cost $2 + 2% (physical card only).",
     "good_for": [
       "Spending USDT-funded balances with a tiered XPL cashback and no FX fee on Platinum",
       "Users who already hold XPL and accept a 12-month lock to unlock Core or Platinum",
@@ -887,7 +896,7 @@
     "not_for": [
       "Anyone who needs a published list of eligible countries before applying — only exclusions and US states are stated",
       "Users who want cashback in fiat or a stable asset: payouts are in XPL (or revocable Spending Credit), converted at payout price",
-      "ATM users: no ATM fee or allowance is published anywhere read"
+      "Frequent ATM users: $2 + 2% per withdrawal, plus FX on non-USD withdrawals on Lite and Core"
     ],
     "watch_outs": [
       "Eligibility status is unknown: the countries article names only unsupported countries and US states; EEA/UK service is implied by the Bridge contracting entities and SEPA/FPS rails, not stated.",
