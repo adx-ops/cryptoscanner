@@ -211,7 +211,7 @@
     }
   ],
   "no_kyc_track": {
-    "_note": "Cards marketed as no-KYC / low-KYC, from discovery articles (cardpilled 2026-09-23, cryptoslate 2026-10-22). Nothing here is verified. Inclusion rule (brief §5): a card enters the catalogue only if the issuer or operator is named, official terms state the verification stage and limits, and the product is active. Anonymous-by-design prepaid cards with undisclosed issuers fail that rule; 'no initial KYC with thresholds' can pass.",
+    "_note": "Cards marketed as no-KYC / low-KYC. Nothing here is verified until it has a record. Inclusion rule (David, 2026-11-09 — replaces the 'issuer or operator named' condition): a card enters the catalogue when (1) the operator's own official pages publish its fees and state when identity verification is or is not required (thresholds/limits), (2) the product is active and orderable, and (3) the operator's own terms do not restrict it to one territory while forbidding solicitation elsewhere. An undisclosed issuer or operator is allowed and is shown as 'not disclosed' on the card page. Third-party claims never count. Never describe how to avoid checks.",
     "candidates": [
       {
         "product": "WaldenPay Virtual Card",
@@ -247,15 +247,15 @@
         "product": "Laso Finance Card",
         "claim": "non-reloadable up to $1,000; operator described as FinCEN-registered MSB",
         "issuer_disclosed": true,
-        "status": "blocked",
-        "note": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule."
+        "status": "identified",
+        "note": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown)."
       },
       {
         "product": "Goblin Card",
         "claim": "$350 entry; KYC level 0 per KYCnot.me",
         "issuer_disclosed": true,
-        "status": "blocked",
-        "note": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage)."
+        "status": "identified",
+        "note": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown)."
       },
       {
         "product": "Freedomia Card",
@@ -286,8 +286,8 @@
         "product": "Pinto Pay",
         "claim": "low-KYC, terms reserve right to demand ID; not US",
         "issuer_disclosed": true,
-        "status": "blocked",
-        "note": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule."
+        "status": "identified",
+        "note": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown)."
       },
       {
         "product": "Sovrae Card",
@@ -305,8 +305,8 @@
         "product": "Kardpay",
         "claim": "low-KYC, $29–$299/yr",
         "issuer_disclosed": false,
-        "status": "blocked",
-        "note": "Blocked 2026-11-09: kardpay.gitbook.io documentation read in full (llms-full.txt export; the linked 'Terms & Conditions' page returns Page Not Found). Operator legal entity, jurisdiction and card issuer not named; network Mastercard ('The payment provider (Mastercard)'); virtual cards only; only phone/OTP verification described — no identity-verification stage, thresholds or limit values stated (order summary shows 'Top-up limit', 'Monthly spend limit', 'Per transaction cap' without figures); fees: top-up 4%, card fee shown as a percentage at checkout ('e.g. 1.8%'), minimum top-up $15; no plan prices ($29–$299/yr claim not found), no country list, no dates; support via Telegram (Account page) or Discord (Wallet page). Fails inclusion rule (operator and issuer undisclosed, no verification stage in official terms)."
+        "status": "identified",
+        "note": "Blocked 2026-11-09: kardpay.gitbook.io documentation read in full (llms-full.txt export; the linked 'Terms & Conditions' page returns Page Not Found). Operator legal entity, jurisdiction and card issuer not named; network Mastercard ('The payment provider (Mastercard)'); virtual cards only; only phone/OTP verification described — no identity-verification stage, thresholds or limit values stated (order summary shows 'Top-up limit', 'Monthly spend limit', 'Per transaction cap' without figures); fees: top-up 4%, card fee shown as a percentage at checkout ('e.g. 1.8%'), minimum top-up $15; no plan prices ($29–$299/yr claim not found), no country list, no dates; support via Telegram (Account page) or Discord (Wallet page). Fails inclusion rule (operator and issuer undisclosed, no verification stage in official terms). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown)."
       }
     ]
   },
