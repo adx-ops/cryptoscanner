@@ -443,13 +443,14 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
       "priority": 6,
       "regions_hint": [
         "global"
-      ]
+      ],
+      "blocked_reason": "Blocked 2026-11-09: docs.solayer.org Emerald Card fee, FAQ and overview pages read. Card issuer not named ('the card provider'); application 'currently required' to be a Community Sale participant or airdrop recipient — public access 'Coming Soon' (fee page), no date; no supported-country list (only a 20-US-state + ~95-country restricted list); card type, custody and limits not stated. Fees readable (activation $10 / free for Community Sale, top-up 1%, $0.15 per USD transaction, $0.10 + 1.5% non-USD). Fails documentation rule (issuer undisclosed, product status unclear). Re-check when public applications open."
     },
     {
       "provider": "Fold",
@@ -479,14 +480,21 @@
       "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "none found 2026-11-09 (Rewards Terms: no referral programme; no publisher programme page)",
+      "status": "validated",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": 6,
+      "priority": 0,
       "regions_hint": [
         "global"
-      ]
+      ],
+      "record": "data/cards/avalanche-card.json",
+      "needs_browser_read": true,
+      "regions": [
+        "international (outside the US, no country list published)",
+        "US (separate US Card Agreement, availability to confirm)"
+      ],
+      "validation_note": "Validated 2026-11-09 from the legal centre (International + US Card Agreements, App Terms, Rewards Terms, Opening Account Disclosures), Avalanche support article and Rain announcement. Issuer Third National, operator Rain Liquidity LLC. Unknown: issuance/subscription/ATM/deposit fees, KYC, country list, rewards rate. avalanchecard.com and avalanche.com blog not fetchable (provenance) → browser read."
     },
     {
       "provider": "Xapo",
@@ -653,13 +661,15 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
       "priority": 6,
       "regions_hint": [
         "global"
-      ]
+      ],
+      "needs_browser_read": true,
+      "blocked_reason": "Blocked 2026-11-09: the only official documents found (Terms of Service — Avici Card, last updated 2024-12-04, and Avici Card Terms USA) are hosted on aviciii.notion.site, which is client-rendered and returns only the Notion shell to the fetcher; avici.money has no indexed product, fee or terms page. Issuer, entity, fees and countries not obtainable this run. Retry with a browser session."
     },
     {
       "provider": "Nocturne",
@@ -1179,11 +1189,20 @@
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "Ambassador Program (help centre 2026-06-14: 20–50% direct, 10% indirect commissions on card purchase/spend) → data/affiliate/tria-ambassador.json",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-09",
-      "priority": 6
+      "priority": 0,
+      "record": "data/cards/tria-card.json",
+      "needs_browser_read": true,
+      "operator_named": true,
+      "regions": [
+        "international (outside the US; app decides per country, 'over 200 supported regions', no published list)",
+        "US (separate Card Terms USA)",
+        "Nigeria via BANEX Microfinance Bank"
+      ],
+      "validation_note": "Validated 2026-11-09 from docs.tria.so Card Terms International (fees effective 2025-10-31) + USA and 7 help-centre articles. Issuer Nimbus, LLC (intl) / Third National (US); operator Threely Dimensions Inc. Marketing 'zero FX/deposit fees' contradicts the terms (up to 3%+1% FX, up to 1% deposit) → terms modelled. docs.tria.so/card-cashback-terms not fetchable (provenance) → browser read. No country list."
     },
     {
       "provider": "Rizon",

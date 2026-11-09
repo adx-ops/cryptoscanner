@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "tria-ambassador",
+  "provider_id": "tria",
+  "program_name": "Tria Ambassador Program (plus in-app App Referrals)",
+  "legal_entity": "Threely Dimensions Inc. (Tria) — technology provider named in the Card Terms; the programme operator is not named separately",
+  "program_url": "https://help.tria.so/en/articles/14495802-tria-referrals-ambassador-program",
+  "type": "hybrid",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Help centre (2026-06-14): registration at ambassador.tria.so (not read this run); each ambassador gets a unique referral code on a dashboard; the ambassador account must be linked to a Tria account and 'once linked, this cannot be changed'. No acceptance criteria, channel rules or publisher requirements stated. Separate 'App Referrals' open to all users via a share link in the app's Rewards section.",
+  "our_status": "identified",
+  "paid_action": "Commissions on three referral activities: card purchase, card spend and futures spend, for users who signed up with the ambassador's code.",
+  "validation_conditions": "Referred users must use the ambassador's code for tracking; card transactions carry a 90-day settlement period for chargebacks. KYC requirements for payout not stated.",
+  "commission": {
+    "model_note": "Direct-sale commission by tier (based on number of cards sold): Bronze 20%, Silver 25%, Gold 30%, Platinum 30–40%, Diamond 50%; indirect (second-level) commission 10% at every tier — Platinum and Diamond on their whole downline, lower tiers on direct referrals only. The base the percentages apply to (card price, spend fees?) is not defined on the page.",
+    "tiers_note": "Bronze / Silver / Gold / Platinum / Diamond by cards sold; thresholds not stated.",
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "'USD equivalent' paid to the connected Tria wallet",
+    "frequency": "Card sales and card spend: quarterly; futures spend: monthly",
+    "holdbacks_note": "90-day settlement period on card transactions for potential chargebacks."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Multi-level structure (10% indirect commission on referred ambassadors' sales) — to be weighed against the site's editorial independence before any application. Formal programme terms not found on the pages read; ambassador.tria.so not fetched.",
+  "allowed_countries_note": "Not stated. Cardholders must pass KYC in a supported country (help centre: 'over 200 supported regions').",
+  "evidence": [
+    {
+      "url": "https://help.tria.so/en/articles/14495802-tria-referrals-ambassador-program",
+      "title": "Tria Referrals & Ambassador Program (help centre, June 14, 2026)",
+      "accessed_at": "2026-11-09T06:14:00Z",
+      "excerpt": "'a more structured referral platform for those looking to earn higher commissions'; registration at ambassador.tria.so; unique referral code; commissions on card purchase, card spend and futures spend; direct 20/25/30/30–40/50% by tier, indirect 10%; paid in USD equivalent to the Tria wallet; card commissions quarterly after a 90-day settlement period, futures monthly."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Identified only. Nobody contacted, no registration made. Commission base undefined on the official page — read the ambassador portal terms before any application. Rewards for referred users not described."
+}

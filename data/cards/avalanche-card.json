@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.0.0",
+  "id": "avalanche-card",
+  "slug": "avalanche-card",
+  "name": "Avalanche Card",
+  "brand": "Avalanche Card (Rain)",
+  "provider_id": "avalanche-card",
+  "issuer": {
+    "name": "Third National",
+    "status": "verified",
+    "evidence": [
+      "ev-avalanche-intl-agreement",
+      "ev-avalanche-us-agreement"
+    ]
+  },
+  "network": "visa",
+  "category": "crypto_backed_credit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "at_spend",
+    "supported_assets_note": "Purchases are charged to a 0%-interest credit account and secured by digital-asset collateral held in the user's own smart wallet ('Rain Liquidity and Issuer will not, in any circumstance, be holding custody of your Collateral'). Spending power is capped at the USD market value of the posted collateral (US agreement: stablecoins up to 100%, non-stable assets up to 50% of value). Assets named by Avalanche: USDC, USDT, AVAX, wAVAX, sAVAX on Avalanche; the International agreement also lists Ethereum, Polygon, Optimism and Arbitrum as supported blockchains.",
+    "evidence": [
+      "ev-avalanche-intl-agreement",
+      "ev-avalanche-us-agreement",
+      "ev-avalanche-app-terms",
+      "ev-avalanche-support-what-is"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": 0,
+    "ltv_percent": 100,
+    "ltv_min_percent": 50,
+    "liquidation_risk": "International agreement: a Liquidation Event can occur if a payment is unpaid for one calendar day, or if the collateral value falls below the outstanding charges and no collateral is added; 'There is no liquidation fee'. US agreement: liquidation can occur daily, within 6 hours of a purchase, or when a payment is 21+ days past due. 0% APR 'currently' — 'Issuer and Rain Liquidity may introduce interest later'. Late payment fee up to $40 (international) / up to 2% of the outstanding balance (US).",
+    "evidence": [
+      "ev-avalanche-intl-agreement",
+      "ev-avalanche-us-agreement"
+    ]
+  },
+  "variants": [
+    {
+      "id": "avalanche-card-international",
+      "region_label": "International (outside the United States)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [
+          "US"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "Applicants must 'attest that you are not a United States citizen' and must not be blocked or sanctioned under US law (OFAC).",
+        "usage_note": "No official list of served countries was found on any page read. The International Card Agreement says the card 'is intended for those outside of the United States'. Avalanche's own blog and Rain's announcement describe launches in Latin America and the Caribbean, then Southeast Asia and Africa, without naming countries. The sign-up site avalanchecard.com could not be fetched in this run (fetcher provenance) — the country list, if any, must be read there in a browser session.",
+        "evidence": [
+          "ev-avalanche-intl-agreement",
+          "ev-avalanche-rain-announcement"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "unknown",
+        "editorial_level": "unknown",
+        "stages_note": "None of the legal documents read (International Card Agreement, App Terms, Opening Account Disclosures, Rewards Terms) describes the identity-verification stage or documents. The agreement only requires that the information provided is 'true, correct, and complete'. A credit account with an issuing bank implies verification, but no official page read states it.",
+        "evidence": [
+          "ev-avalanche-intl-agreement",
+          "ev-avalanche-app-terms"
+        ],
+        "status": "unknown"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Avalanche Card",
+          "access": {
+            "type": "free",
+            "note": "No annual fee is listed in the International agreement's disclosures; the App Terms mention that Rain Liquidity 'may make changes to the subscription fee' without stating any amount — the subscription fee is therefore recorded as unknown, not free.",
+            "status": "hypothesis",
+            "evidence": [
+              "ev-avalanche-intl-agreement",
+              "ev-avalanche-app-terms"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Section 7 of the agreement lists 'fees for Card issuance or replacement' as fees that may apply, 'disclosed at approval, through updated Card Terms, or on the website'; no amount on any page read.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "conditions": "App Terms: 'We may, from time to time, make changes to the subscription fee' — no amount stated anywhere read.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'Foreign Exchange Fee (non USD): up to 3%' plus 'Cross Border Fee: up to 3%' (Important Disclosures, accurate as of 2/12/25). Recorded at the stated maximum; the two fees may cumulate on a non-USD cross-border purchase. Exchange rate set by the card network.",
+              "status": "verified",
+              "evidence": [
+                "ev-avalanche-intl-agreement"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Agreement §5: 'cash advances and balance transfers are not available'; no ATM fee or allowance stated. Whether the physical card withdraws cash at all is not established.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Collateral is deposited on-chain into the user's smart wallet; the App Terms say blockchain/network fees are outside Rain Liquidity's control. No provider deposit fee is stated — recorded unknown.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 40,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Penalty fees: late payment 'Up to $40'; returned payment 'Up to $29' in the disclosures box but '$5.00 or whatever is required by applicable law, whichever is lower' in §7.1(b) — see contradiction note on the evidence.",
+              "status": "verified",
+              "evidence": [
+                "ev-avalanche-intl-agreement"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "No fixed limit: 'NO SET CREDIT LIMIT'; the spend limit equals the USD market value of posted collateral (illustration: $100 of collateral supports a $100 limit) and 'may be modified at any time' by Rain Liquidity.",
+              "status": "verified",
+              "evidence": [
+                "ev-avalanche-intl-agreement"
+              ]
+            }
+          ],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "avalanche-card-us",
+      "region_label": "United States",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "A separate 'Avalanche Card U.S. Card Agreement' (last updated 2025-02-05) exists in the legal centre; it lists 'permanent residence outside the U.S.' as a default trigger but names no eligible or excluded states. No marketing page read confirms that US sign-ups are open (launch communications cite Latin America, the Caribbean, Southeast Asia and Africa). US availability therefore remains to be confirmed.",
+        "evidence": [
+          "ev-avalanche-us-agreement"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "unknown",
+        "editorial_level": "unknown",
+        "stages_note": "Not described in the US agreement or App Terms.",
+        "evidence": [
+          "ev-avalanche-us-agreement"
+        ],
+        "status": "unknown"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Avalanche Card",
+          "access": {
+            "type": "free",
+            "note": "US agreement: 'Annual fee: None'. Subscription fee mentioned without amount in the App Terms — kept unknown below.",
+            "status": "verified",
+            "evidence": [
+              "ev-avalanche-us-agreement"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Not listed in the US agreement.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "conditions": "Annual fee 'None' in the US agreement, but the App Terms refer to a 'subscription fee' without amount; recorded unknown until one page states the whole picture.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "'Foreign/international transaction fee: 2% of each transaction in U.S. dollars' (US agreement, last updated 2025-02-05).",
+              "status": "verified",
+              "evidence": [
+                "ev-avalanche-us-agreement"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "ATM withdrawals are treated as cash advances; cash advance APR 'N/A' and no cash-advance fee listed — whether withdrawals are possible and what they cost is not established.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "On-chain collateral deposit; no provider fee stated.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "Late payment 'Up to 2% of the current outstanding card balance'; returned payment none; over-the-limit none; $10 per copy of a statement or transaction document outside a billing dispute.",
+              "status": "verified",
+              "evidence": [
+                "ev-avalanche-us-agreement"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "'NO SET CREDIT LIMIT'; daily or monthly limits set by Rain Liquidity based on collateral.",
+              "status": "verified",
+              "evidence": [
+                "ev-avalanche-us-agreement"
+              ]
+            }
+          ],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-avalanche-intl-agreement",
+      "url": "https://legal.avalanchecard.com/legal/avalanche-card-international-card-agreement-94211945",
+      "title": "Avalanche Card International Card Agreement (legal centre, effective 2/12/25)",
+      "source_type": "official_terms",
+      "excerpt": "'The issuer for this card program is Third National' (Visa licence); program manager Rain Liquidity; 0% interest currently; FX (non-USD) up to 3%; cross-border up to 3%; late payment up to $40; returned payment $29 (box) vs $5 (§7.1(b)); no liquidation fee; cash advances not available; 'intended for those outside of the United States'; not a US citizen.",
+      "accessed_at": "2026-11-09T05:45:00Z",
+      "effective_from": "2025-02-12",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Card issuance/replacement fees 'may apply' but are not quantified; no ATM, deposit or monthly fee stated; no KYC description; no country list."
+      },
+      "verification": "contradictory",
+      "contradiction_note": "Returned-payment fee: 'Up to $29' in the Important Disclosures box versus '$5.00 or whatever is required by applicable law, whichever is lower' in §7.1(b) of the same document. Not resolved; both values recorded."
+    },
+    {
+      "id": "ev-avalanche-us-agreement",
+      "url": "https://legal.avalanchecard.com/legal/avalanche-card-us-card-agreement-bcc089aa",
+      "title": "Avalanche Card U.S. Card Agreement (legal centre, last updated February 5, 2025)",
+      "source_type": "official_terms",
+      "excerpt": "'The issuer of the credit card program is Third National under license from Visa'; Rain Liquidity handles payments and collateral; 'NO SET CREDIT LIMIT'; purchase APR 0.00%; annual fee none; foreign transaction fee 2%; late payment up to 2% of balance; returned payment none; stablecoins back 100%, other assets 50%; liquidation daily, 6 h after a purchase, or 21+ days past due.",
+      "accessed_at": "2026-11-09T05:50:00Z",
+      "effective_from": "2025-02-05",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-avalanche-app-terms",
+      "url": "https://legal.avalanchecard.com/legal/avalanche-app-terms-conditions-4b62a44e",
+      "title": "Avalanche App Terms & Conditions (legal centre, last updated 2-26-25)",
+      "source_type": "official_terms",
+      "excerpt": "'We are Rain Liquidity LLC'; users 18+; non-custodial smart wallet (Portal's terms), 'not a custodian of any assets'; neither Rain Liquidity nor the Issuer trades or swaps users' assets; network fees outside Rain's control; 'We may, from time to time, make changes to the subscription fee' (no amount); no country list, no KYC description; law of Montana, arbitration New York.",
+      "accessed_at": "2026-11-09T05:50:00Z",
+      "effective_from": "2025-02-26",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-avalanche-rewards-terms",
+      "url": "https://legal.avalanchecard.com/legal/avalanche-rewards-terms-of-service",
+      "title": "Avalanche Rewards Terms of Service (legal centre, undated)",
+      "source_type": "official_terms",
+      "excerpt": "'The Rewards Program is operated solely by Rain' (Rain Products, Inc.); Avax Points = ERC-20 loyalty tokens, face value $0.01, earned 'at rates published in the Avalanche Card app' (no rate on the page); statement credit at 70% of face value; excluded: fees, disputes, cash advances, refunds; rates changeable with 30 days' notice. No referral programme.",
+      "accessed_at": "2026-11-09T05:51:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "No earning rate stated anywhere read → no reward modelled."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-avalanche-opening-disclosures",
+      "url": "https://legal.avalanchecard.com/legal/opening-account-disclosures-f5b8a3a9",
+      "title": "Opening Account Disclosures — Issuer privacy notice (legal centre)",
+      "source_type": "issuer_doc",
+      "excerpt": "US-style privacy notice ('FACTS') issued by Third National as 'Issuer'; no fee or rate figures on the page as fetched.",
+      "accessed_at": "2026-11-09T05:51:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-avalanche-support-what-is",
+      "url": "https://support.avax.network/en/articles/10667235-what-is-the-avalanche-card",
+      "title": "What is the Avalanche Card? (Avalanche support centre, article dated August 21, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'A crypto-powered debit card' run by Rain, 'a third-party service'; assets at launch: Avalanche-native USDC, USDT, AVAX, wAVAX; sign-up at avalanchecard.com; Ava Labs does not support the card; not FDIC insured; no fees, countries or KYC stated. Describes the product as available.",
+      "accessed_at": "2026-11-09T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Avalanche (brand partner) page, not the operator's; calls the product a 'debit card' while both card agreements are credit agreements with collateral."
+      },
+      "verification": "contradictory",
+      "contradiction_note": "Support article calls the card a 'debit card'; the International and US Card Agreements describe 'credit privileges', a creditor Issuer, APR and liquidation. The dated legal agreements govern → modelled as crypto-backed credit."
+    },
+    {
+      "id": "ev-avalanche-rain-announcement",
+      "url": "https://www.rain.xyz/es/resources/rain-powers-avalanche-card-for-crypto-friendly-spending",
+      "title": "Rain powers Avalanche Card for crypto-friendly spending (Rain resources page)",
+      "source_type": "issuer_doc",
+      "excerpt": "Visa card; self-custody wallet with a unique address per supported asset; assets USDC, USDT, WAVAX, sAVAX and native AVAX; 'launching first in Latin America and the Caribbean'; sign-up at avalanchecard.com; no fees, KYC or country list; Rain's general disclaimers name Third National (Visa) and Cross River Bank (debit program) without saying which applies here.",
+      "accessed_at": "2026-11-09T05:47:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Programme manager's own announcement; marketing, undated."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.avalanchecard.com/",
+    "affiliate": {
+      "program_id": null,
+      "status": "none",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-09T05:51:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-09T05:55:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from the Avalanche Card legal centre (International and US Card Agreements, App Terms, Rewards Terms, Opening Account Disclosures), the Avalanche support article and Rain's announcement. Issuer Third National and operator Rain Liquidity LLC established; fee schedule limited to FX/cross-border and penalty fees; issuance, subscription, ATM and deposit costs unknown; KYC and country list not found; Avax Points rewards exist but no rate is published on any page read. avalanchecard.com itself and the Avalanche blog post (avalanche.com) were not fetchable this run (fetcher provenance) — browser read required. Second read required before publication.",
+      "evidence": [
+        "ev-avalanche-intl-agreement",
+        "ev-avalanche-us-agreement",
+        "ev-avalanche-app-terms",
+        "ev-avalanche-rewards-terms"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Visa card issued by Third National and run by Rain Liquidity for the Avalanche Foundation: purchases are charged to a 0%-interest credit account secured by crypto collateral kept in the user's own smart wallet, with international and US agreements. Only FX (up to 3% + up to 3% cross-border internationally; 2% in the US) and penalty fees are published; card price, ATM, deposit and any subscription cost are not stated, and the rewards programme publishes no rate.",
+    "good_for": [
+      "Residents outside the United States (and possibly US residents) who want to spend AVAX, USDC or USDT without selling, keeping custody of the collateral",
+      "People who already hold assets on Avalanche or the other supported EVM chains"
+    ],
+    "not_for": [
+      "Anyone who needs a published country list or fee schedule before applying — neither was found",
+      "Cash withdrawals: cash advances are 'not available' under the International agreement",
+      "US citizens applying for the international card (excluded by the agreement)"
+    ],
+    "watch_outs": [
+      "Credit mechanics: unpaid balances can trigger liquidation of collateral after one calendar day (international) and interest may be introduced later; late fees up to $40 (international) or 2% of the balance (US).",
+      "FX: 'up to 3%' exchange plus 'up to 3%' cross-border on the international card — a non-USD purchase abroad may carry both.",
+      "Returned-payment fee stated twice with different values ($29 vs $5) in the same agreement.",
+      "No KYC description, no country list and no card-issuance price on any official page read; the sign-up site avalanchecard.com must be read in a browser.",
+      "The Avalanche support centre calls it a 'debit card'; the governing agreements are credit agreements."
+    ]
+  }
+}
