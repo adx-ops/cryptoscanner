@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-08.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-09.",
   "target": {
     "min": 15,
     "max": 50
@@ -191,6 +191,22 @@
       "record": "data/cards/xplace-card.json",
       "note": "International record (crypto-backed Visa credit card on Solana; collateral in Kamino vaults, USDC borrowed at spend; issuer Third National, programme manager Signify Holdings, Inc.; operator Pontech Group L.L.C-FZ, Dubai Meydan Free Zone) from 2 official pages read 2026-11-06: homepage (modified 2026-10-29) and membership page (2026-09-26). Tiers Basic Free / Silver $99 / Gold $249 / Platinum $999 per year; Credit Mode cashback 0.5/1/1.5/2% USDC; FX 1/0.5/0.25/0%; monthly limits $2K/$10K/$200K/$750K; vault LTVs 65–80%. Unknown: borrow APR, ATM, issuance/physical-card price, top-up/network costs, Cash Mode cashback, cashback caps, KYC documents, eligible countries (no list; separate US and International Card Terms exist on docs.x.place, not fetchable this run). Contradiction: Silver limit $20K (homepage) vs $10K (membership) — lower modelled. No affiliate/referral programme page found. Second read + Card Terms read required before publication.",
       "needs_browser_read": true
+    },
+    {
+      "provider": "Avalanche Card (Rain)",
+      "product": "Avalanche Card",
+      "status": "validated",
+      "record": "data/cards/avalanche-card.json",
+      "note": "International + US variants (crypto-backed Visa credit card, 0% APR, collateral in the user's own smart wallet; issuer Third National; operator Rain Liquidity LLC; rewards operated by Rain Products, Inc.) from 7 official pages read 2026-11-09: International Card Agreement (effective 2025-02-12), US Card Agreement (2025-02-05), App Terms (2025-02-26), Rewards Terms (undated), Opening Account Disclosures, Avalanche support article (2026-08-21), Rain announcement. Verified: FX up to 3% + cross-border up to 3% (intl) / 2% (US); late fee up to $40 (intl) / 2% of balance (US); no liquidation fee; cash advances not available (intl). Unknown: card issuance/replacement price, subscription fee (App Terms mention one without amount), ATM, deposit cost, KYC documents, country list, Avax Points earning rate (rates 'published in the app'). Contradictions: returned-payment fee $29 (box) vs $5 (§7.1(b)); support article 'debit card' vs credit agreements. Not fetchable (provenance): avalanchecard.com (sign-up site, country list) and the avalanche.com blog post. No affiliate/referral programme found. Second read + browser read of avalanchecard.com required before publication.",
+      "needs_browser_read": true
+    },
+    {
+      "provider": "Tria",
+      "product": "Tria Card",
+      "status": "validated",
+      "record": "data/cards/tria-card.json",
+      "note": "International (3 tiers) + US (Lite) variants (self-custodial, collateral-backed Visa credit card at 0% APR; issuer Nimbus, LLC intl / Third National US; operator Threely Dimensions Inc.; Nigeria marketed by BANEX Microfinance Bank) from 9 official pages read 2026-11-09: Card Terms International (last updated 2026-01-09, fee disclosures effective 2025-10-31), Card Terms USA (2026-01-09), help centre: What are Tria Cards, Memberships (2026-09-30), KYC (2026-03-20), How to get a card (2026-09-30), Top-up guide, Cashback Season 3 guide (2026-10-08), Cashback FAQ. Verified: card issue + annual fee US$25 virtual / US$109 plastic / US$250 metal; FX up to 3% + international up to 1%; USDC deposit up to 1%; ATM up to US$2 + 3%, US$750/day (Pro, Max); cashback 1.5% / 4.5% / 6% in USDT (Arbitrum) on up to US$1,000 / US$2,000 / US$2,000 monthly spend, then 0.5% / 1% / 1%, membership required, batches (quarterly, up to 90 days); KYC after purchase: ID + live selfie, in-country presence, 18+. Contradictions: help centre 'zero deposit fees and zero foreign exchange fees' vs the terms (terms modelled, fees flagged contradictory); Pro cap $1,000 (cards article) vs $2,000 (Season 3 guide, FAQ); Lite after-cap 1% vs 0.5%. Unknown: country list ('over 200 supported regions', app decides), delivery fee, LTV for non-stable collateral, US card issue/deposit fee. Not fetchable (provenance): docs.tria.so/card-cashback-terms, blogs.tria.so season-3 post. Affiliate: Ambassador Program identified (data/affiliate/tria-ambassador.json), multi-level commissions, nobody contacted. Second read required before publication.",
+      "needs_browser_read": true
     }
   ],
   "no_kyc_track": {
@@ -288,8 +304,10 @@
         "product": "Kardpay",
         "claim": "low-KYC, $29–$299/yr",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "blocked",
+        "note": "Blocked 2026-11-09: kardpay.gitbook.io documentation read in full (llms-full.txt export; the linked 'Terms & Conditions' page returns Page Not Found). Operator legal entity, jurisdiction and card issuer not named; network Mastercard ('The payment provider (Mastercard)'); virtual cards only; only phone/OTP verification described — no identity-verification stage, thresholds or limit values stated (order summary shows 'Top-up limit', 'Monthly spend limit', 'Per transaction cap' without figures); fees: top-up 4%, card fee shown as a percentage at checkout ('e.g. 1.8%'), minimum top-up $15; no plan prices ($29–$299/yr claim not found), no country list, no dates; support via Telegram (Account page) or Discord (Wallet page). Fails inclusion rule (operator and issuer undisclosed, no verification stage in official terms)."
       }
     ]
-  }
+  },
+  "updated": "2026-11-09"
 }

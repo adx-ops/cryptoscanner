@@ -1,0 +1,825 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tria-card",
+  "slug": "tria-card",
+  "name": "Tria Card",
+  "brand": "Tria",
+  "provider_id": "tria",
+  "issuer": {
+    "name": "Nimbus, LLC (international) / Third National (US)",
+    "status": "verified",
+    "evidence": [
+      "ev-tria-card-terms-intl",
+      "ev-tria-card-terms-us"
+    ]
+  },
+  "network": "visa",
+  "category": "crypto_backed_credit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "at_spend",
+    "supported_assets_note": "Card Terms: a collateral-backed spending account — the Issuer 'establishes your credit limit' at 0% APR and spending is capped at the USD value of digital-asset collateral held 'in your custody within one or more smart contracts' (Issuer and Tria 'are not custodians'). Help centre: 'Your crypto stays in your control in your Tria wallet until it's used for a payment'; the card is loaded by depositing crypto from the Tria wallet or an external wallet on Bitcoin, Ethereum, Polygon, Base, Arbitrum, Optimism, BSC, Aptos, Tron or Solana (min $50 BTC / $10 other tokens; Avalanche not supported); conversion to local currency at payment via 'BestPath AVS'.",
+    "evidence": [
+      "ev-tria-card-terms-intl",
+      "ev-tria-card-terms-us",
+      "ev-tria-help-cards",
+      "ev-tria-help-topup"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": 0,
+    "ltv_percent": 100,
+    "ltv_min_percent": "unknown",
+    "liquidation_risk": "0% APR on purchases (Important Disclosures effective 2025-10-31; US terms also 0% on balance transfers and cash advances). Collateral: '$100 USD' of collateral supports $100 of spending; limits 'can be reduced to $0' at any time. US terms: liquidation if a payment is not made within 21 days of the due date, or if collateral value drops below the charges and no collateral is added; collateral withdrawals need three business days' notice. The international terms mention no late, returned-payment or over-limit fees (all 'NA'). LTV for non-stable collateral not stated.",
+    "evidence": [
+      "ev-tria-card-terms-intl",
+      "ev-tria-card-terms-us"
+    ]
+  },
+  "variants": [
+    {
+      "id": "tria-card-international",
+      "region_label": "International (outside the United States)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [
+          "US"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "International Card Terms: the user attests to being 'not a United States citizen'; OFAC-sanctioned or blocked persons excluded.",
+        "usage_note": "No official country list on any page read. Card Terms: the card 'may not be available in all jurisdictions'; the help centre says the app's Country dropdown has 'over 200 supported regions' and names Australia, Canada, Germany, Hong Kong, the UAE, the UK and the US 'among many others' (KYC article), while the application article says unsupported countries 'will see a message indicating we are working to bring the card to your region'. Nigeria: card marketed by BANEX Microfinance Bank Limited (CBN-licensed). Country list must be confirmed per country in the app or from a published list.",
+        "evidence": [
+          "ev-tria-card-terms-intl",
+          "ev-tria-help-kyc",
+          "ev-tria-help-get-card"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie"
+        ],
+        "stages_note": "Order first, verify before activation: 'You can start your KYC once you have purchased your first Tria card'; personal details, government ID upload (retry with another document if rejected), live selfie matching the document, applicant physically present in the selected country of residence (camera + location permissions, VPN prohibited); 18+; one-time process. Verification provider not named ('an external link embedded within the app'). Proof of address not mentioned.",
+        "evidence": [
+          "ev-tria-help-kyc",
+          "ev-tria-help-get-card"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "lite",
+          "name": "Lite (virtual)",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 25,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Important Disclosures (effective 2025-10-31): card issue Virtual $25 and annual fee Virtual $25. The help centre calls memberships 'optional annual plans' whose 'pricing and availability may vary depending on your region'.",
+            "status": "verified",
+            "evidence": [
+              "ev-tria-card-terms-intl",
+              "ev-tria-help-memberships"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 25,
+                "currency": "USD"
+              },
+              "period": "once",
+              "conditions": "'Card issue: Virtual $25' (Important Disclosures). Whether the issue fee and the first annual fee are charged separately is not explained.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 25,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "'Annual fee: Virtual $25'; 'Monthly fee: 0%'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "'USDC settlement/deposit: up to 1%' (Important Disclosures). Help centre markets 'zero deposit fees' / 'no Tria deposit fees on supported tokens' — see contradiction note; the dated terms govern and the maximum is modelled. Network gas: most chains gasless, Solana needs SOL, Tron needs TRX.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards",
+                "ev-tria-help-topup"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'Foreign exchange (FX): up to 3%' plus 'International transactions: up to 1%' (Important Disclosures). Help centre markets 'zero foreign exchange fees' (Tria FX fees waived, 'Visa foreign exchange fees may still apply') — see contradiction note; the dated terms govern and the maximum is modelled.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards",
+                "ev-tria-help-memberships"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 2,
+                "currency": "USD"
+              },
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'ATM withdrawal: up to $2 + 3%'; balance inquiry up to $2; decline up to $2 (Important Disclosures). The help centre states ATM withdrawals are 'N/A' for the Lite (virtual) card — the fee applies to physical cards.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1.5,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 1000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "excluded_categories": [
+                "cash withdrawals",
+                "money transfers",
+                "prepaid/wallet funding",
+                "gambling",
+                "vouchers",
+                "Tria Travel bookings"
+              ],
+              "conditions": "Cashback Season 3 (from 2026-06-01, no end date): 1.5% on spending up to $1,000 per month, then 0.5% above the cap (help-centre 'What are Tria Cards' says 1% above the cap — contradiction). Active membership required; cap per user across cards; paid in USDT on Arbitrum in periodic batches (FAQ: quarterly, up to 90 days); refunds claw back cashback.",
+              "description": "Lite cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-help-cashback-s3",
+                "ev-tria-help-cashback-faq",
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "No fixed limit: spending is capped by the USD value of posted collateral and 'can be reduced to $0' (Card Terms). Help centre: limits 'can be high (up to millions per day)'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "pro",
+          "name": "Pro (plastic)",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 109,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Important Disclosures: card issue Plastic $109, annual fee Plastic $109. Includes a Lite virtual card.",
+            "status": "verified",
+            "evidence": [
+              "ev-tria-card-terms-intl",
+              "ev-tria-help-memberships"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 109,
+                "currency": "USD"
+              },
+              "period": "once",
+              "conditions": "'Card issue: Plastic $109'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "No shipping fee stated on any page read.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 109,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "'Annual fee: Plastic $109'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "'USDC settlement/deposit: up to 1%' vs help-centre 'zero deposit fees' — contradiction; terms govern.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'FX up to 3%' + 'International transactions up to 1%' vs help-centre 'zero foreign exchange fees' — contradiction; terms govern.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 2,
+                "currency": "USD"
+              },
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'ATM withdrawal: up to $2 + 3%'; balance inquiry / decline up to $2 each. ATM withdrawals up to $750/day (help centre).",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4.5,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 2000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "excluded_categories": [
+                "cash withdrawals",
+                "money transfers",
+                "prepaid/wallet funding",
+                "gambling",
+                "vouchers",
+                "Tria Travel bookings"
+              ],
+              "conditions": "Season 3 guide and cashback FAQ: 4.5% on spending up to $2,000 per month, then 1%. 'What are Tria Cards' gives a $1,000 cap for Pro — contradiction; the dedicated programme guide is modelled. Active membership required; USDT on Arbitrum, periodic batches.",
+              "description": "Pro cashback",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tria-help-cashback-s3",
+                "ev-tria-help-cashback-faq",
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 750,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "'ATM withdrawals: up to $750/day (Pro, Max)'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "max",
+          "name": "Max (metal)",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 250,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Important Disclosures: card issue Metal $250, annual fee Metal $250. Includes a Lite virtual card.",
+            "status": "verified",
+            "evidence": [
+              "ev-tria-card-terms-intl",
+              "ev-tria-help-memberships"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "period": "once",
+              "conditions": "'Card issue: Metal $250'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "No shipping fee stated on any page read.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "'Annual fee: Metal $250'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "'USDC settlement/deposit: up to 1%' vs help-centre 'zero deposit fees' — contradiction; terms govern.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'FX up to 3%' + 'International transactions up to 1%' vs help-centre 'zero foreign exchange fees' — contradiction; terms govern.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 2,
+                "currency": "USD"
+              },
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'ATM withdrawal: up to $2 + 3%'; balance inquiry / decline up to $2 each. ATM withdrawals up to $750/day (help centre).",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-intl",
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 6,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 2000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "excluded_categories": [
+                "cash withdrawals",
+                "money transfers",
+                "prepaid/wallet funding",
+                "gambling",
+                "vouchers",
+                "Tria Travel bookings"
+              ],
+              "conditions": "Season 3 guide, cashback FAQ and cards article agree: 6% on spending up to $2,000 per month, then 1%. Active membership required; USDT on Arbitrum, periodic batches (FAQ: quarterly, up to 90 days); lounge access included (non-monetary, not modelled).",
+              "description": "Max cashback",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-help-cashback-s3",
+                "ev-tria-help-cashback-faq",
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 750,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "'ATM withdrawals: up to $750/day (Pro, Max)'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-help-cards"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "tria-card-us",
+      "region_label": "United States",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Separate 'Card Terms (USA)' (last updated 2026-01-09) with issuer Third National; no eligible or excluded states listed; 'permanently residing outside the United States' is a default trigger. The KYC help article names the United States among supported countries. State-level availability to be confirmed.",
+        "evidence": [
+          "ev-tria-card-terms-us",
+          "ev-tria-help-kyc"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "other"
+        ],
+        "stages_note": "US terms: legal name, address, date of birth, employment and income, SSN or other government ID; additional documents may be requested. App flow as for the international card (ID upload + live selfie after purchasing the card).",
+        "evidence": [
+          "ev-tria-card-terms-us",
+          "ev-tria-help-kyc"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "lite",
+          "name": "Lite (virtual)",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 25,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "US terms: annual fee Virtual $25 / Plastic $109 / Metal $250; card issue fee not stated in the US terms. Only the Lite tier is modelled for the US pending a read of the full US fee box.",
+            "status": "verified",
+            "evidence": [
+              "ev-tria-card-terms-us"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "Card issue fee not stated in the US terms (the international terms state $25/$109/$250).",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 25,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "'Annual fee: Virtual $25' (US terms).",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-us"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Deposit fee not stated in the US terms.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'Up to 3.0% of each USD transaction (all cards)' for FX / international transactions (US terms).",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-us"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 2,
+                "currency": "USD"
+              },
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'ATM withdrawal up to $2 + 3%'; balance inquiry and decline up to $2 (US terms). Not available on the virtual card per the help centre.",
+              "status": "verified",
+              "evidence": [
+                "ev-tria-card-terms-us"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1.5,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 1000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "conditions": "Cashback programme pages do not distinguish regions; the help-centre Season 3 rules (1.5% up to $1,000/month, then 0.5%, USDT on Arbitrum) are assumed to apply to US cardholders — hypothesis until a US-specific page is read.",
+              "description": "Lite cashback (assumed same as international)",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-tria-help-cashback-s3"
+              ]
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "hypothesis"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-tria-card-terms-intl",
+      "url": "https://docs.tria.so/card-terms-international",
+      "title": "Tria Spend Card — Card Terms International (docs.tria.so, last updated January 9, 2026; disclosures effective October 31, 2025)",
+      "source_type": "official_terms",
+      "excerpt": "Issuer Nimbus, LLC ('a Delaware U.S. corporation', Visa licence); Tria = Threely Dimensions Inc., 'not the creditor'; Nigeria via BANEX Microfinance Bank Limited (CBN). Card issue & annual fee: Virtual $25 / Plastic $109 / Metal $250; FX up to 3%; international up to 1%; USDC deposit up to 1%; monthly 0%; ATM up to $2 + 3%; APR 0%; late/returned/over-limit NA; not a US citizen; law of Puerto Rico.",
+      "accessed_at": "2026-11-09T06:08:00Z",
+      "effective_from": "2025-10-31",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Collateral chains listed: Ethereum, Polygon, Optimism, 'Arbitrium'. No country list, no KYC description."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tria-card-terms-us",
+      "url": "https://docs.tria.so/card-terms-us",
+      "title": "Tria Card Terms (USA) (docs.tria.so, last updated January 9, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Issuer Third National; Tria (Threely Dimensions, Inc.) technology provider. Annual fee Virtual $25 / Plastic $109 / Metal $250; FX/international up to 3.0% (all cards); ATM up to $2 + 3%, inquiry/decline up to $2; APR 0%; returned payment none; KYC: name, address, DOB, employment and income, SSN or government ID; collateral in own smart contracts; liquidation after 21 days past due.",
+      "accessed_at": "2026-11-09T06:10:00Z",
+      "effective_from": "2026-01-09",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD",
+        "note": "Card issue fee, deposit fee and monthly fee not stated in the US version."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tria-help-cards",
+      "url": "https://intercom.help/tria/en/articles/13513481-what-are-tria-cards",
+      "title": "What are Tria Cards? (help centre, 'updated over 3 weeks ago')",
+      "source_type": "help_center",
+      "excerpt": "Visa; 'Your crypto stays in your control in your Tria wallet until it's used for a payment'; BestPath AVS swaps at payment; Lite digital / Pro plastic / Max metal; 'zero deposit fees and zero foreign exchange fees'; cashback 1.5% / 4.5% / 6%, after cap 1%; cashback spend cap $1,000 (Lite, Pro) / $2,000 (Max); ATM up to $750/day (Pro, Max); Apple Pay / Google Pay 'where supported'.",
+      "accessed_at": "2026-11-09T06:02:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "Markets 'zero deposit fees and zero foreign exchange fees' while the dated Card Terms disclose 'up to 1%' deposit, 'up to 3%' FX and 'up to 1%' international fees; gives a $1,000 Pro cap and 1% Lite after-cap rate where the Season 3 guide gives $2,000 and 0.5%. The dated terms / dedicated programme guide are modelled; this page is not."
+    },
+    {
+      "id": "ev-tria-help-memberships",
+      "url": "https://intercom.help/tria/en/articles/13513737-what-are-tria-memberships",
+      "title": "What are Tria Memberships? (help centre, September 30, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Lite / Pro / Max are 'optional annual plans' renewing yearly; 'Pricing and availability may vary depending on your region and the plan selected' (no amounts); Lite: no Tria deposit fees, 'Tria FX fees are waived, but Visa foreign exchange fees may still apply'; Pro: PVC card + Lite card, lounge access where supported; Max: metal card + Lite card, highest cashback.",
+      "accessed_at": "2026-11-09T06:02:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tria-help-kyc",
+      "url": "https://intercom.help/tria/en/articles/14034407-kyc-know-your-customer",
+      "title": "KYC (Know Your Customer) (help centre, March 20, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'You can start your KYC once you have purchased your first Tria card'; ID documents upload, live selfie matching the document; must be physically in the selected country, camera + location permissions, no VPN; 18+; one-time; 'over 200 supported regions' in the Country dropdown, examples Australia, Canada, Germany, Hong Kong, UAE, UK, US; countries not listed are unsupported.",
+      "accessed_at": "2026-11-09T06:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tria-help-get-card",
+      "url": "https://intercom.help/tria/en/articles/14056678-how-to-get-a-tria-card",
+      "title": "How to get a Tria Card (help centre, September 30, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Select card and actual country of residence; supported countries proceed to payment, unsupported see 'we are working to bring the card to your region'; pay in crypto (Tria or external wallet) or by credit/debit card (promo code by email); then KYC (details, ID, selfie) and activation; 18+ and physically present in the selected country. No prices, issuer or country list.",
+      "accessed_at": "2026-11-09T06:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tria-help-topup",
+      "url": "https://intercom.help/tria/en/articles/14056654-tria-card-user-guide",
+      "title": "Tria Card Top Up Guide (help centre, 'updated over 2 weeks ago')",
+      "source_type": "help_center",
+      "excerpt": "Top-ups deposit crypto from the Tria Wallet or a supported external wallet; chains Bitcoin, Ethereum, Polygon, Base, Arbitrum, Optimism, BSC, Aptos, Tron, Solana; minimums $50 BTC / $10 other tokens; Avalanche not supported; most chains gasless, Solana needs SOL, Tron needs TRX; pending charges and refunds in progress not spendable/withdrawable.",
+      "accessed_at": "2026-11-09T06:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tria-help-cashback-s3",
+      "url": "https://help.tria.so/en/articles/15494704-cashback-season-3-guide",
+      "title": "Cashback Season 3 Guide (help centre, October 8, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "'This program officially starts on June 1, 2026' (no end date); Lite 1.5% up to $1,000/month then 0.5%; Pro 4.5% up to $2,000 then 1%; Max 6.0% up to $2,000 then 1%; paid in USDT on Arbitrum in periodic batches (Merkle distribution); caps per user, shared across cards; monthly reset; upgrades apply to future purchases; refunds claw back; Tria Travel excluded.",
+      "accessed_at": "2026-11-09T06:14:00Z",
+      "effective_from": "2026-06-01",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tria-help-cashback-faq",
+      "url": "https://intercom.help/tria/en/articles/13696877-cashbacks-faqs",
+      "title": "Cashbacks FAQs (help centre, 'updated over 2 weeks ago')",
+      "source_type": "help_center",
+      "excerpt": "Lite 1.5% up to $1,000 cap then 0.5%; Plastic 4.5% up to $2,000 then 1%; Metal 6% up to $2,000 then 1%; caps on spending, monthly, per user; 'paid out in USDT on the Arbitrum network'; quarterly distributions, up to 90 days; active membership required; excluded: cash withdrawals, money transfers, wallet funding, gambling, vouchers, Tria Travel; refunds deduct cashback.",
+      "accessed_at": "2026-11-09T06:12:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.tria.so/",
+    "affiliate": {
+      "program_id": "tria-ambassador",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-09T06:14:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-09T06:20:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from the Tria Card Terms International (fee disclosures effective 2025-10-31) and USA, and seven help-centre articles (cards, memberships, KYC, how to get a card, top-up guide, Cashback Season 3 guide, cashback FAQ). Issuer Nimbus, LLC (international) / Third National (US); operator Threely Dimensions Inc. Marketing pages claim zero FX and zero deposit fees while the dated terms disclose up to 3% + 1% and up to 1% — modelled from the terms, flagged contradictory. docs.tria.so/card-cashback-terms (formal cashback terms) not fetchable this run (fetcher provenance). No country list found. Second read required before publication.",
+      "evidence": [
+        "ev-tria-card-terms-intl",
+        "ev-tria-card-terms-us",
+        "ev-tria-help-cashback-s3"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Self-custodial Visa card from Tria: purchases run through a 0%-APR collateral-backed account (issuer Nimbus, LLC internationally, Third National in the US), with three paid annual tiers (US$25 virtual, US$109 plastic, US$250 metal) paying 1.5%, 4.5% or 6% cashback in USDT up to a monthly spend cap. The dated terms disclose FX up to 3% + 1%, deposit up to 1% and ATM US$2 + 3% even though the help centre advertises zero FX and deposit fees.",
+    "good_for": [
+      "Heavy spenders outside the US who can use the US$2,000 monthly cashback cap on the Pro or Max tier (4.5%–6% paid in USDT)",
+      "Users who want to keep custody of their crypto until the moment of payment and fund the card from many chains"
+    ],
+    "not_for": [
+      "Anyone who wants a free card — every tier carries an issue fee and an annual fee",
+      "US citizens applying for the international card (excluded by the terms); US residents only via the separate US terms",
+      "Frequent cash withdrawals (up to US$2 + 3% per withdrawal, US$750/day)"
+    ],
+    "watch_outs": [
+      "Fee contradiction: help-centre pages say 'zero deposit fees and zero foreign exchange fees'; the Card Terms (effective 2025-10-31) disclose up to 3% FX + up to 1% international and up to 1% deposit — the terms are modelled.",
+      "Cashback is paid in periodic batches (FAQ: quarterly, up to 90 days), only while the membership is active, and spend above the monthly cap earns 0.5%–1%.",
+      "Spending is a credit line secured by your collateral; limits 'can be reduced to $0' at any time and collateral can be liquidated under the terms.",
+      "No official country list found; the app decides eligibility at sign-up ('over 200 supported regions').",
+      "Season 3 cashback rules have a start date (2026-06-01) but no end date — rates may change."
+    ]
+  }
+}
