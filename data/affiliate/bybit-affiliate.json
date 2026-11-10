@@ -11,12 +11,12 @@
     "social",
     "unknown"
   ],
-  "application_conditions": "Publishers/creators with a qualifying website or app, or customers with a trader network; apply at affiliates.bybit.com; approval by Bybit team.",
+  "application_conditions": "Bloggers, influencers, publishers and content creators with a qualifying website, trading software and/or mobile app, or Bybit customers with an extensive trader network; free, \"subject to approval by the Bybit team\"; apply at affiliates.bybit.com.",
   "our_status": "terms_verified",
   "paid_action": "Share of trading-fee profit (fees − maker rebates − bonuses) from referred users who actively trade.",
-  "validation_conditions": "Referred users receiving other Bybit rebates/incentives may not count; relationship may end after 180 days without trading.",
+  "validation_conditions": "Referred users receiving rebates, discounts or incentives under another Bybit programme may not generate commission; relationship \"may be terminated\" after 180 consecutive days without trades, after which no further rebates are paid; Affiliate ID cannot be deleted.",
   "commission": {
-    "model_note": "Standard base rate not published; VIP accounts capped at 50% total rebate; Master-affiliate override 10% of sub-affiliate rebate. Card not mentioned as commissionable.",
+    "model_note": "Share of trading-fee profit (fees − market-maker rebates − bonuses/coupons), maker and taker volume both count, \"perpetual\"/lifetime, no referral limit. No standard base rate published (set per affiliate and client tier). VIP accounts: total rebate capped at 50%, Master-affiliate override 10% of the sub-affiliate rebate within that cap (worked example: $100 VIP fees, 40% sub rate → $40 + $4 Master); non-VIP accounts: no overall cap. Card not mentioned.",
     "status": "verified"
   },
   "attribution": {
@@ -26,7 +26,7 @@
   },
   "payout": {
     "threshold": "not stated",
-    "method": "Affiliate Portal → Bybit account → external wallet",
+    "method": "Affiliate Portal → Withdraw → linked Bybit trading account → standard on-chain withdrawal to an external wallet",
     "frequency": "daily by 04:00 UTC"
   },
   "reporting": {
@@ -36,7 +36,7 @@
     "postback": false,
     "status": "hypothesis"
   },
-  "rules_note": "Page dated 2026-09-19. EU entity (Bybit EU) status for affiliates not stated; EEA card is a separate Bybit EU product.",
+  "rules_note": "Page last updated 2026-10-29 03:59:50 (was 2026-09-19 at the first read); substance unchanged. EU entity (Bybit EU) status for affiliates not stated; EEA card is a separate Bybit EU product.",
   "allowed_countries_note": "Not stated.",
   "evidence": [
     {
@@ -44,8 +44,14 @@
       "title": "Bybit Affiliate Program – General FAQ",
       "accessed_at": "2026-10-26T21:30:00Z",
       "excerpt": "Trading-fee profit share; daily payouts; VIP cap 50%; no card mention; last updated 2026-09-19."
+    },
+    {
+      "url": "https://www.bybit.com/en/help-center/article/Bybit-Affiliate-Program-General-FAQ",
+      "title": "Bybit Affiliate Program – General FAQ (re-read 2026-11-10; page dated 2026-10-29)",
+      "accessed_at": "2026-11-10T04:55:00Z",
+      "excerpt": "Trading-fee profit share, lifetime, daily payouts by 04:00 UTC via Affiliate Portal; VIP cap 50% with 10% Master override; 180-day inactivity termination; applications via affiliates.bybit.com subject to approval; neither Bybit Card nor Bybit EU mentioned. All previously recorded values confirmed."
     }
   ],
   "verification": "verified",
-  "notes": "Revenue depends on trading, not card orders. Whether Bybit EU (EEA card) runs the same programme is unknown."
+  "notes": "Revenue depends on trading, not card orders. Whether Bybit EU (EEA card) runs the same programme is unknown. 2026-11-10: second read of the FAQ — every recorded value confirmed; page re-dated 2026-10-29 without substantive change."
 }

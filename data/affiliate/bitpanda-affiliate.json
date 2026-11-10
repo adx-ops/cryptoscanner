@@ -4,18 +4,20 @@
   "id": "bitpanda-affiliate",
   "provider_id": "bitpanda",
   "program_name": "Bitpanda Affiliate Programme",
-  "program_url": "https://www.bitpanda.com/en/affiliate",
-  "legal_entity": "Bitpanda GmbH (footer)",
+  "program_url": "https://www.bitpanda.com/en/affiliate-programme",
+  "legal_entity": "Bitpanda GmbH (affiliate terms, preamble); Bitpanda Asset Management GmbH is a party for German-resident referrals",
   "type": "hybrid",
   "allowed_channels": [
+    "website",
+    "social",
     "unknown"
   ],
-  "application_conditions": "Apply via app.impact.com sign-up; eligibility criteria not published on the page.",
+  "application_conditions": "Register with Impact Radius (terms B.1; campaign 'Bitpanda1649085811694'); 18+ (B.2); correct legal name and country of residence/incorporation (B.3); applicants in prohibited jurisdictions ineligible (B.3); Bitpanda may approve or reject 'for any lawful reason or none' (B.5). No eligibility criteria on the programme page itself.",
   "our_status": "identified",
-  "paid_action": "'Commission for every referred user' — qualifying action not defined publicly.",
-  "validation_conditions": "Not stated.",
+  "paid_action": "Terms C.1: CPA 'paid only when a qualified customer completes a qualified transaction'; Qualified Transaction = successful purchase of Services by a Qualified Customer (A.24); New Customer = no existing Bitpanda account (A.14); only the first account a customer opens is tagged (C.5). Programme page: 'Receive a commission for every referred user.'",
+  "validation_conditions": "Terms C.8: direct referral without manipulating the tracking link; no fraudulent transactions; no self-referrals. Commission is VAT-inclusive (C.7).",
   "commission": {
-    "model_note": "CPA and revenue-share options depending on traffic source; no rates published.",
+    "model_note": "Programme page: CPA and Revenue Share options by traffic source, no rates. Affiliate terms C.1 (updated May 2024): CPA, CPC, CPI, CPL/CPV, fixed fee, revenue share and hybrids; rates \"determined by Bitpanda\" and shown in the Affiliate Account only; revenue share = % of Net Revenue (C.1(vi)); Bitpanda may change or end models at any time. Programme currency EUR (C.2–C.3).",
     "status": "unknown"
   },
   "attribution": {
@@ -25,8 +27,9 @@
   },
   "payout": {
     "threshold": "not stated",
-    "method": "not stated",
-    "frequency": "not stated"
+    "method": "Paid to the affiliate's Impact Radius account, in EUR (terms C.2); Bitpanda not liable for currency risk (C.3)",
+    "frequency": "Billing period chosen by Bitpanda, e.g. monthly (C.4); weekly or monthly plans changeable on 24 h notice (I.1); payment \"within a reasonable timeframe\" (C.5)",
+    "cancellation_note": "Either party may terminate immediately with or without cause (J.1). J.2(b) says no further payment obligations after termination, while J.3 preserves accrued commission unless the affiliate breached — internal contradiction."
   },
   "reporting": {
     "dashboard": true,
@@ -35,16 +38,28 @@
     "postback": false,
     "status": "hypothesis"
   },
-  "rules_note": "FAQ headings mention PPC and country restrictions but answers were not retrievable.",
-  "allowed_countries_note": "Not retrievable.",
+  "rules_note": "Affiliate terms (updated May 2024, Austrian law K.1): no brand bidding or Bitpanda brands/misspellings in ads, ads must land on affiliate websites, Bitpanda landing page usable on affiliate websites only (E.13–E.14); email only if explicitly agreed, no unsolicited email (E.15); no SMS/fax/telemarketing/offline/malware/doorway pages/iframes (E.16); no cashback or other incentives without written approval (E.12); no competitor promotion during the term (E.22); fraud clauses E.23–E.33. exchange.bitpanda.com excluded (A.6). German-resident new customers may only be referred to Bitpanda Asset Management (E.4). Programme page FAQ answers still not rendered to the fetcher.",
+  "allowed_countries_note": "Terms Annex I lists permitted territories per product (anything not listed is restricted, A.15/E.7); the table was only partly extracted (Åland Islands, Czech Republic, Faroe Islands visible) and has a \"Bitpanda Card\" column whose rows were not readable. Prohibited jurisdictions include Afghanistan, Cuba, Iran, Russia, Netherlands, Philippines, US Virgin Islands and others.",
   "evidence": [
     {
       "url": "https://www.bitpanda.com/en/affiliate",
       "title": "Bitpanda Affiliate Programme page",
       "accessed_at": "2026-10-26T21:30:00Z",
       "excerpt": "CPA and Revenue Share options; apply via Impact; FAQ answers not in extracted content."
+    },
+    {
+      "url": "https://www.bitpanda.com/en/affiliate-programme",
+      "title": "Bitpanda Affiliate Programme page (re-read 2026-11-10; /en/affiliate now served at /en/affiliate-programme)",
+      "accessed_at": "2026-11-10T04:55:00Z",
+      "excerpt": "'Receive a commission for every referred user'; 'CPA and Revenue Share options' by traffic source; Apply now → app.impact.com campaign Bitpanda1649085811694; twelve FAQ headings (websites, social, PPC, countries, payment) listed without answers; card shown only as a product feature, not as a commissionable action; no rates, dates or terms link."
+    },
+    {
+      "url": "https://www.bitpanda.com/en/legal/terms-and-conditions-affiliates",
+      "title": "Bitpanda Terms & Conditions for Affiliates (updated May 2024)",
+      "accessed_at": "2026-11-10T04:55:00Z",
+      "excerpt": "Bitpanda GmbH (+ Bitpanda Asset Management GmbH for Germany); Impact Radius registration, 18+; CPA/CPC/CPI/CPL/fixed/revshare/hybrid, rates set in the Affiliate Account; EUR; payout to Impact account, e.g. monthly; no brand bidding, email only if agreed, no incentives without approval; Annex I territories per product incl. a Bitpanda Card column (rows not extracted); Austrian law."
     }
   ],
   "verification": "hypothesis",
-  "notes": "Terms must be read inside Impact after application; nothing more is public."
+  "notes": "Terms must be read inside Impact after application; nothing more is public. 2026-11-10: programme page re-read (unchanged in substance, FAQ answers still unreadable) and the official affiliate T&C read for the first time: contractual framework now documented, but rates stay inside the Impact account. Whether the Bitpanda Card is a commissionable product depends on Annex I (not extracted) — browser read of the Annex needed. No application made."
 }

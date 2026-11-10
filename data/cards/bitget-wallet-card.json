@@ -331,8 +331,8 @@
   "links": {
     "official_url": "https://web3.bitget.com/en/card",
     "affiliate": {
-      "program_id": null,
-      "status": "none",
+      "program_id": "bitget-wallet-affiliate",
+      "status": "identified",
       "url": null
     }
   },
@@ -352,6 +352,13 @@
         "ev-bgw-blog-0fees"
       ],
       "actor": "claude (research run)"
+    },
+    {
+      "date": "2026-11-10T04:55:00Z",
+      "field": "links.affiliate",
+      "reason": "Affiliate run 2026-11-10: official Bitget Wallet Affiliate Program identified (card activation and spend commissions); linked with status identified, no URL. Product data untouched.",
+      "evidence": [],
+      "actor": "claude (affiliate run)"
     }
   ],
   "editorial": {
