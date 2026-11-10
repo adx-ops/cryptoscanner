@@ -1,0 +1,810 @@
+{
+  "schema_version": "1.0.0",
+  "id": "crypto-com-visa-credit-card-us",
+  "slug": "crypto-com-visa-credit-card-us",
+  "name": "Crypto.com Visa Signature Credit Card (US)",
+  "brand": "Crypto.com",
+  "provider_id": "crypto-com",
+  "issuer": {
+    "name": "Comenity Capital Bank (Bread Financial), Salt Lake City, Utah",
+    "status": "verified",
+    "evidence": [
+      "ev-cdc-us-credit-agreement",
+      "ev-cdc-us-cards-page",
+      "ev-cdc-us-launch-news"
+    ]
+  },
+  "network": "visa",
+  "category": "credit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "unknown",
+    "supported_assets_note": "Unsecured US credit card (Visa Signature) repaid in USD under a Comenity Capital Bank account agreement; no crypto collateral. Rewards are paid in CRO or, since 19 May 2026 and on the cardholder's choice, in BTC, to the Crypto.com App wallet. Distinct from the Crypto.com Visa prepaid card (EEA record crypto-com-visa-card).",
+    "evidence": [
+      "ev-cdc-us-credit-agreement",
+      "ev-cdc-us-rewards-terms",
+      "ev-cdc-us-btc-rewards-help"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": 31.74,
+    "ltv_percent": "unknown",
+    "liquidation_risk": "Unsecured credit card: no crypto collateral and no liquidation. Purchase and balance-transfer APR 17.74%, 25.74% or 31.74% 'based upon your creditworthiness', variable with the Prime Rate (Prime + 10.74% / 18.74% / 24.74%); cash advance APR 32.74%; penalty APR up to 39.99% after a late payment; minimum interest charge $3.00; late payment and returned payment fees up to $41 each ($30 if none in the prior six billing periods). apr_percent records the highest purchase APR of the range (Rate and Fee Summary printed November 2026).",
+    "evidence": [
+      "ev-cdc-us-credit-agreement"
+    ]
+  },
+  "variants": [
+    {
+      "id": "crypto-com-visa-credit-card-us",
+      "region_label": "United States",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "US"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "usage_note": "Help centre: the card is 'only available to US users', 'available in US states where the Crypto.com App operates' (the linked state list was not read this run). Rewards Program Terms (as of 2 September 2025): participants must be at least 18 and must not be residents of New York. Applicants must already hold a verified Crypto.com App account; 'Credit card offers are subject to credit approval.'",
+        "evidence": [
+          "ev-cdc-us-apply-help",
+          "ev-cdc-us-rewards-terms",
+          "ev-cdc-us-cards-page"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "other"
+        ],
+        "thresholds_note": "No thresholds: a verified Crypto.com App account (app onboarding / KYC) is a precondition, then a credit application.",
+        "stages_note": "1) Sign up for the Crypto.com App and 'complete the onboarding process' (KYC verification article linked, not read this run). 2) Pre-qualification with a soft inquiry that 'will not affect your credit score'. 3) Application requiring 'a complete and accurate name, address, date of birth and social security number' and 'a credit check and approval'. Physical card shipped within 14 business days; virtual card usable in Apple Wallet / Google Wallet before delivery.",
+        "evidence": [
+          "ev-cdc-us-apply-help",
+          "ev-cdc-us-credit-agreement"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "basic",
+          "name": "Basic (Midnight Blue) — Level Up free tier",
+          "access": {
+            "type": "free",
+            "note": "Rewards Program Terms: the no-cost Level Up tier has 'no requirement'. Card: 'Annual Fee: None' (account agreement).",
+            "status": "verified",
+            "evidence": [
+              "ev-cdc-us-rewards-terms",
+              "ev-cdc-us-credit-agreement"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "No card issuance or replacement fee appears in the Rate and Fee Summary; the physical card 'will be automatically issued' on approval (help centre).",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement",
+                "ev-cdc-us-apply-help"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "'Annual Fee: None' (Rate and Fee Summary); Basic Level Up tier has no subscription.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement",
+                "ev-cdc-us-rewards-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'Foreign Transaction: 3.0% of each transaction in U.S. dollars' (Rate and Fee Summary printed November 2026).",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 5,
+              "min": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Cash advance fee 'Either $10.00 or 5.0% of the amount of each cash advance, whichever is greater'; cash advance APR 32.74% variable, charged from the transaction date. Cash advances earn no rewards.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement",
+                "ev-cdc-us-rewards-terms"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Credit card: there is no top-up; purchases are repaid by statement in USD. Interest applies to carried balances (purchase APR 17.74%–31.74%). An 'Alternative Payment Method Fee' of 'up to $15' may apply to some payment channels.",
+              "status": "calculated",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 41,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Late payment fee 'Up to $41.00' ($30 if no late fee in the prior six billing periods); returned payment fee 'Up to $41.00' on the same pattern; balance transfer fee $10 or 5%, whichever is greater.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1.5,
+              "payout": {
+                "kind": "token",
+                "code": "CRO"
+              },
+              "requires": "none",
+              "excluded_categories": [
+                "balance transfers and cash advances",
+                "crypto transactions on Crypto.com",
+                "cash equivalents and person-to-person payments",
+                "interest charges and fees of any kind",
+                "purchases via third-party payment accounts (e.g. PayPal, Venmo)",
+                "unauthorised or fraudulent charges"
+              ],
+              "conditions": "Rewards Program Terms (as of 2 September 2025): Midnight Blue earns 1.5% in CRO, no monthly cap stated; CRO 'may take up to two billing cycles' to be confirmed; earn date is the purchase date. Alternative since 19 May 2026 (help centre, product news): the cardholder may choose BTC instead of CRO at the same 1.5% on 'the first $250 spent every month', then 1.0%; CRO rewards 'are not subject to a monthly cap'. Refunds claw back the reward in the token received. Account delinquency or misuse suspends earning.",
+              "description": "1.5% back in CRO (or BTC on the first $250/month, then 1%)",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-btc-rewards-help",
+                "ev-cdc-us-btc-rewards-news",
+                "ev-cdc-us-cards-page"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "Credit limit set by the issuer at approval; no published figure.",
+              "status": "unknown"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "plus",
+          "name": "Plus (Ruby) — Level Up tier 2",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 4.99,
+              "currency": "USD"
+            },
+            "period": "month",
+            "note": "Rewards Program Terms: '$4.99/month, $49.99/year, or $500 CRO lock-up' (the marketing page shows '$49.90 yearly (16% off)' — contradiction recorded). Lock-up alternative: $500 of CRO locked for 12 months.",
+            "status": "verified",
+            "evidence": [
+              "ev-cdc-us-rewards-terms",
+              "ev-cdc-us-cards-page"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "No card issuance or replacement fee in the Rate and Fee Summary.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "USD"
+              },
+              "period": "month",
+              "conditions": "Level Up Plus subscription $4.99/month or $49.99/year (Rewards Program Terms) — alternatively a $500 CRO lock-up for 12 months. The card itself has no annual fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'Foreign Transaction: 3.0% of each transaction in U.S. dollars'.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 5,
+              "min": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Cash advance fee $10 or 5%, whichever is greater; cash advance APR 32.74%.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Credit card: no top-up; balance repaid in USD, interest on carried balances.",
+              "status": "calculated",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 3.5,
+              "payout": {
+                "kind": "token",
+                "code": "CRO"
+              },
+              "requires": "subscription",
+              "excluded_categories": [
+                "balance transfers and cash advances",
+                "crypto transactions on Crypto.com",
+                "cash equivalents and person-to-person payments",
+                "interest charges and fees of any kind",
+                "purchases via third-party payment accounts"
+              ],
+              "conditions": "Ruby: 3.5% in CRO (Rewards Program Terms, no cap stated); or BTC at 3.5% on the first $500 spent each month, then 2.0% (help centre, May 2026). Requires an active Level Up Plus subscription or CRO lock-up. The marketing page advertises 'boosted' rates for the first 12 months on Ruby and above without stating the boosted figure for this tier.",
+              "description": "3.5% back in CRO (or BTC on the first $500/month, then 2%)",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-btc-rewards-help",
+                "ev-cdc-us-cards-page"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "pro",
+          "name": "Pro (Jade / Indigo) — Level Up tier 3",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 29.99,
+              "currency": "USD"
+            },
+            "period": "month",
+            "note": "Rewards Program Terms: '$29.99/month, $299.99/year, or $5,000 CRO lock-up' (12 months).",
+            "status": "verified",
+            "evidence": [
+              "ev-cdc-us-rewards-terms"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "No card issuance or replacement fee in the Rate and Fee Summary.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 29.99,
+                "currency": "USD"
+              },
+              "period": "month",
+              "conditions": "Level Up Pro subscription $29.99/month or $299.99/year — alternatively a $5,000 CRO lock-up for 12 months. The card itself has no annual fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'Foreign Transaction: 3.0% of each transaction in U.S. dollars'.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 5,
+              "min": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Cash advance fee $10 or 5%, whichever is greater; cash advance APR 32.74%.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Credit card: no top-up; balance repaid in USD, interest on carried balances.",
+              "status": "calculated",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4.5,
+              "payout": {
+                "kind": "token",
+                "code": "CRO"
+              },
+              "requires": "subscription",
+              "excluded_categories": [
+                "balance transfers and cash advances",
+                "crypto transactions on Crypto.com",
+                "cash equivalents and person-to-person payments",
+                "interest charges and fees of any kind",
+                "purchases via third-party payment accounts"
+              ],
+              "conditions": "Jade/Indigo: 4.5% in CRO (Rewards Program Terms, no cap stated); or BTC at 4.5% on the first $1,000 spent each month, then 2.0% (help centre, May 2026). Priority Pass lounge access: 4 visits/year (Rewards Program Terms).",
+              "description": "4.5% back in CRO (or BTC on the first $1,000/month, then 2%)",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-btc-rewards-help"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "private-icy",
+          "name": "Private Icy / Rose — Level Up tier 4",
+          "access": {
+            "type": "lock",
+            "token": "CRO",
+            "lock_months": 12,
+            "note": "Rewards Program Terms: '$50,000 CRO lock-up only' (USD value of CRO locked for 12 months; no subscription alternative). token_amount is not stated in CRO units, only as a USD value.",
+            "status": "verified",
+            "evidence": [
+              "ev-cdc-us-rewards-terms"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "No card issuance or replacement fee in the Rate and Fee Summary.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "No subscription: access is by CRO lock-up ($50,000 for 12 months). The card has no annual fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'Foreign Transaction: 3.0% of each transaction in U.S. dollars'.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 5,
+              "min": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Cash advance fee $10 or 5%, whichever is greater; cash advance APR 32.74%.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Credit card: no top-up; balance repaid in USD, interest on carried balances.",
+              "status": "calculated",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 5,
+              "payout": {
+                "kind": "token",
+                "code": "CRO"
+              },
+              "requires": "lock",
+              "excluded_categories": [
+                "balance transfers and cash advances",
+                "crypto transactions on Crypto.com",
+                "cash equivalents and person-to-person payments",
+                "interest charges and fees of any kind",
+                "purchases via third-party payment accounts"
+              ],
+              "conditions": "Icy/Rose: 5% in CRO (Rewards Program Terms, no cap stated); or BTC at 5.0% on the first $5,000 spent each month, then 2.0% (help centre, May 2026). Unlimited Priority Pass lounge access with one guest.",
+              "description": "5% back in CRO (or BTC on the first $5,000/month, then 2%)",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-btc-rewards-help"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "private-obsidian",
+          "name": "Private Obsidian — Level Up tier 5",
+          "access": {
+            "type": "lock",
+            "token": "CRO",
+            "lock_months": 12,
+            "note": "Rewards Program Terms: '$500,000 CRO lock-up only' (USD value of CRO locked for 12 months). The help centre also lists a 'Prime' tier at the same rate (not in the Rewards Program Terms read).",
+            "status": "verified",
+            "evidence": [
+              "ev-cdc-us-rewards-terms",
+              "ev-cdc-us-btc-rewards-help"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "No card issuance or replacement fee in the Rate and Fee Summary.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "No subscription: access is by CRO lock-up ($500,000 for 12 months). The card has no annual fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 3,
+              "period": "per_transaction",
+              "conditions": "'Foreign Transaction: 3.0% of each transaction in U.S. dollars'.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 5,
+              "min": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Cash advance fee $10 or 5%, whichever is greater; cash advance APR 32.74%.",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Credit card: no top-up; balance repaid in USD, interest on carried balances.",
+              "status": "calculated",
+              "evidence": [
+                "ev-cdc-us-credit-agreement"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 6,
+              "payout": {
+                "kind": "token",
+                "code": "CRO"
+              },
+              "requires": "lock",
+              "excluded_categories": [
+                "balance transfers and cash advances",
+                "crypto transactions on Crypto.com",
+                "cash equivalents and person-to-person payments",
+                "interest charges and fees of any kind",
+                "purchases via third-party payment accounts"
+              ],
+              "conditions": "Obsidian: 6% in CRO (Rewards Program Terms, no cap stated); or BTC at 6.0% on the first $10,000 spent each month, then 2.0% (help centre, May 2026). The marketing page's meta description cites '6.5%' for Obsidian for 12 months — not found in the terms, not modelled. Unlimited Priority Pass lounge access with one guest.",
+              "description": "6% back in CRO (or BTC on the first $10,000/month, then 2%)",
+              "status": "verified",
+              "evidence": [
+                "ev-cdc-us-rewards-terms",
+                "ev-cdc-us-btc-rewards-help",
+                "ev-cdc-us-cards-page"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-cdc-us-credit-agreement",
+      "url": "https://d.comenity.net/legaldocs/cryptocom/legal-documents/cca",
+      "title": "Crypto.com Visa Signature Credit Card — Rate and Fee Summary, Credit Card Agreement and Pricing Addendum (Comenity Capital Bank, Summary printed November 2026)",
+      "source_type": "issuer_doc",
+      "excerpt": "Issuer Comenity Capital Bank; purchase APR 17.74%, 25.74% or 31.74% by creditworthiness, variable (Prime + 10.74/18.74/24.74%); cash advance APR 32.74%; penalty APR up to 39.99%; Annual Fee: None; Foreign Transaction: 3.0% of each transaction in U.S. dollars; cash advance $10 or 5%, whichever is greater; late / returned payment up to $41; minimum interest $3; Utah law.",
+      "accessed_at": "2026-11-10T05:58:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD",
+        "note": "The document states no effective date; the Rate and Fee Summary says 'printed November 2026', the privacy notice 'rev. 10/2026'. Application text asks for name, address, date of birth and social security number; no age or residency clause read."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cdc-us-rewards-terms",
+      "url": "https://crypto.com/document/us_credit_card",
+      "title": "Crypto.com Visa Signature Credit Card — Level Up Rewards Program Terms (as of September 2, 2025)",
+      "source_type": "official_terms",
+      "excerpt": "Program provided and serviced by Crypto.com; card issued by Comenity Capital Bank; base CRO earn Midnight Blue 1.5%, Ruby 3.5%, Jade/Indigo 4.5%, Icy/Rose 5%, Obsidian 6%; CRO may take up to two billing cycles; exclusions incl. cash advances, crypto purchases, fees; US Level Up: tier 2 $4.99/mo, $49.99/yr or $500 CRO lock-up; tier 3 $29.99/mo, $299.99/yr or $5,000; tier 4 $50,000; tier 5 $500,000.",
+      "accessed_at": "2026-11-10T05:58:00Z",
+      "effective_from": "2025-09-02",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD",
+        "note": "No monthly caps and no welcome-bonus amounts in this document; the BTC payout option (May 2026) post-dates it."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cdc-us-btc-rewards-help",
+      "url": "https://help.crypto.com/en/articles/15112463-crypto-com-visa-signature-credit-card-btc-rewards",
+      "title": "Help centre — Crypto.com Visa Signature Credit Card: BTC Rewards (page dated May 28, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Starting May 19, 2026 cardholders choose BTC or CRO. BTC: Basic 1.5% on the first $250/month then 1.0%; Plus 3.5%/$500 then 2.0%; Pro 4.5%/$1,000 then 2.0%; Private Icy 5.0%/$5,000 then 2.0%; Obsidian and Prime 6.0%/$10,000 then 2.0%. CRO: same rates, no caps shown. Later switches apply from the next month. Refunds clawed back in the token received; welcome bonuses always paid in CRO.",
+      "accessed_at": "2026-11-10T05:55:00Z",
+      "effective_from": "2026-05-19",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cdc-us-btc-rewards-news",
+      "url": "https://crypto.com/eea/product-news/btc-rewards-crypto-visa-card",
+      "title": "Product news — Introducing BTC Rewards for the Crypto.com Visa Signature Credit Card (19 May 2026)",
+      "source_type": "help_center",
+      "excerpt": "Table: Basic 1.5% on first $250/month then 1.0%; Plus 3.5% / $500 then 2.0%; Pro 4.5% / $1,000 then 2.0%; Private Icy 5.0% / $5,000 then 2.0%; Private Obsidian 6.0% / $10,000 then 2.0%; 'CRO rewards have no monthly cap'; BTC offer exclusive to Level Up enrolees; 'No Annual Fee'; Level Up subscription renews automatically; Priority Pass for Pro and Private tiers.",
+      "accessed_at": "2026-11-10T05:52:00Z",
+      "effective_from": "2026-05-19",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD",
+        "note": "Official Crypto.com announcement page (served under the /eea path, content about the US card)."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cdc-us-cards-page",
+      "url": "https://crypto.com/us/cards",
+      "title": "Crypto.com US — Visa Signature Credit Card product page",
+      "source_type": "pricing_page",
+      "excerpt": "Issued by Comenity Capital Bank pursuant to a license from Visa U.S.A. Inc.; $0 annual credit card fees; Earn up to 6% back in BTC or CRO; Basic FREE, Plus $4.99/month or $49.90 yearly or $500 12-month CRO staking; BTC caps $250/$500/$1,000/$5,000/$10,000; CRO rewards not subject to a monthly cap; welcome bonus $300 (hero) vs $100/$200 (table); subject to credit approval.",
+      "accessed_at": "2026-11-10T05:47:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "contradictory",
+      "contradiction_note": "Plus yearly price '$49.90' on this page vs '$49.99/year' in the Rewards Program Terms (terms modelled). Headline rates 4.5% (hero), 'up to 6%' (body) and '6.5%' (meta description, Obsidian 12-month boost) — the boost is not in the terms and is not modelled. Welcome bonus '$300' (hero) vs $100/$200 (table), no dates — not modelled."
+    },
+    {
+      "id": "ev-cdc-us-apply-help",
+      "url": "https://help.crypto.com/en/articles/11502058-applying-for-a-crypto-com-visa-signature-credit-card",
+      "title": "Help centre — Applying for a Crypto.com Visa Signature Credit Card (page dated June 5, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Only available to US users; available in US states where the Crypto.com App operates (state list linked); steps: sign up for the App and complete onboarding (KYC), pick a Level Up plan, pre-qualify (soft inquiry, will not affect your credit score), apply, subscribe or lock up/stake CRO; requires a credit check and approval; physical card shipped within 14 business days; Apple/Google Wallet first.",
+      "accessed_at": "2026-11-10T05:55:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD",
+        "note": "The state list and the KYC article are linked but were not read this run."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cdc-us-launch-news",
+      "url": "https://crypto.com/us/company-news/creditcardus",
+      "title": "Company news — Crypto.com selects Bread Financial to launch a crypto-based rewards credit card in the U.S. (April 24, 2025)",
+      "source_type": "help_center",
+      "excerpt": "Accounts are issued by Comenity Capital Bank pursuant to a license from Visa U.S.A. Inc.; Visa Signature; 1.5 to 5% back on purchases, paid in CRO across five tiers (pre-launch figures); boosted rates for the first 12 months on Ruby and above; higher tiers require CRO lock-up or staking for 12 months; Spotify/Netflix rebates; credit card offers are subject to credit approval.",
+      "accessed_at": "2026-11-10T05:52:00Z",
+      "effective_from": "2025-04-24",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD",
+        "note": "Pre-launch announcement; used for issuer and programme structure only."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://crypto.com/us/cards",
+    "affiliate": {
+      "program_id": "crypto-com-affiliate",
+      "status": "terms_verified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-10T05:58:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-10T06:10:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from the Comenity Capital Bank account agreement (Rate and Fee Summary printed November 2026), the Level Up Rewards Program Terms (as of 2025-09-02), the help-centre articles on applying (2026-06-05) and BTC rewards (2026-05-28), the BTC-rewards product news (2026-05-19), the US product page and the April 2025 launch announcement. Issuer, APR range, 3% foreign transaction fee, cash-advance and penalty fees, no annual fee, five Level Up tiers with US prices/lock-ups and base CRO rates established; BTC option with monthly spend caps recorded in the reward conditions (single reward per tier to avoid double counting). Not read: the state availability list, the KYC article, the Level Up subscription terms page. Welcome bonuses and 12-month boosted rates not modelled (no dates/amounts in the terms). Second read required before publication.",
+      "evidence": [
+        "ev-cdc-us-credit-agreement",
+        "ev-cdc-us-rewards-terms",
+        "ev-cdc-us-btc-rewards-help",
+        "ev-cdc-us-cards-page"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "US-only unsecured Visa Signature credit card issued by Comenity Capital Bank (Bread Financial) for Crypto.com: no annual fee, 3% foreign transaction fee, purchase APR 17.74%–31.74% variable. Rewards follow the Level Up tier — 1.5% (free) to 6% (US$500,000 CRO lock-up) — paid in CRO without a cap, or in BTC up to a monthly spend cap ($250 to $10,000) then 1–2%. Paid tiers cost $4.99 or $29.99 a month (or a CRO lock-up).",
+    "good_for": [
+      "US residents (outside New York) who already use the Crypto.com App and want crypto rewards on a credit card without collateral",
+      "Spenders who stay within the BTC monthly caps, or who prefer uncapped CRO rewards",
+      "Travellers interested in Priority Pass access (Pro and Private tiers)"
+    ],
+    "not_for": [
+      "Anyone outside the United States — the card is 'only available to US users'",
+      "Spending abroad: 3% foreign transaction fee on every non-USD transaction",
+      "Carrying a balance: APR up to 31.74% (penalty APR up to 39.99%) would outweigh any reward",
+      "Cash withdrawals: cash advances cost $10 or 5% plus 32.74% APR from day one"
+    ],
+    "watch_outs": [
+      "Rewards above the free tier require a paid Level Up subscription ($4.99 or $29.99/month) or a 12-month CRO lock-up ($500 to $500,000) — the subscription is a cost the calculator deducts; the lock-up exposes you to CRO price risk.",
+      "CRO rewards are uncapped but paid in Crypto.com's own token; BTC rewards are capped at $250–$10,000 of monthly spend, then 1–2%.",
+      "Pricing pages disagree on small points (Plus yearly $49.90 vs $49.99; headline 4.5% / 6% / 6.5%) and advertise welcome bonuses ($100–$300 in CRO) without dated terms — none of these promotions is modelled.",
+      "The state availability list and the Crypto.com KYC article were not read this run; a credit check (soft pre-qualification, then full application with SSN) is required.",
+      "Rewards 'may take up to two billing cycles' to confirm; refunds claw back rewards in the token received."
+    ]
+  }
+}

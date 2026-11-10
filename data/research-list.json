@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-09.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-10.",
   "target": {
     "min": 15,
     "max": 50
@@ -208,6 +208,28 @@
       "record": "data/cards/tria-card.json",
       "note": "International (3 tiers) + US (Lite) variants (self-custodial, collateral-backed Visa credit card at 0% APR; issuer Nimbus, LLC intl / Third National US; operator Threely Dimensions Inc.; Nigeria marketed by BANEX Microfinance Bank) from 9 official pages read 2026-11-09: Card Terms International (last updated 2026-01-09, fee disclosures effective 2025-10-31), Card Terms USA (2026-01-09), help centre: What are Tria Cards, Memberships (2026-09-30), KYC (2026-03-20), How to get a card (2026-09-30), Top-up guide, Cashback Season 3 guide (2026-10-08), Cashback FAQ. Verified: card issue + annual fee US$25 virtual / US$109 plastic / US$250 metal; FX up to 3% + international up to 1%; USDC deposit up to 1%; ATM up to US$2 + 3%, US$750/day (Pro, Max); cashback 1.5% / 4.5% / 6% in USDT (Arbitrum) on up to US$1,000 / US$2,000 / US$2,000 monthly spend, then 0.5% / 1% / 1%, membership required, batches (quarterly, up to 90 days); KYC after purchase: ID + live selfie, in-country presence, 18+. Contradictions: help centre 'zero deposit fees and zero foreign exchange fees' vs the terms (terms modelled, fees flagged contradictory); Pro cap $1,000 (cards article) vs $2,000 (Season 3 guide, FAQ); Lite after-cap 1% vs 0.5%. Unknown: country list ('over 200 supported regions', app decides), delivery fee, LTV for non-stable collateral, US card issue/deposit fee. Not fetchable (provenance): docs.tria.so/card-cashback-terms, blogs.tria.so season-3 post. Affiliate: Ambassador Program identified (data/affiliate/tria-ambassador.json), multi-level commissions, nobody contacted. Second read required before publication.",
       "needs_browser_read": true
+    },
+    {
+      "provider": "Crypto.com (US)",
+      "product": "Crypto.com Visa Signature Credit Card (US)",
+      "status": "validated",
+      "record": "data/cards/crypto-com-visa-credit-card-us.json",
+      "note": "US variant (unsecured Visa Signature credit card; issuer Comenity Capital Bank / Bread Financial; distinct from the EEA prepaid record) from 7 official pages read 2026-11-10: Comenity account agreement + Rate and Fee Summary (printed Nov 2026), Level Up Rewards Program Terms (as of 2025-09-02), help centre: Applying (2026-06-05), BTC Rewards (2026-05-28), product news BTC rewards (2026-05-19), crypto.com/us/cards, launch announcement (2025-04-24). Verified: no annual fee; foreign transaction 3%; purchase APR 17.74–31.74% variable, cash advance 32.74%, penalty up to 39.99%; cash advance $10 or 5%; late/returned payment up to $41; five Level Up tiers — Basic free 1.5%, Plus $4.99/mo or $49.99/yr or $500 CRO lock-up 3.5%, Pro $29.99/mo or $299.99/yr or $5,000 lock-up 4.5%, Private Icy $50,000 lock-up 5%, Obsidian $500,000 lock-up 6% — paid in CRO uncapped or BTC capped at $250/$500/$1,000/$5,000/$10,000 monthly spend then 1–2%; US only, 18+, not New York residents; KYC via the App + SSN credit application. Contradictions: Plus yearly $49.90 (product page) vs $49.99 (terms); headline 4.5%/6%/6.5%; welcome bonus $300 vs $100/$200 (no dated terms, not modelled). Not read: state availability list, KYC article. Affiliate: existing crypto-com-affiliate (terms_verified). Second read required before publication."
+    },
+    {
+      "provider": "Xapo Bank",
+      "product": "Xapo Bank Debit Card",
+      "status": "validated",
+      "record": "data/cards/xapo-bank-card.json",
+      "needs_browser_read": true,
+      "note": "International variant (USD debit card bundled with the US$1,000/year membership; issuer Xapo Bank Limited, Gibraltar, GFSC permission 23171; network Visa for new cards) from 6 official pages read 2026-11-10: fee schedule legal.xapobank.com/fees (2026-06-25), Company & Membership FAQ, membership-benefits page (approved 28.10.2026), card blog (2025-06-25), support article What is the Xapo Card (2025-05-07), referral page. Verified: membership 1,000 USD/year incl. metal card (issuance 0 USD, replacement free once a year then 25 USD); FX 0; ATM free up to 100 USD/month then 2%; SWIFT in 0.3%, FedACH 0.50 + 0.1%; dormancy 50/100 USD/yr; 28 prohibited countries incl. US, RU, UA, RS, BA; KYC ID + proof of address, 18+. Contradictory (excluded from calculator): cashback 2% in BTC up to a balance-based monthly allowance (Oct 2026 page) vs up to 1% (June 2025 blog), allowance formula not published, cashback FAQ redirects to the help hub; BTC spend spread 0.29% (schedule) vs 0.1% (blog). Unknown: positive country list, spending limits, standard delivery fee, dedicated card terms. Affiliate: member referral only (data/affiliate/xapo-bank-referral.json, $500 in BTC each, requires a paid membership). Browser read of the cashback FAQ + second read required before publication."
+    },
+    {
+      "provider": "Hyperbeat",
+      "product": "Hyperbeat Pay Card",
+      "status": "blocked",
+      "needs_browser_read": true,
+      "note": "Blocked 2026-11-10: official docs (docs.hyperbeat.org/liquid-banking/hyperbeat-pay) are an overview only — Visa card, Direct Pay / Credit mode, no fees, terms, issuer, KYC or countries; docs index has no such pages; legal page not fetchable (provenance); ordering inside app.hyperbeat.org (client-rendered). Browser session required."
     }
   ],
   "no_kyc_track": {
@@ -223,7 +245,9 @@
         "product": "SolCard",
         "claim": "virtual Mastercard without ID, $5,000/month (third-party); no-KYC Visa cancelled June 2025",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "validated",
+        "record": "data/cards/solcard.json",
+        "note": "Validated 2026-11-10 (inclusion rule 2026-11-09 met) from solcard.cc/fees (as of 2026-08-15), /terms (2026-09-27) and /referral (2026-11-04). Operator SC PAYMENTS LIMITED (Hong Kong) named, card issuer not disclosed (allowed). Fees published: Virtual $10 issuance, 5% top-up, FX 1-2%, $10,000/month limit, no monthly/annual fee; Platinum 0% top-up, FX 0-1.5%, no limit; dormancy 10%/month after 90 days. Verification stage stated by the operator: Virtual = email-only tier, Platinum requires identity verification; no amount threshold. Not available to Hong Kong residents; no no-solicitation clause. Unknown: ATM, cashback rate (terms mention cashback with 90-day expiry), country list, conversion spread. Referral programme recorded (data/affiliate/solcard-referral.json): share of deposit fees 5-40%, paid in USDT — fee-share incentive flagged for David. help.solcard.cc not read. Second read required before publication."
       },
       {
         "product": "Bing Card",
@@ -274,7 +298,9 @@
         "product": "UTORG Card",
         "claim": "low-KYC, EEA/Ukraine, €0 annual",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "needs_browser_read": true,
+        "note": "2026-11-10: utorg.pro/faq redirects to utorg.com/personal, which the fetcher cannot open (provenance — URL not returned by any search); no other utorg.com page indexed for the card. No official affiliate/referral page found by search. Not blocked: read utorg.com (card, fees, verification, countries) in a browser session."
       },
       {
         "product": "Kripicard",
@@ -310,5 +336,5 @@
       }
     ]
   },
-  "updated": "2026-11-09"
+  "updated": "2026-11-10"
 }

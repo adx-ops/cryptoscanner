@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "entries": [
     {
       "provider": "Wirex",
@@ -506,12 +506,18 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "operator_named": null,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "operator_named": true,
+      "affiliate_hint": "member referral programme only ($500 in BTC each) — data/affiliate/xapo-bank-referral.json",
+      "status": "validated",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": 4
+      "priority": 0,
+      "record": "data/cards/xapo-bank-card.json",
+      "regions": [
+        "international — 28 excluded countries incl. US; no positive list"
+      ],
+      "validation_note": "Validated 2026-11-10 from legal.xapobank.com/fees (2026-06-25), Company & Membership FAQ, membership-benefits page (approved 28.10.2026), card blog 2025-06-25, support article 2025-05-07, referral page. Cashback contradictory (2% vs up to 1% in BTC, allowance formula unpublished); cashback FAQ URL redirects to the help hub — browser read advisable.",
+      "needs_browser_read": true
     },
     {
       "provider": "ZEN.COM",
@@ -874,12 +880,14 @@
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": true,
-      "operator_named": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "operator_named": true,
+      "affiliate_hint": "referral programme (deposit-fee share 5-40%, USDT) — data/affiliate/solcard-referral.json",
+      "status": "validated",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": 1
+      "priority": 0,
+      "record": "data/cards/solcard.json",
+      "validation_note": "Validated 2026-11-10 (no-KYC track) from solcard.cc fees/terms/referral pages."
     },
     {
       "provider": "Bing",
@@ -966,7 +974,9 @@
       "status": "identified",
       "first_seen": "2026-10-28",
       "last_seen": "2026-10-28",
-      "priority": -3
+      "priority": -3,
+      "needs_browser_read": true,
+      "discovery_note": "2026-11-10: utorg.pro/faq redirects to utorg.com/personal, not fetchable without a browser."
     },
     {
       "provider": "Kripicard",
@@ -1270,14 +1280,16 @@
       "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-09",
       "priority": 6,
       "operator_named": true,
       "regions_hint": [
         "global"
-      ]
+      ],
+      "needs_browser_read": true,
+      "blocked_reason": "Blocked 2026-11-10: the only official pages are docs.hyperbeat.org (GitBook) — the Hyperbeat Pay page is a product overview (virtual/physical Visa card, Direct Pay or Credit mode, spend USDC/USDT or borrow against the portfolio) with no fee schedule, no terms, no issuer, no KYC statement and no country list; the docs index (llms.txt) has no fees/terms/eligibility page; the legal page could not be fetched (provenance). Ordering runs in app.hyperbeat.org/pay (client-rendered). Retry with a browser session; fees may live only in the app."
     },
     {
       "provider": "Ledger",
@@ -1516,16 +1528,21 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "Crypto.com Affiliate Program already recorded (data/affiliate/crypto-com-affiliate.json, terms_verified)",
+      "status": "validated",
       "first_seen": "2026-11-09",
       "last_seen": "2026-11-09",
-      "priority": 4,
+      "priority": 0,
       "operator_named": true,
       "regions_hint": [
         "US"
       ],
-      "discovery_note": "Distinct from the EEA prepaid programme (crypto-com-visa-card-eea); directories name Comenity Capital Bank as issuer"
+      "discovery_note": "Distinct from the EEA prepaid programme (crypto-com-visa-card-eea); directories name Comenity Capital Bank as issuer",
+      "record": "data/cards/crypto-com-visa-credit-card-us.json",
+      "regions": [
+        "US"
+      ],
+      "validation_note": "Validated 2026-11-10 from the Comenity Capital Bank account agreement (Rate and Fee Summary printed Nov 2026), the Level Up Rewards Program Terms (2025-09-02), help-centre articles (applying 2026-06-05, BTC rewards 2026-05-28), product news 2026-05-19, US product page and April 2025 launch announcement. Not read: state availability list, KYC article."
     },
     {
       "provider": "Phantom",

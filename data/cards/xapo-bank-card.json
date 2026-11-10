@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xapo-bank-card",
+  "slug": "xapo-bank-card",
+  "name": "Xapo Bank Debit Card",
+  "brand": "Xapo Bank",
+  "provider_id": "xapo-bank",
+  "issuer": {
+    "name": "Xapo Bank Limited (Gibraltar, company no. 111928, credit institution regulated by the GFSC, permission no. 23171)",
+    "status": "verified",
+    "evidence": [
+      "ev-xapo-membership-benefits",
+      "ev-xapo-fees",
+      "ev-xapo-card-blog-2025"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Debit card attached to the Xapo Bank membership account: the card can be linked to the member's USD account, Bitcoin wallet or both (support article). When spending from the BTC wallet the bank applies a spread, announced as 'an ultra-low 0.1% (down from 0.6%)' in June 2025; the fee schedule (June 2026) lists a 0.29% Bitcoin exchange spread for USD-to-Bitcoin exchange without naming card spending. Stablecoin (USDT/USDC) deposits carry a variable spread. Bitcoin and fiat custody by Xapo Bank Limited / Xapo VASP Limited (crypto balances not covered by the Gibraltar Deposit Guarantee Scheme).",
+    "evidence": [
+      "ev-xapo-support-what-is-card",
+      "ev-xapo-card-blog-2025",
+      "ev-xapo-fees",
+      "ev-xapo-membership-benefits"
+    ]
+  },
+  "variants": [
+    {
+      "id": "xapo-bank-card-international",
+      "region_label": "International (Xapo Bank supported jurisdictions)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [
+          "AF",
+          "BY",
+          "BA",
+          "CF",
+          "CU",
+          "CD",
+          "HT",
+          "IR",
+          "IQ",
+          "CI",
+          "LB",
+          "LY",
+          "ML",
+          "MM",
+          "NI",
+          "KP",
+          "PS",
+          "RU",
+          "RS",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "UA",
+          "US",
+          "VE",
+          "YE",
+          "ZW"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Company & Membership FAQ: members must be 'at least 18 years of age and reside in one of our supported jurisdictions'; no positive list of supported jurisdictions is published. The FAQ lists 28 countries whose residents Xapo Bank is 'unable to serve' (modelled as excluded, including the United States, Russia, Ukraine, Serbia and Bosnia and Herzegovina) and warns that 'the list of prohibited countries is subject to change without notice'. UK residents: membership pages mention a UK referral variant and that loans are 'not available to residents of the United Kingdom' — UK card availability to be confirmed.",
+        "evidence": [
+          "ev-xapo-membership-faq",
+          "ev-xapo-membership-benefits"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "proof_of_address"
+        ],
+        "thresholds_note": "Full verification before membership is activated; no thresholds — the card is only available to paying members.",
+        "stages_note": "Company & Membership FAQ: fully digital onboarding with 'identity verification and compliance checks, which require a valid government-issued ID' (e.g. passport) and proof of address ('Know Your Customer (KYC) procedures'); after approval the applicant pays the annual membership fee and makes an initial deposit to activate the account; the card is then ordered in the app (support article).",
+        "evidence": [
+          "ev-xapo-membership-faq",
+          "ev-xapo-support-what-is-card"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "member",
+          "name": "Xapo Bank membership (card included)",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 1000,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Annual membership fee '$1,000 USD' (FAQ; membership-benefits page: '$1000 USD /year', 'subject to constant change'; fee schedule: account package 1000 USD a year covering USD account, 'international premium debit card' and Vault). Fully refunded if membership is cancelled within the first 30 days.",
+            "status": "verified",
+            "evidence": [
+              "ev-xapo-membership-faq",
+              "ev-xapo-membership-benefits",
+              "ev-xapo-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Fee schedule (25 June 2026): 'Metal Card Issuance Fee 0 USD'; first replacement per calendar year free, additional replacements 25 USD, emergency replacement production 100 USD plus shipping. Standard delivery fee not listed.",
+              "status": "verified",
+              "evidence": [
+                "ev-xapo-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 1000,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "The card has no fee of its own; it is included in the 1,000 USD/year membership (fee schedule 'General Account Services': USD account + international premium debit card + Vault).",
+              "status": "verified",
+              "evidence": [
+                "ev-xapo-fees",
+                "ev-xapo-membership-faq"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Fee schedule: 'Debit card payments in a foreign currency: 0 USD', 'operator fees may apply' (merchant / dynamic currency conversion); FAQ and membership page: 'zero foreign exchange markup' / 'no FX fees'. Card account currency is USD.",
+              "status": "verified",
+              "evidence": [
+                "ev-xapo-fees",
+                "ev-xapo-membership-faq",
+                "ev-xapo-membership-benefits"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "conditions": "Fee schedule: ATM withdrawals 'up to 100 USD per month in and outside Gibraltar: 0 USD', above 100 USD per month: '2% of the withdrawal amount'; 'ATM operator fees may apply'.",
+              "status": "verified",
+              "evidence": [
+                "ev-xapo-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.3,
+              "period": "per_transaction",
+              "conditions": "Funding the USD account (fee schedule): receiving USD by SWIFT 0.3%; FedACH deposit 0.50 USD + 0.1%; FedWire 20 USD + 0.1%; 'receiving money from outside Gibraltar 0 USD' (local/SEPA-type transfers); BTC deposits free (deposits below BTC 0.0007 may incur a variable transit fee); USDT/USDC deposits carry a variable spread. Modelled at the SWIFT rate (0.3%) as the general international USD funding route; cheaper routes exist.",
+              "status": "calculated",
+              "evidence": [
+                "ev-xapo-fees"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 0.29,
+              "period": "per_transaction",
+              "conditions": "Fee schedule: 'Bitcoin exchange spread 0.29% included in the quoted price', 'may change at any time without prior notice', no transaction fee for USD-to-Bitcoin exchange. The June 2025 card blog announced a 0.1% spread when spending from the BTC wallet — the two figures are recorded, the dated fee schedule is modelled.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-xapo-fees",
+                "ev-xapo-card-blog-2025"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "fixed",
+              "amount": {
+                "amount": 50,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "Dormancy fees after account closure: fiat dormant account 50 USD/year, cryptocurrency dormant account 100 USD/year (fee schedule).",
+              "status": "verified",
+              "evidence": [
+                "ev-xapo-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "subscription",
+              "conditions": "Membership-benefits page (financial promotion approved 28.10.2026): 'Earn 2% back in Bitcoin on eligible card spending', 'up to a monthly allowance based on your average USD Account balance'; excluded transactions and spend above the allowance earn nothing. The allowance table was not found on any page read (the cashback FAQ URL redirects to the help hub). The June 2025 card blog states 'up to 1% in BTC on qualifying purchases'.",
+              "description": "2% back in BTC on eligible spending, up to a balance-based monthly allowance",
+              "status": "contradictory",
+              "evidence": [
+                "ev-xapo-membership-benefits",
+                "ev-xapo-card-blog-2025",
+                "ev-xapo-support-what-is-card"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "Support article: 'high spending limits', member-controlled in the app; temporary increases via support (blog). No figures published.",
+              "status": "unknown",
+              "evidence": [
+                "ev-xapo-support-what-is-card",
+                "ev-xapo-card-blog-2025"
+              ]
+            },
+            {
+              "type": "other",
+              "note": "Up to five virtual cards for online use (blog, June 2025).",
+              "status": "verified",
+              "evidence": [
+                "ev-xapo-card-blog-2025"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-xapo-fees",
+      "url": "https://legal.xapobank.com/fees",
+      "title": "Xapo Bank — Service Fees and Glossary of Terms (last updated 25 June 2026; PDF 'Fee Information Sheet 20260420')",
+      "source_type": "pricing_page",
+      "excerpt": "Account package 1000 USD a year (USD account, international premium debit card, Vault); Metal Card Issuance Fee 0 USD; replacement: first free per year, then 25 USD, emergency 100 USD; ATM up to 100 USD/month 0 USD, above 2%; debit card payments in a foreign currency 0 USD; Bitcoin exchange spread 0.29%; SWIFT in 0.3%; FedACH 0.50 USD + 0.1%; dormant account 50 / 100 USD per year.",
+      "accessed_at": "2026-11-10T06:00:00Z",
+      "effective_from": "2026-06-25",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Account provider Xapo Bank Limited. No card spending limits, no interest rates on deposits, no standard delivery fee on the page."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-xapo-membership-faq",
+      "url": "https://www.xapobank.com/en/help/faq/company-and-membership",
+      "title": "Xapo Bank help — FAQ: Company & Membership (eligibility, prohibited countries, onboarding, membership fee)",
+      "source_type": "eligibility_page",
+      "excerpt": "'at least 18 years of age and reside in one of our supported jurisdictions'; 'unable to serve' residents of 28 listed countries: AF, BY, BA, CF, CU, CD, HT, IR, IQ, CI, LB, LY, ML, MM, NI, KP, PS, RU, RS, SO, SS, SD, SY, UA, US, VE, YE, ZW (may change without notice); annual membership fee $1,000 USD; KYC: government-issued ID + proof of address; 'zero foreign exchange markup'.",
+      "accessed_at": "2026-11-10T06:02:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "'the list of prohibited countries is subject to change without notice'. Financial promotion approval line on the help hub: 07.09.2026."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-xapo-membership-benefits",
+      "url": "https://xapobank.com/en/membership-benefits",
+      "title": "Xapo Bank — Membership benefits page (financial promotion approved 28.10.2026)",
+      "source_type": "pricing_page",
+      "excerpt": "'$1000 USD /year' ('subject to constant change'); 'Use your Visa or Mastercard debit card anywhere, with no FX fees'; 'Earn 2% back in Bitcoin on eligible card spending' 'up to a monthly allowance based on your average USD Account balance'; 30-day full refund of the fee; referral $500 in BTC for both parties; Xapo Bank Limited company no. 111928, GFSC permission no. 23171; Xapo VASP Limited.",
+      "accessed_at": "2026-11-10T06:03:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Also: USD savings promotional rate 4.6% p.a. for first-time members paying between 22 September and 23 November 2026 — not a card reward, not modelled."
+      },
+      "verification": "contradictory",
+      "contradiction_note": "Cashback: '2% back in Bitcoin' here (October 2026) versus 'up to 1% in BTC' in the official card blog of June 2025; the monthly allowance formula is not published on any page read. Network: 'Visa or Mastercard' here versus Visa only for new cards in the 2025 blog."
+    },
+    {
+      "id": "ev-xapo-card-blog-2025",
+      "url": "https://www.xapobank.com/en/blog/xapo-card-enhancements-2025",
+      "title": "Xapo Bank blog — 'Your Xapo Card just got even better' (25 June 2025)",
+      "source_type": "help_center",
+      "excerpt": "New cards and 'upgraded Visa Metal cards' (Visa); cards draw on a BTC or USD balance; spread 'reduced to an ultra-low 0.1% (down from 0.6%) when you spend from your BTC wallet'; 'We don't charge foreign exchange fees'; cashback 'up to 1% in BTC on qualifying purchases', categories expanded; up to five virtual cards; PVC and metal cards for ATM; limits adjustable in app.",
+      "accessed_at": "2026-11-10T06:04:00Z",
+      "effective_from": "2025-06-25",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Official blog post; older than the fee schedule and the membership page, which govern where they differ."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-xapo-support-what-is-card",
+      "url": "https://customersupport.xapo.com/en_us/what-is-the-xapo-card-rkqkdTAyd.md",
+      "title": "Xapo customer support — What is the Xapo Card? (last updated 2025-05-07)",
+      "source_type": "help_center",
+      "excerpt": "'a global debit card'; physical and virtual (virtual cards can be created while waiting for the physical card); the card can be linked to USD, Bitcoin or both wallets; cashback paid in Bitcoin (rate not stated); 'unlimited and free' foreign exchange; 'low' ATM fees; 'high spending limits' controlled by the user; requires completed onboarding and the annual membership fee; ordered through the app.",
+      "accessed_at": "2026-11-10T06:04:00Z",
+      "effective_from": "2025-05-07",
+      "expires_at": null,
+      "scope": {
+        "note": "Network and issuer not stated in this article."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-xapo-referral",
+      "url": "https://www.xapobank.com/en/referral",
+      "title": "Xapo Bank — Referral programme page",
+      "source_type": "affiliate_program",
+      "excerpt": "'you both receive a $500 USD in BTC reward'; referee signs up with the referrer's link or code, completes onboarding and activates membership by paying the annual fee; both accounts active and in good standing; reward after a 33-day validation period; 'Refer as many friends as you'd like, with no cap'; referral codes at xapo.com/app/referrals; no publisher/affiliate programme mentioned.",
+      "accessed_at": "2026-11-10T06:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Member-to-member referral; the membership page's footnotes mention a UK variant paid in USD."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.xapobank.com/en/membership-benefits",
+    "affiliate": {
+      "program_id": "xapo-bank-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-10T06:05:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-10T06:20:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from the Xapo Bank fee schedule (25 June 2026), the Company & Membership FAQ (eligibility, 28 prohibited countries, KYC, $1,000 fee), the membership-benefits page (approved 28.10.2026), the June 2025 card blog, the customer-support card article (2025-05-07) and the referral page. Established: issuer Xapo Bank Limited (Gibraltar), 1,000 USD/year membership including the card, no FX fee, ATM free up to 100 USD/month then 2%, metal card issuance free. Contradictory, excluded from the calculator: cashback (2% vs 'up to 1%' in BTC, allowance formula unpublished) and BTC spend spread (0.29% schedule vs 0.1% blog). Unknown: positive country list, spending limits, standard delivery fee. Not found: a dedicated card terms document, the cashback FAQ (redirects to the help hub). Second read required before publication.",
+      "evidence": [
+        "ev-xapo-fees",
+        "ev-xapo-membership-faq",
+        "ev-xapo-membership-benefits",
+        "ev-xapo-card-blog-2025"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Debit card bundled with the US$1,000-a-year Xapo Bank membership (Gibraltar-licensed bank): spend from a USD account or directly from a bitcoin balance, no foreign-exchange fee, ATM withdrawals free up to US$100 a month then 2%, metal card included. Bitcoin cashback is advertised at 2% (October 2026) but the bank's own 2025 blog says up to 1% and the balance-based monthly allowance is not published, so no reward is modelled yet. Not available to residents of the United States and 27 other listed countries.",
+    "good_for": [
+      "People outside the US who want a regulated bank account in USD and bitcoin with a card that spends either balance",
+      "Frequent travellers and expatriates: no FX fee on card payments, US$100 of free ATM withdrawals a month",
+      "Members who will keep a large USD balance (the cashback allowance scales with the average USD balance)"
+    ],
+    "not_for": [
+      "Anyone who wants a free or cheap card — the US$1,000 annual membership is the cost of the card",
+      "Residents of the United States, Russia, Ukraine, Serbia, Bosnia and Herzegovina and the other 23 countries Xapo Bank cannot serve",
+      "Cash-heavy users: 2% on ATM withdrawals above US$100 a month"
+    ],
+    "watch_outs": [
+      "US$1,000/year membership, 'subject to constant change'; refundable only within the first 30 days.",
+      "Cashback is contradictory between official pages (2% vs up to 1% in BTC) and capped by a monthly allowance based on your average USD balance whose formula is not published — treat it as unverified until Xapo publishes the terms.",
+      "Spending from the bitcoin wallet applies a spread (0.29% in the fee schedule; 0.1% announced in 2025).",
+      "No positive list of supported countries: eligibility outside the excluded list is 'to confirm' in the app; the prohibited list can change without notice.",
+      "Card network: new cards are Visa (2025); the membership page still says 'Visa or Mastercard'.",
+      "Spending limits, standard card delivery fee and a dedicated card terms document were not found on any page read."
+    ]
+  }
+}
