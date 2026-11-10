@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "bitget-wallet-affiliate",
+  "provider_id": "bitget-wallet",
+  "program_name": "Bitget Wallet Affiliate Program (Card + swap + perps commissions)",
+  "program_url": "https://web3.bitget.com/en/blog/articles/affiliate-program",
+  "type": "hybrid",
+  "allowed_channels": [
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "'You can apply as long as you have your own social media account or community' and are willing to promote Bitget Wallet; no follower minimum stated; application form at web3.bitget.com/affiliate/application (not opened); referral links and codes in the app's Referral Center. Programme 'may not be available in certain regions' (none named); must comply with local laws.",
+  "our_status": "identified",
+  "paid_action": "Card: one-time bonus on a referred user's first qualifying (\"effective\", region-dependent) card payment, a commission on physical-card activation, and an ongoing commission on card spending. Also 60% of swap trading fees (selected pairs) and 20% of perps trading fees from referred users, no minimum volume. Secondary commission: +10% of the Card commissions earned by affiliates one refers.",
+  "validation_conditions": "A user counts as a referral if they apply through the affiliate's link or enter the referral code within 7 days of opening their card. Definition of an effective new card payment varies by region. On-page terms allow programme changes.",
+  "commission": {
+    "model_note": "Card tiers: Tier 1 (default) 2 USDT per new card payment, 20% physical-card activation commission, 0.10% of card spend; Tier 2 (≥ 5 card referrals) 3 USDT / 20% / 0.15%; Tier 3 (≥ 20) 4 USDT / 20% / 0.20%; VIP 1–3 (invite only, ≥ 100 card referrals to apply) 5 USDT / 30–50% / 0.20–0.30%. Tiers 1–3 upgrade automatically. Swaps 60% and perps 20% of trading fees. Base of the 20–50% \"physical card activation\" commission (card price?) not defined on the page.",
+    "amount": 2,
+    "currency": "USDT",
+    "tiers_note": "amount = Tier 1 new-card-payment bonus; tier thresholds by number of card referrals (5 / 20 / 100 for VIP application).",
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": 7,
+    "status": "hypothesis"
+  },
+  "revenue_share": {
+    "included_products": "Card spending (0.10–0.30%), physical-card activation (20–50%), swap fees (60%, selected pairs), perps fees (20%); second-level 10% of referred affiliates' Card commissions.",
+    "duration_note": "Not stated.",
+    "exclusions": "Only selected swap pairs are eligible; effective card payment definition varies by region."
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "Credited to the in-app Reward Account (Home > Reward(s) Account); withdrawable from the app; currency beyond USDT bonuses not stated",
+    "frequency": "Distributed to the Reward Account the following day"
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Blog-article programme page with an on-page Terms section (changes, eligibility, conditions, distribution); no separate affiliate agreement linked; date 2026-08-12 shown near the end of the article (not labelled). Legal entity not stated (footer © 2018-2024 Bitget Wallet). Two-level structure (10% secondary commission) to be weighed against editorial independence. Related official pages surfaced but not read: card-referral-program blog, Global Payment Partner Program, help centre article 513 (invite friends).",
+  "allowed_countries_note": "'May not be available in certain regions' — no list. Card itself: EEA+UK per the card record.",
+  "evidence": [
+    {
+      "url": "https://web3.bitget.com/en/blog/articles/affiliate-program",
+      "title": "Bitget Wallet Affiliate Program (official blog article; date 2026-08-12 shown in the article)",
+      "accessed_at": "2026-11-10T04:55:00Z",
+      "excerpt": "Apply with any social account/community (web3.bitget.com/affiliate/application). Card commissions by tier: 2/3/4/5 USDT per new card payment, 20–50% physical-card activation, 0.10–0.30% of card spend; swaps 60%, perps 20% of fees; +10% secondary commission; referral = link or code within 7 days of opening the card; rewards to in-app Reward Account next day; no country list."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Identified 2026-11-10 by the affiliate run. Pays on card activation and card spend — relevant to the comparator. Payout lands in an in-app Bitget Wallet Reward Account (requires holding a Bitget Wallet; payout-destination decision for David). No application made, nobody contacted, nothing accepted."
+}

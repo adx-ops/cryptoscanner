@@ -268,8 +268,8 @@
   "links": {
     "official_url": "https://www.bitpanda.com/en/card",
     "affiliate": {
-      "program_id": null,
-      "status": "none",
+      "program_id": "bitpanda-affiliate",
+      "status": "identified",
       "url": null
     }
   },
@@ -298,6 +298,13 @@
         "ev-bitpanda-card-page"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-10T04:55:00Z",
+      "field": "links.affiliate",
+      "reason": "Affiliate run 2026-11-10: reference to the existing programme record bitpanda-affiliate (our_status identified) added; no URL, outbound link unchanged (official site, not monetised).",
+      "evidence": [],
+      "actor": "claude (affiliate run)"
     }
   ],
   "editorial": {

@@ -11,12 +11,12 @@
     "social",
     "unknown"
   ],
-  "application_conditions": "Form (name, email, role, contact via Telegram/WhatsApp/LinkedIn); individual review; 'Request invitation' suggests selectivity; no minimum audience.",
+  "application_conditions": "Two tracks: Business (advisers, creators, KOLs; Nexo Partner Portal) and Affiliate (affiliates and media networks; Impact). Individual review on 'audience fit, engagement, and alignment with our Value First standard'; reply 'within one business day'; no minimum audience; 'Applying takes less than a minute'.",
   "our_status": "terms_verified",
   "paid_action": "Share of fee revenue: trading fees, credit interest/loan volume, yield, futures; 'Nexo Card transactions' listed without a rate.",
   "validation_conditions": "Not stated.",
   "commission": {
-    "model_note": "Up to 50% of trading fees; up to 50% of interest revenue or up to 4% of loan volume; up to 10% of yield; card rate not stated; varies by track, region, tier.",
+    "model_note": "Up to 50% of fee revenue ecosystem-wide: up to 50% of trading fees (Exchange), up to 50% of interest revenue or up to 4% of loan volume originated (credit), up to 10% of yield accrued, up to 50% of futures trading fees; private-client commissions \"tailored\". Nexo Card: \"Earn with every transaction your clients make with the Nexo Card\" — no rate. Rates \"subject to change\", vary by region and loyalty tier, maximums may depend on additional criteria. Page data \"as of Q2 2026\".",
     "status": "verified"
   },
   "attribution": {
@@ -50,8 +50,14 @@
       "title": "Nexo Affiliate Program page + FAQ",
       "accessed_at": "2026-10-26T21:30:00Z",
       "excerpt": "Two tracks; up to 50% of fee revenue; Nexo Card transactions listed as a revenue source without a rate; withdrawals every 30 days."
+    },
+    {
+      "url": "https://nexo.com/affiliate",
+      "title": "Nexo Affiliate Program page + FAQ (re-read 2026-11-10; \"Latest available data as of Q2 2026\")",
+      "accessed_at": "2026-11-10T04:55:00Z",
+      "excerpt": "Two tracks (Impact / Partner Portal); up to 50% of trading fees, up to 50% of interest or 4% of loan volume, up to 10% of yield, up to 50% of futures fees; Nexo Card transactions commissionable without a stated rate; bank transfer or crypto, withdrawals typically once every 30 days; no country list, no prohibited-methods list, no attribution window. All previously recorded values confirmed."
     }
   ],
   "verification": "verified",
-  "notes": "Card eligibility itself needs >$5,000 portfolio for cashback; commission depends on referred users' fee-generating activity."
+  "notes": "Card eligibility itself needs >$5,000 portfolio for cashback; commission depends on referred users' fee-generating activity. 2026-11-10: second read — every recorded value confirmed; the card rate is still unpublished."
 }

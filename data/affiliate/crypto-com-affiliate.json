@@ -4,7 +4,7 @@
   "id": "crypto-com-affiliate",
   "provider_id": "crypto-com",
   "program_name": "Crypto.com Affiliate Program",
-  "program_url": "https://crypto.com/affiliate",
+  "program_url": "https://crypto.com/en/affiliate/",
   "type": "hybrid",
   "allowed_channels": [
     "website",
@@ -12,12 +12,12 @@
     "email",
     "unknown"
   ],
-  "application_conditions": "Any platform; no website required. Apply via Impact.com; review about one week; partner handbook after approval.",
+  "application_conditions": "Any platform (Discord, X, website, newsletter); no website required. Apply via Impact.com; review \"usually within 1 week\" with an email on approval; partner handbook after approval. Support by Acceleration Partners and internal account managers.",
   "our_status": "terms_verified",
   "paid_action": "Referring new customers; each commissionable action validated before payment (per-product actions in contract).",
   "validation_conditions": "Only Crypto.com-communicated new-customer incentives allowed; other codes may make referrals untrackable.",
   "commission": {
-    "model_note": "'Up to 50%' revenue share across products plus product bonuses; fixed plan based on referred customers and trading volume; per-product rates only in the contract. Nothing stated for the card specifically.",
+    "model_note": "'Earn up to 50% commission': revenue share across multiple products plus 'other product bonuses'; fixed commission plan based on number of referred customers and trading volume; per-product rates and product list only in the contract and vary by country; 'no monthly maximum'; 'performance marketing program' — earnings not guaranteed; 'Typical results data is not currently available'. Nothing stated for the Visa card (appears only in site navigation).",
     "status": "verified"
   },
   "attribution": {
@@ -34,7 +34,7 @@
     "threshold": "not stated",
     "method": "not stated",
     "frequency": "monthly after validation",
-    "holdbacks_note": "validation period not specified"
+    "holdbacks_note": "Each commissionable action has a validation period; after validation Crypto.com is invoiced and partners are paid once funds clear (Impact.com). Validation period length not specified."
   },
   "reporting": {
     "dashboard": true,
@@ -51,8 +51,14 @@
       "title": "Crypto.com Affiliate Program page + FAQ",
       "accessed_at": "2026-10-26T21:30:00Z",
       "excerpt": "Earn up to 50% across products; monthly payouts; apply via Impact.com; review ~1 week; earnings window 180–365 days after KYC."
+    },
+    {
+      "url": "https://crypto.com/en/affiliate/",
+      "title": "Crypto.com Affiliate Program page + FAQ (re-read 2026-11-10; crypto.com/affiliate now served at /en/affiliate/)",
+      "accessed_at": "2026-11-10T04:55:00Z",
+      "excerpt": "Up to 50% commission; Impact.com application, review ~1 week; monthly payouts; validation period per action; earnings window generally 180–365 days after KYC; country list in contract; new-customer incentives only as communicated; Visa card not mentioned as commissionable; no brand-bidding or email rules on the page. All previously recorded values confirmed."
     }
   ],
   "verification": "verified",
-  "notes": "Card-specific commission unknown: revenue share is driven by trading activity, not card orders. Do not count a card order as revenue."
+  "notes": "Card-specific commission unknown: revenue share is driven by trading activity, not card orders. Do not count a card order as revenue. 2026-11-10: second read of the programme page — every recorded value confirmed; payout method and currency still not public."
 }

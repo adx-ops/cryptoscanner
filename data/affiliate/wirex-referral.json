@@ -3,29 +3,31 @@
   "is_demo": false,
   "id": "wirex-referral",
   "provider_id": "wirex",
-  "program_name": "Wirex 'Earn Bitcoin' referral programme",
-  "program_url": "https://wirexapp.com/affiliate",
-  "type": "personal_referral",
+  "program_name": "Wirex Affiliates Program (Impact) — plus legacy 'Earn Bitcoin' referral page",
+  "program_url": "https://help.wirexapp.com/article/wirex-affiliate-faq-1325",
+  "type": "publisher_affiliate",
   "allowed_channels": [
+    "website",
+    "social",
     "unknown"
   ],
-  "application_conditions": "Must be an existing Wirex customer with at least one active card; enabled from the account's 'Earn Bitcoin' section.",
+  "application_conditions": "Help centre affiliate FAQ (2026-11-10): 'Wirex welcomes both individual and business affiliates to join the program' (individuals fill the Company Information section with personal details); applications 'typically approved within five business days'; runs on Impact; partner types 'Offline' and 'Other' not accepted. No existing-customer or active-card requirement stated for this programme. The 2026-10-26 read of wirexapp.com/affiliate (Earn Bitcoin page) required an active card — that page could not be re-fetched this run (provenance).",
   "our_status": "identified",
-  "paid_action": "Referred users' card load transactions.",
-  "validation_conditions": "Not stated.",
+  "paid_action": "Affiliate FAQ: 'Successful referrals or actions' — not defined on the page. Launch blog post (undated, ~April 2023): rewarded 'for every user that signs up and uses Wirex Multiply, X-Accounts or DUO products, or makes a transaction with their debit card', 'up to $50 per customer'. Earn Bitcoin page (2026-10-26): referred users' card load transactions.",
+  "validation_conditions": "Referral must click the unique link and sign up on the same device and browser; Brave, Tor and cookie/GA-blocking browsers or extensions are incompatible; no manual attribution for referrals made before the referrer registered; revenue appears within up to 72 hours.",
   "commission": {
-    "model_note": "10% of gross fees from referrals in year 1, then 5% for two more years (page elsewhere says 'forever' — inconsistent). Paid in BTC. Referee gets 25% off first plastic card.",
+    "model_note": "Affiliate FAQ: 'Wirex offers the same terms for all affiliates, regardless of size'; no percentage, amount or duration published on the FAQ. Launch blog post: 'up to $50 per customer'. Earn Bitcoin page (2026-10-26 read): 10% of gross fees from referrals in year 1, then 5% for two more years (elsewhere 'forever' — inconsistent), paid in BTC — this is the personal referral scheme, not necessarily the Impact programme.",
     "status": "contradictory"
   },
   "attribution": {
-    "mechanism": "referral_code",
+    "mechanism": "tracking_link",
     "window_days": "unknown",
-    "status": "unknown"
+    "status": "hypothesis"
   },
   "payout": {
     "threshold": "not stated",
-    "method": "BTC to Wirex account",
-    "frequency": "'immediate'"
+    "method": "Not stated on the affiliate FAQ (Impact dashboard). Earn Bitcoin page: BTC to the Wirex account.",
+    "frequency": "Affiliate FAQ: fee revenue updated monthly, visible by the 15th; 'Payments are processed 14 days later on the 29th'. Earn Bitcoin page: 'immediate'."
   },
   "reporting": {
     "dashboard": true,
@@ -34,7 +36,7 @@
     "postback": false,
     "status": "hypothesis"
   },
-  "rules_note": "No publisher programme found; personal referral requires holding the product. No T&C link on the page.",
+  "rules_note": "Two distinct schemes now documented: (a) a publisher Affiliates Program on Impact (help-centre FAQ, no T&C link, no last-updated date, ©2026) and (b) the personal Earn Bitcoin referral requiring an active card (recorded 2026-10-26). Commission figures for (a) are not public. Separate refer-a-friend promotions have their own T&C pages (help centre articles 1454, 1534, 1323).",
   "allowed_countries_note": "Not stated.",
   "evidence": [
     {
@@ -42,8 +44,20 @@
       "title": "Wirex referral page",
       "accessed_at": "2026-10-26T21:30:00Z",
       "excerpt": "10% of gross fees year 1 then 5% for two years; requires an active card; BTC payouts."
+    },
+    {
+      "url": "https://help.wirexapp.com/article/wirex-affiliate-faq-1325",
+      "title": "Wirex affiliate FAQ (help centre; wirexapp.com/help/article/wirex-affiliate-faq-1325 redirects here)",
+      "accessed_at": "2026-11-10T04:55:00Z",
+      "excerpt": "Individual and business affiliates welcome; same terms for all; Impact platform ('Create a Link' panel, banners); approval typically within five business days; 'Offline' and 'Other' partner types not accepted; revenue visible by the 15th, payments processed on the 29th; same-device/browser tracking, Brave/Tor incompatible. No rates, no T&C link, no date."
+    },
+    {
+      "url": "https://wirexapp.com/blog/post/introducing-the-wirex-affiliates-program-0735",
+      "title": "Introducing the Wirex Affiliates Program (official blog, undated — press release dated April 2023)",
+      "accessed_at": "2026-11-10T04:55:00Z",
+      "excerpt": "'up to $50 per customer' for every user that signs up and uses Multiply, X-Accounts or DUO or makes a debit-card transaction; unified dashboard; sign-up at wirexapp.com/affiliate. Context only — figures possibly outdated."
     }
   ],
   "verification": "contradictory",
-  "notes": "Personal referral, not a publisher programme: requires David to be a Wirex customer. Decision needed before any use."
+  "notes": "Personal referral, not a publisher programme: requires David to be a Wirex customer. Decision needed before any use. 2026-11-10: the help centre documents a publisher Affiliates Program on Impact open to individuals and businesses — a publisher route exists after all (status stays identified; no application made). Commission terms are not public: they must be read inside Impact after acceptance. The Earn Bitcoin page (wirexapp.com/affiliate) could not be re-fetched this run."
 }
