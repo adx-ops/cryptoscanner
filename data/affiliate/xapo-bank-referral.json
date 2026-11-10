@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "xapo-bank-referral",
+  "provider_id": "xapo-bank",
+  "program_name": "Xapo Bank Referral Programme (member-to-member)",
+  "legal_entity": "Xapo Bank Limited (Gibraltar, company no. 111928) — operator named in the page footer; no separate programme entity",
+  "program_url": "https://www.xapobank.com/en/referral",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "No application: every member obtains a unique referral link or code in the app (xapo.com/app/referrals). The page does not describe a publisher or affiliate programme and states no channel rules.",
+  "our_status": "identified",
+  "paid_action": "Referred person signs up with the link/code, completes onboarding and activates membership by paying the annual membership fee (US$1,000 at the time of reading).",
+  "validation_conditions": "Both accounts active and in good standing; the referee must remain a member past a 33-day validation period. The former US$5,000 minimum-balance requirement is stated as removed.",
+  "commission": {
+    "model_note": "One-time reward of US$500 paid in BTC to the referrer, and US$500 in BTC to the referee ('you both receive a $500 USD in BTC reward'). The membership-benefits page footnotes mention a UK variant paid in USD. 'Refer as many friends as you'd like, with no cap.'",
+    "amount": 500,
+    "currency": "USD",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "none stated",
+    "method": "BTC credited to the Xapo Bank Bitcoin wallet (UK variant: USD)",
+    "frequency": "After the referee's account is opened and the 33-day validation period ends",
+    "holdbacks_note": "33-day validation period."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Personal referral programme that requires the referrer to be a Xapo Bank member (US$1,000/year). No publisher/affiliate programme found on xapobank.com this run. No dedicated referral terms linked — only the general Website Terms of Use.",
+  "allowed_countries_note": "Follows Xapo Bank membership eligibility: not residents of the 28 prohibited countries (incl. the United States); UK referrals paid in USD per the membership page footnote.",
+  "evidence": [
+    {
+      "url": "https://www.xapobank.com/en/referral",
+      "title": "Xapo Bank — Referral programme page",
+      "accessed_at": "2026-11-10T06:05:00Z",
+      "excerpt": "'you both receive a $500 USD in BTC reward'; referee signs up with the referrer's link or code, completes onboarding and activates membership by paying the annual fee; both accounts active and in good standing; reward after a 33-day validation period; 'Refer as many friends as you'd like, with no cap'; codes at xapo.com/app/referrals."
+    },
+    {
+      "url": "https://xapobank.com/en/membership-benefits",
+      "title": "Xapo Bank — Membership benefits page (financial promotion approved 28.10.2026)",
+      "accessed_at": "2026-11-10T06:03:00Z",
+      "excerpt": "Referral: both parties receive $500 'in Bitcoin'; footnote 5: the UK referral scheme pays in USD; footnote 7: rewards paid in Satoshis."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Identified only. Nobody contacted, no account opened. Using this programme would require the site operator to hold a paid Xapo Bank membership — a cost and an independence question for David before any use."
+}

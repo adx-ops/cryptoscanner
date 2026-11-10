@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "solcard-referral",
+  "provider_id": "solcard",
+  "program_name": "SolCard Referral program (deposit-fee revenue share; partner codes on custom terms)",
+  "legal_entity": "SC PAYMENTS LIMITED (Hong Kong, BRN 78350827) — operator named in the Terms of Use; the referral page is 'a description, not a contract'",
+  "program_url": "https://www.solcard.cc/referral",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Every SolCard account has a referral code and link in the dashboard — no separate application. 'Partners may run codes on custom terms agreed with SolCard' (partner codes do not earn milestone rewards). No publisher requirements, channel rules or acceptance criteria published.",
+  "our_status": "identified",
+  "paid_action": "Commissionable top-ups by referred users: a share of the deposit fee the referee pays (not of the top-up amount), only on Solana or supported EVM networks.",
+  "validation_conditions": "Commission comes only from deposit fees: top-ups with no deposit fee (Platinum, zero-fee promotions), Bitcoin/Litecoin/Tron top-ups and standard-code top-ups on 'Virtual for AI & Ad Spend' earn nothing; referrers or referees excluded for abuse earn nothing.",
+  "commission": {
+    "model_note": "Tiered share of the referee's deposit fee by all-time referred volume: Tier 1 5% up to Tier 6 40%. Separate one-off milestone rewards (free card issuance at $1,000 referred volume, up to $500 loaded to a card at $100,000; total up to $1,010), counting commissionable top-ups recorded from October 23, 2026.",
+    "percent": 40,
+    "tiers_note": "Six tiers from 5% to 40% of deposit fees; volume thresholds per tier not all stated on the page.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "$20 referral balance",
+    "method": "USDT to a Solana wallet address entered by the referrer; each withdrawal confirmed with a one-time code",
+    "frequency": "On request once the $20 threshold is reached",
+    "holdbacks_note": "Not stated."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Commission is a share of fees charged to the referred user — the more a referee pays in top-up fees (Virtual tier 5%), the more the referrer earns; this incentive conflicts with recommending the cheaper Platinum tier and must be weighed before any use. The page is explicitly non-contractual; the Terms of Use govern. Card issuer not disclosed by the operator.",
+  "allowed_countries_note": "Follows SolCard eligibility: not Hong Kong residents, not sanctioned persons; no positive country list.",
+  "evidence": [
+    {
+      "url": "https://www.solcard.cc/referral",
+      "title": "SolCard — Referral program (last updated November 4, 2026)",
+      "accessed_at": "2026-11-10T06:33:00Z",
+      "excerpt": "Commission is a share of the deposit fee the referee pays, 5% (Tier 1) to 40% (Tier 6); paid in USDT to a Solana address, withdrawal from $20; only Solana / supported EVM top-ups earn; milestone rewards up to $1,010 from October 23, 2026; 'Partners may run codes on custom terms agreed with SolCard'; 'a description, not a contract'."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Identified only. Nobody contacted, no account opened. Fee-share model on a tier the comparator would not recommend for cost reasons — editorial-independence question for David before any application."
+}

@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.0.0",
+  "id": "solcard",
+  "slug": "solcard",
+  "name": "SolCard",
+  "brand": "SolCard",
+  "provider_id": "solcard",
+  "issuer": {
+    "name": "not disclosed",
+    "status": "verified",
+    "evidence": [
+      "ev-solcard-terms",
+      "ev-solcard-fees"
+    ]
+  },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "Prepaid USD cards topped up with crypto; the operator SC PAYMENTS LIMITED (Hong Kong) states it 'is not a bank, electronic money institution, or card issuer' and that cards are issued by an unnamed third-party Issuer 'pursuant to a license from Visa'. Top-up networks named on the referral page: Solana and supported EVM networks (commissionable), Bitcoin, Litecoin and Tron (accepted, non-commissionable). Crypto top-ups 'are subject to applicable top-up fees and conversion spread'.",
+    "evidence": [
+      "ev-solcard-terms",
+      "ev-solcard-fees",
+      "ev-solcard-referral"
+    ]
+  },
+  "variants": [
+    {
+      "id": "solcard-international",
+      "region_label": "International (except Hong Kong)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [
+          "HK"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "Terms: not available to persons in countries under comprehensive UN, US, EU or UK sanctions or on sanctions / restricted-party lists; clients must be at least 18.",
+        "usage_note": "Fee page: 'Not available to residents of Hong Kong. Eligibility may vary by region.' No positive list of supported countries is published; the terms do not restrict the product to one territory and contain no no-solicitation clause. Accounts flagged for 'Hong Kong indicators' may be suspended with balances forfeited.",
+        "evidence": [
+          "ev-solcard-fees",
+          "ev-solcard-terms"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "not_required_initially",
+        "editorial_level": "light",
+        "requirements": [
+          "email"
+        ],
+        "thresholds_note": "Virtual card: 'the email-only tier', spending limit '$10,000/month'. Platinum card: 'requires identity verification and removes the top-up fee', 'No limit'. Terms: 'Access to certain card types or features requires completion of identity verification'; 'Identity verification may be required for certain card tiers, features, or spending limits.' No amount threshold is published.",
+        "stages_note": "Ordering a Virtual card: email account (operator's wording: 'email-only tier'). Ordering a Platinum card, or accessing certain features or limits: identity verification. Documents required for verification are not listed on the pages read. This record describes only what the operator states.",
+        "evidence": [
+          "ev-solcard-fees",
+          "ev-solcard-terms"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "virtual",
+          "name": "Virtual card (email-only tier)",
+          "access": {
+            "type": "free",
+            "note": "No monthly or annual fee; a one-time $10 issuance fee per card and a 5% top-up fee apply.",
+            "status": "verified",
+            "evidence": [
+              "ev-solcard-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "period": "once",
+              "conditions": "'a one-time $10 issuance fee for each new card' (fee schedule current as of 15 August 2026).",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'Monthly account fee: None', 'Annual fee: None' (fee schedule); terms: 'no monthly fee for active accounts'. Dormancy after 90 days of inactivity may cost 10% of the balance per month (see inactivity fee).",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees",
+                "ev-solcard-terms"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 5,
+              "period": "per_transaction",
+              "conditions": "Fee schedule row 'Top-up fees: 5% + $10/new card' — 5% of each top-up (the $10 is the one-time issuance fee, recorded separately). Crypto top-ups also carry a 'conversion spread' (terms, amount not stated).",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees",
+                "ev-solcard-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "'FX rates: 1-2%' for non-USD spending; the upper bound is modelled. Terms: 'foreign exchange spreads may apply to non-USD spending'.",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees",
+                "ev-solcard-terms"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No ATM fee or ATM capability is stated on the fee schedule or in the terms for the virtual card.",
+              "status": "unknown"
+            },
+            {
+              "type": "inactivity",
+              "kind": "percent",
+              "percent": 10,
+              "period": "month",
+              "conditions": "Terms (27 September 2026): after 90 days of inactivity SolCard 'may, at its discretion' charge 10% of the balance per month; balances under 1 USD may be charged in full. Balances below the 'published minimum refundable amount' are forfeited on card cancellation.",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-terms"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "unknown",
+              "conditions": "Terms: a 'handling fee' may be charged on cards with a disproportionate number of declined transactions or disputes (amount not stated); 'application, card slot, and top-up fees vary by card type and are shown in the App before confirmation'.",
+              "status": "unknown",
+              "evidence": [
+                "ev-solcard-terms"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 10000,
+                "currency": "USD"
+              },
+              "period": "month",
+              "note": "'Monthly spending limit: $10,000/month' (Virtual).",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "platinum",
+          "name": "Platinum card (identity-verified tier)",
+          "access": {
+            "type": "free",
+            "note": "No monthly or annual fee; 'requires identity verification and removes the top-up fee'; one-time $10 issuance fee per new card (the issuance sentence is general — not stated separately for Platinum). Physical form assumed from the referral page's 'free Platinum card' milestone; form factor not explicit on the fee page.",
+            "status": "verified",
+            "evidence": [
+              "ev-solcard-fees",
+              "ev-solcard-referral"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 10,
+                "currency": "USD"
+              },
+              "period": "once",
+              "conditions": "'a one-time $10 issuance fee for each new card' — the fee page does not state a separate Platinum price; the general sentence is applied.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-solcard-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'Monthly account fee: None', 'Annual fee: None'.",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'Top-up fees: 0%' for Platinum; crypto conversion spread may still apply (terms).",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees",
+                "ev-solcard-terms"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "'FX rates: 0-1.5%'; the upper bound is modelled.",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No ATM fee is published.",
+              "status": "unknown"
+            },
+            {
+              "type": "inactivity",
+              "kind": "percent",
+              "percent": 10,
+              "period": "month",
+              "conditions": "Dormancy after 90 days of inactivity: up to 10% of the balance per month at SolCard's discretion (terms).",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-terms"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "'Monthly spending limit: No limit' (Platinum).",
+              "status": "verified",
+              "evidence": [
+                "ev-solcard-fees"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-solcard-fees",
+      "url": "https://www.solcard.cc/fees",
+      "title": "SolCard — Fees (schedule current as of 15 August 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "Virtual / Platinum: 'Top-up fees: 5% + $10/new card' / '0%'; 'FX rates: 1-2%' / '0-1.5%'; 'Monthly spending limit: $10,000/month' / 'No limit'; monthly and annual fee None; 'a one-time $10 issuance fee for each new card'; 'The Virtual card is the email-only tier.'; 'The Platinum card requires identity verification and removes the top-up fee.'; 'Not available to residents of Hong Kong.'",
+      "accessed_at": "2026-11-10T06:30:00Z",
+      "effective_from": "2026-08-15",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Operator line: SC PAYMENTS LIMITED, BRN 78350827, Sheung Wan, Hong Kong. No ATM, decline, minimum top-up or cashback rows. 'Eligibility, fees, limits, and supported features may vary by region.'"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-solcard-terms",
+      "url": "https://www.solcard.cc/terms",
+      "title": "SolCard — Terms of Use (last updated September 27, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "SC PAYMENTS LIMITED (Hong Kong); 'SolCard is not a bank, electronic money institution, or card issuer'; Issuer 'a third party'; cards 'issued pursuant to a license from Visa'; 18+; not Hong Kong or sanctioned persons; 'Access to certain card types or features requires completion of identity verification'; dormancy 10%/month after 90 days; cashback expires after 90 days.",
+      "accessed_at": "2026-11-10T06:32:00Z",
+      "effective_from": "2026-09-27",
+      "expires_at": null,
+      "scope": {
+        "note": "No no-solicitation clause; no country list beyond Hong Kong and sanctions; application, card slot and top-up fees 'shown in the App before confirmation'."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-solcard-referral",
+      "url": "https://www.solcard.cc/referral",
+      "title": "SolCard — Referral program (page last updated November 4, 2026)",
+      "source_type": "affiliate_program",
+      "excerpt": "Every account has a referral code and link; commission = share of the referee's deposit fee, 5% (Tier 1) to 40% (Tier 6) by referred volume, paid in USDT to a Solana address, withdrawal from $20; only Solana / supported EVM top-ups earn (not BTC, LTC, Tron, Platinum or zero-fee top-ups); milestones up to $1,010 from October 23, 2026; 'a description, not a contract'.",
+      "accessed_at": "2026-11-10T06:33:00Z",
+      "effective_from": "2026-10-23",
+      "expires_at": null,
+      "scope": {
+        "note": "Also shows that choosing the free Platinum card milestone 'requires identity verification'."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.solcard.cc/",
+    "affiliate": {
+      "program_id": "solcard-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-10T06:33:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-10T06:40:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run, no-KYC track) from SolCard's official fee schedule (as of 2026-08-15), Terms of Use (2026-09-27) and referral page (2026-11-04). Inclusion rule of 2026-11-09 met: fees published, verification stage stated per tier ('email-only tier' for Virtual, identity verification for Platinum), product active, no territorial no-solicitation clause. Operator SC PAYMENTS LIMITED (Hong Kong) named; card issuer not disclosed (allowed, shown as 'not disclosed'). Unknown: ATM, cashback rate, supported-country list, conversion spread, verification documents, Platinum issuance price (general sentence applied, hypothesis). Second read required before publication; the help centre (help.solcard.cc) was not read.",
+      "evidence": [
+        "ev-solcard-fees",
+        "ev-solcard-terms",
+        "ev-solcard-referral"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Prepaid USD Visa cards from a Hong Kong-registered operator (card issuer not disclosed), topped up with crypto. The operator describes the Virtual card as its 'email-only tier' with a $10,000 monthly spending limit, a $10 issuance fee, 5% top-up fee and 1–2% FX; the Platinum card requires identity verification, has no top-up fee, 0–1.5% FX and no spending limit. Not available to Hong Kong residents; no monthly fee, but dormant balances can be charged 10% a month after 90 days.",
+    "good_for": [
+      "Online purchases and subscriptions paid in USD from crypto, where a virtual card suffices",
+      "Users who will complete identity verification for the Platinum card to avoid the 5% top-up fee"
+    ],
+    "not_for": [
+      "Residents of Hong Kong or of sanctioned countries (excluded by the operator)",
+      "Cash withdrawals — no ATM capability or fee is published",
+      "Anyone who needs a named card issuer or a published country list before trusting a card"
+    ],
+    "watch_outs": [
+      "The card issuer is not disclosed: the operator states it is 'not a bank, electronic money institution, or card issuer'.",
+      "Virtual tier: 5% on every top-up plus $10 per card — expensive for large or frequent loads; the Platinum tier removes the top-up fee but requires identity verification.",
+      "Dormancy: after 90 days of inactivity the operator may charge 10% of the balance per month; small residual balances are forfeited on cancellation.",
+      "Cashback exists in the terms (expires after 90 days) but no rate is published — nothing is modelled.",
+      "FX shown as ranges (1–2%, 0–1.5%); the upper bounds are modelled. A crypto conversion spread of unstated size applies to top-ups.",
+      "The $10,000/month limit and 'email-only' wording are the operator's statements; verification 'may be required for certain card tiers, features, or spending limits'."
+    ]
+  }
+}
