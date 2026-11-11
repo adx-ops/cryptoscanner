@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0.0",
+  "id": "exa-card",
+  "slug": "exa-card",
+  "name": "Exa Card",
+  "brand": "Exa App (Exactly Protocol)",
+  "provider_id": "exactly",
+  "issuer": {
+    "name": "Third National",
+    "status": "verified",
+    "evidence": [
+      "ev-exa-terms"
+    ]
+  },
+  "network": "visa",
+  "category": "crypto_backed_credit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "at_spend",
+    "supported_assets_note": "Virtual Visa card issued by Third National for Exa Labs SAS, funded from a self-custodial wallet on the Exactly Protocol. Two 'Pay Mode' settings: 'Pay now' — 'the value of every purchase you make will be directly deducted from your stored assets'; 'Installments' — the app borrows the amount 'from Exactly Protocol's fixed-rate lending markets', converts it to USD and pays the merchant, 'The interest rate is fixed and determined at the time of the transaction'. Card terms: the Exactly Protocol 'extends credit to you'. Supported blockchains in the card terms: Ethereum, Polygon, Optimism, Arbitrum. Purchases are USD-denominated; installments repaid in USDC.",
+    "evidence": [
+      "ev-exa-how",
+      "ev-exa-terms",
+      "ev-exa-about"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": "unknown",
+    "ltv_percent": "unknown",
+    "liquidation_risk": "The card terms list a 'Liquidation fee (Reserved)' and state 0% interest on purchases, while the help centre describes installment purchases as loans from Exactly Protocol's fixed-rate markets with a rate 'determined at the time of the transaction' and a possible origination fee 'included in the interest you pay on the installments'. No APR figure, loan-to-value, collateral factor or liquidation mechanism is published on the pages read.",
+    "evidence": [
+      "ev-exa-terms",
+      "ev-exa-how",
+      "ev-exa-fees"
+    ]
+  },
+  "variants": [
+    {
+      "id": "exa-card-international",
+      "region_label": "International (listed countries + 31 US states)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AG", "AR", "AU", "BS", "BD", "BB", "BZ", "BO", "BR", "KY", "CO", "CR", "CI", "DM", "DO", "EC", "EG", "SV", "GH", "GD", "GT", "GY", "HN", "ID", "JP", "KE", "MY", "MX", "MA", "NZ", "PK", "PA", "PY", "PE", "PH", "KN", "LC", "VC", "SN", "SG", "SR", "TH", "TT", "TC", "AE", "UG", "UY", "ZM", "US"
+        ],
+        "residence_excluded": [
+          "AF", "BY", "BG", "KP", "CN", "HR", "CU", "CF", "CD", "ET", "IN", "IQ", "IR", "IL", "LB", "LY", "ML", "MM", "NP", "NI", "RU", "SY", "SO", "SD", "SS", "TR", "UA", "VE", "VN", "YE", "ZW"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "Card terms: 'You attest that you are not a United States citizen' and the card 'is intended for those outside of the United States'; cardholders must not be blocked or sanctioned (OFAC). Use limited to personal, family or household purposes.",
+        "usage_note": "Allowed list = 'Eligible countries' of the help article 'How can I get my Exa Card?' (48 countries) plus the United States for the 31 states it lists (AL, AK, AR, CA, CO, CT, FL, HI, IL, IN, IA, KS, KY, ME, MA, MI, MN, MT, NE, NH, NJ, NY, NC, OK, PA, SC, TX, UT, VA, WV, WY). Nigeria, South Africa and Sri Lanka are 'subject to approval' ('Issuance there may not be available') and are left unlisted. Excluded list = union of that article's 17 'Ineligible countries' and the 31-country 'List of prohibited countries' article. No EEA, UK or Swiss country appears on the eligible list; Bulgaria and Croatia are explicitly prohibited. Cards cannot be used in Cuba, Iran, North Korea, Russia, Syria, Ukraine or Venezuela.",
+        "evidence": [
+          "ev-exa-availability",
+          "ev-exa-prohibited",
+          "ev-exa-terms"
+        ],
+        "status": "contradictory"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "thresholds_note": "No threshold: 'After downloading the Exa App, going through KYC, and adding funds, a credit card is created.' Referral terms: 'mandatory KYC'.",
+        "stages_note": "Account creation then KYC before the virtual card can be requested ('validation' step 'won't take more than 3 minutes'); funds must be in the account to enable the card. Documents required and verification provider are not stated on any page read.",
+        "evidence": [
+          "ev-exa-how",
+          "ev-exa-availability"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Exa Card (virtual)",
+          "access": {
+            "type": "free",
+            "note": "No membership or subscription is mentioned on any page read; the card is requested in-app after KYC and funding. Not confirmed as free — see fees.",
+            "status": "hypothesis",
+            "evidence": [
+              "ev-exa-availability"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "No issuance price for the virtual card is stated on the fees article, the card terms or the 'How can I get my Exa Card?' article.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "conditions": "No annual or monthly fee row was found on the fees article or in the card terms' fee table; absence is not treated as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Funding = transferring assets to the user's self-custodial wallet; no deposit fee is stated. Network gas and any on-ramp partner fees are not documented on the pages read.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Fees article: 'has a 1.5% FX fee (foreign transaction fee) included in the currency rate' on non-USD transactions. Card terms fee table: 'Foreign Exchange Fee (non-USD): 1.5%', 'Foreign transaction fees: up to 1.5%' and a separate 'Cross Border Fee: 1%' whose application (cumulative or alternative) is not explained.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-exa-fees",
+                "ev-exa-terms"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "percent": 0.65,
+              "period": "per_transaction",
+              "conditions": "'$1 + 0.65% per transaction' via contactless (NFC) ATMs with the card in Apple Wallet or Google Pay and the in-app PIN; 'Some ATMs may charge more'. Limits: 'Up to $250 per withdrawal', 'Max 4 withdrawals per day'.",
+              "status": "verified",
+              "evidence": [
+                "ev-exa-atm"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "unknown",
+              "conditions": "Installment mode: 'We may charge an origination fee whenever you make a loan', amount not stated, 'included in the interest you pay on the installments'. Card terms: returned payment fee $0.00; liquidation fee '(Reserved)'; cash advances and balance transfers not available.",
+              "status": "unknown",
+              "evidence": [
+                "ev-exa-fees",
+                "ev-exa-terms"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "'Up to $250 per withdrawal', 'Max 4 withdrawals per day'.",
+              "status": "verified",
+              "evidence": [
+                "ev-exa-atm"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-exa-fees",
+      "url": "https://intercom.help/exa-app/en/articles/9055779-exa-card-associated-fees-and-costs",
+      "title": "Exa App Help Center — Exa Card associated fees and costs (October 28, 2024)",
+      "source_type": "pricing_page",
+      "excerpt": "'has a 1.5% FX fee (foreign transaction fee) included in the currency rate' for non-USD card transactions; 'We may charge an origination fee whenever you make a loan', 'included in the interest you pay on the installments associated with that loan'. No issuance, annual, deposit, ATM or inactivity fee stated.",
+      "accessed_at": "2026-11-11T05:52:00Z",
+      "effective_from": "2024-10-28",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Short article; dated by the 'Written by' line only."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-exa-terms",
+      "url": "https://intercom.help/exa-app/en/articles/10707672-exa-card-terms-and-conditions",
+      "title": "Exa App Help Center — Exa Card terms and conditions (effective November 12, 2024; costs as of January 13, 2025)",
+      "source_type": "official_terms",
+      "excerpt": "'The issuer for this card program is Third National'; issued 'under license from Visa'; parties Exa Labs SAS and the Issuer; law of Puerto Rico; 'You attest that you are not a United States citizen'; the Exactly Protocol 'extends credit to you'; 'Zero 0 % interest on all purchases'; fee table: FX (non-USD) 1.5%, Cross Border Fee 1%, returned payment $0.00, liquidation fee (Reserved).",
+      "accessed_at": "2026-11-11T05:53:00Z",
+      "effective_from": "2024-11-12",
+      "expires_at": null,
+      "scope": {
+        "note": "Help-centre copy of the cardholder agreement; 'Updated over a week ago'. Cash advances and balance transfers not available; interest may be introduced later with notice."
+      },
+      "verification": "verified",
+      "contradiction_note": "States 0% interest on all purchases and that cardholders attest they are not US citizens, while the help centre describes fixed-rate installment loans and lists 31 eligible US states."
+    },
+    {
+      "id": "ev-exa-prohibited",
+      "url": "https://intercom.help/exa-app/en/articles/10715755-list-of-prohibited-countries-for-the-exa-card",
+      "title": "Exa App Help Center — List of prohibited countries for the Exa Card",
+      "source_type": "eligibility_page",
+      "excerpt": "The card 'cannot be issued to residents of the following countries' (31): Afghanistan, Belarus, Bulgaria, North Korea, China, Croatia, Cuba, Central African Republic, DR Congo, Ethiopia, India, Iraq, Iran, Israel, Lebanon, Libya, Mali, Myanmar, Nepal, Nicaragua, Russia, Syria, Somalia, Sudan, South Sudan, Turkey, Ukraine, Venezuela, Vietnam, Yemen, Zimbabwe.",
+      "accessed_at": "2026-11-11T05:55:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "'Updated over a week ago'; no positive list on this page."
+      },
+      "verification": "verified",
+      "contradiction_note": "Longer than the 17-country 'Ineligible countries' list of the availability article (adds Afghanistan, Bulgaria, Croatia, CAR, DR Congo, Ethiopia, Lebanon, Libya, Mali, Somalia, Sudan, South Sudan, Yemen, Zimbabwe); the union is modelled as excluded."
+    },
+    {
+      "id": "ev-exa-how",
+      "url": "https://intercom.help/exa-app/en/articles/10022626-how-does-the-exa-card-work",
+      "title": "Exa App Help Center — How does the Exa Card work? (September 21, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'After downloading the Exa App, going through KYC, and adding funds, a credit card is created.' Pay now: 'the value of every purchase you make will be directly deducted from your stored assets'; installments: borrowed 'from Exactly Protocol's fixed-rate lending markets', 'The interest rate is fixed and determined at the time of the transaction'. Google Wallet / Apple Wallet supported.",
+      "accessed_at": "2026-11-11T05:56:00Z",
+      "effective_from": "2026-09-21",
+      "expires_at": null,
+      "scope": {
+        "note": "No APR, LTV, collateral or liquidation details; no fees."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-exa-availability",
+      "url": "https://intercom.help/exa-app/en/articles/8979641-how-can-i-get-my-exa-card",
+      "title": "Exa App Help Center — How can I get my Exa Card? (card availability and usage)",
+      "source_type": "eligibility_page",
+      "excerpt": "Eligible countries (48): Antigua & Barbuda, Argentina, Australia, Bahamas, Bangladesh, Barbados, Belize, Bolivia, Brazil, Cayman Islands, Colombia, Costa Rica, Côte d'Ivoire … Uruguay, Zambia; 'Subject to approval': Nigeria, South Africa, Sri Lanka; 31 US states listed; 'Ineligible countries' (17) incl. India, Israel, Turkey, Vietnam; cards cannot be used in CU, IR, KP, RU, SY, UA, VE.",
+      "accessed_at": "2026-11-11T05:57:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "'Updated over 2 weeks ago'. Virtual card requested in the Card section after a 'validation' step of about 3 minutes; funds required to enable it. No price stated."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-exa-atm",
+      "url": "https://intercom.help/exa-app/en/articles/11758961-how-to-withdraw-cash-from-an-atm-with-your-exa-card",
+      "title": "Exa App Help Center — How to withdraw cash from an ATM with your Exa Card (September 21, 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "'$1 + 0.65% per transaction'; 'Some ATMs may charge more'; 'Up to $250 per withdrawal'; 'Max 4 withdrawals per day'; requires the card in Apple Wallet or Google Pay, a contactless (NFC) ATM and the PIN from the Exa App Card section.",
+      "accessed_at": "2026-11-11T05:58:00Z",
+      "effective_from": "2026-09-21",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-exa-about",
+      "url": "https://intercom.help/exa-app/en/articles/8977122-about-the-exa-card",
+      "title": "Exa App Help Center — About the Exa Card (September 21, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'A credit card accepted globally, allowing you to use your crypto as collateral without having to spend it.' 'The Exa Card is a virtual card available in 180+ countries.' Pay in full 'or set the number of installments in which you would like to pay (in USDC)'; funds transferred to 'your self-custodial wallet'; Apple Pay and 'Android Pay'.",
+      "accessed_at": "2026-11-11T05:59:00Z",
+      "effective_from": "2026-09-21",
+      "expires_at": null,
+      "scope": {
+        "note": "Marketing copy; '180+ countries' is the card's acceptance footprint, not the issuance list."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-exa-referral-terms",
+      "url": "https://intercom.help/exa-app/en/articles/12630548-exa-app-referral-program-terms-and-conditions",
+      "title": "Exa App Help Center — Exa App Referral Program: Terms and Conditions (effective October 21, 2025)",
+      "source_type": "affiliate_program",
+      "excerpt": "'10 USDC for each Qualified Referral' to the referrer and 10 USDC to the referee; 'A single Referrer can earn a maximum lifetime total of 100 USDC'; qualified = sign-up with code, 'mandatory KYC', first deposit ≥ $1; paid once the referee's cumulative Exa Card purchases reach 100 USDC; paid advertising of the code prohibited; operator Exa Labs SAS.",
+      "accessed_at": "2026-11-11T06:01:00Z",
+      "effective_from": "2025-10-21",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://exactly.app/",
+    "affiliate": {
+      "program_id": "exactly-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-11T06:01:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-11T06:10:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from the Exa App help centre: fees article (2024-10-28), Exa Card terms (effective 2024-11-12), prohibited-countries list, 'How does the Exa Card work?' and 'About' (2026-09-21), availability article, ATM article (2026-09-21) and referral terms (2025-10-21). Issuer Third National (Visa) for Exa Labs SAS. Unknown: issuance, subscription and top-up fees, APR and LTV of installment loans, KYC documents. Contradictions: 0% interest in the card terms vs fixed-rate installment loans; 'not a United States citizen' attestation vs 31 eligible US states; 17 vs 31 excluded countries; FX 1.5% plus an unexplained 1% cross-border fee row. No rewards published. Second read required before publication.",
+      "evidence": [
+        "ev-exa-fees",
+        "ev-exa-terms",
+        "ev-exa-availability",
+        "ev-exa-prohibited",
+        "ev-exa-how",
+        "ev-exa-atm"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual Visa card from the Exa App (Exactly Protocol), issued by Third National for Exa Labs SAS, that spends against crypto held in a self-custodial wallet: 'pay now' deducts each purchase from stored assets, 'installments' borrows at a fixed rate from Exactly Protocol's lending markets. 1.5% FX on non-USD payments, ATM $1 + 0.65% via phone wallets, no published cashback. Eligible in about 48 countries across Latin America, Africa, the Middle East and Asia-Pacific plus 31 US states; not offered in the EEA or UK. Issuance, subscription and deposit costs and the installment APR are not published on the pages read.",
+    "good_for": [
+      "Residents of Latin America, Africa or Asia-Pacific who hold assets on Ethereum L2s and want to spend without selling",
+      "Users comfortable with a self-custodial, protocol-based card and installment borrowing at a rate shown in-app"
+    ],
+    "not_for": [
+      "Residents of the EEA, UK or Switzerland — not on the eligible list (Bulgaria and Croatia explicitly prohibited)",
+      "Anyone who needs a published APR, loan-to-value or liquidation rule before borrowing",
+      "Cashback seekers — no rewards are published"
+    ],
+    "watch_outs": [
+      "Official pages contradict each other: 0% interest in the card terms vs fixed-rate installment loans with a possible origination fee in the help centre; a 'not a United States citizen' attestation vs 31 eligible US states; 17 vs 31 excluded countries.",
+      "Installment purchases are loans against your collateral on the Exactly Protocol; APR, LTV and liquidation mechanics are not on any page read ('Liquidation fee (Reserved)').",
+      "FX 1.5% plus a separate 1% 'Cross Border Fee' row in the terms whose interaction is unexplained — up to 2.5% may apply on foreign purchases.",
+      "Issuance, annual and deposit fees are not published; nothing here is modelled as free.",
+      "Virtual card only; ATM withdrawals need Apple Wallet / Google Pay and a contactless ATM ($250 per withdrawal, 4 a day).",
+      "Help-centre articles are dated by author line only ('Updated over a week ago'); the fee article dates from October 2024."
+    ]
+  }
+}

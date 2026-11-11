@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "entries": [
     {
       "provider": "Wirex",
@@ -351,7 +351,7 @@
     },
     {
       "provider": "Revolut",
-      "product": "Revolut Metal Card",
+      "product": "Revolut crypto card (Pay with crypto) — listed by directories as \"Revolut Metal Card\"",
       "slug": "revolut-metal-card",
       "seen_in": [
         "cryptocards.so 2026-10-28 (sponsored list)",
@@ -367,9 +367,12 @@
       "last_seen": "2026-11-09",
       "priority": 6,
       "regions_hint": [
-        "US"
+        "UK",
+        "EEA",
+        "US (directories)"
       ],
-      "discovery_note": "DeFiLlama lists a US prepaid card (Lead Bank); likely out of scope as a bank card with crypto feature"
+      "discovery_note": "DeFiLlama lists a US prepaid card (Lead Bank); likely out of scope as a bank card with crypto feature",
+      "note": "2026-11-11 (research run, not researched this run): revolut.com/crypto/crypto-card/ (\"Pay with crypto\") is an official product page for a Revolut crypto card — free virtual card (physical with delivery fee) that spends from the crypto balance, \"no exchange fees\" on card payments, \"fair usage fees may still apply\", UK-referenced limits (ATM £3,000/24h, £100,000 per transaction), Apple Pay / Google Pay; country versions exist (en-IE, en-ES, en-IT, en-LT, en-BE…). The \"Metal Card\" entry from US directories is a bank card tier, not the crypto card. Next run: research the Revolut crypto card (UK + EEA variants) from revolut.com and help.revolut.com (crypto-payments articles), and ask David whether a bank-issued card with a pay-with-crypto feature is in scope."
     },
     {
       "provider": "Plasma",
@@ -867,7 +870,9 @@
       "priority": 1,
       "regions_hint": [
         "global"
-      ]
+      ],
+      "needs_browser_read": true,
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
     },
     {
       "provider": "SolCard",
@@ -940,7 +945,9 @@
       "status": "identified",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": -1
+      "priority": -1,
+      "needs_browser_read": true,
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
     },
     {
       "provider": "Agora",
@@ -957,7 +964,9 @@
       "status": "identified",
       "first_seen": "2026-10-28",
       "last_seen": "2026-10-28",
-      "priority": -3
+      "priority": -3,
+      "needs_browser_read": true,
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
     },
     {
       "provider": "UTORG",
@@ -994,7 +1003,9 @@
       "status": "identified",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": -1
+      "priority": -1,
+      "needs_browser_read": true,
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
     },
     {
       "provider": "Sovrae",
@@ -1011,7 +1022,9 @@
       "status": "identified",
       "first_seen": "2026-10-28",
       "last_seen": "2026-10-28",
-      "priority": -3
+      "priority": -3,
+      "needs_browser_read": true,
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
     },
     {
       "provider": "MaxSwap",
@@ -1028,7 +1041,9 @@
       "status": "identified",
       "first_seen": "2026-10-28",
       "last_seen": "2026-10-28",
-      "priority": -3
+      "priority": -3,
+      "needs_browser_read": true,
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
     },
     {
       "provider": "Kardpay",
@@ -1382,16 +1397,25 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "personal referral only ($10 per qualified referral); Jupiter Global Ambassador codes exist, programme not described",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-09",
       "operator_named": true,
       "discovery_note": "Directory says issuer is Rain or DCS by country, KYC via Sumsub",
-      "priority": 4,
+      "priority": 0,
       "regions_hint": [
         "global"
-      ]
+      ],
+      "record": "data/cards/jupiter-global-card.json",
+      "regions": [
+        "LATAM",
+        "Africa",
+        "Middle East",
+        "APAC",
+        "US (34 states)"
+      ],
+      "note": "Validated 2026-11-11 (research run). See data/research-list.json."
     },
     {
       "provider": "UnCash",
@@ -1507,16 +1531,25 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "personal referral only (10 USDC, lifetime cap 100 USDC, paid advertising prohibited)",
+      "status": "validated",
       "first_seen": "2026-11-09",
       "last_seen": "2026-11-09",
-      "priority": 4,
+      "priority": 0,
       "operator_named": true,
       "regions_hint": [
         "global"
       ],
-      "discovery_note": "DeFiLlama lists issuer Third National, 47 countries by tier"
+      "discovery_note": "DeFiLlama lists issuer Third National, 47 countries by tier",
+      "record": "data/cards/exa-card.json",
+      "regions": [
+        "LATAM",
+        "Africa",
+        "Middle East",
+        "APAC",
+        "US (31 states)"
+      ],
+      "note": "Validated 2026-11-11 (research run). See data/research-list.json."
     },
     {
       "provider": "Crypto.com",

@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-10.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-11.",
   "target": {
     "min": 15,
     "max": 50
@@ -230,6 +230,20 @@
       "status": "blocked",
       "needs_browser_read": true,
       "note": "Blocked 2026-11-10: official docs (docs.hyperbeat.org/liquid-banking/hyperbeat-pay) are an overview only — Visa card, Direct Pay / Credit mode, no fees, terms, issuer, KYC or countries; docs index has no such pages; legal page not fetchable (provenance); ordering inside app.hyperbeat.org (client-rendered). Browser session required."
+    },
+    {
+      "provider": "Jupiter",
+      "product": "Jupiter Card (Jupiter Global / Spend)",
+      "status": "validated",
+      "record": "data/cards/jupiter-global-card.json",
+      "note": "Validated 2026-11-11 from docs.jup.ag (fees-and-limits, jupiter-card, FAQ, Spend overview, rewards-and-referrals, risks-and-security, campaigns) and the Jupiter support-centre country article. Stablecoin-funded USD Visa card, issuers Rain / DCS by country of residence (legal entities not named). Two variants: Rain (FX 1%, ATM $1+0.65%, no spend limit) and DCS (AU, JP, MY, PH, SG, KR, TW, TH, VN — FX 1.8%, no ATM, $50,000/day). No annual fee; 2% cashback in USDC capped $100/month, 4%/$200 after 2 qualifying referrals (terms effective 2026-03-26); Claynosaurz virtual card $25 with FX rebate until 2026-12-31. KYC (SumSub) before any card use. About 50 countries (LatAm, Africa, ME, APAC) + 34 US states; no EEA/UK. Unknown: standard virtual card issuance price, platform terms (referenced, not linked), Rain country split (implied). Contradiction: undated support article (digital-only, USDC-only) vs docs. Personal referral programme recorded (data/affiliate/jupiter-referral.json); no publisher programme found. Second read required."
+    },
+    {
+      "provider": "Exactly (Exa App)",
+      "product": "Exa Card",
+      "status": "validated",
+      "record": "data/cards/exa-card.json",
+      "note": "Validated 2026-11-11 from the Exa App help centre (intercom.help/exa-app): fees article (2024-10-28), Exa Card terms (effective 2024-11-12, costs as of 2025-01-13), prohibited-countries list, How does the Exa Card work / About / ATM articles (2026-09-21), availability article, referral terms (2025-10-21). Virtual Visa issued by Third National for Exa Labs SAS; self-custodial, Exactly Protocol credit line (pay now = deducted from stored assets; installments = fixed-rate protocol loans). FX 1.5% (+ unexplained 1% cross-border row), ATM $1+0.65% ($250/withdrawal, 4/day), no rewards published. Eligible: 48 countries (LatAm, Africa, ME, APAC) + 31 US states; NG/ZA/LK subject to approval; no EEA/UK (BG, HR prohibited). Unknown: issuance, subscription, top-up fees, APR, LTV, KYC documents. Contradictions: 0% interest vs installment loans; \"not a US citizen\" attestation vs US states; 17 vs 31 excluded countries. Referral programme recorded (data/affiliate/exactly-referral.json, 10 USDC, lifetime cap 100 USDC). Second read required."
     }
   ],
   "no_kyc_track": {
@@ -239,7 +253,9 @@
         "product": "WaldenPay Virtual Card",
         "claim": "no ID; $10 issuance; 3–5% top-up fees (third-party)",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "note": "2026-11-11: search returns only directories (cryptoslate, cryptocardhub, cryptocards.so, baltex); no official WaldenPay domain indexed — fetcher cannot reach it. Browser session needed.",
+        "needs_browser_read": true
       },
       {
         "product": "SolCard",
@@ -265,21 +281,25 @@
         "product": "Trocador prepaid cards",
         "claim": "reseller, no document",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "note": "2026-11-11: site:trocador.app returns nothing; the prepaid-card section is not reachable by the fetcher (provenance). Browser session needed.",
+        "needs_browser_read": true
       },
       {
         "product": "Laso Finance Card",
         "claim": "non-reloadable up to $1,000; operator described as FinCEN-registered MSB",
         "issuer_disclosed": true,
         "status": "identified",
-        "note": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown)."
+        "note": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; docs.laso.finance and laso.finance pages are no longer returned by web search, so the fetcher cannot reach them (provenance). Needs a browser session to apply the 2026-11-09 rule.",
+        "needs_browser_read": true
       },
       {
         "product": "Goblin Card",
         "claim": "$350 entry; KYC level 0 per KYCnot.me",
         "issuer_disclosed": true,
         "status": "identified",
-        "note": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown)."
+        "note": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; goblincards.com pages are not returned by web search (only trading-card shops), so the fetcher cannot reach them (provenance). Needs a browser session to check whether the terms state a verification stage.",
+        "needs_browser_read": true
       },
       {
         "product": "Freedomia Card",
@@ -292,7 +312,9 @@
         "product": "Agora Card",
         "claim": "$90 virtual / $500 physical one-time",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "note": "2026-11-11: search returns only cryptocards.so pages; no official Agora Cards domain indexed — fetcher cannot reach it. Browser session needed.",
+        "needs_browser_read": true
       },
       {
         "product": "UTORG Card",
@@ -306,26 +328,33 @@
         "product": "Kripicard",
         "claim": "minimal info to open, more verification to raise limits",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "note": "2026-11-11: no page of kripicard.com is returned by web search (only directories, Trustpilot, G2, Product Hunt), so the fetcher cannot reach the official site (provenance). No official affiliate/referral page found. Not blocked: read kripicard.com (card, fees, verification tiers, countries, terms) in a browser session.",
+        "needs_browser_read": true
       },
       {
         "product": "Pinto Pay",
         "claim": "low-KYC, terms reserve right to demand ID; not US",
         "issuer_disclosed": true,
         "status": "identified",
-        "note": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown)."
+        "note": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; pintopay.me is not returned by web search, so the fetcher cannot reach the terms PDF (provenance). Needs a browser session.",
+        "needs_browser_read": true
       },
       {
         "product": "Sovrae Card",
         "claim": "pre-verified on purchase; $89/$349 one-time",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "note": "2026-11-11: search returns only directories (cardpilled, polymart, cryptocards.money) and X posts; no official Sovrae domain indexed — fetcher cannot reach it. Browser session needed to locate and read official pages.",
+        "needs_browser_read": true
       },
       {
         "product": "MaxSwap Virtual Card",
         "claim": "email-only onboarding; $50 card",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "note": "2026-11-11: no official MaxSwap domain is returned by web search (only cardik/coingape/coincodex directories and press releases), so the fetcher cannot reach the operator's pages (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read card fees, verification stage and terms in a browser session.",
+        "needs_browser_read": true
       },
       {
         "product": "Kardpay",
@@ -336,5 +365,5 @@
       }
     ]
   },
-  "updated": "2026-11-10"
+  "updated": "2026-11-11"
 }
