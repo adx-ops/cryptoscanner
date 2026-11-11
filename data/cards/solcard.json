@@ -271,7 +271,7 @@
       "title": "SolCard — Fees (schedule current as of 15 August 2026)",
       "source_type": "pricing_page",
       "excerpt": "Virtual / Platinum: 'Top-up fees: 5% + $10/new card' / '0%'; 'FX rates: 1-2%' / '0-1.5%'; 'Monthly spending limit: $10,000/month' / 'No limit'; monthly and annual fee None; 'a one-time $10 issuance fee for each new card'; 'The Virtual card is the email-only tier.'; 'The Platinum card requires identity verification and removes the top-up fee.'; 'Not available to residents of Hong Kong.'",
-      "accessed_at": "2026-11-10T06:30:00Z",
+      "accessed_at": "2026-11-11T06:31:00Z",
       "effective_from": "2026-08-15",
       "expires_at": null,
       "scope": {
@@ -286,7 +286,7 @@
       "title": "SolCard — Terms of Use (last updated September 27, 2026)",
       "source_type": "official_terms",
       "excerpt": "SC PAYMENTS LIMITED (Hong Kong); 'SolCard is not a bank, electronic money institution, or card issuer'; Issuer 'a third party'; cards 'issued pursuant to a license from Visa'; 18+; not Hong Kong or sanctioned persons; 'Access to certain card types or features requires completion of identity verification'; dormancy 10%/month after 90 days; cashback expires after 90 days.",
-      "accessed_at": "2026-11-10T06:32:00Z",
+      "accessed_at": "2026-11-11T06:31:00Z",
       "effective_from": "2026-09-27",
       "expires_at": null,
       "scope": {
@@ -318,8 +318,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-10T06:33:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-11T06:31:00Z",
+    "last_auto_check_at": "2026-11-11T06:31:00Z"
   },
   "changelog": [
     {
@@ -332,6 +332,18 @@
         "ev-solcard-referral"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-11T06:34:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-10T06:33:00Z",
+      "to": "2026-11-11T06:31:00Z",
+      "reason": "Second read on 2026-11-11 (fees page 24 h 01 min, terms page 23 h 59 min after the first reads — borderline for policy rule 1, a further read is needed before any publication) of https://www.solcard.cc/fees ('Schedule current as of 15 August 2026') and https://www.solcard.cc/terms ('Last updated: September 27, 2026'): every material value confirmed, unchanged — Virtual: top-up 5 % + $10/new card, FX 1–2 %, spending limit $10,000/month, monthly and annual fee None, 'The Virtual card is the email-only tier.'; Platinum: top-up 0 %, FX 0–1.5 %, no spending limit, 'requires identity verification and removes the top-up fee'; 'a one-time $10 issuance fee for each new card'; 'Not available to residents of Hong Kong. Eligibility may vary by region.'; no ATM, cashback, minimum top-up or decline rows; operator SC PAYMENTS LIMITED, BRN 78350827, Sheung Wan, Hong Kong. Terms: 'SolCard is not a bank, electronic money institution, or card issuer', Issuer a third party, 'issued pursuant to a license from Visa', 18+, Hong Kong and sanctioned persons excluded, 'Identity verification may be required for certain card tiers, features, or spending limits', dormancy after 90 consecutive days at 10 % of the remaining balance per month (balance charged in full if it would fall below 1 USD), minimum refundable amount forfeited on cancellation, handling fee on notice for disproportionate declines/disputes, fees displayed in the App before confirmation, top-up fees and conversion spread, FX spread on non-USD spending, cashback expires 90 days after credit; no no-solicitation clause; Hong Kong-indicator suspension. NOT published by this run for two reasons. (1) The third evidence page https://www.solcard.cc/referral could not be re-read: the fetcher only accepts URLs surfaced by a search and four domain-restricted searches did not return it (the help-centre affiliate articles came up instead); the page sources no fee, reward or eligibility value, so this is a provenance gap, not an unreachable or changed page. (2) Observation, not a modelled material value: the fee page's 'Card networks' line reads 'Visa and Mastercard', while the record models network 'visa' from the terms' Visa-licence sentence; the first read's excerpt did not record this line, so it cannot be called a change. No value overwritten. Record stays validated; David to decide whether the referral page needs a browser read before publication and how the network should be shown.",
+      "evidence": [
+        "ev-solcard-fees",
+        "ev-solcard-terms"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
