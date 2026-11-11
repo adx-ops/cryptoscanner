@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "jupiter-referral",
+  "provider_id": "jupiter",
+  "program_name": "Jupiter Spend referral program (personal; Jupiter Global Ambassador codes mentioned, programme not described)",
+  "program_url": "https://docs.jup.ag/user-docs/global/spend/rewards-and-referrals.md",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Every Jupiter Spend user has a referral code/link; no application. 'Jupiter Global Ambassador' codes exist (campaigns page: ambassadors' referees get FX fees rebated for 30 days up to US$100) but no page read says who can become an ambassador, how to apply or what ambassadors earn. No publisher/affiliate/partner programme found on docs.jup.ag or the support centre (search 2026-11-11).",
+  "our_status": "identified",
+  "paid_action": "Referee completes KYC and spends at least $50 on their Jupiter Card within 30 days of KYC approval → referrer receives $10 (credited to the Rewards balance held in USDC).",
+  "validation_conditions": "'If your friend does not spend $50 within 30 days of KYC approval, the referral expires and you do not receive a reward.' Self-referrals and duplicate accounts are blocked and forfeited. Referee separately earns $20 after spending $1,000 within 30 days of card activation. 'There is no cap on the number of referrals.'",
+  "commission": {
+    "model_note": "Flat $10 per qualifying referral (not a share of fees or spend). Referring at least 2 qualifying people in a calendar month also raises the referrer's own cashback to 4% (cap $200) the following month.",
+    "amount": 10,
+    "currency": "USD",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": 30,
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "None stated",
+    "method": "Credited to the in-app Rewards balance (USDC); movable to the card balance instantly, not withdrawable to an external wallet",
+    "frequency": "On qualification",
+    "holdbacks_note": "Jupiter 'reserve[s] the right to update, amend, suspend, or discontinue any aspect of the Rewards and referral programs'."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Personal programme designed for app users, not publishers: the code is entered at Global ID creation. Terms 'effective March 26, 2026'. Nobody contacted, no account opened.",
+  "allowed_countries_note": "Follows Jupiter Card eligibility (about 50 countries + 34 US states; not EEA/UK).",
+  "evidence": [
+    {
+      "url": "https://docs.jup.ag/user-docs/global/spend/rewards-and-referrals.md",
+      "title": "Jupiter docs — Rewards & Referrals (terms effective March 26, 2026)",
+      "accessed_at": "2026-11-11T05:47:00Z",
+      "excerpt": "'Once your friend spends at least $50 on their Jupiter Card within 30 days of KYC approval, you receive $10.' 'Once your friend spends $1,000 within 30 days of card activation, they receive $20.' 'There is no cap on the number of referrals.' 'A referral code, including a Jupiter Global Ambassador's code, is entered in the Jupiter app when you create your Global ID.'"
+    },
+    {
+      "url": "https://docs.jup.ag/user-docs/global/spend/campaigns.md",
+      "title": "Jupiter docs — Spend campaigns",
+      "accessed_at": "2026-11-11T05:50:00Z",
+      "excerpt": "'Jupiter Global Ambassadors can offer this to the people they refer' — 0% FX fees for 30 days up to US$100 for new users entering an ambassador's code. Ambassador programme conditions not described."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Identified only. A publisher programme, if any, would have to be asked of Jupiter directly — not without David's instruction."
+}

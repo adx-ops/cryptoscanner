@@ -1,0 +1,822 @@
+{
+  "schema_version": "1.0.0",
+  "id": "jupiter-global-card",
+  "slug": "jupiter-global-card",
+  "name": "Jupiter Card",
+  "brand": "Jupiter",
+  "provider_id": "jupiter",
+  "issuer": {
+    "name": "Rain or DCS (assigned by country of residence; legal entities not named)",
+    "status": "verified",
+    "evidence": [
+      "ev-jup-card",
+      "ev-jup-faq",
+      "ev-jup-risks"
+    ]
+  },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "hybrid",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "Stablecoin-funded Visa card inside Jupiter Spend (Jupiter Mobile app): USDC and USDT deposited to a Spend/Card balance shown in USD. Rain-issued cards: 'USDC and USDT are credited 1:1' and deposits 'stay on-chain as collateral for the card'. DCS-issued cards: USDC credited 1:1, USDT 'converted to USD by the issuer at market rate'. Other tokens/networks are swapped via Jupiter Mobile (0.1–0.2% swap fee) or Universal Deposit. 'Jupiter does not issue credit lines: you can only spend what you have deposited.' The docs say Jupiter 'does not take custody of your DeFi wallet funds' while DCS balances 'are handled by the partners'.",
+    "evidence": [
+      "ev-jup-card",
+      "ev-jup-fees",
+      "ev-jup-risks"
+    ]
+  },
+  "variants": [
+    {
+      "id": "jupiter-card-rain",
+      "region_label": "Rain-issued regions (Americas, Africa, Middle East, HK/NZ/PK, 34 US states)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AG",
+          "AR",
+          "BS",
+          "BB",
+          "BZ",
+          "BO",
+          "BR",
+          "KY",
+          "CO",
+          "CR",
+          "DO",
+          "DM",
+          "EC",
+          "SV",
+          "GD",
+          "GT",
+          "GY",
+          "HN",
+          "MX",
+          "PA",
+          "PY",
+          "PE",
+          "SR",
+          "TT",
+          "TC",
+          "UY",
+          "CI",
+          "EG",
+          "GH",
+          "KE",
+          "MA",
+          "NG",
+          "SN",
+          "ZA",
+          "UG",
+          "ZM",
+          "HK",
+          "NZ",
+          "PK",
+          "AE",
+          "US"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "Eligibility 'depends on your country of residence, not your citizenship' and 'is confirmed during identity verification'. Users must be at least 18.",
+        "usage_note": "Country list taken from the Jupiter support article 'Jupiter Card' (50 countries + 34 US states; Bangladesh listed 'paused' and therefore not modelled). Which of those countries is served by Rain is implied, not stated: the docs FAQ names only the DCS countries (AU, JP, MY, PH, SG, KR, TW, TH, VN) and assigns the rest to Rain. United States: only the 34 states listed in the support article (AL, AK, AR, CA, CO, CT, FL, HI, IL, IN, IA, KS, KY, ME, MA, MI, MN, MS, MO, MT, NE, NH, NJ, NY, NC, OK, PA, SC, TN, TX, UT, VA, WV, WY). No EEA, UK or Swiss country appears on any official page read. Bank-transfer off-ramp (Noah) has its own regional restrictions. Physical cards 'rolling out in phases', full rollout 'planned by the end of 2026'.",
+        "evidence": [
+          "ev-jup-zendesk",
+          "ev-jup-faq",
+          "ev-jup-card"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "phone",
+          "selfie",
+          "proof_of_address",
+          "other"
+        ],
+        "thresholds_note": "No amount threshold: 'Verification is required to use any Spend feature.' Proof of address is required in APAC regions only.",
+        "stages_note": "Account creation: Global ID (email, Google or Apple sign-in). Before any Spend/Card use: identity verification in five steps — identity document, phone number, liveness check, personal information, short questionnaire; provider SumSub ('All verification data is handled by SumSub'). Usually a few minutes; manual review 3–5 working days. The issuer (Rain/DCS) is assigned at KYC from the country of residence.",
+        "evidence": [
+          "ev-jup-faq",
+          "ev-jup-spend"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Jupiter Card (standard)",
+          "access": {
+            "type": "free",
+            "note": "'Annual fee: None'. Virtual card available now; physical card $13.13 plus shipping.",
+            "status": "verified",
+            "evidence": [
+              "ev-jup-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "The fee table prices only the Claynosaurz virtual card ($25) and the physical card ($13.13 plus shipping); no price row exists for the standard virtual card, so its issuance cost is not established.",
+              "status": "unknown",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 13.13,
+                "currency": "USD"
+              },
+              "conditions": "'Physical card: $13.13 plus shipping, charged to card balance'; shipping cost not stated; '$30 off tracked shipping with a balance of $1,500 or more'. Card orders are non-refundable.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "'Annual fee: None' (Fees & Limits page and support article).",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees",
+                "ev-jup-zendesk"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'No processing fee for USDC or USDT on Solana' (minimum deposit $3). Other networks: 'at least $0.30', 0.02% for stablecoins or 0.1% for other tokens plus swap cost, plus network gas; $10 minimum on Ethereum. Funding with another token via Jupiter Mobile costs the 0.1%/0.2% swap fee. The zero-fee Solana stablecoin route is modelled.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "'FX conversion (Rain): 1% on non-USD payments'; 'No fee applies to payments made in USD'. Same fee via Apple Pay / Google Pay.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees",
+                "ev-jup-card"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "percent": 0.65,
+              "period": "per_transaction",
+              "conditions": "Rain physical card only: '$1 plus 0.65%'; non-USD withdrawals add '$0.30 plus 1%'; the ATM owner may add its own fee; balance inquiry or declined withdrawal $0.60. Limits: $250 per withdrawal, 3 attempts per 24 hours.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "ATM withdrawals",
+                "P2P transfers",
+                "QR payments",
+                "refunded or disputed transactions",
+                "fees",
+                "financial services and money transfers",
+                "gambling",
+                "government payments"
+              ],
+              "conditions": "'All qualifying card purchases earn a base cashback rate of 2%, up to a monthly cap of $100.' Cap applies per Global ID across all cards. Credited after settlement to a Rewards balance held in USDC; movable to the card balance instantly, not withdrawable to an external wallet. Cashback & Referral Program Terms 'effective March 26, 2026'.",
+              "valid_from": "2026-03-26",
+              "valid_until": null,
+              "evidence": [
+                "ev-jup-rewards",
+                "ev-jup-faq"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "conditional_max",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 200,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "conditions": "4% with a $200 monthly cap for one calendar month after referring 'at least 2 qualifying people during the previous calendar month' (a qualifying referral completes KYC and spends at least $50 on their Jupiter Card). Referring one person does not unlock it.",
+              "evidence": [
+                "ev-jup-rewards"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "signup_bonus",
+              "fixed": {
+                "amount": 20,
+                "currency": "USD"
+              },
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "conditions": "Referee reward only when signing up with a referral code: '$20 after spending $1,000 on their card within 30 days of card activation'. Not modelled as a general bonus.",
+              "evidence": [
+                "ev-jup-rewards"
+              ],
+              "status": "verified"
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "Rain: 'No limit' daily and annual.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "Up to $250 per withdrawal, 3 attempts per 24 hours including declined attempts; Rain physical card only.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "amount": {
+                "amount": 200000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "'Deposit limit: Up to 200,000 USDC per transfer.'",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "claynosaurz",
+          "name": "Jupiter × Claynosaurz virtual card",
+          "access": {
+            "type": "free",
+            "note": "No annual fee; the co-branded Visa Platinum virtual card costs $25 one-off. Shares the standard cashback cap with other cards on the account.",
+            "status": "verified",
+            "evidence": [
+              "ev-jup-fees",
+              "ev-jup-card"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 25,
+                "currency": "USD"
+              },
+              "conditions": "'Claynosaurz virtual card: $25', non-refundable once ordered.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "'Annual fee: None'.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Same deposit rules as the standard card: no fee for USDC/USDT on Solana; other networks from $0.30 plus 0.02%/0.1% and gas.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Rain FX fee 1% on non-USD payments; rebated until end of 2026 on the first $10,000 of non-USD spend per month, up to $100 a month (modelled as a promotional reward).",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees",
+                "ev-jup-card"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Virtual card only; ATM withdrawals are documented for the Rain physical card only.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "conditions": "'Earns the standard 2% cashback, sharing the $100 monthly cap across all your cards.'",
+              "evidence": [
+                "ev-jup-faq",
+                "ev-jup-card"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "promotional",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "conditions": "FX-fee rebate on non-USD spend only: 'FX fees on Claynosaurz card spend are refunded for the first $10,000 of non-USD spend each month, up to $100 a month, until end of 2026'. Modelled at the Rain FX rate (1%). First rebates (September 2026) paid in the first week of October 2026.",
+              "valid_from": "2026-09-01",
+              "valid_until": "2026-12-31",
+              "description": "FX fee rebate (Claynosaurz card)",
+              "evidence": [
+                "ev-jup-card",
+                "ev-jup-faq"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "jupiter-card-dcs",
+      "region_label": "DCS-issued regions (Australia, Japan, Malaysia, Philippines, Singapore, South Korea, Taiwan, Thailand, Vietnam)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AU",
+          "JP",
+          "MY",
+          "PH",
+          "SG",
+          "KR",
+          "TW",
+          "TH",
+          "VN"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "Residence-based: 'It depends on your country of residence, not your citizenship.' Users must be at least 18.",
+        "usage_note": "FAQ: 'DCS-issued cards cover Australia, Japan, Malaysia, the Philippines, Singapore, South Korea, Taiwan, Thailand, and Vietnam.' All nine also appear in the support article's country list. DCS cards: no ATM withdrawals, no in-app PIN viewing, no balance withdrawals yet ('Card balances are for spending only'). Claynosaurz card not available in the Philippines, Vietnam, Taiwan or South Korea. Proof of address required in APAC.",
+        "evidence": [
+          "ev-jup-faq",
+          "ev-jup-zendesk"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "phone",
+          "selfie",
+          "proof_of_address",
+          "other"
+        ],
+        "thresholds_note": "No amount threshold: 'Verification is required to use any Spend feature.' 'Proof of address is required in APAC regions' (utility bills, telecom bills, bank statements, tax invoices).",
+        "stages_note": "Global ID sign-in, then five-step verification (identity document, phone, liveness check, personal information, questionnaire) handled by SumSub before any Spend/Card use; issuer assigned at KYC.",
+        "evidence": [
+          "ev-jup-faq",
+          "ev-jup-spend"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Jupiter Card (standard)",
+          "access": {
+            "type": "free",
+            "note": "'Annual fee: None'. Virtual card; physical card rollout in phases.",
+            "status": "verified",
+            "evidence": [
+              "ev-jup-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "No price row for the standard virtual card in the fee table (only Claynosaurz $25 and physical $13.13 plus shipping).",
+              "status": "unknown",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 13.13,
+                "currency": "USD"
+              },
+              "conditions": "'Physical card: $13.13 plus shipping'; availability by region not stated.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "'Annual fee: None'.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'No processing fee for USDC or USDT on Solana'; USDT on DCS cards is converted to USD at market rate by the issuer ('slightly lower' credit). Other networks from $0.30 plus 0.02%/0.1% and gas.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees",
+                "ev-jup-card"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.8,
+              "period": "per_transaction",
+              "conditions": "'FX conversion (DCS): 1.8% on non-USD payments'; no fee on USD payments.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "'ATM withdrawal (DCS): Not available' — no cash withdrawal capability, so no fee exists; left unknown rather than free.",
+              "status": "unknown",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "ATM withdrawals",
+                "P2P transfers",
+                "QR payments",
+                "refunded or disputed transactions",
+                "fees",
+                "financial services and money transfers",
+                "gambling",
+                "government payments"
+              ],
+              "conditions": "'All qualifying card purchases earn a base cashback rate of 2%, up to a monthly cap of $100.' Rewards balance held in USDC. Terms effective March 26, 2026.",
+              "valid_from": "2026-03-26",
+              "valid_until": null,
+              "evidence": [
+                "ev-jup-rewards"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "conditional_max",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 200,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "conditions": "4% / $200 cap for the month following a calendar month with at least 2 qualifying referrals (KYC completed and $50 spent each).",
+              "evidence": [
+                "ev-jup-rewards"
+              ],
+              "status": "verified"
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 50000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "DCS: $50,000 daily, $990,000 annual.",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "amount": {
+                "amount": 200000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "'Deposit limit: Up to 200,000 USDC per transfer.'",
+              "status": "verified",
+              "evidence": [
+                "ev-jup-fees"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-jup-fees",
+      "url": "https://docs.jup.ag/user-docs/global/spend/fees-and-limits",
+      "title": "Jupiter docs — Spend: Fees, Limits & Regional Differences",
+      "source_type": "pricing_page",
+      "excerpt": "Annual fee None; Claynosaurz virtual card $25; physical card $13.13 plus shipping; deposits: no processing fee for USDC/USDT on Solana, other networks from $0.30 + 0.02%/0.1% + gas; FX 1% (Rain) / 1.8% (DCS); ATM (Rain) $1 + 0.65%, non-USD +$0.30 + 1%, inquiry/decline $0.60; ATM (DCS) not available; limits DCS $50,000/day, $990,000/year, Rain no limit.",
+      "accessed_at": "2026-11-11T05:35:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "No last-updated date on the page; 'the app prevails'. Also: ATM $250 per withdrawal, 3 attempts/24h; deposit up to 200,000 USDC per transfer; QR Pay no longer uses the card balance from November 10, 2026; Noah off-ramp fee tables."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-jup-card",
+      "url": "https://docs.jup.ag/user-docs/global/spend/jupiter-card.md",
+      "title": "Jupiter docs — Jupiter Card (product page, Markdown export)",
+      "source_type": "help_center",
+      "excerpt": "'a Visa card powered by your stablecoins'; 'Each user is assigned one card issuer automatically, based on their country of residence' (Rain or DCS); 'It depends on your country of residence, not your citizenship'; eligibility 'set out in the Jupiter Card platform terms'; 'Jupiter does not issue credit lines'; physical cards 'rolling out in phases', full rollout 'by the end of 2026'.",
+      "accessed_at": "2026-11-11T05:37:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "No country list on this page; no legal names for Rain or DCS; platform terms referenced but not linked. Claynosaurz card: co-branded Visa Platinum virtual card, FX rebate until end of 2026."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-jup-faq",
+      "url": "https://docs.jup.ag/user-docs/global/spend/faq",
+      "title": "Jupiter docs — Spend FAQ",
+      "source_type": "help_center",
+      "excerpt": "'DCS-issued cards cover Australia, Japan, Malaysia, the Philippines, Singapore, South Korea, Taiwan, Thailand, and Vietnam'; KYC: 18+, Global ID, five steps (ID document, phone, liveness, personal info, questionnaire), 'Proof of address is required in APAC regions', 'All verification data is handled by SumSub'; cashback 2% capped $100/month, 4% / $200 after 2 qualifying referrals.",
+      "accessed_at": "2026-11-11T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Says Spend is available in 'selected countries' and points to the Jupiter Card page for the list, which that page does not contain. Apple Pay / Google Pay supported, no Jupiter fee."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-jup-spend",
+      "url": "https://docs.jup.ag/user-docs/global/spend",
+      "title": "Jupiter docs — Spend overview",
+      "source_type": "help_center",
+      "excerpt": "Spend described as 'regulated financial services' with card issuance, payments and transfers 'handled by licensed financial partners' (not named); Rain cards: USDC/USDT 1:1 held on-chain as collateral; DCS cards: USDT converted to USD on arrival; identity verification handled by SumSub.",
+      "accessed_at": "2026-11-11T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "No country list, no operating entity, no terms link, no date."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-jup-zendesk",
+      "url": "https://jupiverse.zendesk.com/hc/en-us/articles/25691462148508-Jupiter-Card",
+      "title": "Jupiter support centre — Jupiter Card (country list)",
+      "source_type": "eligibility_page",
+      "excerpt": "Supported countries (50) across the Americas (Antigua & Barbuda to Uruguay), Africa (CI, EG, GH, KE, MA, NG, SN, ZA, UG, ZM) and APAC/ME (AU, BD paused, HK, JP, MY, NZ, PK, PH, SG, KR, TW, TH, AE, VN) plus 34 US states; issuers Rain and DCS; annual fee None; FX 1% (Rain) / 1.8% (DCS); DCS limits $50,000/day, $990,000/year.",
+      "accessed_at": "2026-11-11T05:45:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Undated. Contains statements that the newer docs supersede (see contradiction_note)."
+      },
+      "verification": "contradictory",
+      "contradiction_note": "This support article says 'Only the digital card is currently available; physical cards are not yet offered' and 'USDC is the only supported deposit asset', while the docs (fees-and-limits, jupiter-card) price a physical card ($13.13) rolling out in phases and accept USDT. The docs are treated as governing for product scope; the country list exists only on this article and is modelled with status hypothesis for the Rain split."
+    },
+    {
+      "id": "ev-jup-rewards",
+      "url": "https://docs.jup.ag/user-docs/global/spend/rewards-and-referrals.md",
+      "title": "Jupiter docs — Rewards & Referrals (Cashback & Referral Program Terms effective March 26, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "'All qualifying card purchases earn a base cashback rate of 2%, up to a monthly cap of $100.' 4% (cap $200) for a month after 'referring at least 2 qualifying people during the previous calendar month'. 'Your rewards balance is held in USDC.' Referrer $10 once the friend spends $50 within 30 days of KYC approval; friend $20 after $1,000 within 30 days of activation; no cap on referrals.",
+      "accessed_at": "2026-11-11T05:47:00Z",
+      "effective_from": "2026-03-26",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Ineligible: ATM withdrawals, P2P transfers, QR payments, refunded/disputed transactions, fees, financial services, money transfers, gambling, government payments. Jupiter may 'update, amend, suspend, or discontinue' the programs."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-jup-risks",
+      "url": "https://docs.jup.ag/user-docs/global/spend/risks-and-security",
+      "title": "Jupiter docs — Spend: Risks and Security",
+      "source_type": "help_center",
+      "excerpt": "Partners table: 'Rain and DCS' for the Jupiter Card, 'Noah' for withdrawals and remittance; 'Users are subject to the terms, conditions, and operational stability of these partners'; 'Jupiter does not take custody of your DeFi wallet funds'; Rain deposits 'stay onchain as collateral for the card'; 'The balance of a DCS-issued card and fiat transfers are handled by the partners listed above.'",
+      "accessed_at": "2026-11-11T05:49:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "No legal names, licences, regulators or deposit-insurance statements."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-jup-campaigns",
+      "url": "https://docs.jup.ag/user-docs/global/spend/campaigns.md",
+      "title": "Jupiter docs — Spend campaigns",
+      "source_type": "help_center",
+      "excerpt": "Ambassador referral offer: new Jupiter Mobile users entering a Jupiter Global Ambassador's code get FX fees rebated for 30 days from sign-up, up to US$100 (no end date stated). VIP Matching Program (3% cashback, cap US$300/month) closed end of August 2026. No affiliate or partner programme described.",
+      "accessed_at": "2026-11-11T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Ambassador programme itself (who can join, remuneration) not described anywhere read."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://docs.jup.ag/user-docs/global/spend/jupiter-card",
+    "affiliate": {
+      "program_id": "jupiter-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-11T05:50:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-11T06:00:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from Jupiter's official docs (fees-and-limits, jupiter-card, FAQ, Spend overview, rewards-and-referrals, risks-and-security, campaigns) and the Jupiter support-centre 'Jupiter Card' article (country list). Two variants modelled by issuer: Rain (1% FX, ATM $1+0.65%, no spend limit) and DCS (1.8% FX, no ATM, $50,000/day). Unknown: standard virtual card issuance price, Rain/DCS legal entities, platform terms (referenced, not linked), Rain country split (implied). Contradiction: undated support article vs docs on physical card and USDT. No publisher affiliate programme found; personal referral programme recorded. Second read required before publication.",
+      "evidence": [
+        "ev-jup-fees",
+        "ev-jup-card",
+        "ev-jup-faq",
+        "ev-jup-zendesk",
+        "ev-jup-rewards"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Stablecoin-funded Visa card inside the Jupiter Mobile app (Solana), issued by Rain or DCS depending on the country of residence, with a USD balance credited 1:1 from USDC/USDT. No annual fee, no fee on USD payments, 1% (Rain) or 1.8% (DCS) on other currencies, 2% cashback in USDC capped at $100 a month (4% / $200 after two qualifying referrals). Available in about 50 countries across Latin America, Africa, the Middle East and Asia-Pacific plus 34 US states; not offered in the EEA or UK on any official page read. Physical cards are rolling out through 2026; ATM withdrawals only on Rain physical cards.",
+    "good_for": [
+      "Residents of Latin America, Africa, the Middle East and Asia-Pacific who hold USDC/USDT on Solana and want a no-annual-fee USD Visa card",
+      "USD spending from stablecoins with 2% cashback (capped at $100 a month)",
+      "Apple Pay / Google Pay users in supported countries"
+    ],
+    "not_for": [
+      "Residents of the EEA, UK or Switzerland — not listed on any official page read",
+      "US residents outside the 34 listed states",
+      "Cash withdrawals in DCS countries (Australia, Japan, Malaysia, Philippines, Singapore, South Korea, Taiwan, Thailand, Vietnam) — not available"
+    ],
+    "watch_outs": [
+      "The card issuer depends on your country (Rain or DCS) and changes FX fee, limits and ATM access; the legal entities behind 'Rain' and 'DCS' are not named on the pages read.",
+      "The only official country list sits in an undated support article whose other statements (digital-only, USDC-only) are outdated versus the docs — second read needed.",
+      "Cashback is capped at $100 a month (2%) and the 4% rate depends on referring two new users every month.",
+      "Rain-issued card deposits 'stay on-chain as collateral'; refunds on Rain cards can be spent but not withdrawn; DCS cards cannot withdraw balances yet.",
+      "The standard virtual card's issuance price is not stated; the physical card costs $13.13 plus unstated shipping; card orders are non-refundable.",
+      "Full identity verification (SumSub) before any card use; proof of address in APAC."
+    ]
+  }
+}

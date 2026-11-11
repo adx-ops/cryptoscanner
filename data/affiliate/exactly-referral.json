@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "exactly-referral",
+  "provider_id": "exactly",
+  "program_name": "Exa App Referral Program (personal, capped)",
+  "legal_entity": "Exa Labs SAS",
+  "program_url": "https://intercom.help/exa-app/en/articles/12630548-exa-app-referral-program-terms-and-conditions",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Referrers need an active account in good standing that has passed KYC; no separate application. Referees must be brand-new users who open their account on or after October 21, 2025. No publisher/affiliate programme found (help-centre search 2026-11-11; the 'exactly.ai affiliate program' results belong to an unrelated company).",
+  "our_status": "identified",
+  "paid_action": "Qualified Referral = sign-up with the referrer's code + mandatory KYC + first deposit of at least $1 equivalent; both parties are paid once the referee's cumulative Exa Card purchases reach 100 USDC.",
+  "validation_conditions": "Payment 'up to 7 business days' after all conditions are met; no time limit for completing the actions (Exa may add one). Prohibited: self-referral via duplicate accounts, spam, paid advertising (including search ads) promoting the code, presenting the code as official Exa communication, bots.",
+  "commission": {
+    "model_note": "10 USDC per Qualified Referral to the referrer and 10 USDC to the referee; lifetime cap 100 USDC per referrer (the code stays active afterwards without reward).",
+    "amount": 10,
+    "currency": "USDC",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "None stated (paid per qualified referral)",
+    "method": "USDC credited to the Exa App USDC wallet",
+    "frequency": "Up to 7 business days after qualification",
+    "holdbacks_note": "Rewards forfeited on violation of the program rules."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "A 100 USDC lifetime cap and a ban on paid advertising make this a user-to-user programme, not a publisher channel. Terms effective October 21, 2025. Nobody contacted, no account opened.",
+  "allowed_countries_note": "Follows Exa Card eligibility (48 listed countries + 31 US states; not EEA/UK).",
+  "evidence": [
+    {
+      "url": "https://intercom.help/exa-app/en/articles/12630548-exa-app-referral-program-terms-and-conditions",
+      "title": "Exa App Help Center — Exa App Referral Program: Terms and Conditions (effective October 21, 2025)",
+      "accessed_at": "2026-11-11T06:01:00Z",
+      "excerpt": "'10 USDC for each Qualified Referral'; referee also 10 USDC; 'A single Referrer can earn a maximum lifetime total of 100 USDC through this Program'; qualified = code at sign-up, KYC, deposit ≥ $1; paid after the referee's cumulative card purchases reach 100 USDC; paid advertising prohibited; operator Exa Labs SAS."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Identified only. Not usable as a monetisation channel at its current cap; a publisher programme would need to be asked of Exa Labs — not without David's instruction."
+}
