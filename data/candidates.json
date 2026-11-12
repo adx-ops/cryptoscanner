@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "entries": [
     {
       "provider": "Wirex",
@@ -410,10 +410,12 @@
       "no_kyc_claim": false,
       "operator_named": null,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": 4
+      "priority": 4,
+      "needs_browser_read": true,
+      "blocked_reason": "Blocked 2026-11-12: bitmart.com returns a client error to the fetcher for the product page, the 'BitMart Card Fees and Limits' article (39825138622619), the Terms and Conditions (39454573575195), the VIP/cashback article (44876034128411) and the academy page; only the 'BitMart Card User Guide' (39936364508059) was readable — Visa, USD, USDT-funded, virtual + physical, KYC Lv.2, 'zero issuance fee (virtual)' and 'zero annual fee' flagged as promotional, ATM 'withdrawal fees may apply', restricted countries unnamed, 'functions like a credit card' vs 'debit card'. Fee schedule, T&Cs and country list unobtainable → retry with a browser session. BitMart runs an official affiliate programme (affiliate.bitmart.com), not read."
     },
     {
       "provider": "Binance",
@@ -909,8 +911,10 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
-      "priority": 1
+      "last_seen": "2026-11-12",
+      "priority": 1,
+      "needs_browser_read": true,
+      "note": "2026-11-12: official site (bingcard.com) not returned by web search; only a Google Sites privacy policy (operator \"GINBE LTD UK\", no fees) is indexed — fetcher cannot reach the product pages (provenance). See data/research-list.json no_kyc_track."
     },
     {
       "provider": "OffGrid",
@@ -926,8 +930,10 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": -3
+      "last_seen": "2026-11-12",
+      "priority": -3,
+      "needs_browser_read": true,
+      "note": "2026-11-12: official site not returned by web search (directories and project profiles only); fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
     },
     {
       "provider": "Trocador",
@@ -1137,10 +1143,12 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-09",
-      "priority": 4
+      "priority": 4,
+      "needs_browser_read": true,
+      "blocked_reason": "Blocked 2026-11-12: zypto.com and help.zypto.com return a client error to the fetcher for every page tried (Premium Physical & Virtual Cards FAQ 9630445, /personal/crypto-cards/, blog posts). Nothing readable → fees, issuer, countries and KYC unobtainable. Official referral programme pages exist (zypto.com/blog/zypto-app/zypto-referral-program/, Rewards Hub) — unread. Retry with a browser session."
     },
     {
       "provider": "Bitget",
@@ -1377,15 +1385,22 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "referral (ambassador programme, in-app code)",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-09",
-      "priority": 4,
+      "priority": 0,
       "operator_named": true,
       "regions_hint": [
         "global"
-      ]
+      ],
+      "record": "data/cards/tuyo-card.json",
+      "regions": [
+        "most countries (list not published)",
+        "US (except 19 states)"
+      ],
+      "note": "2026-11-12 (research run): validated from tuyo.com + Tuyo Help Center (July 14, 2026 articles). Virtual Visa, USDC on Base, Rain card-issuance services, issuing bank not named. Cardholder agreements/ToS on about.tuyo.com (Notion) unreadable by the fetcher — browser read needed before publication.",
+      "needs_browser_read": true
     },
     {
       "provider": "Jupiter",
@@ -1463,11 +1478,13 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-02",
       "discovery_note": "Directory (penchan, 2026-10-20) names operator BP SG Investment Holding Limited (Hong Kong); reports a ~US$49.5M USDC exploit in Feb 2025, Global/Lite/Tech cards discontinued June 2025, AI card discontinued Oct 2026, relaunched Pro/Lite/Max line. Unverified; official pages to read.",
-      "priority": 4
+      "priority": 4,
+      "needs_browser_read": true,
+      "blocked_reason": "Blocked 2026-11-12: infini.money/pricing (readable) publishes the current personal line — Infini Pro (FX 1%), Lite (FX 3%), Max (FX 0%, 1% cross-border outside Hong Kong, $0.30 under $50), $0 monthly, $0 transaction fee, first card free, US$10 minimum initial top-up, cashback 1.5% (3% Professional on first $1,000/month, 5% Elite on first $10,000) — and the personal page names operator Cynosure Technology LLC (Hong Kong), 'Hong Kong card BIN' / 'U.S. card BIN' and Apple Pay; Terms of Service (2026-07-07) are generic (no country list, KYC 'may' be required, issuer not named). The dedicated docs (docs.infini.money fees-and-limits, card-types-and-usage, infini-card-notice, FAQ, referral system) return a client error; the GitBook mirror (infini-money.gitbook.io) is an outdated version (Meow/Woof cards, $9.90 activation, 1% service fee). Issuer, country list, KYC stage, top-up and ATM fees unobtainable → retry with a browser session. Referral system page exists (docs.infini.money/product/infini-personal/infini-referral-system), unread."
     },
     {
       "provider": "vPay",

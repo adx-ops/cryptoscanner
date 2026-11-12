@@ -1,0 +1,370 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tuyo-card",
+  "slug": "tuyo-card",
+  "name": "Tuyo Card",
+  "brand": "Tuyo",
+  "provider_id": "tuyo",
+  "issuer": {
+    "name": "not disclosed ('licensed partner institutions'; card issuance services by Signify Holdings, Inc. — 'Rain')",
+    "status": "verified",
+    "evidence": [
+      "ev-tuyo-card-page",
+      "ev-tuyo-home",
+      "ev-tuyo-faq"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Virtual Visa card in the Tuyo app that spends the user's USDC on Base: 'Pay with stablecoins anywhere', 'your funds stay under your control until you spend them'. Help centre: 'Deposit USDC or any token on Ethereum, Base, Arbitrum, Optimism, or Polygon, then convert to Base USDC inside Tuyo'; only USDC on Base held in the 'Cash' section funds the card. USDC held in an 'Earn' strategy (third-party DeFi lending protocols, variable APY 'up to 4.0%', 'may be lower or negative') can also be spent unless the user disables it. Tuyo Inc. states it is 'not a bank, cryptocurrency exchange, or asset custodian'; fiat services (deposits, virtual account numbers) run through Bridge Ventures, Inc. Physical card: 'Coming soon' / 'in the works' — no date.",
+    "evidence": [
+      "ev-tuyo-card-page",
+      "ev-tuyo-help-card",
+      "ev-tuyo-faq",
+      "ev-tuyo-home"
+    ]
+  },
+  "variants": [
+    {
+      "id": "tuyo-card-global",
+      "region_label": "International + United States (most states)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "US"
+        ],
+        "residence_excluded": [
+          "GB"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "No nationality rule is stated on the pages read. Separate cardholder agreements exist for 'International' (last updated 2025-11-25) and 'United States' (last updated 2025-03-07) customers; both are hosted on about.tuyo.com (Notion) and could not be read by the fetcher.",
+        "usage_note": "The help centre says the card 'can be issued in most countries' and that 'a small number of countries and regions are not eligible', but publishes no country list — hence an empty allowed list outside the US and 'to_confirm' for every unlisted country. United States: available except in 19 named states — Arizona, Delaware, Georgia, Idaho, Louisiana, Maryland, Mississippi, Missouri, Nevada, New Mexico, North Dakota, Ohio, Oregon, Rhode Island, South Dakota, Tennessee, Vermont, Washington, Wisconsin ('a number of states and territories are not eligible'; territories not named). United Kingdom: every tuyo.com page carries 'This website and its services are not intended for, and should not be accessed by people located in the United Kingdom', modelled as excluded. EEA availability is neither confirmed nor denied on any page read. Fees are stated for 'USD purchases within the US' versus 'abroad', so non-US users pay the abroad fee on every purchase.",
+        "evidence": [
+          "ev-tuyo-availability",
+          "ev-tuyo-card-page",
+          "ev-tuyo-home"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [
+          "id_document",
+          "other"
+        ],
+        "thresholds_note": "No threshold: the card is only issued after a 'card application' that can be 'marked as rejected' ('A card application marked as rejected is final'). Wallet use without the card does not depend on the card KYC ('Funds remain under your control even if card KYC fails').",
+        "stages_note": "Card application with identity check before issuance; the help centre says applications fail 'due to document issues, unclear photos, or unsupported occupation codes', so an identity document, a photo capture and an occupation declaration are collected. The verification provider, the document list and any level/tier are not stated on the pages read; the cardholder agreements (Notion) were unreadable.",
+        "evidence": [
+          "ev-tuyo-help-card",
+          "ev-tuyo-faq"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Tuyo Card (virtual)",
+          "access": {
+            "type": "free",
+            "note": "'Tuyo Card has no issuance, monthly or yearly fee.' No membership, subscription or token holding is mentioned on any page read.",
+            "status": "verified",
+            "evidence": [
+              "ev-tuyo-faq",
+              "ev-tuyo-help-card",
+              "ev-tuyo-card-page"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Fee table on tuyo.com/card: 'Issuance fee: Free'; help centre and FAQ: 'no issuance, monthly or yearly fee'. Applies to the virtual card; the physical card is not yet offered and has no published price.",
+              "status": "verified",
+              "evidence": [
+                "ev-tuyo-card-page",
+                "ev-tuyo-help-card",
+                "ev-tuyo-faq"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'Monthly/yearly fee: Free' (tuyo.com/card); 'Tuyo Card has no issuance, monthly or yearly fee' (FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-tuyo-card-page",
+                "ev-tuyo-faq"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Funding = holding USDC on Base in the app's Cash section. No deposit fee is stated; the in-app 'Convert' of other tokens/networks to Base USDC, network gas and Bridge fiat on-ramp fees are not documented on any page read. Not treated as free.",
+              "status": "unknown",
+              "evidence": [
+                "ev-tuyo-help-card",
+                "ev-tuyo-availability"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "Two stacked fees: '1% FX' on purchases in a non-USD currency plus '1% ABROAD' on purchases outside the US 'charged by the card provider' — 'UP TO 2% COMBINED'. USD purchases within the US: 0%. Modelled at the combined 2% because a purchase in local currency outside the US triggers both; a USD-denominated purchase outside the US pays only the 1% abroad fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-tuyo-card-page",
+                "ev-tuyo-help-card",
+                "ev-tuyo-faq"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "The ATM article states 'ATM withdrawal fees and FX markups depend entirely on the ATM operator or the bank that owns the machine' and that Tuyo 'cannot know or control the exact fee'; it does not state whether Tuyo or the card provider charges its own ATM fee, so the fee is recorded as unknown. Withdrawals at 'any ATM that supports Visa' with the card set to Credit; 'Maximum per withdrawal: $250 USD' including any surcharge; 'Maximum 3 ATM withdrawal attempts within any rolling 24-hour period' (declined attempts count).",
+              "status": "unknown",
+              "evidence": [
+                "ev-tuyo-atm",
+                "ev-tuyo-faq"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "none",
+              "conditions": "'Buy Now, Pay Maybe': 'some of your card purchases are randomly free' — Tuyo may cover a purchase so it costs $0. No odds, cap, eligible merchants, regions, start or end date are published on tuyo.com/card, tuyo.com/rewards or the FAQ. Not a cashback rate; not modelled in the calculator.",
+              "description": "Random full refund of some purchases ('Buy Now, Pay Maybe'), mechanics unpublished",
+              "status": "unknown",
+              "evidence": [
+                "ev-tuyo-card-page",
+                "ev-tuyo-faq",
+                "ev-tuyo-rewards"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 50000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "'UP TO $50K/DAY TO START; UP TO $200K AS YOU SPEND': the daily limit can be raised to $100,000 once total purchases reach $50,000 and to $200,000 once they reach $100,000, from Card → Change limit after a first purchase.",
+              "status": "verified",
+              "evidence": [
+                "ev-tuyo-limits",
+                "ev-tuyo-card-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "'Maximum per withdrawal: $250 USD' including the ATM surcharge; 'Maximum 3 ATM withdrawal attempts within any rolling 24-hour period'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tuyo-atm"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-tuyo-card-page",
+      "url": "https://tuyo.com/card",
+      "title": "Tuyo — Tuyo Card product page ('Pay with stablecoins anywhere'), fee table, limits, legal footer",
+      "source_type": "pricing_page",
+      "excerpt": "'It's a Visa card.' Fee table: 'Issuance fee: Free', 'Monthly/yearly fee: Free', 'USD purchases within the US: 0%', 'FX and purchases outside the US: 1% FX + 1% ABROAD; UP TO 2% COMBINED'. 'UP TO $50K/DAY TO START; UP TO $200K AS YOU SPEND'. Physical card 'Coming soon'. Footer: Signify Holdings, Inc. ('Rain') card issuance services; 'Cards are issued by licensed partner institutions'; UK notice.",
+      "accessed_at": "2026-11-12T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Undated marketing page; the linked cardholder agreements on about.tuyo.com (Notion) return only a JavaScript shell to the fetcher."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tuyo-help-card",
+      "url": "https://intercom.help/tuyo/en/articles/15932844-tuyo-card",
+      "title": "Tuyo Help Center — Tuyo Card (July 14, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Issuance Free; monthly/yearly Free; USD purchases in the US 0%; '1% FX' on non-USD currency; '1% abroad' outside the US 'charged by the card provider'; up to 2%. Funding 'USDC on Base' (convert in-app from Ethereum, Base, Arbitrum, Optimism, Polygon). Limit $50k/day rising to $100k/$200k. ATM $250 per withdrawal.",
+      "accessed_at": "2026-11-12T05:41:00Z",
+      "effective_from": "2026-07-14",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Article dated July 14, 2026 (date shown without an 'updated' label)."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tuyo-availability",
+      "url": "https://intercom.help/tuyo/en/articles/15932859-tuyo-card-availability",
+      "title": "Tuyo Help Center — Tuyo card availability (July 14, 2026)",
+      "source_type": "eligibility_page",
+      "excerpt": "The card 'can be issued in most countries'; 'a small number of countries and regions are not eligible' (none named). US states where the card cannot be issued: AZ, DE, GA, ID, LA, MD, MS, MO, NV, NM, ND, OH, OR, RI, SD, TN, VT, WA, WI; available in the remaining states. Funding requires USDC on Base in the Cash section.",
+      "accessed_at": "2026-11-12T05:44:00Z",
+      "effective_from": "2026-07-14",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "note": "Only the US state exclusions are published; no country list."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tuyo-atm",
+      "url": "https://intercom.help/tuyo/en/articles/15933959-atm-withdrawals",
+      "title": "Tuyo Help Center — ATM withdrawals (July 14, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'any ATM that supports Visa', card set to Credit. 'Maximum per withdrawal: $250 USD' incl. any surcharge; 'Maximum 3 ATM withdrawal attempts within any rolling 24-hour period'. 'ATM withdrawal fees and FX markups depend entirely on the ATM operator or the bank that owns the machine'. No Tuyo-side ATM fee stated as zero or as an amount.",
+      "accessed_at": "2026-11-12T05:44:00Z",
+      "effective_from": "2026-07-14",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tuyo-limits",
+      "url": "https://intercom.help/tuyo/en/articles/15933961-card-limits",
+      "title": "Tuyo Help Center — Card limits (July 14, 2026)",
+      "source_type": "help_center",
+      "excerpt": "New cards: daily spending limit up to $50,000 USD; after total purchases reach $50,000 the limit can rise to $100,000, and after $100,000 to $200,000. Changing the limit requires at least one purchase (Card → Change limit). No per-transaction or monthly limit stated; no KYC tiers mentioned.",
+      "accessed_at": "2026-11-12T05:44:00Z",
+      "effective_from": "2026-07-14",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tuyo-faq",
+      "url": "https://tuyo.com/faq",
+      "title": "Tuyo — FAQ (card fees, limits, Buy Now Pay Maybe, custody, Earn risks, legal footer)",
+      "source_type": "help_center",
+      "excerpt": "'Tuyo Card has no issuance, monthly or yearly fee.' 1% FX on non-USD purchases + 1% by the card provider outside the US, 'up to 2% per purchase'. Daily limit $50,000 → $100,000 → $200,000. ATM $250 per withdrawal, three attempts per 24 h. 'A card application marked as rejected is final.' Physical card 'Not yet'. BNPM: 'some of your card purchases are randomly free'.",
+      "accessed_at": "2026-11-12T05:49:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Undated page (© 2026 Tuyo)."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tuyo-home",
+      "url": "https://tuyo.com/",
+      "title": "Tuyo — homepage (card claims, partners, legal footer)",
+      "source_type": "pricing_page",
+      "excerpt": "'Pay at more than 175 million merchants worldwide'; 'Daily limits can grow to $200,000 as you spend'; 'Works with Apple Pay and Google Pay'. 'Tuyo partners with Signify Holdings, Inc. (\"Rain\")... for card issuance services'; 'Cards are issued by licensed partner institutions'; Bridge Ventures, Inc. for fiat services. 'not intended for... people located in the United Kingdom'.",
+      "accessed_at": "2026-11-12T05:48:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Undated marketing page; no fee or country figures beyond the limit claim."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-tuyo-rewards",
+      "url": "https://tuyo.com/rewards",
+      "title": "Tuyo — rewards page (no programme terms published)",
+      "source_type": "pricing_page",
+      "excerpt": "Page contains no cashback rate, points rule, 'Buy Now Pay Maybe' mechanics, odds, cap, condition, date or eligible region; only press links, the App Store title 'Tuyo - Buy Now Pay Maybe', 'Daily limits can grow to $200,000 as you spend' and the APY disclaimer ('is variable, and is not guaranteed').",
+      "accessed_at": "2026-11-12T05:47:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Read to look for reward terms; none found."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://tuyo.com/card",
+    "affiliate": {
+      "program_id": "tuyo-ambassador",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-12T05:49:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-12T05:55:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from tuyo.com (card page, homepage, FAQ, rewards, ambassador pages) and the Tuyo Help Center (Tuyo Card, availability, ATM withdrawals, card limits — all dated July 14, 2026). Virtual Visa card spending self-custodied USDC on Base; card issuance services by Signify Holdings, Inc. ('Rain'), issuing bank not named ('licensed partner institutions'). Free issuance and no monthly/yearly fee; FX 1% + 1% abroad (up to 2%); ATM $250 per withdrawal, 3 attempts per 24 h, Tuyo-side ATM fee not stated; daily limit $50k rising to $200k. Country list not published (US minus 19 states; UK excluded by site notice). Unknown: top-up/conversion costs, ATM fee, document list, EEA availability. Cardholder agreements and Terms of Service (about.tuyo.com, Notion) unreadable by the fetcher — browser read needed. 'Buy Now, Pay Maybe' recorded as an unquantified perk. Second read required before publication.",
+      "evidence": [
+        "ev-tuyo-card-page",
+        "ev-tuyo-help-card",
+        "ev-tuyo-availability",
+        "ev-tuyo-atm",
+        "ev-tuyo-limits",
+        "ev-tuyo-faq",
+        "ev-tuyo-home"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual Visa card from the Tuyo app (Tuyo Inc., US) that spends USDC held in the user's own wallet on Base, with card issuance services from Signify Holdings, Inc. ('Rain') and an unnamed issuing institution. No issuance, monthly or yearly fee; 0% on USD purchases in the US, 1% FX on non-USD purchases plus 1% on any purchase outside the US (up to 2%); ATM withdrawals capped at $250 each (three attempts per 24 h) with the operator's fees on top. Daily limit $50,000, rising to $200,000 with use. Offered 'in most countries' and in the US outside 19 states; the country list is not published, the UK is excluded by the site notice, and EEA availability is unconfirmed. Its perk, 'Buy Now, Pay Maybe', randomly refunds some purchases without published odds.",
+    "good_for": [
+      "Self-custody users who already hold USDC on Base (or on Ethereum, Arbitrum, Optimism, Polygon) and want a fee-free virtual Visa card in Apple Pay or Google Pay",
+      "US residents outside the 19 excluded states who spend mostly in USD at home (0% on domestic USD purchases)"
+    ],
+    "not_for": [
+      "Residents of the United Kingdom — the site states it is not intended for them",
+      "Anyone who needs a published country list, fee schedule PDF or cardholder agreement before applying — the agreements are hosted on Notion and the country list is not published",
+      "Non-US users who want 0% FX: every purchase outside the US carries at least the 1% abroad fee, 2% in a non-USD currency",
+      "Cashback seekers — no cashback rate is published; the only perk is random and unquantified"
+    ],
+    "watch_outs": [
+      "Issuing bank not named on any page read ('licensed partner institutions'); Rain is the card issuance services provider, not a bank.",
+      "'Buy Now, Pay Maybe' is a random perk with no published odds, cap or terms — it is not a cashback rate and is not counted in any ranking or calculation here.",
+      "Card balance held in an 'Earn' strategy (third-party DeFi lending) can be spent by default; returns 'may be lower or negative' and strategies 'are not bank deposits or covered by deposit insurance'.",
+      "Tuyo's own ATM fee is not stated; only the $250 per-withdrawal cap and the operator's surcharge are documented, so the ATM cost is recorded as unknown.",
+      "Top-up/conversion costs (in-app Convert to Base USDC, gas, Bridge on-ramp) are not published; nothing here is modelled as free without a statement.",
+      "Virtual card only — the physical 'Tuyo Visa Platinum' is 'Coming soon' without a date.",
+      "Cardholder agreements (International 2025-11-25, US 2025-03-07) and Terms of Service are on about.tuyo.com (Notion) and could not be read in this run."
+    ]
+  }
+}
