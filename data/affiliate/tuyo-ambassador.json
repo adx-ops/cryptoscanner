@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "tuyo-ambassador",
+  "provider_id": "tuyo",
+  "program_name": "Tuyo ambassador programme (referral code, two-level share of referees' rewards)",
+  "legal_entity": "Tuyo Inc. (financial technology company, US; 'not a bank, cryptocurrency exchange, or asset custodian')",
+  "program_url": "https://tuyo.com/ambassador",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Not stated on the ambassador page: no eligibility, application form or approval step is described; the page only explains that ambassadors 'share your code' for referees to enter 'when onboarding'. The page carries the site-wide notice that the website and services are 'not intended for... persons located in the United Kingdom'. No publisher/affiliate/CPA programme page found on tuyo.com (search 2026-11-12).",
+  "our_status": "identified",
+  "paid_action": "Referee enters the ambassador's code at onboarding; the ambassador then receives 'Up to 50% of your referrals rewards' and 'up to 25%' of second-level referrals' rewards. What counts as a referee's 'rewards' (Buy Now Pay Maybe refunds? Earn interest? other) is not defined on the page.",
+  "validation_conditions": "Not stated: no qualifying action (KYC, first purchase, minimum spend), window, cap or exclusion is published.",
+  "commission": {
+    "model_note": "Share of the referred users' own rewards: 'Up to 50%' (direct) and 'up to 25%' (second level). Not a flat amount and not a share of fees or spend; payout asset not stated.",
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Not stated",
+    "frequency": "Not stated",
+    "holdbacks_note": "No terms, cap, duration or termination clause published on the ambassador page; the Terms of Service (about.tuyo.com, Notion) could not be read by the fetcher."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "In-app referral programme for Tuyo users rather than a publisher programme: rewards are a percentage of the referees' rewards, with the percentages given only as maxima ('up to'). Nobody contacted, no account opened, no code generated.",
+  "allowed_countries_note": "Not stated; presumably follows Tuyo Card availability ('most countries', US minus 19 states, UK excluded by site notice).",
+  "evidence": [
+    {
+      "url": "https://tuyo.com/ambassador",
+      "title": "Tuyo — Become a Tuyo ambassador",
+      "accessed_at": "2026-11-12T05:47:00Z",
+      "excerpt": "'Share your code with them so they add it when onboarding.' 'Up to 50% of your referrals rewards.' 'When one of your referrals refers someone, you will also get up to 25% of that second level referral rewards.' No caps, payout asset, conditions, terms link or dates on the page."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Identified only. The percentages are shares of undefined 'rewards' and the page publishes no terms — a browser read of the Terms of Service and the in-app referral screen is needed before the programme can be scored. Any publisher programme would have to be asked of Tuyo directly — not without David's instruction."
+}

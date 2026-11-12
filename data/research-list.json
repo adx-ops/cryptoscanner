@@ -244,6 +244,14 @@
       "status": "validated",
       "record": "data/cards/exa-card.json",
       "note": "Validated 2026-11-11 from the Exa App help centre (intercom.help/exa-app): fees article (2024-10-28), Exa Card terms (effective 2024-11-12, costs as of 2025-01-13), prohibited-countries list, How does the Exa Card work / About / ATM articles (2026-09-21), availability article, referral terms (2025-10-21). Virtual Visa issued by Third National for Exa Labs SAS; self-custodial, Exactly Protocol credit line (pay now = deducted from stored assets; installments = fixed-rate protocol loans). FX 1.5% (+ unexplained 1% cross-border row), ATM $1+0.65% ($250/withdrawal, 4/day), no rewards published. Eligible: 48 countries (LatAm, Africa, ME, APAC) + 31 US states; NG/ZA/LK subject to approval; no EEA/UK (BG, HR prohibited). Unknown: issuance, subscription, top-up fees, APR, LTV, KYC documents. Contradictions: 0% interest vs installment loans; \"not a US citizen\" attestation vs US states; 17 vs 31 excluded countries. Referral programme recorded (data/affiliate/exactly-referral.json, 10 USDC, lifetime cap 100 USDC). Second read required."
+    },
+    {
+      "provider": "Tuyo",
+      "product": "Tuyo Card",
+      "status": "validated",
+      "record": "data/cards/tuyo-card.json",
+      "note": "Validated 2026-11-12 from tuyo.com (card page, homepage, FAQ, rewards, ambassador) and the Tuyo Help Center (Tuyo Card, availability, ATM withdrawals, card limits — July 14, 2026). Virtual Visa spending self-custodied USDC on Base; card issuance services Signify Holdings, Inc. ('Rain'), issuing bank not named. Free issuance, no monthly/yearly fee, FX 1% + 1% abroad (up to 2%), ATM $250/withdrawal × 3 per 24 h (Tuyo-side fee not stated → unknown), daily limit $50k→$200k, Apple/Google Pay. Country list not published: US minus 19 states, UK excluded by site notice, EEA unconfirmed. Unknown: top-up/conversion costs, ATM fee, KYC documents. Cardholder agreements (International 2025-11-25, US 2025-03-07) and ToS on about.tuyo.com (Notion) unreadable by the fetcher → needs_browser_read. 'Buy Now, Pay Maybe' recorded as unquantified perk. Ambassador programme recorded (data/affiliate/tuyo-ambassador.json: up to 50% / 25% of referees' rewards, terms unpublished). Second read required.",
+      "needs_browser_read": true
     }
   ],
   "no_kyc_track": {
@@ -269,13 +277,17 @@
         "product": "Bing Card",
         "claim": "virtual tier without photo ID; reports of frozen funds (third-party)",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "needs_browser_read": true,
+        "note": "2026-11-12: web search returns no page of bingcard.com / bingcard.net (only directories, Trustpilot and a Google Sites privacy policy at sites.google.com/view/bingcard/privacy-policy naming the operator 'GINBE LTD UK', undated, no fees, limits or product page). The official site is not reachable by the fetcher (provenance). No official affiliate/referral page found. Not blocked: locate and read the official fee, limits, verification and terms pages in a browser session."
       },
       {
         "product": "OffGrid Cash",
         "claim": "no-KYC behind $49–$197/yr subscription",
         "issuer_disclosed": false,
-        "status": "identified"
+        "status": "identified",
+        "needs_browser_read": true,
+        "note": "2026-11-12: web search (standard and extended) returns only directories (cardpilled, polymart, todey, promp.it, bitcoin.com, cryptocards.money), an X article and project profiles (thegrid.id, solanacompass); no official OffGrid domain indexed — fetcher cannot reach it (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read fees, subscription plans, verification stage and terms in a browser session."
       },
       {
         "product": "Trocador prepaid cards",
@@ -365,5 +377,5 @@
       }
     ]
   },
-  "updated": "2026-11-11"
+  "updated": "2026-11-12"
 }
