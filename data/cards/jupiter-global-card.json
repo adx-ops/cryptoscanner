@@ -661,7 +661,7 @@
       "title": "Jupiter docs — Spend: Fees, Limits & Regional Differences",
       "source_type": "pricing_page",
       "excerpt": "Annual fee None; Claynosaurz virtual card $25; physical card $13.13 plus shipping; deposits: no processing fee for USDC/USDT on Solana, other networks from $0.30 + 0.02%/0.1% + gas; FX 1% (Rain) / 1.8% (DCS); ATM (Rain) $1 + 0.65%, non-USD +$0.30 + 1%, inquiry/decline $0.60; ATM (DCS) not available; limits DCS $50,000/day, $990,000/year, Rain no limit.",
-      "accessed_at": "2026-11-11T05:35:00Z",
+      "accessed_at": "2026-11-12T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -676,7 +676,7 @@
       "title": "Jupiter docs — Jupiter Card (product page, Markdown export)",
       "source_type": "help_center",
       "excerpt": "'a Visa card powered by your stablecoins'; 'Each user is assigned one card issuer automatically, based on their country of residence' (Rain or DCS); 'It depends on your country of residence, not your citizenship'; eligibility 'set out in the Jupiter Card platform terms'; 'Jupiter does not issue credit lines'; physical cards 'rolling out in phases', full rollout 'by the end of 2026'.",
-      "accessed_at": "2026-11-11T05:37:00Z",
+      "accessed_at": "2026-11-12T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -690,7 +690,7 @@
       "title": "Jupiter docs — Spend FAQ",
       "source_type": "help_center",
       "excerpt": "'DCS-issued cards cover Australia, Japan, Malaysia, the Philippines, Singapore, South Korea, Taiwan, Thailand, and Vietnam'; KYC: 18+, Global ID, five steps (ID document, phone, liveness, personal info, questionnaire), 'Proof of address is required in APAC regions', 'All verification data is handled by SumSub'; cashback 2% capped $100/month, 4% / $200 after 2 qualifying referrals.",
-      "accessed_at": "2026-11-11T05:40:00Z",
+      "accessed_at": "2026-11-12T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -704,7 +704,7 @@
       "title": "Jupiter docs — Spend overview",
       "source_type": "help_center",
       "excerpt": "Spend described as 'regulated financial services' with card issuance, payments and transfers 'handled by licensed financial partners' (not named); Rain cards: USDC/USDT 1:1 held on-chain as collateral; DCS cards: USDT converted to USD on arrival; identity verification handled by SumSub.",
-      "accessed_at": "2026-11-11T05:43:00Z",
+      "accessed_at": "2026-11-12T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -733,7 +733,7 @@
       "title": "Jupiter docs — Rewards & Referrals (Cashback & Referral Program Terms effective March 26, 2026)",
       "source_type": "official_terms",
       "excerpt": "'All qualifying card purchases earn a base cashback rate of 2%, up to a monthly cap of $100.' 4% (cap $200) for a month after 'referring at least 2 qualifying people during the previous calendar month'. 'Your rewards balance is held in USDC.' Referrer $10 once the friend spends $50 within 30 days of KYC approval; friend $20 after $1,000 within 30 days of activation; no cap on referrals.",
-      "accessed_at": "2026-11-11T05:47:00Z",
+      "accessed_at": "2026-11-12T06:28:00Z",
       "effective_from": "2026-03-26",
       "expires_at": null,
       "scope": {
@@ -762,7 +762,7 @@
       "title": "Jupiter docs — Spend campaigns",
       "source_type": "help_center",
       "excerpt": "Ambassador referral offer: new Jupiter Mobile users entering a Jupiter Global Ambassador's code get FX fees rebated for 30 days from sign-up, up to US$100 (no end date stated). VIP Matching Program (3% cashback, cap US$300/month) closed end of August 2026. No affiliate or partner programme described.",
-      "accessed_at": "2026-11-11T05:50:00Z",
+      "accessed_at": "2026-11-12T06:30:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -780,8 +780,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-11T05:50:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-12T06:30:00Z",
+    "last_auto_check_at": "2026-11-12T06:30:00Z"
   },
   "changelog": [
     {
@@ -796,6 +796,22 @@
         "ev-jup-rewards"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-12T06:50:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-11T05:50:00Z",
+      "to": "2026-11-12T06:30:00Z",
+      "reason": "Second read on 2026-11-12 (24 h 38 min to 24 h 53 min after the first reads) of six of the eight evidence pages — https://docs.jup.ag/user-docs/global/spend/fees-and-limits, /spend/faq, /spend/jupiter-card (.md export), /spend/rewards-and-referrals, /spend (overview) and /spend/campaigns.md: every material value sourced from these pages confirmed, unchanged — annual fee None; Claynosaurz virtual card $25; physical card $13.13 plus shipping (standard virtual card still unpriced); deposits: no processing fee for USDC/USDT on Solana, other networks at least $0.30 + 0.02 %/0.1 % + gas, minimum $3 ($10 Ethereum), up to 200,000 USDC per transfer; FX 1 % (Rain) / 1.8 % (DCS), no fee on USD payments; ATM (Rain) $1 + 0.65 %, non-USD +$0.30 + 1 %, inquiry/decline $0.60, $250 per withdrawal, 3 attempts per 24 h; ATM (DCS) not available; limits DCS $50,000/day and $990,000/year, Rain no limit; QR Pay off the card balance from 2026-11-10; DCS countries AU, JP, MY, PH, SG, KR, TW, TH, VN; 18+, residence-based eligibility ('not your citizenship'), five-step KYC via SumSub, proof of address in APAC; cashback 2 % capped $100/month, 4 % / $200 after at least 2 qualifying referrals (KYC + $50 spend), rewards held in USDC, referrer $10 / referee $20 after $1,000 in 30 days, terms effective 2026-03-26; Claynosaurz FX rebate first $10,000 non-USD spend per month up to $100 until end of 2026, not available in PH, VN, TW, KR; physical cards rolling out in phases, full rollout by end of 2026; 'Jupiter does not issue credit lines'; Ambassador 30-day FX rebate up to US$100, VIP Matching closed end of August 2026; product active. New observation (not a modelled value): the rewards page now also lists 'quasi-cash (including crypto purchases)' and 'account funding' among ineligible categories, and the FAQ links to a 'supported-countries' anchor on the Jupiter Card page that does not exist on that page. NOT published by this run: two evidence pages could not be re-read because the fetcher only accepts URLs surfaced by a search and seven domain-restricted searches did not return them — https://jupiverse.zendesk.com/hc/en-us/articles/25691462148508-Jupiter-Card (the only official source of the country list, i.e. the eligibility value, status hypothesis / contradictory) and https://docs.jup.ag/user-docs/global/spend/risks-and-security (partners table; no longer linked from the Spend overview or the docs sidebar). Provenance gap, not an unreachable or changed page. No value overwritten. Record stays validated; the eligibility list still needs a second independent read.",
+      "evidence": [
+        "ev-jup-fees",
+        "ev-jup-faq",
+        "ev-jup-card",
+        "ev-jup-rewards",
+        "ev-jup-spend",
+        "ev-jup-campaigns"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
