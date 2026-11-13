@@ -1,0 +1,539 @@
+{
+  "schema_version": "1.0.0",
+  "id": "revolut-crypto-card",
+  "slug": "revolut-crypto-card",
+  "name": "Revolut Crypto Card (Pay with crypto)",
+  "brand": "Revolut",
+  "provider_id": "revolut",
+  "issuer": {
+    "name": "Not stated on the crypto-card pages read. Entities named in the fee schedules: Revolut Ltd (UK, FCA-authorised e-money institution; FCA cryptoasset registration) and Revolut Bank UAB (EEA, licensed by the ECB, supervised by the Bank of Lithuania); EEA crypto services by Revolut Digital Assets Europe Ltd (RDAEL).",
+    "status": "hypothesis",
+    "evidence": [
+      "ev-revolut-crypto-fees-eea",
+      "ev-revolut-crypto-fees-uk",
+      "ev-revolut-standard-fees-ie"
+    ]
+  },
+  "network": "unknown",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "A Revolut card (new virtual 'Crypto' card, or an existing Revolut card except Revolut Pro/Business cards) is linked to one crypto Pocket or to 'All crypto'. At payment the crypto is converted to the purchase currency at the real-time rate; with 'All crypto' the highest balance is deducted first. Insufficient crypto = declined (no fallback unless the user switches to a cash account).",
+    "evidence": [
+      "ev-revolut-crypto-card-uk",
+      "ev-revolut-help-setup",
+      "ev-revolut-help-card-fees"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "revolut-crypto-card-uk",
+      "region_label": "United Kingdom",
+      "currency": "GBP",
+      "eligibility": {
+        "residence_allowed": [
+          "GB"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "The UK product page ('Explore the crypto economy in the UK', FCA registration, GBP limits) and the Revolut Ltd crypto fee schedule describe the UK offer; no explicit country list is published. Requires a Revolut personal account, a crypto account, a risk assessment ('answer questions about yourself') and acceptance of the crypto T&Cs. Not available on Revolut Pro / Business cards.",
+        "evidence": [
+          "ev-revolut-crypto-card-uk",
+          "ev-revolut-crypto-fees-uk"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [
+          "other"
+        ],
+        "stages_note": "A verified Revolut personal account is a prerequisite (the card is created in the Revolut app); the crypto account additionally requires a questionnaire and a risk assessment before the card can be created. The identity documents required for the Revolut account are not described on the pages read.",
+        "evidence": [
+          "ev-revolut-crypto-card-uk",
+          "ev-revolut-help-setup"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "standard-plan",
+          "name": "Standard plan (free)",
+          "access": {
+            "type": "free",
+            "note": "Any Revolut plan can create the crypto card; the free Standard plan is modelled here. Plus/Premium/Metal/Ultra change the exchange fee (0.99 % Premium/Metal, 0.49 % → 0 % Ultra) and remove the fair usage fee (Premium and above).",
+            "status": "verified",
+            "evidence": [
+              "ev-revolut-standard-fees-uk",
+              "ev-revolut-crypto-fees-uk"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "'Get Crypto Virtual Card for FREE' — no extra fee for the virtual card. Physical card: delivery and customisation fees apply (see delivery).",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-help-setup",
+                "ev-revolut-crypto-card-uk"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "'For physical cards, card delivery and customisation fees apply — you'll see these in-app before you order.' The UK Standard fee page states the first card is free but a delivery fee applies, without an amount.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "Standard plan subscription fee: 'Free' (UK Standard fees, updated 11 December 2025). No separate fee for the Crypto Card ('We do not charge any fees for the use of the Crypto Card').",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-standard-fees-uk",
+                "ev-revolut-crypto-fees-uk"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Crypto→cash conversion at payment. Product page and help centre: 'without exchange fees', 'fair usage fees may still apply'. Fee schedule: 'no percentage-based or minimum fee when spending from a crypto card' but also 'exchanges made via the card incur normal exchange fees'; a one-sided 'product added spread' of typically 0–3 % applies to exchanges. Whether card spending counts toward the £1,000 fair usage limit (1 % above it on Standard) is not stated. Not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Payments in a foreign currency: 'subject to the exchange rate at the point of transaction'; no FX mark-up for crypto card payments is published on the pages read (the Standard plan weekend/fair-usage FX rules are written for fiat exchanges).",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "ATM withdrawals are possible (limit £3,000 / 24 h). The Standard plan allowance for Revolut cards (5 withdrawals or £200 per rolling month, then 2 %, min £1) is not stated to apply to crypto-funded withdrawals on the pages read.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1.49,
+              "period": "per_transaction",
+              "conditions": "Buying crypto in the app on Standard/Plus: 1.49 % or the minimum fee (50 % of trade < £2; £0.99 to £2.99 by trade size up to £200), whichever is greater; +1 % fair usage fee on exchanges above £1,000 per month (Standard). Premium/Metal 0.99 %; Ultra 0.49 % → 0 % by volume. Fiat→stablecoin exchanges free of percentage/minimum fee. Crypto deposits from external wallets: no fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-crypto-fees-uk",
+                "ev-revolut-help-fair-usage"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 100000,
+                "currency": "GBP"
+              },
+              "period": "per_transaction",
+              "note": "'up to £100,000 (or the equivalent in your currency) per transaction'; larger payments declined.",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-crypto-card-uk",
+                "ev-revolut-help-card-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 3000,
+                "currency": "GBP"
+              },
+              "period": "per_day",
+              "note": "'up to £3,000 (or the equivalent in your currency) every 24 hours'.",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-crypto-card-uk",
+                "ev-revolut-help-card-fees"
+              ]
+            },
+            {
+              "type": "other",
+              "note": "100 crypto exchanges per 24 hours; per-exchange minimum/maximum vary by cryptocurrency.",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-help-card-fees"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "revolut-crypto-card-eea",
+      "region_label": "EEA (Revolut Bank UAB / RDAEL)",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "BE",
+          "BG",
+          "DK",
+          "ES",
+          "IE",
+          "IT",
+          "LT"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "No country list is published for the crypto card. The countries listed are those for which Revolut publishes a localised crypto-card page (en-BE, en-BG, en-DK, en-ES/ca-ES, en-IE, en-IT, en-LT, found 2026-11-13); other EEA markets served by Revolut Bank UAB are 'to confirm'. The RDAEL fee schedule exempts accounts held with the Portugal Branch from the crypto fair usage limit. Same prerequisites as the UK: Revolut account, crypto account, risk assessment, T&Cs; not on Revolut Pro / Business cards.",
+        "evidence": [
+          "ev-revolut-crypto-card-lt",
+          "ev-revolut-crypto-fees-eea"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [
+          "other"
+        ],
+        "stages_note": "A verified Revolut Bank UAB personal account is a prerequisite; the crypto account additionally requires a questionnaire and a risk assessment before the card can be created. Identity documents not described on the pages read.",
+        "evidence": [
+          "ev-revolut-crypto-card-lt",
+          "ev-revolut-help-setup"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "standard-plan",
+          "name": "Standard plan (free)",
+          "access": {
+            "type": "free",
+            "note": "Any Revolut plan can create the crypto card; the free Standard plan is modelled. Plus/Premium/Metal/Ultra change the exchange fee and remove the fair usage fee (Premium and above).",
+            "status": "verified",
+            "evidence": [
+              "ev-revolut-standard-fees-ie",
+              "ev-revolut-crypto-fees-eea"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual crypto card free in-app. Physical card: delivery and customisation fees apply (see delivery).",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-help-setup",
+                "ev-revolut-crypto-card-lt"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 7.99,
+                "currency": "EUR"
+              },
+              "conditions": "Standard plan (Revolut Bank UAB, version applying from 10 November 2025): first card free but delivery €7.99 (local or international standard, untracked) or €19.99 (express, tracked); replacement €6 + delivery. Customisation fees shown in-app. Whether a crypto-themed physical card carries the same delivery fee is not stated on the crypto pages.",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-standard-fees-ie",
+                "ev-revolut-crypto-card-lt"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "Standard plan subscription fee: 'Free'. 'We do not charge any fees for the use of the Crypto Card.'",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-standard-fees-ie",
+                "ev-revolut-crypto-fees-eea"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Same contradiction as the UK: 'without exchange fees' (product page) vs. 'exchanges made via the card incur normal exchange fees' and 'no percentage-based or minimum fee when spending from a crypto card' (RDAEL fee schedule, §9); product added spread typically 0–3 % on exchanges; fair usage fee 1 % above €1,000/month (Standard) — card spending not stated to be included or excluded. Not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "Exchange rate at the point of transaction; no FX mark-up for crypto card payments published on the pages read.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "ATM withdrawals possible (£3,000 or equivalent / 24 h). Standard plan allowance for Revolut cards (5 withdrawals or €200 per rolling month, then 2 %, min €1) not stated to apply to crypto-funded withdrawals.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1.49,
+              "period": "per_transaction",
+              "conditions": "Buying crypto in the app on Standard/Plus: 1.49 % or the minimum fee (50 % of trade < €2; €0.99 to €2.99 by trade size up to €200), whichever is greater; +1 % fair usage fee above €1,000/month (Standard; Portugal Branch exempt). Premium/Metal 0.99 %; Ultra 0.49 % → 0 %. Fiat→stablecoin exchanges free of percentage/minimum fee. Crypto deposits: no fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-crypto-fees-eea",
+                "ev-revolut-crypto-fees-no"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 100000,
+                "currency": "GBP"
+              },
+              "period": "per_transaction",
+              "note": "Stated as '£100,000 (or the equivalent in your currency) per transaction' on the EEA page too; no EUR figure published.",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-crypto-card-lt"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 3000,
+                "currency": "GBP"
+              },
+              "period": "per_day",
+              "note": "Stated as '£3,000 (or the equivalent in your currency) every 24 hours'; no EUR figure published.",
+              "status": "verified",
+              "evidence": [
+                "ev-revolut-crypto-card-lt"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-revolut-crypto-card-uk",
+      "url": "https://www.revolut.com/crypto/crypto-card/",
+      "title": "Revolut — Pay with crypto (UK product page)",
+      "source_type": "pricing_page",
+      "excerpt": "'We'll convert your crypto into cash without exchange fees. Keep in mind that fair usage fees may still apply.' Virtual card free; physical: delivery/customisation fees shown in-app. ATM up to £3,000/24 h; £100,000 per transaction; 100 exchanges/24 h. Apple/Google Pay. Requires crypto account, risk assessment, T&Cs. FCA cryptoasset registration; not FSCS. Ratings 'as of 13 Aug 2026'.",
+      "accessed_at": "2026-11-13T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "GB"
+        ],
+        "currency": "GBP"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-revolut-crypto-card-lt",
+      "url": "https://www.revolut.com/en-LT/crypto/crypto-card",
+      "title": "Revolut — Pay with crypto (Lithuania / EEA product page)",
+      "source_type": "pricing_page",
+      "excerpt": "Same wording as the UK page ('without exchange fees', 'fair usage fees may still apply', '£3,000 (or the equivalent in your currency) every 24 hours', '£100,000 … per transaction'). No entity, issuer or country list named. 'Paying with a Crypto Card is considered a disposal of cryptoassets and tax may be payable.' Rating 'as of Nov 18, 2025'. Localised versions: BE, BG, DK, ES, IE, IT, LT.",
+      "accessed_at": "2026-11-13T05:48:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "EEA; GBP figures 'or equivalent'"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-revolut-help-card-fees",
+      "url": "https://help.revolut.com/help/wealth/cryptocurrencies/crypto-payments/what-are-the-fees-for-crypto-transactions-using-my-revolut-card",
+      "title": "Help centre — What are the fees for crypto transactions using my Revolut card?",
+      "source_type": "help_center",
+      "excerpt": "'You won't be charged any exchange fees for crypto transactions.' Fair usage fees may apply depending on plan (no amounts). Real-time rate at completion, visible per transaction. Limits: 100 exchanges/24 h; ATM £3,000/24 h; £100,000 per transaction.",
+      "accessed_at": "2026-11-13T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-revolut-help-setup",
+      "url": "https://help.revolut.com/help/wealth/cryptocurrencies/crypto-payments/setting-up-a-virtual-crypto-card/",
+      "title": "Help centre — Setting up a virtual crypto card",
+      "source_type": "help_center",
+      "excerpt": "Home → card icon → 'Add new' → 'Crypto' → 'Get Crypto Virtual Card for FREE'; pick a design and Pocket. 'Crypto is converted to the purchase currency without any fees'; 'Fair usage fees may apply depending on your plan.' Add to Apple Pay/Google Pay. An existing Revolut card can be linked to a crypto Pocket, except Revolut Pro and Business cards.",
+      "accessed_at": "2026-11-13T05:48:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-revolut-help-fair-usage",
+      "url": "https://help.revolut.com/help/wealth/exchanging-money/how-much-does-it-cost-to-make-an-exchange/what-is-a-fair-usage-limit/",
+      "title": "Help centre — What is a fair usage limit?",
+      "source_type": "help_center",
+      "excerpt": "Standard: £1,000 limit, 1 % fee on exchanges above; Plus: £3,000, 0.5 %; Premium/Metal/Ultra: no limit. Cumulative in-app exchanges 'includes money currencies, cryptocurrencies, and precious metals'; rolling monthly reset. Does not say whether crypto card payments count.",
+      "accessed_at": "2026-11-13T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "GBP"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-revolut-crypto-fees-uk",
+      "url": "https://cdn.revolut.com/terms_and_conditions/pdf/exchanging_cryptocurrency_personal_fees_ee1b196b_1.1.8_1786438530_en.pdf",
+      "title": "Revolut Ltd — Retail Crypto Fees (PDF, version 1.1.8)",
+      "source_type": "official_terms",
+      "excerpt": "Exchange fee: Standard/Plus 1.49 %, Premium/Metal 0.99 %, Ultra 0.49 %→0 % by 30-day volume; minimum fees by trade size (50 % of trade < £2; £0.99–£2.99 up to £200). 'No percentage or minimum fee applies to spending from a crypto card.' Fair usage: Standard 1 % above £1,000, Plus 0.5 % above £3,000. Withdrawals £1/£3 + network fee. No effective date on the page.",
+      "accessed_at": "2026-11-13T05:46:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "GB"
+        ],
+        "currency": "GBP"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-revolut-crypto-fees-eea",
+      "url": "https://cdn.revolut.com/terms_and_conditions/pdf/personal_fees_exchanging_cryptocurrencies_e8264c8b_1.0.6_1786437601_en.pdf",
+      "title": "Revolut Digital Assets Europe Ltd (RDAEL) — Retail Crypto Fees (PDF, version 1.0.6)",
+      "source_type": "official_terms",
+      "excerpt": "§9: 'We do not charge any fees for the use of the Crypto Card. However, exchanges made via the card incur normal exchange fees.' Elsewhere: no 'percentage-based fee or minimum fee when spending from a crypto card'. Exchange fee Standard/Plus 1.49 %, Premium/Metal 0.99 %, Ultra tiered; min fees €0.99–€2.99; fair usage 1 % > €1,000 (Standard), 0.5 % > €3,000 (Plus); spread 'typically 0–3 %'.",
+      "accessed_at": "2026-11-13T05:46:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR",
+        "note": "EEA"
+      },
+      "verification": "contradictory",
+      "contradiction_note": "Within the same fee schedule, §9 says 'exchanges made via the card incur normal exchange fees' while the plan sections say no percentage-based or minimum fee applies when spending from a crypto card; the product page says 'without exchange fees'. The card conversion cost is therefore recorded as unknown, not free."
+    },
+    {
+      "id": "ev-revolut-crypto-fees-no",
+      "url": "https://www.revolut.com/nb-NO/legal/exchangingcryptocurrenciespersonalfees/",
+      "title": "Personal Fees — Exchanging Cryptocurrencies (Revolut Norge legal page, RDAEL)",
+      "source_type": "official_terms",
+      "excerpt": "HTML version of the RDAEL schedule: 'We do not charge any fees for the use of the Crypto Card. However, exchanges made via the card incur normal exchange fees.' Fair usage Standard 1 % > €1,000, Plus 0.5 % > €3,000; Premium/Metal/Ultra none; Portugal Branch accounts exempt. Names Revolut Bank UAB (ECB/Bank of Lithuania) and Revolut Ltd (FCA EMI). '© 2026 Revolut Bank UAB'; no version date.",
+      "accessed_at": "2026-11-13T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "EEA (Norway page)"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-revolut-standard-fees-uk",
+      "url": "https://www.revolut.com/legal/standard-fees",
+      "title": "Revolut UK — Standard plan fees (updated 11 December 2025)",
+      "source_type": "pricing_page",
+      "excerpt": "Subscription fee Free; virtual card Free; first Revolut Card free but a delivery fee applies (amount in-app). ATM: 5 withdrawals or £200 per rolling month free, then 2 % (min £1). Standard exchange limit £1,000/month, 1 % fair usage above; crypto exchanges count. Effective immediately for new customers, 13 February 2026 for existing ones. No Crypto Card mention.",
+      "accessed_at": "2026-11-13T05:55:00Z",
+      "effective_from": "2025-12-11",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "GB"
+        ],
+        "currency": "GBP"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-revolut-standard-fees-ie",
+      "url": "https://www.revolut.com/en-IE/legal/standard-fees/",
+      "title": "Revolut Bank UAB — Personal fees, Standard plan (version applying from 10 November 2025)",
+      "source_type": "pricing_page",
+      "excerpt": "Services by Revolut Bank UAB; 'Cryptocurrency products are offered by Revolut Digital Assets Europe Limited'. Subscription Free; virtual card Free; first card free + delivery €7.99 (standard) / €19.99 (express); replacement €6. ATM: 5 withdrawals or €200 per rolling month free, then 2 % (min €1). Exchange limit €1,000/month, 1 % above; weekend fiat exchanges 1 %.",
+      "accessed_at": "2026-11-13T05:55:00Z",
+      "effective_from": "2025-11-10",
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR",
+        "note": "EEA (Ireland page)"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.revolut.com/crypto/crypto-card/",
+    "affiliate": {
+      "program_id": "revolut-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-13T05:55:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-13T05:58:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from revolut.com product pages (UK, LT), help centre (card fees, set-up, fair usage), the Revolut Ltd and RDAEL retail crypto fee schedules (PDF + Norway legal page) and the Standard plan fee pages (UK, IE). Card conversion cost recorded as unknown because the official pages contradict each other. Scope question for David: bank/EMI card with a pay-with-crypto feature.",
+      "evidence": [
+        "ev-revolut-crypto-card-uk",
+        "ev-revolut-crypto-fees-eea",
+        "ev-revolut-crypto-fees-uk"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Revolut lets any personal customer create a free virtual 'Crypto' card (or link an existing Revolut card) that spends a chosen crypto balance, converted at the real-time rate at payment. The Standard plan costs nothing, but Revolut's own documents disagree on whether card payments carry exchange fees, and buying crypto in-app costs 1.49 % on Standard/Plus. No cashback.",
+    "good_for": [
+      "Existing Revolut customers in the UK or EEA who want to spend a crypto balance occasionally without a separate provider",
+      "Users who already hold Premium/Metal/Ultra (lower exchange fee, no fair usage fee)"
+    ],
+    "not_for": [
+      "Anyone looking for cashback or rewards (none offered)",
+      "Users who need a published country list or a confirmed card-payment conversion cost",
+      "Revolut Pro / Business cardholders (not supported)"
+    ],
+    "watch_outs": [
+      "The RDAEL fee schedule says both that card spending carries no percentage/minimum fee and that 'exchanges made via the card incur normal exchange fees'; the product page says 'without exchange fees'. Treated as unknown until Revolut clarifies.",
+      "Fair usage fee (1 % above £/€1,000 per month on Standard) applies to crypto exchanges; whether card payments count is not stated.",
+      "Each card payment is a disposal of crypto for tax purposes (stated by Revolut).",
+      "Issuer, card network and country list are not stated on the crypto-card pages; UK/EEA entities inferred from the fee schedules."
+    ]
+  }
+}

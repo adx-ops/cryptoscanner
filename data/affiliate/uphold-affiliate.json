@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "uphold-affiliate",
+  "provider_id": "uphold",
+  "program_name": "Uphold Affiliate Program (official page exists on uphold.com; terms not yet read)",
+  "legal_entity": "Not established (Uphold HQ Inc. (US) / Uphold Europe Limited (UK) operate the card programmes)",
+  "program_url": "https://uphold.com/en-gb/products/affiliate",
+  "type": "publisher_affiliate",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Not read: the official page uphold.com/en-gb/products/affiliate is returned by web search (title only) but the fetcher could not open it in this unattended run (URL provenance). Third-party network listings (FlexOffers, financeads, FMTC) mention an Uphold affiliate programme — discovery only, never evidence.",
+  "our_status": "identified",
+  "paid_action": "Not established.",
+  "validation_conditions": "Not established.",
+  "commission": {
+    "model_note": "Not established — no official figure read.",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "unknown",
+    "status": "unknown"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Not stated",
+    "frequency": "Not stated",
+    "holdbacks_note": "Not read."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Nobody contacted, no application made. A browser session must read the official affiliate page (commission model, network, eligible countries, crypto-promotion rules) before this programme can be scored.",
+  "allowed_countries_note": "Not established; the card itself is sold in the US and the UK.",
+  "evidence": [],
+  "verification": "unknown",
+  "notes": "Placeholder created so the card record (data/cards/uphold-card.json) can reference an identified programme. needs_browser_read: the official page could not be fetched (provenance) on 2026-11-13."
+}

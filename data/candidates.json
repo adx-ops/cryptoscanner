@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "entries": [
     {
       "provider": "Wirex",
@@ -360,19 +360,24 @@
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
-      "operator_named": null,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "operator_named": true,
+      "affiliate_hint": "official publisher affiliate programme (Impact or Rakuten — the two official pages disagree); commissions not public; crypto promotions need Revolut approval",
+      "status": "validated",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": 6,
+      "priority": 0,
       "regions_hint": [
         "UK",
         "EEA",
         "US (directories)"
       ],
       "discovery_note": "DeFiLlama lists a US prepaid card (Lead Bank); likely out of scope as a bank card with crypto feature",
-      "note": "2026-11-11 (research run, not researched this run): revolut.com/crypto/crypto-card/ (\"Pay with crypto\") is an official product page for a Revolut crypto card — free virtual card (physical with delivery fee) that spends from the crypto balance, \"no exchange fees\" on card payments, \"fair usage fees may still apply\", UK-referenced limits (ATM £3,000/24h, £100,000 per transaction), Apple Pay / Google Pay; country versions exist (en-IE, en-ES, en-IT, en-LT, en-BE…). The \"Metal Card\" entry from US directories is a bank card tier, not the crypto card. Next run: research the Revolut crypto card (UK + EEA variants) from revolut.com and help.revolut.com (crypto-payments articles), and ask David whether a bank-issued card with a pay-with-crypto feature is in scope."
+      "note": "2026-11-11 (research run, not researched this run): revolut.com/crypto/crypto-card/ (\"Pay with crypto\") is an official product page for a Revolut crypto card — free virtual card (physical with delivery fee) that spends from the crypto balance, \"no exchange fees\" on card payments, \"fair usage fees may still apply\", UK-referenced limits (ATM £3,000/24h, £100,000 per transaction), Apple Pay / Google Pay; country versions exist (en-IE, en-ES, en-IT, en-LT, en-BE…). The \"Metal Card\" entry from US directories is a bank card tier, not the crypto card. Next run: research the Revolut crypto card (UK + EEA variants) from revolut.com and help.revolut.com (crypto-payments articles), and ask David whether a bank-issued card with a pay-with-crypto feature is in scope. | 2026-11-13 (research run): validated as data/cards/revolut-crypto-card.json (slug revolut-crypto-card — the \"Metal Card\" directory label is a bank-plan tier, not the product) from revolut.com (UK + LT product pages), help.revolut.com (card fees, set-up, fair usage), the Revolut Ltd and RDAEL retail crypto fee schedules and the Standard plan fee pages (UK, IE). Card conversion cost recorded as unknown: the RDAEL schedule says both \"no percentage-based or minimum fee when spending from a crypto card\" and \"exchanges made via the card incur normal exchange fees\"; product page says \"without exchange fees\". Issuer/network not stated on crypto pages. Affiliate programme recorded (data/affiliate/revolut-affiliate.json). Scope decision for David still open: bank/EMI card with a pay-with-crypto feature.",
+      "record": "data/cards/revolut-crypto-card.json",
+      "regions": [
+        "UK (Revolut Ltd)",
+        "EEA (Revolut Bank UAB / RDAEL) — country list not published; localised crypto-card pages for BE, BG, DK, ES, IE, IT, LT"
+      ]
     },
     {
       "provider": "Plasma",
@@ -429,11 +434,13 @@
       "no_kyc_claim": false,
       "operator_named": null,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "rejected",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": 4,
-      "discovery_note": "Still listed by DailyCoin; Binance announced the end of its card programmes in 2023 — check whether any Binance Card is open before research"
+      "priority": 0,
+      "discovery_note": "Still listed by DailyCoin; Binance announced the end of its card programmes in 2023 — check whether any Binance Card is open before research",
+      "rejected_reason": "Rejected 2026-11-13: official Binance post (binance.com/en/feed/post/1439877) announces the cessation of card services in the EEA — all Binance Visa Debit Cards issued under the EEA programme unusable after 20 December 2023 00:00 UTC, replacement orders closed 6 December 2023. The only other binance.com page found (square/post/583697) is an undated educational article listing 31 European countries for a card that no longer exists. No open Binance Card programme found on binance.com by search (standard). Re-open only if an official page announces a new card.",
+      "note": "2026-11-13: product closed (see rejected_reason); still listed by DailyCoin and cryptocards.so — directory staleness."
     },
     {
       "provider": "Solayer",
@@ -991,7 +998,8 @@
       "last_seen": "2026-10-28",
       "priority": -3,
       "needs_browser_read": true,
-      "discovery_note": "2026-11-10: utorg.pro/faq redirects to utorg.com/personal, not fetchable without a browser."
+      "discovery_note": "2026-11-10: utorg.pro/faq redirects to utorg.com/personal, not fetchable without a browser.",
+      "note": "2026-11-13: utorg.pro/faq still 302-redirects to utorg.com/personal, which the fetcher cannot open (provenance); site:utorg.com search returns nothing. Not blocked; needs_browser_read stands."
     },
     {
       "provider": "Kripicard",
@@ -1064,10 +1072,12 @@
       "no_kyc_claim": true,
       "operator_named": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": -1
+      "priority": -1,
+      "blocked_reason": "Blocked 2026-11-13 (no-KYC track, re-assessment under the 2026-11-09 rule): kardpay.gitbook.io/kardpay/about-kardpay/terms-and-conditions still returns \"does not exist\"; the Manage Cards page states only a 4% top-up fee (USDC wallet), $15 minimum top-up, virtual cards, limits shown in-app without figures, and no identity-verification stage, threshold or limit values. Fails inclusion rule (1): verification stage/limits not stated on official pages. Re-open if Kardpay publishes terms or a fee/verification page.",
+      "note": "2026-11-13: re-assessed, blocked (see blocked_reason)."
     },
     {
       "provider": "Uphold",
@@ -1079,17 +1089,24 @@
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official affiliate page exists (uphold.com/en-gb/products/affiliate) — not readable by the fetcher (provenance), terms unknown",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-09",
       "operator_named": true,
       "discovery_note": "Directory names Cross River Bank as issuer (US); EEA availability unknown",
-      "priority": 2,
+      "priority": 0,
       "regions_hint": [
         "US",
         "UK"
-      ]
+      ],
+      "record": "data/cards/uphold-card.json",
+      "regions": [
+        "US (excl. LA, NY, territories) — Visa, Cross River Bank",
+        "UK — Mastercard, Optimus Cards UK Limited"
+      ],
+      "needs_browser_read": true,
+      "note": "2026-11-13 (research run): validated from uphold.com (US + UK card pages), uphold.com/cardrewards (Card Rewards terms, last updated 2 Nov 2026) and two support articles. US Essential $0/yr: 1% XRP cap $120/month, FX 1.50%, ATM $2.95; US Elite $99.99/yr: 3% (fiat/stablecoin-funded) / 4% (crypto/metal-funded) XRP cap $300/month, FX 0%, ATM $0; UK free card: 1% GBP cashback on cash-funded purchases cap £100/month, ATM £2.50/£3.50, delivery £9.95. Contradictions: Essential reward 1% (terms, product page) vs 2% (support article); Essential foreign transaction 1.50% vs $1.50 flat. US rewards \"for a limited time\", no end date. Unknown: KYC steps, top-up/trading costs. Browser read needed for the affiliate page, the Uphold Debit Card T&Cs and the UK rewards T&Cs."
     },
     {
       "provider": "Gemini",

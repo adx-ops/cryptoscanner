@@ -252,6 +252,28 @@
       "record": "data/cards/tuyo-card.json",
       "note": "Validated 2026-11-12 from tuyo.com (card page, homepage, FAQ, rewards, ambassador) and the Tuyo Help Center (Tuyo Card, availability, ATM withdrawals, card limits — July 14, 2026). Virtual Visa spending self-custodied USDC on Base; card issuance services Signify Holdings, Inc. ('Rain'), issuing bank not named. Free issuance, no monthly/yearly fee, FX 1% + 1% abroad (up to 2%), ATM $250/withdrawal × 3 per 24 h (Tuyo-side fee not stated → unknown), daily limit $50k→$200k, Apple/Google Pay. Country list not published: US minus 19 states, UK excluded by site notice, EEA unconfirmed. Unknown: top-up/conversion costs, ATM fee, KYC documents. Cardholder agreements (International 2025-11-25, US 2025-03-07) and ToS on about.tuyo.com (Notion) unreadable by the fetcher → needs_browser_read. 'Buy Now, Pay Maybe' recorded as unquantified perk. Ambassador programme recorded (data/affiliate/tuyo-ambassador.json: up to 50% / 25% of referees' rewards, terms unpublished). Second read required.",
       "needs_browser_read": true
+    },
+    {
+      "provider": "Revolut",
+      "product": "Revolut Crypto Card (Pay with crypto)",
+      "status": "validated",
+      "record": "data/cards/revolut-crypto-card.json",
+      "note": "Validated 2026-11-13 from revolut.com (UK and LT product pages), help.revolut.com (card fees, set-up, fair usage limit), the Revolut Ltd and RDAEL retail crypto fee schedules (PDF v1.1.8 / v1.0.6 + Norway legal page) and the Standard plan fee pages (UK updated 2025-12-11; Revolut Bank UAB from 2025-11-10). Free virtual card linked to a crypto Pocket, conversion at spend at the real-time rate; Standard plan free; buying crypto 1.49% (Standard/Plus) + 1% fair usage above £/€1,000 per month; ATM limit £3,000/24 h, £100,000 per transaction; Apple/Google Pay; no rewards. Card conversion cost UNKNOWN (contradiction inside the RDAEL schedule and with the product page); FX, ATM fee and UK delivery fee unknown; EEA delivery €7.99/€19.99. Issuer, network and country list not stated on the crypto pages (UK = GB hypothesis; EEA = 7 countries with localised pages, hypothesis). Affiliate: data/affiliate/revolut-affiliate.json (Impact vs Rakuten contradiction, commissions not public, crypto promotions need approval). Second read required; scope decision (bank card with crypto feature) awaited from David.",
+      "needs_browser_read": false
+    },
+    {
+      "provider": "Uphold",
+      "product": "Uphold Debit Card (US Essential / Elite, UK)",
+      "status": "validated",
+      "record": "data/cards/uphold-card.json",
+      "note": "Validated 2026-11-13 from uphold.com/en-us/card, uphold.com/en-gb/card, uphold.com/cardrewards (Card Rewards terms, last updated 2026-11-02; issuer Cross River Bank, Visa) and support articles 41106030548763 (rewards) and 41078719850139 (limits/fees). US Essential: $0/yr, plastic $4.99, 1% XRP cap $120/month, FX 1.50%, ATM $2.95; Elite: $99.99/yr, metal $0, 3%/4% XRP cap $300/month, FX 0%, ATM $0. UK (Mastercard, Optimus Cards UK Limited): free, delivery £9.95, 1% GBP cashback on cash-funded purchases cap £100/month, ATM £2.50 UK&EU / £3.50 elsewhere, no FX fee stated. Contradictions recorded (Essential 1% vs 2%; FX 1.50% vs $1.50 flat). US rewards \"for a limited time\" without end date; product-page footnote limits reward value to 3 months after activation (from 2026-01-01). Unknown: KYC steps, top-up/trading costs. Affiliate: official page exists but unreadable by the fetcher → data/affiliate/uphold-affiliate.json placeholder, needs_browser_read. Second read required.",
+      "needs_browser_read": true
+    },
+    {
+      "provider": "Binance",
+      "product": "Binance Visa Card",
+      "status": "rejected",
+      "note": "Rejected 2026-11-13: official Binance post (feed/post/1439877) — EEA card programme ended 20 December 2023 00:00 UTC; no open Binance Card found on binance.com. Directory listings (DailyCoin, cryptocards.so) are stale."
     }
   ],
   "no_kyc_track": {
@@ -334,7 +356,7 @@
         "issuer_disclosed": false,
         "status": "identified",
         "needs_browser_read": true,
-        "note": "2026-11-10: utorg.pro/faq redirects to utorg.com/personal, which the fetcher cannot open (provenance — URL not returned by any search); no other utorg.com page indexed for the card. No official affiliate/referral page found by search. Not blocked: read utorg.com (card, fees, verification, countries) in a browser session."
+        "note": "2026-11-10: utorg.pro/faq redirects to utorg.com/personal, which the fetcher cannot open (provenance — URL not returned by any search); no other utorg.com page indexed for the card. No official affiliate/referral page found by search. Not blocked: read utorg.com (card, fees, verification, countries) in a browser session. | 2026-11-13: same result — utorg.pro/faq redirects to utorg.com/personal (fetcher blocked by provenance); site:utorg.com returns nothing. Browser session still needed."
       },
       {
         "product": "Kripicard",
@@ -372,10 +394,10 @@
         "product": "Kardpay",
         "claim": "low-KYC, $29–$299/yr",
         "issuer_disclosed": false,
-        "status": "identified",
-        "note": "Blocked 2026-11-09: kardpay.gitbook.io documentation read in full (llms-full.txt export; the linked 'Terms & Conditions' page returns Page Not Found). Operator legal entity, jurisdiction and card issuer not named; network Mastercard ('The payment provider (Mastercard)'); virtual cards only; only phone/OTP verification described — no identity-verification stage, thresholds or limit values stated (order summary shows 'Top-up limit', 'Monthly spend limit', 'Per transaction cap' without figures); fees: top-up 4%, card fee shown as a percentage at checkout ('e.g. 1.8%'), minimum top-up $15; no plan prices ($29–$299/yr claim not found), no country list, no dates; support via Telegram (Account page) or Discord (Wallet page). Fails inclusion rule (operator and issuer undisclosed, no verification stage in official terms). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown)."
+        "status": "blocked",
+        "note": "Blocked 2026-11-09: kardpay.gitbook.io documentation read in full (llms-full.txt export; the linked 'Terms & Conditions' page returns Page Not Found). Operator legal entity, jurisdiction and card issuer not named; network Mastercard ('The payment provider (Mastercard)'); virtual cards only; only phone/OTP verification described — no identity-verification stage, thresholds or limit values stated (order summary shows 'Top-up limit', 'Monthly spend limit', 'Per transaction cap' without figures); fees: top-up 4%, card fee shown as a percentage at checkout ('e.g. 1.8%'), minimum top-up $15; no plan prices ($29–$299/yr claim not found), no country list, no dates; support via Telegram (Account page) or Discord (Wallet page). Fails inclusion rule (operator and issuer undisclosed, no verification stage in official terms). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | Blocked 2026-11-13 (re-assessment under the 2026-11-09 rule): the Terms and Conditions page still \"does not exist\"; Manage Cards page states 4% top-up fee, $15 minimum top-up, virtual cards, limits shown in-app without figures, no identity-verification stage or thresholds. Fails inclusion rule (1)."
       }
     ]
   },
-  "updated": "2026-11-12"
+  "updated": "2026-11-13"
 }
