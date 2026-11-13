@@ -1,0 +1,671 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uphold-card",
+  "slug": "uphold-card",
+  "name": "Uphold Debit Card",
+  "brand": "Uphold",
+  "provider_id": "uphold",
+  "issuer": {
+    "name": "US: Cross River Bank, Member FDIC (Visa; programme manager Uphold HQ Inc.). UK: Optimus Cards UK Limited, FCA-regulated e-money institution (Mastercard; Uphold Europe Limited is its EMD agent).",
+    "status": "verified",
+    "evidence": [
+      "ev-uphold-rewards-terms-us",
+      "ev-uphold-card-uk"
+    ]
+  },
+  "network": "other",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Spends directly from the Uphold account balances: US — 'Spend dollars or 300+ digital assets instantly' (fiat, stablecoins, crypto or metals as the card funding source; crypto spending can trigger a taxable event); UK — 15 fiat currencies or 300+ crypto assets, crypto 'sold at the market rate' with 'standard trading fees' at spend. Network differs by country: Visa (US), Mastercard (UK).",
+    "evidence": [
+      "ev-uphold-card-us",
+      "ev-uphold-card-uk"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "uphold-card-us",
+      "region_label": "United States",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "US"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "usage_note": "'Available only to US residents residing in US states and Washington D.C.' Not available in Louisiana, New York or US territories (product page and Rewards terms §3.1). 'No credit checks required.' Minimum age not stated.",
+        "evidence": [
+          "ev-uphold-card-us",
+          "ev-uphold-rewards-terms-us"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "unknown",
+        "editorial_level": "unknown",
+        "stages_note": "An Uphold wallet (account) is required ('all you need is your Uphold wallet'); the pages read do not describe the identity-verification steps for the account or the card. Uphold HQ Inc. is NMLS-registered (ID 1269875).",
+        "evidence": [
+          "ev-uphold-card-us"
+        ],
+        "status": "unknown"
+      },
+      "tiers": [
+        {
+          "id": "essential",
+          "name": "Uphold Essential Card",
+          "access": {
+            "type": "free",
+            "note": "Annual fee $0.",
+            "status": "verified",
+            "evidence": [
+              "ev-uphold-card-us",
+              "ev-uphold-rewards-article"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card $0 ('free to activate').",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 4.99,
+                "currency": "USD"
+              },
+              "conditions": "Optional plastic card $4.99; replacement $4.99 each.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "Annual fee $0.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-rewards-article"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Product page fee table: Foreign Transaction Fee '1.50%'. The card guide article states '$1.50 flat fee, plus possible separate FX fees' instead — contradiction recorded; the dedicated fee table is modelled.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed",
+              "amount": {
+                "amount": 2.95,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "$2.95 per withdrawal; ATM operator fees may apply.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "XRP"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 120,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "excluded_categories": [
+                "ATM withdrawals, cash-back, money orders, wire transfers, stored-value loads, crypto purchases, P2P transfers",
+                "gambling and lottery",
+                "government and court payments (taxes, fines, child support)",
+                "debt and collections",
+                "refunds, fees, disputed or unauthorised charges",
+                "telemarketing, escort services, timeshares, certain charitable or religious payments"
+              ],
+              "conditions": "'1% in XRP, up to $120, for purchases using crypto, fiat, stablecoins and metals.' Rewards terms (last updated 2 Nov 2026): 1 % on each Eligible Purchase, cap $120 per calendar month (USD equivalent), paid in 'Rewards Currency' (any crypto Uphold chooses, currently XRP) within 10 business days after month end, minimum $1 (smaller amounts carry forward). Offered 'for a limited time' without a stated end date. The support rewards article says 2 % for Essential — contradiction recorded; the dated terms are modelled.",
+              "description": "XRP rewards on card purchases",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-rewards-terms-us",
+                "ev-uphold-card-us",
+                "ev-uphold-rewards-article"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 2500,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "Retail $2,500 per day; $10,000 per month.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 500,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "ATM $500 per day (max 3 transactions); $2,000 per month (max 10).",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-guide"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "elite",
+          "name": "Uphold Elite Card",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 99.99,
+              "currency": "USD"
+            },
+            "period": "year",
+            "note": "Annual fee $99.99, auto-renewing, non-refundable; cancellation keeps the card active until the end of the paid period.",
+            "status": "verified",
+            "evidence": [
+              "ev-uphold-card-us",
+              "ev-uphold-rewards-article"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card $0; metal card $0.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "none",
+              "conditions": "Metal card $0; one free replacement per year, then $29.99 each.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 99.99,
+                "currency": "USD"
+              },
+              "period": "year",
+              "conditions": "Annual fee $99.99, auto-renewing.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-rewards-article"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Foreign Transaction Fee '0%' (product page); the card guide adds 'plus possible FX fees' on the currency conversion itself.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Uphold ATM fee $0; ATM operator fees may apply.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-us",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 3,
+              "payout": {
+                "kind": "token",
+                "code": "XRP"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 300,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "excluded_categories": [
+                "ATM withdrawals, cash-back, money orders, wire transfers, stored-value loads, crypto purchases, P2P transfers",
+                "gambling and lottery",
+                "government and court payments",
+                "debt and collections",
+                "refunds, fees, disputed or unauthorised charges",
+                "telemarketing, escort services, timeshares, certain charitable or religious payments"
+              ],
+              "conditions": "'3% back in Rewards Currency (currently XRP) on purchases using Fiat or Stablecoins as a card funding source.' Cap $300 per calendar month shared with the 4 % rate. Offered 'for a limited time' (Rewards terms, last updated 2 Nov 2026) without a stated end date; product-page footnote 4: 'Reward value available for 3 months after activating, if activated on or after January 1, 2026' — meaning after that period unclear.",
+              "description": "XRP rewards, fiat/stablecoin-funded purchases",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-rewards-terms-us",
+                "ev-uphold-card-us"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "XRP"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 300,
+                  "currency": "USD"
+                },
+                "period": "month"
+              },
+              "conditions": "'4% back in Rewards Currency (currently XRP) on purchases using Cryptocurrency or Metals as a card funding source' (spending crypto can trigger a taxable event). Same $300 monthly cap, same 'limited time' and 3-month footnote as the 3 % rate.",
+              "description": "XRP rewards, crypto/metal-funded purchases",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-rewards-terms-us",
+                "ev-uphold-card-us"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 25000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "Retail $25,000 per day; $100,000 per month.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 2000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "ATM $2,000 per day (max 3 transactions); $10,000 per month (max 30).",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-guide"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "uphold-card-uk",
+      "region_label": "United Kingdom",
+      "currency": "GBP",
+      "eligibility": {
+        "residence_allowed": [
+          "GB"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "'Yes, all Uphold users in the UK are eligible.' Business accounts excluded. No other country is named on the UK page; EEA availability not stated.",
+        "evidence": [
+          "ev-uphold-card-uk"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "unknown",
+        "editorial_level": "unknown",
+        "stages_note": "A free Uphold account is required; the UK page does not describe the identity-verification steps (Uphold is 'registered with the FCA for AML purposes', FRN 938277).",
+        "evidence": [
+          "ev-uphold-card-uk"
+        ],
+        "status": "unknown"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Uphold Card (UK)",
+          "access": {
+            "type": "free",
+            "note": "'No set up or annual fees.'",
+            "status": "verified",
+            "evidence": [
+              "ev-uphold-card-uk"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "'The virtual card is free.'",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-uk"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 9.95,
+                "currency": "GBP"
+              },
+              "conditions": "'Physical cards can be requested for a one-time shipping fee of £9.95' (7–10 business days); replacement £9.95.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-uk",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'No set up or annual fees.' Monthly fee not mentioned.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-uk"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'no foreign transaction fees' (product page); the FAQ says the card 'has low foreign exchange rates' — Uphold's own exchange rate applies, and crypto purchases outside GBP/EUR/USD require an FX conversion. No mark-up figure published.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-uk"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed",
+              "amount": {
+                "amount": 2.5,
+                "currency": "GBP"
+              },
+              "period": "per_transaction",
+              "conditions": "£2.50 for national (UK & EU) ATM withdrawals, £3.50 for foreign (rest of world) ones.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-uk",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "fiat",
+                "code": "GBP"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "GBP"
+                },
+                "period": "month"
+              },
+              "conditions": "'Earn 1% cashback when spending your cash, up to £100 per month' — purchases funded by a GBP cash balance only; 'purchases funded by crypto are not eligible for rewards'. Paid in GBP by the 15th of the following month; minimum payout £1 (smaller amounts roll over). The hero line 'on card purchases at home or abroad' is broader than the terms on the same page. 'Exclusions apply, see T&Cs' (not read).",
+              "description": "1 % GBP cashback on cash-funded purchases",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-uk",
+                "ev-uphold-rewards-article"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 10000,
+                "currency": "GBP"
+              },
+              "period": "per_day",
+              "note": "'Spend up to £10,000 GBP per day and a maximum of 50 transactions'; single transaction £10,000.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-uk",
+                "ev-uphold-card-guide"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 1000,
+                "currency": "GBP"
+              },
+              "period": "per_day",
+              "note": "Up to £1,000 a day (max 2 transactions); single withdrawal £500.",
+              "status": "verified",
+              "evidence": [
+                "ev-uphold-card-guide"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-uphold-card-us",
+      "url": "https://www.uphold.com/en-us/card",
+      "title": "Uphold — Introducing the Uphold Debit Card (US product page)",
+      "source_type": "pricing_page",
+      "excerpt": "Elite: $99.99/yr, metal $0, ATM $0, FX 0 %, '4% back … using Cryptocurrency or Metals', '3% back … using Fiat or Stablecoins', 'Up to $300'. Essential: $0/yr, plastic $4.99, ATM $2.95, FX 1.50 %, '1% in XRP, up to $120'. Visa. US only; not LA, NY, territories. Footnote 4: 'Reward value available for 3 months after activating, if activated on or after January 1, 2026.'",
+      "accessed_at": "2026-11-13T05:56:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-uphold-rewards-terms-us",
+      "url": "https://uphold.com/cardrewards",
+      "title": "Uphold Loyalty Rewards Program (Card Rewards Program) — Terms and Conditions, last updated Nov 2, 2026",
+      "source_type": "official_terms",
+      "excerpt": "'For a limited time, customers who sign up to receive an Uphold Debit Card will receive rewards as follows': Elite 4 % (crypto/metals funding) and 3 % (fiat/stablecoins); Essential 1 %. Caps $300 / $120 per calendar month. Rewards Currency = any crypto Uphold chooses; posted within 10 business days; min $1. Issuer Cross River Bank, Member FDIC, Visa; programme manager Uphold HQ Inc.",
+      "accessed_at": "2026-11-13T05:58:00Z",
+      "effective_from": "2026-11-02",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-uphold-rewards-article",
+      "url": "https://support.uphold.com/hc/en-us/articles/41106030548763",
+      "title": "Uphold support — Uphold Debit Card rewards programme (UK and US)",
+      "source_type": "help_center",
+      "excerpt": "UK: 1 % GBP cashback on GBP-funded purchases, cap £100/month, paid within 15 days after month end, min £1. US: Elite $99.99/yr, metal $0, 1 free replacement then $29.99, XRP rewards '4% and 3%', cap $300; Essential $0/yr, plastic $4.99, '2% on eligible purchases', cap $120. Paid in XRP within 10 business days; min $1; excluded categories listed. No issuer named.",
+      "accessed_at": "2026-11-13T05:56:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "States 2 % XRP for the Essential card where the product page and the dated Rewards terms (2 Nov 2026) state 1 %. The dated terms are modelled; the card page shows the contradiction."
+    },
+    {
+      "id": "ev-uphold-card-guide",
+      "url": "https://support.uphold.com/hc/en-us/articles/41078719850139/",
+      "title": "Uphold support — Ordering, activating and managing the Uphold Debit Card (limits and fees, US and UK)",
+      "source_type": "help_center",
+      "excerpt": "US Essential: ATM $500/day (3 tx), $2,000/month; retail $2,500/day, $10,000/month; replacement $4.99; ATM $2.95; foreign transactions '$1.50 flat fee, plus possible separate FX fees'. US Elite: ATM $2,000/day, $10,000/month; retail $25,000/day, $100,000/month; ATM $0. UK: ATM £1,000/day (2 tx), single £500; retail £10,000/day (50 tx); replacement £9.95; ATM £2.50 UK & EU / £3.50 elsewhere.",
+      "accessed_at": "2026-11-13T05:56:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "contradictory",
+      "contradiction_note": "Essential foreign transaction fee given as '$1.50 flat fee' here versus '1.50%' in the product-page fee table. The product-page table is modelled (percentage); the flat reading would be costlier below $100 and cheaper above."
+    },
+    {
+      "id": "ev-uphold-card-uk",
+      "url": "https://uphold.com/en-gb/card",
+      "title": "Uphold — Uphold Card (UK product page)",
+      "source_type": "pricing_page",
+      "excerpt": "Mastercard; virtual card free; physical 'one-time shipping fee of £9.95'; 'No set up or annual fees'; 'no foreign transaction fees'; ATM '£2.50 GBP for national ATM withdrawals and £3.50 GBP for foreign ones'; 'Earn 1% cashback when spending your cash, up to £100 per month'; crypto-funded purchases not eligible; UK users eligible. E-money: Optimus Cards UK Limited (FRN 902034).",
+      "accessed_at": "2026-11-13T05:54:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "GB"
+        ],
+        "currency": "GBP"
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.uphold.com/en-us/card",
+    "affiliate": {
+      "program_id": "uphold-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-13T05:58:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-13T06:05:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from uphold.com US and UK card pages, the US Card Rewards terms (last updated 2 Nov 2026) and two support articles (rewards programme; ordering/limits/fees). Two contradictions recorded (Essential reward 1 % vs 2 %; Essential foreign transaction 1.50 % vs $1.50 flat). KYC steps and top-up costs unknown. US rewards are offered 'for a limited time' with no end date.",
+      "evidence": [
+        "ev-uphold-card-us",
+        "ev-uphold-rewards-terms-us",
+        "ev-uphold-card-uk"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Uphold's debit card spends directly from the Uphold account. In the US (Visa, Cross River Bank) the free Essential card pays 1 % in XRP (cap $120/month) and the $99.99/year Elite card 3–4 % in XRP (cap $300/month) with no FX or ATM fee; in the UK (Mastercard, Optimus Cards) a free card pays 1 % GBP cashback on cash-funded purchases (cap £100/month). The US rewards are offered 'for a limited time' without an end date.",
+    "good_for": [
+      "US residents (outside LA/NY) who hold XRP or other assets at Uphold and want rewards paid in XRP",
+      "UK Uphold users wanting a free card with modest GBP cashback on cash spending"
+    ],
+    "not_for": [
+      "Residents outside the US and the UK (EEA availability not stated)",
+      "UK users who want cashback on crypto-funded purchases (excluded)",
+      "Anyone needing a confirmed long-term reward rate: the US programme is 'for a limited time' and the product page caps the reward value at 3 months after activation"
+    ],
+    "watch_outs": [
+      "Essential card reward: 1 % per the dated terms and product page, 2 % per a support article — the lower figure is modelled.",
+      "Essential foreign transaction fee: 1.50 % (product page) vs $1.50 flat (support article).",
+      "'Rewards Currency' is any crypto Uphold chooses ('currently XRP'); reward value converts at Uphold's rate on disbursement.",
+      "Spending crypto from the card is a taxable disposal (stated by Uphold); UK cashback is only earned on GBP-funded purchases.",
+      "Identity-verification steps and top-up/trading costs are not stated on the pages read — unknown, not free."
+    ]
+  }
+}

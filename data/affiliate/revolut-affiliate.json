@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "revolut-affiliate",
+  "provider_id": "revolut",
+  "program_name": "Revolut Affiliate Programme (Retail track) — performance-based, via an affiliate network",
+  "legal_entity": "Revolut (entity not named on the affiliate pages; group entities Revolut Ltd (UK) and Revolut Bank UAB (EEA))",
+  "program_url": "https://www.revolut.com/become-a-revolut-affiliate/",
+  "type": "publisher_affiliate",
+  "allowed_channels": [
+    "website",
+    "unknown"
+  ],
+  "application_conditions": "'Anyone can apply to become a Revolut affiliate'; adult and gambling sites rejected; individuals apply under their full name, companies under their legal business name. Retail and Business are separate programmes (Business requires a business-specific audience). A Compliance Survey must be completed before access is granted (onboarding guide). Cryptocurrency promotions 'require Revolut approval before going live' (become-a-revolut-affiliate page).",
+  "our_status": "identified",
+  "paid_action": "Retail: commission 'after a lead signs up, passes KYC, and tops up' (become-a-revolut-affiliate page) — or, per the onboarding guide, per 'New Active Person' (NAP): sign-up plus at least one outbound action within a 30-day attribution window (card payment, ATM withdrawal, transfer, currency or crypto exchange, stock purchase, donation; top-ups do not count).",
+  "validation_conditions": "NAP definition above; 30-day attribution window; commission reversal and termination for keyword-policy violations (no bidding on 'Revolut' terms, incl. misspellings).",
+  "commission": {
+    "model_note": "Amounts not published: 'We'll give you the details of commissions when you sign up to the programme' / 'Details of commissions are provided when signing up to the programme.' Purely performance-based: 'We do not invest in fixed or onboarding fees.'",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Not stated (via the network)",
+    "frequency": "'Payments are rolling monthly, on 30-day terms.'",
+    "holdbacks_note": "Commissions reversed on keyword-policy violations; the Premium-trial offer 'can be amended/terminated at anytime, at Revolut's discretion'."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "No bidding on Revolut brand keywords (exact, broad, misspelled); no altered or custom visuals without agreement; Premium-trial copy must carry the trial T&Cs and a note that Standard plan fees apply after the trial. Crypto promotions need prior approval. Nobody contacted, no application made.",
+  "allowed_countries_note": "Not stated for affiliates; 'restrictions and disclaimers may vary between markets' and geographical restrictions apply to the offer.",
+  "evidence": [
+    {
+      "url": "https://www.revolut.com/become-a-revolut-affiliate/",
+      "title": "Revolut — Become an affiliate partner",
+      "accessed_at": "2026-11-13T05:50:00Z",
+      "excerpt": "Network: Impact ('sign up through Impact'). Retail commission after sign-up, KYC and top-up; Business after onboarding and first month's fee. 'We'll give you the details of commissions when you sign up to the programme.' Monthly payments, 30-day terms. Crypto promotions require Revolut approval. Latest news item 24 April 2024."
+    },
+    {
+      "url": "https://www.revolut.com/affiliate-onboarding-guide/",
+      "title": "Revolut's Affiliate Programme — onboarding guide",
+      "accessed_at": "2026-11-13T05:50:00Z",
+      "excerpt": "Platform: Rakuten ('Search for Revolut there and apply'); Compliance Survey first; Migration Links vs New Links. Commission per New Active Person (NAP) with a 30-day attribution window; 'Payments are rolling monthly, on 30-day terms'; keyword policy and visual-asset rules; Premium trial evergreen offer."
+    }
+  ],
+  "verification": "contradictory",
+  "notes": "The two official affiliate pages name different networks (Impact vs Rakuten) and different paid actions (KYC + top-up vs NAP with an outbound action, top-ups excluded). Commission amounts are not public. The crypto-card record (data/cards/revolut-crypto-card.json) is the product this programme would be used for; crypto promotions need Revolut's prior approval. Decision for David: whether to apply at all (bank card with a crypto feature) and through which network."
+}
