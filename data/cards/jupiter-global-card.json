@@ -16,7 +16,7 @@
   },
   "network": "visa",
   "category": "prepaid",
-  "record_status": "validated",
+  "record_status": "needs_review",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -661,7 +661,7 @@
       "title": "Jupiter docs — Spend: Fees, Limits & Regional Differences",
       "source_type": "pricing_page",
       "excerpt": "Annual fee None; Claynosaurz virtual card $25; physical card $13.13 plus shipping; deposits: no processing fee for USDC/USDT on Solana, other networks from $0.30 + 0.02%/0.1% + gas; FX 1% (Rain) / 1.8% (DCS); ATM (Rain) $1 + 0.65%, non-USD +$0.30 + 1%, inquiry/decline $0.60; ATM (DCS) not available; limits DCS $50,000/day, $990,000/year, Rain no limit.",
-      "accessed_at": "2026-11-12T06:28:00Z",
+      "accessed_at": "2026-11-13T06:32:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -676,7 +676,7 @@
       "title": "Jupiter docs — Jupiter Card (product page, Markdown export)",
       "source_type": "help_center",
       "excerpt": "'a Visa card powered by your stablecoins'; 'Each user is assigned one card issuer automatically, based on their country of residence' (Rain or DCS); 'It depends on your country of residence, not your citizenship'; eligibility 'set out in the Jupiter Card platform terms'; 'Jupiter does not issue credit lines'; physical cards 'rolling out in phases', full rollout 'by the end of 2026'.",
-      "accessed_at": "2026-11-12T06:30:00Z",
+      "accessed_at": "2026-11-13T06:32:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -690,7 +690,7 @@
       "title": "Jupiter docs — Spend FAQ",
       "source_type": "help_center",
       "excerpt": "'DCS-issued cards cover Australia, Japan, Malaysia, the Philippines, Singapore, South Korea, Taiwan, Thailand, and Vietnam'; KYC: 18+, Global ID, five steps (ID document, phone, liveness, personal info, questionnaire), 'Proof of address is required in APAC regions', 'All verification data is handled by SumSub'; cashback 2% capped $100/month, 4% / $200 after 2 qualifying referrals.",
-      "accessed_at": "2026-11-12T06:28:00Z",
+      "accessed_at": "2026-11-13T06:32:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -704,7 +704,7 @@
       "title": "Jupiter docs — Spend overview",
       "source_type": "help_center",
       "excerpt": "Spend described as 'regulated financial services' with card issuance, payments and transfers 'handled by licensed financial partners' (not named); Rain cards: USDC/USDT 1:1 held on-chain as collateral; DCS cards: USDT converted to USD on arrival; identity verification handled by SumSub.",
-      "accessed_at": "2026-11-12T06:28:00Z",
+      "accessed_at": "2026-11-13T06:32:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -733,7 +733,7 @@
       "title": "Jupiter docs — Rewards & Referrals (Cashback & Referral Program Terms effective March 26, 2026)",
       "source_type": "official_terms",
       "excerpt": "'All qualifying card purchases earn a base cashback rate of 2%, up to a monthly cap of $100.' 4% (cap $200) for a month after 'referring at least 2 qualifying people during the previous calendar month'. 'Your rewards balance is held in USDC.' Referrer $10 once the friend spends $50 within 30 days of KYC approval; friend $20 after $1,000 within 30 days of activation; no cap on referrals.",
-      "accessed_at": "2026-11-12T06:28:00Z",
+      "accessed_at": "2026-11-13T06:32:00Z",
       "effective_from": "2026-03-26",
       "expires_at": null,
       "scope": {
@@ -748,7 +748,7 @@
       "title": "Jupiter docs — Spend: Risks and Security",
       "source_type": "help_center",
       "excerpt": "Partners table: 'Rain and DCS' for the Jupiter Card, 'Noah' for withdrawals and remittance; 'Users are subject to the terms, conditions, and operational stability of these partners'; 'Jupiter does not take custody of your DeFi wallet funds'; Rain deposits 'stay onchain as collateral for the card'; 'The balance of a DCS-issued card and fiat transfers are handled by the partners listed above.'",
-      "accessed_at": "2026-11-11T05:49:00Z",
+      "accessed_at": "2026-11-13T06:32:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -781,7 +781,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-11-12T06:30:00Z",
-    "last_auto_check_at": "2026-11-12T06:30:00Z"
+    "last_auto_check_at": "2026-11-13T06:32:00Z"
   },
   "changelog": [
     {
@@ -810,6 +810,22 @@
         "ev-jup-rewards",
         "ev-jup-spend",
         "ev-jup-campaigns"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-13T06:45:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "needs_review",
+      "reason": "Third read on 2026-11-13 (48 h after the second) of six of the eight evidence pages — https://docs.jup.ag/user-docs/global/spend/fees-and-limits, /spend/faq, /spend/jupiter-card (.md export), /spend/rewards-and-referrals, /spend (overview) and, for the first time since 2026-11-11, /spend/risks-and-security (.md export, reached through the Jupiter Card page's link). DIFFERENCE (material value: eligibility of variant jupiter-card-dcs): the FAQ no longer contains the sentence 'DCS-issued cards cover Australia, Japan, Malaysia, the Philippines, Singapore, South Korea, Taiwan, Thailand, and Vietnam' recorded from https://docs.jup.ag/user-docs/global/spend/faq on 2026-11-11 and confirmed on 2026-11-12 (field variants[jupiter-card-dcs].eligibility.residence_allowed, old value AU, JP, MY, PH, SG, KR, TW, TH, VN — kept in place). Two separate fetches of the FAQ on 2026-11-13, one asking for every country name on the page, found no DCS country list: the only countries named are the QR Pay merchant countries (Bolivia, Brazil, Colombia, Indonesia, Laos, Malaysia, Mongolia, the Philippines, South Korea, Vietnam); the FAQ now says 'Your card issuer is determined by your country of residence' and links the 'Card Issuers' section of the Jupiter Card page, which names no country ('The Jupiter Card is issued by two partners, Rain and DCS.' / 'Each user is assigned one card issuer automatically, based on their country of residence.' / 'It is not possible to hold cards from both issuers.'). No official page read today states which countries DCS serves; the only remaining source of any country list is the support-centre article https://jupiverse.zendesk.com/hc/en-us/articles/25691462148508-Jupiter-Card (Rain variant, status hypothesis), which the fetcher again could not reach (provenance rule, two domain-restricted searches). The eligibility value is therefore no longer supported by its evidence → needs_review; the old value is kept, nothing overwritten. All other material values confirmed, unchanged: annual fee None; Claynosaurz virtual card $25; physical card $13.13 plus shipping ($30 off tracked shipping with a $1,500 balance; standard virtual card still unpriced); deposits no processing fee for USDC/USDT on Solana, other networks at least $0.30 + 0.02 %/0.1 % + swap + gas, minimum $3 ($10 Ethereum), up to 200,000 USDC per transfer; FX 1 % (Rain) / 1.8 % (DCS), no fee on USD payments; ATM (Rain) $1 + 0.65 %, non-USD +$0.30 + 1 %, inquiry/decline $0.60, $250 per withdrawal, 3 attempts per 24 h; ATM (DCS) 'Not available'; limits DCS $50,000/day and $990,000/year, Rain no limit; QR Pay off the card balance from 2026-11-10; 18+, five-step KYC via SumSub, proof of address in APAC, residence 'not your citizenship', eligibility 'set out in the Jupiter Card platform terms'; cashback 2 % capped $100/month held in USDC, 4 % / $200 for the month after at least 2 qualifying referrals (KYC + $50 spend), referrer $10 / referee $20 after $1,000 in 30 days, terms effective 2026-03-26, quasi-cash incl. crypto purchases ineligible; Claynosaurz FX rebate first $10,000 non-USD spend per month up to $100 until end of 2026; physical cards rolling out in phases, full rollout by end of 2026; 'Jupiter does not issue credit lines'; Spend 'regulated financial services', partners not named on the overview, Rain deposits 'stay onchain as collateral', DCS 'USDT is converted to USD at the market rate by the issuer when it arrives' (FAQ), Travel Rule declaration for DCS deposits; risks page partners table Jupiter Card 'Rain and DCS', withdrawals and remittance 'Noah'; product active. Minor observation: the FAQ is internally inconsistent on the boosted month ('for that month' vs 'for the following month'); the rewards page ('previous calendar month') governs and matches the record. Not re-read (provenance rule): the support-centre country article above and https://docs.jup.ag/user-docs/global/spend/campaigns.md (Ambassador FX rebate; not a modelled value). David to decide: has Jupiter withdrawn the DCS country list, or moved it (the Card Issuers section has no list) — browser read of the FAQ, the Jupiter Card page and the support-centre article needed before any publication.",
+      "evidence": [
+        "ev-jup-faq",
+        "ev-jup-card",
+        "ev-jup-fees",
+        "ev-jup-rewards",
+        "ev-jup-spend",
+        "ev-jup-risks"
       ],
       "actor": "second-read-run"
     }
