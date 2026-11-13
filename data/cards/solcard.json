@@ -15,7 +15,7 @@
   },
   "network": "visa",
   "category": "prepaid",
-  "record_status": "validated",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -271,7 +271,7 @@
       "title": "SolCard — Fees (schedule current as of 15 August 2026)",
       "source_type": "pricing_page",
       "excerpt": "Virtual / Platinum: 'Top-up fees: 5% + $10/new card' / '0%'; 'FX rates: 1-2%' / '0-1.5%'; 'Monthly spending limit: $10,000/month' / 'No limit'; monthly and annual fee None; 'a one-time $10 issuance fee for each new card'; 'The Virtual card is the email-only tier.'; 'The Platinum card requires identity verification and removes the top-up fee.'; 'Not available to residents of Hong Kong.'",
-      "accessed_at": "2026-11-11T06:31:00Z",
+      "accessed_at": "2026-11-13T06:31:00Z",
       "effective_from": "2026-08-15",
       "expires_at": null,
       "scope": {
@@ -286,7 +286,7 @@
       "title": "SolCard — Terms of Use (last updated September 27, 2026)",
       "source_type": "official_terms",
       "excerpt": "SC PAYMENTS LIMITED (Hong Kong); 'SolCard is not a bank, electronic money institution, or card issuer'; Issuer 'a third party'; cards 'issued pursuant to a license from Visa'; 18+; not Hong Kong or sanctioned persons; 'Access to certain card types or features requires completion of identity verification'; dormancy 10%/month after 90 days; cashback expires after 90 days.",
-      "accessed_at": "2026-11-11T06:31:00Z",
+      "accessed_at": "2026-11-13T06:31:00Z",
       "effective_from": "2026-09-27",
       "expires_at": null,
       "scope": {
@@ -300,7 +300,7 @@
       "title": "SolCard — Referral program (page last updated November 4, 2026)",
       "source_type": "affiliate_program",
       "excerpt": "Every account has a referral code and link; commission = share of the referee's deposit fee, 5% (Tier 1) to 40% (Tier 6) by referred volume, paid in USDT to a Solana address, withdrawal from $20; only Solana / supported EVM top-ups earn (not BTC, LTC, Tron, Platinum or zero-fee top-ups); milestones up to $1,010 from October 23, 2026; 'a description, not a contract'.",
-      "accessed_at": "2026-11-10T06:33:00Z",
+      "accessed_at": "2026-11-13T06:33:00Z",
       "effective_from": "2026-10-23",
       "expires_at": null,
       "scope": {
@@ -318,8 +318,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-11T06:31:00Z",
-    "last_auto_check_at": "2026-11-11T06:31:00Z"
+    "last_content_verified_at": "2026-11-13T06:31:00Z",
+    "last_auto_check_at": "2026-11-13T06:31:00Z"
   },
   "changelog": [
     {
@@ -342,6 +342,32 @@
       "evidence": [
         "ev-solcard-fees",
         "ev-solcard-terms"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-13T06:42:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-11T06:31:00Z",
+      "to": "2026-11-13T06:31:00Z",
+      "reason": "Third read on 2026-11-13 (48 h after the second, 72 h after the first) of all three evidence pages. https://www.solcard.cc/fees ('Schedule current as of 15 August 2026'): Virtual — top-up 5 % + $10/new card, FX 1–2 %, spending limit $10,000/month, monthly and annual fee None, 'The Virtual card is the email-only tier.'; Platinum — top-up 0 %, FX 0–1.5 %, 'No limit', monthly and annual fee None, 'requires identity verification and removes the top-up fee'; 'a one-time $10 issuance fee for each new card'; 'Not available to residents of Hong Kong. Eligibility may vary by region.'; no ATM, cashback, minimum top-up or decline rows; operator SC PAYMENTS LIMITED, BRN 78350827, Sheung Wan, Hong Kong; 'issued pursuant to a license from Visa®'. https://www.solcard.cc/terms ('Last updated: September 27, 2026'): SC PAYMENTS LIMITED, Hong Kong; 'not a bank, electronic money institution, or card issuer'; Issuer 'a third party'; 18+; Hong Kong and sanctioned persons excluded; 'Access to certain card types or features requires completion of identity verification'; dormancy after 90 consecutive days, 10 % of the remaining balance per month, balances below 1 USD charged in full; minimum refundable amount forfeited on cancellation; handling fee on notice; fees shown in the App before confirmation; top-up fees and conversion spread; FX spread on non-USD spending; cashback expires 90 days after credit; 'No monthly fee for active accounts'; no no-solicitation clause; Hong Kong-indicator suspension. https://www.solcard.cc/referral (reached this time through the fee page's footer link; 'last updated November 4, 2026'): referral code and link per account, commission = share of the referee's deposit fee 5 % / 10 % / 15 % / 20 % / 30 % / 40 % at $0 / $1,000 / $5,000 / $20,000 / $50,000 / $100,000 referred volume, paid in USDT to a Solana address, withdrawal from $20, Solana and supported EVM top-ups only (not BTC, LTC, Tron, Platinum, zero-fee), milestones from October 23, 2026 up to $1,010, free Platinum card option requires identity verification, 'a description, not a contract'. Every material value confirmed, unchanged; no value overwritten. Observations, not modelled values: the fee page's 'Card networks' line still reads 'Visa and Mastercard' while the record models 'visa' from the terms' Visa-licence sentence (first read did not record the line; David to decide how the network should be shown); the fee page's worked top-up example ($115.26 sent for a $100 balance: $5.26 fee + $10 issuance) implies the 5 % is charged on the amount net of the issuance fee; the terms add that cashback credited before 23 September 2026 expires on 22 December 2026 (no cashback rate is published, nothing modelled).",
+      "evidence": [
+        "ev-solcard-fees",
+        "ev-solcard-terms",
+        "ev-solcard-referral"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-13T06:42:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "published",
+      "reason": "Second independent read on 2026-11-13: all material values confirmed. Reads of 2026-11-10 (first), 2026-11-11 (24 h, borderline) and 2026-11-13 (72 h) of the fee schedule, the Terms of Use and the referral page agree on eligibility wording, every fee, rewards (none published), KYC stage per tier, issuer statement (not disclosed) and product status (active); all evidence is official; validator passes. Open point for David (not a material value, not a difference between reads): network label — fee page says \"Visa and Mastercard\", record shows Visa.",
+      "evidence": [
+        "ev-solcard-fees",
+        "ev-solcard-terms",
+        "ev-solcard-referral"
       ],
       "actor": "second-read-run"
     }
