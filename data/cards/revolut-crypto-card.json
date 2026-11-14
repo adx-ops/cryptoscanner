@@ -16,7 +16,7 @@
   },
   "network": "unknown",
   "category": "debit",
-  "record_status": "validated",
+  "record_status": "needs_review",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -503,7 +503,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-11-13T05:55:00Z",
-    "last_auto_check_at": null
+    "last_auto_check_at": "2026-11-14T06:38:00Z"
   },
   "changelog": [
     {
@@ -516,6 +516,24 @@
         "ev-revolut-crypto-fees-uk"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-14T06:45:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "needs_review",
+      "reason": "Second read on 2026-11-14 (24 h 33 min to 24 h 56 min after the first reads) of the Revolut evidence. DIFFERENCE (material value: fee 'conversion' of tier standard-plan, variant revolut-crypto-card-uk, evidence ev-revolut-crypto-fees-uk): the Revolut Ltd retail crypto fee schedule read on 2026-11-13 as PDF version 1.1.8 (https://cdn.revolut.com/terms_and_conditions/pdf/exchanging_cryptocurrency_personal_fees_ee1b196b_1.1.8_1786438530_en.pdf) was recorded as 'No percentage or minimum fee applies to spending from a crypto card.' The current schedule, read on 2026-11-14 both as the live legal page https://www.revolut.com/legal/exchangingcryptocurrenciespersonalfees/ and as PDF version 1.3.0 (https://cdn.revolut.com/terms_and_conditions/pdf/exchanging_cryptocurrency_personal_fees_ee1b196b_1.3.0_1792059416_en.pdf, surfaced by a domain-restricted search), says for Standard and Plus 'we do not apply a percentage-based fee: … when spending from a crypto card' (the minimum fee, £0.99–£2.99 by trade size below £200, is no longer listed as excluded), for Premium and Metal 'we do not apply a percentage-based or minimum fee: … when spending from a crypto card', and nothing about the card for Ultra. Old value kept: conversion fee stays 'unknown' (it was never modelled as free), nothing overwritten; but the modelled Standard tier may now carry a minimum fee per card payment in the UK, and the evidence excerpt and the editorial watch-outs no longer match the current UK document → needs_review. The stored PDF 1.1.8 URL itself could not be re-fetched (provenance rule: it was not returned by any search), so whether the wording changed between 1.1.8 and 1.3.0 or was summarised too broadly on 2026-11-13 needs a human read of both versions. EEA side unchanged: the RDAEL schedule, read as the live legal page https://www.revolut.com/en-CY/legal/exchangingcryptocurrenciespersonalfees/ (the stored PDF 1.0.6 and the nb-NO page were not returned by any search; en-LT and pt-PT returned a client error), confirms Standard/Plus 1.49 %, Premium/Metal 0.99 %, Ultra 0.49 %→0 % by 30-day EUR volume, minimum fees €0.99–€2.99 below €200, 'a percentage-based or minimum fee when spending from a crypto card' excluded for Standard/Plus and Premium/Metal, §'Crypto Card': 'We do not charge any fees for the use of the Crypto Card. However, exchanges made via the card incur normal exchange fees' (contradiction as recorded), fair usage 1 % above €1,000 (Standard) / 0.5 % above €3,000 (Plus), none from Premium, Portugal Branch exempt, product added spread typically 0–3 %, withdrawals €1/€3 + network fee, deposits free. All other material values confirmed, unchanged: UK product page https://www.revolut.com/crypto/crypto-card/ and LT page https://www.revolut.com/en-LT/crypto/crypto-card/ — 'without exchange fees', 'fair usage fees may still apply', virtual card 'no extra fees', physical card delivery and customisation fees shown in-app, ATM £3,000 (or equivalent) per 24 h, £100,000 per transaction, 100 exchanges per 24 h, Apple Pay/Google Pay, crypto account + risk assessment + T&Cs required, no issuer, network, country list or rewards, UK page FCA registration / not FSCS / not safeguarded, ratings 'as of 13 Aug 2026' (UK) and 'Nov 18, 2025' (LT), tax disposal statement; help centre fees article (now titled 'Crypto payment fees, rates, and limits') — 'You won't be charged any exchange fees for crypto transactions', fair usage fees may apply depending on plan, real-time rate at completion, same three limits; help centre set-up article — 'Get Crypto Virtual Card for FREE', 'without any fees', 'Fair usage fees may apply depending on your plan', Apple/Google Pay, Revolut Pro and Business cards excluded; UK Standard fees page (updated 11 December 2025) — subscription Free, virtual card Free, first card free with a delivery fee shown in-app, 5 ATM withdrawals or £200 per rolling month then 2 % min £1, £1,000 exchange limit then 1 % with crypto counted; Revolut Bank UAB Standard fees page (en-IE, applying from 10 November 2025) — Free, virtual Free, delivery €7.99 standard / €19.99 express, replacement €6, 5 withdrawals or €200 then 2 % min €1, €1,000 limit then 1 %, weekend 1 %, 'Cryptocurrency products are offered by Revolut Digital Assets Europe Limited'. Help-centre article 'What is a fair usage limit?' (ev-revolut-help-fair-usage) no longer reachable (client error on the en-AT copy returned by search; the original URL was not returned by any search); its values are confirmed by the replacement article https://help.revolut.com/help/wealth/exchanging-money/how-much-does-it-cost-to-make-an-exchange/will-i-be-charged-for-exchanging-foreign-currencies/ (Standard 1 % above £1,000, Plus 0.5 % above £3,000, none from Premium; fiat, crypto and commodity exchanges count; 200 exchanges per 24 h across all exchange types; crypto card payments not mentioned). Issuer still a hypothesis (entities named only in the fee schedules), eligibility still a hypothesis (no country list on any page), KYC still a hypothesis. David to decide: (1) scope — a bank/EMI card with a pay-with-crypto feature; (2) read PDF 1.1.8 vs 1.3.0 of the Revolut Ltd schedule to settle the UK minimum-fee wording; (3) whether the fair-usage evidence should point to the replacement article.",
+      "evidence": [
+        "ev-revolut-crypto-fees-uk",
+        "ev-revolut-crypto-fees-eea",
+        "ev-revolut-crypto-card-uk",
+        "ev-revolut-crypto-card-lt",
+        "ev-revolut-help-card-fees",
+        "ev-revolut-help-setup",
+        "ev-revolut-standard-fees-uk",
+        "ev-revolut-standard-fees-ie"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
