@@ -1,0 +1,557 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kucard",
+  "slug": "kucard",
+  "name": "KuCard",
+  "brand": "KuCoin",
+  "provider_id": "kucoin",
+  "issuer": {
+    "name": "EEA: Wallester AS (Estonia, reg. 11812882) per the KuCard Terms of Use published 2024 — not confirmed by the current KuCoin EU help-centre pages. Australia: not disclosed on the pages read.",
+    "status": "hypothesis",
+    "evidence": [
+      "ev-kucard-terms-2024",
+      "ev-kucard-au-apply-blog"
+    ]
+  },
+  "network": "other",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Crypto-assets held on the KuCoin account are converted at payment time; they 'serve only as a funding source via conversion' and are never sent to merchants. EEA card settles in EUR (KuCoin EU sets the crypto conversion rate); Australian card settles in USDC (KuCoin AU sets the conversion rate, Mastercard the FX rate).",
+    "evidence": [
+      "ev-kucard-eea-fees",
+      "ev-kucard-au-fees-support"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "kucard-eea",
+      "region_label": "EEA (KuCoin EU) — not Malta",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LV",
+          "LT",
+          "LU",
+          "NL",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "IS",
+          "LI",
+          "NO"
+        ],
+        "residence_excluded": [
+          "MT"
+        ],
+        "default_for_unlisted": "ineligible",
+        "usage_note": "KuCoin EU help centre (updated 7 Oct 2026): 'exclusively available to EEA residents (not available in Malta)'; requires a KuCoin EU account with full KYC; 'no debit check'. Country list expanded by us from 'EEA' (30 states) minus Malta. The 2024 KuCard Terms of Use list the same 30 states including Malta — contradiction recorded; the newer, dated help-centre page governs. Age ≥ 18 per the Terms. Cardholders must stop using the card if they cease to reside in a permitted jurisdiction (Terms §3.3).",
+        "evidence": [
+          "ev-kucard-eea-apply",
+          "ev-kucard-terms-2024"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "phone",
+          "email"
+        ],
+        "stages_note": "Full KYC on the KuCoin EU account before applying; 'a valid EEA-issued ID document or passport' that is 'issued within the EEA' and unexpired. Terms §3.1: 'pass identity verification with a supported EEA-issued identity document'. Proof of address / selfie not stated on the pages read.",
+        "evidence": [
+          "ev-kucard-eea-apply",
+          "ev-kucard-terms-2024"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "KuCard (EEA)",
+          "access": {
+            "type": "free",
+            "note": "First virtual card free; no subscription tier.",
+            "status": "verified",
+            "evidence": [
+              "ev-kucard-eea-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "First virtual card free. Each additional virtual card €9.90 (fee schedule, 29 Sep 2026) — the apply guide (7 Oct 2026) says €9.99: contradiction recorded, fee schedule modelled. Physical card €9.90 (first), €19.90 (subsequent). Replacement €9.90. Max 5 cards.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-eea-fees",
+                "ev-kucard-eea-apply"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Standard delivery cost not stated; express delivery €30 per card.",
+              "status": "unknown",
+              "evidence": [
+                "ev-kucard-eea-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "No monthly or annual fee listed in the fee schedule.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-eea-fees"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "fixed",
+              "amount": {
+                "amount": 2,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "conditions": "€2 per card per month after 90 consecutive calendar days without a completed transaction following activation; waived/refunded if cumulative transactions ≥ €100 within 1 month of being charged; 7 days' notice before deduction.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-eea-inactivity"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "Euro transactions free; 'Non-euro transactions: 2% of transaction total' on top of Visa's exchange rate. A conversion spread on the crypto→EUR conversion also applies (rate set by KuCoin EU, not quantified).",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-eea-fees"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed",
+              "amount": {
+                "amount": 2,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "conditions": "€2 per withdrawal within Europe; internationally 2% of the amount plus €2. ATM operators may add their own fees.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-eea-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "The card is funded from the KuCoin EU account balance; the fee schedule does not price the crypto→EUR conversion beyond 'conversion spread … may apply'.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "other",
+              "note": "Spending limits not stated on the EEA pages read ('KuCard Fees & Limits' article lists fees only; the Terms refer to a FAQ placeholder). Maximum 5 cards per user.",
+              "status": "unknown",
+              "evidence": [
+                "ev-kucard-eea-fees",
+                "ev-kucard-eea-apply"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kucard-au",
+      "region_label": "Australia (KuCoin AU)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AU"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "usage_note": "'Currently, KuCard-AU is exclusively available to Australian residents' with a valid KuCoin AU account and full KYC; 'no debit check is required'. Minimum age not stated on the pages read. Variant currency recorded as USD because the card settles in USDC (a USD stablecoin); the applicant selects an estimated monthly spend in USD.",
+        "evidence": [
+          "ev-kucard-au-apply-support",
+          "ev-kucard-au-apply-blog"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "proof_of_address",
+          "phone",
+          "email"
+        ],
+        "stages_note": "Full KYC on the KuCoin AU account before applying: passport or Australian driving licence (document 'must be issued within Australia', valid and unexpired) plus an Australian residential address / proof of residence. Selfie not stated.",
+        "evidence": [
+          "ev-kucard-au-apply-support",
+          "ev-kucard-au-apply-blog"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "KuCard-AU (virtual)",
+          "access": {
+            "type": "free",
+            "note": "First virtual card free; no subscription tier. Physical card 'not currently supported' (to be opened in the future).",
+            "status": "verified",
+            "evidence": [
+              "ev-kucard-au-fees-support",
+              "ev-kucard-au-apply-blog"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "First virtual card free; each additional virtual card 9.99 USDC (up to 4 more, 5 cards in total). Replacement fee not listed. Dispute fee 30 USDC per transaction.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-au-fees-support",
+                "ev-kucard-au-fees-blog"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'Annual fee: free' per card.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-au-fees-support"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "fixed",
+              "amount": {
+                "amount": 2,
+                "currency": "USD"
+              },
+              "period": "month",
+              "conditions": "2 USDC per card per month after 90 consecutive calendar days without a completed transaction following activation; waived if cumulative transactions ≥ 100 USDC within one month of the charge; 7 days' notice.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-au-fees-blog",
+                "ev-kucard-au-fees-support"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "conditions": "'Transaction fee: 0.5% of transaction total' on every card payment (in addition to any FX fee and the crypto conversion spread).",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-au-fees-support",
+                "ev-kucard-au-fees-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "'Foreign exchange fee: 1% of transaction total' when the transaction currency is not USDC, calculated on the converted amount; Mastercard sets the exchange rate. Note: as the card settles in USDC, AUD purchases in Australia are non-USDC transactions.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-au-fees-support",
+                "ev-kucard-au-fees-blog"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Not mentioned on any page read; the card is virtual-only at present.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Funded from the KuCoin AU account via conversion; a 'spread fee … calculated from real-time exchange rates' applies but is not quantified.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 20000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "20,000 USDC per day (UTC) and 200,000 USDC per year, aggregated across all the user's KuCards (blog, 30 Apr 2026). The help-centre 'Fees & Limits' article (21 Jul 2026) lists no limits.",
+              "status": "verified",
+              "evidence": [
+                "ev-kucard-au-fees-blog"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-kucard-eea-fees",
+      "url": "https://www.kucoin.com/en-eu/support/48142946141492",
+      "title": "KuCard Fees & Limits (KuCoin EU help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Last updated 09/29/2026. First virtual card free; additional virtual €9.90; physical €9.90 first / €19.90 subsequent; replacement €9.90; cancellation free; EUR transactions free; non-EUR 2%; ATM Europe €2, international 2% + €2; declined payment free; express delivery €30; overdraft 'currently unavailable'. Settled in EUR; Visa FX rate; KuCoin EU conversion rate.",
+      "accessed_at": "2026-11-16T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR",
+        "note": "EEA product"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kucard-eea-apply",
+      "url": "https://www.kucoin.com/en-eu/support/48142946141475",
+      "title": "How do I Apply for the KuCoin EU KuCard? (help centre)",
+      "source_type": "eligibility_page",
+      "excerpt": "Last updated 10/07/2026. 'Exclusively available to EEA residents (not available in Malta)'; KuCoin EU account with full KYC; valid EEA-issued ID or passport, unexpired; no debit check; physical card via Add flow with an application fee in EUR (amount not shown); 'from the second virtual card onward, the fee is €9.99 per card'; max 5 cards.",
+      "accessed_at": "2026-11-16T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Additional virtual card €9.99 here vs €9.90 in the fee schedule (29 Sep 2026); Malta excluded here vs included in the 2024 Terms of Use country list."
+    },
+    {
+      "id": "ev-kucard-eea-inactivity",
+      "url": "https://www.kucoin.com/en-eu/support/48142946141490",
+      "title": "How does the KuCard Inactivity Fee Work? (KuCoin EU help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Last updated 10/09/2026. 'Inactivity fee (monthly): €2 per card' after 90 consecutive days without completed transactions post-activation; EUR deductions from the Funding Account; 7-day notice; waiver/refund with ≥ €100 cumulative transactions within 1 month of the charge; card may be suspended if the fee cannot be collected.",
+      "accessed_at": "2026-11-16T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kucard-terms-2024",
+      "url": "https://www.kucoin.com/announcement/KuCard-Terms-of-Use",
+      "title": "KuCard Terms of Use (announcement page, timestamp 2024/07/23)",
+      "source_type": "official_terms",
+      "excerpt": "'issued to you by Wallester AS (registration number 11812882)', Visa debit card; KuCard services provided by UAB EURLITA on KuCoin's behalf; §3.2 lists 30 EEA states (incl. Malta); EEA citizens/residents only; ≥ 18; §3.1 EEA-issued identity document; default spending currency USDT, settlement EUR; Estonian law. Contains unfilled placeholders ('[18th Oct 2023]', '[Kucard FAQ]').",
+      "accessed_at": "2026-11-16T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Pre-dates the KuCoin EU (MiCA) set-up; issuer treated as a hypothesis for the current EEA card."
+      },
+      "verification": "hypothesis",
+      "contradiction_note": "Names Visa/Wallester AS and includes Malta, whereas the 2026 KuCoin EU pages exclude Malta and name no issuer or network."
+    },
+    {
+      "id": "ev-kucard-au-fees-support",
+      "url": "https://www.kucoin.com/en-au/support/47497300093950",
+      "title": "How is KuCard-AU charged for use? — Fees & Limits (KuCoin AU help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "Last updated 07/21/2026. First virtual card free; additional virtual 9.99 USDC (up to 4); cancellation free; annual fee free; transaction fee 0.5%; FX fee 1% on non-USDC transactions (Mastercard rate); spread fee from real-time rates; declined payment free; overdraft unavailable; inactive fee 2 USDC/card/month; dispute fee 30 USDC. 'All KuCard transactions are settled in USDC.' No limits listed.",
+      "accessed_at": "2026-11-16T05:53:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "note": "Amounts in USDC"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kucard-au-fees-blog",
+      "url": "https://www.kucoin.com/blog/all-you-need-to-know-about-fees-and-limits-of-kucard-au",
+      "title": "All You Need to Know About Fees and Limits of KuCard-AU (KuCoin blog, 30 Apr 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "Same fee schedule as the help centre (free first virtual card, 9.99 USDC additional, annual free, 2 USDC monthly inactivity after 90 days, 0.5% transaction fee, 1% FX, 30 USDC dispute). Limits: 20,000 USDC daily and 200,000 USDC annual spending, aggregated across up to 5 cards, UTC days. Inactivity waiver ≥ 100 USDC within one month; 7-day notice.",
+      "accessed_at": "2026-11-16T05:51:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kucard-au-apply-support",
+      "url": "https://www.kucoin.com/en-au/support/47497300093940",
+      "title": "How to apply for KuCard-AU (KuCoin AU help centre)",
+      "source_type": "eligibility_page",
+      "excerpt": "Last updated 07/21/2026. 'Exclusively available to Australian residents'; KuCoin AU account with full KYC; passport or Australian driving licence issued within Australia, unexpired; Australian residential address/proof of residence; no debit check; max 5 cards; monthly spend estimate chosen in USD. Footer: Echuca Trading Pty Ltd (AFSL 297499) issues derivatives — not stated to cover KuCard.",
+      "accessed_at": "2026-11-16T05:53:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kucard-au-apply-blog",
+      "url": "https://www.kucoin.com/blog/what-is-kucard-au-how-to-apply-for-kucard-au",
+      "title": "What Is KuCard-AU? And How Can I Apply for a KuCard-AU? (KuCoin blog, 27 Apr 2026)",
+      "source_type": "help_center",
+      "excerpt": "Mastercard debit card; crypto converted to fiat at payment; 'exclusively available to Australian residents'; full KYC (passport or Australian driving licence, Australian address); virtual only, 'physical cards will be opened in the future'; max 5 cards; Apple Pay/Google Pay; USDC settlement; first virtual card free, additional 9.99 USDC; rewards rates 'not guaranteed'. Issuer not named.",
+      "accessed_at": "2026-11-16T05:53:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kucard-au-cashback-blog",
+      "url": "https://www.kucoin.com/en-au/blog/en-comprehensive-guide-of-rewards-and-benefits-of-kucard-au",
+      "title": "Comprehensive Guide of Rewards and Benefits of KuCard-AU (KuCoin AU blog, 15 May 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Cashback by KuCoin VIP level: VIP 0 1%/1.5%/2% (assets 0–10k/10–20k/20k+ USDT; caps 10/20/30 USDC/month), VIP 1–4 3% (cap 60), VIP 5–7 4% (cap 90), VIP 8–10 6% (cap 135), VIP 11–12 8% (cap 200); paid on the 15th monthly; excludes ATM, cash advances, USDC-settled transactions; rates 'not guaranteed'. SUPERSEDED by the Rewards Points Program on 16 Jul 2026.",
+      "accessed_at": "2026-11-16T05:54:00Z",
+      "effective_from": null,
+      "expires_at": "2026-07-16",
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "stale"
+    },
+    {
+      "id": "ev-kucard-au-points-blog",
+      "url": "https://www.kucoin.com/blog/kucard-rewards-points-guide",
+      "title": "KuCard Rewards Points Explained (KuCoin blog, 14 Aug 2026)",
+      "source_type": "official_terms",
+      "excerpt": "KuCoin AU: cashback replaced on 16 Jul 2026 by a Rewards Points Program; legacy cashback redeemable until 12 Jan 2027. Points = spend × reward rate × 1,000; rate = higher of VIP-level rate or monthly spending tier — no rate table on the page. 1,000 points ≈ 1 USDC; 15-business-day verification; points expire after 90 days. Excludes ATM, gambling, brokerage, transfers, top-ups.",
+      "accessed_at": "2026-11-16T05:54:00Z",
+      "effective_from": "2026-07-16",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kucoin-affiliate",
+      "url": "https://www.kucoin.com/affiliate",
+      "title": "KuCoin Affiliate Program (official page)",
+      "source_type": "affiliate_program",
+      "excerpt": "'Earn up to 60% commission' on referred users' spot and futures trading fees, multi-tier; open to creators (> 5,000 followers or > 500 community members), crypto websites/media, marketers and institutions; apply via affiliate-apply page; attribution by referral link. KuCard not mentioned; payout terms not stated.",
+      "accessed_at": "2026-11-16T05:54:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.kucoin.com/kucard",
+    "affiliate": {
+      "program_id": "kucoin-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-16T05:54:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-16T05:55:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run) from KuCoin EU help-centre fee/apply/inactivity articles (Sep–Oct 2026), KuCoin AU help-centre fees/apply articles (Jul 2026), KuCoin AU blog articles (Apr–Aug 2026), the 2024 KuCard Terms of Use and the affiliate page. Two EEA variants' contradictions recorded (€9.90 vs €9.99 additional virtual card; Malta). Issuer is a hypothesis (EEA) / undisclosed (AU); network differs by region (Visa EEA per 2024 Terms, Mastercard AU). Global support articles (kucoin.com/support/…) are client-rendered and returned empty shells. Rewards: AU points programme without a published rate; EEA 'Benefits and Rewards' article unreadable.",
+      "evidence": [
+        "ev-kucard-eea-fees",
+        "ev-kucard-eea-apply",
+        "ev-kucard-au-fees-support",
+        "ev-kucard-au-apply-support"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "KuCoin's exchange-linked debit card, offered as two separate regional products: a EUR card for EEA residents (not Malta) through KuCoin EU, and a USDC-settled virtual Mastercard for Australian residents through KuCoin AU. Free first virtual card in both regions; a €2 / 2 USDC monthly inactivity fee after 90 idle days; the EEA card charges 2% on non-euro spending, the Australian card 0.5% on every transaction plus 1% FX on non-USDC transactions. No reward with a published rate.",
+    "good_for": [
+      "Existing KuCoin EU or KuCoin AU customers who want to spend their exchange balance",
+      "Euro-zone spending with the EEA card (no transaction fee in EUR)"
+    ],
+    "not_for": [
+      "Residents outside the EEA (excluding Malta) or Australia",
+      "Anyone counting on cashback: the Australian points programme publishes no rate and the EEA rewards page could not be read",
+      "Australian users paying in AUD who want to avoid per-transaction fees (0.5% + 1% FX because the card settles in USDC)"
+    ],
+    "watch_outs": [
+      "Inactivity fee of €2 / 2 USDC per card per month after 90 days without a transaction.",
+      "The card issuer for the EEA card is only named in a 2024 Terms of Use page with template placeholders (Wallester AS, Visa); the current KuCoin EU pages name neither issuer nor network. The Australian issuer is not disclosed.",
+      "Two official EEA pages disagree on the additional-virtual-card fee (€9.90 vs €9.99) and on Malta; the dated fee schedule and the newer eligibility page are modelled.",
+      "Australia: the May 2026 cashback table (1–8% by VIP level) was replaced on 16 July 2026 by a points programme whose rate is 'the higher of the VIP rate or the monthly spending tier' with no table published — treated as unknown.",
+      "Spending limits for the EEA card are not published on the pages read; Australian limits (20,000 USDC/day) come from a blog post, not the help centre."
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "kucoin-affiliate",
+  "provider_id": "kucoin",
+  "program_name": "KuCoin Affiliate Program",
+  "legal_entity": "Not stated on the affiliate page (KuCoin is operated by Peken Global Limited per the KuCoin AU footer; KuCoin EU and KuCoin AU are separate regulated entities whose participation in the programme is not stated).",
+  "program_url": "https://www.kucoin.com/affiliate",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "website",
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "Content creators with over 5,000 social followers or over 500 community members; crypto market/tool/media websites; marketers, institutions and organisations. Application via the 'Apply Now' link (affiliate-apply page). Approval process not described.",
+  "our_status": "identified",
+  "paid_action": "Trading fees paid by users who signed up through the affiliate's referral link ('You will earn commission when users who signed up via your referral link make trades').",
+  "validation_conditions": "Not stated on the page read.",
+  "commission": {
+    "model_note": "'Earn up to 60% commission' on referred users' spot and futures trading fees, paid daily; multi-tier (second-tier commissions mentioned without rates); tier details only in a linked announcement not read in this run. KuCard orders or card spending are not mentioned as a paid action.",
+    "percent": 60,
+    "tiers_note": "Maximum rate 60%; tier thresholds not read.",
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Not stated (page shows a 'Commission Paid Out (USDT)' counter)",
+    "frequency": "'Daily' commissions per the page; settlement details not stated",
+    "holdbacks_note": "Not read."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Availability and terms 'vary by country or region and may change at any time' (page disclaimer). No affiliate-specific terms linked; general Terms of Use only. Whether KuCoin EU (EEA card) or KuCoin AU (Australian card) customers generate commission under this programme is not stated. Nobody contacted, no application made.",
+  "allowed_countries_note": "Not stated.",
+  "evidence": [
+    {
+      "url": "https://www.kucoin.com/affiliate",
+      "title": "KuCoin Affiliate Program",
+      "accessed_at": "2026-11-16T05:54:00Z",
+      "excerpt": "Up to 60% commission on spot/futures trading fees, daily, multi-tier; eligibility creators > 5,000 followers or > 500 community members, websites, marketers; referral-link attribution; KuCard not mentioned; no payout terms; no last-updated date."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Revenue depends on referred users' trading, not on card orders. The 2025 programme announcement (tiers, thresholds) and the regional (EU/AU) applicability must be read before scoring."
+}

@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-14.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-16.",
   "target": {
     "min": 15,
     "max": 50
@@ -274,6 +274,22 @@
       "product": "Binance Visa Card",
       "status": "rejected",
       "note": "Rejected 2026-11-13: official Binance post (feed/post/1439877) — EEA card programme ended 20 December 2023 00:00 UTC; no open Binance Card found on binance.com. Directory listings (DailyCoin, cryptocards.so) are stale."
+    },
+    {
+      "provider": "KuCoin",
+      "product": "KuCard (EEA via KuCoin EU; KuCard-AU via KuCoin AU)",
+      "status": "validated",
+      "record": "data/cards/kucard.json",
+      "note": "Validated 2026-11-16 from KuCoin EU help centre (fees & limits 29 Sep 2026; apply 7 Oct 2026; inactivity 9 Oct 2026), KuCoin AU help centre (fees/apply 21 Jul 2026), KuCoin AU blog (fees 30 Apr, apply 27 Apr, rewards 15 May, points 14 Aug 2026), the 2024 KuCard Terms of Use (Wallester AS, Visa, placeholders) and kucoin.com/affiliate. Two variants: EEA (EUR; not Malta) and Australia (USDC-settled virtual Mastercard). Contradictions: additional virtual card €9.90 (fee schedule) vs €9.99 (apply page); Malta excluded (2026) vs listed (2024 Terms). Unknown: EEA delivery fee and limits, AU ATM, top-up costs, AU issuer, reward rates (AU points programme since 16 Jul 2026 publishes no rate; EEA rewards article unreadable). Affiliate: data/affiliate/kucoin-affiliate.json (identified; trading-fee revenue share, card not mentioned). Second read required; browser read needed for kucoin.com/support/* (client-rendered) and the rewards articles.",
+      "needs_browser_read": true
+    },
+    {
+      "provider": "OKX",
+      "product": "OKX Card (EEA, Singapore, Australia)",
+      "status": "validated",
+      "record": "data/cards/okx-card.json",
+      "note": "Validated 2026-11-16 from okx.com help centre: EEA and Singapore fee articles (updated 5 Nov 2026), EEA Regional Addendum to the Pay Wallet Terms (5 Feb 2026; issuer UAB Monavate, programme manager OKX Europe Limited), Cardholder Agreement (15 Aug 2025), Australian Product Disclosure Statement (9 Jun 2026; issuer Bano Pty Ltd), ATM article (25 Sep 2026), plus the Learn article for the EEA country scope ('EU and Norway, excluding Iceland and Liechtenstein' — hypothesis). No issuance, monthly or FX fee; stablecoin→fiat spread 0–0.10%. Unknown: ATM fee and spending limits (app only), top-up cost, physical/delivery fees, Singapore eligibility, KYC and issuer. Cashback depends on OKX VIP level and launch promotions without published rates — not modelled. Affiliate: data/affiliate/okx-affiliate.json (terms_verified: default 30% trading-fee rebate, 10-user unlock, hourly USDC settlement in the EEA; card not a paid action). Second read required.",
+      "needs_browser_read": false
     }
   ],
   "no_kyc_track": {
@@ -354,17 +370,19 @@
         "product": "UTORG Card",
         "claim": "low-KYC, EEA/Ukraine, €0 annual",
         "issuer_disclosed": false,
-        "status": "identified",
-        "needs_browser_read": true,
-        "note": "2026-11-10: utorg.pro/faq redirects to utorg.com/personal, which the fetcher cannot open (provenance — URL not returned by any search); no other utorg.com page indexed for the card. No official affiliate/referral page found by search. Not blocked: read utorg.com (card, fees, verification, countries) in a browser session. | 2026-11-13: same result — utorg.pro/faq redirects to utorg.com/personal (fetcher blocked by provenance); site:utorg.com returns nothing. Browser session still needed."
+        "status": "validated",
+        "needs_browser_read": false,
+        "note": "Validated 2026-11-16 (first run in which utorg.com pages were returned by web search): utorg.com/crypto-card, utorg.com/personal, utorg.com/buy (target of the former Limits & Fees URL) and Terms of Use (17 Sep 2026). NOT low-KYC: official pages require identity documents + liveness before the virtual card is issued — recorded as a standard-KYC card. Zero payment/FX fees 'for a limited time' (no end date), no monthly charge, €30,000/month limit, virtual Visa, USDC top-ups, Apple/Google Pay, 'non-custodial' (provider claim). Issuer not disclosed: Terms say the card service is provided by Chain Valley Sp. z o.o. with Wirex Pay / Wirex Limited. Contradiction: card page lists Austria and Hungary, Terms prohibit both (modelled excluded). Unknown: conversion margin, top-up fee, ATM, issuance (hypothesis 'Free Card'). No affiliate/referral page found. Second read required. Previous: 2026-11-10/13 utorg.pro/faq redirected to utorg.com/personal, unreachable for provenance.",
+        "record": "data/cards/utorg-card.json"
       },
       {
         "product": "Kripicard",
         "claim": "minimal info to open, more verification to raise limits",
         "issuer_disclosed": false,
-        "status": "identified",
-        "note": "2026-11-11: no page of kripicard.com is returned by web search (only directories, Trustpilot, G2, Product Hunt), so the fetcher cannot reach the official site (provenance). No official affiliate/referral page found. Not blocked: read kripicard.com (card, fees, verification tiers, countries, terms) in a browser session.",
-        "needs_browser_read": true
+        "status": "validated",
+        "note": "Validated 2026-11-16 (first run in which home.kripicard.com pages were returned by web search): Fees & Pricing, Terms and Conditions (effective 13 Jun 2026, operator Uweb3 Management BR, Brazilian law), FAQ (answers not rendered), 'no-KYC' marketing pages, affiliate page. Fees published: $5/card, 4% + $1 per load, $0 monthly, 0% FX; limits $25,000/day, $150,000/month; virtual Visa/Mastercard funded with USDT; Apple/Google/Samsung Pay. Issuer not disclosed ('licensed partners'). KYC recorded 'unknown': pages state an email-only entry tier (no passport/selfie/address, ID only on tier upgrade) but publish no threshold or limit for that tier — rule of 2026-11-09 requires the thresholds for 'not_required_initially'. Eligibility unknown (no country list; sanctions denial). Affiliate: data/affiliate/kripicard-affiliate.json (identified, commission not public). DECISION for David: accept an email-only tier without published thresholds as 'not_required_initially', or keep 'unknown'. Second read required.",
+        "needs_browser_read": false,
+        "record": "data/cards/kripicard.json"
       },
       {
         "product": "Pinto Pay",
@@ -399,5 +417,5 @@
       }
     ]
   },
-  "updated": "2026-11-15"
+  "updated": "2026-11-16"
 }

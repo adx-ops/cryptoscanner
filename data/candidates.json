@@ -1043,15 +1043,19 @@
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": true,
-      "operator_named": false,
+      "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-10-28",
       "last_seen": "2026-10-28",
-      "priority": -3,
-      "needs_browser_read": true,
+      "priority": 0,
+      "needs_browser_read": false,
       "discovery_note": "2026-11-10: utorg.pro/faq redirects to utorg.com/personal, not fetchable without a browser.",
-      "note": "2026-11-13: utorg.pro/faq still 302-redirects to utorg.com/personal, which the fetcher cannot open (provenance); site:utorg.com search returns nothing. Not blocked; needs_browser_read stands."
+      "note": "2026-11-16 (research run): validated from utorg.com (crypto-card, personal, buy, terms-of-use 17 Sep 2026). KYC required (ID + liveness) — not low-KYC. Zero payment/FX fees 'for a limited time'; €30,000/month; issuer not disclosed (Chain Valley Sp. z o.o. with Wirex Pay per Terms). Unknown: conversion margin, top-up, ATM. No affiliate page found.",
+      "record": "data/cards/utorg-card.json",
+      "regions": [
+        "27 listed EEA countries + Ukraine (card page; AT/HU contradicted by the Terms) — EUR limit, virtual Visa"
+      ]
     },
     {
       "provider": "Kripicard",
@@ -1064,14 +1068,18 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": true,
-      "operator_named": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "operator_named": true,
+      "affiliate_hint": "official affiliate page (home.kripicard.com/affiliate) — commission not published; referral 'Custom Fees' and ambassador pages exist",
+      "status": "validated",
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-09",
-      "priority": -1,
-      "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
+      "priority": 0,
+      "needs_browser_read": false,
+      "note": "2026-11-16 (research run): validated from home.kripicard.com (fees, terms 13 Jun 2026, FAQ, no-KYC pages, affiliate). $5/card, 4% + $1 per load, $0 monthly, 0% FX; $25k/day, $150k/month; operator Uweb3 Management BR (Brazil); issuer not disclosed. Email-only entry tier stated without thresholds → KYC 'unknown' (decision for David). Eligibility unknown.",
+      "record": "data/cards/kripicard.json",
+      "regions": [
+        "Global — no country list published; sanctions denial; USD billing"
+      ]
     },
     {
       "provider": "Sovrae",
@@ -1280,15 +1288,23 @@
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official KuCoin Affiliate Program (kucoin.com/affiliate, up to 60% of trading fees) — KuCard not mentioned as a paid action",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-16",
-      "priority": 6,
+      "priority": 0,
       "regions_hint": [
         "AU (directory)",
         "IN (directory)"
-      ]
+      ],
+      "operator_named": true,
+      "record": "data/cards/kucard.json",
+      "regions": [
+        "EEA excl. Malta (KuCoin EU) — EUR, Visa/Wallester AS per 2024 Terms (hypothesis)",
+        "Australia (KuCoin AU) — USDC-settled virtual Mastercard, issuer not disclosed"
+      ],
+      "needs_browser_read": true,
+      "note": "2026-11-16 (research run): validated from KuCoin EU help centre (fees 29 Sep 2026, apply 7 Oct 2026, inactivity 9 Oct 2026), KuCoin AU help centre (fees/apply 21 Jul 2026), KuCoin AU blog (fees 30 Apr, apply 27 Apr, rewards 15 May, points 14 Aug 2026), 2024 KuCard Terms of Use and the affiliate page. EEA: first virtual card free, additional €9.90 (apply page says €9.99 — contradiction), physical €9.90/€19.90, non-EUR 2%, ATM €2 Europe / 2%+€2 abroad, inactivity €2/month after 90 days; Malta excluded. AU: virtual only, 0.5% transaction fee + 1% FX (USDC settlement), inactivity 2 USDC, limits 20,000 USDC/day. Unknown: EEA delivery and limits, AU ATM, top-up costs, AU issuer; AU points programme has no published rate. Global support articles (kucoin.com/support/*) and the EU 'Benefits and Rewards' / AU cashback support articles are client-rendered — browser read needed."
     },
     {
       "provider": "Tria",
@@ -2073,14 +2089,23 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official OKX Affiliate Program (trading-fee rebate, default 30%; EEA article: hourly USDC settlement) — card not a paid action",
+      "status": "validated",
       "first_seen": "2026-11-09",
       "last_seen": "2026-11-16",
-      "priority": 4,
+      "priority": 0,
       "regions_hint": [
         "AU (directory)"
-      ]
+      ],
+      "operator_named": true,
+      "record": "data/cards/okx-card.json",
+      "regions": [
+        "EEA (EU + Norway, excl. IS/LI per OKX Learn) — EUR Mastercard, UAB Monavate",
+        "Singapore — SGD/USD, Visa rate; eligibility not read",
+        "Australia — USD-settled Mastercard, Bano Pty Ltd (PDS 9 Jun 2026)"
+      ],
+      "needs_browser_read": false,
+      "note": "2026-11-16 (research run): validated from OKX help centre fee articles (EEA + Singapore, updated 5 Nov 2026), EEA Regional Addendum (5 Feb 2026), Cardholder Agreement (15 Aug 2025), Australian PDS (9 Jun 2026), ATM article (25 Sep 2026), affiliate rules (29 Sep 2026) and the EEA Learn article. No issuance/monthly/FX fee; 0–0.10% stablecoin→fiat spread is the only priced fee. Unknown: ATM fee (app only), top-up cost, spending limits (app only), physical card/delivery fees, Singapore eligibility/KYC/issuer. EEA country list = hypothesis from the Learn article. Cashback VIP-dependent, no published rate. South Asia and Africa cards (Learn articles) not documented."
     },
     {
       "provider": "Oppi Wallet",

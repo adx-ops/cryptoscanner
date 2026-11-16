@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0.0",
+  "id": "utorg-card",
+  "slug": "utorg-card",
+  "name": "Utorg Crypto Card",
+  "brand": "Utorg",
+  "provider_id": "utorg",
+  "issuer": {
+    "name": "Not disclosed. Terms of Use (17 Sep 2026): 'The Utorg Card service is provided by Chain Valley Sp. z o.o. in collaboration with Wirex Pay, Wirex Limited'; 'UTORG LAB is not the provider of the Utorg Card service'. Website owner: UTORG LABS HOLDING LTD (Abu Dhabi, reg. 000008060).",
+    "status": "verified",
+    "evidence": [
+      "ev-utorg-terms"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Provider claim: 'The first non-custodial Crypto Card' — 'You hold your keys. You hold your crypto. We never touch your assets.' Top-ups in USDC on Ethereum, Polygon, Arbitrum, Solana or BSC; 'The merchant gets local currency, you pay in stablecoins.' Custody model is the provider's statement, not independently verified.",
+    "evidence": [
+      "ev-utorg-card-page",
+      "ev-utorg-personal"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "utorg-card-eea-ua",
+      "region_label": "EEA (listed countries) + Ukraine",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "UA",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "IS"
+        ],
+        "residence_excluded": [
+          "AT",
+          "HU",
+          "GB",
+          "US",
+          "SG",
+          "JP",
+          "CN",
+          "RU",
+          "AF",
+          "AS",
+          "BS",
+          "BB",
+          "BA",
+          "BW",
+          "BI",
+          "CF",
+          "CU",
+          "CD",
+          "EG",
+          "ET",
+          "GH",
+          "GU",
+          "GW",
+          "GY",
+          "IR",
+          "IQ",
+          "JM",
+          "LA",
+          "LB",
+          "LY",
+          "ML",
+          "MU",
+          "MM",
+          "NI",
+          "KP",
+          "PK",
+          "PA",
+          "PR",
+          "WS",
+          "RS",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "MP",
+          "TT",
+          "TN",
+          "VI",
+          "UG",
+          "VU",
+          "VE",
+          "PS",
+          "YE",
+          "ZW"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Card page section 'Available for EEA countries' names 29 countries (ISO mapping ours): 27 EEA states plus Ukraine, and also Austria and Hungary — but the Terms of Use (17 Sep 2026) prohibit the service for residents of Austria and Hungary (general prohibited-countries list, 56 territories incl. UK, US, Singapore, Japan). Contradiction recorded; AT and HU modelled as excluded (least favourable). Ireland and Sweden are not on the card page list. Limits 'up to €30,000' per month.",
+        "evidence": [
+          "ev-utorg-card-page",
+          "ev-utorg-terms"
+        ],
+        "status": "contradictory"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "email"
+        ],
+        "stages_note": "Card page step 02: 'Upload your identity documents and pass liveness check'; FAQ 'Is KYC required?' — 'Yes. Pass a quick and smooth verification — powered by AI.' Virtual card issued 'once verified'. The directory claim 'low-KYC' is not supported by the official pages. Buy page: government ID plus selfie, 2–5 minutes.",
+        "evidence": [
+          "ev-utorg-card-page",
+          "ev-utorg-buy"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Utorg Crypto Card (virtual)",
+          "access": {
+            "type": "free",
+            "note": "'Free Card' (personal page); no plan or subscription.",
+            "status": "verified",
+            "evidence": [
+              "ev-utorg-personal"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "'Free Card' (personal page). No issuance price appears anywhere; the dedicated 'Limits & Fees' URL redirects to the buy-crypto page.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-utorg-personal"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "FAQ: 'No payment fees, no FX markups, no monthly charges.'",
+              "status": "verified",
+              "evidence": [
+                "ev-utorg-card-page",
+                "ev-utorg-personal"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'Enjoy zero fees on payments and cross-fiat conversions' — 'for a limited time! For more information, contact our support team.' No end date published; 'zero FX fees', 'No bank FX markups, no weekend conversion fees'. Treated as the current value; may end without notice.",
+              "status": "verified",
+              "evidence": [
+                "ev-utorg-card-page",
+                "ev-utorg-personal"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "conditions": "Stablecoin→local-currency conversion margin at spend not quantified on the pages read.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Virtual card; ATM access not mentioned.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "USDC transfers on five networks; on-chain network fees apply; no provider top-up fee stated either way.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 30000,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "note": "'Up to €30,000' monthly limit (card page). Daily or per-transaction limits not stated.",
+              "status": "verified",
+              "evidence": [
+                "ev-utorg-card-page"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-utorg-card-page",
+      "url": "https://utorg.com/crypto-card",
+      "title": "Utorg Crypto Card — product page",
+      "source_type": "pricing_page",
+      "excerpt": "'The first non-custodial Crypto Card'; 'zero fees on payments and cross-fiat conversions … for a limited time'; FAQ 'No payment fees, no FX markups, no monthly charges'; 'Up to €30,000' monthly limit; 'Upload your identity documents and pass liveness check'; card 'once verified'; Apple/Google Pay; 29 countries under 'Available for EEA countries' (incl. UA, AT, HU). No issuer or network named.",
+      "accessed_at": "2026-11-16T06:05:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified",
+      "contradiction_note": "Lists Austria and Hungary as available while the Terms of Use prohibit residents of both."
+    },
+    {
+      "id": "ev-utorg-personal",
+      "url": "https://utorg.com/personal",
+      "title": "Utorg — personal (app, card and buy) page",
+      "source_type": "pricing_page",
+      "excerpt": "'Free Card'; 'virtual Visa card'; 'Zero fees'; 'No bank FX markups, no weekend conversion fees'; 'High monthly limits' (no figure); 'Pass our AI-powered KYC in under 5 minutes'; top-ups in USDC on Ethereum, Polygon, Arbitrum, Solana or BSC; 'The merchant gets local currency, you pay in stablecoins'; 'Cashback coming Soon'; '190+ countries' (platform claim). Issuer not named.",
+      "accessed_at": "2026-11-16T06:06:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-utorg-buy",
+      "url": "https://utorg.com/buy",
+      "title": "Utorg — buy crypto page (target of the former 'Limits & Fees' URL)",
+      "source_type": "help_center",
+      "excerpt": "utorg.pro/limits-and-fees/ now 302-redirects here; page is about the on-ramp ('transparent spread plus a processing fee'). KYC 'takes about 2–5 minutes and requires a government ID plus a selfie'. Card: works 'anywhere Visa is accepted'. No card fee schedule.",
+      "accessed_at": "2026-11-16T06:06:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-utorg-terms",
+      "url": "https://utorg.com/terms-of-use",
+      "title": "Utorg Terms of Use (Last Updated 17 September 2026)",
+      "source_type": "official_terms",
+      "excerpt": "'The Utorg Card service is provided by Chain Valley Sp. z o.o. in collaboration with Wirex Pay, Wirex Limited'; 'UTORG LAB is not the provider of the Utorg Card service'; UTORG LABS HOLDING LTD, Abu Dhabi. Prohibited: 'resident or from the following countries' — 56 territories incl. Austria, Hungary, UK, USA, Singapore, Japan. No card fees/limits; no solicitation ban found.",
+      "accessed_at": "2026-11-16T06:08:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://utorg.com/crypto-card",
+    "affiliate": {
+      "program_id": null,
+      "status": "none",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-16T06:08:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-16T06:10:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run; no-KYC track candidate) from utorg.com/crypto-card, utorg.com/personal, utorg.com/buy and the Terms of Use (17 Sep 2026) — the first run in which utorg.com pages were returned by web search. Official pages require ID + liveness before issuing the card, so the directory 'low-KYC' claim is not supported. Zero payment/FX fees 'for a limited time' without end date; issuance 'Free Card' (marketing heading, hypothesis); conversion margin, top-up and ATM unknown. Issuer not disclosed (card service by Chain Valley Sp. z o.o. with Wirex Pay / Wirex Limited). Country list contradiction (AT/HU) recorded. No affiliate or referral page found on utorg.com.",
+      "evidence": [
+        "ev-utorg-card-page",
+        "ev-utorg-terms"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual Visa card from the Utorg on-ramp, marketed as non-custodial and funded with USDC on five networks; offered to residents of 27 listed EEA countries and Ukraine, with a €30,000 monthly limit. Zero payment and FX fees are advertised 'for a limited time' with no end date; the conversion margin, top-up cost and ATM access are not published. Identity verification (ID + liveness) is required before the card is issued. The card issuer is not disclosed: the service is provided by Chain Valley Sp. z o.o. with Wirex Pay.",
+    "good_for": [
+      "USDC holders in the listed EEA countries or Ukraine who want a virtual Visa with Apple/Google Pay and no advertised FX mark-up",
+      "Users who prefer a card that claims not to take custody of their crypto"
+    ],
+    "not_for": [
+      "Anyone looking for a card without identity verification: ID documents and a liveness check are required",
+      "Residents of Austria, Hungary, the UK, the US, Singapore and the other territories prohibited by the Terms",
+      "Cash withdrawals (virtual card; ATM not mentioned) or cashback ('coming soon')"
+    ],
+    "watch_outs": [
+      "'Zero fees' is explicitly 'for a limited time' with no published end date or fee schedule; the former 'Limits & Fees' page now redirects to the buy-crypto page.",
+      "The card page lists Austria and Hungary as available while the Terms of Use prohibit residents of both countries.",
+      "The card issuer is not named; the Terms attribute the card service to Chain Valley Sp. z o.o. in collaboration with Wirex Pay / Wirex Limited, and state Utorg is 'not attributed to banking services'.",
+      "Stablecoin-to-fiat conversion margin and top-up costs (beyond on-chain network fees) are not published — treated as unknown.",
+      "'Non-custodial' is the provider's own description and has not been verified."
+    ]
+  }
+}
