@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kripicard",
+  "slug": "kripicard",
+  "name": "Kripicard Virtual Card",
+  "brand": "Kripicard",
+  "provider_id": "kripicard",
+  "issuer": {
+    "name": "Not disclosed ('Virtual cards are issued by licensed partners in their respective jurisdictions'; Kripicard 'is not a bank, financial institution, Visa, Mastercard, or payment network'). Platform operated by Uweb3 Management BR (Terms and Conditions, effective 13 Jun 2026; Brazilian law, Rio de Janeiro courts).",
+    "status": "verified",
+    "evidence": [
+      "ev-kripicard-fees",
+      "ev-kripicard-terms"
+    ]
+  },
+  "network": "other",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "Cards are loaded with USDT ('basic tier opens with an email and a USDT top-up'); balance and billing in USD; 4% funding fee plus $1 processing per load; crypto-to-fiat conversion carries a 'small margin' (not quantified). Visa or Mastercard BIN chosen at issuance.",
+    "evidence": [
+      "ev-kripicard-fees",
+      "ev-kripicard-nokyc-instant"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "kripicard-global",
+      "region_label": "Global (countries not listed)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "No list of served countries: pages say 'Global', '190+ countries' or '200+ countries' (acceptance and availability framings mixed) and 'Availability may vary by jurisdiction and eligibility'. 'If you are in a sanctioned jurisdiction … service will be denied' — no list. Terms: at least 18 and legal capacity. Not read: any clause restricting the card to one territory or banning solicitation elsewhere (none found in the Terms).",
+        "evidence": [
+          "ev-kripicard-terms",
+          "ev-kripicard-nokyc-instant",
+          "ev-kripicard-faq"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "unknown",
+        "editorial_level": "unknown",
+        "requirements": [
+          "email"
+        ],
+        "thresholds_note": "Official pages state that the basic tier 'requires only an email address' — 'No passport scan, no proof of address, no selfie' — and that ID verification is collected 'only on tier upgrade' to raise limits. BUT no page gives the spending threshold or limit of the email-only tier ('Exact numbers vary by region and partner bank; see the Fees page'), and the Fees page limits ($25,000/day, $150,000/month) are not attributed to a tier. Per the catalogue rule, 'not required initially' is recorded only when the triggering thresholds are published — hence 'unknown'.",
+        "stages_note": "Sign-up: 'Email and password, then turn on two-factor authentication'; card creation after a USDT top-up (minimum $10). Terms: banking partners may request 'additional KYC / source-of-funds documentation' before releasing balances; KYT monitoring at all tiers. Fee page adds chargeback/refund-rate conditions (< 15%) and bans high-risk platforms (Steam, Uber, OnlyFans named).",
+        "evidence": [
+          "ev-kripicard-nokyc-without",
+          "ev-kripicard-nokyc-instant",
+          "ev-kripicard-terms",
+          "ev-kripicard-fees"
+        ],
+        "status": "unknown"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Kripicard virtual card",
+          "access": {
+            "type": "free",
+            "note": "No subscription; pay per card issued and per top-up.",
+            "status": "verified",
+            "evidence": [
+              "ev-kripicard-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "conditions": "'Card issuance: $5 per card' ('Negotiable for volume or recurring monthly issuance'); minimum $10 loaded as starting balance ('Not a fee'); unlimited cards per account; card validity 5 years.",
+              "status": "verified",
+              "evidence": [
+                "ev-kripicard-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "conditions": "'Monthly fee: $0'.",
+              "status": "verified",
+              "evidence": [
+                "ev-kripicard-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "percent": 4,
+              "period": "per_transaction",
+              "conditions": "'Funding fee: 4%, applied to the amount loaded onto the card' plus 'Processing fee: $1'; minimum top-up $1 after creation. 'Fees may vary depending on funding method or exchange rate.'",
+              "status": "verified",
+              "evidence": [
+                "ev-kripicard-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'FX fee: 0.00%'; 'Authorization fee: 0.00%'. Network exchange rate applies on non-USD purchases.",
+              "status": "verified",
+              "evidence": [
+                "ev-kripicard-fees"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "conditions": "USDT→USD conversion 'carries a small margin' — not quantified.",
+              "status": "unknown"
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Virtual card only; ATM not mentioned.",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 25000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "'Single transaction: $25,000 per authorization'; 'Daily transaction: $25,000'; 'Monthly transaction: $150,000'. Not attributed to a verification tier.",
+              "status": "verified",
+              "evidence": [
+                "ev-kripicard-fees"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay",
+            "samsung_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-kripicard-fees",
+      "url": "https://home.kripicard.com/fees",
+      "title": "Kripicard — Fees & Pricing",
+      "source_type": "pricing_page",
+      "excerpt": "Card issuance $5 per card; minimum $10 starting balance; funding fee 4% of the amount loaded; processing fee $1; minimum top-up $1; monthly fee $0; authorization 0.00%; FX 0.00%. Limits: unlimited cards; $25,000 per authorization; $25,000 daily; $150,000 monthly; validity 5 years. Visa or Mastercard chosen at issuance; Apple/Google/Samsung Pay, 3DS. 'Issued by licensed partners'; no date.",
+      "accessed_at": "2026-11-16T06:04:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kripicard-terms",
+      "url": "https://home.kripicard.com/terms-and-conditions",
+      "title": "Kripicard — Terms and Conditions (Effective Date: June 13, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "'operated by Uweb3 Management BR'; governed by the laws of Brazil, courts of Rio de Janeiro; ≥ 18 and legal capacity; 'Fees, card limits, and operational limits are disclosed during the purchase or top-up process'; KYT monitoring; banking partners may request 'additional KYC / source-of-funds documentation'; no issuer named; no country list; no territorial or solicitation restriction found.",
+      "accessed_at": "2026-11-16T06:07:00Z",
+      "effective_from": "2026-06-13",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kripicard-faq",
+      "url": "https://home.kripicard.com/faq",
+      "title": "Kripicard — FAQ",
+      "source_type": "help_center",
+      "excerpt": "FAQ headings for KYC, fees and limits render without answer text for the fetcher. Footer: 'Kripicard is a financial technology company. Virtual cards are issued by licensed partners in their respective jurisdictions'; 'Virtual Visa and Mastercard BINs funded with crypto'; offices Rio de Janeiro and Dover, DE; links to Referral, Ambassador and Reseller programmes.",
+      "accessed_at": "2026-11-16T06:04:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kripicard-nokyc-without",
+      "url": "https://home.kripicard.com/crypto-card-without-kyc",
+      "title": "Kripicard — 'Crypto Card Without KYC (2026)' page",
+      "source_type": "help_center",
+      "excerpt": "'The lowest tier requires only an email address'; 'No passport scan, no proof of address, no selfie'; 'For the basic tier, you only need an email and a crypto wallet'; higher tiers 'unlock bigger limits after standard verification'; selfie/liveness 'Only on tier upgrade'; 'Exact numbers vary by region and partner bank; see the Fees page'. No tier limits, no date.",
+      "accessed_at": "2026-11-16T06:09:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-kripicard-nokyc-instant",
+      "url": "https://home.kripicard.com/instant-crypto-card-no-kyc",
+      "title": "Kripicard — 'Instant Crypto Card No KYC (2026)' page",
+      "source_type": "help_center",
+      "excerpt": "'Kripicard's basic tier opens with an email and a USDT top-up'; 'No passport, no selfie, no proof of address to slow you down at the entry tier'; sign-up 'Email and password, then turn on two-factor authentication'; upgrade 'Only to unlock higher limits'; 'ongoing transaction monitoring at all tiers'; sanctioned jurisdictions denied; 'Global' / '200+' / '190+ countries'. No thresholds, no date.",
+      "accessed_at": "2026-11-16T06:09:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Marketing pages describe an email-only entry tier; the Fees page and Terms publish no tier thresholds, and the FAQ page says Visa/Mastercard cards 'require some KYC due to AML rules'."
+    },
+    {
+      "id": "ev-kripicard-affiliate",
+      "url": "https://home.kripicard.com/affiliate",
+      "title": "Kripicard Affiliate Program — Earn by Referring Crypto Cards",
+      "source_type": "affiliate_program",
+      "excerpt": "Free to join; tracked referral links; 'reward' when a referred person signs up and uses Kripicard — no amount or percentage stated; 'Earn as referrals stay active'; apply via contact channels; no exaggerated claims, no promises of bypassing laws, disclose the relationship. Last updated June 2026.",
+      "accessed_at": "2026-11-16T06:07:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://home.kripicard.com/fees",
+    "affiliate": {
+      "program_id": "kripicard-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-16T06:09:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-16T06:12:00Z",
+      "field": "*",
+      "reason": "Initial record (single read, unattended research run; no-KYC track candidate) from home.kripicard.com: Fees & Pricing, Terms and Conditions (13 Jun 2026), FAQ (answers not rendered), two 'no-KYC' marketing pages and the affiliate page — the first run in which kripicard.com pages were returned by web search. Fees and limits published; operator named (Uweb3 Management BR, Brazil); issuer not disclosed. KYC recorded as 'unknown' because the email-only entry tier is stated without any published threshold or tier limit. Eligibility unknown (no country list). Conversion margin and ATM unknown. Affiliate programme exists without a published commission.",
+      "evidence": [
+        "ev-kripicard-fees",
+        "ev-kripicard-terms",
+        "ev-kripicard-nokyc-without"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "USDT-funded virtual Visa/Mastercard sold per card ($5) with a 4% + $1 loading fee, no monthly fee and no FX mark-up; limits $25,000 per day and $150,000 per month. The operator is a Brazilian company (Uweb3 Management BR); the card issuer is not disclosed. Marketing pages describe an email-only entry tier with ID checks reserved for limit upgrades, but no threshold for that tier is published, so the verification stage is recorded as unknown.",
+    "good_for": [
+      "One-off or disposable virtual cards for online payments funded with USDT",
+      "Users who accept a 4% + $1 loading cost in exchange for no monthly fee"
+    ],
+    "not_for": [
+      "Everyday spending: 4% per load is far above most cards' FX fees",
+      "Anyone who needs a named issuer, a country list or published verification thresholds",
+      "Cash withdrawals or physical card use (virtual only)"
+    ],
+    "watch_outs": [
+      "The card issuer is not named anywhere read; cards are 'issued by licensed partners in their respective jurisdictions'. Funds may be held pending 'additional KYC / source-of-funds documentation' requested by banking partners.",
+      "The email-only tier is described on marketing pages only; its spending limit is not published and the FAQ page says Visa/Mastercard cards 'require some KYC due to AML rules'.",
+      "Pages disagree on the network (Visa only vs Visa or Mastercard chosen at issuance) and on the footprint ('170+', '190+', '200+ countries').",
+      "Chargeback/refund rates above 15% and 'high-risk platforms' (Steam, Uber, OnlyFans named) are grounds for restriction.",
+      "The USDT→USD conversion margin is not quantified; 'Fees may vary depending on funding method or exchange rate'."
+    ]
+  }
+}

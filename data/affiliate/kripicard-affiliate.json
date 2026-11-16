@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "kripicard-affiliate",
+  "provider_id": "kripicard",
+  "program_name": "Kripicard Affiliate Program",
+  "legal_entity": "Uweb3 Management BR (operator per the Terms and Conditions, Brazil); not restated on the affiliate page.",
+  "program_url": "https://home.kripicard.com/affiliate",
+  "type": "unknown",
+  "allowed_channels": [
+    "website",
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "'No cost to join'; targets creators, communities and publishers reaching audiences in crypto, media buying, freelancing, e-commerce or travel; apply through the contact channels describing the audience and promotion plan; resellers/integrators directed to the partners page.",
+  "our_status": "identified",
+  "paid_action": "A 'reward' when a referred person signs up and uses Kripicard; 'Earn as referrals stay active' (mechanism not explained).",
+  "validation_conditions": "Not stated.",
+  "commission": {
+    "model_note": "No amount, percentage or base published on the affiliate page. A separate 'Referral Program — Custom Fees' and an Ambassador programme are linked from the FAQ but were not read.",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Not stated",
+    "frequency": "Not stated",
+    "holdbacks_note": "Not stated."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Affiliates must avoid 'exaggerated claims, no promises of bypassing laws or platform policies' and disclose the affiliate relationship where required. Referrals open to users worldwide. Nobody contacted, no application made.",
+  "allowed_countries_note": "'Referrals are open to users worldwide' per the page; the card itself publishes no country list.",
+  "evidence": [
+    {
+      "url": "https://home.kripicard.com/affiliate",
+      "title": "Kripicard Affiliate Program — Earn by Referring Crypto Cards (last updated June 2026)",
+      "accessed_at": "2026-11-16T06:07:00Z",
+      "excerpt": "Free to join; unique tracked referral links; reward on sign-up and use, recurring 'as referrals stay active'; no commission figure, payout asset, threshold or frequency; apply via contact channels; no exaggerated claims or law-bypassing promises; disclose the relationship."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Commission terms are not public; the programme cannot be scored until the referral ('Custom Fees') and ambassador pages, or an application reply, state them. Editorial caution: the product markets 'no-KYC' and the affiliate rules forbid promising to bypass laws — any promotion must stick to what the provider states."
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "okx-affiliate",
+  "provider_id": "okx",
+  "program_name": "OKX Affiliate Program",
+  "legal_entity": "Not stated on the pages read (OKX Europe Limited, Malta, operates the EEA card programme; OKX Australia Pty Ltd distributes the Australian card).",
+  "program_url": "https://www.okx.com/en-us/help/okx-affiliate-program-rules",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "website",
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "Application form (name, phone, email, promotional channels, prior affiliate experience, preferred language); eligibility unlocked after 'successfully referring 10 valid new users'; identity verification required for the affiliate, co-inviters and sub-affiliates to receive commissions. EEA page: review the OKX Affiliate Program Agreement, complete the form, link issued if approved.",
+  "our_status": "terms_verified",
+  "paid_action": "Rebate of trading fees paid by invitees (spot, futures, options, CeDeFi where available) for as long as they remain on OKX; no commission on zero-fee trades, special fee rates or trades paid with rebate cards.",
+  "validation_conditions": "Invitee must sign up via the link/code and trade; lapsed invitees (no deposit, trade or withdrawal for 180 days) must log in via the referral link again to be re-engaged; the relationship 'is not permanent and does not guarantee lifetime commission rebates'; level 0 earns nothing.",
+  "commission": {
+    "model_note": "Default commission rate 30% of invitees' trading fees; level reassessed monthly on invitee trading volume and number of traded invitees; downgrade after three consecutive months below criteria; 5-month protection of the first-month rate. Invitees at VIP5–VIP6 capped at 100,000 per month; no commission at VIP7+. Full tier table not published on the pages read. Card orders/spending are not a paid action.",
+    "percent": 30,
+    "tiers_note": "Default 30%; higher levels exist without a published table.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Credited to the OKX account (EEA page: 'Commissions are settled hourly in USDC')",
+    "frequency": "Hourly settlement (EEA page); downloadable commission reports (up to 30 per month, 15-day availability)",
+    "holdbacks_note": "Not stated."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": true,
+    "api": false,
+    "postback": false,
+    "status": "verified"
+  },
+  "rules_note": "Prohibited: bidding on OKX brand keywords, look-alike websites/URLs/accounts, impersonating OKX in messages, self-inviting through multiple accounts, promoting to users in Prohibited Jurisdictions (Terms of Service §2.2, list not on the page). Affiliates must comply with AML, sanctions, advertising and licensing law. OKX may change or end the programme without notice. Nobody contacted, no application made.",
+  "allowed_countries_note": "Not stated beyond the Prohibited Jurisdictions reference; a separate EEA article exists (same 30% default).",
+  "evidence": [
+    {
+      "url": "https://www.okx.com/en-us/help/okx-affiliate-program-rules",
+      "title": "What's OKX Affiliate Program? (updated 29 Sep 2026)",
+      "accessed_at": "2026-11-16T05:59:00Z",
+      "excerpt": "Trading-fee rebate, default 30%, monthly level assessment, 5-month protection, 10-valid-user unlock, identity verification, referral link/code, VIP5–6 cap 100,000/month, none at VIP7+, prohibited channels; OKX Card not mentioned."
+    },
+    {
+      "url": "https://www.okx.com/en-us/help/whats-okx-affiliate-program-in-eea",
+      "title": "What's OKX Affiliate Program in EEA? (updated 5 Aug 2026)",
+      "accessed_at": "2026-11-16T05:59:00Z",
+      "excerpt": "Default 30%; commissions settled hourly in USDC; level 0 earns nothing; sub-affiliate rates set by the affiliate; Prohibited Jurisdictions marketing ban; removal grounds; downloadable reports. No card section."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Revenue depends on referred users' trading, not on card orders. The linked OKX Affiliate Program Agreement (full legal terms) was not read in this run."
+}
