@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "gate-affiliate",
+  "provider_id": "gate",
+  "program_name": "Gate Affiliate Program",
+  "legal_entity": "Not stated on the page read.",
+  "program_url": "https://www.gate.com/referral/affiliate",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "website",
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "For 'eligible individuals and organizations with established or niche audiences' (content creators, publishers, community operators, influencers); application via gate.com/referral/affiliate ('Join Now'), screened; a large audience does not guarantee acceptance. Promotion prohibited in restricted jurisdictions.",
+  "our_status": "identified",
+  "paid_action": "Trading fees paid by referred users (Spot, Futures, Trenches, Web3, CFD, Options): 'Affiliate commission = Eligible trading fees × Applicable commission rate'. Gate Card orders or card spend are not mentioned.",
+  "validation_conditions": "Not stated ('settlement rules determine when commissions become available'; reporting may be delayed).",
+  "commission": {
+    "model_note": "Rate not published — 'depends on the affiliate's agreement'. The separate referral programme advertises 'up to 40%' under its own rules. Referred users at VIP11+ generate no standard referral commission.",
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Not stated",
+    "frequency": "Not stated",
+    "holdbacks_note": "Not stated."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Read from the Gate Learn article 'What Is Gate Affiliate Program' (published 28 Oct 2026, updated 4 Nov 2026); the application page itself (gate.com/referral/affiliate) was not reachable in this run (provenance). Whether Gate Card customers in regulated regions generate commission is not stated. Nobody contacted, no application made.",
+  "allowed_countries_note": "Not stated beyond 'restricted jurisdictions'.",
+  "evidence": [
+    {
+      "url": "https://www.gate.com/learn/articles/what-is-gate-affiliate-program",
+      "title": "What Is Gate Affiliate Program: Benefits & Commissions Explained (Gate Learn, updated 4 Nov 2026)",
+      "accessed_at": "2026-11-17T05:45:00Z",
+      "excerpt": "Trading-fee revenue share with a rate set per agreement; categories Spot, Futures, Trenches, Web3, CFD, Options; eligibility: creators, publishers, community operators, influencers, screened; apply at gate.com/referral/affiliate; referral programme 'up to 40%' is separate; VIP11+ referees excluded; Gate Card not mentioned."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Revenue would depend on referred users' trading, not on card orders. Read the application page and affiliate terms in a browser session before scoring."
+}
