@@ -290,6 +290,22 @@
       "record": "data/cards/okx-card.json",
       "note": "Validated 2026-11-16 from okx.com help centre: EEA and Singapore fee articles (updated 5 Nov 2026), EEA Regional Addendum to the Pay Wallet Terms (5 Feb 2026; issuer UAB Monavate, programme manager OKX Europe Limited), Cardholder Agreement (15 Aug 2025), Australian Product Disclosure Statement (9 Jun 2026; issuer Bano Pty Ltd), ATM article (25 Sep 2026), plus the Learn article for the EEA country scope ('EU and Norway, excluding Iceland and Liechtenstein' — hypothesis). No issuance, monthly or FX fee; stablecoin→fiat spread 0–0.10%. Unknown: ATM fee and spending limits (app only), top-up cost, physical/delivery fees, Singapore eligibility, KYC and issuer. Cashback depends on OKX VIP level and launch promotions without published rates — not modelled. Affiliate: data/affiliate/okx-affiliate.json (terms_verified: default 30% trading-fee rebate, 10-user unlock, hourly USDC settlement in the EEA; card not a paid action). Second read required.",
       "needs_browser_read": false
+    },
+    {
+      "provider": "Shakepay",
+      "product": "Shakepay Visa Prepaid Card (Canada)",
+      "status": "validated",
+      "record": "data/cards/shakepay-card.json",
+      "note": "Validated 2026-11-17 from help.shakepay.com (fees & limits updated 21 Apr 2026; cashback 11 Dec 2025; reward statuses; how it works; sign-up 16 Jun 2025; verification; Canada-only) and the Visa Prepaid Card Cardholder Agreement (15 Apr 2026, issuer Peoples Trust Company). Canada only, CAD, prepaid Visa, 1% BTC cashback (1.5% Blue status), FX 3%/1.5%/0% by status, no issuance or monthly fee. Shakepay announces Base cashback 0.5% from 1 Dec 2026 (modelled with valid_from). Unknown: delivery fee, top-up fee, Shakepay-side ATM fee. Affiliate: data/affiliate/shakepay-referral.json (customer referral CAD 20, no publisher programme). Second read required.",
+      "needs_browser_read": false
+    },
+    {
+      "provider": "Gate",
+      "product": "Gate Card (worldwide, USD)",
+      "status": "validated",
+      "record": "data/cards/gate-card.json",
+      "note": "Validated 2026-11-17 from gate.com help centre: Fees & Limits for AI Elite/Essential/Heritage (20 Jul 2026, governing), Signature Card fee page (5 Jun 2026), Cashback FAQ and Rewards intro (28 Feb 2026), Signature/Orange/Graphite FAQs, and the blog (updated 14 Oct 2026). Contradictions: FX 1.5%/1.7% vs 1% vs 0.40%; ATM 1 USD + 0.65% vs 2% vs absent (left unknown); 'credit card issued by Gate' vs prepaid balance; several card generations. Unknown: country list (none published), KYC documents, ATM, delivery and physical card fees, licensed issuer. Affiliate: data/affiliate/gate-affiliate.json (identified; trading-fee revenue share; application page not reachable). Second read required; browser read of gate.com/referral/affiliate and the application flow's country selector.",
+      "needs_browser_read": true
     }
   ],
   "no_kyc_track": {
@@ -340,7 +356,7 @@
         "claim": "non-reloadable up to $1,000; operator described as FinCEN-registered MSB",
         "issuer_disclosed": true,
         "status": "identified",
-        "note": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; docs.laso.finance and laso.finance pages are no longer returned by web search, so the fetcher cannot reach them (provenance). Needs a browser session to apply the 2026-11-09 rule.",
+        "note": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; docs.laso.finance and laso.finance pages are no longer returned by web search, so the fetcher cannot reach them (provenance). Needs a browser session to apply the 2026-11-09 rule. | 2026-11-17: re-attempted; site:laso.finance returns only third-party pages (Trustpilot, directories, App Store) — official pages still unreachable by the fetcher (provenance). Browser session needed.",
         "needs_browser_read": true
       },
       {
@@ -348,7 +364,7 @@
         "claim": "$350 entry; KYC level 0 per KYCnot.me",
         "issuer_disclosed": true,
         "status": "identified",
-        "note": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; goblincards.com pages are not returned by web search (only trading-card shops), so the fetcher cannot reach them (provenance). Needs a browser session to check whether the terms state a verification stage.",
+        "note": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; goblincards.com pages are not returned by web search (only trading-card shops), so the fetcher cannot reach them (provenance). Needs a browser session to check whether the terms state a verification stage. | 2026-11-17: re-attempted; site:goblincards.com returns no result (only trading-card shops) — official pages still unreachable by the fetcher (provenance). Browser session needed.",
         "needs_browser_read": true
       },
       {
@@ -417,5 +433,5 @@
       }
     ]
   },
-  "updated": "2026-11-16"
+  "updated": "2026-11-17"
 }

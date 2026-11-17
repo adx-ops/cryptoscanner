@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "entries": [
     {
       "provider": "Wirex",
@@ -1268,14 +1268,19 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official affiliate programme (trading-fee revenue share, card not mentioned)",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-16",
       "priority": 4,
       "regions_hint": [
         "IN (directory)"
-      ]
+      ],
+      "record": "data/cards/gate-card.json",
+      "regions": [
+        "worldwide (no official country list; eligibility checked in the application flow)"
+      ],
+      "note": "2026-11-17: validated from gate.com help centre (fee schedules 20 Jul 2026 and 5 Jun 2026, rewards FAQ 28 Feb 2026, product FAQs) and the Oct 2026 blog. Contradictory FX/ATM figures across card generations recorded. Affiliate: data/affiliate/gate-affiliate.json."
     },
     {
       "provider": "KuCoin",
@@ -2148,13 +2153,16 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-11-09",
       "last_seen": "2026-11-16",
       "priority": 4,
       "regions_hint": [
         "IN (directory)"
-      ]
+      ],
+      "needs_browser_read": true,
+      "blocked_reason": "plasbit.com/card: Fees & Limits tables are rendered client-side (tabs) and empty for the fetcher; no separate official fee page indexed. Only official facts readable: USD/EUR cards, top-up min $10 with $0.5 fee, 53 excluded residence countries (incl. US, JP, BR, CN, HK, IL), entity PlasBit Sp z.o.o. / PlasBit Ltd (two names). plasbit.com/affiliate is a card product for media buyers, not a publisher programme.",
+      "note": "2026-11-17: blocked — fee tables unreadable by the fetcher; browser session needed to read the Reloadable/Prepaid/Debit fee and limit tabs, KYC article and card terms."
     },
     {
       "provider": "SafePal",
@@ -2438,15 +2446,20 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "none seen",
-      "status": "identified",
+      "affiliate_hint": "customer referral only (CAD 20), no publisher programme",
+      "status": "validated",
       "first_seen": "2026-11-16",
       "last_seen": "2026-11-16",
       "priority": 4,
       "regions_hint": [
         "CA (directory)"
       ],
-      "discovery_note": "Canada-only per both directories; kkinvesting states no Shakepay referral link exists"
+      "discovery_note": "Canada-only per both directories; kkinvesting states no Shakepay referral link exists",
+      "record": "data/cards/shakepay-card.json",
+      "regions": [
+        "CA"
+      ],
+      "note": "2026-11-17: validated from help.shakepay.com (fees & limits 21 Apr 2026, cashback, reward statuses, how it works, sign-up, verification, Canada-only) and the Visa Prepaid Card Cardholder Agreement (15 Apr 2026). Base cashback announced to drop to 0.5% on 2026-12-01."
     },
     {
       "provider": "Cryptomus",

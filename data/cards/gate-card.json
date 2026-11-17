@@ -1,0 +1,768 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gate-card",
+  "slug": "gate-card",
+  "name": "Gate Card",
+  "brand": "Gate",
+  "provider_id": "gate",
+  "issuer": {
+    "name": "Gate (self-described: \"a Visa credit card issued by Gate\"; licensed issuing entity not named)",
+    "status": "verified",
+    "evidence": [
+      "ev-gate-intro-signature",
+      "ev-gate-faq-orange"
+    ]
+  },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "Card balance in USD, topped up from the Gate account; the top-up converts crypto to USD at a 0.90% fee (initial top-up 10 USDT). Linked to the Gate Pay payment account. Supported top-up assets not listed on the pages read.",
+    "evidence": [
+      "ev-gate-fees-2026-07",
+      "ev-gate-intro-signature"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "gate-card-worldwide-usd",
+      "region_label": "Worldwide (non-restricted countries; list not published)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Gate publishes no country list: the card is \"currently available to users in multiple countries and regions worldwide\" and eligibility is checked in the application flow (a location missing from the selector is not supported). The blog restricts eligibility to \"non-restricted countries or regions\" without naming them. Every country is therefore to confirm.",
+        "evidence": [
+          "ev-gate-intro-signature",
+          "ev-gate-faq-orange",
+          "ev-gate-blog-2026-10"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "stages_note": "Applicants \"complete KYC to obtain your card\" in the web portal or Gate Pay app; documents and KYC level not stated on the pages read.",
+        "evidence": [
+          "ev-gate-faq-orange",
+          "ev-gate-faq-graphite-silver"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "essential",
+          "name": "Essential",
+          "access": {
+            "type": "free",
+            "note": "Card types named on the 20 Jul 2026 fee schedule (AI Elite, Essential, Heritage). What distinguishes them beyond fees and limits is not stated on the pages read; eligibility for each type not stated.",
+            "status": "verified",
+            "evidence": [
+              "ev-gate-fees-2026-07"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card issuance 'free for a limited time' (no end date stated) on the 20 Jul 2026 schedule; the 5 Jun 2026 Signature schedule lists virtual and physical issuance free. Physical card issuance is not priced on the 20 Jul 2026 schedule.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Monthly fee: free (all three card types).",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Inactivity fee: free.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.9,
+              "period": "per_transaction",
+              "conditions": "Top-up (crypto conversion) fee 0.90%, shown at top-up; the initial 10 USDT top-up carries no fee. Both fee schedules agree.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.7,
+              "period": "per_transaction",
+              "conditions": "Foreign exchange fee on non-USD transactions: 1.7% per the 20 Jul 2026 fee schedule (governing). Older/other official pages state 1% (Signature schedule, 5 Jun 2026) and 0.40% (blog 'Classic and Platinum cards', updated 14 Oct 2026).",
+              "status": "contradictory",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06",
+                "ev-gate-blog-2026-10"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Not listed on the 20 Jul 2026 fee schedule for these card types. Other official pages give different figures for other card names: 1 USD + 0.65% (Signature schedule, 5 Jun 2026) and 2% (blog, 14 Oct 2026). Left unknown until the schedule for these cards states it.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 35,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Chargeback 35 USD; reversal 1 USD; refund 2% (20 Jul 2026 schedule). Signature schedule: chargeback 30 USD, replacement card 25 USD.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 5,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "fiat payments / direct fiat-account deductions",
+                "fees, management charges, deposits, withdrawals",
+                "reversed or refunded orders",
+                "financial institution goods/services and bond repayments",
+                "stored-value card purchases or recharges",
+                "foreign currency, non-fiat orders, money orders, account funding, traveller's cheques",
+                "remittances"
+              ],
+              "conditions": "Tier T0 (VIP 0–4, no minimum spend): 1 point per 1 USD, monthly cap 500 points = 5 USDT, single-transaction cap 200 points. 100 points = 1 USDT (fixed); manual redemption from 50 points; payout in USDT or GT; points do not expire.",
+              "description": "Gate Card points, tier T0",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-rewards-faq",
+                "ev-gate-rewards-intro"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 8,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 400,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "fiat payments / direct fiat-account deductions",
+                "fees, management charges, deposits, withdrawals",
+                "reversed or refunded orders",
+                "financial institution goods/services and bond repayments",
+                "stored-value card purchases or recharges",
+                "foreign currency, non-fiat orders, money orders, account funding, traveller's cheques",
+                "remittances"
+              ],
+              "conditions": "Tier T5: 8 points per USD (8%), monthly cap 40,000 points = 400 USDT, single-transaction cap 15,000 points. Requires VIP 13–14 or 15,000 USD monthly card spend; intermediate tiers T1 1% (500 USD/month, cap 50 USDT), T2 2% (3,000; 100), T3 3% (6,000; 150), T4 5% (10,000; 250). Tier reached by spend applies the following calendar month.",
+              "description": "Gate Card points, tier T5 (maximum)",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-rewards-faq",
+                "ev-gate-rewards-intro"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 25000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "25,000 USD per transaction; 150,000 USD daily; 1,000,000 USD monthly and yearly (tiers T0–T5). Increases case by case via support.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "google_pay"
+          ],
+          "mobile_wallets_status": "hypothesis"
+        },
+        {
+          "id": "ai-elite",
+          "name": "AI Elite",
+          "access": {
+            "type": "free",
+            "note": "Card types named on the 20 Jul 2026 fee schedule (AI Elite, Essential, Heritage). What distinguishes them beyond fees and limits is not stated on the pages read; eligibility for each type not stated.",
+            "status": "verified",
+            "evidence": [
+              "ev-gate-fees-2026-07"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card issuance 'free for a limited time' (no end date stated) on the 20 Jul 2026 schedule; the 5 Jun 2026 Signature schedule lists virtual and physical issuance free. Physical card issuance is not priced on the 20 Jul 2026 schedule.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Monthly fee: free (all three card types).",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Inactivity fee: free.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.9,
+              "period": "per_transaction",
+              "conditions": "Top-up (crypto conversion) fee 0.90%, shown at top-up; the initial 10 USDT top-up carries no fee. Both fee schedules agree.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Foreign exchange fee on non-USD transactions: 1.5% per the 20 Jul 2026 fee schedule (governing). Older/other official pages state 1% (Signature schedule, 5 Jun 2026) and 0.40% (blog 'Classic and Platinum cards', updated 14 Oct 2026).",
+              "status": "contradictory",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06",
+                "ev-gate-blog-2026-10"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Not listed on the 20 Jul 2026 fee schedule for these card types. Other official pages give different figures for other card names: 1 USD + 0.65% (Signature schedule, 5 Jun 2026) and 2% (blog, 14 Oct 2026). Left unknown until the schedule for these cards states it.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 35,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Chargeback 35 USD; reversal 1 USD; refund 2% (20 Jul 2026 schedule). Signature schedule: chargeback 30 USD, replacement card 25 USD.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 5,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "fiat payments / direct fiat-account deductions",
+                "fees, management charges, deposits, withdrawals",
+                "reversed or refunded orders",
+                "financial institution goods/services and bond repayments",
+                "stored-value card purchases or recharges",
+                "foreign currency, non-fiat orders, money orders, account funding, traveller's cheques",
+                "remittances"
+              ],
+              "conditions": "Tier T0 (VIP 0–4, no minimum spend): 1 point per 1 USD, monthly cap 500 points = 5 USDT, single-transaction cap 200 points. 100 points = 1 USDT (fixed); manual redemption from 50 points; payout in USDT or GT; points do not expire.",
+              "description": "Gate Card points, tier T0",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-rewards-faq",
+                "ev-gate-rewards-intro"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 8,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 400,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "fiat payments / direct fiat-account deductions",
+                "fees, management charges, deposits, withdrawals",
+                "reversed or refunded orders",
+                "financial institution goods/services and bond repayments",
+                "stored-value card purchases or recharges",
+                "foreign currency, non-fiat orders, money orders, account funding, traveller's cheques",
+                "remittances"
+              ],
+              "conditions": "Tier T5: 8 points per USD (8%), monthly cap 40,000 points = 400 USDT, single-transaction cap 15,000 points. Requires VIP 13–14 or 15,000 USD monthly card spend; intermediate tiers T1 1% (500 USD/month, cap 50 USDT), T2 2% (3,000; 100), T3 3% (6,000; 150), T4 5% (10,000; 250). Tier reached by spend applies the following calendar month.",
+              "description": "Gate Card points, tier T5 (maximum)",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-rewards-faq",
+                "ev-gate-rewards-intro"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 25000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "25,000 USD per transaction; 150,000 USD daily; 1,000,000 USD monthly and yearly (tiers T0–T5). Increases case by case via support.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "google_pay"
+          ],
+          "mobile_wallets_status": "hypothesis"
+        },
+        {
+          "id": "heritage",
+          "name": "Heritage",
+          "access": {
+            "type": "free",
+            "note": "Card types named on the 20 Jul 2026 fee schedule (AI Elite, Essential, Heritage). What distinguishes them beyond fees and limits is not stated on the pages read; eligibility for each type not stated.",
+            "status": "verified",
+            "evidence": [
+              "ev-gate-fees-2026-07"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card issuance 'free for a limited time' (no end date stated) on the 20 Jul 2026 schedule; the 5 Jun 2026 Signature schedule lists virtual and physical issuance free. Physical card issuance is not priced on the 20 Jul 2026 schedule.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Monthly fee: free (all three card types).",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Inactivity fee: free.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.9,
+              "period": "per_transaction",
+              "conditions": "Top-up (crypto conversion) fee 0.90%, shown at top-up; the initial 10 USDT top-up carries no fee. Both fee schedules agree.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Foreign exchange fee on non-USD transactions: 1.5% per the 20 Jul 2026 fee schedule (governing). Older/other official pages state 1% (Signature schedule, 5 Jun 2026) and 0.40% (blog 'Classic and Platinum cards', updated 14 Oct 2026).",
+              "status": "contradictory",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06",
+                "ev-gate-blog-2026-10"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Not listed on the 20 Jul 2026 fee schedule for these card types. Other official pages give different figures for other card names: 1 USD + 0.65% (Signature schedule, 5 Jun 2026) and 2% (blog, 14 Oct 2026). Left unknown until the schedule for these cards states it.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 35,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Chargeback 35 USD; reversal 1 USD; refund 2% (20 Jul 2026 schedule). Signature schedule: chargeback 30 USD, replacement card 25 USD.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07",
+                "ev-gate-fees-signature-2026-06"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 5,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "fiat payments / direct fiat-account deductions",
+                "fees, management charges, deposits, withdrawals",
+                "reversed or refunded orders",
+                "financial institution goods/services and bond repayments",
+                "stored-value card purchases or recharges",
+                "foreign currency, non-fiat orders, money orders, account funding, traveller's cheques",
+                "remittances"
+              ],
+              "conditions": "Tier T0 (VIP 0–4, no minimum spend): 1 point per 1 USD, monthly cap 500 points = 5 USDT, single-transaction cap 200 points. 100 points = 1 USDT (fixed); manual redemption from 50 points; payout in USDT or GT; points do not expire.",
+              "description": "Gate Card points, tier T0",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-rewards-faq",
+                "ev-gate-rewards-intro"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 8,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 400,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "excluded_categories": [
+                "fiat payments / direct fiat-account deductions",
+                "fees, management charges, deposits, withdrawals",
+                "reversed or refunded orders",
+                "financial institution goods/services and bond repayments",
+                "stored-value card purchases or recharges",
+                "foreign currency, non-fiat orders, money orders, account funding, traveller's cheques",
+                "remittances"
+              ],
+              "conditions": "Tier T5: 8 points per USD (8%), monthly cap 40,000 points = 400 USDT, single-transaction cap 15,000 points. Requires VIP 13–14 or 15,000 USD monthly card spend; intermediate tiers T1 1% (500 USD/month, cap 50 USDT), T2 2% (3,000; 100), T3 3% (6,000; 150), T4 5% (10,000; 250). Tier reached by spend applies the following calendar month.",
+              "description": "Gate Card points, tier T5 (maximum)",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-rewards-faq",
+                "ev-gate-rewards-intro"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 80000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "80,000 USD per transaction; no daily, monthly or yearly limit listed.",
+              "status": "verified",
+              "evidence": [
+                "ev-gate-fees-2026-07"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "google_pay"
+          ],
+          "mobile_wallets_status": "hypothesis"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-gate-fees-2026-07",
+      "url": "https://www.gate.com/help/gatecard/gc7/100745",
+      "title": "Gate Card Fees & Limits — AI Elite, Essential, Heritage (help centre, 20 Jul 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "Virtual issuance free for a limited time; monthly and inactivity fees free; top-up 0.90% (initial 10 USDT free); FX non-USD 1.50% AI Elite / 1.70% Essential / 1.50% Heritage; reversal 1 USD; refund 2%; chargeback 35 USD. Limits AI Elite & Essential: 25,000/txn, 150,000/day, 1,000,000/month and /year; Heritage 80,000/txn. ATM, delivery and physical card fees not listed.",
+      "accessed_at": "2026-11-17T05:35:00Z",
+      "effective_from": "2026-07-20",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-gate-fees-signature-2026-06",
+      "url": "https://www.gate.com/help/gatecard/basics/51548",
+      "title": "Gate Card (Signature Card) fees & limits (help centre, 5 Jun 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "Virtual and physical issuance free; crypto conversion 0.90% (≥ 2 USD) or 0.05 USD; FX non-USD 1%; monthly and inactivity free; chargeback 30 USD; replacement 25 USD; ATM 1 USD + 0.65%; monthly spend limits T0/T1 50,000, T2 150,000, T3 400,000, T4 1,500,000 USD.",
+      "accessed_at": "2026-11-17T05:35:00Z",
+      "effective_from": "2026-06-05",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Earlier card generation (\"Signature Card\")"
+      },
+      "verification": "contradictory",
+      "contradiction_note": "FX 1% and ATM 1 USD + 0.65% here vs FX 1.5%/1.7% and no ATM figure on the 20 Jul 2026 schedule, and FX 0.40% / ATM 2% on the Oct 2026 blog. The latest dedicated fee schedule (20 Jul 2026) governs; ATM left unknown."
+    },
+    {
+      "id": "ev-gate-blog-2026-10",
+      "url": "https://www.gate.com/blog/gate-card-digital-asset-visa-5-percent-cashback-global-150-million-merchants",
+      "title": "Gate blog — Gate Card: 5% cashback, 150 million merchants (updated 14 Oct 2026)",
+      "source_type": "help_center",
+      "excerpt": "No issuance, monthly or inactivity fee for virtual and physical cards; crypto conversion 0.90% (≥ 2 USD) or 0.05 USD; \"Foreign exchange fee (non-USD transactions): 0.40% for Classic and Platinum cards\"; \"ATM withdrawals incur a 2% fee\"; points 1–5 per USD, T4 cap 25,000 points = 250 USDT; eligibility \"non-restricted countries or regions\" (unnamed).",
+      "accessed_at": "2026-11-17T05:35:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Marketing page naming yet another card line (Classic/Platinum)"
+      },
+      "verification": "contradictory",
+      "contradiction_note": "Marketing page; its 0.40% FX and 2% ATM figures contradict both dated fee schedules and are not modelled."
+    },
+    {
+      "id": "ev-gate-rewards-faq",
+      "url": "https://www.gate.com/help/gatecard/benefits/49985",
+      "title": "Gate Card Cashback FAQ (help centre, 28 Feb 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Tiers T0–T5: 1/1/2/3/5/8 points per USD (1%–8%), monthly caps 500/5,000/10,000/15,000/25,000/40,000 points (5–400 USDT), single-transaction caps 200–15,000 points; tier = higher of VIP level (0–4, 5–7, 8, 9, 10–12, 13–14) or monthly spend (0/500/3,000/6,000/10,000/15,000 USD), effective next month; 100 points = 1 USDT fixed; min 50 points; payout USDT or GT; points never expire; exclusions listed.",
+      "accessed_at": "2026-11-17T05:35:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-gate-rewards-intro",
+      "url": "https://www.gate.com/help/gatecard/benefits/49984",
+      "title": "Introduction to Gate Card Rewards (help centre, 28 Feb 2026)",
+      "source_type": "help_center",
+      "excerpt": "Same T0–T5 table (multiplier 1x–8x, monthly points caps, cashback caps 5 U–400 U); spend-unlocked tier valid until the end of the next calendar month; VIP 5+ users keep a guaranteed minimum tier; redemption into BTC, ETH, USDT, GT; points settled 2–3 days after the transaction.",
+      "accessed_at": "2026-11-17T05:35:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-gate-intro-signature",
+      "url": "https://www.gate.com/help/gatecard/gc/51550",
+      "title": "Introduction to Gate Card (Signature Card) (help centre, 5 Jun 2026)",
+      "source_type": "help_center",
+      "excerpt": "\"Gate Card is a Visa credit card issued by Gate, directly linked to your Gate Pay payment account\"; virtual and physical types, one card per user; \"available to users in multiple countries and regions worldwide\" (no list; check eligibility in the application); \"obtaining a Gate Card is completely free\", crypto exchange and FX fees may apply.",
+      "accessed_at": "2026-11-17T05:35:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Calls the card a \"credit card\" while the balance sections describe a prepaid/debit balance funded by top-ups; modelled as prepaid (no credit terms published)."
+    },
+    {
+      "id": "ev-gate-faq-orange",
+      "url": "https://www.gate.com/help/gatecard/gc/50887",
+      "title": "FAQ — Gate Card (Orange Card) (help centre, 23 Apr 2026)",
+      "source_type": "help_center",
+      "excerpt": "Applicants \"follow the instructions to complete KYC to obtain your card\"; no country named (\"multiple countries and regions worldwide\"; unsupported if the location is not selectable); \"a Visa credit card issued by Gate\"; ATM withdrawals carry fees and limits (figures in a separate article).",
+      "accessed_at": "2026-11-17T05:35:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-gate-faq-graphite-silver",
+      "url": "https://www.gate.com/help/gatecard/gcd1213/50053",
+      "title": "FAQ — Gate Card (Graphite & Silver Card) (help centre, 3 Mar 2026)",
+      "source_type": "help_center",
+      "excerpt": "KYC required via web portal or Gate Pay app; no country list; \"Visa credit card issued by Gate\"; physical card delivery 15–45 days; \"only supports adding details to Google Pay\" (Apple Pay not mentioned); ATM service fee and limits in a separate article.",
+      "accessed_at": "2026-11-17T05:35:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.gate.com/help/gatecard",
+    "affiliate": {
+      "program_id": "gate-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-17T05:35:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-17T05:55:00Z",
+      "field": "*",
+      "reason": "Initial record from Gate help-centre fee schedules (20 Jul 2026 governing; 5 Jun 2026 Signature), rewards FAQ (28 Feb 2026), product FAQs and the Oct 2026 blog (single read; second read ≥ 24 h required). Gate publishes several card generations (Orange, Graphite & Silver, Signature, Classic/Platinum, AI Elite/Essential/Heritage) with differing fee figures: contradictions recorded, latest dated schedule modelled. Unknown: country list, KYC documents, ATM fee, delivery fee, physical card fee, issuing entity.",
+      "evidence": [
+        "ev-gate-fees-2026-07",
+        "ev-gate-rewards-faq"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Visa card linked to a Gate Pay account, topped up from crypto at 0.90% and spending a USD balance. No issuance or monthly fee; 1.5%–1.7% FX fee on non-USD spend per the latest fee schedule; points cashback from 1% (T0, capped at 5 USDT a month) to 8% (T5, VIP 13–14 or 15,000 USD monthly spend). Gate publishes no country list and its pages disagree on FX and ATM fees.",
+    "good_for": [
+      "Gate users spending mostly in USD who want points redeemable in USDT",
+      "High-volume Gate VIP members (T4/T5 tiers reach 5%–8% with 250–400 USDT monthly caps)"
+    ],
+    "not_for": [
+      "Anyone needing to know in advance whether their country is eligible (no list published)",
+      "Frequent non-USD spending (1.5%–1.7% FX fee on the governing schedule)",
+      "Occasional spenders counting on cashback (T0 cap is 5 USDT a month)"
+    ],
+    "watch_outs": [
+      "Official pages disagree: FX 1.5%/1.7% (fee schedule 20 Jul 2026) vs 1% (Signature schedule) vs 0.40% (blog, Oct 2026); ATM 1 USD + 0.65% vs 2%, absent from the latest schedule — ATM modelled as unknown.",
+      "The card is described as \"issued by Gate\" without naming a licensed issuer; called a \"credit card\" although it works as a prepaid balance.",
+      "Country eligibility is only revealed inside the application flow; KYC document requirements are not published.",
+      "Virtual issuance is \"free for a limited time\" with no end date stated; physical card and delivery fees are not published for the current card types."
+    ]
+  }
+}

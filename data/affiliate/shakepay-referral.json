@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "shakepay-referral",
+  "provider_id": "shakepay",
+  "program_name": "Shakepay 'Refer a friend' (customer referral)",
+  "legal_entity": "Shakepay Inc. (distributor of the card per the cardholder agreement); not restated on the referral page.",
+  "program_url": "https://help.shakepay.com/en/articles/1712111-referral-bonus",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Existing Shakepay account holder sharing the in-app link (Settings > Refer a friend). No publisher, affiliate or media programme is described on shakepay.com, help.shakepay.com or legal.shakepay.com (search 2026-11-17).",
+  "our_status": "identified",
+  "paid_action": "Referred new user completes phone, email and identity verification, funds the account in CAD and buys at least CAD 100 of digital currency.",
+  "validation_conditions": "Bonus credited to both accounts within up to 1 day after the conditions are met (help article).",
+  "commission": {
+    "model_note": "Flat CAD 20 to referrer and CAD 20 to the new user (amount depends on sign-up date; historical table CAD 5–30). Not linked to card orders or card spend.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "Not applicable (one-off bonus per referral)",
+    "method": "Credited to the Shakepay account (asset not named on the page)",
+    "frequency": "Per qualifying referral",
+    "holdbacks_note": "Governed by the Benefits and Rewards Terms (legal.shakepay.com/rewards), not read in this run."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Customer-to-customer programme; commercial use by a comparison site is not addressed on the page read. Terms of Use – Referral Codes at legal.shakepay.com/rewards (not read). Nobody contacted, no application made.",
+  "allowed_countries_note": "Canada only (Shakepay operates exclusively in Canada).",
+  "evidence": [
+    {
+      "url": "https://help.shakepay.com/en/articles/1712111-referral-bonus",
+      "title": "Referral bonus (Shakepay help centre, 3 March 2026)",
+      "accessed_at": "2026-11-17T05:50:00Z",
+      "excerpt": "'you'll each get $20*' when a referred friend verifies, funds in CAD and buys $100 of digital currency; amount depends on sign-up date (table $5–$30); credited within 1 day; link shared from Settings > Refer a friend; terms at legal.shakepay.com/rewards. No publisher programme."
+    }
+  ],
+  "verification": "verified",
+  "notes": "No publisher/affiliate programme found; the card can be listed without monetisation. Directory kkinvesting.io also states no Shakepay referral link exists for publishers (discovery only)."
+}
