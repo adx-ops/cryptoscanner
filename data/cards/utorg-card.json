@@ -239,7 +239,7 @@
       "title": "Utorg Crypto Card — product page",
       "source_type": "pricing_page",
       "excerpt": "'The first non-custodial Crypto Card'; 'zero fees on payments and cross-fiat conversions … for a limited time'; FAQ 'No payment fees, no FX markups, no monthly charges'; 'Up to €30,000' monthly limit; 'Upload your identity documents and pass liveness check'; card 'once verified'; Apple/Google Pay; 29 countries under 'Available for EEA countries' (incl. UA, AT, HU). No issuer or network named.",
-      "accessed_at": "2026-11-16T06:05:00Z",
+      "accessed_at": "2026-11-17T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -254,7 +254,7 @@
       "title": "Utorg — personal (app, card and buy) page",
       "source_type": "pricing_page",
       "excerpt": "'Free Card'; 'virtual Visa card'; 'Zero fees'; 'No bank FX markups, no weekend conversion fees'; 'High monthly limits' (no figure); 'Pass our AI-powered KYC in under 5 minutes'; top-ups in USDC on Ethereum, Polygon, Arbitrum, Solana or BSC; 'The merchant gets local currency, you pay in stablecoins'; 'Cashback coming Soon'; '190+ countries' (platform claim). Issuer not named.",
-      "accessed_at": "2026-11-16T06:06:00Z",
+      "accessed_at": "2026-11-17T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -266,7 +266,7 @@
       "title": "Utorg — buy crypto page (target of the former 'Limits & Fees' URL)",
       "source_type": "help_center",
       "excerpt": "utorg.pro/limits-and-fees/ now 302-redirects here; page is about the on-ramp ('transparent spread plus a processing fee'). KYC 'takes about 2–5 minutes and requires a government ID plus a selfie'. Card: works 'anywhere Visa is accepted'. No card fee schedule.",
-      "accessed_at": "2026-11-16T06:06:00Z",
+      "accessed_at": "2026-11-17T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -278,7 +278,7 @@
       "title": "Utorg Terms of Use (Last Updated 17 September 2026)",
       "source_type": "official_terms",
       "excerpt": "'The Utorg Card service is provided by Chain Valley Sp. z o.o. in collaboration with Wirex Pay, Wirex Limited'; 'UTORG LAB is not the provider of the Utorg Card service'; UTORG LABS HOLDING LTD, Abu Dhabi. Prohibited: 'resident or from the following countries' — 56 territories incl. Austria, Hungary, UK, USA, Singapore, Japan. No card fees/limits; no solicitation ban found.",
-      "accessed_at": "2026-11-16T06:08:00Z",
+      "accessed_at": "2026-11-17T06:33:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -294,8 +294,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-16T06:08:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-17T06:33:00Z",
+    "last_auto_check_at": "2026-11-17T06:33:00Z"
   },
   "changelog": [
     {
@@ -307,6 +307,20 @@
         "ev-utorg-terms"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-17T06:37:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-16T06:08:00Z",
+      "to": "2026-11-17T06:33:00Z",
+      "reason": "Second independent read on 2026-11-17 (24 h 25 min after the first read) of all four evidence pages: every material value confirmed, unchanged. Card page utorg.com/crypto-card: 'Zero fees*' — 'Enjoy zero fees on payments and cross-fiat conversions', footnote '* for a limited time! For more information, contact our support team' with no end date; FAQ 'No payment fees, no FX markups, no monthly charges'; monthly limit 'Up to €30,000'; steps 'Upload your identity documents and pass liveness check', card 'once verified'; Google Pay and Apple Pay; no network or issuer named; 'The first non-custodial Crypto Card'; no cashback; 'Available for EEA countries' list of 29 unique countries (shown twice): Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Ukraine — Ireland and Sweden absent; '190+ countries' platform claim; only date '© UTORG LABS HOLDING LTD 2026'. Personal page: 'Utorg Free Card', 'virtual Visa card', 'Zero fees', 'no bank FX markups, no weekend conversion fees', 'Zero FX fees', 'High monthly limits' without figure, 'Pass our AI-powered KYC in under 5 minutes', USDC on Ethereum, Polygon, Arbitrum, Solana or BSC, merchant gets local currency, 'Cashback coming Soon', '190+ countries', no issuer. Buy page (last updated 30 Jun 2026): KYC 'required under EU AML compliance', 'about 2–5 minutes and requires a government ID plus a selfie', card 'anywhere Visa is accepted', no card fee schedule, on-ramp 'transparent spread plus a processing fee' without figures. Terms of Use (Last Updated 17 Sep 2026): 'The Utorg Card service is provided by Chain Valley Sp. z o.o.' with Wirex Pay, Wirex Limited; 'UTORG LAB is not the provider of the Utorg Card service'; website owner UTORG LABS HOLDING LTD, Abu Dhabi, reg. 000008060; prohibited-countries list identical to the modelled exclusion list (the fetcher counted 55 names this time — Gaza Strip and West Bank listed separately, both mapped to PS — against '56 territories' in the first read's wording; same list, counting difference only), including Austria, Hungary, United Kingdom, United States of America, Singapore, Japan; no card fees or limits; no solicitation ban. Contradiction unchanged: Austria and Hungary listed as available on the card page and prohibited in the Terms (modelled as excluded). NOT published: the validator's publication gate requires verified eligibility — the variant's eligibility status is 'contradictory'. This run never upgrades a field status; David may apply the Wirex/ether.fi mechanism (contradictory → verified with the least favourable reading, AT and HU excluded, contradiction shown on the card page), after which the next second read may publish.",
+      "evidence": [
+        "ev-utorg-card-page",
+        "ev-utorg-personal",
+        "ev-utorg-buy",
+        "ev-utorg-terms"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
