@@ -3,19 +3,19 @@
   "is_demo": false,
   "id": "uphold-affiliate",
   "provider_id": "uphold",
-  "program_name": "Uphold Affiliate Program (official page exists on uphold.com; terms not yet read)",
-  "legal_entity": "Not established (Uphold HQ Inc. (US) / Uphold Europe Limited (UK) operate the card programmes)",
+  "program_name": "Uphold Affiliate Program (official page exists on uphold.com, unreadable to the fetcher) + Uphold Referral Program (personal)",
+  "legal_entity": "Uphold HQ Inc. and Uphold Lithuania UAB (named in the Referral Program Terms); Uphold Europe Limited operates the UK card",
   "program_url": "https://uphold.com/en-gb/products/affiliate",
   "type": "publisher_affiliate",
   "allowed_channels": [
     "unknown"
   ],
-  "application_conditions": "Not read: the official page uphold.com/en-gb/products/affiliate is returned by web search (title only) but the fetcher could not open it in this unattended run (URL provenance). Third-party network listings (FlexOffers, financeads, FMTC) mention an Uphold affiliate programme — discovery only, never evidence.",
+  "application_conditions": "Affiliate page uphold.com/en-gb/products/affiliate: still not readable in an unattended run (web search returns a malformed URL; direct fetch blocked by provenance on 2026-11-13 and 2026-11-17) — needs a browser read. Personal Referral Program (terms last updated 2025-08-05, promotion 2025-01-01 → 2026-12-31): open to verified members over 18 resident in a Referral Country; excludes Uphold's own employees, affiliates and \"advertising or promotional agencies\"; publishers are not mentioned.",
   "our_status": "identified",
-  "paid_action": "Not established.",
-  "validation_conditions": "Not established.",
+  "paid_action": "Referral Program: Qualified Referral = joins via personal link, completes KYC, funds ≥ US$100 and converts ≥ US$100 fiat→crypto within 30 days. US$20 of bitcoin to referrer and referee each. The card is not a qualifying action. Affiliate Program paid action: not established.",
+  "validation_conditions": "Referral Program: all five conditions within 30 days of account opening; max 20 Qualified Referrals per referrer per calendar month; paid within 45 days after month end to the Uphold wallet. Affiliate Program: not established.",
   "commission": {
-    "model_note": "Not established — no official figure read.",
+    "model_note": "Affiliate Program: no official figure read. Referral Program (personal, not a publisher programme): US$20 in bitcoin per Qualified Referral, cap 20/month, \"Not available in Europe\"; US (ex-NY), Puerto Rico and listed Latin American countries only.",
     "status": "unknown"
   },
   "attribution": {
@@ -36,8 +36,15 @@
     "status": "unknown"
   },
   "rules_note": "Nobody contacted, no application made. A browser session must read the official affiliate page (commission model, network, eligible countries, crypto-promotion rules) before this programme can be scored.",
-  "allowed_countries_note": "Not established; the card itself is sold in the US and the UK.",
-  "evidence": [],
-  "verification": "unknown",
-  "notes": "Placeholder created so the card record (data/cards/uphold-card.json) can reference an identified programme. needs_browser_read: the official page could not be fetched (provenance) on 2026-11-13."
+  "allowed_countries_note": "Referral Program: United States (excluding New York), Puerto Rico, Argentina, Bolivia, Brazil, Belize, Chile, Colombia, Costa Rica, Dominican Republic, Ecuador, Guatemala, Guyana, Honduras, Nicaragua, Panama, Peru, Paraguay, Suriname, El Salvador, Uruguay; \"Not available in Europe\". Affiliate Program: not established; the card itself is sold in the US and the UK.",
+  "evidence": [
+    {
+      "url": "https://uphold.com/en-us/legal/uphold-referral-program-terms",
+      "title": "Uphold Referral Program Terms (last updated Aug 5, 2025; promotion Jan 1, 2025 – Dec 31, 2026)",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "US$20 of bitcoin to referrer and referral per Qualified Referral (join via link, KYC, fund ≥ $100, convert ≥ $100 within 30 days); max 20 per month; paid within 45 days after month end; US (ex-NY), Puerto Rico and listed LatAm countries; \"Not available in Europe\"; excludes Uphold advertising/promotional agencies."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Placeholder created 2026-11-13 so the card record can reference an identified programme. 2026-11-17: official Referral Program terms read (personal programme, US/LatAm only, pays on funding+conversion, not on the card). The Affiliate Program page itself still needs_browser_read (unreadable 2026-11-13 and 2026-11-17). Third-party network listings (FlexOffers, financeads, FMTC) remain discovery only."
 }

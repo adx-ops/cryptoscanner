@@ -12,12 +12,12 @@
     "email",
     "unknown"
   ],
-  "application_conditions": "Apply via app/website, complete identity verification, approval. Levels LV1 (0–9 referrals), LV2 (10–29), LV3 (30+), Exclusive for KOLs/affiliates after 100 card activations (blog, 2025-03-28).",
+  "application_conditions": "Apply via app/website, complete identity verification, approval. Affiliate Program is aimed at \"institutions, B2B partners, and professional marketers\"; new affiliates start at the LV1 rate and \"automatically upgrade to Exclusive after successfully inviting 100 card activations\". Referral levels LV1 (0–9 referrals), LV2 (10–29), LV3 (30+); Exclusive for KOLs/Affiliates/Redot Angels who cooperate directly with RedotPay (blog 2025-03-28, confirmed by the Dec 2024 affiliate blog). Help centre (2026-07-26): users \"with a large following can apply for the Partner Program on the Referral page for higher commission rates\".",
   "our_status": "terms_verified",
-  "paid_action": "Card application (instant commission), card activation (one-time), referred users' transactions (monthly, settled after 30 days), Tier-2 10% of referral's commission for 365 days.",
-  "validation_conditions": "Transaction commissions settled after 30 days. Rates per level shown as an image on the blog (unreadable).",
+  "paid_action": "Card Order Commission: percentage of the card fee when a referee orders a virtual or physical card, paid instantly (no commission if the referee used a discount code of 50 % or more). Payment Commission: percentage of the transaction amount on referees' card spend, settled every 30 days. Secondary (Tier-2) Commission: 10 % of the referee's own commission, valid 365 days from the invitee's registration. Tiered levels unlock higher rates.",
+  "validation_conditions": "Transaction commissions settled every 30 days. Refunded card purchases: the related commission is deducted from the balance. Referral codes must be entered at registration (cannot be added later). Rates per level are shown only as an image on the blogs (unreadable to the fetcher).",
   "commission": {
-    "model_note": "'Up to 40% commission' headline; card activation and application commissions amounts not published in text; transaction commission % not published.",
+    "model_note": "'Up to 40% commission' headline (landing page, read 2026-10-28; landing page unreadable to the fetcher on 2026-11-17 — provenance). Card-order and payment commission percentages per level still only in images; no figure in any official text. 2026-11-17 re-read of the official blogs and help centre confirms the structure (card order / payment / 10 % secondary for 365 days / levels), not the rates.",
     "status": "hypothesis"
   },
   "attribution": {
@@ -34,7 +34,7 @@
     "threshold": "not stated",
     "method": "not stated (likely in-app balance)",
     "frequency": "application commissions instant; transaction earnings monthly",
-    "holdbacks_note": "30-day settlement"
+    "holdbacks_note": "30-day settlement of payment commissions; refund → commission deducted; card orders with a ≥ 50 % discount code earn nothing."
   },
   "reporting": {
     "dashboard": true,
@@ -57,8 +57,26 @@
       "title": "Four reward programs (blog, 2025-03-28)",
       "accessed_at": "2026-10-28T12:10:00Z",
       "excerpt": "Referral (anyone), KOL, Affiliate (institutions/marketers, tracking links + dashboard), Redot Angels; levels LV1–LV3 + Exclusive after 100 activations; Tier-2 10% for 365 days."
+    },
+    {
+      "url": "https://www.redotpay.com/blog/maximize-your-earnings-exploring-redotpays-four-reward-programs",
+      "title": "Four reward programs (blog, 2025-03-28) — re-read 2026-11-17",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "Affiliate Program for institutions, B2B partners and professional marketers; multiple referral links; real-time dashboard (clicks, conversions, commissions); Lv1 start, Exclusive after 100 card activations; Tier-2 10 % valid 365 days from the invitee's registration; rates only in an image."
+    },
+    {
+      "url": "https://www.redotpay.com/jp/blog/redotpay-affiliate-program",
+      "title": "RedotPay Affiliate Program (blog, 2024-12-23, JP locale)",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "Card activation: one-time immediate commission; transaction commission settled after 30 days; Tier-2 10 %; levels Exclusive / LV1 0–9 / LV2 10–29 / LV3 30+; commission table only as an image."
+    },
+    {
+      "url": "https://helpcenter.redotpay.com/en/articles/10339296-invite-friends-get-rewards",
+      "title": "Invite Friends, Get Rewards (help centre, 2026-07-26)",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "USDT rewards; Card Order Commission (percentage of the card fee, paid instantly), Payment Commission (percentage of transaction amount, settled every 30 days), Secondary Commission 10 %; no commission if a ≥ 50 % discount code was used; refunds deducted; Partner Program for large followings; no rates stated."
     }
   ],
   "verification": "verified",
-  "notes": "Strongest card-order-based programme found so far: pays on card application/activation, not only on trading. Rates unknown until inside the dashboard. Requires David's own KYC with RedotPay to join."
+  "notes": "Strongest card-order-based programme found so far: pays on card order/activation and card spend, not on trading. Rates unknown until inside the dashboard. Requires David's own KYC with RedotPay to join. 2026-11-17: structure re-confirmed from three official pages (two blogs + help centre); the /affiliates landing page could not be re-fetched (provenance) so the \"up to 40 %\" headline is unverified since 2026-10-28; still no numeric rate in text anywhere."
 }
