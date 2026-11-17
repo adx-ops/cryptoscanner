@@ -10,7 +10,7 @@
     "website",
     "unknown"
   ],
-  "application_conditions": "Apply via the affiliate application on the page. 'We are no longer accepting applications from UK affiliates.' Other eligibility criteria not published.",
+  "application_conditions": "Apply via the affiliate application on the page, \"subject to approval\"; eligibility criteria not published. 2026-10-30 read (EN page): \"We are no longer accepting applications from UK affiliates.\" 2026-11-17 read (JA locale of the same page): no UK statement; footnote: activities in the EU/EEA subject to MiFID may have \"different commission structures and payment schedules\" — contact a Coinbase Affiliate representative.",
   "our_status": "identified",
   "paid_action": "New customers joining Coinbase through the affiliate's promotion ('join' not defined on the page). Coinbase Card is not mentioned as a paid action.",
   "validation_conditions": "Not stated.",
@@ -40,16 +40,22 @@
     "postback": false,
     "status": "hypothesis"
   },
-  "rules_note": "Channels named on the page: linking in articles, creating content, placing ads on your website. Tracking via Impact software and custom deep links. No terms link found on the page; the help-centre programme article was unreadable to the fetcher on 2026-10-30.",
-  "allowed_countries_note": "UK affiliates no longer accepted; no other restriction published.",
+  "rules_note": "Channels named on the page: linking in articles, creating content, placing ads on your website. Tracking via Impact software, custom landing pages, deep links, 20+ customisable reports. No terms link on the page. The help-centre programme article (help.coinbase.com/.../cb-affiliate-program) returned a client error to the fetcher on 2026-10-30 and 2026-11-17 (EN and EN-GB).",
+  "allowed_countries_note": "UK affiliates no longer accepted (EN page, 2026-10-30; not repeated on the JA locale read 2026-11-17). EU/EEA MiFID activities: different commission structure and payment schedule, by arrangement. No other restriction published.",
   "evidence": [
     {
       "url": "https://www.coinbase.com/affiliates",
       "title": "Coinbase Affiliates (official programme page)",
       "accessed_at": "2026-10-30T05:46:30Z",
       "excerpt": "50% of referees' trading fees for 3 months; Impact tracking; PayPal/bank payout; UK applications closed."
+    },
+    {
+      "url": "https://www.coinbase.com/ja/affiliates",
+      "title": "Become a Coinbase affiliate (official programme page, JA locale — EN page not reachable to the fetcher on 2026-11-17)",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "\"Receive 50% of your referrees' trading fees for the first 3 months*\"; * EU/EEA MiFID activities may have different commission structures and payment schedules; Impact tracking, custom landing pages, deep links, 20+ reports; PayPal or bank account in local currency; anyone can apply subject to approval; Coinbase Card not mentioned."
     }
   ],
   "verification": "hypothesis",
-  "notes": "Publisher programme exists but pays on trading fees, not on card issuance. Decision for David: whether a trading-fee programme fits a card comparator. No application made."
+  "notes": "Publisher programme exists but pays on trading fees, not on card issuance. Decision for David: whether a trading-fee programme fits a card comparator. No application made. 2026-11-17: re-read via the JA locale (same content) — 50 % / 3 months, Impact, PayPal/bank confirmed; new: MiFID (EU/EEA) footnote → the commission for EU-based traffic may differ and is only disclosed by a Coinbase representative. UK-closure wording not visible on this locale (unchanged in the record pending an EN read)."
 }

@@ -9,12 +9,12 @@
   "allowed_channels": [
     "unknown"
   ],
-  "application_conditions": "'Open to all users': start from ether.fi/app/cash/affiliate (an ether.fi account is implied); no approval step described. Multiple referral links allowed.",
+  "application_conditions": "\"Open to all users, regardless of sign-up date\" (help centre); start from ether.fi/app/cash/affiliate (an ether.fi account is implied); no approval step described. Official Affiliate Program Terms (effective 2026-04-23): referrer and referred user must be 18+, reside where ether.fi services and the Program are available, complete KYC, and hold an ether.fi Cash vault to be paid. Multiple referral links with custom names/tags allowed. The legacy 1 % Referral Program ended 2026-10-15; the Affiliate Program is now the only referral programme.",
   "our_status": "accepted",
-  "paid_action": "Qualifying referral = sign-up through the link + Cash card activation + $100 or more of personal spending ('Sign-up alone does not qualify'). Card activation and spend are the paid actions, which fits a card comparator.",
-  "validation_conditions": "Referral must activate the Cash card and reach $100+ personal spend. Tier upgrades require both all-time and rolling-90-day referral counts (Tier 2: 50 / 10; Tier 3: 100 / 20; Tier 4: 500 / 50), reviewed monthly.",
+  "paid_action": "Help centre: qualifying referral = sign-up through the link + Cash card activation + ≥ $100 USD eligible personal spending (excluded: ATM withdrawals, cash advances, P2P transfers, currency exchange, gift/stored-value cards, financial/investment transactions, gambling). Terms (2026-04-23): sign-up through the unique link within 90 days of the link being generated, apply for and activate the ether.fi Card, begin qualifying net card purchases within 30 days of activation (excluding fees, credit adjustments, returns, refunds, ATM withdrawals, cash equivalents); a minimum purchase amount \"may\" be set. Card activation and spend are the paid actions, which fits a card comparator.",
+  "validation_conditions": "Referral must activate the Cash card and reach $100+ eligible personal spend (help centre; the terms say \"begin qualifying purchases within 30 days of activation\" and reserve a minimum). Rewards credited after transactions settle; refunded/ineligible transactions do not count. Tier upgrades require both all-time and rolling-90-day referral counts (Tier 2: 50 / 10; Tier 3: 100 / 20; Tier 4: 500 / 50), recalculated monthly from the month of the first qualifying referral. A month's rewards must exceed $1 to be distributed.",
   "commission": {
-    "model_note": "Tiered hybrid: new-member bonus $10 / $15 / $20 / $20 and high-spender bonus $15 / $20 / $25 / $25 per qualifying referral (Tier 1–4); 0.1–0.3% cashback on referral spending; 20–25% physical-card commission; 50% card-fee commission; 5–12.5% Liquid and staked yield revenue share; 20% second-degree revenue share from Tier 2.",
+    "model_note": "Tiered hybrid (help centre table, re-read 2026-11-17): new-member bonus $10 / $15 / $20 / $20 and high-spender bonus $15 / $20 / $25 / $25 per qualifying referral (Tier 1–4); cashback on referral spending 0.1 % / 0.2 % / 0.25 % / 0.3 %; physical-card commission 20 / 20 / 20 / 25 %; card-fee commission 50 % all tiers; Liquid and staked yield revenue share 5 / 7.5 / 10 / 12.5 %; 20 % second-degree revshare from Tier 2. \"No cap on the number of people you can refer or on how long you keep earning.\" The official Terms state no rate or amount themselves.",
     "amount": 10,
     "currency": "USD",
     "tiers_note": "Tier 1 figures recorded as the base (amount = new-member bonus). Page's '$867,000' figure is a projection for 500 referrals/month, stated as an estimate.",
@@ -27,13 +27,15 @@
   },
   "attribution": {
     "mechanism": "tracking_link",
-    "window_days": "unknown",
+    "window_days": 90,
     "status": "verified"
   },
   "payout": {
-    "threshold": "not stated",
-    "method": "USDC 'directly into your Vault with Cash'",
-    "frequency": "15th of the following month"
+    "threshold": "> $1 per month (Terms, 2026-04-23)",
+    "method": "USDC (or another supported asset) \"directly into your Vault with Cash\" — an ether.fi Cash vault is required",
+    "frequency": "Monthly, in the following calendar month; help centre: by midnight Central Time on the 15th of the following month",
+    "holdbacks_note": "ether.fi may delay or withhold payment while verifying eligibility or investigating suspected fraud/abuse, and may \"withhold, reverse, or reclaim any rewards earned in violation of these terms\". Taxes are the participant's responsibility (Form 1099-MISC may be issued).",
+    "cancellation_note": "ether.fi may modify or terminate the Program at any time; continued participation after changes constitutes acceptance."
   },
   "reporting": {
     "dashboard": true,
@@ -42,16 +44,28 @@
     "postback": false,
     "status": "verified"
   },
-  "rules_note": "Page links the general Terms of Use (etherfi.gitbook.io) and says 'Additional program rules may apply'; no affiliate-specific agreement found. 'Products may not be available in all jurisdictions.' Payout requires an ether.fi Vault/Cash account (on-chain USDC), which is a payout-destination decision for David. 2026-11-07: David's referral link https://www.ether.fi/@6fe89e3c (ether.fi account holder) activated. Programme page re-read 2026-11-07: qualifying referral = $100 eligible card spend; new-member bonus $10–20, high-spender bonus $15–25, 0.1–0.3% of referral spend, physical card commission 20–25%, card fee commission 50%, yield revshare 5–12.5% by tier; paid in USDC to the Vault with Cash on the 15th of the following month. No promotion restrictions stated on the page ('Additional program rules may apply'); used on the website only — no paid ads, no spam.",
-  "allowed_countries_note": "Not stated.",
+  "rules_note": "Official ether.fi Affiliate Program Terms and Conditions (etherfi.gitbook.io, effective April 23, 2026) read for the first time on 2026-11-17 — the record previously relied on the general Terms of Use. Prohibited: self-referrals or multiple accounts; deceptive or misleading marketing; \"posting referral links in paid ads without authorization\"; gaming or farming referral/cashback rewards; bots, scripts or automation to generate sign-ups. Programme limited to jurisdictions where the card is offered and ether.fi is authorised (no list); governing law/arbitration per the ether.fi Terms of Use. \"Additional program rules may apply.\" David's referral link https://www.ether.fi/@6fe89e3c (ether.fi account holder, activated 2026-11-07) is used on the website only — no paid ads, no spam — which is consistent with the terms. The legacy Referral Program ended 2026-10-15.",
+  "allowed_countries_note": "Not listed; participation limited to places where the ether.fi Card is offered and ether.fi is authorised to operate; ether.fi may restrict access by local regulation or risk.",
   "evidence": [
     {
       "url": "https://www.ether.fi/affiliates",
       "title": "ether.fi Affiliate Program (official page)",
       "accessed_at": "2026-11-02T05:52:00Z",
       "excerpt": "Open to all users; qualifying referral = sign-up + card activation + $100 spend; tiered bonuses $10–$25, 50% card-fee commission, 20–25% physical-card commission, yield rev share; USDC payout on the 15th of the following month."
+    },
+    {
+      "url": "https://etherfi.gitbook.io/etherfi/ether.fi-legal/ether.fi-affiliate-program-terms-and-conditions",
+      "title": "ether.fi Affiliate Program Terms and Conditions (Effective Date: April 23, 2026)",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "18+, KYC, eligible jurisdiction; sign-up via unique link within 90 days of link generation, activate the ether.fi Card, begin qualifying purchases within 30 days; net purchases exclude fees/refunds/ATM/cash equivalents; paid monthly in USDC to the Cash vault, > $1 threshold; no paid ads without authorisation, no self-referrals, bots or farming; clawback rights; 1099-MISC possible; no rates stated."
+    },
+    {
+      "url": "https://help.ether.fi/en/articles/304984-referral-program",
+      "title": "Affiliate Program (help centre) — legacy Referral Program ended October 15, 2026",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "Open to all; qualifying = sign-up + card activation + ≥ $100 eligible spend; tiers 1–4: new-member bonus $10–20, high-spender bonus $15–25, 2nd-degree 20 % from Tier 2, spend cashback 0.1–0.3 %, physical card 20–25 %, card fee 50 %, yield revshare 5–12.5 %; USDC to the Vault with Cash by midnight CT on the 15th of the following month; tiers recalculated monthly; no cap."
     }
   ],
-  "verification": "hypothesis",
-  "notes": "Programme pays on card activation and spend — relevant to the comparator. Terms not fully documented (general Terms of Use only). No application made; payout in USDC to an on-chain Vault needs David's decision. 2026-11-02 (David): USDC payout to an ether.fi Cash Vault accepted, account to be opened in David's own name by David. No application made; applying still needs David's explicit go-ahead."
+  "verification": "verified",
+  "notes": "Programme pays on card activation and spend — relevant to the comparator. 2026-11-02 (David): USDC payout to an ether.fi Cash Vault accepted, account opened by David; link activated 2026-11-07. 2026-11-17: second independent official read (help centre + the dedicated Affiliate Program Terms, effective 2026-04-23) confirms every recorded tier figure; new facts recorded: 90-day link→sign-up window, 30 days activation→first purchase, > $1 monthly threshold, paid-ads prohibition without authorisation, clawback rights, legacy referral programme ended 2026-10-15. Minor wording difference: the help centre requires ≥ $100 spend, the terms only \"begin qualifying purchases within 30 days\" and reserve a minimum — the stricter help-centre value is modelled. The /affiliates marketing page itself could not be fetched this run (provenance). Verification raised to verified."
 }

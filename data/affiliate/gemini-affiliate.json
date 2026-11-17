@@ -38,7 +38,7 @@
     "postback": false,
     "status": "hypothesis"
   },
-  "rules_note": "Performance tracked 'via the Impact platform' (consistent with the Impact sjv.io link seen on crypto.news during discovery). No programme terms document linked from the article. A separate cardholder-only referral programme pays $50 per referred friend (max 50/year, $5,000/year) — not usable by a publisher.",
+  "rules_note": "Performance tracked \"via the Impact platform\". No programme terms document linked from the article (confirmed 2026-11-17). Cardholder-only Credit Card referral programme: $50 referrer / $50 referee, $250 bonus at the 5th referral within a rolling 12 months, max 50 referrals and $5,000 per calendar year; \"Gemini Credit Card marketing affiliates, those who promote the Gemini Credit Card\" are not eligible; each individual may earn under either the Credit Card or the Exchange referral programme, not both. Exchange Referral Rewards Program (page dated 2026-01-20, offer from 2025-11-24): Recruit tier only (Icon/Legend revenue-share tiers discontinued), $50 / €20 / AUD 50 to each side after the referee trades ≥ 100 within 30 days, paid at day 32, cap $1,500/€1,500/AUD 1,500 per referrer; influencers may ask for \"a specialized influencer arrangement\" via affiliates@gemini.com; the credit card is not included. A FlexOffers listing of a \"Gemini CreditCard\" programme ($110 on approval, US IPs) is marked \"not currently offering\" — third-party, discovery only.",
   "allowed_countries_note": "Not stated. The credit card itself is US-only.",
   "evidence": [
     {
@@ -52,8 +52,26 @@
       "title": "Gemini Credit Card Referral Program Terms (December 19, 2025)",
       "accessed_at": "2026-11-02T05:49:00Z",
       "excerpt": "Cardholder referral: $50 referrer / $50 referee, $250 bonus at the 5th referral, max 50 referrals and $5,000 per year; 'Gemini Credit Card marketing affiliates are not eligible to participate'."
+    },
+    {
+      "url": "https://support.gemini.com/hc/en-us/articles/360048537792-Does-Gemini-have-an-Affiliate-program",
+      "title": "Does Gemini have an Affiliate program? (support centre) — re-read 2026-11-17",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "\"For every new user who places a trade, you'll earn a flat rate of $25 per converted account\"; Impact tracking; audiences: influencers/creators/community leaders, Gemini users, aligned organisations; paid in the affiliate's chosen currency; no payout schedule, threshold, terms link or date; credit card not mentioned. All recorded values confirmed."
+    },
+    {
+      "url": "https://gemini.com/legal/credit-card-referral-program-terms",
+      "title": "Gemini Credit Card Referral Program Terms (December 19, 2025) — re-read 2026-11-17",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "$50 referrer / $50 referee per eligible referral, up to 50 per calendar year; $250 bonus at the 5th referral (rolling 12 months); $5,000 annual max; marketing affiliates not eligible; self-referrals prohibited; either Credit Card or Exchange referral programme, not both. Unchanged."
+    },
+    {
+      "url": "https://www.gemini.com/en-AU/legal/gemini-referral-rewards-program-terms",
+      "title": "Gemini Referral Rewards Program Terms (Exchange; page dated January 20, 2026; offer from November 24, 2025)",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "Recruit tier only; Icon and Legend revenue-share tiers discontinued for new referrals; referee must trade ≥ USD/EUR/AUD 100 within 30 days; USD 50 / EUR 20 / AUD 50 each side, paid 32 days after sign-up; cap USD/EUR/AUD 1,500 per referrer; influencer arrangements via affiliates@gemini.com; credit card not included."
     }
   ],
-  "verification": "hypothesis",
-  "notes": "Publisher programme exists (CPA on trading accounts) but does not pay on the credit card. Decision for David: whether a US-only trading CPA fits the comparator at all. No application made."
+  "verification": "verified",
+  "notes": "Publisher programme exists (CPA on trading accounts) but does not pay on the credit card. Decision for David: whether a US-only trading CPA fits the comparator at all. No application made. 2026-11-17: second read of both official pages — every recorded value confirmed, no change; the Exchange referral terms read for the first time (personal programme, capped, card excluded). Verification raised from hypothesis to verified for the recorded commission; attribution window still unknown."
 }

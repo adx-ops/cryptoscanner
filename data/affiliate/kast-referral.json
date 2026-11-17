@@ -3,30 +3,35 @@
   "is_demo": false,
   "id": "kast-referral",
   "provider_id": "kast",
-  "program_name": "KAST referral codes (personal)",
-  "program_url": "https://www.kast.xyz/",
-  "type": "personal_referral",
+  "program_name": "KAST Affiliate & Referral Program (official terms effective 2026-05-08)",
+  "program_url": "https://www.kast.xyz/legal/kast-affiliate-referral-program-terms-conditions",
+  "type": "publisher_affiliate",
   "allowed_channels": [
+    "website",
+    "social",
     "unknown"
   ],
-  "application_conditions": "Referral codes are given to KAST users; no publisher/affiliate programme page found on kast.xyz or its help centre (search 2026-10-28). The Awin 'KastKing' listing is a fishing-gear brand, not KAST.",
+  "application_conditions": "Two programmes under one set of terms (effective 2026-05-08). Affiliate Program: registration must be \"expressly approved by the Company\" at its sole discretion; participants must be registered KAST users in good standing with completed identity verification; one Affiliate Account per participant; sub-affiliate structure exists. Referral Program: any eligible KAST user, by sharing a Referral Code, link or QR code (app: Home > Earn); described in the May 2026 blog as \"cash referral rewards for normal, non-affiliate users across all KAST tiers\".",
   "our_status": "identified",
-  "paid_action": "Unknown; third-party pages mention a $10 sign-up bonus for the referee.",
+  "paid_action": "Affiliate Program: Affiliate Clients register through an Affiliate Link/Code and meet criteria KAST specifies; commission amounts \"set out on the relevant product pages\" (not public). Referral Program: referee completes KYC and reaches card-spend milestones within 45 days of KYC approval — $50 at $600 cumulative eligible spend, a further $50 at the next +$1,000 step (up to $100 per referred user); +$100 if the referee buys Premium, +$1,000 if Private (stackable). Rewards credited to the Cash Rewards balance, 14-day time lock; pro-rata clawback on refunds; no referral cap. Amounts \"may vary by country\".",
   "commission": {
-    "model_note": "Not published.",
-    "status": "unknown"
+    "model_note": "Referral Program (personal, non-affiliate): $50 + $50 per referee on spend milestones ($600, then +$1,000), $100 Premium / $1,000 Private upgrade bonuses — official blog 2026-05-05 (page modified 2026-10-22). Affiliate Program: amounts and rates not published (\"set out on the relevant product pages\"); no revenue share stated in public text.",
+    "amount": 50,
+    "currency": "USD",
+    "tiers_note": "amount = first referral milestone ($600 spend). Affiliate-track rates unknown; sub-affiliate commissions follow a structure on the Platform.",
+    "status": "verified"
   },
   "attribution": {
     "mechanism": "referral_code",
-    "window_days": "unknown",
-    "status": "unknown"
+    "window_days": 45,
+    "status": "verified"
   },
   "reporting": {
-    "dashboard": false,
+    "dashboard": true,
     "export": false,
     "api": false,
     "postback": false,
-    "status": "unknown"
+    "status": "hypothesis"
   },
   "evidence": [
     {
@@ -34,9 +39,30 @@
       "title": "KAST landing page",
       "accessed_at": "2026-10-28T12:10:00Z",
       "excerpt": "No affiliate/partner section found in the extracted text."
+    },
+    {
+      "url": "https://www.kast.xyz/legal/kast-affiliate-referral-program-terms-conditions",
+      "title": "KAST Affiliate & Referral Program Terms and Conditions (effective May 8, 2026)",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "Affiliate Program requires express approval by the Company; Referral Program open to eligible users; referrals must generate eligible spend within 45 days of KYC approval; amounts \"set out on the relevant product pages\"; clawbacks, set-off, no commissions after termination for breach; disputes per KAST Terms of Service."
+    },
+    {
+      "url": "https://www.kast.xyz/blog/refer-friends-earn-cash-how-kast-referral-rewards-work",
+      "title": "Refer Friends, Earn Cash: How KAST Referral Rewards Work (blog, 2026-05-05; modified 2026-10-22)",
+      "accessed_at": "2026-11-17T04:45:00Z",
+      "excerpt": "\"cash referral rewards for normal, non-affiliate users across all KAST tiers\"; $50 at $600 spend + $50 at +$1,000 within 45 days of KYC; $100 Premium / $1,000 Private upgrade bonuses; Cash Rewards balance with 14-day lock; pro-rata clawback on refunds; no referral cap; amounts may vary by country."
     }
   ],
-  "verification": "hypothesis",
-  "notes": "Contact KAST for a publisher programme once the site exists; no outreach without David's instruction.",
-  "rules_note": "Referral link supplied by David (account holder) on 2026-11-07. KAST referral terms not yet read — must be read before the link is shown (card not published anyway). Pending link: https://app.kast.xyz/referral/X64PANZE"
+  "verification": "verified",
+  "notes": "2026-11-17: official Affiliate & Referral Program terms found (effective 2026-05-08) — KAST now runs an approval-based Affiliate Program alongside the personal Referral Program; type changed personal_referral → publisher_affiliate, our_status unchanged (identified). Affiliate rates are not public (shown on product pages after approval). Decision for David: whether to register for the KAST Affiliate Program (requires his own KAST account, KYC and KAST approval); until then his personal referral link stays unused. No outreach made.",
+  "rules_note": "Terms prohibit: promoting third-party products in connection with the Programs, unsolicited mass communications/spam, redirecting users away from the Platform, misusing links or codes, charging referred users a fee, multiple Affiliate Accounts, self-referral/fake accounts, confusing use of KAST trademarks. Paid ads and brand-keyword bidding are not expressly mentioned. Restricted jurisdictions: residents of jurisdictions where KAST has prohibited or restricted access (no list). Governing law/disputes per KAST Terms of Service (arbitration, class-action waiver). Referral link supplied by David (account holder) on 2026-11-07, not shown anywhere (card not published): https://app.kast.xyz/referral/X64PANZE — it is a personal Referral Program link, not an approved Affiliate link.",
+  "legal_entity": "KAST Tech and its affiliates (as named in the Affiliate & Referral Program Terms)",
+  "validation_conditions": "Referral: spend milestones must be met within 45 days of KYC approval; aggregate purchases count; 14-day lock before redeemable; refunded transactions clawed back pro-rata (balance can go negative). Affiliate: tracking-report discrepancies must be raised within ten business days or the Company's records stand. Both: new users only, no self-referral or fake accounts.",
+  "payout": {
+    "threshold": "Not stated (affiliate: form, currency and frequency \"set by the Company on the Platform\")",
+    "method": "Referral: Cash Rewards balance in the KAST app (14-day lock). Affiliate: on-platform, not detailed.",
+    "frequency": "Referral: triggered at milestone, redeemable after 14 days. Affiliate: not stated.",
+    "holdbacks_note": "Clawback on refunds (pro-rata); Company may withhold, adjust or reclaim commissions on suspected abuse and set off against future payments; no commissions owed after termination for breach or fraud."
+  },
+  "allowed_countries_note": "Not listed; participants may not be connected to a jurisdiction where KAST restricts access; referral amounts \"may vary by country\"."
 }
