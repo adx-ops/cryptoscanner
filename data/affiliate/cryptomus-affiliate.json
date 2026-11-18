@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "cryptomus-affiliate",
+  "provider_id": "cryptomus",
+  "program_name": "Cryptomus Affiliate Program (publisher) and Referral Program (customer)",
+  "legal_entity": "Not disclosed — the affiliate page, the Terms of Use (17 Aug 2026) and the AML policy name only 'Cryptomus'.",
+  "program_url": "https://cryptomus.com/affiliate",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Affiliate types listed: Merchants, Influencers, Media, Anyone; 'We are open to partnering with anyone who has more than 5,000 subscribers'; applicants are moderated ('We carefully review the content and activity of each potential partner'). Customer referral programme available to any account via a referral code in account settings.",
+  "our_status": "identified",
+  "paid_action": "Referred users' fees: 30% of the payment (gateway) commission paid by the referral; trading: 40% of the fees paid by direct referrals and 5% of second-level referrals' fees. Nothing is stated for card issuance or card top-up fees.",
+  "validation_conditions": "Not stated on the pages read.",
+  "commission": {
+    "model_note": "Revenue share on referred users' fees: 30% of payment commissions; 40% (level 1) / 5% (level 2) of trade fees. The FAQ adds that after USD 5,000 of total turnover the rate can be 'up to 25% for the next 30 days' and then decreases every 30 days according to a 'personal plan' (customer referral programme). The 25%-of-card-top-up-fee rate described by a directory (dailytrust) does not appear on any official page read.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Not stated (asset not named)",
+    "frequency": "'Partner payments for referrals arrive daily'",
+    "holdbacks_note": "Special bonuses negotiated individually with a manager; commission plan 'depends on the type of project'."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "No affiliate-specific terms linked (footer links to the general Terms of Use). Fee-share model on payment and trading fees — no card-related commission published. Nobody contacted, no application made. The card itself is blocked (no dedicated fee schedule, operator/issuer undisclosed) — see data/candidates.json.",
+  "allowed_countries_note": "Not stated. Terms of Use: Cryptomus 'does not serve U.S. citizens or residents'.",
+  "evidence": [
+    {
+      "url": "https://cryptomus.com/affiliate",
+      "title": "Affiliate program — Cryptomus",
+      "accessed_at": "2026-11-18T05:35:00Z",
+      "excerpt": "'Receive 30% of the payment commission paid by your referral'; 'Earn 40% of the fees paid by your direct referrals and 5% of the fees paid by second-level referrals'; 'Partner payments for referrals arrive daily'; open to 'anyone who has more than 5,000 subscribers'; partners moderated; types Merchants, Influencers, Media, Anyone. No legal entity, no cookie window, no card commission."
+    },
+    {
+      "url": "https://cryptomus.com/faq/how-to-take-part-in-the-partner-program",
+      "title": "How to take part in the partner program? (Cryptomus FAQ)",
+      "accessed_at": "2026-11-18T05:40:00Z",
+      "excerpt": "Referral code in account settings; 30% of each referral's payment fees; after USD 5,000 total turnover 'up to 25% for the next 30 days', then the rate drops every 30 days per the personal plan; plan depends on project type (contact a personal manager)."
+    },
+    {
+      "url": "https://cryptomus.com/tos",
+      "title": "Terms of Use — Cryptomus (last updated 17 Aug 2026)",
+      "accessed_at": "2026-11-18T05:38:00Z",
+      "excerpt": "Platform 'governed and maintained by Cryptomus'; governing law 'of the country where the Company is registered' (not named); 'Cryptomus does not serve U.S. citizens or residents'; virtual cards 'issued by the Platform', allowed only after KYC/AML (§9.7)."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Recorded while the Cryptomus Card candidate was blocked (research run 2026-11-18). Useful only if the card is later documented; the programme's published commissions concern payment-gateway and trading fees, not cards."
+}

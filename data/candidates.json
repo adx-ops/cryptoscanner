@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "entries": [
     {
       "provider": "Wirex",
@@ -567,12 +567,14 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "operator_named": null,
+      "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
-      "priority": 4
+      "last_seen": "2026-11-18",
+      "priority": 4,
+      "blocked_reason": "Blocked 2026-11-18: official pages read — fee schedule 'Individual Customer' 101.EUR.C.2026.22 effective 26 May 2026 (zen.com/files/pricing/individual_pricing.pdf; UAB ZEN.COM, EMI supervised by the Bank of Lithuania, reg. 304749651): plans Free 0 / Gold 0.90 / Platinum 6.90 / Pro 6.90 EUR per month; Pro: physical card up to 2 free then 10 EUR, virtual up to 3 free then 5 EUR, currency conversion ZEN Rate + 0.00% incl. outside FX market hours, ATM 800 EUR/month free then 1.50%, digital-currency top-up 0.50%; help-centre articles 'What is a ZEN PRO card' (undated): the legacy Pro plan 'is no longer available' and the ZEN PRO card is 'no longer offered' to Personal accounts on the new Good/Better/Best/ZEN plans (existing cards still work; business clients only); 'What are ZEN subscription plans' (undated) describes Good (free) / Better / Best / ZEN without prices; the Reward Zone article gives Better 2.99, Best 6.99, ZEN 16.99 EUR per month; 'Platinum vs Pro', 'When should I use a ZEN PRO card' and 'Why was my plan changed' still list Pro at 6.90 EUR. Product status for consumers unclear/discontinued (official pages contradict each other on the plan line-up) → no record. The card is a fiat multi-currency Mastercard; the only crypto link is the EUR top-up in BTC/ETH/USDC (min 15 EUR, ZEN.COM UAB customers only; help article says no ZEN fee, fee schedule says 0.50%). Eligibility: 67 account-opening countries listed (help article, incl. EEA, UK, CH, US, CA, AU, JP, SG, IN, UA, TR, AE) vs 57 in 'List of permitted jurisdictions' v1.1 (29 Jun 2023). Candidate 'ZEN Card' (new plans) added for David's decision on scope.",
+      "note": "2026-11-18: blocked — see blocked_reason. Follow-up candidate: zencom-zen-card."
     },
     {
       "provider": "Slash",
@@ -1356,8 +1358,10 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-09",
-      "priority": 4
+      "last_seen": "2026-11-18",
+      "priority": 4,
+      "needs_browser_read": true,
+      "note": "2026-11-18: research attempt — web search returns only directories (cryptocards.so, coininterestrate, opencryptocards), reviews (bitdegree, medium, G2), press (appdevelopermagazine), partner pages (rain.xyz case study 'Rizon taps Rain to launch stablecoin-backed cards', partners.circle.com) and an App Store listing; no official Rizon domain surfaced, so the fetcher cannot reach the operator's pages (provenance). Not blocked: identify the official site (operator, issuer via Rain, fees, countries, KYC, terms) in a browser session."
     },
     {
       "provider": "1inch",
@@ -1468,11 +1472,13 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-18",
       "priority": 4,
       "regions_hint": [
         "UAE (directory)"
-      ]
+      ],
+      "needs_browser_read": true,
+      "note": "2026-11-18: research attempt — web search ('Payy card crypto official site fees', 'payy.link card', 'site:payy.link') returns only directories (cryptocards.so, cryptocardhub, spendnode, polymart), App Store listings (Payy Wallet, Polybase) and a Bankless article; no official Payy domain or fee/terms page surfaced, so the fetcher cannot reach the operator's pages (provenance). Not blocked: locate the official site and read fees, eligibility, KYC and terms in a browser session."
     },
     {
       "provider": "Peanut",
@@ -2470,16 +2476,18 @@
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
-      "operator_named": true,
-      "affiliate_hint": "referral only",
-      "status": "identified",
+      "operator_named": false,
+      "affiliate_hint": "publisher affiliate (official page)",
+      "status": "blocked",
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-18",
       "priority": 3,
       "regions_hint": [
         "IN (directory)"
       ],
-      "discovery_note": "dailytrust describes a referral programme (25% of referral top-up fees) — unverified"
+      "discovery_note": "dailytrust describes a referral programme (25% of referral top-up fees) — unverified",
+      "blocked_reason": "Blocked 2026-11-18: official pages read — cryptomus.com/cards (virtual Visa/Mastercard funded in USDT/USDC, 'Card issuance fee: $4', 'Card top-up fee: 3.2%', 'optional maintenance or inactivity fees (depending on the card type)' without amounts, conversion fees 'may vary', KYC required before issuance, 'most countries worldwide' without a list), Terms of Use (last updated 17 Aug 2026: operator named only as 'Cryptomus', governing law 'of the country where the Company is registered' — entity, jurisdiction and card issuer not named; cards 'issued by the Platform'; 'does not serve U.S. citizens or residents'; KYC with identity + address documents, no thresholds), AML policy (last review 1 Oct 2026: no country list, sanctions regimes only). No dedicated fee schedule, no limits, no country list, operator legal entity and issuer undisclosed → record not written. Affiliate programme recorded: data/affiliate/cryptomus-affiliate.json.",
+      "note": "2026-11-18: blocked — see blocked_reason."
     },
     {
       "provider": "Ezzocard",
@@ -2500,6 +2508,26 @@
         "IN (directory)"
       ],
       "discovery_note": "Prepaid-card reseller; directory names no operator/issuer and says nothing about KYC — likely out of scope unless an operator is disclosed"
+    },
+    {
+      "provider": "ZEN.COM",
+      "product": "ZEN Card (Good / Better / Best / ZEN plans)",
+      "slug": "zencom-zen-card",
+      "seen_in": [
+        "research run 2026-11-18 (official help centre ask.zen.com, while researching zencom-pro-card)"
+      ],
+      "cross_listing_count": 0,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "priority": 0,
+      "regions_hint": [
+        "EEA, UK, CH, US, CA, AU, JP, SG, IN, UA, TR, AE and others (official account-opening list, 67 countries)"
+      ],
+      "discovery_note": "Fiat multi-currency Mastercard (UAB ZEN.COM, Lithuanian EMI) whose EUR balance can be topped up in BTC/ETH/USDC (converted at top-up, min 15 EUR). New plan line-up Good (free) / Better / Best / ZEN replaces Free/Gold/Platinum/Pro per help centre (undated), but the dated fee schedule (26 May 2026) still lists the old plans. DECISION for David: is a fiat card with crypto top-up only (no crypto balance, no crypto cashback) in scope? If yes, research once a fee schedule for the new plans is published. Affiliate: zen.com/promo-code page exists (unread); no publisher programme found."
     }
   ]
 }

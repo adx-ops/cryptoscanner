@@ -306,6 +306,20 @@
       "record": "data/cards/gate-card.json",
       "note": "Validated 2026-11-17 from gate.com help centre: Fees & Limits for AI Elite/Essential/Heritage (20 Jul 2026, governing), Signature Card fee page (5 Jun 2026), Cashback FAQ and Rewards intro (28 Feb 2026), Signature/Orange/Graphite FAQs, and the blog (updated 14 Oct 2026). Contradictions: FX 1.5%/1.7% vs 1% vs 0.40%; ATM 1 USD + 0.65% vs 2% vs absent (left unknown); 'credit card issued by Gate' vs prepaid balance; several card generations. Unknown: country list (none published), KYC documents, ATM, delivery and physical card fees, licensed issuer. Affiliate: data/affiliate/gate-affiliate.json (identified; trading-fee revenue share; application page not reachable). Second read required; browser read of gate.com/referral/affiliate and the application flow's country selector.",
       "needs_browser_read": true
+    },
+    {
+      "provider": "ZEN.COM",
+      "product": "ZEN.COM Pro Card",
+      "status": "blocked",
+      "record": null,
+      "note": "Blocked 2026-11-18: fee schedule 101.EUR.C.2026.22 (26 May 2026) still lists the Pro plan (6.90 EUR/month, 0% conversion, 800 EUR/month free ATM, cards free, 0.50% digital-currency top-up) but the help centre states the legacy Pro plan is no longer available and the ZEN PRO card is no longer offered to Personal accounts (business clients only) since the Good/Better/Best/ZEN line-up (Better 2.99 / Best 6.99 / ZEN 16.99 EUR per month per the Reward Zone article; no dated fee schedule for these plans found). Fiat Mastercard; crypto only as EUR top-up (BTC/ETH/USDC, min 15 EUR, UAB customers only; 'no fee' per help article vs 0.50% per fee schedule). 67 account-opening countries listed. Not a consumer product any more → no record; follow-up candidate zencom-zen-card awaits David's scope decision."
+    },
+    {
+      "provider": "Cryptomus",
+      "product": "Cryptomus Card",
+      "status": "blocked",
+      "record": null,
+      "note": "Blocked 2026-11-18: cryptomus.com/cards publishes $4 issuance and 3.2% top-up (USDT/USDC, virtual Visa/Mastercard, KYC required) but maintenance/inactivity fees are 'optional (depending on the card type)' without amounts, conversion fees 'may vary', no limits, no country list (Terms: US not served; AML: sanctions only); Terms of Use (17 Aug 2026) and AML policy (1 Oct 2026) name no legal entity, jurisdiction or card issuer. Official affiliate programme (cryptomus.com/affiliate: 30% of payment commission, 40%/5% of trade fees, daily payouts, partners with 5,000+ subscribers; nothing for cards) recorded as identified in data/affiliate/cryptomus-affiliate.json. Re-assess if a dedicated card fee/limits page or a named operator appears."
     }
   ],
   "no_kyc_track": {
@@ -413,7 +427,7 @@
         "claim": "pre-verified on purchase; $89/$349 one-time",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: search returns only directories (cardpilled, polymart, cryptocards.money) and X posts; no official Sovrae domain indexed — fetcher cannot reach it. Browser session needed to locate and read official pages.",
+        "note": "2026-11-11: search returns only directories (cardpilled, polymart, cryptocards.money) and X posts; no official Sovrae domain indexed — fetcher cannot reach it. Browser session needed to locate and read official pages. | 2026-11-18: re-attempted; web search ('Sovrae card official site fees terms') returns only polymart.app and unrelated cardholder terms — no official Sovrae domain surfaced (provenance). Browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -421,7 +435,7 @@
         "claim": "email-only onboarding; $50 card",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: no official MaxSwap domain is returned by web search (only cardik/coingape/coincodex directories and press releases), so the fetcher cannot reach the operator's pages (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read card fees, verification stage and terms in a browser session.",
+        "note": "2026-11-11: no official MaxSwap domain is returned by web search (only cardik/coingape/coincodex directories and press releases), so the fetcher cannot reach the operator's pages (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read card fees, verification stage and terms in a browser session. | 2026-11-18: re-attempted; web search ('MaxSwap virtual card official site fees terms') still returns only cardik and unrelated issuers — no official MaxSwap domain surfaced (provenance). Browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -433,5 +447,5 @@
       }
     ]
   },
-  "updated": "2026-11-17"
+  "updated": "2026-11-18"
 }
