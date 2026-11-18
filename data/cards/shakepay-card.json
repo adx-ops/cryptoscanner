@@ -15,7 +15,7 @@
   },
   "network": "visa",
   "category": "prepaid",
-  "record_status": "validated",
+  "record_status": "published",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -253,7 +253,7 @@
       "title": "What are the fees and limits of the Shakepay Card? (help centre)",
       "source_type": "pricing_page",
       "excerpt": "Card free for fully verified accounts, no activation fee or minimum balance; 3% fee on all non-Canadian transactions (Base), 1.5% Bright, 0% Blue; limits CAD 5,000 per transaction and per day, CAD 50,000 per month, not increasable; tap-and-pay CAD 250; issuer Peoples Trust Company under Visa licence. Updated 21 April 2026.",
-      "accessed_at": "2026-11-17T05:40:00Z",
+      "accessed_at": "2026-11-18T06:25:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -270,7 +270,7 @@
       "title": "Shakepay Visa Prepaid Card Cardholder Agreement (last update 15 April 2026)",
       "source_type": "official_terms",
       "excerpt": "Issuer Peoples Trust Company under licence from Visa International; Shakepay Inc. distributor; virtual cards included; one card per person; age of majority; fee table lists only the 3% Foreign Exchange Charge; ATM operator fees outside issuer control; limits: max balance 50,000, load 5,000/txn and /day, POS 5,000/day, ATM 500/txn and 1,000/day, combined 6,000/day; not CDIC-insured.",
-      "accessed_at": "2026-11-17T05:40:00Z",
+      "accessed_at": "2026-11-18T06:26:00Z",
       "effective_from": "2026-04-15",
       "expires_at": null,
       "scope": {
@@ -287,7 +287,7 @@
       "title": "Cashback rewards with the Shakepay Card (help centre)",
       "source_type": "help_center",
       "excerpt": "Cashback paid in bitcoin on every eligible purchase: 1% Base/Bright, 1.5% Blue; amount set by merchant-settled amount and BTC/CAD rate at payout; pending 1–14 days; no rewards on ATM withdrawals, top-ups, bill payments, friend transfers, financial-institution and quasi-cash categories, securities. No cap stated. Dated 11 December 2025.",
-      "accessed_at": "2026-11-17T05:40:00Z",
+      "accessed_at": "2026-11-18T06:27:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -304,7 +304,7 @@
       "title": "What are the Shakepay reward statuses? (help centre)",
       "source_type": "help_center",
       "excerpt": "Base: 1% card cashback, 3% FX. Bright (exchange $100+ or $200+ direct deposits/month): 1%, 1.5% FX. Blue (exchange $1,000+ or $2,000+/month): 1.5%, 0% FX. Status evaluated monthly, kept for the rest of the month and the following month. 'Starting December 1, 2026, base cashback drops to 0.5%'; Bright minimum rises to $200; current benefits until 30 Nov 2026. Undated.",
-      "accessed_at": "2026-11-17T05:45:00Z",
+      "accessed_at": "2026-11-18T06:27:00Z",
       "effective_from": null,
       "expires_at": "2026-11-30",
       "scope": {
@@ -321,7 +321,7 @@
       "title": "How does the Shakepay Card work? (help centre)",
       "source_type": "help_center",
       "excerpt": "Spending comes from the Shakepay CAD balance (Interac e-Transfer top-ups); crypto must be sold for CAD first; 'only available to Canadian residents', individual accounts; virtual card for online + Apple/Google Pay, physical card chip & PIN and Visa ATMs (operator fees may apply); 3% foreign transaction fee; limits 5,000/txn, 5,000/day, 50,000/month. Issuer Peoples Trust Company. Undated.",
-      "accessed_at": "2026-11-17T05:45:00Z",
+      "accessed_at": "2026-11-18T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -337,7 +337,7 @@
       "title": "Shakepay is only available to Canadian residents (help centre)",
       "source_type": "eligibility_page",
       "excerpt": "Shakepay is 'licensed to operate exclusively in Canada'; access limited outside Canada (exchange abroad only if the account was accessed from Canada in the past 90 days and not in a restricted region). No province exclusion, no age stated. Undated.",
-      "accessed_at": "2026-11-17T05:47:00Z",
+      "accessed_at": "2026-11-18T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -353,7 +353,7 @@
       "title": "How do I sign up for the Shakepay Card? (help centre)",
       "source_type": "help_center",
       "excerpt": "Requirements: fully verified Shakepay account, Canadian residency, tax residency in Canada only; eligibility questionnaire, accept the cardholder agreement, then the virtual card is issued. Dated 16 June 2025.",
-      "accessed_at": "2026-11-17T05:47:00Z",
+      "accessed_at": "2026-11-18T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -369,7 +369,7 @@
       "title": "How to verify my account (help centre)",
       "source_type": "help_center",
       "excerpt": "Physical government photo ID (passport, Canadian driver's licence, provincial ID, residence permit card, foreign driver's licence) + video selfie; soft credit-bureau check of name/address/date of birth gives partial verification, photo ID required for full verification; 18+; FINTRAC-registered MSB. Undated.",
-      "accessed_at": "2026-11-17T05:47:00Z",
+      "accessed_at": "2026-11-18T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -389,8 +389,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-17T05:47:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-18T06:30:00Z",
+    "last_auto_check_at": "2026-11-18T06:30:00Z"
   },
   "changelog": [
     {
@@ -403,6 +403,42 @@
         "ev-shakepay-statuses"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-18T06:30:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-17T05:47:00Z",
+      "to": "2026-11-18T06:30:00Z",
+      "reason": "Second read on 2026-11-18 (24 h 38–49 min after the first reads of 2026-11-17 05:40–05:47Z) of all eight evidence pages: every material value confirmed, unchanged. Fees & limits article 5567198 (dated April 21, 2026): card free for fully verified accounts, no activation fee, no minimum balance; foreign transaction fee 3 % Base / 1.5 % Bright / 0 % Blue; CAD 5,000 per transaction and per day, CAD 50,000 per month, limits 'cannot be increased at this time'; tap-and-pay standard CAD 250; issued by Peoples Trust Company pursuant to licence by Visa Int.; no ATM, delivery, top-up or monthly fee row. Cardholder Agreement (last update April 15, 2026): issuer Peoples Trust Company under licence from Visa International, Shakepay distributor; fee table lists only the 3 % Foreign Exchange Charge; ATM operator fees outside issuer control; limits max card balance 50,000, load 5,000 per transaction and per day, POS 5,000 per day, ATM 500 per withdrawal and 1,000 per day, combined daily spend + cash 6,000, in-store cash 1,000 per day (not modelled); funds not CDIC-insured; age of majority in the province/territory; one card per person; use restricted in certain countries and with certain merchants (not named); virtual cards included; Quebec-specific terms (arbitration and liability carve-outs, Quebec law). Cashback article 5274309 (dated December 11, 2025; page title now 'Cashback rewards with the Shakepay Prepaid Visa* Card', same article id, URL slug changed accordingly): 1 % Base/Bright, 1.5 % Blue, paid only in bitcoin, amount set by the merchant-settled amount and the BTC/CAD rate at payout, pending 1–14 days, no cap, exclusions ATM withdrawals / top-ups / bill payments / Shakepay-a-friend transfers / financial-institution merchandise, services and debt repayment / foreign and non-fiat currency, money orders, account funding, traveller's cheques / securities — identical to the record. Reward statuses article 13067281: Base 1 % cashback 3 % FX (default), Bright 1 % / 1.5 % FX (exchange $100+ or $200+ direct deposits per month), Blue 1.5 % / 0 % FX (exchange $1,000+ or $2,000+ direct deposits); evaluated per calendar month, kept for the rest of the month and the whole following month; benefits 'remain in effect until November 30, 2026'; from December 1, 2026 Base cashback drops to 0.5 % and the Bright exchange minimum rises from $100 to $200 (also announced, not modelled: Blue cash-savings interest 5 % → 3 %, business 5 % → 2 %); no change announced to Bright/Blue cashback or FX. How it works 5274128 ('Updated over 2 weeks ago'): spends the CAD balance funded by Interac e-Transfer, crypto must be sold for CAD first; 'only available to Canadian residents', individual accounts only, consumer card; virtual card online + Apple/Google Pay, physical card chip & PIN and Visa ATMs (operator fees may apply, no amount); 3 % foreign transaction fee; 5,000 / 5,000 / 50,000 limits; issuer Peoples Trust Company. Canada-only article 7030928 (page title now 'Can I use Shakepay while traveling abroad?', same article id): 'licensed to operate exclusively in Canada', 'only accessible to Canadian residents', exchange abroad only if logged in from Canada within 90 days and not in a restricted region; no age, no province exclusion. Sign-up article 5274073 (dated June 16, 2025): fully verified account, Canadian resident, tax resident of Canada only; eligibility questionnaire → cardholder agreement → virtual card issued; no fee. Verification article 1673395 (page title now 'Verifying your Shakepay account'): soft credit-bureau check of name/address/date of birth = partial verification; full verification = physical government photo ID (passport, Canadian driver's licence, provincial ID, residence permit card, foreign driver's licence) + video selfie; 18+; FINTRAC-registered MSB. Observation, not a difference: the phone and email items in kyc.requirements are account-creation basics not restated on this page (no page contradicts them). Three page titles changed since the first read (stored titles kept, no value overwritten).",
+      "evidence": [
+        "ev-shakepay-fees-limits",
+        "ev-shakepay-cardholder-agreement",
+        "ev-shakepay-cashback",
+        "ev-shakepay-statuses",
+        "ev-shakepay-how-it-works",
+        "ev-shakepay-canada-only",
+        "ev-shakepay-signup",
+        "ev-shakepay-verify"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-18T06:30:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "published",
+      "reason": "Second independent read on 2026-11-18: all material values confirmed. Reads of 2026-11-17 (first) and 2026-11-18 (24 h 38–49 min later) of all eight official pages agree on eligibility wording (Canada only, tax residency in Canada only, individual accounts, 18+/age of majority), every fee (issuance none, subscription none, FX 3 % / 1.5 % / 0 % by status; delivery, top-up and Shakepay-side ATM fee stay unknown), every reward (1 % BTC Base/Bright until 30 Nov 2026, 0.5 % Base from 1 Dec 2026, 1.5 % Blue; exclusions; no cap), KYC stage (full verification: photo ID + video selfie), issuer (Peoples Trust Company) and product status (active); all evidence is official; validator passes.",
+      "evidence": [
+        "ev-shakepay-fees-limits",
+        "ev-shakepay-cardholder-agreement",
+        "ev-shakepay-cashback",
+        "ev-shakepay-statuses",
+        "ev-shakepay-how-it-works",
+        "ev-shakepay-canada-only",
+        "ev-shakepay-signup",
+        "ev-shakepay-verify"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
