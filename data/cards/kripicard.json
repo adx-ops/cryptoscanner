@@ -171,7 +171,7 @@
       "title": "Kripicard — Fees & Pricing",
       "source_type": "pricing_page",
       "excerpt": "Card issuance $5 per card; minimum $10 starting balance; funding fee 4% of the amount loaded; processing fee $1; minimum top-up $1; monthly fee $0; authorization 0.00%; FX 0.00%. Limits: unlimited cards; $25,000 per authorization; $25,000 daily; $150,000 monthly; validity 5 years. Visa or Mastercard chosen at issuance; Apple/Google/Samsung Pay, 3DS. 'Issued by licensed partners'; no date.",
-      "accessed_at": "2026-11-17T06:31:00Z",
+      "accessed_at": "2026-11-19T06:26:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -185,7 +185,7 @@
       "title": "Kripicard — Terms and Conditions (Effective Date: June 13, 2026)",
       "source_type": "official_terms",
       "excerpt": "'operated by Uweb3 Management BR'; governed by the laws of Brazil, courts of Rio de Janeiro; ≥ 18 and legal capacity; 'Fees, card limits, and operational limits are disclosed during the purchase or top-up process'; KYT monitoring; banking partners may request 'additional KYC / source-of-funds documentation'; no issuer named; no country list; no territorial or solicitation restriction found.",
-      "accessed_at": "2026-11-17T06:31:00Z",
+      "accessed_at": "2026-11-19T06:26:00Z",
       "effective_from": "2026-06-13",
       "expires_at": null,
       "scope": {},
@@ -197,7 +197,7 @@
       "title": "Kripicard — FAQ",
       "source_type": "help_center",
       "excerpt": "FAQ headings for KYC, fees and limits render without answer text for the fetcher. Footer: 'Kripicard is a financial technology company. Virtual cards are issued by licensed partners in their respective jurisdictions'; 'Virtual Visa and Mastercard BINs funded with crypto'; offices Rio de Janeiro and Dover, DE; links to Referral, Ambassador and Reseller programmes.",
-      "accessed_at": "2026-11-17T06:31:00Z",
+      "accessed_at": "2026-11-19T06:26:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -209,7 +209,7 @@
       "title": "Kripicard — 'Crypto Card Without KYC (2026)' page",
       "source_type": "help_center",
       "excerpt": "'The lowest tier requires only an email address'; 'No passport scan, no proof of address, no selfie'; 'For the basic tier, you only need an email and a crypto wallet'; higher tiers 'unlock bigger limits after standard verification'; selfie/liveness 'Only on tier upgrade'; 'Exact numbers vary by region and partner bank; see the Fees page'. No tier limits, no date.",
-      "accessed_at": "2026-11-17T06:31:00Z",
+      "accessed_at": "2026-11-19T06:26:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -221,7 +221,7 @@
       "title": "Kripicard — 'Instant Crypto Card No KYC (2026)' page",
       "source_type": "help_center",
       "excerpt": "'Kripicard's basic tier opens with an email and a USDT top-up'; 'No passport, no selfie, no proof of address to slow you down at the entry tier'; sign-up 'Email and password, then turn on two-factor authentication'; upgrade 'Only to unlock higher limits'; 'ongoing transaction monitoring at all tiers'; sanctioned jurisdictions denied; 'Global' / '200+' / '190+ countries'. No thresholds, no date.",
-      "accessed_at": "2026-11-17T06:31:00Z",
+      "accessed_at": "2026-11-19T06:26:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -234,7 +234,7 @@
       "title": "Kripicard Affiliate Program — Earn by Referring Crypto Cards",
       "source_type": "affiliate_program",
       "excerpt": "Free to join; tracked referral links; 'reward' when a referred person signs up and uses Kripicard — no amount or percentage stated; 'Earn as referrals stay active'; apply via contact channels; no exaggerated claims, no promises of bypassing laws, disclose the relationship. Last updated June 2026.",
-      "accessed_at": "2026-11-17T06:31:00Z",
+      "accessed_at": "2026-11-19T06:26:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -250,8 +250,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-17T06:31:00Z",
-    "last_auto_check_at": "2026-11-17T06:31:00Z"
+    "last_content_verified_at": "2026-11-19T06:26:00Z",
+    "last_auto_check_at": "2026-11-19T06:26:00Z"
   },
   "changelog": [
     {
@@ -271,6 +271,22 @@
       "from": "2026-11-16T06:09:00Z",
       "to": "2026-11-17T06:31:00Z",
       "reason": "Second independent read on 2026-11-17 (24 h 22 min after the first read) of all six evidence pages: every material value confirmed, unchanged. Fees & Pricing: card issuance $5 per card ('Negotiable for volume or recurring monthly issuance'), minimum $10 starting balance ('Not a fee'), funding fee 4 % of the amount loaded, processing fee $1, minimum top-up $1 after creation, monthly fee $0, authorization fee 0.00 %, FX fee 0.00 %, no ATM or conversion fee stated; limits unlimited cards, $25,000 per authorization, $25,000 per day, $150,000 per month, validity 5 years; Visa or Mastercard chosen at issuance; Apple/Google/Samsung Pay, 3DS; 'Virtual cards are issued by licensed partners in their respective jurisdictions'; 'Availability of products may vary by region'; no KYC tiers; chargeback/refund rates below 15 %; Steam, Uber, OnlyFans banned; only date '© 2026'. Terms and Conditions: effective 13 Jun 2026, operated by Uweb3 Management BR, Brazilian law, Rio de Janeiro courts, ≥ 18, no issuer or bank named ('Banking Partners'), fees and limits 'disclosed during the purchase or top-up process', KYT monitoring, partners may request additional KYC / source-of-funds documentation, no country list, no territorial restriction. FAQ: question headings for KYC, fees and limits still render without answers for the fetcher (unreadable section, unchanged from the first read); footer 'issued by licensed partners', 'not a bank, financial institution, Visa, Mastercard, or payment network', offices Rio de Janeiro and Dover DE, links to Ambassador, Reseller, Referral programmes. 'Crypto Card Without KYC (2026)': 'The lowest tier requires only an email address', 'no passport, no selfie, no proof of address', ID 'to raise limits', selfie/liveness 'Only on tier upgrade', 'conservative daily limits' without a figure, 'Exact numbers vary by region and partner bank; see the Fees page', 'Global' / 'roughly 200 countries', sanctioned jurisdictions excluded without a list. 'Instant Crypto Card No KYC (2026)': basic tier 'opens with an email and a USDT top-up', 'Email and password, then turn on two-factor authentication', upgrade 'Only to unlock higher limits', AML/CFT, sanctions screening and transaction monitoring at all tiers, 'service will be denied' in sanctioned jurisdictions, '200+' vs '190+' countries, no thresholds, legal note calls the model 'Minimal KYC'. Affiliate page: free to join, tracked links, 'a reward' without amount or percentage, recurring 'as referrals stay active', apply via contact channels, rules on accurate claims and disclosure, last updated June 2026. NOT published: the validator's publication gate requires verified eligibility and KYC — both are still 'unknown' (no country list; email-only tier without published thresholds, catalogue rule of 2026-11-09). This run never upgrades a field status or adds evidence; the decision asked on 2026-11-16 (accept an email-only tier without published thresholds as 'not_required_initially', or keep 'unknown') is still open for David, and eligibility needs an official country list.",
+      "evidence": [
+        "ev-kripicard-fees",
+        "ev-kripicard-terms",
+        "ev-kripicard-faq",
+        "ev-kripicard-nokyc-without",
+        "ev-kripicard-nokyc-instant",
+        "ev-kripicard-affiliate"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-19T06:35:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-17T06:31:00Z",
+      "to": "2026-11-19T06:26:00Z",
+      "reason": "Third independent read on 2026-11-19 (47 h 55 min after the second read) of all six evidence pages: every material value confirmed, unchanged. Fees & Pricing: issuance $5 per card ('Negotiable for volume or recurring monthly issuance'), minimum $10 starting balance ('Not a fee'), funding fee 4 % of the amount loaded, processing fee $1, minimum top-up $1 after creation, monthly fee $0, authorization 0.00 %, FX 0.00 %, no ATM or conversion fee stated; unlimited cards, $25,000 per authorization, $25,000 per day, $150,000 per month, validity 5 years; Visa or Mastercard chosen at issuance; chargeback/refund rates below 15 %; Steam, Uber, OnlyFans named; 'Virtual cards are issued by licensed partners in their respective jurisdictions'; no KYC statement; no country list ('may vary by jurisdiction and eligibility'); 'Fees may vary depending on funding method or exchange rate'; only date '© 2026'. Terms and Conditions: effective 13 Jun 2026, Uweb3 Management BR (Rio de Janeiro; a Dover DE address also shown), Brazilian law, Rio de Janeiro courts, ≥ 18 and legal capacity, no issuer named ('Banking Partners'), fees and limits 'disclosed during the purchase or top-up process', KYT monitoring, partners may 'Request additional KYC / source-of-funds documentation before releasing balances', no country list. FAQ: the 16 question headings (incl. 'Do I need to complete KYC verification?', 'What are the fees?') still render without answer text for the fetcher — unreadable section, unchanged; footer 'issued by licensed partners', 'not a bank, financial institution, Visa, Mastercard, or payment network', 'Virtual Visa and Mastercard BINs funded with crypto'. 'Crypto Card Without KYC (2026)': 'The lowest tier requires only an email address', 'No passport scan, no proof of address, no selfie', selfie/liveness 'Only on tier upgrade', 'conservative daily limits' without a figure, 'Exact numbers vary by region and partner bank; see the Fees page', '200+' / 'roughly 200 countries', 'If you are in a sanctioned jurisdiction … service will be denied', AML/CFT and sanctions screening at all tiers. 'Instant Crypto Card No KYC (2026)': basic tier 'opens with an email and a USDT top-up', 'Email and password, then turn on two-factor authentication', ID 'Only to unlock higher limits', 'choose Visa or Mastercard', '200+' vs '190+ countries', no thresholds, no fee figures. Affiliate page: free to join, tracked links, 'a reward' without amount or percentage, 'Earn as referrals stay active', apply via contact channels, rules on accurate claims and disclosure, last updated June 2026. NOT published: the validator's publication gate (dry run this morning) refuses 'kripicard-global eligibility not verified' and 'kripicard-global kyc not verified'. This run never upgrades a field status or adds evidence; the decision asked on 2026-11-16 (accept an email-only tier without published thresholds as 'not_required_initially', or keep 'unknown') is still open for David, and eligibility needs an official country list.",
       "evidence": [
         "ev-kripicard-fees",
         "ev-kripicard-terms",
