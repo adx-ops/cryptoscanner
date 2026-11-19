@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "entries": [
     {
       "provider": "Wirex",
@@ -500,11 +500,15 @@
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "operator_named": null,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official affiliate programme on Impact (press release 19 Nov 2025, from $9 per sale); in-app referral programme",
+      "status": "validated",
       "first_seen": "2026-10-28",
       "last_seen": "2026-10-28",
-      "priority": 2
+      "priority": 0,
+      "regions": [
+        "US"
+      ],
+      "note": "2026-11-19: record data/cards/fold-bitcoin-credit-card.json (validated). US-only Visa credit card issued by Celtic Bank; 1.5% BTC uncapped, Reserve Boost up to 5% on first $5,000/month."
     },
     {
       "provider": "Avalanche",
@@ -994,7 +998,7 @@
       "last_seen": "2026-11-12",
       "priority": -3,
       "needs_browser_read": true,
-      "note": "2026-11-12: official site not returned by web search (directories and project profiles only); fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
+      "note": "2026-11-12: official site not returned by web search (directories and project profiles only); fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-19: retried (WebSearch \"OffGrid Cash card official site fees terms\"): only directories (polymart, bitcoin.com, solanacompass, thegrid, cryptorank, setproduct); no official domain — fetcher cannot reach it. Browser session needed."
     },
     {
       "provider": "Trocador",
@@ -1014,7 +1018,7 @@
       "last_seen": "2026-11-09",
       "priority": -1,
       "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-19: retried (WebSearch \"Trocador prepaid cards virtual card fees trocador.app\"): only directories (cryptocardhub, cryptocards.so, bitcoin.com) and a Substack; trocador.app not returned — fetcher cannot reach it. Browser session needed."
     },
     {
       "provider": "Agora",
@@ -1361,7 +1365,7 @@
       "last_seen": "2026-11-18",
       "priority": 4,
       "needs_browser_read": true,
-      "note": "2026-11-18: research attempt — web search returns only directories (cryptocards.so, coininterestrate, opencryptocards), reviews (bitdegree, medium, G2), press (appdevelopermagazine), partner pages (rain.xyz case study 'Rizon taps Rain to launch stablecoin-backed cards', partners.circle.com) and an App Store listing; no official Rizon domain surfaced, so the fetcher cannot reach the operator's pages (provenance). Not blocked: identify the official site (operator, issuer via Rain, fees, countries, KYC, terms) in a browser session."
+      "note": "2026-11-18: research attempt — web search returns only directories (cryptocards.so, coininterestrate, opencryptocards), reviews (bitdegree, medium, G2), press (appdevelopermagazine), partner pages (rain.xyz case study 'Rizon taps Rain to launch stablecoin-backed cards', partners.circle.com) and an App Store listing; no official Rizon domain surfaced, so the fetcher cannot reach the operator's pages (provenance). Not blocked: identify the official site (operator, issuer via Rain, fees, countries, KYC, terms) in a browser session. | 2026-11-19: skipped by the research run (needs_browser_read set 2026-11-18; no new search)."
     },
     {
       "provider": "1inch",
@@ -1478,7 +1482,7 @@
         "UAE (directory)"
       ],
       "needs_browser_read": true,
-      "note": "2026-11-18: research attempt — web search ('Payy card crypto official site fees', 'payy.link card', 'site:payy.link') returns only directories (cryptocards.so, cryptocardhub, spendnode, polymart), App Store listings (Payy Wallet, Polybase) and a Bankless article; no official Payy domain or fee/terms page surfaced, so the fetcher cannot reach the operator's pages (provenance). Not blocked: locate the official site and read fees, eligibility, KYC and terms in a browser session."
+      "note": "2026-11-18: research attempt — web search ('Payy card crypto official site fees', 'payy.link card', 'site:payy.link') returns only directories (cryptocards.so, cryptocardhub, spendnode, polymart), App Store listings (Payy Wallet, Polybase) and a Bankless article; no official Payy domain or fee/terms page surfaced, so the fetcher cannot reach the operator's pages (provenance). Not blocked: locate the official site and read fees, eligibility, KYC and terms in a browser session. | 2026-11-19: skipped by the research run (needs_browser_read set 2026-11-18; no new search)."
     },
     {
       "provider": "Peanut",
@@ -2411,15 +2415,19 @@
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official publisher programme (coinjar.com/au/affiliates: 50% of trading fees for 2 years)",
+      "status": "validated",
       "first_seen": "2026-11-16",
       "last_seen": "2026-11-16",
-      "priority": 2,
+      "priority": 0,
       "regions_hint": [
         "AU (directory)"
       ],
-      "discovery_note": "Finder AU lists it with an affiliate 'Go to site' link; penchan.co has a ZA page for it (not fetched, robots)"
+      "discovery_note": "Finder AU lists it with an affiliate 'Go to site' link; penchan.co has a ZA page for it (not fetched, robots)",
+      "regions": [
+        "AU"
+      ],
+      "note": "2026-11-19: record data/cards/coinjar-card.json (validated). Card only available in Australia (coinjar.com/au/learn); issuer EML Payment Solutions Limited."
     },
     {
       "provider": "Netcoins",

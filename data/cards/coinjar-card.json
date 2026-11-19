@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.0.0",
+  "id": "coinjar-card",
+  "slug": "coinjar-card",
+  "name": "CoinJar Card",
+  "brand": "CoinJar",
+  "provider_id": "coinjar",
+  "issuer": {
+    "name": "EML Payment Solutions Limited",
+    "status": "verified",
+    "evidence": [
+      "ev-coinjar-card-page-au",
+      "ev-coinjar-card-howto"
+    ]
+  },
+  "network": "mastercard",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "The card 'directly uses the funds in your nominated CoinJar account' (no pre-loading): the user nominates an account (crypto or AUD) held at CoinJar and the balance is spent at the point of sale. Which cryptocurrencies can be nominated is not listed on the pages read.",
+    "evidence": [
+      "ev-coinjar-card-howto",
+      "ev-coinjar-card-page-au"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "coinjar-card-au",
+      "region_label": "Australia",
+      "currency": "AUD",
+      "eligibility": {
+        "residence_allowed": [
+          "AU"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "CoinJar Australia accounts require being 'a citizen of Australia' or holding 'a valid Australian visa'.",
+        "usage_note": "CoinJar's own guide states the card is 'only available in Australia'; the UK, Ireland and US CoinJar sites do not offer the card (the UK card page describes card-funded crypto purchases only). Issued by EML Payment Solutions Limited (AFSL 404131) and distributed by CoinJar Australia Pty Ltd as EML's Corporate Authorised Representative. Usable wherever Mastercard is accepted; ATM withdrawals with the physical card only.",
+        "evidence": [
+          "ev-coinjar-rewards-guide",
+          "ev-coinjar-regions",
+          "ev-coinjar-card-page-au",
+          "ev-coinjar-kyc"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "email"
+        ],
+        "thresholds_note": "Members must be at least 18 years of age. ID verification is required for Australian residents to pay with the CoinJar Card (sign-up article).",
+        "stages_note": "Account: Australian driver licence (valid, showing the current address), Australian passport or international passport; a second document is rarely required; digital licences, photo-ID cards and birth/marriage certificates are not accepted. Selfie/liveness and proof of address are not mentioned on the pages read. Card: ordered from the ID-verified account (digital card first, free physical card optional).",
+        "evidence": [
+          "ev-coinjar-kyc",
+          "ev-coinjar-signup",
+          "ev-coinjar-card-howto"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "CoinJar Card",
+          "access": {
+            "type": "free",
+            "note": "Single tier; no subscription or holding requirement on the pages read.",
+            "status": "verified",
+            "evidence": [
+              "ev-coinjar-fees-limits"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "'Card issuance (digital and physical card)' $0; card replacement $0.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits",
+                "ev-coinjar-card-page-au"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "The physical card is described as 'free' to order; no separate delivery/postage row appears in the fee table, so delivery is not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'CoinJar does not charge any monthly or annual fees.'",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "No load/top-up row: the card spends the nominated CoinJar account directly. Fees to fund that account (deposits mostly free; 2% on card/Apple Pay/Google Pay purchases of crypto) and trading fees/spread are account-level and not modelled here.",
+              "status": "unknown"
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "1% of the transaction amount on in-store and online purchases, charged when the nominated CoinJar balance is spent ('This fee is returned to you as CoinJar Reward Points' — see rewards). Modelled as the spend-time conversion fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits",
+                "ev-coinjar-card-page-au"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2.99,
+              "period": "per_transaction",
+              "conditions": "Transactions in a currency other than Australian dollars are charged at the current Mastercard exchange rate plus a 2.99% foreign exchange fee (card page: '2.99%+'). The 1% transaction fee applies in addition.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits",
+                "ev-coinjar-card-page-au"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "1% of the withdrawal amount (physical card only); minimum withdrawal $20; 'The ATM operator may charge an additional fee.'",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "conditions": "Inactivity fee $0 in the fee table.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 27.5,
+                "currency": "AUD"
+              },
+              "period": "per_transaction",
+              "conditions": "Transaction dispute fee $27.50 per disputed transaction.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits",
+                "ev-coinjar-card-page-au"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "points",
+                "code": "CoinJar Rewards"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "'For each $1 you spend you'll earn 1 CoinJar Rewards point' on eligible purchases. CoinJar describes this as the 1% transaction fee being 'returned to you as CoinJar Reward Points'. Points can cover CoinJar transaction/network fees or be redeemed in the CoinJar Rewards Store (gift cards); no monetary value per point, cap or expiry is published on the pages read, so no cashback percentage is modelled.",
+              "description": "CoinJar Rewards points: 1 point per AUD 1 spent (no published cash value)",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits",
+                "ev-coinjar-card-page-au",
+                "ev-coinjar-rewards-guide"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 5000,
+                "currency": "AUD"
+              },
+              "period": "per_day",
+              "note": "Maximum daily spend $5,000, 'a spend limit inclusive of ATM withdrawals up to $1000'; maximum 25 transactions per day.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 1000,
+                "currency": "AUD"
+              },
+              "period": "per_day",
+              "note": "Maximum $1,000 and 5 withdrawals per day; minimum $20 per withdrawal; physical card only.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinjar-fees-limits"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-coinjar-fees-limits",
+      "url": "https://support.coinjar.com/hc/en-au/articles/4403702613529-CoinJar-Card-fees-and-limits",
+      "title": "CoinJar Card fees and limits (CoinJar support)",
+      "source_type": "pricing_page",
+      "excerpt": "Issuance (digital and physical) $0; replacement $0; 'CoinJar does not charge any monthly or annual fees'; inactivity $0; purchases 1% ('returned to you as CoinJar Reward Points'); non-AUD transactions at Mastercard rate + 2.99%; ATM 1% (physical only, operator fee may apply, min $20); dispute $27.50; daily spend $5,000 incl. ATM up to $1,000; 25 transactions and 5 ATM withdrawals/day. Undated.",
+      "accessed_at": "2026-11-19T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "currency": "AUD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinjar-card-page-au",
+      "url": "https://www.coinjar.com/au/card",
+      "title": "CoinJar Card — product page (Australia)",
+      "source_type": "official_terms",
+      "excerpt": "'Prepaid, reloadable Mastercard issued by EML Payment Solutions Limited' (AFSL 404131); CoinJar Australia Pty Ltd (ABN 75 648 570 807) distributes it as EML's Corporate Authorised Representative (AR 1290193); free physical card; Apple Pay and Google Pay; fees: issuance none, purchases 1% (returned in Rewards points), foreign transaction 2.99%+, ATM 1%, dispute $27.50; 1 Rewards point per $1 spent.",
+      "accessed_at": "2026-11-19T05:41:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "currency": "AUD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinjar-card-howto",
+      "url": "https://support.coinjar.com/hc/en-au/articles/4404139564697",
+      "title": "CoinJar Card — how it works (CoinJar support)",
+      "source_type": "help_center",
+      "excerpt": "Prepaid Mastercard powered by CoinJar; spend the crypto balance via Google Pay/Apple Pay or the physical card; the card 'directly uses the funds in your nominated CoinJar account' (no pre-loading); digital card in a wallet 'within minutes'; 'You can now order a free physical CoinJar Card'; 1 Reward Point per dollar spent; Mastercard Zero Liability with exceptions; issuer EML. Undated.",
+      "accessed_at": "2026-11-19T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "currency": "AUD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinjar-rewards-guide",
+      "url": "https://www.coinjar.com/au/learn/how-to-use-coinjar-rewards",
+      "title": "CoinJar Rewards: A Guide to Earning and Using Points (coinjar.com/au/learn, 12 May 2025, modified 26 June 2026)",
+      "source_type": "help_center",
+      "excerpt": "'Earn 1 point for every $1 spent on eligible purchases' with the CoinJar Card, which is 'only available in Australia'; points also earned on AUD buy/sell trades (not CoinJar Exchange, not fee-free transactions, not crypto-to-crypto swaps); redeemable to skip network fees on transfers or for gift cards (JB Hi-Fi, Airbnb examples); no value per point, minimum redemption or expiry stated.",
+      "accessed_at": "2026-11-19T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "currency": "AUD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinjar-regions",
+      "url": "https://support.coinjar.com/hc/en-au/articles/115004362186",
+      "title": "What regions are supported? (CoinJar support)",
+      "source_type": "eligibility_page",
+      "excerpt": "Australia: 'You must be a citizen of Australia or hold a valid Australian visa'; Ireland: citizen or right to reside; UK: citizens/right to reside plus Guernsey, Jersey, Isle of Man; US: certain states only (separate article); 'Prohibited Jurisdictions' not supported. No statement about where the CoinJar Card is available.",
+      "accessed_at": "2026-11-19T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Account-opening regions; card availability stated separately (Australia only, ev-coinjar-rewards-guide)."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinjar-kyc",
+      "url": "https://support.coinjar.com/hc/en-au/articles/4403569046297-Identity-verification-requirements",
+      "title": "Identity verification requirements (CoinJar support)",
+      "source_type": "help_center",
+      "excerpt": "Australia: citizen of Australia or valid Australian visa; documents: Australian driver licence (valid, showing current address), Australian passport or international passport; a second document rarely needed; expired documents, digital licences, photo-ID cards, birth/marriage certificates not accepted. Selfie and age not mentioned. Ireland and UK sections cover account eligibility.",
+      "accessed_at": "2026-11-19T05:45:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinjar-signup",
+      "url": "https://support.coinjar.com/hc/en-au/articles/360032952831-Signing-up-to-CoinJar-using-the-CoinJar-app",
+      "title": "Signing up to CoinJar using the CoinJar app (CoinJar support)",
+      "source_type": "help_center",
+      "excerpt": "'we do require CoinJar members to be at least eighteen years of age'; for Australian residents, ID verification enables AUD and GBP deposits/withdrawals, cryptocurrency trading 'and payments with the CoinJar Card'. No document list on this page.",
+      "accessed_at": "2026-11-19T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinjar-uk-card-page",
+      "url": "https://www.coinjar.com/uk/card",
+      "title": "CoinJar UK — 'card' page (card-funded crypto purchases, no CoinJar Card)",
+      "source_type": "eligibility_page",
+      "excerpt": "The UK page describes buying cryptocurrency with Visa/Mastercard/Apple Pay/Google Pay and Faster Payments deposits (CoinJar UK Limited, FCA-registered cryptoasset exchange provider; 24-hour cooling-off period for UK residents). No CoinJar Card product is offered or mentioned on this page — used only to confirm the card is not sold in the UK.",
+      "accessed_at": "2026-11-19T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "GB"
+        ],
+        "note": "Negative evidence: no card product in the UK."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.coinjar.com/au/card",
+    "affiliate": {
+      "program_id": "coinjar-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-19T05:46:00Z",
+    "last_auto_check_at": "2026-11-19T05:46:00Z"
+  },
+  "changelog": [
+    {
+      "date": "2026-11-19T05:46:00Z",
+      "field": "*",
+      "reason": "Initial record from CoinJar's official pages (support centre fee/limit article, AU product page, how-it-works article, Rewards guide, supported-regions and identity-verification articles, sign-up article; UK card page as negative evidence). Single read — second read ≥ 24 h later required before publication. Unknown: delivery fee (physical card 'free' but no delivery row), top-up (card spends the nominated account; account funding fees not modelled), monetary value of Rewards points (no cashback % modelled), supported crypto assets for the nominated account, selfie/liveness step. Fee article undated.",
+      "evidence": [
+        "ev-coinjar-fees-limits",
+        "ev-coinjar-card-page-au",
+        "ev-coinjar-card-howto",
+        "ev-coinjar-rewards-guide",
+        "ev-coinjar-regions",
+        "ev-coinjar-kyc",
+        "ev-coinjar-signup",
+        "ev-coinjar-uk-card-page"
+      ],
+      "actor": "research-run"
+    }
+  ],
+  "editorial": {
+    "summary": "Australia-only prepaid Mastercard issued by EML Payment Solutions Limited that spends the balance of a nominated CoinJar account (crypto or AUD) at the point of sale. No issuance, monthly or inactivity fee; every purchase carries a 1% transaction fee that CoinJar says it returns as Rewards points (1 point per AUD 1, no published cash value); 2.99% on non-AUD transactions; 1% on ATM withdrawals.",
+    "good_for": [
+      "Australian CoinJar customers who want to spend crypto directly via Apple Pay or Google Pay without pre-loading a card",
+      "Users who value CoinJar Rewards points (fee credits, gift cards) over cash-equivalent cashback"
+    ],
+    "not_for": [
+      "Anyone outside Australia (card not offered on CoinJar's UK, Irish or US sites)",
+      "Frequent foreign-currency spending (2.99% FX fee plus the 1% transaction fee)",
+      "Users who want a stated cashback percentage: the Rewards point has no published monetary value"
+    ],
+    "watch_outs": [
+      "The 1% transaction fee is charged on every purchase; the 'return' is in Rewards points whose redemption value is not published on the pages read.",
+      "Delivery fee for the physical card and account-funding costs (trading fee/spread, 2% on card-funded crypto purchases) are not modelled — treated as unknown, not free.",
+      "The fee article is undated; the Product Disclosure Statement and Target Market Determination (linked from the product page) were not read in this run."
+    ]
+  }
+}

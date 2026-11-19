@@ -320,6 +320,20 @@
       "status": "blocked",
       "record": null,
       "note": "Blocked 2026-11-18: cryptomus.com/cards publishes $4 issuance and 3.2% top-up (USDT/USDC, virtual Visa/Mastercard, KYC required) but maintenance/inactivity fees are 'optional (depending on the card type)' without amounts, conversion fees 'may vary', no limits, no country list (Terms: US not served; AML: sanctions only); Terms of Use (17 Aug 2026) and AML policy (1 Oct 2026) name no legal entity, jurisdiction or card issuer. Official affiliate programme (cryptomus.com/affiliate: 30% of payment commission, 40%/5% of trade fees, daily payouts, partners with 5,000+ subscribers; nothing for cards) recorded as identified in data/affiliate/cryptomus-affiliate.json. Re-assess if a dedicated card fee/limits page or a named operator appears."
+    },
+    {
+      "provider": "CoinJar",
+      "product": "CoinJar Card (Australia)",
+      "status": "validated",
+      "record": "data/cards/coinjar-card.json",
+      "note": "Validated 2026-11-19 from CoinJar's official pages (support fee/limit article, AU product page, Rewards guide, regions, ID verification, sign-up). Australia only; issuer EML Payment Solutions Limited; prepaid Mastercard spending the nominated CoinJar account at the point of sale; no issuance/monthly/inactivity fee; 1% purchase fee 'returned' as Rewards points (1 point/AUD, no published cash value → non_monetary reward); 2.99% FX; 1% ATM. Unknown: delivery fee, account-funding costs, point value, supported assets, selfie step. Official affiliate programme recorded: data/affiliate/coinjar-affiliate.json (identified). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "Fold",
+      "product": "Fold Bitcoin Credit Card (US)",
+      "status": "validated",
+      "record": "data/cards/fold-bitcoin-credit-card.json",
+      "note": "Validated 2026-11-19 from Fold's official pages (Cardholder Agreement v3 and Rewards Program Terms v3, both effective 2026-10-01; product and pricing pages; support articles). US citizens/permanent residents 18+; issuer Celtic Bank (Visa); unsecured credit, APR 20.49–29.49% variable; no annual or foreign transaction fee; 1.5% BTC uncapped; Reserve Boost 1.75–5% on first $5,000/month with $15k–$100k Fold Reserve. Contradiction: undated support rewards article still describes DCA tiers/$2,000 cap/pay-in-bitcoin bonus — dated terms modelled. Unknown: delivery, cash advance/ATM, KYC documents, state exclusions, mobile wallets. Affiliate programme on Impact recorded: data/affiliate/fold-affiliate.json (identified, hypothesis-level). Second read ≥ 24 h required."
     }
   ],
   "no_kyc_track": {
@@ -355,14 +369,14 @@
         "issuer_disclosed": false,
         "status": "identified",
         "needs_browser_read": true,
-        "note": "2026-11-12: web search (standard and extended) returns only directories (cardpilled, polymart, todey, promp.it, bitcoin.com, cryptocards.money), an X article and project profiles (thegrid.id, solanacompass); no official OffGrid domain indexed — fetcher cannot reach it (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read fees, subscription plans, verification stage and terms in a browser session."
+        "note": "2026-11-12: web search (standard and extended) returns only directories (cardpilled, polymart, todey, promp.it, bitcoin.com, cryptocards.money), an X article and project profiles (thegrid.id, solanacompass); no official OffGrid domain indexed — fetcher cannot reach it (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read fees, subscription plans, verification stage and terms in a browser session. | 2026-11-19: retried — web search still returns only directories/project profiles, no official domain; fetcher cannot reach it."
       },
       {
         "product": "Trocador prepaid cards",
         "claim": "reseller, no document",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: site:trocador.app returns nothing; the prepaid-card section is not reachable by the fetcher (provenance). Browser session needed.",
+        "note": "2026-11-11: site:trocador.app returns nothing; the prepaid-card section is not reachable by the fetcher (provenance). Browser session needed. | 2026-11-19: retried — web search returns only directories and a Substack; trocador.app not indexed for the card section; fetcher cannot reach it.",
         "needs_browser_read": true
       },
       {
@@ -447,5 +461,5 @@
       }
     ]
   },
-  "updated": "2026-11-18"
+  "updated": "2026-11-19"
 }
