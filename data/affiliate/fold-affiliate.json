@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "fold-affiliate",
+  "provider_id": "fold",
+  "program_name": "Fold Affiliate Program (on Impact)",
+  "legal_entity": "Fold Holdings, Inc. (NASDAQ: FLD), per the company press release; the operating entity named on foldapp.com is Fold, Inc.",
+  "program_url": "https://www.globenewswire.com/fr/news-release/2025/11/19/3190880/0/en/Fold-Launches-Affiliate-Program-as-Bitcoin-Gift-Card-Gains-Momentum-on-Holiday-Gift-Guides.html",
+  "business_contact_published": "affiliates@foldapp.com (press release)",
+  "type": "cpa",
+  "allowed_channels": [
+    "website",
+    "social",
+    "unknown"
+  ],
+  "application_conditions": "Join through Fold's programme on the Impact partnership platform (Impact ID 6656510) or by emailing affiliates@foldapp.com; Fold also works with Skimlinks and planned to add press/influencer networks within Impact. No dedicated affiliate page exists on foldapp.com (search 2026-11-19); the only official description is the company press release of 19 November 2025.",
+  "our_status": "identified",
+  "paid_action": "Sales — 'competitive commissions, starting at $9 per sale'; launch focus on the Fold Bitcoin Gift Card, with the Fold Debit Card, custody/exchange and 'the upcoming Fold Bitcoin Credit Card' listed as promotable, the credit card and app installs being added to the affiliate scope in 2026.",
+  "validation_conditions": "Not published (Impact programme terms not readable without an account).",
+  "commission": {
+    "model_note": "'starting at $9 per sale' (press release, Nov 2025). Whether a credit-card approval is a paid action, and at what amount, is not published.",
+    "amount": 9,
+    "currency": "USD",
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "Not published",
+    "method": "Via Impact (not published)",
+    "frequency": "Not published",
+    "holdbacks_note": "Not published."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Separate customer referral programme (support article 46046640789787, 22 Sept 2026): referrer $5 in bitcoin + 100 spins once the referred user spends $25 from the Fold balance; referee $10 in bitcoin on a first Fold Debit Card purchase of $25+; the credit card is not a qualifying action. Nobody contacted, no application made.",
+  "allowed_countries_note": "Fold serves US citizens and permanent residents only; affiliate geography not published.",
+  "evidence": [
+    {
+      "url": "https://www.globenewswire.com/fr/news-release/2025/11/19/3190880/0/en/Fold-Launches-Affiliate-Program-as-Bitcoin-Gift-Card-Gains-Momentum-on-Holiday-Gift-Guides.html",
+      "title": "Fold Launches Affiliate Program as Bitcoin Gift Card Gains Momentum on Holiday Gift Guides (Fold Holdings press release, 19 Nov 2025)",
+      "accessed_at": "2026-11-19T05:56:00Z",
+      "excerpt": "Affiliate programme on Impact (partnership marketing platform), also Skimlinks; 'competitive commissions, starting at $9 per sale'; launch focus Fold Bitcoin Gift Card; also promotable: brand gift cards, Fold Debit Card, custody/exchange and 'the upcoming Fold Bitcoin Credit Card'; scope expands in 2026 to the credit card and app installs; join via Impact (ID 6656510) or affiliates@foldapp.com"
+    },
+    {
+      "url": "https://support.foldapp.com/hc/en-us/articles/46046640789787-How-does-Fold-s-Referral-Program-work",
+      "title": "How does Fold's Referral Program work? (Fold support, 22 Sept 2026)",
+      "accessed_at": "2026-11-19T05:54:00Z",
+      "excerpt": "In-app referral link; referrer earns $5 in bitcoin when the referred user spends $25 from the Fold balance, plus 100 spins and Spin Squad sats; referee earns $10 in bitcoin on a first Fold Debit Card purchase of $25+ and 100 spins; the credit card is not mentioned; no affiliate/publisher programme mentioned."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Official publisher programme confirmed by the issuer's own press release but hosted on Impact; commission for the credit card unknown. Terms must be read on Impact before any application (David's decision). Commissions never influence ranking."
+}

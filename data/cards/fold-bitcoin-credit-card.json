@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fold-bitcoin-credit-card",
+  "slug": "fold-bitcoin-credit-card",
+  "name": "Fold Bitcoin Credit Card",
+  "brand": "Fold",
+  "provider_id": "fold",
+  "issuer": {
+    "name": "Celtic Bank",
+    "status": "verified",
+    "evidence": [
+      "ev-fold-cardholder-agreement",
+      "ev-fold-credit-card-page"
+    ]
+  },
+  "network": "visa",
+  "category": "credit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "unknown",
+    "supported_assets_note": "Unsecured US Visa credit card repaid in USD under a Celtic Bank cardholder agreement (serviced by Fold, Inc., 'powered by Stripe'); purchases must be in US dollars. Rewards are paid in bitcoin to the Fold account (BitGo custody per the product page). No crypto collateral. Distinct from the Fold Prepaid Debit Card (Sutton Bank), whose rewards cannot be earned at the same time. Whether a virtual card number is issued is not stated on the pages read.",
+    "evidence": [
+      "ev-fold-cardholder-agreement",
+      "ev-fold-rewards-terms",
+      "ev-fold-credit-card-page"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": 29.49,
+    "ltv_percent": "unknown",
+    "liquidation_risk": "Unsecured credit card: no crypto collateral and no liquidation. Purchase APR '20.49% to 29.49% variable APR, based on your creditworthiness' (Prime Rate + 13.49% to 22.49%, never above 36%; rates as of 17 September 2026 with Prime at 7.00%); no penalty APR; the account 'may not be eligible for balance transfers or cash advances'; minimum interest charge $1.00; late payment fee up to $30 (capped at the minimum payment due); returned payment fee up to $30. apr_percent records the highest purchase APR of the range. Rewards earned on reversed, refunded or disputed transactions are clawed back.",
+    "evidence": [
+      "ev-fold-cardholder-agreement",
+      "ev-fold-interest-fees",
+      "ev-fold-rewards-terms"
+    ]
+  },
+  "variants": [
+    {
+      "id": "fold-bitcoin-credit-card-us",
+      "region_label": "United States",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "US"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "Fold services are 'intended solely for users who are 18 years of age or older' and who 'are citizens or permanent residents of the United States'.",
+        "usage_note": "US citizens or permanent residents, 18+, with a Fold account; 'Credit is subject to approval' by Celtic Bank after a credit check; no authorised users and no business accounts 'at this time'. State or territory exclusions are not listed on the pages read (the cardholder agreement carries an Alabama-specific schedule). Purchases must be in US dollars.",
+        "evidence": [
+          "ev-fold-who-can-sign-up",
+          "ev-fold-credit-card-page",
+          "ev-fold-how-to-apply",
+          "ev-fold-rewards-terms"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "email",
+          "other"
+        ],
+        "thresholds_note": "18+, US citizen or permanent resident. Credit application reviewed by Celtic Bank ('Credit is subject to approval'); Fold and Celtic Bank may report account activity to consumer reporting agencies.",
+        "stages_note": "Account: email and password create the Fold account; the credit application is made in the app ('Apply now' under 'More ways to earn'). Rewards terms: 'Identity verification is required before withdrawing rewards'. The documents requested for identity verification and for the credit application (e.g. SSN, ID) are not listed on the pages read.",
+        "evidence": [
+          "ev-fold-who-can-sign-up",
+          "ev-fold-how-to-apply",
+          "ev-fold-rewards-terms",
+          "ev-fold-credit-card-page"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Fold Bitcoin Credit Card",
+          "access": {
+            "type": "free",
+            "note": "No annual fee; 'A Fold account is required and may be subject to separate fees' (product page). Boosted reward tiers depend on the Fold Reserve balance, not on a subscription.",
+            "status": "verified",
+            "evidence": [
+              "ev-fold-cardholder-agreement",
+              "ev-fold-credit-card-page"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Cardholder agreement: no annual fee 'for issuing or maintaining the card'.",
+              "status": "verified",
+              "evidence": [
+                "ev-fold-cardholder-agreement"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "No delivery/shipping fee row on the pages read.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Annual fee: none (cardholder agreement v3; pricing page comparison table '$0').",
+              "status": "verified",
+              "evidence": [
+                "ev-fold-cardholder-agreement",
+                "ev-fold-pricing"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "conditions": "Credit line: no top-up. Repayment is made from a bank account or the Fold balance; no fee for standard payments is stated, but a returned payment costs up to $30.",
+              "status": "verified",
+              "evidence": [
+                "ev-fold-cardholder-agreement",
+                "ev-fold-interest-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Foreign transaction fee: none (cardholder agreement v3). Purchases must be made in US dollars for rewards; non-USD purchases are not addressed for rewards.",
+              "status": "verified",
+              "evidence": [
+                "ev-fold-cardholder-agreement"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "The account 'may not be eligible for balance transfers or cash advances'; no cash advance fee or APR is stated. ATM withdrawals earn no rewards.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 30,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Late payment fee up to $30 per occurrence (capped at the minimum payment due); returned payment fee up to $30. Avoidable by paying at least the minimum payment on time.",
+              "status": "verified",
+              "evidence": [
+                "ev-fold-interest-fees",
+                "ev-fold-cardholder-agreement"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1.5,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "excluded_categories": [
+                "ATM withdrawals, account fees, interest, balance transfers, convenience checks",
+                "gift cards, prepaid cards, traveler's checks, precious metals, casino chips, cryptocurrency, lottery tickets and other cash equivalents (incl. reloads)",
+                "gaming-related transactions, Rewards Charges, payments toward the balance",
+                "credits, refunds, chargebacks, returns",
+                "transactions while the account is not in Good Standing"
+              ],
+              "conditions": "Flat 1.5% on all Qualifying Purchase Transactions, paid in bitcoin, 'There is no cap on Base Rewards'; converted at the exchange rate at the time of the transaction, earned when the transaction posts, locked 30 days after settlement, then withdrawable (less network fees). Fold gift-card purchases earn either the merchant gift-card rate or the base rate, not both. Credit and debit card rewards cannot be earned at the same time.",
+              "description": "Bitcoin rewards (base rate, uncapped)",
+              "status": "verified",
+              "evidence": [
+                "ev-fold-rewards-terms",
+                "ev-fold-credit-card-page"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 5,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "holding",
+              "cap": {
+                "amount": {
+                  "amount": 5000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "conditions": "Reserve Boost added to the base rate according to the Fold Reserve balance (closed-loop stored value, not a deposit) at the time of each purchase: $15,000 → 1.75% total; $25,000 → 2.00%; $50,000 → 3.00%; $75,000 → 4.00%; $100,000 → 5.00%. Boost applies to the first $5,000 of Qualifying Purchase Transactions per calendar month (cap shared with the Fold Prepaid Debit Card); spend above earns 1.5%. Rewards Program Terms v3, effective 1 October 2026.",
+              "description": "Reserve Boost up to 5% with a $100,000 Fold Reserve balance",
+              "status": "verified",
+              "evidence": [
+                "ev-fold-rewards-terms",
+                "ev-fold-credit-card-page",
+                "ev-fold-pricing"
+              ]
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-fold-cardholder-agreement",
+      "url": "https://foldapp.com/legal/bitcoin-rewards-card-cardholder-agreement",
+      "title": "Fold Bitcoin Credit Card Cardholder Agreement — Version 3, effective 2026-10-01 (Celtic Bank)",
+      "source_type": "official_terms",
+      "excerpt": "Issuer Celtic Bank (Utah), Visa, powered by Stripe, serviced by Fold, Inc.; purchase APR 20.49%–29.49% variable (Prime + 13.49%–22.49%, max 36%; Prime 7.00% as of 17 Sept 2026); no penalty APR; no annual fee; no foreign transaction fee; balance transfers/cash advances may not be available; late fee up to $30; returned payment up to $30; minimum interest $1.00.",
+      "accessed_at": "2026-11-19T05:52:00Z",
+      "effective_from": "2026-10-01",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-fold-rewards-terms",
+      "url": "https://foldapp.com/legal/rewards-program-terms",
+      "title": "Fold Bitcoin Credit Card Rewards Program Terms — Version 3, effective 2026-10-01",
+      "source_type": "official_terms",
+      "excerpt": "Base 1.5% in bitcoin on Qualifying Purchase Transactions, no cap; Reserve Boost by Reserve Balance: $15k +0.25%, $25k +0.50%, $50k +1.50%, $75k +2.50%, $100k +3.50% (5.00% total), on the first $5,000 per calendar month, cap shared with the debit card; exclusions (ATM, fees, interest, cash equivalents, gaming, returns); 30-day lock; ID verification before withdrawing; v2 replaced the older bonuses.",
+      "accessed_at": "2026-11-19T05:52:00Z",
+      "effective_from": "2026-10-01",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-fold-credit-card-page",
+      "url": "https://foldapp.com/credit-card",
+      "title": "Fold Bitcoin Credit Card — product page",
+      "source_type": "official_terms",
+      "excerpt": "'1.5% back in bitcoin on eligible purchases, with no cap'; up to 5% with a $100,000 Fold Reserve balance on the first $5,000 of eligible purchases each calendar month ($15k 1.75%, $25k 2%, $50k 3%, $75k 4%, $100k 5%); 'Credit is subject to approval', variable APR tied to Prime; issued by Celtic Bank under licence from Visa U.S.A. Inc.; Fold account required 'and may be subject to separate fees'.",
+      "accessed_at": "2026-11-19T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-fold-interest-fees",
+      "url": "https://support.foldapp.com/hc/en-us/articles/47101331005723-Fold-Bitcoin-Credit-Card-interest-and-fees",
+      "title": "Fold Bitcoin Credit Card interest and fees (Fold support, 23 September 2026)",
+      "source_type": "help_center",
+      "excerpt": "'We will charge you a late fee of up to $30 if you don't pay at least the Minimum Payment by the Payment Due Date'; returned payment fee $30; minimum interest charge $1.00; no interest on purchases if the entire balance is paid by the due date. APR, annual and foreign transaction fees are referred to the APR article and the Cardholder Agreement.",
+      "accessed_at": "2026-11-19T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-fold-rewards-help",
+      "url": "https://support.foldapp.com/hc/en-us/articles/47150023661723-Fold-Bitcoin-Credit-Card-Rewards",
+      "title": "Fold Bitcoin Credit Card Rewards (Fold support, undated)",
+      "source_type": "help_center",
+      "excerpt": "Describes an earlier scheme: '1.5% flat unlimited on all purchases'; bonus tiers by monthly DCA/Direct-to-Bitcoin spend ($500 → 1.6% … $12,000 → 3.5%) on the first $2,000 per month; extra 0.5% for paying statements in bitcoin; bonus credited at month close; gift-card purchases do not stack. Undated ('Updated' without date).",
+      "accessed_at": "2026-11-19T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "contradictory",
+      "contradiction_note": "This undated help article describes DCA-based bonus tiers on the first $2,000/month and a 0.5% pay-in-bitcoin bonus. The dated Rewards Program Terms (v2 of 24 Sept 2026, restated as v3 of 1 Oct 2026) state that the Pay-in-Bitcoin bonus and the Auto-Stack Tier Bonus were replaced by the Reserve Boost on the first $5,000/month. The record models the dated terms; the help article appears not to have been updated."
+    },
+    {
+      "id": "ev-fold-pricing",
+      "url": "https://foldapp.com/pricing",
+      "title": "Fold pricing / rewards comparison page",
+      "source_type": "pricing_page",
+      "excerpt": "Credit card annual fee '$0' in the comparison table; 5% requires the Fold Bitcoin Credit Card and a $100,000 Fold Reserve balance, on the first $5,000 of eligible purchases each calendar month; above the cap or without a qualifying Reserve balance 1.5%; Fold Prepaid Debit Card (Sutton Bank) earns 0.25%–3%; credit and debit rewards not earned simultaneously; Reserve not FDIC insured.",
+      "accessed_at": "2026-11-19T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "The pricing page's tier table is described as starting at a $5,000 Reserve tier, whereas the Rewards Program Terms list the first credit-card boost tier at $15,000 (tiers below apply to the debit card). The terms govern."
+    },
+    {
+      "id": "ev-fold-who-can-sign-up",
+      "url": "https://support.foldapp.com/hc/en-us/articles/360052485591-Who-can-sign-up-for-a-Fold-account-and-or-apply-for-a-Fold-Card",
+      "title": "Who can sign up for a Fold account and/or apply for a Fold Card (Fold support)",
+      "source_type": "eligibility_page",
+      "excerpt": "'Our services are intended solely for users who are 18 years of age or older' and who 'are citizens or permanent residents of the United States'. Only the article summary was returned to the fetcher; excluded states/territories and document requirements, if any, were not readable.",
+      "accessed_at": "2026-11-19T05:54:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-fold-how-to-apply",
+      "url": "https://support.foldapp.com/hc/en-us/articles/50883618090907-How-can-I-apply-for-the-Fold-Bitcoin-Credit-Card",
+      "title": "How can I apply for the Fold Bitcoin Credit Card (Fold support, 7 October 2026)",
+      "source_type": "help_center",
+      "excerpt": "Apply in the Fold app ('More ways to earn' → Fold Bitcoin Credit Card → 'Apply now'); account creation needs an email and password; 'at this time, there is not the option to add an authorized user or apply for a business account'. The application is open in-app (no waitlist mentioned).",
+      "accessed_at": "2026-11-19T05:54:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-fold-activation-offer",
+      "url": "https://foldapp.com/legal/fold-bitcoin-credit-card-activation-offer-terms",
+      "title": "Fold Bitcoin Credit Card Activation Offer Terms (last updated 17 July 2026)",
+      "source_type": "official_terms",
+      "excerpt": "One-time Activation Reward in bitcoin worth $50.00 for invited applicants approved by Celtic Bank who activate within 2 days of approval; offer period 20–24 July 2026 (Eastern Time); eligibility 18+, US citizens or permanent residents, first-time cardholders. Expired — not modelled as a current signup bonus.",
+      "accessed_at": "2026-11-19T05:56:00Z",
+      "effective_from": "2026-07-20",
+      "expires_at": "2026-07-24",
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "stale"
+    }
+  ],
+  "links": {
+    "official_url": "https://foldapp.com/credit-card",
+    "affiliate": {
+      "program_id": "fold-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-19T05:57:00Z",
+    "last_auto_check_at": "2026-11-19T05:57:00Z"
+  },
+  "changelog": [
+    {
+      "date": "2026-11-19T05:57:00Z",
+      "field": "*",
+      "reason": "Initial record from Fold's official pages: Cardholder Agreement v3 and Rewards Program Terms v3 (both effective 2026-10-01), product page, pricing page, support articles (interest and fees, rewards, eligibility, how to apply), activation offer terms (expired July 2026). Single read — second read ≥ 24 h later required before publication. Unknown: delivery fee, cash advance/ATM terms (may not be available), documents required for identity verification and the credit application, state exclusions, mobile wallet support, virtual card. Contradiction recorded: undated support rewards article (DCA tiers, $2,000 cap, pay-in-bitcoin bonus) vs dated Rewards Program Terms (Reserve Boost, $5,000 cap) — terms modelled.",
+      "evidence": [
+        "ev-fold-cardholder-agreement",
+        "ev-fold-rewards-terms",
+        "ev-fold-credit-card-page",
+        "ev-fold-interest-fees",
+        "ev-fold-rewards-help",
+        "ev-fold-pricing",
+        "ev-fold-who-can-sign-up",
+        "ev-fold-how-to-apply",
+        "ev-fold-activation-offer"
+      ],
+      "actor": "research-run"
+    }
+  ],
+  "editorial": {
+    "summary": "US-only unsecured Visa credit card issued by Celtic Bank and serviced by Fold, paying 1.5% back in bitcoin on all eligible purchases with no cap and no annual or foreign transaction fee. A Reserve Boost raises the rate to 1.75%–5% on the first $5,000 of monthly spend for cardholders holding $15,000–$100,000 in Fold Reserve (closed-loop stored value, not FDIC-insured). Variable purchase APR 20.49%–29.49%.",
+    "good_for": [
+      "US residents who pay their balance in full each month and want uncapped bitcoin rewards without an annual fee",
+      "Fold customers already holding a large Fold Reserve balance (boosted rates up to 5% on the first $5,000 a month)"
+    ],
+    "not_for": [
+      "Anyone outside the United States or without US citizenship/permanent residency",
+      "Carrying a balance: 20.49%–29.49% variable APR quickly outweighs 1.5% rewards",
+      "Users who need cash advances, balance transfers or an authorised user (not offered)"
+    ],
+    "watch_outs": [
+      "Boosted rates require locking tens of thousands of dollars in Fold Reserve, which is not a bank deposit and not FDIC-insured; the boost only covers the first $5,000 of spend per month, shared with the Fold debit card.",
+      "Rewards are converted to bitcoin at transaction time and locked for 30 days; reversed or disputed purchases are clawed back.",
+      "Fold's support article on rewards still describes an older DCA-based tier scheme and a pay-in-bitcoin bonus; the dated Rewards Program Terms (1 Oct 2026) replaced them with the Reserve Boost.",
+      "Late and returned payments cost up to $30 each and may be reported to credit bureaus."
+    ]
+  }
+}
