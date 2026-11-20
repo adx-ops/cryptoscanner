@@ -228,7 +228,7 @@
       "title": "Fold Bitcoin Credit Card Cardholder Agreement — Version 3, effective 2026-10-01 (Celtic Bank)",
       "source_type": "official_terms",
       "excerpt": "Issuer Celtic Bank (Utah), Visa, powered by Stripe, serviced by Fold, Inc.; purchase APR 20.49%–29.49% variable (Prime + 13.49%–22.49%, max 36%; Prime 7.00% as of 17 Sept 2026); no penalty APR; no annual fee; no foreign transaction fee; balance transfers/cash advances may not be available; late fee up to $30; returned payment up to $30; minimum interest $1.00.",
-      "accessed_at": "2026-11-19T05:52:00Z",
+      "accessed_at": "2026-11-20T06:36:00Z",
       "effective_from": "2026-10-01",
       "expires_at": null,
       "scope": {
@@ -245,7 +245,7 @@
       "title": "Fold Bitcoin Credit Card Rewards Program Terms — Version 3, effective 2026-10-01",
       "source_type": "official_terms",
       "excerpt": "Base 1.5% in bitcoin on Qualifying Purchase Transactions, no cap; Reserve Boost by Reserve Balance: $15k +0.25%, $25k +0.50%, $50k +1.50%, $75k +2.50%, $100k +3.50% (5.00% total), on the first $5,000 per calendar month, cap shared with the debit card; exclusions (ATM, fees, interest, cash equivalents, gaming, returns); 30-day lock; ID verification before withdrawing; v2 replaced the older bonuses.",
-      "accessed_at": "2026-11-19T05:52:00Z",
+      "accessed_at": "2026-11-20T06:36:00Z",
       "effective_from": "2026-10-01",
       "expires_at": null,
       "scope": {
@@ -262,7 +262,7 @@
       "title": "Fold Bitcoin Credit Card — product page",
       "source_type": "official_terms",
       "excerpt": "'1.5% back in bitcoin on eligible purchases, with no cap'; up to 5% with a $100,000 Fold Reserve balance on the first $5,000 of eligible purchases each calendar month ($15k 1.75%, $25k 2%, $50k 3%, $75k 4%, $100k 5%); 'Credit is subject to approval', variable APR tied to Prime; issued by Celtic Bank under licence from Visa U.S.A. Inc.; Fold account required 'and may be subject to separate fees'.",
-      "accessed_at": "2026-11-19T05:50:00Z",
+      "accessed_at": "2026-11-20T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -279,7 +279,7 @@
       "title": "Fold Bitcoin Credit Card interest and fees (Fold support, 23 September 2026)",
       "source_type": "help_center",
       "excerpt": "'We will charge you a late fee of up to $30 if you don't pay at least the Minimum Payment by the Payment Due Date'; returned payment fee $30; minimum interest charge $1.00; no interest on purchases if the entire balance is paid by the due date. APR, annual and foreign transaction fees are referred to the APR article and the Cardholder Agreement.",
-      "accessed_at": "2026-11-19T05:50:00Z",
+      "accessed_at": "2026-11-20T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -314,7 +314,7 @@
       "title": "Fold pricing / rewards comparison page",
       "source_type": "pricing_page",
       "excerpt": "Credit card annual fee '$0' in the comparison table; 5% requires the Fold Bitcoin Credit Card and a $100,000 Fold Reserve balance, on the first $5,000 of eligible purchases each calendar month; above the cap or without a qualifying Reserve balance 1.5%; Fold Prepaid Debit Card (Sutton Bank) earns 0.25%–3%; credit and debit rewards not earned simultaneously; Reserve not FDIC insured.",
-      "accessed_at": "2026-11-19T05:52:00Z",
+      "accessed_at": "2026-11-20T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -332,7 +332,7 @@
       "title": "Who can sign up for a Fold account and/or apply for a Fold Card (Fold support)",
       "source_type": "eligibility_page",
       "excerpt": "'Our services are intended solely for users who are 18 years of age or older' and who 'are citizens or permanent residents of the United States'. Only the article summary was returned to the fetcher; excluded states/territories and document requirements, if any, were not readable.",
-      "accessed_at": "2026-11-19T05:54:00Z",
+      "accessed_at": "2026-11-20T06:36:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -386,7 +386,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-11-19T05:57:00Z",
-    "last_auto_check_at": "2026-11-19T05:57:00Z"
+    "last_auto_check_at": "2026-11-20T06:36:00Z"
   },
   "changelog": [
     {
@@ -405,6 +405,22 @@
         "ev-fold-activation-offer"
       ],
       "actor": "research-run"
+    },
+    {
+      "date": "2026-11-20T06:36:00Z",
+      "field": "freshness.last_auto_check_at",
+      "from": "2026-11-19T05:57:00Z",
+      "to": "2026-11-20T06:36:00Z",
+      "reason": "Second read attempted on 2026-11-20 (24 h 39 min after the first). Six of nine evidence pages read; every value they source is confirmed, unchanged. Cardholder Agreement v3 (effective 2026-10-01): Celtic Bank (Utah), Visa, powered by Stripe, serviced by Fold, Inc.; purchase APR '20.49% to 29.49% variable APR' (Prime + 13.49%–22.49%, never above 36%, Prime 7.00% as of 17 Sept 2026); penalty APR none; no annual fee; foreign transaction fee none; 'Balance transfers are not offered' and 'may not be eligible for balance transfers or cash advances'; late fee up to $30 (capped at the minimum payment); returned payment up to $30; minimum interest charge $1.00; grace period with due date ≥ 25 days after statement. Not modelled, new in this read: card replacement one free per rolling 12 months then $35; no over-limit fee. Rewards Program Terms v3 (effective 2026-10-01, text unchanged from v2 of 24 Sept 2026 which 'Replaces the Auto-Stack Tier Bonus and the Pay-in-Bitcoin bonus with the Reserve Boost'): flat 1.5% in bitcoin, 'There is no cap on Base Rewards'; Reserve Boost $15,000 → 1.75%, $25,000 → 2.00%, $50,000 → 3.00%, $75,000 → 4.00%, $100,000 → 5.00% on the first $5,000 of Qualifying Purchase Transactions per calendar month, one cap shared with the Fold Prepaid Debit Card; exclusions, 30-day lock, identity verification before withdrawal, clawbacks — all as modelled. Product page: '1.5% back in bitcoin on eligible purchases, with no cap', boost table to 5% with $100,000 Reserve on the first $5,000/month, 'Credit is subject to approval', issued by Celtic Bank under licence from Visa U.S.A. Inc., Fold account 'may be subject to separate fees', BitGo custody. Pricing URL (canonical foldapp.com/reserve, comparison 'last updated October 13, 2026'): annual fee '$0', credit 1.5% base and tiers to 5% on the first $5,000, debit 0.25%–3%, 'cannot be earned at the same time', Reserve not FDIC insured; tier table still starts at a $5,000 tier (recorded contradiction unchanged). Interest-and-fees article (now served at https://support.foldapp.com/en-us/articles/16549347-fold-bitcoin-credit-card-interest-and-fees, dated 23 Sept 2026): late fee up to $30, returned payment $30, minimum interest $1.00, no interest if paid in full by the due date (≥ 25 days). Who-can-sign-up article (now https://support.foldapp.com/en-us/articles/16549334-..., dated 23 Sept 2026, noindex): '18 years of age or older', 'citizens or permanent residents of the United States'; no state exclusions or documents stated. NOT published: three evidence URLs could not be read in this unattended run — the fetcher's URL permission gate blocked https://support.foldapp.com/hc/en-us/articles/47150023661723-Fold-Bitcoin-Credit-Card-Rewards (the contradictory help article), https://support.foldapp.com/hc/en-us/articles/50883618090907-How-can-I-apply-for-the-Fold-Bitcoin-Credit-Card (KYC stages, 'no authorised users') and https://foldapp.com/legal/fold-bitcoin-credit-card-activation-offer-terms (expired offer). Not unreachable at the site, not a differing value: record kept validated, needs_browser_read set in the research list. For the browser session: Fold's support centre has moved from /hc/en-us/articles/<id> to /en-us/articles/<new id>; a new 'Authorized Users' support article (45895105276059) surfaced by search should be checked against the usage_note 'no authorised users … at this time'; the APR support article (dated 23 Sept 2026) still says 'Rates are accurate as of October 30, 2025' with Prime 7.00%, while the Cardholder Agreement gives Prime as of 17 Sept 2026 — same figures, different as-of dates.",
+      "evidence": [
+        "ev-fold-cardholder-agreement",
+        "ev-fold-rewards-terms",
+        "ev-fold-credit-card-page",
+        "ev-fold-interest-fees",
+        "ev-fold-pricing",
+        "ev-fold-who-can-sign-up"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
