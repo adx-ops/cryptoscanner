@@ -1,0 +1,367 @@
+{
+  "schema_version": "1.0.0",
+  "id": "coinspot-card",
+  "slug": "coinspot-card",
+  "name": "CoinSpot Mastercard",
+  "brand": "CoinSpot",
+  "provider_id": "coinspot",
+  "issuer": {
+    "name": "EML Payment Solutions Limited",
+    "status": "verified",
+    "evidence": [
+      "ev-coinspot-pds",
+      "ev-coinspot-card-page",
+      "ev-coinspot-terms"
+    ]
+  },
+  "network": "mastercard",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "The card is not pre-loaded in AUD: at the point of sale CoinSpot sells the equivalent AUD amount from the digital currency the user nominated in their CoinSpot account ('instant real-time conversion of cryptocurrency to Australian currency'). Up to five wallets can be linked in an order of preference; the 'Spendable Balance' is the AUD value of the nominated currencies. The product page claims 'Pay with 460+ cryptocurrencies'; the PDS does not state a number.",
+    "evidence": [
+      "ev-coinspot-pds",
+      "ev-coinspot-card-page"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "coinspot-card-au",
+      "region_label": "Australia",
+      "currency": "AUD",
+      "eligibility": {
+        "residence_allowed": [
+          "AU"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "The PDS requires 'an Australian resident'; citizenship or visa status is not mentioned on the pages read.",
+        "usage_note": "PDS section 7: cardholders must be 18 years of age or older, an Australian resident, a customer with a verified CoinSpot account, and agree to CoinSpot's Terms. The product page adds that 2FA must be enabled. CoinSpot's Terms of Use (clause 6) state the platform is 'not intended to be offered or made available to any person who resides outside of Australia'. Issued by EML Payment Solutions Limited (ABN 30 131 436 532, AFSL 404131); Casey Block Services Pty Ltd trading as CoinSpot (ABN 19 619 574 186, AFSL 562554) promotes and distributes the card. Usable 'anywhere in the world where prepaid Mastercard cards are accepted' via Apple Pay, Google Pay or Samsung Pay; the PDS says the card may not be used for direct or recurring debit payments or mail/telephone order transactions.",
+        "evidence": [
+          "ev-coinspot-pds",
+          "ev-coinspot-card-page",
+          "ev-coinspot-terms"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "thresholds_note": "A 'fully verified CoinSpot account' with 2FA enabled is required before the card can be obtained (product page); the PDS requires 'a verified CoinSpot Account' and 18+. Account-level: an 'Extended Verification' is requested on reaching an AUD deposit/withdrawal threshold that 'will vary depending on your account type' (amount not published); a Verification Photo (user holding a signed, dated note) raises the daily AUD deposit limit from $10,000 to $100,000.",
+        "stages_note": "Account: full identity verification (the PDS summary lists name, address and date of birth as KYC information; the document list — driver licence / passport / selfie / proof of address — is in a help article that could not be read in this run). Card: issued from the verified account with 2FA; the mobile number and email used for the digital wallet must match the CoinSpot account. No separate card-level verification stage is described.",
+        "evidence": [
+          "ev-coinspot-pds",
+          "ev-coinspot-card-page",
+          "ev-coinspot-extended-verification",
+          "ev-coinspot-verification-photo",
+          "ev-coinspot-wallet-faq"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "CoinSpot Mastercard",
+          "access": {
+            "type": "free",
+            "note": "Single tier; 'no startup or annual fees or lock-in periods' (product page). No subscription or holding requirement on the pages read.",
+            "status": "verified",
+            "evidence": [
+              "ev-coinspot-card-page",
+              "ev-coinspot-pds"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "PDS fee table (section 14.6): 'Card Issue Fee: Nil'; 'Replacement Card Fee: Nil'. Product page: 'no startup or annual fees'.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinspot-pds",
+                "ev-coinspot-card-page"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "period": "month",
+              "conditions": "The product page states 'no annual fees'. The PDS fee table has an 'Account Keeping Fees' row whose amount could not be read in the fetched text (cell blank in the extraction), so the governing dated document could not be confirmed; the monthly/annual fee is therefore left unknown rather than modelled as none.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "No load/top-up step: the card spends the nominated CoinSpot balances directly at the point of sale. The costs of funding the CoinSpot account (AUD deposits via PayID/direct deposit/card/PayPal listed as free on the fees page, cash 2.5%; crypto purchase fees 1% instant / 0.1% market) are account-level and not modelled here.",
+              "status": "unknown"
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "PDS section 14.6: CoinSpot 'will also charge you the normal trading fee charged for selling your digital currency', at the sell price at the time of purchase, 'in accordance with CoinSpot's trading fees, which are available on their website' — no amount in the PDS. The fees page lists 'Instant Buy, Sell & Swap' 1% and 'Market Orders' 0.1%; which rate applies to a card sale is not stated on any page read, so the spend-time conversion fee is left unknown. The product page mentions only 'instant real-time conversion' at CoinSpot's 'best exchange rates'.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 2.99,
+              "period": "per_transaction",
+              "conditions": "PDS: foreign exchange fee '2.99% of the total amount of each transaction'; transactions in a foreign currency are converted at the 'prevailing Mastercard exchange rate at the time plus a 2.99% foreign exchange fee' (section 14.7).",
+              "status": "verified",
+              "evidence": [
+                "ev-coinspot-pds"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "The PDS defines 'ATM', lists cash withdrawals among deductions from the Spendable Balance and excludes ATM transactions from Mastercard Zero Liability, but publishes no ATM fee or limit, and the pages read describe a digital-wallet card only. Whether cash withdrawals are actually available, and at what cost, is not established.",
+              "status": "unknown"
+            },
+            {
+              "type": "inactivity",
+              "kind": "unknown",
+              "period": "month",
+              "conditions": "No inactivity or dormancy fee appears in the readable part of the PDS fee table; not confirmed as absent.",
+              "status": "unknown"
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 27.5,
+                "currency": "AUD"
+              },
+              "period": "per_transaction",
+              "conditions": "Disputed transaction fee $27.50 per unsuccessful disputed transaction (where the dispute is found fraudulent or not legitimate), PDS section 14.6. Merchant surcharges may apply and are not retained by the issuer.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinspot-pds"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 7000,
+                "currency": "AUD"
+              },
+              "period": "per_day",
+              "note": "PDS section 14.8: maximum POS transaction $7,000; daily POS limit (cumulative) $7,000; maximum 25 transactions per day; contactless transactions for purchases under $100 without PIN. Three incorrect PIN entries suspend the card for 24 hours. No monthly, balance or ATM limits are published.",
+              "status": "verified",
+              "evidence": [
+                "ev-coinspot-pds"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay",
+            "samsung_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-coinspot-pds",
+      "url": "https://www.coinspot.com.au/coinspot-mastercard-pds",
+      "title": "CoinSpot Mastercard Product Disclosure Statement (Part A General Information, Part B Terms and Conditions incl. Fees and Charges), dated 29 April 2026",
+      "source_type": "official_terms",
+      "excerpt": "'Your Card is a prepaid, reloadable Mastercard' issued by EML Payment Solutions Limited (AFSL 404131); CoinSpot = Casey Block Services Pty Ltd. Fees s.14.6: issue Nil, replacement Nil, FX 2.99%, disputed transaction $27.50, plus CoinSpot's 'normal trading fee' on the sale (no amount). Limits s.14.8: $7,000 per POS transaction and per day, 25 tx/day. Eligibility s.7: 18+, Australian resident.",
+      "accessed_at": "2026-11-20T05:34:00Z",
+      "effective_from": "2026-04-29",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "currency": "AUD",
+        "note": "PDF; the fetcher returned sections 1–14.12 verbatim and the rest (14.12–14.24) only as a summary. The 'Account Keeping Fees' amount cell was blank in the extracted text."
+      },
+      "verification": "verified",
+      "contradiction_note": "Section 14.5 lists telephone purchases among permitted uses and then says the card 'may not be used for any ... mail or telephone order transactions'. The PDS lists Apple Pay, Google Pay and Samsung Pay as Device Wallets; the product page names only Apple Pay and Google Pay (the wallet FAQ confirms Samsung Pay)."
+    },
+    {
+      "id": "ev-coinspot-card-page",
+      "url": "https://www.coinspot.com.au/card",
+      "title": "CoinSpot Mastercard — product page",
+      "source_type": "official_terms",
+      "excerpt": "'The CoinSpot Mastercard is a prepaid debit card'; 'no startup or annual fees'; 'up to five wallets to link to your card'; 'instant real-time conversion of cryptocurrency to Australian currency ($)'; '460+ cryptocurrencies'; 'a fully verified CoinSpot account and have 2FA enabled'; Apple Pay and Google Pay; refunds return the AUD value, not the coins. Issued by EML, distributed by CoinSpot.",
+      "accessed_at": "2026-11-20T05:33:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "currency": "AUD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinspot-terms",
+      "url": "https://www.coinspot.com.au/terms",
+      "title": "CoinSpot Terms of Use (clauses 6 and 48–65 on the Card)",
+      "source_type": "official_terms",
+      "excerpt": "Cl. 6: 'not intended to be offered or made available to any person who resides outside of Australia'. Cl. 48: 'The CoinSpot Mastercard (\"Card\") is a prepaid, reloadable, Mastercard card.' Cl. 49: issued by EML 'on the basis set out in these Terms of Use and the Product Disclosure Statement'. Cl. 51: 'not a credit or charge card, and is not in any way connected to your bank account'. Undated.",
+      "accessed_at": "2026-11-20T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "note": "Clauses after 87 were seen only as a fetcher summary."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinspot-fees-page",
+      "url": "https://www.coinspot.com.au/fees",
+      "title": "CoinSpot fee structure (exchange fees page)",
+      "source_type": "pricing_page",
+      "excerpt": "Trading: Market Orders 0.1%, OTC 0.1%, 'Instant Buy, Sell & Swap' 1%, Take Profit/Stop/Limit 1%, Recurring Buy 1%. AUD deposits: PayID free, direct deposit free, cash 2.5%, card free, PayPal free; AUD bank withdrawal free, PayPal withdrawal 2%. The page does not describe the Mastercard (navigation link only); no FX or card-spend fee line. Undated.",
+      "accessed_at": "2026-11-20T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "currency": "AUD",
+        "note": "Used only to document which trading fees the PDS refers to; which rate applies at card spend is not stated."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinspot-wallet-faq",
+      "url": "https://coinspot.zendesk.com/hc/en-us/articles/5598555750159-CoinSpot-Mastercard-Digital-Wallet-FAQ",
+      "title": "CoinSpot Mastercard Digital Wallet FAQ (CoinSpot help centre)",
+      "source_type": "help_center",
+      "excerpt": "Covers Apple Pay (iPhone models with Face ID), Google Pay (Android with NFC), Samsung Pay ('Yes, you can set up your CoinSpot Mastercard using Samsung Pay') and smartwatch payments; 'Your mobile phone number and email address will need to be the same as the one on your CoinSpot account.' No mention of a physical card, ATM, fees or limits. Undated.",
+      "accessed_at": "2026-11-20T05:39:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinspot-security-faq",
+      "url": "https://coinspot.zendesk.com/hc/en-us/articles/5598005605391",
+      "title": "How safe is CoinSpot Mastercard? (CoinSpot help centre)",
+      "source_type": "help_center",
+      "excerpt": "'Within the CoinSpot App there are a number of security features available, from card freezing, to spending limits'; unauthorised transactions: disable the card in the app immediately. No limit amounts, fees or eligibility stated. Undated.",
+      "accessed_at": "2026-11-20T05:39:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinspot-extended-verification",
+      "url": "https://coinspot.zendesk.com/hc/en-us/articles/333757004196-What-is-Extended-Verification",
+      "title": "What is Extended Verification (CoinSpot help centre)",
+      "source_type": "help_center",
+      "excerpt": "'we request for users to complete extended verification upon reaching the AUD Deposit or Withdrawal threshold'; 'The threshold will vary depending on your account type'; completion upgrades the account to 'High Value' status. Threshold amounts and document types not stated. Undated.",
+      "accessed_at": "2026-11-20T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "note": "Account-level verification stage; not card-specific."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-coinspot-verification-photo",
+      "url": "https://coinspot.zendesk.com/hc/en-us/articles/333757020895",
+      "title": "Verification Photo (CoinSpot help centre)",
+      "source_type": "help_center",
+      "excerpt": "After 'the initial verification process', a Verification Photo of the user holding a note (CoinSpot, date, full name, 4-digit code, signature) is needed to 'increase your daily deposit limit from $10,000 per 24hr to' $100,000. JPEG or PNG. The initial verification documents are not described on this page. Undated.",
+      "accessed_at": "2026-11-20T05:44:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AU"
+        ],
+        "note": "Account-level verification stage; not card-specific."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.coinspot.com.au/card",
+    "affiliate": {
+      "program_id": "coinspot-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-20T05:46:00Z",
+    "last_auto_check_at": "2026-11-20T05:46:00Z"
+  },
+  "changelog": [
+    {
+      "date": "2026-11-20T05:46:00Z",
+      "field": "*",
+      "reason": "Initial record from CoinSpot's official pages (Mastercard PDS dated 29 April 2026, product page, Terms of Use, exchange fees page, three help-centre articles on the card's digital wallets and security, two help-centre articles on account verification stages). Single read — second read ≥ 24 h later required before publication. Unknown: monthly/account-keeping fee (PDS cell unreadable; product page says no annual fees), spend-time conversion fee (PDS refers to CoinSpot's 'normal trading fee'; fees page lists 1% instant and 0.1% market, mapping not stated), ATM availability/fee, inactivity fee, top-up (card spends balances), KYC document list (verification article unreadable in this run). Physical card not confirmed on any page (digital-wallet card modelled as virtual only).",
+      "evidence": [
+        "ev-coinspot-pds",
+        "ev-coinspot-card-page",
+        "ev-coinspot-terms",
+        "ev-coinspot-fees-page",
+        "ev-coinspot-wallet-faq",
+        "ev-coinspot-security-faq",
+        "ev-coinspot-extended-verification",
+        "ev-coinspot-verification-photo"
+      ],
+      "actor": "research-run"
+    }
+  ],
+  "editorial": {
+    "summary": "Australia-only prepaid Mastercard issued by EML Payment Solutions Limited and distributed by CoinSpot, used through Apple Pay, Google Pay or Samsung Pay. It sells the nominated CoinSpot crypto balance to AUD at the moment of payment. No issuance or replacement fee and, per the product page, no annual fee; 2.99% on non-AUD transactions; CoinSpot's trading fee applies to each sale at spend (rate not stated for the card); no rewards. $7,000 per transaction and per day.",
+    "good_for": [
+      "Australian CoinSpot customers who want to spend crypto directly from their exchange balance via a phone or smartwatch wallet",
+      "Users who prefer a card with no issuance or annual fee and no rewards scheme to evaluate"
+    ],
+    "not_for": [
+      "Anyone outside Australia (Australian residents only; CoinSpot's platform is not offered outside Australia)",
+      "Users who want a physical card or confirmed ATM access: only digital-wallet use is documented",
+      "Frequent foreign-currency spending (2.99% FX fee on top of the trading fee)"
+    ],
+    "watch_outs": [
+      "Each purchase triggers a sale of crypto at CoinSpot's sell price plus CoinSpot's 'normal trading fee'; the PDS gives no rate and the fees page lists 1% (instant) and 0.1% (market) — the applicable rate is unknown, so the net cost of spending cannot be computed yet.",
+      "The PDS fee table's account-keeping fee could not be read; the product page's 'no annual fees' is not treated as proof of no monthly fee.",
+      "Refunds return the AUD value to the CoinSpot account, not the coins spent; the Financial Claims Scheme does not protect the Spendable Balance.",
+      "The PDS internally contradicts itself on telephone-order transactions; the card may not be used for direct or recurring debits."
+    ]
+  }
+}

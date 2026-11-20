@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0.0",
+  "id": "netcoins-prepaid-mastercard",
+  "slug": "netcoins-prepaid-mastercard",
+  "name": "Netcoins Prepaid Mastercard (Netcoins Pay)",
+  "brand": "Netcoins",
+  "provider_id": "netcoins",
+  "issuer": {
+    "name": "KOHO Financial Inc.",
+    "status": "verified",
+    "evidence": [
+      "ev-netcoins-pay-page"
+    ]
+  },
+  "network": "mastercard",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "unknown",
+    "supported_assets_note": "'Both the virtual and physical cards draw their funds from your Netcoins account.' The page refers to the 'Netcoins CAD portfolio balance' when funds remain after the card's good-thru date, which suggests the card spends the CAD balance, but no page read states whether crypto is sold automatically at spend or must be sold to CAD first. Supported assets for funding are not stated.",
+    "evidence": [
+      "ev-netcoins-pay-page"
+    ]
+  },
+  "credit_terms": null,
+  "variants": [
+    {
+      "id": "netcoins-prepaid-mastercard-ca",
+      "region_label": "Canada (excluding Quebec)",
+      "currency": "CAD",
+      "eligibility": {
+        "residence_allowed": [
+          "CA"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "Residency-based; citizenship not mentioned.",
+        "usage_note": "'Canadian residents of all provinces with the exception of Quebec, are eligible to apply' — Quebec residents are excluded (sub-national exclusion, cannot be modelled as an ISO country code). 'Users must have a verified Netcoins account to apply.' 'The card is currently not available for corporate accounts.' Minimum age not stated on the pages read (the cardholder agreement is client-rendered and unreadable by the fetcher). Issued by KOHO Financial Inc. pursuant to licence by Mastercard International. Usable for purchases and ATM withdrawals; Apple Pay, Google Pay and Samsung Pay supported.",
+        "evidence": [
+          "ev-netcoins-pay-page"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "thresholds_note": "A verified Netcoins account is required to apply; the virtual card 'is made available to you almost instantaneously after sign up and verification'. Documents and any limits tied to verification are not described on the pages read.",
+        "stages_note": "Account: Netcoins identity verification (not detailed on the pages read). Card: virtual card after verification; physical card delivered in 'approximately 7 business days' and activated by phone. Cardholder agreement (netcoins.app/mastercard-cardholder-agreement) renders an empty JavaScript shell to the fetcher — not read.",
+        "evidence": [
+          "ev-netcoins-pay-page"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Netcoins Prepaid Mastercard",
+          "access": {
+            "type": "free",
+            "note": "Single tier; 'No Annual Account Fees' (product page). No subscription or holding requirement on the pages read.",
+            "status": "verified",
+            "evidence": [
+              "ev-netcoins-pay-page",
+              "ev-netcoins-fees-limits"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Help-centre fee table: 'New card | Free', 'Activation fee | Free'. Applies to the virtual and the physical card ('Choose from a virtual and/or physical card'). Replacement-card fee not listed.",
+              "status": "verified",
+              "evidence": [
+                "ev-netcoins-fees-limits",
+                "ev-netcoins-pay-page"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical card delivered in about 7 business days; no shipping/delivery row in the fee table, so delivery is not modelled as free.",
+              "status": "unknown"
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "period": "month",
+              "conditions": "Product page heading: 'Save More With No Annual Account Fees'. The fee table lists no monthly, annual or inactivity row either way; without a cardholder agreement read, the monthly fee is left unknown rather than modelled as none.",
+              "status": "unknown"
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "No load step described: the card 'draws funds from your Netcoins account'. Account funding costs (Interac e-Transfer and crypto deposits free; bank wires free above $3,000 CAD; trading cost is a spread with 'no separate trading fees', percentage not published) are account-level and not modelled here.",
+              "status": "unknown"
+            },
+            {
+              "type": "conversion",
+              "kind": "unknown",
+              "period": "per_transaction",
+              "conditions": "'Purchases | Free' in the fee table. Whether a crypto-to-CAD conversion (and Netcoins' spread) occurs at spend is not stated; if the card spends an existing CAD balance there is no spend-time conversion, but this is not confirmed on the pages read.",
+              "status": "unknown"
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "'Foreign Exchange Transaction Fee+ | 1.5%'; details referred to the 'Transaction Made in Foreign Currencies section of the Cardholder agreement' (not readable).",
+              "status": "verified",
+              "evidence": [
+                "ev-netcoins-fees-limits"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "'ATM Withdrawals+ | Free' — '+Additional fees for ATM withdrawals may be charged by the ATM operator, over which we have no control.' No distinction between domestic and international ATMs on the page; the 1.5% FX fee would apply to foreign-currency withdrawals under the fee table's FX line.",
+              "status": "verified",
+              "evidence": [
+                "ev-netcoins-fees-limits"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "unknown",
+              "period": "month",
+              "conditions": "Not listed in the fee table; not confirmed as absent (cardholder agreement not readable).",
+              "status": "unknown"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "'Get 1% back in Bitcoin with every purchase you make on the Netcoins Prepaid Mastercard®.' 'Rewards are first earned in CAD and then converted into Bitcoin by Netcoins at a set date each month.' No cap, excluded categories, minimum spend or rewards terms published on the pages read; the conversion date is not stated.",
+              "description": "1% back in Bitcoin on every purchase (earned in CAD, converted monthly)",
+              "status": "verified",
+              "evidence": [
+                "ev-netcoins-pay-page"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 8000,
+                "currency": "CAD"
+              },
+              "period": "per_day",
+              "note": "Maximum $8,000 per single POS transaction and per day (cumulative POS); 15 POS transactions per day; total daily limit POS + ATM $10,000.",
+              "status": "verified",
+              "evidence": [
+                "ev-netcoins-fees-limits"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 2000,
+                "currency": "CAD"
+              },
+              "period": "per_day",
+              "note": "Maximum $2,000 per single ATM transaction and per day (cumulative ATM); 5 ATM transactions per day.",
+              "status": "verified",
+              "evidence": [
+                "ev-netcoins-fees-limits"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay",
+            "samsung_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-netcoins-pay-page",
+      "url": "https://blog.netcoins.com/pay/",
+      "title": "Netcoins Pay — 'Earn Bitcoin as You Spend' (official product page, blog.netcoins.com)",
+      "source_type": "official_terms",
+      "excerpt": "'Netcoins Prepaid Mastercard®' 'issued by KOHO Financial Inc. pursuant to license by Mastercard International'; 'Get 1% back in Bitcoin with every purchase'; rewards earned in CAD, converted to Bitcoin monthly; virtual and/or physical; Apple, Google & Samsung Pay; 'Canadian residents of all provinces with the exception of Quebec'; verified account required; 'No Annual Account Fees'.",
+      "accessed_at": "2026-11-20T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "CA"
+        ],
+        "currency": "CAD",
+        "note": "Quebec excluded. netcoins.com/netcoins-pay now resolves to the Netcoins App page (canonical /netcoins-app) with no card content."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-netcoins-fees-limits",
+      "url": "https://netcoins.zendesk.com/hc/en-us/articles/4418288709140-Fees-and-card-limits",
+      "title": "Fees and card limits (Netcoins help centre)",
+      "source_type": "pricing_page",
+      "excerpt": "'New card | Free'; 'Activation fee | Free'; 'Purchases | Free'; 'ATM Withdrawals+ | Free' (operator fees may apply); 'Foreign Exchange Transaction Fee+ | 1.5%'. Limits: 15 POS tx/day, $8,000 per POS transaction and per day; 5 ATM tx/day, $2,000 per ATM transaction and per day; 'Total daily limit (POS + ATM) | $10,000'. No monthly, replacement, load, dispute or balance rows. Undated.",
+      "accessed_at": "2026-11-20T06:00:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "CA"
+        ],
+        "currency": "CAD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-netcoins-fees-page",
+      "url": "https://netcoins.com/fees",
+      "title": "Netcoins Fees in Canada: Trading, Deposit & Withdrawal",
+      "source_type": "pricing_page",
+      "excerpt": "'The price you see includes our spread. We do not charge any separate trading fees.' Funding: 'Free Interac e-Transfers, Free Crypto deposits, Bank wires Free for deposits over $3,000 CAD'; cash withdrawal free by Interac e-Transfer, bank wires $50 CAD under $25,000 CAD. No card lines on this page. Undated (footer ©2024).",
+      "accessed_at": "2026-11-20T06:00:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "CA"
+        ],
+        "currency": "CAD",
+        "note": "Account-level costs only; documents that the top-up cost is not published as a percentage."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-netcoins-cardholder-agreement",
+      "url": "https://netcoins.app/mastercard-cardholder-agreement",
+      "title": "Mastercard Cardholder Agreement (netcoins.app) — unreadable, client-rendered",
+      "source_type": "official_terms",
+      "excerpt": "Returned 'You need to enable JavaScript to run this app.' (1,330-character shell). Not read; recorded so that a browser session reads it (minimum age, issuer wording, FX section, inactivity/replacement fees, expiry handling).",
+      "accessed_at": "2026-11-20T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "CA"
+        ],
+        "note": "Unreadable page — counts as no read (publication policy rule 6)."
+      },
+      "verification": "unknown"
+    }
+  ],
+  "links": {
+    "official_url": "https://blog.netcoins.com/pay/",
+    "affiliate": {
+      "program_id": "netcoins-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-20T06:05:00Z",
+    "last_auto_check_at": "2026-11-20T06:05:00Z"
+  },
+  "changelog": [
+    {
+      "date": "2026-11-20T06:05:00Z",
+      "field": "*",
+      "reason": "Initial record from Netcoins' official pages (Netcoins Pay product page on blog.netcoins.com, help-centre 'Fees and card limits' article, exchange fees page); the Mastercard Cardholder Agreement renders an empty JavaScript shell and was not read. Single read — second read ≥ 24 h later required before publication. Unknown: monthly/inactivity fee (product page says no annual account fees; no fee row), delivery fee, top-up (card draws from the Netcoins account), spend-time conversion (CAD balance vs crypto sale not stated), minimum age, rewards cap/terms. Note: netcoins.com/netcoins-pay now redirects to the app page without card content and the main site navigation does not surface the card — product continuity to be checked at the second read.",
+      "evidence": [
+        "ev-netcoins-pay-page",
+        "ev-netcoins-fees-limits",
+        "ev-netcoins-fees-page",
+        "ev-netcoins-cardholder-agreement"
+      ],
+      "actor": "research-run"
+    }
+  ],
+  "editorial": {
+    "summary": "Canadian prepaid Mastercard issued by KOHO Financial Inc. for Netcoins customers (all provinces except Quebec), virtual and physical, funded from the Netcoins account. No card, activation or purchase fee, free ATM withdrawals (operator fees aside), 1.5% on foreign-currency transactions, and 1% back in Bitcoin on every purchase (earned in CAD, converted monthly). $8,000 per day at POS, $2,000 at ATMs.",
+    "good_for": [
+      "Netcoins customers outside Quebec who want a simple 1% Bitcoin reward on everyday CAD spending",
+      "Users who want free domestic ATM withdrawals and Apple/Google/Samsung Pay on a prepaid card"
+    ],
+    "not_for": [
+      "Quebec residents and anyone outside Canada",
+      "Corporate accounts (not available)",
+      "Users who need the full terms before applying: the cardholder agreement could not be read by the fetcher"
+    ],
+    "watch_outs": [
+      "The official product page lives on blog.netcoins.com; netcoins.com/netcoins-pay now shows the Netcoins App page with no card content — confirm the card is still open to new applicants at the second read.",
+      "No rewards terms published: cap, exclusions and the monthly BTC conversion date are unknown.",
+      "Monthly/inactivity, delivery and replacement fees are not in the fee table and are treated as unknown, not free.",
+      "Whether spending triggers a crypto sale (with Netcoins' undisclosed spread) or draws a CAD balance is not stated."
+    ]
+  }
+}
