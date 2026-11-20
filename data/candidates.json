@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "entries": [
     {
       "provider": "Wirex",
@@ -939,7 +939,7 @@
         "global"
       ],
       "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-20: retried — web search still returns only directories (cryptocards.so, cryptoslate, cryptocardhub), Product Hunt/press; no official domain indexed; fetcher cannot reach the operator's pages."
     },
     {
       "provider": "SolCard",
@@ -1037,7 +1037,7 @@
       "last_seen": "2026-10-28",
       "priority": -3,
       "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-20: retried — web search still returns only directories (cryptocards.so, cryptoslate, cryptocardhub), Product Hunt/press; no official domain indexed; fetcher cannot reach the operator's pages."
     },
     {
       "provider": "UTORG",
@@ -2395,15 +2395,19 @@
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official affiliate programme (coinspot.com.au/affiliate: 30%/15%/5% of net trading fees over 3 years) + $10 BTC referral programme",
+      "status": "validated",
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-16",
-      "priority": 2,
+      "last_seen": "2026-11-20",
+      "priority": 0,
       "regions_hint": [
         "AU (directory)"
       ],
-      "discovery_note": "Finder AU lists it with an affiliate 'Go to site' link (Finder disclosure: referral fees possible) — check for an official publisher programme"
+      "discovery_note": "Finder AU lists it with an affiliate 'Go to site' link (Finder disclosure: referral fees possible) — check for an official publisher programme",
+      "regions": [
+        "AU"
+      ],
+      "note": "2026-11-20: record data/cards/coinspot-card.json (validated). Australian residents only (PDS 29 Apr 2026; Terms cl. 6); issuer EML Payment Solutions Limited; digital-wallet card (Apple/Google/Samsung Pay). Unknown: monthly fee (PDS cell unreadable), conversion fee at spend (PDS: 'normal trading fee', rate unmapped), ATM. Affiliate: data/affiliate/coinspot-affiliate.json."
     },
     {
       "provider": "CoinJar",
@@ -2439,15 +2443,20 @@
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "operator_named": true,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "official affiliate programme (netcoins.com/affiliate: $20–$40 CAD per qualified new customer) + $15 CAD referral programme",
+      "status": "validated",
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-16",
-      "priority": 2,
+      "last_seen": "2026-11-20",
+      "priority": 0,
       "regions_hint": [
         "CA (directory)"
       ],
-      "discovery_note": "HelloSafe page last modified 2023-07; it says 'limited availability (Quebec)' and 'accepted where Visa is accepted' despite the Mastercard name — check whether the product still exists"
+      "discovery_note": "HelloSafe page last modified 2023-07; it says 'limited availability (Quebec)' and 'accepted where Visa is accepted' despite the Mastercard name — check whether the product still exists",
+      "regions": [
+        "CA"
+      ],
+      "needs_browser_read": true,
+      "note": "2026-11-20: record data/cards/netcoins-prepaid-mastercard.json (validated). Product still marketed on blog.netcoins.com/pay (netcoins.com/netcoins-pay now shows the app page); Canada excl. Quebec; issuer KOHO Financial Inc. (Mastercard, not Visa as HelloSafe said); fees from help-centre article 4418288709140. Cardholder agreement (netcoins.app) is a JS shell → browser read needed. Affiliate: data/affiliate/netcoins-affiliate.json."
     },
     {
       "provider": "Shakepay",

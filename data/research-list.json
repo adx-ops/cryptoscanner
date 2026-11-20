@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-19.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-20.",
   "target": {
     "min": 15,
     "max": 50
@@ -334,6 +334,21 @@
       "status": "validated",
       "record": "data/cards/fold-bitcoin-credit-card.json",
       "note": "Validated 2026-11-19 from Fold's official pages (Cardholder Agreement v3 and Rewards Program Terms v3, both effective 2026-10-01; product and pricing pages; support articles). US citizens/permanent residents 18+; issuer Celtic Bank (Visa); unsecured credit, APR 20.49–29.49% variable; no annual or foreign transaction fee; 1.5% BTC uncapped; Reserve Boost 1.75–5% on first $5,000/month with $15k–$100k Fold Reserve. Contradiction: undated support rewards article still describes DCA tiers/$2,000 cap/pay-in-bitcoin bonus — dated terms modelled. Unknown: delivery, cash advance/ATM, KYC documents, state exclusions, mobile wallets. Affiliate programme on Impact recorded: data/affiliate/fold-affiliate.json (identified, hypothesis-level). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "CoinSpot",
+      "product": "CoinSpot Mastercard (Australia)",
+      "status": "validated",
+      "record": "data/cards/coinspot-card.json",
+      "note": "Validated 2026-11-20 from CoinSpot's official pages (Mastercard PDS dated 29 Apr 2026, product page, Terms of Use, fees page, help-centre articles). Australian residents 18+ with a fully verified account and 2FA; issuer EML Payment Solutions Limited; prepaid Mastercard used via Apple/Google/Samsung Pay, sells nominated crypto to AUD at spend. Issue/replacement nil; FX 2.99%; dispute $27.50; $7,000/transaction and /day; no rewards. Unknown: monthly fee (PDS 'Account Keeping Fees' cell unreadable; product page says no annual fees), conversion fee at spend (PDS: CoinSpot's 'normal trading fee'; fees page 1% instant / 0.1% market, mapping not stated), ATM availability/fee, inactivity, KYC document list (verification article unreadable this run), physical card not confirmed. Affiliate programme recorded: data/affiliate/coinspot-affiliate.json (identified). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "Netcoins",
+      "product": "Netcoins Prepaid Mastercard / Netcoins Pay (Canada)",
+      "status": "validated",
+      "record": "data/cards/netcoins-prepaid-mastercard.json",
+      "needs_browser_read": true,
+      "note": "Validated 2026-11-20 from Netcoins' official pages (Netcoins Pay page on blog.netcoins.com, help-centre 'Fees and card limits', exchange fees page). Canadian residents except Quebec, verified account; issuer KOHO Financial Inc. (Mastercard); virtual + physical; Apple/Google/Samsung Pay. New card/activation/purchases/ATM free (operator fees aside); FX 1.5%; $8,000/day POS, $2,000/day ATM, $10,000 total; 1% back in BTC (earned in CAD, converted monthly). Unknown: monthly/inactivity, delivery, top-up, conversion at spend, minimum age, rewards cap. Cardholder agreement (netcoins.app/mastercard-cardholder-agreement) is a JS shell → needs_browser_read. netcoins.com/netcoins-pay now shows the app page: check product continuity at second read. Affiliate programme recorded: data/affiliate/netcoins-affiliate.json (identified). Second read ≥ 24 h required."
     }
   ],
   "no_kyc_track": {
@@ -344,7 +359,7 @@
         "claim": "no ID; $10 issuance; 3–5% top-up fees (third-party)",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: search returns only directories (cryptoslate, cryptocardhub, cryptocards.so, baltex); no official WaldenPay domain indexed — fetcher cannot reach it. Browser session needed.",
+        "note": "2026-11-11: search returns only directories (cryptoslate, cryptocardhub, cryptocards.so, baltex); no official WaldenPay domain indexed — fetcher cannot reach it. Browser session needed. | 2026-11-20: retried — search returns only directories and press; no official domain indexed; browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -407,7 +422,7 @@
         "claim": "$90 virtual / $500 physical one-time",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: search returns only cryptocards.so pages; no official Agora Cards domain indexed — fetcher cannot reach it. Browser session needed.",
+        "note": "2026-11-11: search returns only cryptocards.so pages; no official Agora Cards domain indexed — fetcher cannot reach it. Browser session needed. | 2026-11-20: retried — search returns only directories and press; no official domain indexed; browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -461,5 +476,5 @@
       }
     ]
   },
-  "updated": "2026-11-19"
+  "updated": "2026-11-20"
 }

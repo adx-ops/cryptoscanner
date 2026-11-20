@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "coinspot-affiliate",
+  "provider_id": "coinspot",
+  "program_name": "CoinSpot Affiliate Program",
+  "legal_entity": "Not stated on the affiliate page; CoinSpot is Casey Block Services Pty Ltd (ABN 19 619 574 186, AFSL 562554) per the Mastercard product page and PDS.",
+  "program_url": "https://www.coinspot.com.au/affiliate",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "website",
+    "social"
+  ],
+  "application_conditions": "Open to CoinSpot members who refer new users ('Get Started' button; no application form details on the page). 'SMSF Accounts are not eligible to participate in the Affiliate Program due to legislative restrictions.' Participation implies acceptance of the 'Affiliate Terms and Conditions' (no URL extracted).",
+  "our_status": "identified",
+  "paid_action": "Net trading fees collected from referred members: '1% of AUD instant Buy/Sell for Bitcoin', '1% of AUD instant Buy/Sell for other Cryptocurrencies', '0.5% of the Trades between different Cryptocurrencies (including Bitcoin)'. Card spend is not named as a paid action.",
+  "validation_conditions": "Referred member must be verified (the commission clock runs from verification). Other conditions not stated.",
+  "commission": {
+    "model_note": "'We will pay you 30%* of the net fees we collect' from referred members for the first 12 months after their verification, then 15% for months 12–24 and 5% for months 24–36. The table has a 'Minimum amount' column with no values shown. 'Our fees and the commissions paid, are subject to change.'",
+    "percent": 30,
+    "tiers_note": "30% (0–12 months) / 15% (12–24 months) / 5% (24–36 months) from the referred member's verification.",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "revenue_share": {
+    "included_products": "Instant buy/sell fees and crypto-to-crypto trade fees of referred members. Nothing on the page covers the CoinSpot Mastercard or its FX/trading fees at spend.",
+    "duration_note": "Three years from the referred member's verification, on a declining scale.",
+    "exclusions": "SMSF accounts cannot participate. Market-order (0.1%) and OTC fees are not listed in the fee base on the page."
+  },
+  "payout": {
+    "threshold": "Not stated ('Minimum amount' column empty)",
+    "method": "Not stated",
+    "frequency": "'You will receive a payment for member transactions by the 15th of each month.'",
+    "holdbacks_note": "Not stated; Affiliate Terms and Conditions not read (no URL extracted)."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Separate customer Referral Program (coinspot.com.au/referrals): referrer and referee each receive $10 AUD worth of Bitcoin once after the referee's first AUD deposit; referrer must hold a verified account. Countries not stated; CoinSpot's platform is for Australian residents only. Nobody contacted, no application made.",
+  "allowed_countries_note": "Not stated on the affiliate page. CoinSpot's Terms of Use say the platform is not offered to persons residing outside Australia, so referrals are effectively Australian.",
+  "evidence": [
+    {
+      "url": "https://www.coinspot.com.au/affiliate",
+      "title": "Affiliate Program | CoinSpot",
+      "accessed_at": "2026-11-20T05:41:00Z",
+      "excerpt": "'We will pay you 30%* of the net fees we collect'; 30% / 15% / 5% over 0–12 / 12–24 / 24–36 months from the referred member's verification; fee base 1% AUD instant buy/sell and 0.5% crypto-to-crypto trades; 'payment for member transactions by the 15th of each month'; SMSF accounts excluded; Affiliate Terms and Conditions referenced without URL. Undated."
+    },
+    {
+      "url": "https://www.coinspot.com.au/referrals",
+      "title": "Referrals | CoinSpot",
+      "accessed_at": "2026-11-20T05:41:00Z",
+      "excerpt": "'Refer a friend to CoinSpot and you will both receive $10 worth of Bitcoin* after they complete their first AUD deposit'; 'You must hold a verified account to claim your reward'; unlimited referrals; one code per new user. Undated."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Official publisher-style programme exists (revenue share on exchange trading fees, declining over three years). It does not pay on card usage. The attribution mechanism (link/code) is implied by the referral mechanics but not spelled out on the affiliate page — status hypothesis. Commissions never influence ranking."
+}

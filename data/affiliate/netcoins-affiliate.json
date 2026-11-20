@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "netcoins-affiliate",
+  "provider_id": "netcoins",
+  "program_name": "Netcoins Affiliate Program (Canada)",
+  "legal_entity": "Not stated on the affiliate page; the site footer names Netcoins Inc. (FINTRAC MSB M15560893), owned by Surge Digital Inc. (TSXV: SRGE).",
+  "program_url": "https://netcoins.com/affiliate",
+  "type": "cpa",
+  "allowed_channels": [
+    "website",
+    "social"
+  ],
+  "application_conditions": "'Apply to become an affiliate below!' — Google Forms application reviewed by the Netcoins team; applicants must be at least 18 (or the age of majority) and hold 'a verified Netcoins account in good standing'; approved affiliates sign 'the Affiliate Agreement' before receiving a link or code. The form asks whether the applicant resides in Canada or the US.",
+  "our_status": "identified",
+  "paid_action": "Valid referral: a new customer who completes KYC, funds the account (at least 'typically $100 CAD') and trades at least 'typically $100 CAD' within '7 days'. Card orders are not a paid action.",
+  "validation_conditions": "KYC completed, funding and trade of about $100 CAD each within 7 days (page wording 'typically').",
+  "commission": {
+    "model_note": "'fixed referral commissions based on your monthly tier performance': Tier 1 $20 per user (0–10 users/month), Tier 2 $30 (11–20), Tier 3 $40 (21+). Referred users also receive '$10 for free on us'.",
+    "amount": 20,
+    "currency": "CAD",
+    "tiers_note": "$20 / $30 / $40 CAD per valid referral depending on the number of referred users in the month (0–10 / 11–20 / 21+).",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "Not stated",
+    "method": "Not stated",
+    "frequency": "Not stated",
+    "holdbacks_note": "Not stated; the Affiliate Agreement is named but not linked. The footer links a 'Referral TOS' (netcoins.com/referral-tos) not read in this run."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "No affiliate platform named (direct programme). The Netcoins Prepaid Mastercard is not mentioned on the affiliate page. Separate customer Referral Program (netcoins.com/referral-program): when the referred friend verifies, funds and trades at least $100, 'you each receive $15 in CAD' to the Netcoins cash balance; no referral limit. Nobody contacted, no application made.",
+  "allowed_countries_note": "Not stated; the application form asks for Canada or US residence. The card itself is for Canadian residents outside Quebec.",
+  "evidence": [
+    {
+      "url": "https://netcoins.com/affiliate",
+      "title": "Crypto Affiliate Program in Canada | Netcoins",
+      "accessed_at": "2026-11-20T06:01:00Z",
+      "excerpt": "'fixed referral commissions based on your monthly tier performance': $20 per user (0–10 users/month), $30 (11–20), $40 (21+); valid referral = new customer completing KYC, funding 'typically $100 CAD' and trading 'typically $100 CAD' within '7 days'; apply via Google Forms, sign the Affiliate Agreement; 18+ with a verified Netcoins account in good standing. Undated (footer ©2024)."
+    },
+    {
+      "url": "https://netcoins.com/referral-program",
+      "title": "Crypto Referral Program Canada | Netcoins",
+      "accessed_at": "2026-11-20T06:01:00Z",
+      "excerpt": "'Invite a friend to Netcoins. When they verify their account, fund it, and trade at least $100, you each receive $15 in CAD. There is no limit on how many friends you can refer.' Full conditions in the referral program terms (Referral TOS). Undated."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Official publisher-style programme exists (fixed CAD commission per qualified new customer, tiered by monthly volume). It does not pay on card usage. Commissions never influence ranking."
+}
