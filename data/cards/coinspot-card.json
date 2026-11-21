@@ -16,7 +16,7 @@
   },
   "network": "mastercard",
   "category": "prepaid",
-  "record_status": "validated",
+  "record_status": "needs_review",
   "product_status": "active",
   "is_demo": false,
   "form_factors": [
@@ -184,7 +184,7 @@
       "title": "CoinSpot Mastercard Product Disclosure Statement (Part A General Information, Part B Terms and Conditions incl. Fees and Charges), dated 29 April 2026",
       "source_type": "official_terms",
       "excerpt": "'Your Card is a prepaid, reloadable Mastercard' issued by EML Payment Solutions Limited (AFSL 404131); CoinSpot = Casey Block Services Pty Ltd. Fees s.14.6: issue Nil, replacement Nil, FX 2.99%, disputed transaction $27.50, plus CoinSpot's 'normal trading fee' on the sale (no amount). Limits s.14.8: $7,000 per POS transaction and per day, 25 tx/day. Eligibility s.7: 18+, Australian resident.",
-      "accessed_at": "2026-11-20T05:34:00Z",
+      "accessed_at": "2026-11-21T06:28:00Z",
       "effective_from": "2026-04-29",
       "expires_at": null,
       "scope": {
@@ -203,7 +203,7 @@
       "title": "CoinSpot Mastercard — product page",
       "source_type": "official_terms",
       "excerpt": "'The CoinSpot Mastercard is a prepaid debit card'; 'no startup or annual fees'; 'up to five wallets to link to your card'; 'instant real-time conversion of cryptocurrency to Australian currency ($)'; '460+ cryptocurrencies'; 'a fully verified CoinSpot account and have 2FA enabled'; Apple Pay and Google Pay; refunds return the AUD value, not the coins. Issued by EML, distributed by CoinSpot.",
-      "accessed_at": "2026-11-20T05:33:00Z",
+      "accessed_at": "2026-11-21T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -220,7 +220,7 @@
       "title": "CoinSpot Terms of Use (clauses 6 and 48–65 on the Card)",
       "source_type": "official_terms",
       "excerpt": "Cl. 6: 'not intended to be offered or made available to any person who resides outside of Australia'. Cl. 48: 'The CoinSpot Mastercard (\"Card\") is a prepaid, reloadable, Mastercard card.' Cl. 49: issued by EML 'on the basis set out in these Terms of Use and the Product Disclosure Statement'. Cl. 51: 'not a credit or charge card, and is not in any way connected to your bank account'. Undated.",
-      "accessed_at": "2026-11-20T05:44:00Z",
+      "accessed_at": "2026-11-21T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -237,7 +237,7 @@
       "title": "CoinSpot fee structure (exchange fees page)",
       "source_type": "pricing_page",
       "excerpt": "Trading: Market Orders 0.1%, OTC 0.1%, 'Instant Buy, Sell & Swap' 1%, Take Profit/Stop/Limit 1%, Recurring Buy 1%. AUD deposits: PayID free, direct deposit free, cash 2.5%, card free, PayPal free; AUD bank withdrawal free, PayPal withdrawal 2%. The page does not describe the Mastercard (navigation link only); no FX or card-spend fee line. Undated.",
-      "accessed_at": "2026-11-20T05:40:00Z",
+      "accessed_at": "2026-11-21T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -255,7 +255,7 @@
       "title": "CoinSpot Mastercard Digital Wallet FAQ (CoinSpot help centre)",
       "source_type": "help_center",
       "excerpt": "Covers Apple Pay (iPhone models with Face ID), Google Pay (Android with NFC), Samsung Pay ('Yes, you can set up your CoinSpot Mastercard using Samsung Pay') and smartwatch payments; 'Your mobile phone number and email address will need to be the same as the one on your CoinSpot account.' No mention of a physical card, ATM, fees or limits. Undated.",
-      "accessed_at": "2026-11-20T05:39:00Z",
+      "accessed_at": "2026-11-21T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -271,7 +271,7 @@
       "title": "How safe is CoinSpot Mastercard? (CoinSpot help centre)",
       "source_type": "help_center",
       "excerpt": "'Within the CoinSpot App there are a number of security features available, from card freezing, to spending limits'; unauthorised transactions: disable the card in the app immediately. No limit amounts, fees or eligibility stated. Undated.",
-      "accessed_at": "2026-11-20T05:39:00Z",
+      "accessed_at": "2026-11-21T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -287,7 +287,7 @@
       "title": "What is Extended Verification (CoinSpot help centre)",
       "source_type": "help_center",
       "excerpt": "'we request for users to complete extended verification upon reaching the AUD Deposit or Withdrawal threshold'; 'The threshold will vary depending on your account type'; completion upgrades the account to 'High Value' status. Threshold amounts and document types not stated. Undated.",
-      "accessed_at": "2026-11-20T05:44:00Z",
+      "accessed_at": "2026-11-21T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -304,7 +304,7 @@
       "title": "Verification Photo (CoinSpot help centre)",
       "source_type": "help_center",
       "excerpt": "After 'the initial verification process', a Verification Photo of the user holding a note (CoinSpot, date, full name, 4-digit code, signature) is needed to 'increase your daily deposit limit from $10,000 per 24hr to' $100,000. JPEG or PNG. The initial verification documents are not described on this page. Undated.",
-      "accessed_at": "2026-11-20T05:44:00Z",
+      "accessed_at": "2026-11-21T06:28:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -326,7 +326,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-11-20T05:46:00Z",
-    "last_auto_check_at": "2026-11-20T05:46:00Z"
+    "last_auto_check_at": "2026-11-21T06:28:00Z"
   },
   "changelog": [
     {
@@ -344,6 +344,24 @@
         "ev-coinspot-verification-photo"
       ],
       "actor": "research-run"
+    },
+    {
+      "date": "2026-11-21T06:28:00Z",
+      "field": "record_status",
+      "from": "validated",
+      "to": "needs_review",
+      "reason": "Second independent read on 2026-11-21 (24 h 42 min after the first) of all eight evidence pages. One recorded value differs between the two reads: variants[0].kyc.thresholds_note and evidence ev-coinspot-verification-photo (https://coinspot.zendesk.com/hc/en-us/articles/333757020895-Verification-Photo-Tips-Unique-Code) — first read: the Verification Photo raises the daily AUD deposit limit 'from $10,000 per 24hr to $100,000'; second read: 'from $2,000 per 24hr' to '$100,000 per 24hr' (page footnote: each AUD deposit method has its own 24 h limit). Old value kept in place, not overwritten; account-level deposit limit, not a card fee or the card's KYC stage. Every other material value confirmed, unchanged: PDS dated 29 April 2026 — issuer EML Payment Solutions Limited ABN 30 131 436 532 AFSL 404131, distributor Casey Block Services Pty Ltd (CoinSpot) AFSL 562554, 'prepaid, reloadable Mastercard', s.7 eligibility 18+ / Australian resident / verified CoinSpot account (no citizenship or visa wording), s.14.6 Card Issue Fee Nil, Replacement Card Fee Nil, Account Keeping Fees cell still blank in the extraction, FX 2.99 %, disputed transaction $27.50, CoinSpot's 'normal trading fee' on the sale without a rate, s.14.7 Mastercard rate + 2.99 %, s.14.8 $7,000 per POS transaction and per day, 25 transactions/day, contactless under $100, 24 h suspension after three wrong PINs, Device Wallets Apple Pay / Google Pay / Samsung Pay, no ATM fee or availability stated, telephone-order contradiction still present; product page 'no startup or annual fees', five wallets, '460+ cryptocurrencies', fully verified account + 2FA, Apple Pay and Google Pay only, EML/CoinSpot footer, AUD refund wording, 'prepaid debit card'; Terms cl. 6 (Australian residents only), 48, 49, 51 unchanged, undated; fees page Market 0.1 %, OTC 0.1 %, Instant Buy/Sell/Swap 1 %, TP/SL 1 %, Recurring 1 %, deposits PayID/direct/card/PayPal free, cash 2.5 %, bank withdrawal free, PayPal withdrawal 2 %, no Mastercard line; Digital Wallet FAQ (Samsung Pay yes, phone/email must match the account), Security FAQ (card freezing, spending limits, no amounts), Extended Verification (threshold varies by account type, High Value status) unchanged. Non-material observations for the reviewer: PDS s.14.1 defines the PAN as 'embossed on the front of the Card' and a 'PIN Mailer' letter 'sent to each cardholder including the Card' — a physical card seems to exist although no page describes ordering it (record models virtual only); PDS sections 14.13–14.24 and Terms clauses after 87 were again only available as a fetcher summary (possible inactivity/ATM/expiry terms unread). To publish: confirm which deposit-limit figure the help article states (browser read), correct the note, and set record_status back to validated → published.",
+      "evidence": [
+        "ev-coinspot-pds",
+        "ev-coinspot-card-page",
+        "ev-coinspot-terms",
+        "ev-coinspot-fees-page",
+        "ev-coinspot-wallet-faq",
+        "ev-coinspot-security-faq",
+        "ev-coinspot-extended-verification",
+        "ev-coinspot-verification-photo"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
