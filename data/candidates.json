@@ -1,6 +1,6 @@
 {
-  "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory.",
-  "updated": "2026-11-20",
+  "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory. Discovery 2026-11-23: priority recomputed for every entry with the header formula (+3 only when affiliate_hint names a publisher programme; +1 for referral/ambassador); +2 region bonus not applied (every region in src/lib/regions.ts already has a published card).",
+  "updated": "2026-11-23",
   "entries": [
     {
       "provider": "Wirex",
@@ -11,18 +11,24 @@
         "cryptoslate.com/crypto-cards/europe 2026-11-02",
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "coingape.com/crypto-cards/best 2026-11-02",
-        "defillama.com/crypto-cards/united-states 2026-11-09"
+        "defillama.com/crypto-cards/united-states 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 5,
+      "cross_listing_count": 7,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
-        "global"
+        "global",
+        "ZA (directory)",
+        "PH (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -32,7 +38,8 @@
       "seen_in": [
         "cardpilled 2026-09-23",
         "cryptoslate 2026-10-22",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": true,
@@ -40,9 +47,12 @@
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 5,
-      "blocked_reason": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule."
+      "blocked_reason": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule.",
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Goblin",
@@ -86,17 +96,21 @@
       "slug": "pinto-pay",
       "seen_in": [
         "cardpilled 2026-09-23",
-        "cryptoslate 2026-10-22"
+        "cryptoslate 2026-10-22",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": true,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-29",
-      "priority": 3,
-      "blocked_reason": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule."
+      "last_seen": "2026-11-23",
+      "priority": 5,
+      "blocked_reason": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule.",
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Coinbase",
@@ -154,21 +168,27 @@
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16",
         "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16",
-        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)"
+        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
+        "cryptocardhub.com/blog/best-crypto-cards-in-brazil-2026 2026-11-23",
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 7,
+      "cross_listing_count": 8,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "affiliate_hint_note": "Official affiliate programme at ether.fi/affiliates (pays on card activation + $100 spend), read 2026-11-02",
       "regions_hint": [
         "global",
         "UAE (directory)",
-        "CA (directory)"
+        "CA (directory)",
+        "BR (directory)",
+        "PH (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -179,19 +199,26 @@
         "brief 2026-10-26",
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "cryptocardhub.com/cards/singapore 2026-11-09",
-        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)"
+        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "thisdaylive.com/2026/05/17/best-crypto-cards-available-in-nigeria-in-2026 2026-11-23",
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 4,
+      "cross_listing_count": 7,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "affiliate_hint_note": "Site menu lists an 'Affiliate Program' and a 'Payment Partnership Program'; Europe help section has 'How to use a referral code'. Not read 2026-11-03. referral link seen on kkinvesting.io 2026-11-16",
       "regions_hint": [
-        "CA (directory)"
+        "CA (directory)",
+        "ZA (directory)",
+        "NG (directory)",
+        "PH (directory)"
       ]
     },
     {
@@ -201,18 +228,22 @@
       "seen_in": [
         "brief 2026-10-26",
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
-        "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16"
+        "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only ($20/$10 in-app)",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
-        "UAE (directory)"
+        "UAE (directory)",
+        "ZA (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -355,19 +386,25 @@
       "slug": "oobit-crypto-card",
       "seen_in": [
         "cryptocards.so 2026-10-28 (sponsored list)",
-        "crypto.news/best-crypto-cards 2026-11-02"
+        "crypto.news/best-crypto-cards 2026-11-02",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "personal referral only (in-app code); no publisher programme found 2026-11-06",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "record": "data/cards/oobit-crypto-card.json",
       "needs_browser_read": true,
-      "validation_note": "Validated 2026-11-06 from 7 official pages; fee page, Terms of Use, Referral Terms and support country article unreadable to the fetcher (needs browser read)."
+      "validation_note": "Validated 2026-11-06 from 7 official pages; fee page, Terms of Use, Referral Terms and support country article unreadable to the fetcher (needs browser read).",
+      "regions_hint": [
+        "ZA (directory)",
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Revolut",
@@ -376,7 +413,8 @@
       "seen_in": [
         "cryptocards.so 2026-10-28 (sponsored list)",
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
@@ -384,12 +422,13 @@
       "affiliate_hint": "official publisher affiliate programme (Impact or Rakuten — the two official pages disagree); commissions not public; crypto promotions need Revolut approval",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
         "UK",
         "EEA",
-        "US (directories)"
+        "US (directories)",
+        "NG (directory)"
       ],
       "discovery_note": "DeFiLlama lists a US prepaid card (Lead Bank); likely out of scope as a bank card with crypto feature",
       "note": "2026-11-11 (research run, not researched this run): revolut.com/crypto/crypto-card/ (\"Pay with crypto\") is an official product page for a Revolut crypto card — free virtual card (physical with delivery fee) that spends from the crypto balance, \"no exchange fees\" on card payments, \"fair usage fees may still apply\", UK-referenced limits (ATM £3,000/24h, £100,000 per transaction), Apple Pay / Google Pay; country versions exist (en-IE, en-ES, en-IT, en-LT, en-BE…). The \"Metal Card\" entry from US directories is a bank card tier, not the crypto card. Next run: research the Revolut crypto card (UK + EEA variants) from revolut.com and help.revolut.com (crypto-payments articles), and ask David whether a bank-issued card with a pay-with-crypto feature is in scope. | 2026-11-13 (research run): validated as data/cards/revolut-crypto-card.json (slug revolut-crypto-card — the \"Metal Card\" directory label is a bank-plan tier, not the product) from revolut.com (UK + LT product pages), help.revolut.com (card fees, set-up, fair usage), the Revolut Ltd and RDAEL retail crypto fee schedules and the Standard plan fee pages (UK, IE). Card conversion cost recorded as unknown: the RDAEL schedule says both \"no percentage-based or minimum fee when spending from a crypto card\" and \"exchanges made via the card incur normal exchange fees\"; product page says \"without exchange fees\". Issuer/network not stated on crypto pages. Affiliate programme recorded (data/affiliate/revolut-affiliate.json). Scope decision for David still open: bank/EMI card with a pay-with-crypto feature.",
@@ -408,7 +447,9 @@
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "list shared by David in chat 2026-11-02 (X handles)",
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 5,
       "no_kyc_claim": false,
@@ -416,11 +457,13 @@
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "affiliate_hint_note": "Official Rewards Addendum (2026-09-26) + help centre: personal referral programme only (0.25–1% of referred spend in XPL, $300 Platinum upgrade bonus in spend credit); no publisher programme found 2026-11-03. Record data/affiliate/plasma-one-referral.json.",
       "regions_hint": [
-        "US"
+        "US",
+        "ZA (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -429,7 +472,9 @@
       "slug": "bitmart-card",
       "seen_in": [
         "cryptocards.so 2026-10-28 (sponsored list)",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
@@ -437,10 +482,14 @@
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 4,
       "needs_browser_read": true,
-      "blocked_reason": "Blocked 2026-11-12: bitmart.com returns a client error to the fetcher for the product page, the 'BitMart Card Fees and Limits' article (39825138622619), the Terms and Conditions (39454573575195), the VIP/cashback article (44876034128411) and the academy page; only the 'BitMart Card User Guide' (39936364508059) was readable — Visa, USD, USDT-funded, virtual + physical, KYC Lv.2, 'zero issuance fee (virtual)' and 'zero annual fee' flagged as promotional, ATM 'withdrawal fees may apply', restricted countries unnamed, 'functions like a credit card' vs 'debit card'. Fee schedule, T&Cs and country list unobtainable → retry with a browser session. BitMart runs an official affiliate programme (affiliate.bitmart.com), not read."
+      "blocked_reason": "Blocked 2026-11-12: bitmart.com returns a client error to the fetcher for the product page, the 'BitMart Card Fees and Limits' article (39825138622619), the Terms and Conditions (39454573575195), the VIP/cashback article (44876034128411) and the academy page; only the 'BitMart Card User Guide' (39936364508059) was readable — Visa, USD, USDT-funded, virtual + physical, KYC Lv.2, 'zero issuance fee (virtual)' and 'zero annual fee' flagged as promotional, ATM 'withdrawal fees may apply', restricted countries unnamed, 'functions like a credit card' vs 'debit card'. Fee schedule, T&Cs and country list unobtainable → retry with a browser session. BitMart runs an official affiliate programme (affiliate.bitmart.com), not read.",
+      "regions_hint": [
+        "ZA (directory)",
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Binance",
@@ -450,7 +499,8 @@
         "cryptocards.so 2026-10-28 (sponsored list)",
         "dailycoin.com/best-5-crypto-cards-in-latin-america 2026-11-09",
         "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16",
-        "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)"
+        "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 4,
       "no_kyc_claim": false,
@@ -458,14 +508,15 @@
       "affiliate_hint": "unknown",
       "status": "rejected",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "discovery_note": "Still listed by DailyCoin; Binance announced the end of its card programmes in 2023 — check whether any Binance Card is open before research",
       "rejected_reason": "Rejected 2026-11-13: official Binance post (binance.com/en/feed/post/1439877) announces the cessation of card services in the EEA — all Binance Visa Debit Cards issued under the EEA programme unusable after 20 December 2023 00:00 UTC, replacement orders closed 6 December 2023. The only other binance.com page found (square/post/583697) is an undated educational article listing 31 European countries for a card that no longer exists. No open Binance Card programme found on binance.com by search (standard). Re-open only if an official page announces a new card.",
       "note": "2026-11-13: product closed (see rejected_reason); still listed by DailyCoin and cryptocards.so — directory staleness.",
       "regions_hint": [
         "UAE (directory)",
-        "AU (directory)"
+        "AU (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -475,7 +526,9 @@
       "seen_in": [
         "cryptocards.so 2026-10-28 (sponsored list)",
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
@@ -483,10 +536,12 @@
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 6,
       "regions_hint": [
-        "global"
+        "global",
+        "PH (directory)",
+        "NG (directory)"
       ],
       "blocked_reason": "Blocked 2026-11-09: docs.solayer.org Emerald Card fee, FAQ and overview pages read. Card issuer not named ('the card provider'); application 'currently required' to be a Community Sale participant or airdrop recipient — public access 'Coming Soon' (fee page), no date; no supported-country list (only a 20-US-state + ~95-country restricted list); card type, custody and limits not stated. Fees readable (activation $10 / free for Community Sale, top-up 1%, $0.15 per USD transaction, $0.10 + 1.5% non-USD). Fails documentation rule (issuer undisclosed, product status unclear). Re-check when public applications open."
     },
@@ -517,7 +572,8 @@
       "seen_in": [
         "cryptocards.so 2026-10-28 (sponsored list)",
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
@@ -525,10 +581,11 @@
       "affiliate_hint": "none found 2026-11-09 (Rewards Terms: no referral programme; no publisher programme page)",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
-        "global"
+        "global",
+        "ZA (directory)"
       ],
       "record": "data/cards/avalanche-card.json",
       "needs_browser_read": true,
@@ -585,7 +642,8 @@
       "product": "Slash Platinum Card",
       "slug": "slash-platinum-card",
       "seen_in": [
-        "cryptocards.so 2026-10-28 (sponsored list)"
+        "cryptocards.so 2026-10-28 (sponsored list)",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
@@ -593,15 +651,19 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Karma",
       "product": "Karma Card",
       "slug": "karma-card",
       "seen_in": [
-        "cryptocards.so 2026-10-28 (sponsored list)"
+        "cryptocards.so 2026-10-28 (sponsored list)",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
@@ -609,8 +671,11 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Kolo",
@@ -621,7 +686,9 @@
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "cryptocards.so/en/crypto-cards/nigeria 2026-11-09",
         "cryptocardhub.com/cards/singapore 2026-11-09",
-        "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16"
+        "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 4,
       "no_kyc_claim": false,
@@ -629,12 +696,14 @@
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 8,
       "needs_browser_read": true,
       "blocked_reason": "Blocked 2026-11-06: operator Hardline Holding Limited (Kazakhstan, AIFC FinTech Lab AFSA-G-LA-2024-0011) and card services 'in collaboration with Signify Holdings Inc' per Terms of Use v3.0.0 (2026-07-01); card issuer bank unnamed; no card fee schedule readable (homepage gives no figures; help-centre Card Overview / Cashback Program / EUR limits / Cash Withdrawal and promo.kolo.xyz/bitcoin-cashback not reachable by the fetcher); only a restricted-country list (USD card 454905 / EUR card 442601, EUR card without ATM). Retry with a browser session; David to decide whether a Kazakhstan-licensed operator is in scope for the EEA catalogue.",
       "regions_hint": [
-        "UAE (directory)"
+        "UAE (directory)",
+        "ZA (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -642,23 +711,28 @@
       "product": "IZIPAY Virtual Crypto Card",
       "slug": "izipay-virtual-crypto-card",
       "seen_in": [
-        "cryptocards.so 2026-10-28 (sponsored list)"
+        "cryptocards.so 2026-10-28 (sponsored list)",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 1,
-      "no_kyc_claim": false,
+      "no_kyc_claim": true,
       "operator_named": null,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Vepay",
       "product": "Vepay Card",
       "slug": "vepay-card",
       "seen_in": [
-        "cryptocards.so 2026-10-28 (sponsored list)"
+        "cryptocards.so 2026-10-28 (sponsored list)",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
@@ -666,15 +740,19 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Prive",
       "product": "Prive Card",
       "slug": "prive-card",
       "seen_in": [
-        "cryptocards.so 2026-10-28 (sponsored list)"
+        "cryptocards.so 2026-10-28 (sponsored list)",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
@@ -682,8 +760,11 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Amulets",
@@ -709,7 +790,10 @@
         "cryptocards.so 2026-10-28 (sponsored list)",
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptocards.so/en/crypto-cards/nigeria 2026-11-09",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
@@ -717,13 +801,17 @@
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 6,
       "regions_hint": [
-        "global"
+        "global",
+        "ZA (directory)",
+        "PH (directory)",
+        "NG (directory)"
       ],
       "needs_browser_read": true,
-      "blocked_reason": "Blocked 2026-11-09: the only official documents found (Terms of Service — Avici Card, last updated 2024-12-04, and Avici Card Terms USA) are hosted on aviciii.notion.site, which is client-rendered and returns only the Notion shell to the fetcher; avici.money has no indexed product, fee or terms page. Issuer, entity, fees and countries not obtainable this run. Retry with a browser session."
+      "blocked_reason": "Blocked 2026-11-09: the only official documents found (Terms of Service — Avici Card, last updated 2024-12-04, and Avici Card Terms USA) are hosted on aviciii.notion.site, which is client-rendered and returns only the Notion shell to the fetcher; avici.money has no indexed product, fee or terms page. Issuer, entity, fees and countries not obtainable this run. Retry with a browser session.",
+      "discovery_note": "Discovery 2026-11-23: cryptocards.so notes an Aug 2026 Rain contract exploit on Solana card balances; Avici says users were refunded (ambcrypto, crypto.news). Not verified officially."
     },
     {
       "provider": "Nocturne",
@@ -781,16 +869,21 @@
       "seen_in": [
         "brief 2026-10-26",
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
-        "coingape.com/crypto-cards/best 2026-11-02"
+        "coingape.com/crypto-cards/best 2026-11-02",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "none seen",
       "status": "published",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
-      "priority": 0
+      "last_seen": "2026-11-23",
+      "priority": 0,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "Discovery 2026-11-23: cryptocards.so Nigeria page states the Gnosis Pay consumer card 'closes on December 20, 2026' (notice dated 2026-09-21 per the page); WebSearch shows The Defiant, Crypto Briefing, crypto.news and spendnode reporting the same shutdown and a legacy-card data breach. NOT verified on gnosispay.com — second-read/research run must read the official notice before changing record_status of the PUBLISHED card."
     },
     {
       "provider": "Crypto.com",
@@ -805,20 +898,24 @@
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16",
         "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)",
-        "hellosafe.ca/en/investing/crypto/crypto-cards 2026-11-16 (page last modified 2023-07)"
+        "hellosafe.ca/en/investing/crypto/crypto-cards 2026-11-16 (page last modified 2023-07)",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 9,
+      "cross_listing_count": 10,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
         "UAE (directory)",
         "AU (directory)",
-        "CA (directory)"
+        "CA (directory)",
+        "ZA (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -851,20 +948,23 @@
         "crypto.news/best-crypto-cards 2026-11-02",
         "dailycoin.com/best-5-crypto-cards-in-latin-america 2026-11-09",
         "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)",
-        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)"
+        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
+        "thisdaylive.com/2026/05/17/best-crypto-cards-available-in-nigeria-in-2026 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 6,
+      "cross_listing_count": 8,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
         "LATAM",
         "AU (directory)",
-        "CA (directory)"
+        "CA (directory)",
+        "NG (directory)"
       ],
       "discovery_note": "DailyCoin lists a LATAM programme (AR, BR, MX, PE); distinct from the EEA card"
     },
@@ -877,19 +977,23 @@
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "coingape.com/crypto-cards/best 2026-11-02",
         "cryptoslate.com/crypto-cards/usa-crypto-cards 2026-11-09",
-        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)"
+        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 5,
+      "cross_listing_count": 7,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
         "global",
-        "CA (directory)"
+        "CA (directory)",
+        "ZA (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -901,20 +1005,24 @@
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16",
         "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16",
-        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)"
+        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 5,
+      "cross_listing_count": 7,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
         "UAE (directory)",
         "IN (directory)",
-        "CA (directory)"
+        "CA (directory)",
+        "PH (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -925,18 +1033,22 @@
         "cardpilled 2026-09-23",
         "cryptoslate 2026-10-22",
         "cryptoslate.com/crypto-cards/usa-crypto-cards 2026-11-09",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": true,
       "operator_named": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
-      "priority": 1,
+      "last_seen": "2026-11-23",
+      "priority": 3,
       "regions_hint": [
-        "global"
+        "global",
+        "ZA (directory)",
+        "NG (directory)"
       ],
       "needs_browser_read": true,
       "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-20: retried — web search still returns only directories (cryptocards.so, cryptoslate, cryptocardhub), Product Hunt/press; no official domain indexed; fetcher cannot reach the operator's pages."
@@ -968,7 +1080,8 @@
       "seen_in": [
         "cardpilled 2026-09-23",
         "cryptoslate 2026-10-22",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": true,
@@ -976,10 +1089,13 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-12",
+      "last_seen": "2026-11-23",
       "priority": 1,
       "needs_browser_read": true,
-      "note": "2026-11-12: official site (bingcard.com) not returned by web search; only a Google Sites privacy policy (operator \"GINBE LTD UK\", no fees) is indexed — fetcher cannot reach the product pages (provenance). See data/research-list.json no_kyc_track."
+      "note": "2026-11-12: official site (bingcard.com) not returned by web search; only a Google Sites privacy policy (operator \"GINBE LTD UK\", no fees) is indexed — fetcher cannot reach the product pages (provenance). See data/research-list.json no_kyc_track.",
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "OffGrid",
@@ -1007,7 +1123,8 @@
       "seen_in": [
         "cardpilled 2026-09-23",
         "cryptoslate 2026-10-22",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": true,
@@ -1015,10 +1132,13 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": -1,
       "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-19: retried (WebSearch \"Trocador prepaid cards virtual card fees trocador.app\"): only directories (cryptocardhub, cryptocards.so, bitcoin.com) and a Substack; trocador.app not returned — fetcher cannot reach it. Browser session needed."
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-19: retried (WebSearch \"Trocador prepaid cards virtual card fees trocador.app\"): only directories (cryptocardhub, cryptocards.so, bitcoin.com) and a Substack; trocador.app not returned — fetcher cannot reach it. Browser session needed.",
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Agora",
@@ -1070,7 +1190,8 @@
       "seen_in": [
         "cardpilled 2026-09-23",
         "cryptoslate 2026-10-22",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": true,
@@ -1078,13 +1199,16 @@
       "affiliate_hint": "official affiliate page (home.kripicard.com/affiliate) — commission not published; referral 'Custom Fees' and ambassador pages exist",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "needs_browser_read": false,
       "note": "2026-11-16 (research run): validated from home.kripicard.com (fees, terms 13 Jun 2026, FAQ, no-KYC pages, affiliate). $5/card, 4% + $1 per load, $0 monthly, 0% FX; $25k/day, $150k/month; operator Uweb3 Management BR (Brazil); issuer not disclosed. Email-only entry tier stated without thresholds → KYC 'unknown' (decision for David). Eligibility unknown.",
       "record": "data/cards/kripicard.json",
       "regions": [
         "Global — no country list published; sanctions denial; USD billing"
+      ],
+      "regions_hint": [
+        "ZA (directory)"
       ]
     },
     {
@@ -1132,7 +1256,8 @@
       "seen_in": [
         "cardpilled 2026-09-23",
         "cryptoslate 2026-10-22",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": true,
@@ -1140,10 +1265,13 @@
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": -1,
       "blocked_reason": "Blocked 2026-11-13 (no-KYC track, re-assessment under the 2026-11-09 rule): kardpay.gitbook.io/kardpay/about-kardpay/terms-and-conditions still returns \"does not exist\"; the Manage Cards page states only a 4% top-up fee (USDC wallet), $15 minimum top-up, virtual cards, limits shown in-app without figures, and no identity-verification stage, threshold or limit values. Fails inclusion rule (1): verification stage/limits not stated on official pages. Re-open if Kardpay publishes terms or a fee/verification page.",
-      "note": "2026-11-13: re-assessed, blocked (see blocked_reason)."
+      "note": "2026-11-13: re-assessed, blocked (see blocked_reason).",
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Uphold",
@@ -1221,17 +1349,23 @@
       "slug": "zypto-card",
       "seen_in": [
         "coingape.com/crypto-cards/best 2026-11-02",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-09",
-      "priority": 4,
+      "last_seen": "2026-11-23",
+      "priority": 6,
       "needs_browser_read": true,
-      "blocked_reason": "Blocked 2026-11-12: zypto.com and help.zypto.com return a client error to the fetcher for every page tried (Premium Physical & Virtual Cards FAQ 9630445, /personal/crypto-cards/, blog posts). Nothing readable → fees, issuer, countries and KYC unobtainable. Official referral programme pages exist (zypto.com/blog/zypto-app/zypto-referral-program/, Rewards Hub) — unread. Retry with a browser session."
+      "blocked_reason": "Blocked 2026-11-12: zypto.com and help.zypto.com return a client error to the fetcher for every page tried (Premium Physical & Virtual Cards FAQ 9630445, /personal/crypto-cards/, blog posts). Nothing readable → fees, issuer, countries and KYC unobtainable. Official referral programme pages exist (zypto.com/blog/zypto-app/zypto-referral-program/, Rewards Hub) — unread. Retry with a browser session.",
+      "regions_hint": [
+        "ZA (directory)",
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Bitget",
@@ -1254,15 +1388,21 @@
       "product": "MEXC Global Card",
       "slug": "mexc-card",
       "seen_in": [
-        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 6,
+      "regions_hint": [
+        "PH (directory)",
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Gate",
@@ -1278,7 +1418,7 @@
       "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-16",
-      "priority": 4,
+      "priority": 0,
       "regions_hint": [
         "IN (directory)"
       ],
@@ -1295,18 +1435,20 @@
       "seen_in": [
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)",
-        "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16"
+        "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "affiliate_hint": "official KuCoin Affiliate Program (kucoin.com/affiliate, up to 60% of trading fees) — KuCard not mentioned as a paid action",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "regions_hint": [
         "AU (directory)",
-        "IN (directory)"
+        "IN (directory)",
+        "NG (directory)"
       ],
       "operator_named": true,
       "record": "data/cards/kucard.json",
@@ -1326,14 +1468,17 @@
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16",
-        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)"
+        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocardhub.com/blog/best-crypto-cards-in-brazil-2026 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 4,
+      "cross_listing_count": 5,
       "no_kyc_claim": false,
       "affiliate_hint": "Ambassador Program (help centre 2026-06-14: 20–50% direct, 10% indirect commissions on card purchase/spend) → data/affiliate/tria-ambassador.json",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "record": "data/cards/tria-card.json",
       "needs_browser_read": true,
@@ -1346,7 +1491,10 @@
       "validation_note": "Validated 2026-11-09 from docs.tria.so Card Terms International (fees effective 2025-10-31) + USA and 7 help-centre articles. Issuer Nimbus, LLC (intl) / Third National (US); operator Threely Dimensions Inc. Marketing 'zero FX/deposit fees' contradicts the terms (up to 3%+1% FX, up to 1% deposit) → terms modelled. docs.tria.so/card-cashback-terms not fetchable (provenance) → browser read. No country list.",
       "regions_hint": [
         "UAE (directory)",
-        "CA (directory)"
+        "CA (directory)",
+        "ZA (directory)",
+        "BR (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -1372,16 +1520,20 @@
       "product": "1inch Card",
       "slug": "1inch-card",
       "seen_in": [
-        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-23",
       "discovery_note": "Directory says KYC handled by Baanx; issuer not named",
-      "priority": 2
+      "priority": 4,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Xplace",
@@ -1392,21 +1544,27 @@
         "list shared by David in chat 2026-11-02 (X handles)",
         "cryptocards.so/en/crypto-cards/nigeria 2026-11-09",
         "cryptocardhub.com/cards/singapore 2026-11-09",
-        "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16"
+        "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocardhub.com/blog/best-crypto-cards-in-brazil-2026 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 4,
       "no_kyc_claim": false,
       "affiliate_hint": "none found 2026-11-06 (AppsFlyer install link only)",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "operator_named": true,
       "record": "data/cards/xplace-card.json",
       "needs_browser_read": true,
       "validation_note": "Validated 2026-11-06 from homepage + membership page; docs.x.place Card Terms (US / International) and the-card/cashback/borrowing sub-pages unreadable to the fetcher (needs browser read).",
       "regions_hint": [
-        "UAE (directory)"
+        "UAE (directory)",
+        "ZA (directory)",
+        "BR (directory)",
+        "NG (directory)"
       ]
     },
     {
@@ -1416,18 +1574,22 @@
       "seen_in": [
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "defillama.com/crypto-cards/philippines 2026-11-23"
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 6,
       "operator_named": true,
       "regions_hint": [
-        "global"
+        "global",
+        "ZA (directory)",
+        "PH (directory)"
       ],
       "needs_browser_read": true,
       "blocked_reason": "Blocked 2026-11-10: the only official pages are docs.hyperbeat.org (GitBook) — the Hyperbeat Pay page is a product overview (virtual/physical Visa card, Direct Pay or Credit mode, spend USDC/USDT or borrow against the portfolio) with no fee schedule, no terms, no issuer, no KYC statement and no country list; the docs index (llms.txt) has no fees/terms/eligibility page; the legal page could not be fetched (provenance). Ordering runs in app.hyperbeat.org/pay (client-rendered). Retry with a browser session; fees may live only in the app."
@@ -1437,15 +1599,19 @@
       "product": "Ledger CL Card",
       "slug": "ledger-cl-card",
       "seen_in": [
-        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 4,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "Pionex",
@@ -1469,17 +1635,23 @@
       "seen_in": [
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "cryptocardhub.com/cards/singapore 2026-11-09",
-        "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16"
+        "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocardhub.com/blog/best-crypto-cards-in-brazil-2026 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-18",
-      "priority": 4,
+      "last_seen": "2026-11-23",
+      "priority": 6,
       "regions_hint": [
-        "UAE (directory)"
+        "UAE (directory)",
+        "ZA (directory)",
+        "BR (directory)",
+        "NG (directory)"
       ],
       "needs_browser_read": true,
       "note": "2026-11-18: research attempt — web search ('Payy card crypto official site fees', 'payy.link card', 'site:payy.link') returns only directories (cryptocards.so, cryptocardhub, spendnode, polymart), App Store listings (Payy Wallet, Polybase) and a Bankless article; no official Payy domain or fee/terms page surfaced, so the fetcher cannot reach the operator's pages (provenance). Not blocked: locate the official site and read fees, eligibility, KYC and terms in a browser session. | 2026-11-19: skipped by the research run (needs_browser_read set 2026-11-18; no new search)."
@@ -1505,18 +1677,20 @@
       "slug": "tuyo-card",
       "seen_in": [
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
-        "defillama.com/crypto-cards/united-states 2026-11-09"
+        "defillama.com/crypto-cards/united-states 2026-11-09",
+        "defillama.com/crypto-cards/philippines 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "referral (ambassador programme, in-app code)",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "operator_named": true,
       "regions_hint": [
-        "global"
+        "global",
+        "PH (directory)"
       ],
       "record": "data/cards/tuyo-card.json",
       "regions": [
@@ -1532,19 +1706,21 @@
       "slug": "jupiter-global-card",
       "seen_in": [
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
-        "defillama.com/crypto-cards/united-states 2026-11-09"
+        "defillama.com/crypto-cards/united-states 2026-11-09",
+        "defillama.com/crypto-cards/philippines 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "personal referral only ($10 per qualified referral); Jupiter Global Ambassador codes exist, programme not described",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "operator_named": true,
       "discovery_note": "Directory says issuer is Rain or DCS by country, KYC via Sumsub",
       "priority": 0,
       "regions_hint": [
-        "global"
+        "global",
+        "PH (directory)"
       ],
       "record": "data/cards/jupiter-global-card.json",
       "regions": [
@@ -1668,18 +1844,22 @@
       "slug": "exa-card",
       "seen_in": [
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "defillama.com/crypto-cards/philippines 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "personal referral only (10 USDC, lifetime cap 100 USDC, paid advertising prohibited)",
       "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 0,
       "operator_named": true,
       "regions_hint": [
-        "global"
+        "global",
+        "ZA (directory)",
+        "PH (directory)"
       ],
       "discovery_note": "DeFiLlama lists issuer Third National, 47 countries by tier",
       "record": "data/cards/exa-card.json",
@@ -1783,17 +1963,19 @@
       "product": "Ruvo Card",
       "slug": "ruvo-card",
       "seen_in": [
-        "defillama.com/crypto-cards/united-states 2026-11-09"
+        "defillama.com/crypto-cards/united-states 2026-11-09",
+        "defillama.com/crypto-cards/philippines 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 2,
       "regions_hint": [
-        "global"
+        "global",
+        "PH (directory)"
       ],
       "discovery_note": "DeFiLlama: 222 countries, issuer not named"
     },
@@ -1858,31 +2040,39 @@
       "product": "Cardano Emerald Visa Card",
       "slug": "cardano-emerald-card",
       "seen_in": [
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-09"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-09",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-23",
       "priority": 2,
-      "operator_named": true
+      "operator_named": true,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "AIX Pay",
       "product": "AIX Pay Card",
       "slug": "aix-pay-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Bit Store",
@@ -1904,15 +2094,19 @@
       "product": "CoinZoom Card",
       "slug": "coinzoom-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Crydit",
@@ -1934,60 +2128,78 @@
       "product": "Decaf Card",
       "slug": "decaf-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Ethena Pay Spend",
       "product": "Ethena Pay Spend Card",
       "slug": "ethena-pay-spend-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "defillama.com/crypto-cards/philippines 2026-11-23"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 4,
+      "regions_hint": [
+        "ZA (directory)",
+        "PH (directory)"
+      ]
     },
     {
       "provider": "Exworth",
       "product": "Exworth Card",
       "slug": "exworth-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "FG",
       "product": "FG Card",
       "slug": "fg-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Fiat24",
@@ -2009,45 +2221,57 @@
       "product": "Kazepay Card",
       "slug": "kazepay-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "KemyCard",
       "product": "KemyCard",
       "slug": "kemycard",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Keytom",
       "product": "Keytom Card",
       "slug": "keytom-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Kite Stable",
@@ -2069,15 +2293,19 @@
       "product": "LinkPay Card",
       "slug": "linkpay-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Morph",
@@ -2127,30 +2355,38 @@
       "product": "Oppi Wallet Card",
       "slug": "oppi-wallet-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "PayWide",
       "product": "PayWide Card",
       "slug": "paywide-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "PlasBit",
@@ -2158,17 +2394,19 @@
       "slug": "plasbit-card",
       "seen_in": [
         "cryptocardhub.com/cards/singapore 2026-11-09",
-        "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16"
+        "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-23",
       "priority": 4,
       "regions_hint": [
-        "IN (directory)"
+        "IN (directory)",
+        "ZA (directory)"
       ],
       "needs_browser_read": true,
       "blocked_reason": "plasbit.com/card: Fees & Limits tables are rendered client-side (tabs) and empty for the fetcher; no separate official fee page indexed. Only official facts readable: USD/EUR cards, top-up min $10 with $0.5 fee, 53 excluded residence countries (incl. US, JP, BR, CN, HK, IL), entity PlasBit Sp z.o.o. / PlasBit Ltd (two names). plasbit.com/affiliate is a card product for media buyers, not a publisher programme.",
@@ -2194,45 +2432,57 @@
       "product": "Simple.app Card",
       "slug": "simple-app-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Spritz",
       "product": "Spritz Card",
       "slug": "spritz-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Stealths",
       "product": "Stealths Card",
       "slug": "stealths-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Stella",
@@ -2285,30 +2535,40 @@
       "product": "Tangem Pay Card",
       "slug": "tangem-pay-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 4,
+      "regions_hint": [
+        "ZA (directory)",
+        "NG (directory)"
+      ]
     },
     {
       "provider": "THORWallet",
       "product": "THORWallet Card",
       "slug": "thorwallet-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 4,
+      "regions_hint": [
+        "NG (directory)"
+      ]
     },
     {
       "provider": "UR",
@@ -2330,45 +2590,57 @@
       "product": "Volet Card",
       "slug": "volet-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Winity Life",
       "product": "Winity Life Card",
       "slug": "winity-life-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Xhype",
       "product": "Xhype Card",
       "slug": "xhype-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
     },
     {
       "provider": "Zebec",
@@ -2473,7 +2745,7 @@
       "status": "validated",
       "first_seen": "2026-11-16",
       "last_seen": "2026-11-16",
-      "priority": 4,
+      "priority": 0,
       "regions_hint": [
         "CA (directory)"
       ],
@@ -2498,7 +2770,7 @@
       "status": "blocked",
       "first_seen": "2026-11-16",
       "last_seen": "2026-11-18",
-      "priority": 3,
+      "priority": 0,
       "regions_hint": [
         "IN (directory)"
       ],
@@ -2545,6 +2817,484 @@
         "EEA, UK, CH, US, CA, AU, JP, SG, IN, UA, TR, AE and others (official account-opening list, 67 countries)"
       ],
       "discovery_note": "Fiat multi-currency Mastercard (UAB ZEN.COM, Lithuanian EMI) whose EUR balance can be topped up in BTC/ETH/USDC (converted at top-up, min 15 EUR). New plan line-up Good (free) / Better / Best / ZEN replaces Free/Gold/Platinum/Pro per help centre (undated), but the dated fee schedule (26 May 2026) still lists the old plans. DECISION for David: is a fiat card with crypto top-up only (no crypto balance, no crypto cashback) in scope? If yes, research once a fee schedule for the new plans is published. Affiliate: zen.com/promo-code page exists (unread); no publisher programme found."
+    },
+    {
+      "provider": "Clapp",
+      "product": "Clapp Card",
+      "slug": "clapp-card",
+      "seen_in": [
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
+    },
+    {
+      "provider": "Girin",
+      "product": "Girin Card",
+      "slug": "girin-card",
+      "seen_in": [
+        "cryptocardhub.com/cards/south-africa 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "ZA (directory)"
+      ]
+    },
+    {
+      "provider": "Bitmama",
+      "product": "Bitmama Virtual Card",
+      "slug": "bitmama-virtual-card",
+      "seen_in": [
+        "thisdaylive.com/2026/05/17/best-crypto-cards-available-in-nigeria-in-2026 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "Virtual dollar card marketed to Nigerian/African users (thisdaylive); issuer not named."
+    },
+    {
+      "provider": "Yellow Card",
+      "product": "Yellow Card Virtual",
+      "slug": "yellow-card-virtual",
+      "seen_in": [
+        "thisdaylive.com/2026/05/17/best-crypto-cards-available-in-nigeria-in-2026 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "Virtual card for Nigerian customers / across Africa (thisdaylive); issuer not named."
+    },
+    {
+      "provider": "BasedApp",
+      "product": "BasedApp Card",
+      "slug": "basedapp-card",
+      "seen_in": [
+        "cryptocardhub.com/blog/best-crypto-cards-in-brazil-2026 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "BR (directory)"
+      ],
+      "discovery_note": "cryptocardhub marks it Available for Brazil; no ATM withdrawals."
+    },
+    {
+      "provider": "Bitunix",
+      "product": "Bitunix Card",
+      "slug": "bitunix-card",
+      "seen_in": [
+        "defillama.com/crypto-cards/philippines 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "PH (directory)"
+      ],
+      "discovery_note": "defillama PH: no-annual-fee tier."
+    },
+    {
+      "provider": "PayitFast",
+      "product": "PayitFast Card",
+      "slug": "payitfast-card",
+      "seen_in": [
+        "defillama.com/crypto-cards/philippines 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "PH (directory)"
+      ],
+      "discovery_note": "defillama PH: 189 countries, Third National Bank named as bank; 2.2% non-USD fee."
+    },
+    {
+      "provider": "Amp Pay",
+      "product": "Amp Black Card",
+      "slug": "amp-black-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Tap",
+      "product": "Tap Card",
+      "slug": "tap-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Trustee",
+      "product": "Trustee Card",
+      "slug": "trustee-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Bitnob",
+      "product": "Bitnob Virtual Dollar Card",
+      "slug": "bitnob-virtual-dollar-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so: only card on the Nigeria page said to hold NGN. cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Solflare",
+      "product": "Solflare Card",
+      "slug": "solflare-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Azura",
+      "product": "Azura Ads Card",
+      "slug": "azura-ads-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": -3,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "Ad-spend virtual card; cryptocards.so KYC column 'None'. Probably out of scope (business advertising card). cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "SiraPay",
+      "product": "SiraPay Free Plan Card",
+      "slug": "sirapay-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": -3,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so: KYC 'email only'. cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Bitsa",
+      "product": "Bitsa Card (Pro Plan)",
+      "slug": "bitsa-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "PST.NET",
+      "product": "PST.NET Platinum Advertisement Card",
+      "slug": "pst-net-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "Advertisement virtual card; probably out of scope (business ad-spend card). cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "WhiteBIT",
+      "product": "WhiteBIT Nova Card",
+      "slug": "whitebit-nova-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Brahma",
+      "product": "Brahma Spend Card",
+      "slug": "brahma-spend-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Pyra",
+      "product": "Pyra Card",
+      "slug": "pyra-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "RivoCard",
+      "product": "RivoCard Starter Virtual Card",
+      "slug": "rivocard",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": -3,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so KYC column 'None'. cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Choise.com",
+      "product": "Choise.com Card",
+      "slug": "choise-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Bitypay",
+      "product": "Bitypay Visa Infinite Card",
+      "slug": "bitypay-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "Pay3",
+      "product": "Pay3 Black Card",
+      "slug": "pay3-black-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": 2,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so: KYC 'phone'. cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "The Bitcoin Company",
+      "product": "The Bitcoin Company US Visa Reward Card",
+      "slug": "bitcoin-company-visa-reward-card",
+      "seen_in": [
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": true,
+      "operator_named": false,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "priority": -3,
+      "regions_hint": [
+        "NG (directory)"
+      ],
+      "discovery_note": "cryptocards.so highlight: KYC 'email only'; name says US. cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
     }
   ]
 }
