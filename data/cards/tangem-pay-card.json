@@ -1,0 +1,570 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tangem-pay-card",
+  "slug": "tangem-pay-card",
+  "name": "Tangem Pay",
+  "brand": "Tangem Pay",
+  "provider_id": "tangem",
+  "issuer": {
+    "name": "Rain (Visa Principal Member); programme operated by Paera LLC",
+    "status": "verified",
+    "evidence": [
+      "ev-tangem-pay-page",
+      "ev-tangem-pay-tariffs"
+    ]
+  },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "hybrid",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_spend",
+    "supported_assets_note": "The main assets stay in the non-custodial Tangem Wallet; 'you can only spend the balance loaded on the card'. The card balance 'is held in a smart contract account that you control' (product page FAQ) and USDC/USDT can be withdrawn back to the wallet at any time. Top-up routes: swap any stablecoin from the Tangem Wallet; send USDC or USDT on Polygon, Base, BNB Smart Chain or Arbitrum to the deposit address; USD by ACH or FedWire from a US bank account. At payment 'the equivalent stablecoin amount is deducted', settled in USD via Visa. Custody modelled as hybrid: user-controlled smart-contract balance inside a programme run by Paera LLC (onboarding, KYC and AML per the tariff).",
+    "evidence": [
+      "ev-tangem-pay-page",
+      "ev-tangem-pay-tariffs"
+    ]
+  },
+  "variants": [
+    {
+      "id": "tangem-pay-us-intl",
+      "region_label": "US and select countries (LATAM, APAC, MEA, Africa) — list not published",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "Product page FAQ: 'Tangem Pay is available in the US and in select countries across LATAM, APAC, MEA, and Africa. Not all countries or US states are supported.' No country list is published; eligibility is checked by entering the country during in-app onboarding; requirements: a Tangem Wallet, 'a valid government-issued ID, and a home address in a supported country'. Tariff footnote 3: 'Eligibility is set by country and region of residence. Availability is shown in the mobile app.' Europe (EEA/UK) is not named among the regions. 'Additional countries planned (subject to eligibility)' lists none. Legal agreements referenced at paera.com/tangempay (plain text, not read).",
+        "evidence": [
+          "ev-tangem-pay-page",
+          "ev-tangem-pay-tariffs"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "other"
+        ],
+        "thresholds_note": "Product page FAQ: identity verification 'is required for all cardholders as a legal compliance requirement'; 'Identity verification is handled by Rain, the card issuer' with Sumsub (ID verification) and Elliptic (transaction monitoring); a valid government-issued ID and a home address in a supported country are required. Tariff: Paera LLC 'is responsible for onboarding, KYC and AML'. Document list beyond the ID (selfie, proof of address) not stated. If verification is rejected, the Tangem Wallet 'is not affected'.",
+        "stages_note": "Verification during in-app onboarding before the card is issued ('within 5 minutes in most cases … up to 48 hours'). Tariff footnote 1: limits depend on 'verification level'.",
+        "evidence": [
+          "ev-tangem-pay-page",
+          "ev-tangem-pay-tariffs"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "basic",
+          "name": "Basic",
+          "access": {
+            "type": "free",
+            "note": "Plan fee $0; up to 3 cards; Visa Platinum programme.",
+            "status": "verified",
+            "evidence": [
+              "ev-tangem-pay-tariffs",
+              "ev-tangem-pay-page",
+              "ev-tangem-pay-tiers-blog"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Tariff (as of 2026-10-08), virtual cards: '1st card issuing fee $0'; 'additional card issuing fee $5'; 'replacement card fee $1'. Product page: 'Free virtual card'. Physical card: see delivery.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 28.82,
+                "currency": "USD"
+              },
+              "min": {
+                "amount": 28.82,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 79.94,
+                "currency": "USD"
+              },
+              "conditions": "Physical card delivery. Tariff (2026-10-08): row '$28.82 – $79.94', footnote 4: '$0 for the first card, then $28.82 – $79.94' — 'Delivery costs depend on the logistics company's rates and the recipient's address. The exact cost is shown in the app when ordering.' Tiers blog (2026-08-06) gave different figures: Basic $17.44 (US), $15.63–$63.45 (other countries); Plus first plastic card $0. The dated tariff governs; the lower bound of its range is modelled. Product page: physical card 'coming soon, subject to eligibility' while the FAQ says a plastic card can be chosen; 'Early Birds Edition' limited to the first 5,000 users.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-tiers-blog",
+                "ev-tangem-pay-page"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Basic 'Plan fee $0' (tariff 2026-10-08); product page 'Free'; blog 'Basic is free, with no monthly cost'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Non-USD purchases: tariff (as of 2026-10-08) 'Visa Exchange Rate' + 1.5%, rate 'set at processing time' and fluctuating (footnote 5). The tiers blog (2026-08-06) states 'FX fee 1%' for both tiers and the product page only 'Foreign exchange markups apply'. The dated tariff governs → 1.5% modelled.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-tiers-blog",
+                "ev-tangem-pay-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 4,
+              "period": "per_transaction",
+              "conditions": "ATM withdrawal fee 4% (tariff 2026-10-08, product page and tiers blog agree). Tariff: 'ATM maximum number and amount: 3 per 24 hours; $250 per time' (tier column unlabelled); footnote 2: domestic/international usage types 'may apply and determine the extra fees and limits'; ATM operator fees not addressed. Product page example: a $100 withdrawal on Plus deducts $102.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "fixed",
+              "amount": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Bank top-up (US bank account via the card's own routing/account number): incoming ACH $1, FedWire $11 (tariff 2026-10-08, Basic column; product page 'Onramp via bank details: $1 ACH / $11 FedWire'). Crypto top-up (USDC/USDT on Polygon, Base, BNB Smart Chain, Arbitrum, or swap from the Tangem Wallet): no Tangem Pay fee stated; 'Network fees apply when topping up via crypto'. Outgoing bank transfers: ACH $1, FedWire $11; on-chain withdrawal $0. The ACH figure is modelled.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 30,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Dispute fee $30 (tariff 2026-10-08). Additional virtual card $5, replacement card $1. 'Transaction fees $0' on purchases (tariff, virtual cards). Outgoing bank transfer ACH $1 / FedWire $11.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Product page tier table: Basic cashback 1%, monthly cashback cap $100; 'paid in USDC into the Tangem Pay account'; 'may vary by merchant category and region'; gambling, online casinos and liquor stores excluded as merchant categories. Tiers blog (2026-08-06) shows the same rate and cap but says 'Cashback arrives in a later app release'; the tariff PDF (2026-10-08) does not mention cashback. Live status of the cashback is therefore unconfirmed. Also advertised as 'coming soon' (not modelled): boosted cashback on the first $500 of spend (Basic 5%, Plus 10%, Prestige 15%) and a welcome bonus 'up to $75'.",
+              "description": "1% USDC cashback (Basic), cap $100/month",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog",
+                "ev-tangem-pay-tariffs"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "none",
+              "description": "Visa Platinum benefits (product page: extended warranty, price/purchase protection and auto rental 'No' / 'Not Insured' on Basic; airport lounge 'Paid').",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 10000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "Daily spending limit per card Basic: $10,000 (tariff 2026-10-08, product page, blog). Tariff footnote 1: limits 'may differ per cardholder' with risk profile, verification level and history. Annual limit per card $10,000,000; 100 transactions/day, 1000/month (tier columns unlabelled).",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "'3 per 24 hours; $250 per time' (tariff 2026-10-08, tier column unlabelled).",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "plus",
+          "name": "Plus",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 29.99,
+              "currency": "USD"
+            },
+            "period": "month",
+            "note": "$29.99/month; 'Free with $4,500 monthly spending or $65,000 in Yield Mode. Subject to eligibility.' Up to 5 cards; Visa Signature programme; blog (2026-08-06): 'currently waitlisted'.",
+            "status": "verified",
+            "evidence": [
+              "ev-tangem-pay-tariffs",
+              "ev-tangem-pay-page",
+              "ev-tangem-pay-tiers-blog"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Tariff (as of 2026-10-08), virtual cards: '1st card issuing fee $0'; 'additional card issuing fee $5'; 'replacement card fee $1'. Product page: 'Free virtual card'. Physical card: see delivery.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "fixed",
+              "amount": {
+                "amount": 28.82,
+                "currency": "USD"
+              },
+              "min": {
+                "amount": 28.82,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 79.94,
+                "currency": "USD"
+              },
+              "conditions": "Physical card delivery. Tariff (2026-10-08): row '$28.82 – $79.94', footnote 4: '$0 for the first card, then $28.82 – $79.94' — 'Delivery costs depend on the logistics company's rates and the recipient's address. The exact cost is shown in the app when ordering.' Tiers blog (2026-08-06) gave different figures: Basic $17.44 (US), $15.63–$63.45 (other countries); Plus first plastic card $0. The dated tariff governs; the lower bound of its range is modelled. Product page: physical card 'coming soon, subject to eligibility' while the FAQ says a plastic card can be chosen; 'Early Birds Edition' limited to the first 5,000 users.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-tiers-blog",
+                "ev-tangem-pay-page"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 29.99,
+                "currency": "USD"
+              },
+              "period": "month",
+              "conditions": "Plus 'Plan fee $29.99 / month' (tariff 2026-10-08; product page and blog agree). Product page: 'Free with $4,500 monthly spending or $65,000 in Yield Mode. Subject to eligibility.' Blog (2026-08-06): Plus 'is currently waitlisted'; the product page shows a 'Get Plus' button.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "Non-USD purchases: tariff (as of 2026-10-08) 'Visa Exchange Rate' + 1.5%, rate 'set at processing time' and fluctuating (footnote 5). The tiers blog (2026-08-06) states 'FX fee 1%' for both tiers and the product page only 'Foreign exchange markups apply'. The dated tariff governs → 1.5% modelled.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-tiers-blog",
+                "ev-tangem-pay-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "ATM withdrawal fee 2% (tariff 2026-10-08, product page and tiers blog agree). Tariff: 'ATM maximum number and amount: 3 per 24 hours; $250 per time' (tier column unlabelled); footnote 2: domestic/international usage types 'may apply and determine the extra fees and limits'; ATM operator fees not addressed. Product page example: a $100 withdrawal on Plus deducts $102.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Plus: incoming ACH and FedWire $0 (tariff 2026-10-08 Plus column; product page 'Onramp via bank details: $0'). Outgoing: $1 ACH / $11 FedWire. Crypto top-up: no Tangem Pay fee stated; network fees apply.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 30,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Dispute fee $30 (tariff 2026-10-08). Additional virtual card $5, replacement card $1. 'Transaction fees $0' on purchases (tariff, virtual cards). Outgoing bank transfer ACH $1 / FedWire $11.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 300,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Product page tier table: Plus cashback 2%, monthly cashback cap $300; 'paid in USDC into the Tangem Pay account'; 'may vary by merchant category and region'; gambling, online casinos and liquor stores excluded as merchant categories. Tiers blog (2026-08-06) shows the same rate and cap but says 'Cashback arrives in a later app release'; the tariff PDF (2026-10-08) does not mention cashback. Live status of the cashback is therefore unconfirmed. Also advertised as 'coming soon' (not modelled): boosted cashback on the first $500 of spend (Basic 5%, Plus 10%, Prestige 15%) and a welcome bonus 'up to $75'.",
+              "description": "2% USDC cashback (Plus), cap $300/month",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog",
+                "ev-tangem-pay-tariffs"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "none",
+              "description": "Visa Signature benefits: extended warranty, price protection, purchase protection, auto rental insurance, Visa Luxury Hotels (product page); airport lounge '2 free visits a year (coming soon)' — blog says 'two free Priority Pass visits per year'.",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 50000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "Daily spending limit per card Plus: $50,000 (tariff 2026-10-08, product page, blog). Tariff footnote 1: limits 'may differ per cardholder' with risk profile, verification level and history. Annual limit per card $10,000,000; 100 transactions/day, 1000/month (tier columns unlabelled).",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs",
+                "ev-tangem-pay-page",
+                "ev-tangem-pay-tiers-blog"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "'3 per 24 hours; $250 per time' (tariff 2026-10-08, tier column unlabelled).",
+              "status": "verified",
+              "evidence": [
+                "ev-tangem-pay-tariffs"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-tangem-pay-tariffs",
+      "url": "https://tangem.com/docs/en/tangem-visa-tariffs.pdf",
+      "title": "Terms, fees and limits for Tangem Pay Cards applicable as of October 8, 2026 (PDF)",
+      "source_type": "official_terms",
+      "excerpt": "'TANGEM PAY PROGRAM IS OPERATED BY PAERA LLC'. Basic | Plus: plan fee $0 | $29.99/month; cards 3 | 5; daily spend $10,000 | $50,000; ATM 4% | 2%, '3 per 24 hours; $250 per time'; ACH $1 | $0, FedWire $11 | $0; delivery '$0 for the first card, then $28.82 – $79.94'; virtual: 1st card $0, additional $5, replacement $1, transaction fees $0; FX 'Visa Exchange Rate' + 1.5%; dispute $30.",
+      "accessed_at": "2026-11-23T05:55:00Z",
+      "effective_from": "2026-10-08",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "PDF text extraction loses column alignment; several rows (annual limit, transaction counts, ATM count/amount, delivery, FX, bank transfers) are unlabelled by tier."
+      },
+      "verification": "verified",
+      "contradiction_note": "Delivery: main row '$28.82 – $79.94' vs footnote 4 '$0 for the first card, then $28.82 – $79.94'. FX 1.5% here vs 1% in the tiers blog (2026-08-06) — the dated tariff governs. No cashback or Prestige tier in the tariff although the product page advertises both."
+    },
+    {
+      "id": "ev-tangem-pay-page",
+      "url": "https://tangem.com/en/tangem-pay/",
+      "title": "Tangem Pay — The Visa Card for Your Crypto Wallet (product page, FAQ, tier table)",
+      "source_type": "pricing_page",
+      "excerpt": "'issued by Rain, a Visa Principal Member'; 'provided by Paera LLC'; 'available in the US and in select countries across LATAM, APAC, MEA, and Africa'; ID verification 'required for all cardholders'; Basic Free / Plus $29.99/month / Prestige $999/year (coming soon); cashback 1% / 2% / 4%, caps $100 / $300 / $1000 in USDC; ATM 4% / 2% / 1%; daily $10,000 / $50,000 / $100,000; Apple Pay, Google Pay.",
+      "accessed_at": "2026-11-23T05:57:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "FAQ 'There are no monthly or transaction fees' vs Plus plan fee $29.99/month. 'Free virtual card' and physical card 'coming soon, subject to eligibility' vs FAQ 'choose between a virtual card or a physical plastic card'. Prestige '$999/year' shown as '$83/month'. Earn/cashback features partly 'coming soon'."
+    },
+    {
+      "id": "ev-tangem-pay-tiers-blog",
+      "url": "https://tangem.com/en/blog/post/tangem-pay-tiers/",
+      "title": "Tangem Pay Tiers Explained: Basic, and Plus (Tangem blog, 2026-08-06)",
+      "source_type": "pricing_page",
+      "excerpt": "'Tangem Pay has two membership tiers.' Basic | Plus: plan fee $0 | $29.99/month; delivery $17.44 (US), $15.63–$63.45 (other) | $0 first plastic card; max cards 3 | 5; additional/replacement virtual $5; FX 1% | 1%; ATM 4% | 2%; daily limit $10,000 | $50,000; Visa Platinum | Signature; cashback 1% | 2%, caps $100 | $300; 'Cashback arrives in a later app release'; Plus 'is currently waitlisted'.",
+      "accessed_at": "2026-11-23T06:01:00Z",
+      "effective_from": "2026-08-06",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "Older than the tariff (2026-10-08): FX 1% vs 1.5%; delivery figures differ; two tiers vs three on the product page; Plus 'waitlisted' vs 'Get Plus' button; cashback 'later app release' vs presented as live on the product page."
+    },
+    {
+      "id": "ev-tangem-referral-program",
+      "url": "https://tangem.com/en/affiliates/",
+      "title": "Refer and earn with the Tangem referral program (Tangem AG)",
+      "source_type": "affiliate_program",
+      "excerpt": "Referral link or code generated in the Tangem app; 'Get paid when someone buys a Tangem Wallet via your referral link'; commission paid in USDT (TRC20) 'no later than 30 days after each purchase'; no percentage published; influencer application form (channels, subscribers); no mention of Tangem Pay.",
+      "accessed_at": "2026-11-23T06:01:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Programme of Tangem AG for hardware-wallet sales; the card programme is operated by Paera LLC."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://tangem.com/en/tangem-pay/",
+    "affiliate": {
+      "program_id": "tangem-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-23T06:01:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-23T06:05:00Z",
+      "field": "*",
+      "reason": "Initial record from 4 official pages read by the unattended research run (tariff PDF as of 2026-10-08 — governing; product page with FAQ and tier table; tiers blog 2026-08-06; Tangem referral programme page) — single read; a second independent read ≥ 24 h later is required before publication. Not read: Terms of Use PDF (tangem.com/docs/en/terms-of-service.pdf), the Paera legal agreements (paera.com/tangempay, no URL on the page), the help centre. Prestige tier ($999/year, 4% cashback, coming soon / waitlist) not modelled. Unknown: country list, KYC documents beyond the ID, whether cashback is live, exact delivery cost, ATM tier split, EEA/UK availability (not named). Contradictions FX 1% vs 1.5% and delivery figures recorded; tariff governs.",
+      "evidence": [
+        "ev-tangem-pay-tariffs",
+        "ev-tangem-pay-page",
+        "ev-tangem-pay-tiers-blog",
+        "ev-tangem-referral-program"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Visa card attached to the Tangem hardware wallet, issued by Rain and operated by Paera LLC (US). Available in the US and 'select countries' in LATAM, APAC, MEA and Africa — no list published, Europe not named. The card balance (USDC/USDT, user-controlled smart-contract account) is loaded from the wallet or by US bank transfer and spent in USD. Basic is free (ATM 4%, FX Visa rate + 1.5%, ACH top-up $1); Plus costs $29.99/month (ATM 2%, free bank top-ups, Visa Signature perks). Advertised cashback 1% / 2% in USDC with $100 / $300 monthly caps — the August blog said cashback would arrive in a later release and the October tariff does not mention it, so treat it as unconfirmed. KYC by Rain/Sumsub required for all cardholders.",
+    "good_for": [
+      "Tangem Wallet owners in the US or a supported LATAM/APAC/MEA/Africa country who want to spend stablecoins from a balance they control",
+      "US users who top up in dollars: ACH $1 (free on Plus) and the card settles in USD without FX"
+    ],
+    "not_for": [
+      "Residents of the EEA, UK or Switzerland — not named among the supported regions",
+      "Anyone without a Tangem hardware wallet: 'Tangem Pay can only be linked to a Tangem Wallet'",
+      "Frequent non-USD spenders: Visa rate + 1.5% FX on every foreign-currency purchase"
+    ],
+    "watch_outs": [
+      "Cashback status unconfirmed: product page lists 1% / 2%, blog (Aug 2026) says 'arrives in a later app release', tariff (Oct 2026) is silent.",
+      "FX fee 1.5% in the dated tariff vs 1% in the tiers blog; delivery cost ranges differ between documents and 'the exact cost is shown in the app'.",
+      "Physical card marked 'coming soon, subject to eligibility' on the product page; Plus 'currently waitlisted' per the blog.",
+      "Prestige ($999/year, 4% cashback, 1% ATM, lounges) is 'coming soon' — not modelled.",
+      "ATM: 3 withdrawals per 24 h, $250 each; operator fees not addressed; limits 'may differ per cardholder'.",
+      "Tangem AG (Zug) disclaims the card programme; disputes, verification and refunds go to Paera LLC (support@paera.com). The Paera legal agreements were not read.",
+      "Dispute fee $30; refunds can take 3–14 business days, up to 30 days."
+    ]
+  }
+}

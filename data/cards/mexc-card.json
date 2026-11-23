@@ -1,0 +1,689 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mexc-card",
+  "slug": "mexc-card",
+  "name": "MEXC Global Card / MEXC Card (APAC)",
+  "brand": "MEXC",
+  "provider_id": "mexc",
+  "issuer": {
+    "name": "not disclosed",
+    "status": "unknown",
+    "evidence": [
+      "ev-mexc-product-page",
+      "ev-mexc-press-release"
+    ]
+  },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_spend",
+    "supported_assets_note": "Funded in USDT: 'Transfer USDT to your Fiat account (buy USDT or deposit it from an external wallet or platform if needed)', then 'add funds to your card' from the My Card page (product page FAQ). MEXC News: the Global Card 'is funded with USDT but settles purchases through the Visa network'; Global users 'move funds from the Fiat Account to the card', APAC users 'may spend directly from the Fiat Account'. Fee schedule: the crypto conversion fee (0%) applies 'when crypto assets in your account are converted into fiat currency to complete a purchase' — conversion at spend.",
+    "evidence": [
+      "ev-mexc-product-page",
+      "ev-mexc-news-tenpaygo",
+      "ev-mexc-fee-schedule"
+    ]
+  },
+  "variants": [
+    {
+      "id": "mexc-global-card",
+      "region_label": "Global Card (supported regions, list not published)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "No country list is published on any page read. Press release: 'Eligible users in supported regions can apply through the official MEXC Global Card page.' The MEXC Learn article 'MEXC Card: Supported Countries, Restricted Regions & What KYC Actually Requires' exists (mexc.com/learn and mexc.co mirror) but both returned a client error to the fetcher. Every country is therefore 'to confirm'.",
+        "evidence": [
+          "ev-mexc-press-release",
+          "ev-mexc-product-page"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [
+          "id_document",
+          "other"
+        ],
+        "thresholds_note": "Press release (2026-08-31): 'After completing MEXC's advanced identity verification, users can begin the card application process, which takes approximately one to two minutes.' Documents and levels of 'advanced' verification are not itemised on the pages read; the support guide 'How to Apply for the MEXC Global Card' is a client-rendered shell for the fetcher.",
+        "stages_note": "Account KYC ('advanced') before the card application; then card application in the app. No separate card-level checks described.",
+        "evidence": [
+          "ev-mexc-press-release"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "MEXC Global Card",
+          "access": {
+            "type": "free",
+            "note": "No issuance or annual fee; cashback level follows the user's VVIP level (M-Score).",
+            "status": "verified",
+            "evidence": [
+              "ev-mexc-fee-schedule"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Fee schedule (2026-11-02): 'Virtual card issuance fee' 0 for both card types. Virtual card only — the ATM row reads 'Not applicable to virtual cards'; no physical card is mentioned on any page read.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Fee schedule (2026-11-02): 'Annual fee' 0, 'Inactivity fee' 0, 'Termination fee' 0 for both card types.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Fee schedule (2026-11-02), Global Card: 'Foreign exchange fee' = 'Visa exchange rate + 0% markup'. Press release (2026-08-31): 'Other than foreign exchange fees that Visa may charge for certain currencies under its rules, MEXC applies no additional exchange-rate markup.' The 1% transaction fee (see 'other') applies to every purchase, foreign or not.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule",
+                "ev-mexc-press-release"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "No ATM function: fee schedule row 'ATM withdrawal fee' reads 'Not applicable to virtual cards' for both card types. Cash withdrawal is therefore not available (limit modelled as 0).",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Fee schedule (2026-11-02): 'Top-up fee' 0 (no top-up limits stated). Funding is in USDT via the MEXC Fiat account ('Transfer USDT to your Fiat account … then add funds to your card' — product page FAQ). Network/deposit fees to bring USDT onto MEXC are not part of the card schedule.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule",
+                "ev-mexc-product-page"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Fee schedule (2026-11-02): 'Crypto conversion fee' 0% for both card types — defined as the fee applied 'when crypto assets in your account are converted into fiat currency to complete a purchase'.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Fee schedule (2026-11-02): 'Inactivity fee' 0.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Global Card 'Transaction fee' 1% of the purchase value on EVERY purchase (fee schedule 2026-11-02; example: 100 USD purchase → 1 USD fee, 101 USDT debited). Also: refund fee 1%; failed-transaction fee 0 USD if the failed-transaction rate is < 20%, 0.5 USD per transaction if ≥ 20%; small-amount transaction fee 0.1 USD for purchases under 1 USD. 'Fee rates may be adjusted during the event' (no event described). The launch promotion '0 fees' on all purchases ran 'from launch through September 30, 2026' (press release) and has expired; the press release said rates would then 'start from as low as 1%'.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule",
+                "ev-mexc-press-release"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 50,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Cashback FAQ (2026-11-02): VVIP level 'Standard' → 4% cashback, monthly cap 50 USDT. Press release: after activation 'users can activate the MEXC VVIP Standard tier to enjoy a base cashback rate of 4%'. Credited in USDT to the Fiat account within T+3 calendar days of settlement; the monthly cap is shared across all MEXC Cards of the same user and resets at 00:00 UTC+8 on the 1st; excluded: certain merchant categories (separate article, not read), forced-authorization and risk-flagged transactions; cashback is clawed back on refunds. 'If there is any discrepancy, the information shown in the app takes precedence.' Cap modelled in USD at par with USDT.",
+              "description": "4% USDT cashback (VVIP Standard), capped at 50 USDT/month",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-cashback-faq",
+                "ev-mexc-press-release"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 6,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 150,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "VVIP level 'Premier' → 6%, monthly cap 150 USDT (cashback FAQ). VVIP level depends on the user's M-Score ('Earn products, trading, and platform tasks' — press release); the thresholds are on the M-Score page, which could not be read this run.",
+              "description": "6% USDT cashback at VVIP Premier, cap 150 USDT/month",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-cashback-faq",
+                "ev-mexc-press-release"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 10,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 800,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "VVIP level 'Elite' → 10%, monthly cap 800 USDT (cashback FAQ; press release: 'up to 10% USDT cashback', 'monthly cashback cap of up to 800 USDT'). M-Score thresholds not read.",
+              "description": "10% USDT cashback at VVIP Elite, cap 800 USDT/month",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-cashback-faq",
+                "ev-mexc-press-release"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 80000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "Per-transaction limit 80,000 USD (fee schedule 2026-11-02).",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 1000000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "Daily spending limit 1,000,000 USD. Transactions: 100 per day, 2,500 per month, 25,000 per year.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "No ATM function ('Not applicable to virtual cards').",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "mexc-card-apac",
+      "region_label": "MEXC Card (APAC) (country list not published)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "usage_note": "A separate 'MEXC Card (APAC)' product is listed in the fee schedule with its own fees and limits. Its supported-countries list is in the support guide 'How to Apply for MEXC Card (APAC)', which is a client-rendered shell for the fetcher — no country could be confirmed.",
+        "evidence": [
+          "ev-mexc-fee-schedule"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "thresholds_note": "No KYC statement specific to the APAC card was readable (the 'How to Apply for MEXC Card (APAC)' support guide is a client-rendered shell). MEXC account verification is assumed required as for the Global Card.",
+        "stages_note": "Not read.",
+        "evidence": [
+          "ev-mexc-fee-schedule"
+        ],
+        "status": "unknown"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "MEXC Card (APAC)",
+          "access": {
+            "type": "free",
+            "note": "No issuance or annual fee (fee schedule 2026-11-02).",
+            "status": "verified",
+            "evidence": [
+              "ev-mexc-fee-schedule"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Fee schedule (2026-11-02): 'Virtual card issuance fee' 0 for both card types. Virtual card only — the ATM row reads 'Not applicable to virtual cards'; no physical card is mentioned on any page read.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Fee schedule (2026-11-02): 'Annual fee' 0, 'Inactivity fee' 0, 'Termination fee' 0 for both card types.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Fee schedule (2026-11-02), MEXC Card (APAC): 'Foreign exchange fee' = 'Visa exchange rate + 1% cross-border fee'. Example on the page: 100 EUR purchase ≈ 108 USD → 1.08 USD FX fee. Base currency USD.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "No ATM function: fee schedule row 'ATM withdrawal fee' reads 'Not applicable to virtual cards' for both card types. Cash withdrawal is therefore not available (limit modelled as 0).",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Fee schedule (2026-11-02): 'Top-up fee' 0 (no top-up limits stated). Funding is in USDT via the MEXC Fiat account ('Transfer USDT to your Fiat account … then add funds to your card' — product page FAQ). Network/deposit fees to bring USDT onto MEXC are not part of the card schedule.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule",
+                "ev-mexc-product-page"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Fee schedule (2026-11-02): 'Crypto conversion fee' 0% for both card types — defined as the fee applied 'when crypto assets in your account are converted into fiat currency to complete a purchase'.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Fee schedule (2026-11-02): 'Inactivity fee' 0.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "MEXC Card (APAC) 'Transaction fee' 0% (fee schedule 2026-11-02). Refund fee: '1% for USD transactions, 3% for non-USD transactions'; failed-transaction fee 0. 'Fee rates may be adjusted during the event.'",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 50,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Cashback FAQ (2026-11-02): VVIP level 'Standard' → 4% cashback, monthly cap 50 USDT. Press release: after activation 'users can activate the MEXC VVIP Standard tier to enjoy a base cashback rate of 4%'. Credited in USDT to the Fiat account within T+3 calendar days of settlement; the monthly cap is shared across all MEXC Cards of the same user and resets at 00:00 UTC+8 on the 1st; excluded: certain merchant categories (separate article, not read), forced-authorization and risk-flagged transactions; cashback is clawed back on refunds. 'If there is any discrepancy, the information shown in the app takes precedence.' Cap modelled in USD at par with USDT. The cashback FAQ speaks of 'MEXC Card' without distinguishing Global and APAC and links both application guides; a separate 'MEXC Card (APAC) Rewards FAQ' exists but was not read — APAC rates are therefore a hypothesis.",
+              "description": "4% USDT cashback (VVIP Standard), capped at 50 USDT/month",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-mexc-cashback-faq",
+                "ev-mexc-press-release"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 6,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 150,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "VVIP level 'Premier' → 6%, monthly cap 150 USDT (cashback FAQ). VVIP level depends on the user's M-Score ('Earn products, trading, and platform tasks' — press release); the thresholds are on the M-Score page, which could not be read this run. The cashback FAQ speaks of 'MEXC Card' without distinguishing Global and APAC and links both application guides; a separate 'MEXC Card (APAC) Rewards FAQ' exists but was not read — APAC rates are therefore a hypothesis.",
+              "description": "6% USDT cashback at VVIP Premier, cap 150 USDT/month",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-mexc-cashback-faq",
+                "ev-mexc-press-release"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 10,
+              "payout": {
+                "kind": "token",
+                "code": "USDT"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 800,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "reward"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "VVIP level 'Elite' → 10%, monthly cap 800 USDT (cashback FAQ; press release: 'up to 10% USDT cashback', 'monthly cashback cap of up to 800 USDT'). M-Score thresholds not read. The cashback FAQ speaks of 'MEXC Card' without distinguishing Global and APAC and links both application guides; a separate 'MEXC Card (APAC) Rewards FAQ' exists but was not read — APAC rates are therefore a hypothesis.",
+              "description": "10% USDT cashback at VVIP Elite, cap 800 USDT/month",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-mexc-cashback-faq",
+                "ev-mexc-press-release"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 50000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "Per-transaction limit 50,000 USD (fee schedule 2026-11-02).",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 50000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "Daily spending limit 50,000 USD. Transactions: 50 per day, 1,040 per year.",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 1000000,
+                "currency": "USD"
+              },
+              "period": "year",
+              "note": "Annual spending limit 1,000,000 USD (fee schedule 2026-11-02).",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "No ATM function ('Not applicable to virtual cards').",
+              "status": "verified",
+              "evidence": [
+                "ev-mexc-fee-schedule"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-mexc-fee-schedule",
+      "url": "https://www.mexc.com/support/article/understanding-the-mexc-card-446453561133852672",
+      "title": "Understanding the MEXC Card: Fees, Spending Limits, and Transaction Examples (help centre, 2026-11-02 17:04:15)",
+      "source_type": "help_center",
+      "excerpt": "Two card types, APAC / Global, both virtual (ATM 'Not applicable to virtual cards'). Issuance, annual, inactivity, termination, top-up: 0/0; transaction fee 0% / 1%; crypto conversion 0%; FX 'Visa exchange rate + 1% cross-border fee' / 'Visa exchange rate + 0% markup'; refund 1% USD–3% non-USD / 1%. Limits per tx 50,000 / 80,000 USD; daily 50,000 / 1,000,000 USD; APAC annual 1,000,000 USD.",
+      "accessed_at": "2026-11-23T05:35:00Z",
+      "effective_from": "2026-11-02",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-mexc-cashback-faq",
+      "url": "https://www.mexc.co/en-PH/support/article/mexc-card-cashback-faq-492406189328021504",
+      "title": "MEXC Card Cashback FAQ: Rates, Crediting Times, and Rules Explained (help centre, 2026-11-02 18:29:18)",
+      "source_type": "help_center",
+      "excerpt": "VVIP Standard 4% / cap 50 USDT; Premier 6% / 150 USDT; Elite 10% / 800 USDT per month. Level = VVIP level at settlement; cap shared across all the user's MEXC Cards, resets 00:00 UTC+8 on the 1st; credited in USDT to the Fiat account within T+3; excluded MCCs (separate article), forced-auth and risk-flagged transactions; clawed back on refund. 'The information shown in the app takes precedence.'",
+      "accessed_at": "2026-11-23T05:41:00Z",
+      "effective_from": "2026-11-02",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Rates not split between Global and APAC cards on this page."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-mexc-press-release",
+      "url": "https://blog.mexc.com/press-release/mexc-launches-mexc-global-card-with-up-to-10-cashback-and-7-annualized-returns/",
+      "title": "MEXC Launches MEXC Global Card With Up to 10% Cashback and 7% Annualized Returns (MEXC Blog press release, 2026-08-31)",
+      "source_type": "pricing_page",
+      "excerpt": "'Built on Visa's global acceptance network'; virtual card; 'After completing MEXC's advanced identity verification, users can begin the card application'; 'Eligible users in supported regions'; no issuance, annual or top-up fee; '0 fees' on purchases through September 30, 2026, then 'from as low as 1%'; no MEXC FX markup; 4%–10% USDT cashback, cap up to 800 USDT/month; Earn 'up to 7%'.",
+      "accessed_at": "2026-11-23T05:28:00Z",
+      "effective_from": "2026-08-31",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Marketing announcement; issuer and MEXC legal entity not named (dateline Mutsamudu, Comoros)."
+      },
+      "verification": "verified",
+      "contradiction_note": "Press release: card-exclusive flexible savings 'annualized return of up to 7%'; product page (read 2026-11-23): 'Exclusive: Stake to earn 3% APR'. Neither page is dated as governing; the Earn rate is not modelled (not a card reward). The '0 fees' purchase promotion ended 2026-09-30; the dated fee schedule (2026-11-02) now governs with a 1% transaction fee."
+    },
+    {
+      "id": "ev-mexc-product-page",
+      "url": "https://www.mexc.com/buy-crypto/mexc-card",
+      "title": "MEXC Card: Spend Crypto Worldwide with Ease (product page)",
+      "source_type": "pricing_page",
+      "excerpt": "'Spend and Earn Up to 10% Cashback'; 'Supports Apple Pay and Google Pay'; 'Exclusive: Stake to earn 3% APR'; FAQ: 'Fees vary by card type' (links the fee guide); 'Transfer USDT to your Fiat account … add funds to your card'; 'Refer Friends and Earn Commissions'. Footer: '*The Card program is operated by third-party service providers.' No issuer, country list, KYC or fee figures.",
+      "accessed_at": "2026-11-23T05:33:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-mexc-news-tenpaygo",
+      "url": "https://www.mexc.com/news/1206598",
+      "title": "How to Link a MEXC Card to TenPayGo (MEXC News, MEXC Editorial Team, undated)",
+      "source_type": "help_center",
+      "excerpt": "'MEXC Global Card' and 'MEXC Card (APAC)' are separate versions; the Global Card is 'a virtual Visa card that can be funded with USDT' and 'settles purchases through the Visa network'; Global users move funds from the Fiat Account to the card, APAC 'may spend directly from the Fiat Account'; Global supports Apple Pay and Google Pay, APAC 'Google Pay only'. No fee figures.",
+      "accessed_at": "2026-11-23T05:47:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Editorial guide; used only for product structure and wallet support."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-mexc-affiliate-program",
+      "url": "https://www.mexc.co/en-IN/support/article/mexc-affiliate-program-4415403871769",
+      "title": "MEXC Affiliate Program (help centre, 2026-07-20 11:37:21) + affiliates.mexc.com portal",
+      "source_type": "affiliate_program",
+      "excerpt": "Publisher programme for content creators (≥ 500 followers), crypto websites and agencies; 'Earn up to 70% in referral and sub-affiliate commissions' on referees' Spot and Futures trades, paid daily at 0:00 UTC, 'for life'; two levels per half-month cycle; referral link/code; review within 3 business days; rules changeable without notice. Card spending or sign-ups not mentioned.",
+      "accessed_at": "2026-11-23T05:52:00Z",
+      "effective_from": "2026-07-20",
+      "expires_at": null,
+      "scope": {
+        "note": "Programme covers trading commissions; card not mentioned."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.mexc.com/buy-crypto/mexc-card",
+    "affiliate": {
+      "program_id": "mexc-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-23T05:52:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-23T05:58:00Z",
+      "field": "*",
+      "reason": "Initial record from 6 official MEXC pages read by the unattended research run (fee schedule 2026-11-02, cashback FAQ 2026-11-02, launch press release 2026-08-31, product page, MEXC News TenPayGo guide, affiliate programme article) — single read; a second independent read ≥ 24 h later is required before publication. Unreadable this run: 'How to Apply for the MEXC Global Card' and 'How to Apply for MEXC Card (APAC)' support guides (client-rendered shells — countries, KYC documents), the Learn articles 'What Is the MEXC Global Card…' and 'MEXC Card: Supported Countries, Restricted Regions & What KYC Actually Requires' (client error on mexc.com and mexc.co), the M-Score/VVIP page (fetcher provenance), the MCC exclusion list and the APAC Rewards FAQ. Issuer not disclosed ('operated by third-party service providers'); eligibility 'to confirm' everywhere; KYC = 'advanced identity verification' (hypothesis). An older Learn page about a 'virtual MEXC MasterCard' (EEA list, 1% top-up, inner test users) was read but describes a different, earlier product and is not used as evidence.",
+      "evidence": [
+        "ev-mexc-fee-schedule",
+        "ev-mexc-cashback-faq",
+        "ev-mexc-press-release",
+        "ev-mexc-product-page",
+        "ev-mexc-news-tenpaygo",
+        "ev-mexc-affiliate-program"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual Visa card from the MEXC exchange, in two versions with separate fee schedules: the MEXC Global Card (1% fee on every purchase, Visa FX rate with 0% markup) and the MEXC Card (APAC) (0% purchase fee, Visa rate + 1% cross-border fee). No issuance, annual, top-up or conversion fee; no ATM function. Funded in USDT from the MEXC Fiat account, converted at spend. Cashback in USDT follows the user's VVIP level: 4% (cap 50 USDT/month) at Standard, 6% (150) at Premier, 10% (800) at Elite — the M-Score thresholds behind the levels are not published on the pages read. Issuer not disclosed; no country list published; MEXC account KYC ('advanced') required.",
+    "good_for": [
+      "MEXC users in a supported region who want a virtual Visa with Apple Pay / Google Pay funded directly from their USDT balance",
+      "Small monthly budgets: the 4% Standard cashback is capped at 50 USDT, i.e. it is maxed out at 1,250 USDT of eligible spend"
+    ],
+    "not_for": [
+      "Anyone who needs cash: no ATM function on either version",
+      "Residents of countries not confirmed as supported — no official list could be read",
+      "Users expecting the 'up to 10%' headline: Elite requires an undisclosed M-Score; the 1% Global Card transaction fee eats a quarter of the 4% base cashback"
+    ],
+    "watch_outs": [
+      "Global Card: 1% transaction fee on every purchase since the launch promotion ended on 2026-09-30; the APAC version charges 0% but adds 1% on non-USD purchases.",
+      "Issuer and programme manager are not named anywhere: 'The Card program is operated by third-party service providers.'",
+      "Cashback level and cap 'subject to the information displayed in the app', shared across all of a user's MEXC Cards, clawed back on refunds (an 'outstanding amount' can be created).",
+      "Earn rate contradiction: press release 'up to 7%' vs product page '3% APR'.",
+      "Refund fee 1% (3% for non-USD refunds on the APAC card); 0.1 USD fee on Global Card purchases under 1 USD; failed-transaction fee if the decline rate reaches 20%.",
+      "Supported-countries and KYC pages are client-rendered and could not be read — eligibility is unverified."
+    ]
+  }
+}

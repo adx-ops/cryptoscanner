@@ -1394,15 +1394,20 @@
       ],
       "cross_listing_count": 3,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "publisher affiliate (trading commissions; card not mentioned)",
+      "status": "validated",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-23",
-      "priority": 6,
+      "priority": 0,
       "regions_hint": [
         "PH (directory)",
         "NG (directory)"
-      ]
+      ],
+      "needs_browser_read": true,
+      "regions": [
+        "supported regions not published (Global Card); APAC version separate"
+      ],
+      "note": "Validated 2026-11-23 → data/cards/mexc-card.json (Global + APAC variants). Country list, KYC guide and M-Score tiers are client-rendered/blocked for the fetcher → browser read needed."
     },
     {
       "provider": "Gate",
@@ -2541,15 +2546,20 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "referral (hardware wallets only; card not covered)",
+      "status": "validated",
       "first_seen": "2026-11-09",
       "last_seen": "2026-11-23",
-      "priority": 4,
+      "priority": 0,
       "regions_hint": [
         "ZA (directory)",
         "NG (directory)"
-      ]
+      ],
+      "regions": [
+        "US",
+        "select countries LATAM/APAC/MEA/Africa (list not published)"
+      ],
+      "note": "Validated 2026-11-23 → data/cards/tangem-pay-card.json (tariff PDF 2026-10-08 governing). No country list published; cashback live status unconfirmed."
     },
     {
       "provider": "THORWallet",

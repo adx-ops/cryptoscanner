@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-22.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-23.",
   "target": {
     "min": 15,
     "max": 50
@@ -350,6 +350,22 @@
       "record": "data/cards/netcoins-prepaid-mastercard.json",
       "needs_browser_read": true,
       "note": "Validated 2026-11-20 from Netcoins' official pages (Netcoins Pay page on blog.netcoins.com, help-centre 'Fees and card limits', exchange fees page). Canadian residents except Quebec, verified account; issuer KOHO Financial Inc. (Mastercard); virtual + physical; Apple/Google/Samsung Pay. New card/activation/purchases/ATM free (operator fees aside); FX 1.5%; $8,000/day POS, $2,000/day ATM, $10,000 total; 1% back in BTC (earned in CAD, converted monthly). Unknown: monthly/inactivity, delivery, top-up, conversion at spend, minimum age, rewards cap. Cardholder agreement (netcoins.app/mastercard-cardholder-agreement) is a JS shell → needs_browser_read. netcoins.com/netcoins-pay now shows the app page: check product continuity at second read. Affiliate programme recorded: data/affiliate/netcoins-affiliate.json (identified). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "MEXC",
+      "product": "MEXC Global Card / MEXC Card (APAC)",
+      "status": "validated",
+      "record": "data/cards/mexc-card.json",
+      "needs_browser_read": true,
+      "note": "Validated 2026-11-23 from 6 official MEXC pages (fee schedule 2026-11-02, cashback FAQ 2026-11-02, launch press release 2026-08-31, product page, MEXC News guide, affiliate programme article). Two virtual Visa versions: Global (1% fee on every purchase, Visa FX + 0%) and APAC (0% purchase fee, Visa FX + 1%); no issuance/annual/top-up/conversion fee; no ATM; funded in USDT from the Fiat account; cashback USDT by VVIP level 4%/50 USDT, 6%/150, 10%/800 per month (APAC = hypothesis). Issuer not disclosed ('third-party service providers'). Unknown: countries (to confirm), KYC documents ('advanced identity verification'), M-Score thresholds, MCC exclusions. Unreadable by the fetcher: 'How to Apply' support guides (JS shells), Learn articles incl. 'Supported Countries, Restricted Regions & What KYC Actually Requires' (client error on mexc.com and mexc.co), M-Score page (provenance) → needs_browser_read. Affiliate: data/affiliate/mexc-affiliate.json (identified; trading commissions, card not mentioned). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "Tangem Pay (Paera LLC / Rain)",
+      "product": "Tangem Pay Visa card",
+      "status": "validated",
+      "record": "data/cards/tangem-pay-card.json",
+      "needs_browser_read": false,
+      "note": "Validated 2026-11-23 from 4 official pages (tariff PDF as of 2026-10-08 — governing; product page; tiers blog 2026-08-06; Tangem referral page). Issuer Rain, programme operated by Paera LLC; US + 'select countries' LATAM/APAC/MEA/Africa, no list (to confirm), Europe not named; KYC required (Rain/Sumsub). Basic free: ATM 4%, FX Visa + 1.5% (blog said 1% — tariff governs), ACH top-up $1; Plus $29.99/month: ATM 2%, bank top-ups free. Cashback 1%/2% USDC caps $100/$300 = hypothesis (blog: 'later app release'; tariff silent). Prestige coming soon, not modelled. Not read: Terms of Use PDF, Paera legal agreements (paera.com/tangempay, no URL). Affiliate: data/affiliate/tangem-referral.json (identified; hardware wallets only, no rate). Second read ≥ 24 h required."
     }
   ],
   "no_kyc_track": {
@@ -377,7 +393,7 @@
         "issuer_disclosed": false,
         "status": "identified",
         "needs_browser_read": true,
-        "note": "2026-11-12: web search returns no page of bingcard.com / bingcard.net (only directories, Trustpilot and a Google Sites privacy policy at sites.google.com/view/bingcard/privacy-policy naming the operator 'GINBE LTD UK', undated, no fees, limits or product page). The official site is not reachable by the fetcher (provenance). No official affiliate/referral page found. Not blocked: locate and read the official fee, limits, verification and terms pages in a browser session."
+        "note": "2026-11-12: web search returns no page of bingcard.com / bingcard.net (only directories, Trustpilot and a Google Sites privacy policy at sites.google.com/view/bingcard/privacy-policy naming the operator 'GINBE LTD UK', undated, no fees, limits or product page). The official site is not reachable by the fetcher (provenance). No official affiliate/referral page found. Not blocked: locate and read the official fee, limits, verification and terms pages in a browser session. | 2026-11-23: retried — web search returns only cryptoslate, bitcoin.com, cryptocardhub, cryptocards.so and Trustpilot (bingcard.com / bingcard.net); no official page indexed; fetcher cannot reach it (provenance). Browser session still needed."
       },
       {
         "product": "OffGrid Cash",
@@ -451,7 +467,7 @@
         "claim": "low-KYC, terms reserve right to demand ID; not US",
         "issuer_disclosed": true,
         "status": "identified",
-        "note": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; pintopay.me is not returned by web search, so the fetcher cannot reach the terms PDF (provenance). Needs a browser session.",
+        "note": "Blocked 2026-10-29: pintopay.me home + terms PDF (version 16 Oct 2026) read. Provider UANT Limited (Hong Kong, 77341227); cards \"issued exclusively by third parties\", issuer not named; fee schedules not published (only \"$35 card\", \"2,5%\" top-up marketing); no country list (HK excluded); sign-up via Telegram bot. pintopay.co blocks fetching. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; pintopay.me is not returned by web search, so the fetcher cannot reach the terms PDF (provenance). Needs a browser session. | 2026-11-23: retried — web search ('Pinto Pay card pintopay.me fees terms') returns only directories (cryptocards.so, cryptocardhub) and Product Hunt; pintopay.me not indexed; fetcher cannot reach it (provenance). Browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -479,5 +495,5 @@
       }
     ]
   },
-  "updated": "2026-11-22"
+  "updated": "2026-11-23"
 }
