@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "tangem-referral",
+  "provider_id": "tangem",
+  "program_name": "Tangem referral program (with influencer track)",
+  "legal_entity": "Tangem AG, Reg. No CHE-390.112.525, Baarerstrasse 10, 6300 Zug, Switzerland (footer). Note: the Tangem Pay card programme is operated by Paera LLC, not Tangem AG.",
+  "program_url": "https://tangem.com/en/affiliates/",
+  "type": "hybrid",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Join via the Tangem app ('To participate in the referral program you need a Tangem Wallet'); unique referral link or code; dashboard in the app. Influencers ('Are you an influencer?') apply through a form (name, e-mail, channel — Blog, Instagram, Telegram, TikTok, X, YouTube —, main channel link, subscriber count, country) for free wallets, event access and custom links/codes. Instructions blog post linked (not read).",
+  "our_status": "identified",
+  "paid_action": "Purchase of a Tangem Wallet (hardware) via the referral link or code: 'Get paid when someone buys a Tangem Wallet via your referral link.' Tangem Pay card sign-ups or spend are not mentioned.",
+  "validation_conditions": "Purchase must carry the link or code ('cannot be attributed' otherwise); payment after delivery and after the cancellation window ('no earlier than 30 days' / 'no later than 30 days after each purchase').",
+  "commission": {
+    "model_note": "No percentage, flat amount or CPA figure published on the page.",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "USDT on TRC20 'sent directly to your USDT TRC20 wallet address'",
+    "frequency": "Per purchase, upon delivery, within/after 30 days",
+    "holdbacks_note": "30-day window to confirm orders were not cancelled."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "verified"
+  },
+  "rules_note": "The page says 'Please take your time to read the Terms and Conditions' but links no referral-specific document (only the general Terms of Use PDF). No channel or country restrictions stated; Tangem 'ships worldwide'.",
+  "allowed_countries_note": "Not stated; the influencer form has a full country dropdown.",
+  "evidence": [
+    {
+      "url": "https://tangem.com/en/affiliates/",
+      "title": "Refer and earn with the Tangem referral program",
+      "accessed_at": "2026-11-23T06:01:00Z",
+      "excerpt": "'Get a unique referral link, share it with your friends and audience, and earn from every purchase'; 'Get paid when someone buys a Tangem Wallet via your referral link'; USDT TRC20 payout 'no later than 30 days after each purchase'; influencer form; no commission figure; no mention of Tangem Pay."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Identified only — nobody contacted, no application. Pays on hardware-wallet sales, not on the Tangem Pay card; the card programme belongs to Paera LLC, which publishes no partner programme on the pages read. Commission rate unknown."
+}

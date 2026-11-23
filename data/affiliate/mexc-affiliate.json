@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "mexc-affiliate",
+  "provider_id": "mexc",
+  "program_name": "MEXC Affiliate Program",
+  "legal_entity": "Not stated on the pages read ('© 2026 MEXC'); the launch press release is datelined Mutsamudu, Comoros",
+  "program_url": "https://affiliates.mexc.com/",
+  "type": "revenue_share",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Help centre (2026-07-20): open to content creators 'with at least 500 followers' (YouTubers, community leaders, KOLs, media creators), crypto websites (market sites, tools, industry media) and promotional agencies. Apply in the Affiliate Portal ('Activate Affiliate Status') or from the app; form asks basic information, social accounts recommended; 'contact you within 3 business days'. Affiliates must promote MEXC events 'at least twice per month'.",
+  "our_status": "identified",
+  "paid_action": "Commission on referees' Spot and Futures trading fees. Card sign-ups and card spending are NOT mentioned on the programme pages — card attribution is unconfirmed.",
+  "validation_conditions": "A 'valid first-time trade' must generate at least 5 USDT in trading fees (used for level upgrades). Commissions from referees engaging in 'prohibited trading activities' are excluded.",
+  "commission": {
+    "model_note": "'Earn up to 70% in referral and sub-affiliate commissions' (help centre); portal meta: '70% on referral trades, 10% from sub-affiliates'. Level 1 / Level 2 percentages are not stated. Level 2 per half-month cycle: 5 new referrals with valid first trades + ≥ 2,000 MX held, or ≥ 20,000 MX held; reverts to Level 1 if conditions lapse. 'Permanent Commission Rights … for life.' Monthly 'Kickstarter airdrop bonus' for eligible affiliates (amount not stated).",
+    "tiers_note": "Level 1 / Level 2, re-evaluated twice a month (1st–15th, 16th–end).",
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "revenue_share": {
+    "included_products": "Spot and Futures trading commissions of referred users.",
+    "duration_note": "'Receive ongoing commissions from all valid referrals for life.'",
+    "exclusions": "Card products not mentioned; prohibited-trading referees excluded."
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "Credited to the affiliate's MEXC account; asset not explicitly stated (portal statistics shown in USDT)",
+    "frequency": "'Spot and Futures commissions for the previous day will be issued at 0:00 (UTC) daily.'",
+    "holdbacks_note": "Not stated.",
+    "cancellation_note": "MEXC 'reserves the right to adjust, change or cancel the affiliate commission rules without prior notice'. Immediate termination for phishing, hijacking official traffic, mimicking MEXC platforms or misleading search ads."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Forbidden: phishing, 'hijacking official traffic', content that mimics MEXC's official platforms, 'misleading ads through search engines'. Affiliate Agreement at https://affiliates.mexc.com/agreement not read. A separate in-app card referral campaign ('Refer Friends and Earn Commissions', mexc.com/campaigns/MEXC-Card-EventsHub) is linked from the card product page but was not readable; the launch press release mentions a referral programme paying 20 USDT (referrer) / 10 USDT (new user).",
+  "allowed_countries_note": "Not stated ('170+ Country' is a reach figure on the portal).",
+  "evidence": [
+    {
+      "url": "https://www.mexc.co/en-IN/support/article/mexc-affiliate-program-4415403871769",
+      "title": "MEXC Affiliate Program (help centre, 2026-07-20 11:37:21)",
+      "accessed_at": "2026-11-23T05:52:00Z",
+      "excerpt": "Content creators with at least 500 followers, crypto websites, promotional agencies; 'Earn up to 70% in referral and sub-affiliate commissions'; Level 2 = 5 first-trade referrals + 2,000 MX or 20,000 MX, cycles 1st–15th / 16th–end; daily payout at 0:00 UTC; 'for life'; rules changeable without notice; forbidden practices listed. No mention of the card."
+    },
+    {
+      "url": "https://affiliates.mexc.com/",
+      "title": "MEXC Affiliate Program portal (landing page)",
+      "accessed_at": "2026-11-23T05:52:00Z",
+      "excerpt": "Headline figures rendered as placeholders ('Earn up to --% Commission'); meta description '70% on referral trades, 10% from sub-affiliates'; 'Lifetime Commissions'; referral code generated in the MEXC account; 'Dedicated Account Manager Support'; agreement link affiliates.mexc.com/agreement (not read)."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Identified only — nobody contacted, no application. The programme pays on trading, not on card activity: the card affiliate value for CryptoScanner is unconfirmed. Portal figures are marketing placeholders; read the Affiliate Agreement before any application. Trading-fee revenue share from a referred card user could create a conflict with editorial independence (to weigh, as for other exchange programmes)."
+}
