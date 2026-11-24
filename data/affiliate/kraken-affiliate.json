@@ -9,9 +9,9 @@
   "allowed_channels": [
     "unknown"
   ],
-  "application_conditions": "Two tracks: 'Direct with Kraken' (in-house, creators/KOLs; application form on the page: email, social links, target countries, Kraken Public ID; reply 'within 5 business days') and Impact (media networks, content sites, traditional affiliates; sign-up via app.impact.com campaign Kraken.brand). Terms: https://www.kraken.com/legal/affiliate-agreement (not read).",
+  "application_conditions": "Two tracks: 'Direct with Kraken' (in-house, creators/KOLs; application form on the page: email, social links, target countries, Kraken Public ID, relationship manager, prior exchange experience, preferred contact method; 'We reply within 5 business days') and Impact (media networks, content sites, traditional affiliates; sign-up via app.impact.com campaign Kraken.brand). Support centre (2025-12-16): sites and apps must be pre-approved. Terms: https://www.kraken.com/legal/affiliate-agreement (read 2026-11-24).",
   "our_status": "identified",
-  "paid_action": "Commissions on 'eligible activity from users who sign up via your link' — ongoing activity, 'not just their first deposit'. Products currently covered: Kraken Consumer, Kraken Pro (spot, margin, futures), Kraken DEX (up to 50%), Kraken Prop (25%). Krak (debit card) and Kraken Earn: 'Coming soon' — the card is NOT yet commissionable.",
+  "paid_action": "Commissions on 'eligible activity from users who sign up via your link' — ongoing activity, 'not just their first deposit'. Products currently covered: Kraken Consumer, Kraken Pro (spot, margin, futures), Kraken DEX (up to 50%), Kraken Prop (25%). Support centre: revenue share on 'spot and futures trade fees, spot margin opening fees and spot margin rollover fees'; funding rates and conversion fees excluded. Krak (debit card) and Kraken Earn: still 'Coming soon' on 2026-11-24 ('Krak affiliate commissions are coming soon') — the card is NOT commissionable.",
   "validation_conditions": "Eligible activity not defined on the page; rates 'vary by product, region, and affiliate profile' and are negotiated at onboarding (rev share, CPA). Geographic restrictions mentioned generically.",
   "commission": {
     "model_note": "Revenue share up to 50% on eligible volume for exchange products; rev share or CPA negotiated per partner. No rate published for the Krak/Kraken Card (coming soon).",
@@ -25,9 +25,10 @@
     "status": "verified"
   },
   "payout": {
-    "threshold": "Not stated (in-house track pays on demand once a threshold is reached)",
-    "method": "In-house track: USDC to the partner's Kraken account; Impact track: fiat to a bank or USDC",
-    "frequency": "Monthly by default (in-house) or Impact's standard schedule"
+    "threshold": "Not stated (in-house track: 'monthly by default, or on-demand at threshold', amount unpublished)",
+    "method": "In-house track: USDC to the partner's Kraken account; Impact track: fiat to a bank account (support centre: bank's default currency; the /affiliate FAQ says Impact payees 'can choose fiat or USDC' — pages disagree)",
+    "frequency": "Monthly by default (in-house, /affiliate); the Affiliate Agreement says fees are paid 'on a weekly basis' with a report within 7 days; the support centre says funds show by the 15th of the following month and are paid on the 29th — three official pages, three cadences",
+    "cancellation_note": "Agreement: Kraken may reverse, claw back, withhold or set off fees for invalid referrals, fraud or error; Kraken may terminate immediately on written notice, the affiliate on 30 days' notice."
   },
   "reporting": {
     "dashboard": true,
@@ -36,16 +37,35 @@
     "postback": false,
     "status": "hypothesis"
   },
-  "rules_note": "Affiliate agreement at kraken.com/legal/affiliate-agreement not read (channel rules, brand bidding, country exclusions unknown). Contracting entity not named on the page (footer: Payward, Inc.). Partners receive 'a unique referral link and tracking pixel'.",
-  "allowed_countries_note": "Not listed; the application asks which countries the affiliate targets. Card commissions not yet available in any region.",
+  "rules_note": "Affiliate Agreement (kraken.com/legal/affiliate-agreement, read 2026-11-24; no effective date printed): contracting entity Payward, Inc.; bars deceptive or fraudulent methods, charging any fee to customers, framing Kraken content; marketing emails must comply with CAN-SPAM and other anti-spam laws; trademarks licensed only to establish the links; attribution 'final and binding' to Kraken; no cookie window, no country exclusions, no paid-search or brand-bidding rule in the agreement. Support centre: Brave and ad blockers break attribution; sites must be pre-approved. Partners receive 'a unique referral link and tracking pixel'. Separate personal Krak Referrals programme (support centre, 2026-10-01): $10 each to referrer and referee, EEA only, 'ending soon and no longer accepting new referrals, except in the EEA'.",
+  "allowed_countries_note": "Not listed; the application asks which countries the affiliate targets; the agreement has no country list. Card commissions not yet available in any region.",
   "evidence": [
     {
       "url": "https://www.kraken.com/affiliate",
       "title": "Kraken Affiliate Program (kraken.com/affiliate)",
-      "accessed_at": "2026-11-04T06:20:00Z",
-      "excerpt": "'Earn up to 50% commission' — 'Commission rates vary by product, region, and affiliate profile.' Kraken Consumer / Pro / DEX up to 50%, Prop 25%; Krak 'Crypto debit card with up to 2% cashback' and Kraken Earn: 'Coming soon'. Direct track (USDC, monthly, account manager) or Impact track (fiat). Unique referral link and tracking pixel. Terms: kraken.com/legal/affiliate-agreement."
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Re-read 2026-11-24, unchanged: 'Earn up to 50% commission', rates 'vary by product, region, and affiliate profile'. Consumer / Pro / DEX up to 50%, Prop 25%; Krak debit card and Kraken Earn 'Coming soon'; FAQ: 'Krak affiliate commissions are coming soon.' Direct track (USDC, monthly or on-demand at threshold) or Impact track (fiat). Unique referral link and tracking pixel."
+    },
+    {
+      "url": "https://www.kraken.com/legal/affiliate-agreement",
+      "title": "Kraken Affiliate Agreement (no effective date printed)",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Payward, Inc. (Delaware). Fees paid 'on a weekly basis', report within 7 days; reversal/clawback/set-off for invalid referrals, fraud or error; affiliate termination on 30 days' notice, Kraken immediately; CAN-SPAM compliance; no framing; trademarks for links only; attribution final and binding; no cookie window, country list or brand-bidding rule; cards not named."
+    },
+    {
+      "url": "https://support.kraken.com/articles/360027545252-kraken-affiliate-program",
+      "title": "Kraken Affiliate program (support centre, last updated 16 December 2025)",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Revenue share on spot and futures trade fees and spot margin opening/rollover fees; funding rates and conversion fees excluded; sites/apps pre-approved; payouts via Impact to a bank account (default currency), visible by the 15th and paid on the 29th of the following month; Brave/ad blockers break attribution. Prop, DEX, Consumer, Krak, Earn not mentioned."
+    },
+    {
+      "url": "https://support.kraken.com/articles/krak-referrals",
+      "title": "Krak Referrals (support centre, last updated 1 October 2026) — personal programme",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "'ending soon and is no longer accepting new referrals, except in the EEA'; $10 USD each to referrer and referee within 14 days; EEA, verified Krak account, referee new to Krak, signs up via the app and makes a fiat deposit; no cash alternative."
     }
   ],
   "verification": "verified",
-  "notes": "Official publisher programme exists but the card is explicitly 'coming soon' for commissions. Candidate for David's decision once card commissions open; no application made, nobody contacted."
+  "notes": "Official publisher programme exists but the card is explicitly 'coming soon' for commissions (confirmed again 2026-11-24). Affiliate Agreement read for the first time on 2026-11-24 (Payward, Inc.; clawbacks; weekly payment wording that contradicts the monthly wording on /affiliate and the support centre). Candidate for David's decision once card commissions open; no application made, nobody contacted.",
+  "legal_entity": "Payward, Inc. (Delaware corporation) — contracting party named in the Affiliate Agreement"
 }
