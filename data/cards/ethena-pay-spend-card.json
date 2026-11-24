@@ -1,0 +1,484 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ethena-pay-spend-card",
+  "slug": "ethena-pay-spend-card",
+  "name": "Ethena Pay Spend Card",
+  "brand": "Ethena Pay",
+  "provider_id": "ethena-pay",
+  "issuer": {
+    "name": "Third National (named as 'the Issuer' in the Card Terms); programme managed by Signify Holdings, Inc. d/b/a Rain; technology by Ethena Pay Ltd. (Malta, C 114576)",
+    "status": "verified",
+    "evidence": [
+      "ev-ethena-pay-card-terms",
+      "ev-ethena-pay-pricing",
+      "ev-ethena-pay-disclaimers"
+    ]
+  },
+  "network": "visa",
+  "category": "crypto_backed_credit",
+  "record_status": "validated",
+  "product_status": "waitlist",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "credit_line",
+    "conversion": "unknown",
+    "supported_assets_note": "Card Terms (effective 2026-06-01): 'This Account is a secured Account.' The user grants a security interest in Collateral that 'must be held in a wallet on a Supported Blockchain' (Ethereum, Polygon, Optimism, Arbitrum per Card Terms and Pricing §4; the launch blog says Ethena Pay is 'built exclusively on Avalanche' and rewards are paid in AVAX — contradiction recorded). The Issuer funds card payments; the cardholder must repay, and an amount 'not … paid in full … within one (1) calendar day' is a Liquidation Event. 'Ethena Pay and Issuer will not, in any circumstance, be holding custody of your Collateral.' Disclaimers: balances 'represent records of value associated with your self-custodial Ethena Pay wallet' (Privy embedded wallets). Blog: 'Holdings into the app convert to USDe'. Which asset is debited and the conversion moment are not stated → conversion unknown.",
+    "evidence": [
+      "ev-ethena-pay-card-terms",
+      "ev-ethena-pay-pricing",
+      "ev-ethena-pay-disclaimers",
+      "ev-ethena-pay-blog-intro"
+    ]
+  },
+  "credit_terms": {
+    "apr_percent": 0,
+    "ltv_percent": "unknown",
+    "liquidation_risk": "Pricing: APR for purchases 0.00%; cash advances and balance transfers 'Not available'; late payment fee up to $40, returned payment fee up to $29. Card Terms: spending limit set against the Market Value of the Collateral (illustration: $100 of collateral → $100 limit — not a published LTV), 'dynamic and may be modified at any time', can be reduced to $0; charges unpaid within one calendar day constitute a Liquidation Event under which the Issuer/Ethena Pay may liquidate Collateral. Governing law of the Card Terms: Puerto Rico; AAA consumer arbitration in New York (summary portion of the page, not read verbatim).",
+    "evidence": [
+      "ev-ethena-pay-card-terms",
+      "ev-ethena-pay-pricing"
+    ]
+  },
+  "variants": [
+    {
+      "id": "ethena-pay-non-us",
+      "region_label": "47 live countries (Latin America, Caribbean, Asia & Middle East, Africa, Oceania) — non-U.S. persons only",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AR",
+          "BZ",
+          "BO",
+          "BR",
+          "CO",
+          "CR",
+          "EC",
+          "SV",
+          "GT",
+          "GY",
+          "HN",
+          "MX",
+          "PA",
+          "PY",
+          "PE",
+          "SR",
+          "UY",
+          "AG",
+          "BS",
+          "BB",
+          "KY",
+          "DM",
+          "DO",
+          "GD",
+          "KN",
+          "LC",
+          "VC",
+          "TT",
+          "TC",
+          "HK",
+          "JP",
+          "MY",
+          "PK",
+          "PH",
+          "SG",
+          "TH",
+          "AE",
+          "CI",
+          "EG",
+          "GH",
+          "KE",
+          "MA",
+          "SN",
+          "UG",
+          "ZM",
+          "AU",
+          "NZ"
+        ],
+        "residence_excluded": [
+          "US"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "Disclaimers §4 and Jurisdictions page: 'The Ethena Pay Spend Card is offered only to non-U.S. persons' — not available to U.S. citizens, U.S. residents or other U.S. persons wherever they live. Card Terms §1: 'You attest that you are not a United States citizen' and 'that you were not solicited for this Card'. Minimum age 18.",
+        "usage_note": "Jurisdictions page (undated): 'Ethena Pay is live in 47 countries across Latin America, the Caribbean, Asia & the Middle East, Africa, and Oceania' — the 47 countries listed are the APP's live countries; the same page says 'Card features, eligibility, and availability vary by jurisdiction', so card availability in each listed country is not confirmed (status hypothesis). Countries marked * on the page (Barbados, Japan, Malaysia, Pakistan, Morocco, Senegal, Uganda, Australia) lack virtual-account (IBAN) deposits, not the card. 'Live soon: USA, EU, United Kingdom, Switzerland, Canada, Taiwan, South Korea, and more' → to_confirm; other countries join a waitlist. Restricted Jurisdictions are defined in §4.8 of the Terms of Use (not read). Account-tiers blog (2026-11-20): 'Ethena Pay is still invite only'.",
+        "evidence": [
+          "ev-ethena-pay-jurisdictions",
+          "ev-ethena-pay-disclaimers",
+          "ev-ethena-pay-card-terms",
+          "ev-ethena-pay-blog-tiers"
+        ],
+        "status": "hypothesis"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "other"
+        ],
+        "thresholds_note": "Disclaimers §7 name 'Sumsub Tech Ltd. (identity verification)'. Referral Terms §5: a referral qualifies only once the user has 'successfully completed all identity verification, sanctions screening, and other compliance checks'. Card Terms become binding 'when you activate or create your Card'. The document list (ID type, selfie, proof of address) and any thresholds are not published on the pages read.",
+        "stages_note": "Verification at account sign-up ('sign-up takes two minutes' per the launch blog), before the card can be created; invite-only access as of 2026-11-20.",
+        "evidence": [
+          "ev-ethena-pay-disclaimers",
+          "ev-ethena-pay-referral-terms",
+          "ev-ethena-pay-blog-intro"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": {
+            "type": "free",
+            "note": "'Everyone starts on Standard.' Pro is unlocked by 10 qualified referrals and VIP by 50 (account-tiers blog, 2026-11-20); no tier price is published ('Additional features or premium tiers, if any, will be presented to you at the time of enrollment' — Pricing). Pro/VIP are modelled as a conditional maximum reward, not as separate tiers.",
+            "status": "verified",
+            "evidence": [
+              "ev-ethena-pay-blog-tiers",
+              "ev-ethena-pay-pricing"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Pricing (effective 2026-09-01, updated 2026-09-30) §2: 'Virtual card issuance | Free'; card activation free; replacement card free. Physical card: Card Terms §8.1 mention 'physical or virtual Ethena Pay Cards' but no physical-card fee or offer appears on the Pricing page and the launch blog only says 'Generate a virtual card'.",
+              "status": "verified",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-card-terms"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Pricing §1: account opening free, 'Monthly maintenance / account fee | Free', minimum balance none, inactivity fee none, closure free. Launch blog: 'no annual fee'.",
+              "status": "verified",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-blog-intro"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Non-USD purchases. Pricing §2: 'Foreign Exchange Fee | Typically around 1.0%, passed through directly from the applicable card network with no markup'; Cross-Border Fee none; domestic USD purchase fee none. Card Terms fee table: 'Visa's fee, passed through at cost (approx. 1%)'. Both documents also state that neither the Issuer nor Ethena Pay charges a foreign-exchange fee or markup, and the launch blog says 'zero FX fee mark up' — the network pass-through of about 1% is modelled as the cost to the user; the exact rate is set by the card network.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-card-terms",
+                "ev-ethena-pay-blog-intro"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "percent": 0.65,
+              "period": "per_transaction",
+              "conditions": "Pricing §2: 'ATM withdrawals | If ATM access is available: $1.00 plus 0.65% of the withdrawal amount'; Card Terms: '$1.00 plus 0.65% of the amount withdrawn', 'The ATM operator may impose its own separate surcharge'. Both documents also state 'Cash advances … are not available' (Pricing: cash advances APR 'Not available'; Card Terms §5) — whether ATM cash is actually available is unclear. Cash withdrawals earn no cashback.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-card-terms"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "No card top-up in the prepaid sense: charges are secured by Collateral held in the user's wallet. Funding the app: launch blog 'Ethena Pay is free to fund in digital dollars', 'fiat deposits free and withdrawals at a nominal cost'; Pricing §4: on-/off-ramp, currency-conversion and bank-transfer fees are charged by funding partners (Disclaimers: Iron Network UAB, Moonpay USA LLC) and are not scheduled on the pages read → unknown.",
+              "status": "unknown",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-blog-intro",
+                "ev-ethena-pay-disclaimers"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "fixed",
+              "amount": {
+                "amount": 40,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "Late Payment Fee 'Up to $40'; Returned Payment Fee 'Up to $29'; over-limit fee none; APR on purchases 0.00% (Pricing §2, Card Terms fee table). Disputes must be reported within 60 days; no dispute fee published.",
+              "status": "verified",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-card-terms"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 4,
+              "payout": {
+                "kind": "token",
+                "code": "AVAX"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 2500,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Pricing §3.1 (effective 2026-09-01): 'Cashback rate | Up to 5%* of the U.S. dollar value of each Qualifying Card Transaction', '*The cashback rate is tiered, starting at 4%.' Standard tier bands per calendar month: $0–$2,500 = 4%; $2,500–$4,000 = 1%; over $4,000 = 0% (each band applies only to spend inside it). 'Credited in AVAX', converted at the AVAX-USD rate at the time of credit; paid once a day after settlement, 'usually 1 to 3 business days later'; transactions under $1.00 earn nothing. Excluded: cash advances, ATM withdrawals, purchases of cryptocurrency, stablecoins, NFTs or securities, gambling and wagering, among others. Disclaimers §6: rewards 'are discretionary promotional incentives' that 'may be reduced (including to zero), suspended, modified, or terminated at any time'.",
+              "excluded_categories": [
+                "cash advances and ATM withdrawals",
+                "purchases of cryptocurrency, stablecoins, NFTs or securities",
+                "gambling and wagering"
+              ],
+              "description": "4% cashback in AVAX on the first $2,500 of monthly spend (1% to $4,000, then 0%)",
+              "status": "verified",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-disclaimers"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 5,
+              "payout": {
+                "kind": "token",
+                "code": "AVAX"
+              },
+              "requires": "none",
+              "cap": {
+                "amount": {
+                  "amount": 20000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "VIP tier, unlocked by '50 qualified referrals' (account-tiers blog, 2026-11-20): 5% on $0–$20,000 of monthly spend, 2% on $20,000–$30,000, 1% on $30,000–$40,000, 0.5% above. Pro tier (10 qualified referrals): 4.5% on $0–$8,000, 2% to $10,000, 1% to $12,000, 0.5% above (Pricing §3.1). No purchase price for Pro/VIP is published.",
+              "description": "Up to 5% in AVAX (VIP, 50 qualified referrals) on the first $20,000/month",
+              "status": "verified",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-blog-tiers"
+              ]
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "token",
+                "code": "USDe"
+              },
+              "requires": "none",
+              "description": "Balance reward, not a card reward: 'Daily Boost Incentive' up to 6% per annum credited daily in USDe on eligible balances — Standard 5% p.a. on balances up to $5,000, Pro 6% up to $100,000, VIP 6% up to $1,000,000 — conditional on 'At least one Qualifying Card Transaction per calendar month' (Pricing §3.3). Discretionary per Disclaimers §6; the launch blog says 'up to 6% rewards on dollar balances'.",
+              "status": "verified",
+              "evidence": [
+                "ev-ethena-pay-pricing",
+                "ev-ethena-pay-blog-intro",
+                "ev-ethena-pay-disclaimers"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "No published figure. Card Terms §3: 'Your spending limit is generally set by Ethena Pay', equal to the Market Value of the Collateral provided (illustration $100 → $100); 'Ethena Pay Account spending limits are dynamic and may be modified at any time', including to $0.",
+              "status": "unknown",
+              "evidence": [
+                "ev-ethena-pay-card-terms"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-ethena-pay-pricing",
+      "url": "https://pay.ethena.fi/pricing",
+      "title": "Pricing — Ethena Pay (Effective Date: September 1, 2026 · Last Updated: September 30, 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "Account fees Free/None. Card 'issued by a third-party card issuer under license from the applicable card network'; virtual issuance Free; APR 0.00%; cash advances 'Not available'; FX 'Typically around 1.0%, passed through … with no markup'; ATM 'If ATM access is available: $1.00 plus 0.65%'; late payment up to $40; cashback 'Up to 5%*' in AVAX, tiered from 4%; Daily Boost up to 6% p.a. in USDe.",
+      "accessed_at": "2026-11-24T05:48:00Z",
+      "effective_from": "2026-09-01",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "'No foreign exchange fee … no markup' next to a 'Foreign Exchange Fee' row of about 1.0% (network pass-through). 'There is no separate monthly, annual, or lifetime cap on cashback' while the band table drops the rate to 0% above $4,000/month on Standard. ATM fee row vs cash advances 'Not available'. Supported Blockchains (Ethereum, Polygon, Optimism, Arbitrum) omit Avalanche although rewards are paid in AVAX and the blog says 'built exclusively on Avalanche'."
+    },
+    {
+      "id": "ev-ethena-pay-card-terms",
+      "url": "https://pay.ethena.fi/card-terms",
+      "title": "Ethena Pay Spend Card Terms — Ethena Pay (effective June 1, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "'issued by the Issuer under license from Visa'; 'References … to the \"Issuer\" refer to Third National'; 'managed by Signify Holdings, Inc. d/b/a Rain'; 'This Account is a secured Account'; Collateral on a Supported Blockchain; Liquidation Event after one calendar day unpaid; FX 'Visa's fee, passed through at cost (approx. 1%)'; ATM '$1.00 plus 0.65%'; 'not a United States citizen'.",
+      "accessed_at": "2026-11-24T05:44:00Z",
+      "effective_from": "2026-06-01",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "First ~40,000 of 57,500 characters read verbatim; the remainder (arbitration, liability) only as a fetcher summary."
+      },
+      "verification": "verified",
+      "contradiction_note": "Fee table carries an ATM row while §5 says 'Cash advances and balance transfers are not available'. 'Neither the Issuer nor Ethena Pay charges a Foreign Exchange Fee' beside the ~1% Visa pass-through row. Fees 'accurate as of June 1, 2026' vs the Pricing page effective 2026-09-01. Supported Blockchains exclude Avalanche. Repayment creditor named inconsistently (Issuer vs Ethena Pay; 'Partner' undefined)."
+    },
+    {
+      "id": "ev-ethena-pay-jurisdictions",
+      "url": "https://pay.ethena.fi/jurisdictions",
+      "title": "Available Jurisdictions — Ethena Pay",
+      "source_type": "eligibility_page",
+      "excerpt": "'Ethena Pay is live in 47 countries across Latin America, the Caribbean, Asia & the Middle East, Africa, and Oceania' (17 + 12 + 8 + 8 + 2 named); 'Live soon: USA, EU, United Kingdom, Switzerland, Canada, Taiwan, South Korea, and more'; 'The Ethena Pay Spend Card is offered only to non-U.S. persons'; 'Card features, eligibility, and availability vary by jurisdiction'; 'at least 18 years old'.",
+      "accessed_at": "2026-11-24T05:45:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "List of the app's live countries, not a card-specific list. Undated."
+      },
+      "verification": "verified",
+      "contradiction_note": "47 countries here vs 'about 50 countries' in the launch blog (2026-09-03)."
+    },
+    {
+      "id": "ev-ethena-pay-disclaimers",
+      "url": "https://pay.ethena.fi/disclaimers",
+      "title": "Disclaimer and Important Notices — Ethena Pay (Last Updated: September 1, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Ethena Pay Ltd., Malta, C 114576; Spend Card 'issued by a card issuer under a license from the applicable card network'; third parties: 'Sumsub Tech Ltd. (identity verification)', Privy (embedded wallets), 'Iron Network UAB and Moonpay USA LLC (currency on- and off-ramps)'; 'offered only to non-U.S. persons'; rewards 'are discretionary promotional incentives'; no custody of funds.",
+      "accessed_at": "2026-11-24T05:46:00Z",
+      "effective_from": "2026-09-01",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Issuer and programme manager unnamed here vs Third National / Rain in the Card Terms."
+    },
+    {
+      "id": "ev-ethena-pay-blog-intro",
+      "url": "https://pay.ethena.fi/blog/introducing-ethena-pay",
+      "title": "Introducing Ethena Pay — Ethena Pay blog (2026-09-03)",
+      "source_type": "pricing_page",
+      "excerpt": "'live today on iOS in about 50 countries, and sign-up takes two minutes'; 'Generate a virtual card in under a minute and add it to Apple Pay or Google Wallet'; 'Up to 5% back on every purchase'; 'up to 6% rewards on dollar balances'; 'zero FX fee mark up'; 'no annual fee'; 'Holdings into the app convert to USDe'; 'built exclusively on Avalanche'; US/EU support coming.",
+      "accessed_at": "2026-11-24T05:46:00Z",
+      "effective_from": "2026-09-03",
+      "expires_at": null,
+      "scope": {
+        "note": "Marketing copy, not terms."
+      },
+      "verification": "verified",
+      "contradiction_note": "'About 50 countries' vs 47 on the Jurisdictions page; 'Free, Pro and VIP tier' vs Standard/Pro/VIP on Pricing; 'built exclusively on Avalanche' vs Supported Blockchains in the Card Terms/Pricing; 'up to 6%' applies to Pro/VIP only (Standard 5%)."
+    },
+    {
+      "id": "ev-ethena-pay-blog-tiers",
+      "url": "https://pay.ethena.fi/blog/account-tiers",
+      "title": "Referrals are live on Ethena Pay — Ethena Pay blog (2026-11-20)",
+      "source_type": "pricing_page",
+      "excerpt": "Tiers 'Standard', 'Pro', 'VIP'; 'Everyone starts on Standard.'; '10 qualified referrals unlock Pro'; '50 qualified referrals unlock VIP'; 'when a friend joins and qualifies, you both get $30 (Terms apply)'; 'Selected users have access now and all Ethena Pay users will follow in the coming days'; 'Ethena Pay is still invite only'. Tier comparison published as an image (not read).",
+      "accessed_at": "2026-11-24T05:49:00Z",
+      "effective_from": "2026-11-20",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "'You both get $30' vs Referral Terms §6: the referred user 'does not receive a separate bonus' unless stated in the Program Details."
+    },
+    {
+      "id": "ev-ethena-pay-referral-terms",
+      "url": "https://pay.ethena.fi/referral-terms",
+      "title": "Referral Program Terms — Ethena Pay (Effective Date: June 1, 2026 · Last Updated: May 18, 2026)",
+      "source_type": "affiliate_program",
+      "excerpt": "Referring User = 'an existing Ethena Pay user with an active account … in good standing'; Standard Referral Bonus 'USD $30', 'Credited in AVAX'; identity verification required; share 'only with individuals with whom you have a personal relationship'; paid-promotion and SEO distribution prohibited; 'You may not promote the Ethena Pay Spend Card to any U.S. person'; laws of Malta.",
+      "accessed_at": "2026-11-24T05:49:00Z",
+      "effective_from": "2026-06-01",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-ethena-pay-esign",
+      "url": "https://pay.ethena.fi/esign-terms",
+      "title": "E-Sign & Electronic Communications Notice — Ethena Pay (Last Updated: May 27, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Ethena Pay Ltd., 'a company incorporated and registered in Malta with company number C 114576'; 'Ethena Pay Products' include 'virtual accounts, credit cards, prepaid cards, or Ethena Pay Spend accounts'. No fee, country or reward content.",
+      "accessed_at": "2026-11-24T05:47:00Z",
+      "effective_from": "2026-05-27",
+      "expires_at": null,
+      "scope": {
+        "note": "Read for the legal entity only."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://pay.ethena.fi/",
+    "affiliate": {
+      "program_id": "ethena-pay-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-24T05:49:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-24T06:05:00Z",
+      "field": "*",
+      "reason": "Initial record from 8 official pay.ethena.fi pages read by the unattended research run (Pricing effective 2026-09-01/updated 2026-09-30 — governing for fees and rewards; Spend Card Terms effective 2026-06-01 — governing for issuer, collateral and liquidation; Jurisdictions; Disclaimers 2026-09-01; launch blog 2026-09-03; account-tiers blog 2026-11-20; Referral Terms; E-Sign notice) — single read; a second independent read ≥ 24 h later is required before publication. Modelled as crypto_backed_credit: a secured, collateral-backed card at 0% APR with a one-day repayment window and liquidation rights, not a prepaid balance. product_status waitlist because the 2026-11-20 blog says 'still invite only' although the app is 'live' in 47 countries. Country list = the app's live countries (card availability 'varies by jurisdiction' → eligibility hypothesis). Unknown: funding/on-ramp fees (partners Iron Network, MoonPay), KYC documents, spending limit (collateral-based, dynamic), LTV, physical card, Pro/VIP pricing, Restricted Jurisdictions (Terms of Use §4.8 not read). Not read: Terms of Use (/terms), FAQ, promotions page, Earn+ blog.",
+      "evidence": [
+        "ev-ethena-pay-pricing",
+        "ev-ethena-pay-card-terms",
+        "ev-ethena-pay-jurisdictions",
+        "ev-ethena-pay-disclaimers",
+        "ev-ethena-pay-blog-intro",
+        "ev-ethena-pay-blog-tiers",
+        "ev-ethena-pay-referral-terms",
+        "ev-ethena-pay-esign"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual Visa card from Ethena Pay Ltd. (Malta), issued by Third National and managed by Rain, for non-U.S. persons in 47 live countries across Latin America, the Caribbean, Asia, the Middle East, Africa and Oceania (USA, EU, UK, Switzerland and Canada 'live soon'; access still invite-only as of 2026-11-20). It is a secured, collateral-backed card at 0% APR: spending is limited to the value of crypto collateral kept in the user's own wallet and charges must be repaid within one day or the collateral can be liquidated. No issuance, monthly or inactivity fee; non-USD purchases carry the Visa pass-through of about 1%; ATM $1 + 0.65% if available. Cashback in AVAX: 4% on the first $2,500 of monthly spend on the Standard tier (1% to $4,000, then 0%), up to 5% on $20,000/month on VIP (50 qualified referrals). Separate balance reward of 5–6% p.a. in USDe. KYC by Sumsub required.",
+    "good_for": [
+      "Residents of the listed Latin American, Caribbean, Asian, Middle Eastern, African and Oceanian countries who want USD card spending with AVAX cashback",
+      "Users spending under $2,500 a month — the 4% band is the attractive part of the schedule",
+      "Holders of USDe or other digital dollars who want a daily balance reward alongside the card (Standard: 5% p.a. on up to $5,000)"
+    ],
+    "not_for": [
+      "U.S. citizens, residents and other U.S. persons — excluded from the Spend Card wherever they live",
+      "Residents of the EU, UK, Switzerland or Canada until those markets go live ('live soon')",
+      "Anyone who wants a prepaid balance: this is a secured, collateral-backed card with a one-day repayment window and liquidation rights",
+      "Heavier spenders on Standard: cashback drops to 1% between $2,500 and $4,000 and to 0% above $4,000 a month"
+    ],
+    "watch_outs": [
+      "Invite-only access as of 2026-11-20 ('still invite only'); product modelled as waitlist.",
+      "Secured card: collateral in your wallet secures charges; unpaid amounts after one calendar day are a Liquidation Event. The terms also say 'you will repay Ethena Pay' in one place and 'pay the Issuer' in another.",
+      "FX: 'no markup' but the Visa network pass-through of about 1% is charged on non-USD purchases; the launch blog's 'zero FX fee mark up' refers to the markup only.",
+      "ATM: fee published ($1 + 0.65%) but both terms and pricing say cash advances are 'Not available' — ATM access is 'if available'.",
+      "Cashback is paid in AVAX (volatile) at the rate on the day of credit, 1–3 business days after settlement, and is 'discretionary' — it can be cut to zero at any time.",
+      "Supported Blockchains for collateral are Ethereum, Polygon, Optimism and Arbitrum in the terms, while the blog says the app is 'built exclusively on Avalanche'.",
+      "Funding and off-ramp fees are set by partners (Iron Network, MoonPay) and are not published on the pages read.",
+      "Referral bonus: blog says 'you both get $30'; the Referral Terms give the bonus to the referrer only unless the Program Details say otherwise.",
+      "Card Terms governed by Puerto Rico law with AAA arbitration; Referral Terms by Maltese law. The Terms of Use (incl. Restricted Jurisdictions §4.8) were not read."
+    ]
+  }
+}

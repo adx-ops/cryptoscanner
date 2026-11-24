@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory. Discovery 2026-11-23: priority recomputed for every entry with the header formula (+3 only when affiliate_hint names a publisher programme; +1 for referral/ambassador); +2 region bonus not applied (every region in src/lib/regions.ts already has a published card).",
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "entries": [
     {
       "provider": "Wirex",
@@ -2158,15 +2158,67 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "referral (personal, $30 in AVAX; paid promotion prohibited — not a publisher programme)",
+      "status": "validated",
       "first_seen": "2026-11-09",
       "last_seen": "2026-11-23",
-      "priority": 4,
+      "priority": 0,
       "regions_hint": [
         "ZA (directory)",
         "PH (directory)"
-      ]
+      ],
+      "record": "data/cards/ethena-pay-spend-card.json",
+      "regions": [
+        "AR",
+        "BZ",
+        "BO",
+        "BR",
+        "CO",
+        "CR",
+        "EC",
+        "SV",
+        "GT",
+        "GY",
+        "HN",
+        "MX",
+        "PA",
+        "PY",
+        "PE",
+        "SR",
+        "UY",
+        "AG",
+        "BS",
+        "BB",
+        "KY",
+        "DM",
+        "DO",
+        "GD",
+        "KN",
+        "LC",
+        "VC",
+        "TT",
+        "TC",
+        "HK",
+        "JP",
+        "MY",
+        "PK",
+        "PH",
+        "SG",
+        "TH",
+        "AE",
+        "CI",
+        "EG",
+        "GH",
+        "KE",
+        "MA",
+        "SN",
+        "UG",
+        "ZM",
+        "AU",
+        "NZ",
+        "(app live list; card availability varies by jurisdiction; non-U.S. persons only; USA/EU/UK/CH/CA live soon)"
+      ],
+      "note": "Validated 2026-11-24 → data/cards/ethena-pay-spend-card.json (Pricing 2026-09-30 and Card Terms 2026-06-01 governing). Secured collateral-backed Visa (crypto_backed_credit), invite-only (waitlist), non-U.S. persons, 47 live countries. Unknown: funding fees, KYC documents, limits, physical card."
     },
     {
       "provider": "Exworth",
@@ -2571,14 +2623,20 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "referral (in-app: up to $25 per referred signup + up to 0.2% of referred FX spend, USDC; no terms page)",
+      "status": "validated",
       "first_seen": "2026-11-09",
       "last_seen": "2026-11-23",
-      "priority": 4,
+      "priority": 0,
       "regions_hint": [
         "NG (directory)"
-      ]
+      ],
+      "record": "data/cards/thorwallet-card.json",
+      "regions": [
+        "175+ countries incl. US, UK, EEA, CH, LATAM, APAC, MEA, Africa (indicative list on the card page; 31 excluded incl. NG, IN, CN, RU, VN, KE)"
+      ],
+      "needs_browser_read": true,
+      "note": "Validated 2026-11-24 → data/cards/thorwallet-card.json (Membership Terms v1.1 Nov 2026 governing). Issuer not disclosed (Unblock / Atomo Sarl). Basic orderable; Premium coming soon. Help articles card-fees-and-limits and top-up-card unreadable by the fetcher → browser read needed. Swiss IBAN Mastercard (Fiat24) = separate product, to add as its own candidate."
     },
     {
       "provider": "UR",
@@ -3305,6 +3363,26 @@
         "NG (directory)"
       ],
       "discovery_note": "cryptocards.so highlight: KYC 'email only'; name says US. cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+    },
+    {
+      "provider": "THORWallet",
+      "product": "THORWallet Swiss IBAN Mastercard (Fiat24)",
+      "slug": "thorwallet-swiss-iban-mastercard",
+      "seen_in": [
+        "thorwallet.org/cards (official page, research run 2026-11-24)"
+      ],
+      "cross_listing_count": 0,
+      "no_kyc_claim": false,
+      "operator_named": true,
+      "affiliate_hint": "referral (THORWallet in-app referral; card-specific terms unknown)",
+      "status": "identified",
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "priority": 1,
+      "regions_hint": [
+        "50+ countries (FAQ, undated)"
+      ],
+      "discovery_note": "Separate product from the THORWallet Card (Unblock): virtual multi-currency Mastercard (USD/CHF/EUR/RMB) with Swiss IBAN provided with Fiat24 (SR Saphirstein AG); card page: free, FX 1%, top-up 0.25–1%, no ATM fee; FAQ shows an older tiered schedule (Standard 1% / Gold 0.5% for 1.5 ETH / Platinum 0.25% for 15 ETH). Official pages already surfaced: thorwallet.org/cards, faqs.thorwallet.org/thorwallet-iban-mastercard, membership-terms."
     }
   ]
 }

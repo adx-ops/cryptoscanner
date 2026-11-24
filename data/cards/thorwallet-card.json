@@ -1,0 +1,783 @@
+{
+  "schema_version": "1.0.0",
+  "id": "thorwallet-card",
+  "slug": "thorwallet-card",
+  "name": "THORWallet Card",
+  "brand": "THORWallet",
+  "provider_id": "thorwallet",
+  "issuer": {
+    "name": "not disclosed — card provided 'in collaboration with Unblock', the Unblock card programme operated by Atomo Sarl; THORWallet (EMM Ventures AG, Zug) 'does not issue cards'",
+    "status": "verified",
+    "evidence": [
+      "ev-thorwallet-membership-terms",
+      "ev-thorwallet-cards-page",
+      "ev-thorwallet-terms-of-service"
+    ]
+  },
+  "network": "mastercard",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "hybrid",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "Product page FAQ: 'Your wallet stays self-custody. Only the amount you top up moves to the card balance.' Top-up in USDC on Ethereum at 0%; 'Other assets, including USDC on other networks, are converted to USDC first' (swap fee applies; fee 'shown in the form'); the wallet holds 'Assets on 17 networks, including Bitcoin, Ethereum, Solana, Base, Arbitrum and TRON'. Card balance in USD held in the Unblock programme → custody modelled as hybrid. The help article 'top-up-card' could not be read (fetcher permission). The older Swiss IBAN / Fiat24 Mastercard is a separate product ('The new THORWallet Card is separate from the existing THORWallet Mastercard and IBAN product') and is not modelled here.",
+    "evidence": [
+      "ev-thorwallet-cards-page",
+      "ev-thorwallet-faq-card",
+      "ev-thorwallet-fees-page"
+    ]
+  },
+  "variants": [
+    {
+      "id": "thorwallet-card-global",
+      "region_label": "Global — 175+ countries incl. US, UK, EEA, CH (indicative list on the card page)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "AF",
+          "AL",
+          "DZ",
+          "AD",
+          "AI",
+          "AG",
+          "AR",
+          "AM",
+          "AW",
+          "AU",
+          "AT",
+          "AZ",
+          "BS",
+          "BH",
+          "BD",
+          "BB",
+          "BE",
+          "BZ",
+          "BJ",
+          "BM",
+          "BW",
+          "BR",
+          "BN",
+          "BF",
+          "BI",
+          "KH",
+          "CA",
+          "KY",
+          "CF",
+          "TD",
+          "CL",
+          "CO",
+          "KM",
+          "CG",
+          "CR",
+          "HR",
+          "CU",
+          "CW",
+          "CY",
+          "CZ",
+          "DK",
+          "DJ",
+          "DM",
+          "DO",
+          "EC",
+          "EG",
+          "SV",
+          "GQ",
+          "ER",
+          "EE",
+          "SZ",
+          "ET",
+          "FJ",
+          "FI",
+          "FR",
+          "GA",
+          "GM",
+          "GE",
+          "DE",
+          "GH",
+          "GI",
+          "GR",
+          "GD",
+          "GG",
+          "GN",
+          "GW",
+          "GY",
+          "HN",
+          "HK",
+          "HU",
+          "IS",
+          "ID",
+          "IE",
+          "IM",
+          "IL",
+          "IT",
+          "JM",
+          "JP",
+          "JE",
+          "JO",
+          "KZ",
+          "KI",
+          "KG",
+          "LV",
+          "LS",
+          "LR",
+          "LY",
+          "LI",
+          "LT",
+          "LU",
+          "MO",
+          "MG",
+          "MY",
+          "MV",
+          "ML",
+          "MT",
+          "MH",
+          "MR",
+          "MU",
+          "MX",
+          "FM",
+          "MD",
+          "MN",
+          "MS",
+          "MA",
+          "MZ",
+          "NA",
+          "NR",
+          "NL",
+          "NZ",
+          "NI",
+          "NU",
+          "MK",
+          "NO",
+          "OM",
+          "PK",
+          "PW",
+          "PA",
+          "PY",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "PR",
+          "QA",
+          "RO",
+          "RW",
+          "KN",
+          "LC",
+          "VC",
+          "SM",
+          "ST",
+          "SA",
+          "SN",
+          "RS",
+          "SC",
+          "SL",
+          "SG",
+          "SK",
+          "SI",
+          "SB",
+          "SO",
+          "ZA",
+          "KR",
+          "ES",
+          "LK",
+          "SR",
+          "SE",
+          "CH",
+          "TW",
+          "TJ",
+          "TZ",
+          "TH",
+          "TL",
+          "TG",
+          "TO",
+          "TT",
+          "TN",
+          "TR",
+          "TM",
+          "TC",
+          "TV",
+          "UG",
+          "UA",
+          "AE",
+          "GB",
+          "US",
+          "UY",
+          "UZ",
+          "VU",
+          "VA",
+          "ZM",
+          "ZW"
+        ],
+        "residence_excluded": [
+          "AO",
+          "BY",
+          "BO",
+          "BA",
+          "VG",
+          "BG",
+          "CM",
+          "CN",
+          "CD",
+          "CI",
+          "HT",
+          "IN",
+          "IR",
+          "IQ",
+          "KE",
+          "KW",
+          "LA",
+          "LB",
+          "MC",
+          "MM",
+          "NP",
+          "NG",
+          "KP",
+          "PG",
+          "RU",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "VN",
+          "YE"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "'Your country of residence decides, not your nationality.' (card page). Terms of Service: residents of the State of New York and the State of Washington, and of OFAC-, Swiss- and UN-sanctioned jurisdictions, may not use the Service.",
+        "usage_note": "Lists taken from the card page thorwallet.org/cards ('Available to residents of 175+ countries', 'Indicative list; availability depends on verification and may change'): 173 named countries available (Kosovo is also listed but has no ISO code in this catalogue) and 31 'Not available'. The help centre says 'Check the list on the card page'. The FAQ page (faqs.thorwallet.org) prints a different list ('170+ countries, including the US'): it includes Montenegro and omits Kosovo, and shows no exclusion list. Cuba appears on the 'Available' list although the Terms of Service exclude sanctioned jurisdictions — contradiction, not resolved. Paid memberships (Premium) 'are not available to Users resident in the United Kingdom' (Membership Terms §3.1) — UK residents can only get Basic. Physical cards 'are shipped only to addresses in countries THORWallet supports for delivery' — no delivery list published.",
+        "evidence": [
+          "ev-thorwallet-cards-page",
+          "ev-thorwallet-faq-card",
+          "ev-thorwallet-membership-terms",
+          "ev-thorwallet-terms-of-service",
+          "ev-thorwallet-help-get-card"
+        ],
+        "status": "contradictory"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "enhanced",
+        "requirements": [
+          "id_document",
+          "selfie",
+          "proof_of_address",
+          "source_of_funds",
+          "phone",
+          "email"
+        ],
+        "thresholds_note": "Help centre (updated 2026-11-12): 'You need a valid passport or national ID card, a selfie and a proof of address in your name that is not older than 3 months.' Part 2 also asks 'about your profession, employment, income, expected balance, source of funds and intended use'. 'The THORWallet wallet needs no identity check. The THORWallet Card does' — 'the card partner Unblock reviews it and makes the final decision.' Accepted proof of address: utility bills, public-register extract, official letter; not accepted: mobile-phone bills, bank or insurance statements, tax notices.",
+        "stages_note": "Order flow: Cards tab → Get Basic → invite code (optional) → verification part 1 (details, address, phone and e-mail codes) → part 2 (ID, selfie, proof of address, financial information) → 'Verification completed' → 'Get your card' → one-off payment in USDC. 'After the first approval your card runs on Light verification, with a lower monthly limit until your full verification is approved' — FAQ: initial monthly limit $10,000 for Basic, raised to $100,000 after full verification.",
+        "evidence": [
+          "ev-thorwallet-help-kyc",
+          "ev-thorwallet-help-get-card",
+          "ev-thorwallet-faq-card",
+          "ev-thorwallet-cards-page"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "basic",
+          "name": "Basic",
+          "access": {
+            "type": "free",
+            "note": "Virtual Mastercard, orderable now. 'Free with a valid invite code, otherwise USD 5 one-off activation' (Membership Terms Annex A, v1.1 Nov 2026); 'None. Does not auto-renew.' Payment in USDC on Base, Arbitrum or Ethereum plus network fee (help centre).",
+            "status": "verified",
+            "evidence": [
+              "ev-thorwallet-membership-terms",
+              "ev-thorwallet-cards-page",
+              "ev-thorwallet-help-get-card"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "conditions": "One-off activation 'Free with a valid invite code, otherwise USD 5' (Membership Terms Annex A; card page 'Free $5 with an invite code · otherwise $5 one-off'; fees page 'Free with invite · otherwise $5'; help centre '$5 in USDC on Base, Arbitrum or Ethereum, and a small amount of ETH … for the network fee'). The no-invite price is modelled; 'Invite waives the fee'. Non-refundable.",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-membership-terms",
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-help-get-card"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "year",
+              "conditions": "Basic: 'Cost per year | Free' (FAQ); 'Renewal: None. Does not auto-renew.' (Membership Terms Annex A). The Membership Fee is a single non-recurring payment (Terms of Service).",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-faq-card",
+                "ev-thorwallet-membership-terms",
+                "ev-thorwallet-terms-of-service"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "'Card FX 1.5%' (card page, fees page checked against the app on 2026-11-12); 'FX markup (Unblock programme) | 1.50%' (Membership Terms Annex A); 'FX fee markup | 1.5%' (FAQ). Card currency USD; applies to non-USD purchases. Base exchange rate not stated.",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-membership-terms",
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-faq-card"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "min": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "'ATM withdrawal | $1 domestic · $5 international' (fees page; card page 'ATM withdraw $1 dom · $5 intl'; FAQ 'ATM withdrawal markup* | $1 + 5$ Intl'). The international fee ($5) is modelled; domestic withdrawals cost $1. ATM operator surcharges and the FX markup on non-USD withdrawals are not addressed.",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-faq-card"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1.25,
+              "period": "per_transaction",
+              "conditions": "'Crypto top-up | 0% with USDC on Ethereum · other assets: fee shown in the form' (fees page); card page: other assets 'are converted to USDC first'; 'THORWallet swap fee | 1.25%' on Basic (Membership Terms Annex A), 'Swaps under $100 are free on every membership'. The 1.25% swap fee is modelled as the cost of topping up with anything other than USDC on Ethereum; USDC on Ethereum is free. The exact conversion fee for other assets is only 'shown in the form' → hypothesis. The help article 'top-up-card' could not be read.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-membership-terms"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Basic is virtual only ('Card type Virtual'; FAQ 'Physical card | Not included'). No physical card on Basic.",
+              "status": "unknown",
+              "evidence": [
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-faq-card"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 100000,
+                "currency": "USD"
+              },
+              "period": "month",
+              "note": "Basic: POS $20,000 per transaction, $50,000 daily, $100,000 monthly (card page and FAQ tables). FAQ: 'Basic users receive an initial monthly card limit of $10,000 after completing the standard verification', raised to $100,000 after full verification. Custom limits 'Not available'.",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-faq-card"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 2500,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "ATM $2,500 per transaction, $10,000 daily, $20,000 monthly (Basic).",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-faq-card"
+              ]
+            }
+          ],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 124,
+              "currency": "USD"
+            },
+            "period": "once",
+            "note": "'USD 124 one-off, or USD 99 with a valid invite code' (Membership Terms Annex A); 'one-off, no subscription', 'Does not auto-renew', non-refundable; payable in USDC. NOT ORDERABLE YET: help centre (2026-11-12) 'In the current app version its button shows Coming soon, so you cannot order it yet.' Not available to UK residents (§3.1). Includes the physical card.",
+            "status": "verified",
+            "evidence": [
+              "ev-thorwallet-membership-terms",
+              "ev-thorwallet-help-get-card",
+              "ev-thorwallet-cards-page"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "No separate activation fee beyond the membership price; 'Physical card Included' (card page). Membership Terms Annex A: physical card deducted at USD 6 only if the membership is withdrawn (clause 12.5(a)).",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-membership-terms",
+                "ev-thorwallet-cards-page"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 124,
+                "currency": "USD"
+              },
+              "period": "once",
+              "conditions": "'$99 with invite · otherwise $124' (fees page); 'USD 124 one-off, or USD 99 with a valid invite code' (Membership Terms); 'Does not auto-renew'. The FAQ shows 'Cost per year | $99*(With Referral)' and 'One time Purchase' without the $124 figure (contradiction on price basis; the dated Membership Terms govern). The no-invite price is modelled.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-thorwallet-membership-terms",
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-faq-card"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1.5,
+              "period": "per_transaction",
+              "conditions": "'Card FX 1.5%' on Premium too (card page, fees page, Membership Terms Annex A 'FX markup (Unblock programme) | 1.50%'). Card page fine print: cashback is 'paid from the card's FX margin'.",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-membership-terms",
+                "ev-thorwallet-cards-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "fixed",
+              "amount": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "min": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "conditions": "'$1 domestic · $5 international' (fees page, card page). International fee modelled.",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-cards-page"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "conditions": "0% with USDC on Ethereum; other assets converted to USDC at the swap fee: 'Swap fee 0.5% for 3 months' then 1.25% again (card page; Membership Terms Annex A '0.50% | 1.25%' for months 1–3 / month 4+); 0.5% permanently with the Community Tier (stake 10,000 TITN). The 3-month rate is modelled; after month 3 the Basic rate (1.25%) applies. Exact conversion fee 'shown in the form' → hypothesis.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-membership-terms"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "none",
+              "conditions": "Membership Terms Annex A: 'Physical and virtual (Unblock), delivery included'; clause 7.2 'THORWallet arranges its production and delivery at no separate charge to you'. The Annex withdrawal row says 'Delivery: at cost, disclosed to you before purchase' (deducted only on withdrawal of the membership). 'Physical cards are shipped only to addresses in countries THORWallet supports for delivery' — no list.",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-membership-terms"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.5,
+              "payout": {
+                "kind": "token",
+                "code": "USDC"
+              },
+              "requires": "subscription",
+              "cap": {
+                "amount": {
+                  "amount": 2000,
+                  "currency": "USD"
+                },
+                "period": "month",
+                "basis": "spend"
+              },
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "'Premium earns a flat 0.5% cashback in USDC on every purchase' (card page); Membership Terms Annex A: 'Cashback rate (Unblock card spend) | 0.50%', 'Monthly cashback cap | USD 5,000 of qualifying spend' for months 1–3, then 'USD 2,000 of qualifying spend' ($5,000 with the Community Tier = 10,000 TITN staked). The ongoing $2,000/month qualifying-spend cap is modelled (first 3 months: $5,000). The FAQ instead says the $5,000 cap applies 'during your first year' — contradiction; the dated Membership Terms (v1.1, Nov 2026) govern. Excluded: 'Cash and quasi-cash · money transfer and remittance · gambling and betting · purchases of crypto-assets'. Accrues on Unblock-programme card purchases only, not on the Fiat24 card. Card page hero: 'USDC cashback on Premium - coming soon'.",
+              "excluded_categories": [
+                "cash and quasi-cash",
+                "money transfer and remittance",
+                "gambling and betting",
+                "purchases of crypto-assets"
+              ],
+              "description": "0.5% cashback in USDC on the first $2,000 of monthly spend ($5,000 for the first 3 months)",
+              "status": "contradictory",
+              "evidence": [
+                "ev-thorwallet-membership-terms",
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-fees-page",
+                "ev-thorwallet-faq-card"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 1000000,
+                "currency": "USD"
+              },
+              "period": "month",
+              "note": "Premium: POS $100,000 per transaction, $500,000 daily, $1,000,000 monthly; 'Higher limits on request' (card page, FAQ).",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-faq-card"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "amount": {
+                "amount": 2500,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "ATM $2,500 per transaction, $10,000 daily, $60,000 monthly (Premium).",
+              "status": "verified",
+              "evidence": [
+                "ev-thorwallet-cards-page",
+                "ev-thorwallet-faq-card"
+              ]
+            }
+          ],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-thorwallet-membership-terms",
+      "url": "https://www.thorwallet.org/membership-terms",
+      "title": "Membership Terms — THORWallet (Version 1.1 · Last modified November 2026; Annex A effective November 2026)",
+      "source_type": "official_terms",
+      "excerpt": "'you and EMM Ventures AG, Bahnhofstrasse 11, 6300 Zug'; Card Providers 'Fiat24 (SR Saphirstein AG) and Atomo Sarl, operator of the Unblock card program'; 'THORWallet does not issue cards'. Annex A: Basic 'otherwise USD 5 one-off activation'; Premium 'USD 124 one-off, or USD 99 with a valid invite code'; swap 1.25% | 0.50% | 1.25%; FX 1.50%; cashback 0.50%, cap USD 5,000 then 2,000.",
+      "accessed_at": "2026-11-24T05:44:00Z",
+      "effective_from": "2026-11-01",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "Clause 7.2 'delivery at no separate charge' vs Annex withdrawal row 'Delivery: at cost' (the latter applies on withdrawal). Cashback cap window 3 months here vs 'first year' in the FAQ."
+    },
+    {
+      "id": "ev-thorwallet-cards-page",
+      "url": "https://www.thorwallet.org/cards",
+      "title": "Crypto Mastercard with Swiss IBAN - Self-Custody | THORWallet (product page with fee, limit and country tables)",
+      "source_type": "pricing_page",
+      "excerpt": "'provided in collaboration with Unblock, the card partner that also reviews your identity documents.' 'Available to residents of 175+ countries.' 'Your country of residence decides, not your nationality.' 'Indicative list'. Basic: $5 (free with invite), virtual, swap 1.25%, FX 1.5%, ATM $1 dom · $5 intl; Premium: $124 ($99 with invite), physical, 0.5% USDC cashback, cap $5,000/mo then $2,000.",
+      "accessed_at": "2026-11-24T05:41:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Also reached as thorwallet.org/card (identical; canonical /cards). Country lists: 173 countries 'Available' (plus Kosovo) and 31 'Not available'."
+      },
+      "verification": "verified",
+      "contradiction_note": "'175+ countries' vs '170+ countries' in the FAQ; Kosovo listed here, Montenegro only in the FAQ; Cuba 'Available' although the Terms of Service exclude sanctioned jurisdictions; hero 'USDC cashback on Premium - coming soon'."
+    },
+    {
+      "id": "ev-thorwallet-fees-page",
+      "url": "https://www.thorwallet.org/fees",
+      "title": "THORWallet Fees - Swap, Card, Perps & Network Fees ('Checked against the released app on 12 November 2026')",
+      "source_type": "pricing_page",
+      "excerpt": "Basic | Premium | Swiss IBAN: 'Membership price | Free with invite · otherwise $5 | $99 with invite · otherwise $124 | Free'; 'Crypto top-up | 0% with USDC on Ethereum · other assets: fee shown in the form | (same) | 0.25-1%'; 'Card FX | 1.5% | 1.5% | 1%'; 'ATM withdrawal | $1 domestic · $5 international | (same) | None'; 'Cashback | - | 0.5% in USDC | -'; cap '$5,000 / mo for 3 months'.",
+      "accessed_at": "2026-11-24T05:50:00Z",
+      "effective_from": "2026-11-12",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-thorwallet-faq-card",
+      "url": "https://faqs.thorwallet.org/thorwallet-card",
+      "title": "THORWallet Card — FAQ (faqs.thorwallet.org)",
+      "source_type": "help_center",
+      "excerpt": "'spend with a virtual or physical Mastercard, top up with USDC'; 'available in 170+ countries, including the US'; Basic | Premium: 'Cost per year | Free | $99*(With Referral)', cashback 0% | 'Up to 0.5%*', FX markup 1.5% | 1.5%, ATM '$1 + 5$ Intl', monthly limit $100,000* | $1,000,000; 'initial monthly card limit of $10,000'; 'separate from the existing THORWallet Mastercard and IBAN product'.",
+      "accessed_at": "2026-11-24T05:42:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "Cashback cap $5,000 'during your first year' then $2,000 vs 3 months on the card page and in the Membership Terms; Premium '$99*(With Referral)' per year vs $124/$99 one-off; 170+ vs 175+ countries; Montenegro listed, Kosovo absent."
+    },
+    {
+      "id": "ev-thorwallet-help-kyc",
+      "url": "https://www.thorwallet.org/help/card-identity-verification",
+      "title": "Identity verification (KYC) for the card - THORWallet Help (Updated 12 Nov 2026)",
+      "source_type": "help_center",
+      "excerpt": "'You need a valid passport or national ID card, a selfie and a proof of address in your name that is not older than 3 months.' 'The THORWallet wallet needs no identity check. The THORWallet Card does'; 'the card partner Unblock reviews it and makes the final decision.' Questions on 'profession, employment, income, expected balance, source of funds and intended use'. 'Light verification'.",
+      "accessed_at": "2026-11-24T05:51:00Z",
+      "effective_from": "2026-11-12",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-thorwallet-help-get-card",
+      "url": "https://www.thorwallet.org/help/get-thorwallet-card",
+      "title": "How to get the THORWallet Card - THORWallet Help (Updated 12 Nov 2026)",
+      "source_type": "help_center",
+      "excerpt": "'Open the Cards tab in the THORWallet mobile app with a seed wallet, tap Get Basic'; without invite code '$5 in USDC on Base, Arbitrum or Ethereum, and a small amount of ETH … for the network fee'; 'A supported country of residence. Check the list on the card page.'; Premium: 'its button shows Coming soon, so you cannot order it yet.' 'The listed price is $124 once, or $99 with an invite code.'",
+      "accessed_at": "2026-11-24T05:51:00Z",
+      "effective_from": "2026-11-12",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-thorwallet-terms-of-service",
+      "url": "https://www.thorwallet.org/terms-of-service",
+      "title": "Terms of Service - THORWallet (Version 2 · Last modified July 2026)",
+      "source_type": "official_terms",
+      "excerpt": "'issued by EMM Ventures AG, Bahnhofstrasse 11, 6300 Zug, Switzerland'; 'we do not allow Users residing or present in the following jurisdictions to use the Service': the State of New York, the State of Washington, OFAC-, Swiss- and UN-sanctioned jurisdictions; 'Membership Fees … are charged as a single non-recurring payment'; 'We may receive … referral or affiliate remuneration'.",
+      "accessed_at": "2026-11-24T05:45:00Z",
+      "effective_from": "2026-07-01",
+      "expires_at": null,
+      "scope": {
+        "note": "First ~40,000 of 89,000 characters read verbatim; Section 12 (card services) only as a fetcher summary — the issuer wording there must be re-read."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-thorwallet-faq-iban-mastercard",
+      "url": "https://faqs.thorwallet.org/thorwallet-iban-mastercard",
+      "title": "THORWallet IBAN / Mastercard — FAQ (older Fiat24 product, not modelled)",
+      "source_type": "help_center",
+      "excerpt": "Separate Fiat24 product: KYC 'verified by the Fiat24 team'; 'multi-currency debit card' with base currencies USD, CHF, EUR, RMB; 'Can be added to Apple Pay and Google Pay'; tiers Standard 1% | Gold 0.5% (1.5 ETH) | Platinum 0.25% (15 ETH) crypto top-up & FX fee; card limit $20,000/month Standard; top-up 'USDC (Arbitrum)'.",
+      "accessed_at": "2026-11-24T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Read to separate the two products; the Swiss IBAN Mastercard is a candidate of its own, not a variant of this record."
+      },
+      "verification": "verified",
+      "contradiction_note": "Swiss IBAN fees here (tiered, ETH sign-up fees) differ from the single free tier with 'Card FX 1%' and 'Top-up fee 0.25-1%' on the card page."
+    },
+    {
+      "id": "ev-thorwallet-faq-thorcash",
+      "url": "https://faqs.thorwallet.org/features/buy-with-fiat/thorcash",
+      "title": "THORCash — FAQ (fiat on-ramp, not the card)",
+      "source_type": "help_center",
+      "excerpt": "Fiat on-ramp via 'a fully regulated provider'; card-payment fee 2.49% from the second transaction, processing fee 4.5% (USD, EUR, GBP, JPY) up to 6.5%; limits $2,000 or $500 without verification depending on location. The page does not say it funds the THORWallet Card.",
+      "accessed_at": "2026-11-24T05:43:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Not used for any card value."
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.thorwallet.org/cards",
+    "affiliate": {
+      "program_id": "thorwallet-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-24T05:51:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-24T06:10:00Z",
+      "field": "*",
+      "reason": "Initial record from 9 official THORWallet pages read by the unattended research run (Membership Terms v1.1 Nov 2026 — governing; card page with fee/limit/country tables; fees page checked 2026-11-12; FAQ; KYC and ordering help articles updated 2026-11-12; Terms of Service v2 Jul 2026 — partly; IBAN/Mastercard FAQ and THORCash FAQ for context) — single read; a second independent read ≥ 24 h later is required before publication. Issuer not disclosed (Unblock programme operated by Atomo Sarl). Basic (virtual, $5 or free with invite) is orderable; Premium ($124 / $99, physical card, 0.5% USDC cashback) shows 'Coming soon' in the app and is not available to UK residents. Unreadable by the fetcher (permission): help articles 'card-fees-and-limits' and 'top-up-card' → needs_browser_read. Unknown: Apple/Google Pay for this card, physical-card delivery countries, ATM operator fees, exact conversion fee for non-USDC top-ups, Section 12 of the Terms of Service (card issuer wording). Contradictions recorded: 175+ vs 170+ countries and differing lists (Kosovo/Montenegro, Cuba vs sanctions clause); cashback cap window 3 months vs first year; Premium price basis.",
+      "evidence": [
+        "ev-thorwallet-membership-terms",
+        "ev-thorwallet-cards-page",
+        "ev-thorwallet-fees-page",
+        "ev-thorwallet-faq-card",
+        "ev-thorwallet-help-kyc",
+        "ev-thorwallet-help-get-card",
+        "ev-thorwallet-terms-of-service",
+        "ev-thorwallet-faq-iban-mastercard",
+        "ev-thorwallet-faq-thorcash"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "USD Mastercard attached to the self-custodial THORWallet app (EMM Ventures AG, Zug), provided through the Unblock card programme (Atomo Sarl); the issuing bank is not disclosed. Available to residents of 175+ countries including the US, UK, EEA and Switzerland (indicative list; Nigeria, India, China, Russia and 27 others excluded). Basic is a virtual card for a one-off $5 (free with an invite code), no subscription, FX 1.5%, ATM $1 domestic / $5 international, free top-up with USDC on Ethereum (other assets converted at the 1.25% swap fee), no cashback. Premium ($124 one-off, $99 with invite; 'coming soon' in the app; not for UK residents) adds a physical card and 0.5% USDC cashback on the first $5,000 of monthly spend for three months, then $2,000. Full KYC (ID, selfie, proof of address, financial questions) by Unblock; a lower limit applies until full verification.",
+    "good_for": [
+      "THORWallet users almost anywhere (US, UK, EEA, CH, LATAM, Asia, Africa) who want a cheap USD virtual card funded from a self-custodial wallet",
+      "Holders of USDC on Ethereum: 0% top-up and no subscription on Basic",
+      "High limits: $100,000/month on Basic after full verification, $1,000,000/month on Premium"
+    ],
+    "not_for": [
+      "Residents of the 31 excluded countries (Nigeria, India, China, Russia, Vietnam, Kenya, Bulgaria, Monaco…) and of New York or Washington State",
+      "UK residents wanting Premium — paid memberships are not offered in the UK",
+      "Anyone counting on cashback today: 0.5% is Premium-only, capped at $2,000 of monthly spend after 3 months, and Premium is 'coming soon'",
+      "Users spending outside USD: 1.5% FX markup on every non-USD purchase"
+    ],
+    "watch_outs": [
+      "Issuer not disclosed: the card comes from the Unblock programme (Atomo Sarl); Section 12 of the Terms of Service was only read as a summary.",
+      "Premium cannot be ordered yet ('Coming soon' in the current app version) although its price and cashback are published.",
+      "Cashback cap window: 3 months at $5,000 then $2,000 (Membership Terms, card page) vs 'first year' (FAQ).",
+      "Country list is 'indicative' and differs between the card page (175+, Kosovo) and the FAQ (170+, Montenegro); Cuba is listed as available while the Terms of Service exclude sanctioned jurisdictions.",
+      "Top-ups other than USDC on Ethereum are converted first — the exact fee is only 'shown in the form'; the help article on top-ups could not be read.",
+      "Apple Pay / Google Pay are not mentioned for this card (only for the older Fiat24 Mastercard).",
+      "Membership fees are non-refundable and paid in USDC; physical cards ship only to supported delivery countries (list not published).",
+      "The older THORWallet Swiss IBAN Mastercard (Fiat24) is a separate product with its own fees."
+    ]
+  }
+}
