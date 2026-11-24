@@ -10,13 +10,13 @@
   "allowed_channels": [
     "unknown"
   ],
-  "application_conditions": "Help centre (2026-06-14): registration at ambassador.tria.so (not read this run); each ambassador gets a unique referral code on a dashboard; the ambassador account must be linked to a Tria account and 'once linked, this cannot be changed'. No acceptance criteria, channel rules or publisher requirements stated. Separate 'App Referrals' open to all users via a share link in the app's Rewards section.",
+  "application_conditions": "Ambassador portal ambassador.tria.so (read 2026-11-24): existing ambassadors sponsor new ones; others submit a form (name, email, country, socials, community size, short message) — 'the team reviews each application personally', 'no public queue'. Help centre (2026-06-14, not re-readable on 2026-11-24): each ambassador gets a unique referral code on a dashboard; the ambassador account must be linked to a Tria account and 'once linked, this cannot be changed'. No acceptance criteria, channel rules, publisher requirements or terms link on the portal. Separate in-app 'App Referrals' / 'Refer & Earn' ($5 USDT each, blog 2026-08-19).",
   "our_status": "identified",
-  "paid_action": "Commissions on three referral activities: card purchase, card spend and futures spend, for users who signed up with the ambassador's code.",
-  "validation_conditions": "Referred users must use the ambassador's code for tracking; card transactions carry a 90-day settlement period for chargebacks. KYC requirements for payout not stated.",
+  "paid_action": "Three commission streams on users who signed up with the ambassador's code: 'Card sales' (Season-3 article: 'Membership Sales' — Signature or Premium membership), 'Card spend' and 'Futures fees'. Portal: an 'active referral' = '$1 of card spend or $10K of trading volume in the last 90 days'. Season-3 article: card-spend commission starts only after the referral's first card transaction with non-zero spend.",
+  "validation_conditions": "Referred users must use the ambassador's code for tracking; card transactions carry a 90-day settlement period for chargebacks (help centre). Rewards claimable in the Tria app only while the claimant is active; minimum claim $5 USDC (Season-3 article). KYC requirements for payout not stated.",
   "commission": {
-    "model_note": "Direct-sale commission by tier (based on number of cards sold): Bronze 20%, Silver 25%, Gold 30%, Platinum 30–40%, Diamond 50%; indirect (second-level) commission 10% at every tier — Platinum and Diamond on their whole downline, lower tiers on direct referrals only. The base the percentages apply to (card price, spend fees?) is not defined on the page.",
-    "tiers_note": "Bronze / Silver / Gold / Platinum / Diamond by cards sold; thresholds not stated.",
+    "model_note": "Help centre (2026-06-14): direct-sale commission by tier (cards sold): Bronze 20%, Silver 25%, Gold 30%, Platinum 30–40%, Diamond 50%; indirect (second-level) commission 10% at every tier. Season-3 referral article (2026-06-01): only fully stated tier 'Silver-1' (10–19 active referrals) = 25% on eligible Signature or Premium membership sales, 0.10% on card spend, 10% of Tria fees from futures trading; other tiers in an image; direct referrals only ('If I refer A and A refers B, do I earn on B? No'). Portal (2026-11-24): 'five standard tiers and an exclusive tier', 'higher rungs exist past Gold', no percentages; simulator example (Gold, 30 members): card sales $1.62K, card spend $2.25K, futures $21.6K, 'projected annual run-rate $25.5K', 'estimate only'. The base for the card-sale percentage is the membership (card) price; the card-spend percentage applies to spend.",
+    "tiers_note": "Bronze / Silver / Gold / Platinum / Diamond by cards sold (help centre); Season-3 tiers by active referrals (Silver-1 = 10–19); thresholds otherwise in images, not extracted.",
     "status": "hypothesis"
   },
   "attribution": {
@@ -25,10 +25,10 @@
     "status": "verified"
   },
   "payout": {
-    "threshold": "not stated",
-    "method": "'USD equivalent' paid to the connected Tria wallet",
-    "frequency": "Card sales and card spend: quarterly; futures spend: monthly",
-    "holdbacks_note": "90-day settlement period on card transactions for potential chargebacks."
+    "threshold": "Minimum claim $5 USDC (Season-3 article)",
+    "method": "Stablecoins (USDC), claimable from the Tria app (portal, 2026-11-24); help centre (2026-06-14): 'USD equivalent' to the connected Tria wallet",
+    "frequency": "Portal and Season-3 article: card sales and futures distributed every Tuesday for the prior week; card spend on the last Tuesday of the month. Help centre (2026-06-14): card sales and spend quarterly, futures monthly — the newer pages govern.",
+    "holdbacks_note": "90-day settlement period on card transactions for potential chargebacks (help centre)."
   },
   "reporting": {
     "dashboard": true,
@@ -37,16 +37,34 @@
     "postback": false,
     "status": "hypothesis"
   },
-  "rules_note": "Multi-level structure (10% indirect commission on referred ambassadors' sales) — to be weighed against the site's editorial independence before any application. Formal programme terms not found on the pages read; ambassador.tria.so not fetched.",
+  "rules_note": "Multi-level structure per the help centre (10% indirect commission) and a 'second layer' on the portal, but the Season-3 article says direct referrals only — official pages disagree on depth. No formal programme terms, agreement or country list found on the portal or the pages read. Terminology differs ('card sales' vs 'Membership Sales'). To be weighed against the site's editorial independence before any application.",
   "allowed_countries_note": "Not stated. Cardholders must pass KYC in a supported country (help centre: 'over 200 supported regions').",
   "evidence": [
     {
       "url": "https://help.tria.so/en/articles/14495802-tria-referrals-ambassador-program",
       "title": "Tria Referrals & Ambassador Program (help centre, June 14, 2026)",
       "accessed_at": "2026-11-09T06:14:00Z",
-      "excerpt": "'a more structured referral platform for those looking to earn higher commissions'; registration at ambassador.tria.so; unique referral code; commissions on card purchase, card spend and futures spend; direct 20/25/30/30–40/50% by tier, indirect 10%; paid in USD equivalent to the Tria wallet; card commissions quarterly after a 90-day settlement period, futures monthly."
+      "excerpt": "'a more structured referral platform for those looking to earn higher commissions'; registration at ambassador.tria.so; unique referral code; commissions on card purchase, card spend and futures spend; direct 20/25/30/30–40/50% by tier, indirect 10%; USD equivalent to the Tria wallet; card commissions quarterly after 90-day settlement, futures monthly. Not re-readable 2026-11-24 (provenance)."
+    },
+    {
+      "url": "https://ambassador.tria.so/",
+      "title": "Tria · Ambassadors (portal landing page)",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Apply via form (name, email, country, socials, community size, message), reviewed personally, or sponsored by an ambassador. Streams: card sales, card spend, futures fees; 'five standard tiers and an exclusive tier'; active referral = $1 card spend or $10K volume in 90 days; payouts in stablecoins in-app, sales and futures weekly, spend monthly; simulator 'estimate only'. No terms link."
+    },
+    {
+      "url": "https://blogs.tria.so/en/season-3-referral-tiers",
+      "title": "How Season 3 Referral Tiers and Revenue Share Work (blog, 1 June 2026)",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Silver-1 (10–19 active referrals): 25% on eligible Signature or Premium membership sales, 0.10% on card spend, 10% of Tria futures fees; other tiers in an image; direct referrals only; card-spend commission after the first non-zero card transaction; minimum claim $5 USDC; weekly (Tuesday) for sales and futures, monthly for spend."
+    },
+    {
+      "url": "https://blogs.tria.so/en/refer-and-earn",
+      "title": "Refer & Earn: You Get $5. Your Friend Gets $5. (blog, 19 August 2026) — in-app personal referral",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "$5 USDT each when the friend joins via the link, gets a Tria Card and makes four settled qualifying payments of $5+ within 14 days of card issuance; excluded MCCs (money transfer, quasi-cash, wallet top-ups, payment processors, gambling); no cap; self-referral disqualified."
     }
   ],
   "verification": "hypothesis",
-  "notes": "Identified only. Nobody contacted, no registration made. Commission base undefined on the official page — read the ambassador portal terms before any application. Rewards for referred users not described."
+  "notes": "Identified only. Re-read 2026-11-24: the help-centre article could not be fetched (provenance), but the ambassador portal and two official blog posts were read for the first time — payouts now weekly/monthly in stablecoins (not quarterly), a Season-3 tier gives 25% on membership sales + 0.10% on card spend + 10% of futures fees, and the pages disagree on whether second-level commissions exist. Commission thresholds remain in images. Nobody contacted, no registration made, no form submitted."
 }

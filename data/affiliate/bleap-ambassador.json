@@ -4,15 +4,15 @@
   "id": "bleap-ambassador",
   "provider_id": "bleap",
   "program_name": "Bleap Ambassador Program (plus in-app Referrals Program)",
-  "program_url": "https://www.bleap.finance/es/about/ambassador-program",
+  "program_url": "https://www.bleap.finance/legal-agreements/referrals-terms-and-conditions",
   "type": "unknown",
   "allowed_channels": [
     "unknown"
   ],
-  "application_conditions": "Unknown. The official page bleap.finance/about/ambassador-program exists (surfaced by search on 2026-11-05) but returned a client error to the fetcher — its content was NOT read. The help centre documents only a personal in-app Referrals Program.",
+  "application_conditions": "Ambassador Program: unknown — the page is now only linked from the site footer as 'Ambassadors' → old.bleap.finance/about/ambassador-program (legacy host), not fetchable (client error 2026-11-05, provenance block 2026-11-24); no ambassador, affiliate or partner agreement among the 14 documents on bleap.finance/legal-agreements. Referrals Program: any user with a valid account shares a personal link; official 'Bleap Referrals Terms and Conditions' (updated 25 May 2026) read 2026-11-24 (German locale).",
   "our_status": "identified",
-  "paid_action": "Unknown for the Ambassador Program. Referrals Program (help centre): referred user registers via the referral link, completes KYC, tops up by bank transfer (other methods ineligible) and makes at least 3 card purchases of a minimum amount (page states 'at least five euros (€10)' — internally inconsistent).",
-  "validation_conditions": "Referrals Program: rewards credited after Bleap verifies the requirements; each person can be referred once; existing account holders ineligible; maximum five referral rewards per user; quasi-cash payments (gambling, gift cards, P2P) and crypto/wallet deposits excluded; rewards non-transferable; programme changeable or terminable without notice. Ambassador Program conditions unknown.",
+  "paid_action": "Ambassador Program: unknown. Referrals Program (T&Cs 2026-05-25 + help centre): referred user registers via the link, completes KYC, is eligible to use Bleap, has no prior account, tops up by bank transfer (other methods ineligible) and makes at least three card payment transactions of a minimum amount — T&Cs: 'at least five euros (€5) each'; help centre: 'at least five euros (€10)' (internally inconsistent; the dated T&Cs govern: €5).",
+  "validation_conditions": "Referrals Program: rewards credited after Bleap verifies the requirements; each person can be referred once; existing account holders ineligible; help centre: maximum five referral rewards per user (the T&Cs mention campaign 'limits' without figures); quasi-cash payments (gambling, gift cards, P2P) and crypto/wallet deposits excluded; rewards non-transferable; programme changeable or terminable without notice (T&Cs §8.1); immediate suspension/removal for abuse (§7). Ambassador Program conditions unknown.",
   "commission": {
     "model_note": "Unknown. Referral reward amounts are shown only on the in-app Rewards page ('currently available campaigns'); no figure is published on the pages read.",
     "status": "unknown"
@@ -34,22 +34,34 @@
     "postback": false,
     "status": "unknown"
   },
-  "rules_note": "Help-centre page undated ('Updated over 2 weeks ago' on 2026-11-05). Support agents cannot add or change campaigns manually.",
+  "rules_note": "Referrals T&Cs (updated 25 May 2026; legal entity not named in the text — footer '© Bleap LTD 2026', cookie/privacy policies name Bleap SIA; governing law not stated): links 'may not be sold, transferred, assigned, exchanged or used for commercial referral activity unless expressly permitted by Bleap'; publishing links 'through spam, paid ads, misleading promotions, unsolicited messages, or any unlawful channel' prohibited; fake accounts, self-referral, multiple accounts and threshold manipulation prohibited. A comparator website is commercial referral activity — not usable without Bleap's express permission. Help-centre page undated ('Updated over 2 weeks ago' on 2026-11-05 and 2026-11-24). Support agents cannot add or change campaigns manually.",
   "allowed_countries_note": "Referred users must pass KYC and, for the card-purchase condition, be card-eligible (EEA or Switzerland residents, restricted nationalities excluded).",
   "evidence": [
     {
       "url": "https://help.bleap.finance/en/articles/15060196-conditions-referrals-program",
       "title": "Conditions — Referrals Program (help centre, undated)",
-      "accessed_at": "2026-11-05T05:48:00Z",
-      "excerpt": "Qualifying actions: registration via link + KYC + bank-transfer top-up + at least 3 card purchases of a minimum amount; reward amounts on the in-app Rewards page; max five referral rewards per user; exclusions; changeable without notice. No publisher/affiliate programme mentioned."
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Re-read 2026-11-24, unchanged: registration via link + KYC + bank-transfer top-up + 'at least three (3) payment transactions of at least five euros (€10) each'; reward amounts on the in-app Rewards page; max five referral rewards per user; quasi-cash and crypto deposits excluded; modifiable without notice. No publisher/affiliate programme mentioned."
     },
     {
       "url": "https://www.bleap.finance/es/about/ambassador-program",
-      "title": "Bleap Ambassador Program (official page — NOT READ, client error to the fetcher)",
+      "title": "Bleap Ambassador Program (official page — NOT READ; now only reachable via the footer link to old.bleap.finance/about/ambassador-program)",
       "accessed_at": "2026-11-05T05:49:00Z",
-      "excerpt": "URL surfaced by a domain-restricted search; fetch failed with a client error. Content, commission and conditions unknown — browser read needed."
+      "excerpt": "URL surfaced by a domain-restricted search on 2026-11-05; fetch failed with a client error. On 2026-11-24 the site footer links 'Ambassadors' to old.bleap.finance/about/ambassador-program (legacy host), which the fetcher could not open (provenance). Content, commission and conditions unknown — browser read needed."
+    },
+    {
+      "url": "https://www.bleap.finance/de-de/legal-agreements/referrals-terms-and-conditions",
+      "title": "Bleap Referrals Terms and Conditions (updated 25 May 2026; German locale)",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Referred user: registers via the personal link, KYC, no prior account, referred once; bank-transfer top-up and at least three card payments of at least €5 each; cash or equivalent rewards credited to the referrer; campaign limits; no commercial referral activity unless expressly permitted; no spam, paid ads, misleading promotions or unsolicited messages; termination without notice."
+    },
+    {
+      "url": "https://www.bleap.finance/legal-agreements",
+      "title": "Bleap legal agreements index",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "14 documents (Terms of Service, Cardholder Terms (EEA) Bleap SIA, Pricing Disclosure, Referrals T&Cs, Cashback T&Cs, $CASHCAT airdrop T&Cs, …); no ambassador, affiliate or partner agreement; footer 'Ambassadors' → old.bleap.finance."
     }
   ],
   "verification": "unknown",
-  "notes": "Status 'identified' only because an official Ambassador Program page exists; nothing about its terms is known. Personal referral rewards are in-app balance, not a publisher payout. No application made, nobody contacted. Add needs_browser_read for the ambassador page."
+  "notes": "Status 'identified' only because an official Ambassador Program page exists (now on the legacy host old.bleap.finance, unread on 2026-11-05 and 2026-11-24). Referrals T&Cs read for the first time on 2026-11-24: personal, non-commercial; €5 minimum payment (help centre says €10). Personal referral rewards are in-app balance, not a publisher payout. No application made, nobody contacted. needs_browser_read: old.bleap.finance/about/ambassador-program."
 }

@@ -15,6 +15,7 @@
     "validate": "node --experimental-strip-types scripts/validate-data.ts",
     "test": "node --experimental-strip-types --test \"src/lib/**/*.test.ts\" \"scripts/**/*.test.ts\"",
     "expire": "node --experimental-strip-types scripts/expire-promos.ts",
+    "affiliate-status": "node --experimental-strip-types scripts/affiliate-status.ts",
     "ui-check": "node scripts/ui-check.mjs",
     "preview-export": "python3 scripts/export-preview.py dist ../preview"
   },

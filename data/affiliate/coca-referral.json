@@ -12,7 +12,7 @@
   "application_conditions": "In-app referral link or code for registered COCA users who have completed KYC. No publisher, affiliate or partner programme and no partner contact found on help.coca.xyz or docs.coca.xyz (search and pages read 2026-11-04).",
   "our_status": "identified",
   "paid_action": "Qualified referral = a new user (no previous COCA registration or wallet) signs up with the link/code, orders a COCA card (virtual or physical), spends at least $100 cumulatively and makes at least 3 card payments at different merchants, all within 30 days of registering. Eligible purchases follow the Loyalty Program exclusions (ATM, gift cards, gambling, P2P…).",
-  "validation_conditions": "Rewards credited automatically once the friend qualifies, claimable 14 days later within the Monthly Claim Capacity ('automatically increases as needed'). One reward per friend. Clawback if the friend closes the account within 60 days of payout or if qualifying transactions are reversed or charged back. Deleting the referrer's account forfeits all pending and issued rewards. Rewards cannot be withdrawn as cash outside the app.",
+  "validation_conditions": "Rewards credited automatically once the friend qualifies, claimable 14 days later; the Monthly Claim Capacity 'automatically increases as needed to allow users to claim their full referral rewards' (no cap stated). One reward per friend. COCA 'reserves the right to reverse the Referrer's bonus' if the friend closes the account within 60 days of reward payout, and recovers reversed/charged-back transactions 'through an adjustment to future reward payouts, cashback earnings, or referral bonuses'. Deleting any user's COCA account forfeits all pending and issued referral rewards. Referral rings: all rewards in the network forfeited. Rewards cannot be withdrawn as fiat cash outside the app.",
   "commission": {
     "model_note": "Flat $20 to the referrer and $10 to the friend per qualified referral, in USD or EUR depending on the account's currency settings. No stated cap on the number of referrals.",
     "amount": 20,
@@ -36,16 +36,22 @@
     "postback": false,
     "status": "unknown"
   },
-  "rules_note": "Terms effective 2026-05-01, last updated 2026-10-26. 'COCA's interpretation of these rules is final and binding'; governed by 'the laws of the jurisdiction in which COCA operates' — jurisdiction and legal entity not named. COCA may change, suspend or end the campaign at any time. Participation implies acceptance of the Loyalty Program Terms, Terms of Use and Privacy Policy.",
+  "rules_note": "Terms effective 2026-05-01, last updated 2026-10-26 (re-read 2026-11-24, unchanged). 'COCA's interpretation of these rules is final and binding'; governed by 'the laws of the jurisdiction in which COCA operates' — jurisdiction and legal entity not named. COCA may 'modify, suspend, or terminate this campaign at any time'; indemnity clause. Prohibited: 'Mass distribution via public forums, paid advertising, or unsolicited messaging' — a comparator website would be mass distribution via a public channel; not usable as a publisher link. Participation implies acceptance of the Loyalty Program Terms, Terms of Use and Privacy Policy.",
   "allowed_countries_note": "Referrer and friend must be able to order a COCA card, i.e. reside in one of the 73 listed card countries (Tier System Terms §1.2).",
   "evidence": [
     {
       "url": "https://help.coca.xyz/support/solutions/articles/205000042721-refer-a-friend-campaign",
       "title": "Refer a Friend Campaign (help centre; effective 1 May 2026, last updated 26 Oct 2026)",
-      "accessed_at": "2026-11-04T05:49:00Z",
-      "excerpt": "Referrer $20, friend $10 (USD or EUR) when the friend orders a card, spends ≥ $100 and makes ≥ 3 payments at different merchants within 30 days; claimable after 14 days; one reward per friend; 60-day clawback; account deletion forfeits rewards. No partner programme mentioned."
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Re-read 2026-11-24, all values confirmed: referrer $20, friend $10 (USD or EUR account) when the friend orders a card, spends ≥ $100 and makes ≥ 3 payments at different merchants within 30 days; claimable after 14 days; one reward per friend; 60-day clawback; account deletion forfeits rewards; mass distribution via public forums, paid ads or unsolicited messaging prohibited. No partner programme."
+    },
+    {
+      "url": "https://www.coca.xyz/post/referral-surge",
+      "title": "Referral Surge (blog, 3 March 2026, updated 5 March 2026) — ended promotion",
+      "accessed_at": "2026-11-24T04:40:00Z",
+      "excerpt": "Time-limited March 2026 promotion (3–31 March 2026): tiered $20 / $45 / $75 / $110 / $150 for 1–5 friends, friend $10, friend must spend $500+ in ≥ 4 transactions within 30 days; raffle of 20 × $50. Not current terms — the help-centre T&Cs (updated 2026-10-26) govern."
     }
   ],
   "verification": "verified",
-  "notes": "Personal referral programme only: requires holding a verified COCA account; rewards are in-app balance, not a payout to a publisher. No publisher/affiliate programme found. Not usable as a comparator affiliate link without David's decision; no application made, nobody contacted."
+  "notes": "Personal referral programme only: requires holding a verified COCA account; rewards are in-app balance, not a payout to a publisher; T&Cs prohibit mass distribution via public forums and paid advertising. No publisher/affiliate programme found (searches 2026-11-04, 2026-11-24). Re-read 2026-11-24: help-centre terms unchanged; past blog promotions (Sept 2025 'up to $30', March 2026 'Referral Surge') were time-limited and are over. Not usable as a comparator affiliate link without David's decision; no application made, nobody contacted."
 }
