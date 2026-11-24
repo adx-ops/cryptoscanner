@@ -465,7 +465,7 @@
       "title": "Terms, fees and limits for Tangem Pay Cards applicable as of October 8, 2026 (PDF)",
       "source_type": "official_terms",
       "excerpt": "'TANGEM PAY PROGRAM IS OPERATED BY PAERA LLC'. Basic | Plus: plan fee $0 | $29.99/month; cards 3 | 5; daily spend $10,000 | $50,000; ATM 4% | 2%, '3 per 24 hours; $250 per time'; ACH $1 | $0, FedWire $11 | $0; delivery '$0 for the first card, then $28.82 – $79.94'; virtual: 1st card $0, additional $5, replacement $1, transaction fees $0; FX 'Visa Exchange Rate' + 1.5%; dispute $30.",
-      "accessed_at": "2026-11-23T05:55:00Z",
+      "accessed_at": "2026-11-24T06:27:00Z",
       "effective_from": "2026-10-08",
       "expires_at": null,
       "scope": {
@@ -481,7 +481,7 @@
       "title": "Tangem Pay — The Visa Card for Your Crypto Wallet (product page, FAQ, tier table)",
       "source_type": "pricing_page",
       "excerpt": "'issued by Rain, a Visa Principal Member'; 'provided by Paera LLC'; 'available in the US and in select countries across LATAM, APAC, MEA, and Africa'; ID verification 'required for all cardholders'; Basic Free / Plus $29.99/month / Prestige $999/year (coming soon); cashback 1% / 2% / 4%, caps $100 / $300 / $1000 in USDC; ATM 4% / 2% / 1%; daily $10,000 / $50,000 / $100,000; Apple Pay, Google Pay.",
-      "accessed_at": "2026-11-23T05:57:00Z",
+      "accessed_at": "2026-11-24T06:27:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -496,7 +496,7 @@
       "title": "Tangem Pay Tiers Explained: Basic, and Plus (Tangem blog, 2026-08-06)",
       "source_type": "pricing_page",
       "excerpt": "'Tangem Pay has two membership tiers.' Basic | Plus: plan fee $0 | $29.99/month; delivery $17.44 (US), $15.63–$63.45 (other) | $0 first plastic card; max cards 3 | 5; additional/replacement virtual $5; FX 1% | 1%; ATM 4% | 2%; daily limit $10,000 | $50,000; Visa Platinum | Signature; cashback 1% | 2%, caps $100 | $300; 'Cashback arrives in a later app release'; Plus 'is currently waitlisted'.",
-      "accessed_at": "2026-11-23T06:01:00Z",
+      "accessed_at": "2026-11-24T06:27:00Z",
       "effective_from": "2026-08-06",
       "expires_at": null,
       "scope": {
@@ -511,7 +511,7 @@
       "title": "Refer and earn with the Tangem referral program (Tangem AG)",
       "source_type": "affiliate_program",
       "excerpt": "Referral link or code generated in the Tangem app; 'Get paid when someone buys a Tangem Wallet via your referral link'; commission paid in USDT (TRC20) 'no later than 30 days after each purchase'; no percentage published; influencer application form (channels, subscribers); no mention of Tangem Pay.",
-      "accessed_at": "2026-11-23T06:01:00Z",
+      "accessed_at": "2026-11-24T06:27:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -529,8 +529,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-23T06:01:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-24T06:27:00Z",
+    "last_auto_check_at": "2026-11-24T06:27:00Z"
   },
   "changelog": [
     {
@@ -544,6 +544,20 @@
         "ev-tangem-referral-program"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-24T06:40:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-23T06:01:00Z",
+      "to": "2026-11-24T06:27:00Z",
+      "reason": "Second independent read on 2026-11-24 (24 h 32 min after the first read of the tariff) of all four evidence pages: every material value confirmed, unchanged. Tariff PDF https://tangem.com/docs/en/tangem-visa-tariffs.pdf still 'applicable as of October 8, 2026', 'TANGEM PAY PROGRAM IS OPERATED BY PAERA LLC' (responsible for onboarding, KYC & AML); Basic | Plus: plan fee $0 | $29.99/month, cards 3 | 5, daily spend $10,000 | $50,000, ATM 4 % | 2 %, '3 per 24 hours; $250 per time', incoming ACH $1 | $0, FedWire $11 | $0, delivery '$28.82 – $79.94' with footnote 4 '$0 for the first card, then $28.82 – $79.94', virtual 1st card $0 / additional $5 / replacement $1 / transaction fees $0, FX 'Visa Exchange Rate' + 1.5 %, dispute $30, annual limit $10,000,000, 100 / 1000 transactions, on-chain withdrawal $0; no cashback, no Prestige tier, no Rain mention. Footnote 3 exact wording is 'Eligibility is determined based on your country and region of residence' (the usage_note paraphrases it — same meaning, not changed by this run). Column alignment is still lost in extraction (outgoing bank-transfer rows unlabelled by tier; the product page confirms Plus offramp $1 ACH / $11 FedWire). Product page https://tangem.com/en/tangem-pay/: 'issued by Rain, a Visa Principal Member', 'provided by Paera LLC', 'Tangem AG does not operate the Tangem Pay program'; 'available in the US and in select countries across LATAM, APAC, MEA, and Africa', no country list, Europe not named; ID verification required for all cardholders (Rain / Sumsub / Elliptic; government-issued ID + home address; 5 minutes, up to 48 hours); tiers Basic Free / Plus $29.99/month ('Free with $4,500 monthly spending or $65,000 in Yield Mode') / Prestige $999/year = $83/month coming soon; cashback 1 % / 2 % / 4 % with caps $100 / $300 / $1,000 in USDC, boosted first-$500 5 / 10 / 15 % and welcome bonus up to $75 'coming soon'; ATM 4 / 2 / 1 % ($100 on Plus deducts $102); daily $10,000 / $50,000 / $100,000; cards 3 / 5 / 10; Visa Platinum / Signature / Infinite; onramp $1 ACH / $11 FedWire (Basic), $0 (Plus); offramp $1 / $11 on both; USDC/USDT on Polygon, Base, BNB Smart Chain, Arbitrum; smart-contract account; physical card heading 'coming soon, subject to eligibility' vs FAQ ordering flow, Early Birds 5,000 users; Apple Pay / Google Pay; gambling, online casinos, liquor stores restricted — all unchanged, known contradictions unchanged. Tiers blog https://tangem.com/en/blog/post/tangem-pay-tiers/ (2026-08-06, no update stamp): two tiers, FX 1 % | 1 %, delivery $17.44 US / $15.63–$63.45 other | $0 first plastic, cashback 1 % | 2 % caps $100 | $300, 'Cashback arrives in a later app release', Plus 'currently waitlisted' — unchanged; intro says '$29 a month' vs $29.99 in its table (non-material, table and tariff agree). Referral page https://tangem.com/en/affiliates/ (Tangem AG, Zug): wallet purchases only, USDT TRC20 payout, no rate, no Tangem Pay mention — unchanged. NOT published: eligibility status 'unknown' (no official country list) and base cashback 'hypothesis' — the validator refuses publication and this run never upgrades a field status or adds evidence. Leads for the research run (official tangem.com pages surfaced by the domain-restricted search, NOT read as evidence): blog 'Cashback Is Here' (2026-09-16) states cashback is live on Basic and Plus with a $30 minimum purchase and no cashback on in-store purchases at EU and UK merchants — which implies EU/UK cardholders exist, contradicting the product page's region list and the record's 'not_for' EEA/UK line; blog 'Tangem Pay Physical Cards Are Here' (2026-10-09) states physical cards are orderable (app 6.3.2 iOS / 6.3.3 Android), delivery $15.63–$63.45 by country, free first card on Plus; help-centre pages tangem.com/en-GB/help-center/tiers/ and tangem.com/en/help-center/card-setup-limits/; excluded-MCC PDF tangem.com/docs/en/tangem-pay-cashback-excluded-mccs.pdf.",
+      "evidence": [
+        "ev-tangem-pay-tariffs",
+        "ev-tangem-pay-page",
+        "ev-tangem-pay-tiers-blog",
+        "ev-tangem-referral-program"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
