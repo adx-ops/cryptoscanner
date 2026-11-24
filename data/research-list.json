@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-23.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-24.",
   "target": {
     "min": 15,
     "max": 50
@@ -366,6 +366,22 @@
       "record": "data/cards/tangem-pay-card.json",
       "needs_browser_read": false,
       "note": "Validated 2026-11-23 from 4 official pages (tariff PDF as of 2026-10-08 — governing; product page; tiers blog 2026-08-06; Tangem referral page). Issuer Rain, programme operated by Paera LLC; US + 'select countries' LATAM/APAC/MEA/Africa, no list (to confirm), Europe not named; KYC required (Rain/Sumsub). Basic free: ATM 4%, FX Visa + 1.5% (blog said 1% — tariff governs), ACH top-up $1; Plus $29.99/month: ATM 2%, bank top-ups free. Cashback 1%/2% USDC caps $100/$300 = hypothesis (blog: 'later app release'; tariff silent). Prestige coming soon, not modelled. Not read: Terms of Use PDF, Paera legal agreements (paera.com/tangempay, no URL). Affiliate: data/affiliate/tangem-referral.json (identified; hardware wallets only, no rate). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "Ethena Pay (Ethena Pay Ltd., Malta / Third National / Rain)",
+      "product": "Ethena Pay Spend Card",
+      "status": "validated",
+      "record": "data/cards/ethena-pay-spend-card.json",
+      "needs_browser_read": false,
+      "note": "Validated 2026-11-24 from 8 official pay.ethena.fi pages (Pricing eff. 2026-09-01/upd. 2026-09-30 — governing; Spend Card Terms eff. 2026-06-01; Jurisdictions; Disclaimers 2026-09-01; launch blog 2026-09-03; account-tiers blog 2026-11-20; Referral Terms; E-Sign). Virtual Visa, issuer Third National, programme manager Rain; secured collateral-backed card at 0% APR (one-day repayment, liquidation) → modelled crypto_backed_credit. Non-U.S. persons only; 47 live countries (LATAM, Caribbean, Asia/ME, Africa, Oceania — app list, card availability 'varies by jurisdiction'); USA/EU/UK/CH/CA 'live soon'; invite-only as of 2026-11-20 → product_status waitlist. No issuance/monthly fee; FX ≈1% Visa pass-through ('no markup'); ATM $1 + 0.65% 'if available' vs cash advances 'not available'. Cashback in AVAX: Standard 4% on first $2,500/month (1% to $4,000, then 0%); Pro (10 referrals) 4.5%, VIP (50 referrals) 5% on $20,000. Daily Boost 5–6% p.a. in USDe. Unknown: funding/on-ramp fees (Iron Network, MoonPay), KYC documents (Sumsub), spending limit (collateral-based), physical card, Restricted Jurisdictions (Terms of Use §4.8 not read). Affiliate: data/affiliate/ethena-pay-referral.json (identified; personal referral $30 in AVAX, paid promotion/SEO prohibited — not a publisher programme). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "THORWallet (EMM Ventures AG, Zug / Unblock – Atomo Sarl)",
+      "product": "THORWallet Card (Basic / Premium)",
+      "status": "validated",
+      "record": "data/cards/thorwallet-card.json",
+      "needs_browser_read": true,
+      "note": "Validated 2026-11-24 from 9 official pages (Membership Terms v1.1 Nov 2026 — governing; card page thorwallet.org/cards with fee/limit/country tables; fees page checked 2026-11-12; FAQ; KYC + ordering help articles 2026-11-12; Terms of Service v2 Jul 2026 — first half verbatim only; IBAN/Mastercard FAQ and THORCash FAQ for context). USD Mastercard via the Unblock programme (Atomo Sarl), issuer not disclosed; 175+ countries incl. US/UK/EEA/CH (indicative list; 31 excluded incl. NG, IN, CN, RU; NY and WA states excluded by the ToS). Basic: virtual, $5 one-off (free with invite), no subscription, FX 1.5%, ATM $1 dom / $5 intl, top-up 0% with USDC on Ethereum (other assets converted at the 1.25% swap fee = hypothesis), no cashback, $100,000/month after full KYC ($10,000 initially). Premium: $124 one-off ($99 with invite), physical card, 0.5% USDC cashback on $5,000/month for 3 months then $2,000 — 'Coming soon' in the app, not for UK residents. Full KYC by Unblock (ID, selfie, proof of address, financial questions). Contradictions: 175+ vs 170+ countries and differing lists (Kosovo/Montenegro; Cuba listed vs sanctions clause); cashback window 3 months vs 'first year' (FAQ); Premium price basis. Unreadable (fetcher permission): help articles card-fees-and-limits and top-up-card → needs_browser_read; ToS Section 12 (card services) only summarised. Apple/Google Pay not mentioned for this card. The older Swiss IBAN Mastercard (Fiat24) is a separate product — candidate of its own. Affiliate: data/affiliate/thorwallet-referral.json (identified; in-app referral up to $25 + up to 0.2% of referred FX spend in USDC; no terms page). Second read ≥ 24 h required."
     }
   ],
   "no_kyc_track": {
@@ -416,7 +432,7 @@
         "claim": "non-reloadable up to $1,000; operator described as FinCEN-registered MSB",
         "issuer_disclosed": true,
         "status": "identified",
-        "note": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; docs.laso.finance and laso.finance pages are no longer returned by web search, so the fetcher cannot reach them (provenance). Needs a browser session to apply the 2026-11-09 rule. | 2026-11-17: re-attempted; site:laso.finance returns only third-party pages (Trustpilot, directories, App Store) — official pages still unreachable by the fetcher (provenance). Browser session needed.",
+        "note": "Blocked 2026-10-29: official pages read (laso.finance/fees, /for-llms, /international/nr, docs.laso.finance guides). Fee page and FAQ are client-rendered (no text); docs state non-reloadable USD cards $100–$1,000, 3.8% fee, 6-month expiry, balance forfeited to an unnamed \"card issuer\". Issuer, legal entity, network and countries undisclosed; no reloadable card product. Fails inclusion rule. | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; docs.laso.finance and laso.finance pages are no longer returned by web search, so the fetcher cannot reach them (provenance). Needs a browser session to apply the 2026-11-09 rule. | 2026-11-17: re-attempted; site:laso.finance returns only third-party pages (Trustpilot, directories, App Store) — official pages still unreachable by the fetcher (provenance). Browser session needed. | 2026-11-24: retried — site:laso.finance returns only Trustpilot, an App Store listing, directories and a Google Docs PDF export; fee page still unreachable by the fetcher (client-rendered). Browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -424,7 +440,7 @@
         "claim": "$350 entry; KYC level 0 per KYCnot.me",
         "issuer_disclosed": true,
         "status": "identified",
-        "note": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; goblincards.com pages are not returned by web search (only trading-card shops), so the fetcher cannot reach them (provenance). Needs a browser session to check whether the terms state a verification stage. | 2026-11-17: re-attempted; site:goblincards.com returns no result (only trading-card shops) — official pages still unreachable by the fetcher (provenance). Browser session needed.",
+        "note": "Blocked 2026-10-29: goblincards.com/terms and /features read. Operator Goblin Solutions LLC (no jurisdiction/registration), issuer not named, physical card balance in MXN, $350 one-time, deposits 3.5%/4%, invitation-only via Telegram, \"nameless card\", no verification stage stated, 49 restricted countries incl. BG/HR/SI. Fails inclusion rule (issuer undisclosed, no KYC stage). | Re-opened 2026-11-09: David dropped the 'issuer named' condition. Re-assess against the new rule: published fees + stated verification stage/limits + active. Missing fee/country pages stay unknown (shown as unknown). | 2026-11-11: re-assessment attempted; goblincards.com pages are not returned by web search (only trading-card shops), so the fetcher cannot reach them (provenance). Needs a browser session to check whether the terms state a verification stage. | 2026-11-17: re-attempted; site:goblincards.com returns no result (only trading-card shops) — official pages still unreachable by the fetcher (provenance). Browser session needed. | 2026-11-24: retried — site:goblincards.com returns nothing (only unrelated game-card shops); official pages not indexed, fetcher cannot reach them (provenance). Browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -483,7 +499,7 @@
         "claim": "email-only onboarding; $50 card",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: no official MaxSwap domain is returned by web search (only cardik/coingape/coincodex directories and press releases), so the fetcher cannot reach the operator's pages (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read card fees, verification stage and terms in a browser session. | 2026-11-18: re-attempted; web search ('MaxSwap virtual card official site fees terms') still returns only cardik and unrelated issuers — no official MaxSwap domain surfaced (provenance). Browser session still needed.",
+        "note": "2026-11-11: no official MaxSwap domain is returned by web search (only cardik/coingape/coincodex directories and press releases), so the fetcher cannot reach the operator's pages (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read card fees, verification stage and terms in a browser session. | 2026-11-18: re-attempted; web search ('MaxSwap virtual card official site fees terms') still returns only cardik and unrelated issuers — no official MaxSwap domain surfaced (provenance). Browser session still needed. | 2026-11-24: retried — web search returns only cardik/teletype directories and unrelated fee pages; no official MaxSwap domain indexed. Browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -495,5 +511,5 @@
       }
     ]
   },
-  "updated": "2026-11-23"
+  "updated": "2026-11-24"
 }

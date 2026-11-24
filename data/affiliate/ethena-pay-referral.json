@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "ethena-pay-referral",
+  "provider_id": "ethena-pay",
+  "program_name": "Ethena Pay Referral Program (user-to-user)",
+  "legal_entity": "Ethena Pay Ltd., Malta, company number C 114576, 30/1 Kenilworth, Triq Sir Augustus Bartolo, Ta' Xbiex, XBX 1093 (footer / disclaimers). Referral Terms governed by the laws of Malta.",
+  "program_url": "https://pay.ethena.fi/referral-terms",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "No application: any 'existing Ethena Pay user with an active account or profile in good standing' gets a referral link or code in the app (account-tiers blog 2026-11-20: 'Selected users have access now and all Ethena Pay users will follow in the coming days'). Becoming a user requires an account in a live country, identity verification (Sumsub) and, as of 2026-11-20, an invite.",
+  "our_status": "identified",
+  "paid_action": "A Qualifying Referral: a new user who signs up through the link/code, completes identity verification, sanctions screening and compliance checks, completes the Qualifying Activity 'within the period specified in the Program Details' (examples given: funding the account to a minimum balance, completing a minimum number or value of transactions), with both users in good standing and in an eligible jurisdiction. Referrals also unlock card tiers: 10 qualified referrals → Pro, 50 → VIP.",
+  "validation_conditions": "Section 5 of the Referral Terms (all conditions cumulative); 'You may not refer yourself'; the referred user must be new; clawback by debit from AVAX balances (§11) if conditions fail or terms are breached.",
+  "commission": {
+    "model_note": "Standard Referral Bonus 'USD $30 (or such other or greater amount as we may determine in our sole discretion)', credited in AVAX at the prevailing market rate at the time of credit. One-time milestone bonuses for cumulative referral thresholds 'as published in the Program Details' (not read). Per-user daily, monthly, annual and lifetime caps 'may apply'. The programme is 'a discretionary promotional incentive'.",
+    "amount": 30,
+    "currency": "USD",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "AVAX credited to the Ethena Pay balance",
+    "frequency": "'Within a commercially reasonable period after all Section 5 conditions are satisfied, ordinarily within 30 days'",
+    "holdbacks_note": "Bonus paid only after the referred user's compliance checks and Qualifying Activity; recoverable by debit (§11)."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Not a publisher programme: §8 — 'You may share your referral link or code only with individuals with whom you have a personal relationship'; 'bulk, mass, automated, scripted, paid-promotion, search-engine-optimization' distribution is prohibited; material connection must be disclosed when promoting; §8.8 'You may not promote the Ethena Pay Spend Card to any U.S. person'. Program Details (current caps, Qualifying Activity, milestone bonuses) live on the Platform and were not read. Blog (2026-11-20) says 'you both get $30' while §6 says the referred user gets no separate bonus unless stated.",
+  "allowed_countries_note": "Referrer and referred user must be in an eligible jurisdiction; 'U.S. persons may participate in the Program subject to applicable U.S. federal and state law' but the Spend Card may not be promoted to U.S. persons. Restricted Jurisdictions per Terms of Use §4.8 (not read).",
+  "evidence": [
+    {
+      "url": "https://pay.ethena.fi/referral-terms",
+      "title": "Referral Program Terms — Ethena Pay (Effective Date: June 1, 2026 · Last Updated: May 18, 2026)",
+      "accessed_at": "2026-11-24T05:49:00Z",
+      "excerpt": "'USD $30 (or such other or greater amount as we may determine in our sole discretion)'; 'Credited in AVAX'; 'only with individuals with whom you have a personal relationship'; paid-promotion and SEO distribution prohibited; 'You may not promote the Ethena Pay Spend Card to any U.S. person'; ordinarily credited within 30 days; governed by the laws of Malta."
+    },
+    {
+      "url": "https://pay.ethena.fi/pricing",
+      "title": "Pricing — Ethena Pay (§3.2 Referral bonus)",
+      "accessed_at": "2026-11-24T05:48:00Z",
+      "excerpt": "Referral bonus '$30 USD equivalent, credited in AVAX (or such other amount as we may determine)'; 'Per-user daily, monthly, annual, and lifetime caps may apply'."
+    },
+    {
+      "url": "https://pay.ethena.fi/blog/account-tiers",
+      "title": "Referrals are live on Ethena Pay (blog, 2026-11-20)",
+      "accessed_at": "2026-11-24T05:49:00Z",
+      "excerpt": "'when a friend joins and qualifies, you both get $30 (Terms apply)'; '10 qualified referrals unlock Pro'; '50 qualified referrals unlock VIP'; 'Ethena Pay is still invite only'."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Identified only — nobody contacted, no application. A personal referral scheme that expressly bans paid promotion, SEO and mass distribution, so it cannot fund a comparison site as a publisher programme; no affiliate/partner page was found on pay.ethena.fi. Listed so the card page can say the official link is non-monetised."
+}

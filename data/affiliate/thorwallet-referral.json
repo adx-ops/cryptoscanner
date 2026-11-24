@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "thorwallet-referral",
+  "provider_id": "thorwallet",
+  "program_name": "THORWallet Card referral rewards (in-app referral)",
+  "legal_entity": "EMM Ventures AG, Bahnhofstrasse 11, 6300 Zug, Switzerland (Terms of Service / Membership Terms); registration number not published on the pages read.",
+  "program_url": "https://www.thorwallet.org/cards",
+  "type": "hybrid",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "No application page: the referral table is printed on the card page and the link/code is generated in the THORWallet app ('Get the app' buttons point to referral.thorwallet.org). Who may refer (any user, or cardholders only) is not stated on the pages read; no referral-specific terms document was found (the Terms of Service only state that THORWallet 'may receive … referral or affiliate remuneration' from third parties, and the fetcher summary of Section 12 says referral fees come from a Card Provider).",
+  "our_status": "identified",
+  "paid_action": "Card page table: 'Per referred signup Up to $25'; 'On their card FX spend Up to 0.2%'. 'Your rewards activate when a referral funds their card and makes a first purchase - never on signup alone.'",
+  "validation_conditions": "Referred user must fund the THORWallet Card and make a first purchase; the per-signup amount and the FX-spend share are stated as 'Up to', without the conditions that set the actual amount.",
+  "commission": {
+    "model_note": "'Up to $25' per referred signup plus 'Up to 0.2%' of the referred user's card FX spend; both 'Paid monthly in USDC'. Duration of the FX-spend share, caps and the criteria behind 'up to' are not published.",
+    "amount": 25,
+    "currency": "USD",
+    "percent": 0.2,
+    "status": "hypothesis"
+  },
+  "attribution": {
+    "mechanism": "referral_code",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "USDC ('Paid monthly in USDC')",
+    "frequency": "monthly",
+    "holdbacks_note": "Rewards activate only after the referral funds the card and makes a first purchase."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "No referral terms, channel rules, prohibited-promotion rules or country restrictions were found on the pages read (card page, fees page, Membership Terms v1.1, Terms of Service v2 first half, help centre). The Membership Terms mention a 'valid invite code' that waives/reduces the membership fee for the referred user ($5 → free on Basic; $124 → $99 on Premium).",
+  "allowed_countries_note": "Not stated. Card availability itself: 175+ countries (indicative list on the card page), 31 excluded; paid memberships not available to UK residents.",
+  "evidence": [
+    {
+      "url": "https://www.thorwallet.org/cards",
+      "title": "Crypto Mastercard with Swiss IBAN - Self-Custody | THORWallet (referral table)",
+      "accessed_at": "2026-11-24T05:41:00Z",
+      "excerpt": "'Your rewards activate when a referral funds their card and makes a first purchase - never on signup alone.' Table: 'Per referred signup Up to $25'; 'On their card FX spend Up to 0.2%'; 'Paid monthly in USDC.' App download buttons link to referral.thorwallet.org."
+    },
+    {
+      "url": "https://www.thorwallet.org/membership-terms",
+      "title": "Membership Terms — THORWallet (Version 1.1 · November 2026)",
+      "accessed_at": "2026-11-24T05:44:00Z",
+      "excerpt": "Basic 'Free with a valid invite code, otherwise USD 5 one-off activation'; Premium 'USD 124 one-off, or USD 99 with a valid invite code'. No referral-reward clause for the referrer."
+    },
+    {
+      "url": "https://www.thorwallet.org/terms-of-service",
+      "title": "Terms of Service - THORWallet (Version 2 · July 2026)",
+      "accessed_at": "2026-11-24T05:45:00Z",
+      "excerpt": "'We may receive fees, spreads, rebates, revenue share, referral or affiliate remuneration' (THORWallet as recipient); 'including affiliate remuneration embedded in a route'. Section 12 (card services, referral fees from a Card Provider) read only as a fetcher summary."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Identified only — nobody contacted, no application. An in-app user referral scheme with a revenue-share component (up to 0.2% of referred FX spend); no publisher/affiliate programme page, no terms document and no channel rules were found, so suitability for a comparison site cannot be assessed. Needs a browser read of the app's referral screen or a direct question to THORWallet (David's decision)."
+}
