@@ -318,7 +318,7 @@
       "title": "Pricing — Ethena Pay (Effective Date: September 1, 2026 · Last Updated: September 30, 2026)",
       "source_type": "pricing_page",
       "excerpt": "Account fees Free/None. Card 'issued by a third-party card issuer under license from the applicable card network'; virtual issuance Free; APR 0.00%; cash advances 'Not available'; FX 'Typically around 1.0%, passed through … with no markup'; ATM 'If ATM access is available: $1.00 plus 0.65%'; late payment up to $40; cashback 'Up to 5%*' in AVAX, tiered from 4%; Daily Boost up to 6% p.a. in USDe.",
-      "accessed_at": "2026-11-24T05:48:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": "2026-09-01",
       "expires_at": null,
       "scope": {
@@ -333,7 +333,7 @@
       "title": "Ethena Pay Spend Card Terms — Ethena Pay (effective June 1, 2026)",
       "source_type": "official_terms",
       "excerpt": "'issued by the Issuer under license from Visa'; 'References … to the \"Issuer\" refer to Third National'; 'managed by Signify Holdings, Inc. d/b/a Rain'; 'This Account is a secured Account'; Collateral on a Supported Blockchain; Liquidation Event after one calendar day unpaid; FX 'Visa's fee, passed through at cost (approx. 1%)'; ATM '$1.00 plus 0.65%'; 'not a United States citizen'.",
-      "accessed_at": "2026-11-24T05:44:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": "2026-06-01",
       "expires_at": null,
       "scope": {
@@ -349,7 +349,7 @@
       "title": "Available Jurisdictions — Ethena Pay",
       "source_type": "eligibility_page",
       "excerpt": "'Ethena Pay is live in 47 countries across Latin America, the Caribbean, Asia & the Middle East, Africa, and Oceania' (17 + 12 + 8 + 8 + 2 named); 'Live soon: USA, EU, United Kingdom, Switzerland, Canada, Taiwan, South Korea, and more'; 'The Ethena Pay Spend Card is offered only to non-U.S. persons'; 'Card features, eligibility, and availability vary by jurisdiction'; 'at least 18 years old'.",
-      "accessed_at": "2026-11-24T05:45:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -364,7 +364,7 @@
       "title": "Disclaimer and Important Notices — Ethena Pay (Last Updated: September 1, 2026)",
       "source_type": "official_terms",
       "excerpt": "Ethena Pay Ltd., Malta, C 114576; Spend Card 'issued by a card issuer under a license from the applicable card network'; third parties: 'Sumsub Tech Ltd. (identity verification)', Privy (embedded wallets), 'Iron Network UAB and Moonpay USA LLC (currency on- and off-ramps)'; 'offered only to non-U.S. persons'; rewards 'are discretionary promotional incentives'; no custody of funds.",
-      "accessed_at": "2026-11-24T05:46:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": "2026-09-01",
       "expires_at": null,
       "scope": {},
@@ -377,7 +377,7 @@
       "title": "Introducing Ethena Pay — Ethena Pay blog (2026-09-03)",
       "source_type": "pricing_page",
       "excerpt": "'live today on iOS in about 50 countries, and sign-up takes two minutes'; 'Generate a virtual card in under a minute and add it to Apple Pay or Google Wallet'; 'Up to 5% back on every purchase'; 'up to 6% rewards on dollar balances'; 'zero FX fee mark up'; 'no annual fee'; 'Holdings into the app convert to USDe'; 'built exclusively on Avalanche'; US/EU support coming.",
-      "accessed_at": "2026-11-24T05:46:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": "2026-09-03",
       "expires_at": null,
       "scope": {
@@ -405,7 +405,7 @@
       "title": "Referral Program Terms — Ethena Pay (Effective Date: June 1, 2026 · Last Updated: May 18, 2026)",
       "source_type": "affiliate_program",
       "excerpt": "Referring User = 'an existing Ethena Pay user with an active account … in good standing'; Standard Referral Bonus 'USD $30', 'Credited in AVAX'; identity verification required; share 'only with individuals with whom you have a personal relationship'; paid-promotion and SEO distribution prohibited; 'You may not promote the Ethena Pay Spend Card to any U.S. person'; laws of Malta.",
-      "accessed_at": "2026-11-24T05:49:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": "2026-06-01",
       "expires_at": null,
       "scope": {},
@@ -417,7 +417,7 @@
       "title": "E-Sign & Electronic Communications Notice — Ethena Pay (Last Updated: May 27, 2026)",
       "source_type": "official_terms",
       "excerpt": "Ethena Pay Ltd., 'a company incorporated and registered in Malta with company number C 114576'; 'Ethena Pay Products' include 'virtual accounts, credit cards, prepaid cards, or Ethena Pay Spend accounts'. No fee, country or reward content.",
-      "accessed_at": "2026-11-24T05:47:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": "2026-05-27",
       "expires_at": null,
       "scope": {
@@ -436,7 +436,7 @@
   },
   "freshness": {
     "last_content_verified_at": "2026-11-24T05:49:00Z",
-    "last_auto_check_at": null
+    "last_auto_check_at": "2026-11-25T06:34:00Z"
   },
   "changelog": [
     {
@@ -454,6 +454,23 @@
         "ev-ethena-pay-esign"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-25T06:34:00Z",
+      "field": "freshness.last_auto_check_at",
+      "from": null,
+      "to": "2026-11-25T06:34:00Z",
+      "reason": "Second read attempted on 2026-11-25 (24 h 45 min after the first). Seven of eight evidence pages read; every value they source is confirmed, unchanged. Pricing (Effective 1 Sep 2026, Last Updated 30 Sep 2026): account opening/monthly/inactivity/closure free or none; virtual card issuance, activation, replacement free; no physical card listed; APR purchases 0.00 %, cash advances and balance transfers 'Not available'; FX 'Typically around 1.0%, passed through directly from the applicable card network with no markup'; cross-border none; domestic USD none; ATM 'If ATM access is available: $1.00 plus 0.65% of the withdrawal amount'; late payment up to $40, returned payment up to $29, over-limit none; cashback 'Up to 5%*' in AVAX, 'tiered, starting at 4%', Standard $0–2,500 4 % / $2,500–4,000 1 % / over $4,000 0 %, Pro $0–8,000 4.5 % / 2 % to $10,000 / 1 % to $12,000 / 0.5 % above, VIP $0–20,000 5 % / 2 % to $30,000 / 1 % to $40,000 / 0.5 % above; paid once a day after settlement (1–3 business days), transactions under $1.00 excluded, 'no separate monthly, annual, or lifetime cap'; exclusions as modelled; referral $30 in AVAX; Daily Boost up to 6 % p.a. in USDe (Standard 5 % to $5,000, Pro 6 % to $100,000, VIP 6 % to $1,000,000) conditional on one Qualifying Card Transaction per calendar month; Supported Blockchains Ethereum, Polygon, Optimism, Arbitrum; funding partners Moonpay / Iron with their own fees; issuer 'a third-party card issuer under license from the applicable card network'. Spend Card Terms (effective 1 Jun 2026): 'issued by the Issuer under license from Visa', Issuer = Third National, programme manager Signify Holdings, Inc. d/b/a Rain, 'This Account is a secured Account', Collateral on a Supported Blockchain (Ethereum, Polygon, Optimism, Arbitrum), $100 collateral → $100 limit illustration, Liquidation Event when not paid in full 'within one (1) calendar day', FX 'Visa's fee, passed through at cost (approx. 1%)', ATM '$1.00 plus 0.65%', late up to $40, returned up to $29, 'Cash advances and balance transfers are not available', 'You attest that you are not a United States citizen', laws of Puerto Rico, 'physical or virtual Ethena Pay Cards' (§8.1). Jurisdictions (undated): 'live in 47 countries' — the 47 countries and the asterisked IBAN-availability notes match the stored list exactly; 'Live soon: USA, EU, United Kingdom, Switzerland, Canada, Taiwan, South Korea'; 'offered only to non-U.S. persons'; 'Card features, eligibility, and availability vary by jurisdiction'; ≥ 18. Referral Terms (Effective 1 Jun 2026, Last Updated 18 May 2026): USD $30 in AVAX, referred user gets no separate bonus unless the Program Details say so, identity verification + sanctions screening required, paid-promotion/SEO distribution prohibited, no promotion of the Spend Card to U.S. persons, laws of Malta. Launch blog (3 Sep 2026): 'about 50 countries', 'Up to 5% back on every purchase', 'up to 6% rewards on dollar balances', 'zero FX fee mark up', 'no annual fee', 'Free, Pro and VIP tier', 'built exclusively on Avalanche', 'convert to USDe', virtual card + Apple Pay / Google Wallet, US and EU support 'coming'. Disclaimers (Last Updated 1 Sep 2026): Ethena Pay Ltd., Malta C 114576; Sumsub Tech Ltd. (identity verification), Horkos, Inc. d/b/a Privy (embedded wallets), Iron Network UAB and Moonpay USA LLC (on-/off-ramps); 'offered only to non-U.S. persons'; rewards 'are discretionary promotional incentives'; no custody; issuer and programme manager not named. E-Sign notice (Last Updated 27 May 2026): C 114576; 'virtual accounts, credit cards, prepaid cards, or Ethena Pay Spend accounts'. NOT read: the account-tiers blog post (https://pay.ethena.fi/blog/account-tiers, 20 Nov 2026) — the fetcher's permission gate refused the URL (PROVENANCE_REQUIRED) although it is linked from the blog index that was read; only the index snippet was seen ('Invite friends, get $30 each, and soon use referrals to unlock Pro and VIP.' / 'you both get $30 (Terms apply)'). The values sourced from that post — Pro unlocked by 10 and VIP by 50 qualified referrals, 'still invite only' (product_status waitlist) — are therefore unverified by this read, not contradicted; the snippet's 'soon use referrals to unlock Pro and VIP' should be checked against the post in a browser session. Also seen, not evidence: Legal Hub (pay.ethena.fi/legal) lists 'Promotion Terms, Effective 30 Sep 2026, Last Updated 23 Nov 2026' (/promotions, not read) and Terms of Use (Last Updated 26 Oct 2026) with the §4.8 Restricted Jurisdictions list (Afghanistan, Abkhazia, Belarus, Burma, Burundi, Central African Republic, Crimea, Cuba, DR Congo, Donetsk/Luhansk, Ethiopia, Iran, Lebanon, Libya, Mali, Nicaragua, North Korea, Northern Cyprus, Russia, Somalia, Somaliland, South Ossetia, South Sudan, Sudan, Syria, Venezuela, Yemen, Zimbabwe) — leads for the research run. Kept validated: one evidence page unread, and the validator's publication gate refuses 'ethena-pay-non-us eligibility not verified' (hypothesis: the 47 countries are the app's live countries, card availability 'varies by jurisdiction'). This run never upgrades a field status or adds evidence.",
+      "evidence": [
+        "ev-ethena-pay-pricing",
+        "ev-ethena-pay-card-terms",
+        "ev-ethena-pay-jurisdictions",
+        "ev-ethena-pay-disclaimers",
+        "ev-ethena-pay-blog-intro",
+        "ev-ethena-pay-referral-terms",
+        "ev-ethena-pay-esign"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {

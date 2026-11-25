@@ -400,7 +400,7 @@
       "title": "What fees apply when I'm using my OKX Card? (OKX Europe help centre)",
       "source_type": "pricing_page",
       "excerpt": "Published 20 Jan 2026, updated 5 Nov 2026. EUR FX fee 0%; non-EUR FX fee 0% on top of Mastercard rates; crypto-to-fiat conversion (USDC/G→EUR) 0.1%; issuance €0 (virtual only); monthly/annual €0; inactivity €0. 'There are no hidden fees.' Settles in EUR. Physical card, delivery, ATM, top-up, limits not stated.",
-      "accessed_at": "2026-11-23T06:30:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -415,7 +415,7 @@
       "title": "EEA Regional Addendum to the Pay Wallet Terms (OKX Europe)",
       "source_type": "official_terms",
       "excerpt": "Published 27 Jan 2026, updated 5 Feb 2026. Card issued by UAB Monavate (Lithuanian EMI, licence LB002139); OKX Europe Limited (Malta, MFSA) programme manager; offered to EEA residents; denominated in EUR; crypto liquidation fee not more than 0.10%; 0% card-level conversion fee on non-EUR purchases; cashback needs completed identity verification; limits and caps set by OKX, not stated.",
-      "accessed_at": "2026-11-23T06:30:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -429,7 +429,7 @@
       "title": "OKX Cardholder Agreement (published 15 Aug 2025)",
       "source_type": "official_terms",
       "excerpt": "Issuer UAB Monavate (Lithuania, code 305628001, Bank of Lithuania LB002139); 'OKX Europe Limited will act as the Programme Manager'; Mastercard/Visa acceptance, Mastercard scheme for chargebacks; ≥ 18; 'We will not issue the Card … until we have verified your identity'; fees shown in the OKX Account, none itemised; limits shown in the account; Lithuanian law; EEA execution times.",
-      "accessed_at": "2026-11-23T06:30:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -443,7 +443,7 @@
       "title": "OKX Card EEA: How It Works, Fees, Rewards & Eligibility (OKX Learn)",
       "source_type": "eligibility_page",
       "excerpt": "Published 28 Jan 2026, updated 18 Aug 2026. 'Available to users across the EU and Norway, excluding Iceland and Liechtenstein'; Mastercard; 'currently issued as a virtual card only'; no transaction/FX fees, 0.1% stablecoin→fiat spread; Apple/Google Pay; promo cashback up to 20% on USDG for 30 days after launch (date not given), then VIP-dependent; standard users 'may get none outside promotions'.",
-      "accessed_at": "2026-11-23T06:30:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -456,7 +456,7 @@
       "title": "What fees apply when I am using my OKX Card (Singapore) — help centre",
       "source_type": "pricing_page",
       "excerpt": "Published 25 Mar 2026, updated 5 Nov 2026. FX fee SGD 0%; non-SGD/non-USD 0% (settles in USD internationally, no mark-up on Visa rates); conversion USDG/USDC→USD 0%, USDT→USD 0.10%, USDG/USDT/USDC→SGD 0.10%; issuance S$0 (virtual only); monthly/annual S$0; inactivity S$0. 'This information may not apply to all customers.' Issuer, eligibility, ATM, physical card not stated.",
-      "accessed_at": "2026-11-23T06:30:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -473,7 +473,7 @@
       "title": "OKX Card Product Disclosure Statement (Australia, prepared 9 Jun 2026)",
       "source_type": "official_terms",
       "excerpt": "Issuer Bano Pty Ltd (ABN 93 643 260 431, AFSL 536984); distributor OKX Australia Pty Ltd; 'intended for Australian residents only'; Mastercard; settled in USD; wallet holds USDC/USDT/USDG; 0.10% conversion spread 'the only fee applied by OKX'; issuance, replacement, refund processing nil; contactless AUD 100; > AUD 1,000 in-app check; limits in app; ≥ 18, KYC/AML. Truncated after clause 26.",
-      "accessed_at": "2026-11-23T06:30:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {
@@ -491,7 +491,7 @@
       "title": "Does OKX Card support ATM withdrawals? (help centre)",
       "source_type": "help_center",
       "excerpt": "Updated 25 Sep 2026. ATM withdrawals supported 'only with your physical card'; 'a fee applies to each ATM withdrawal' — amount shown in the app (OKX Card > Manage card > ATM withdrawal); 'ATM withdrawals aren't available in every region'.",
-      "accessed_at": "2026-11-23T06:30:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -503,7 +503,7 @@
       "title": "What's OKX Affiliate Program? (help centre, updated 29 Sep 2026)",
       "source_type": "affiliate_program",
       "excerpt": "Rebate of invitees' trading fees (spot, futures, options, CeDeFi); default 30%, monthly level assessment, 5-month protection; unlocked after referring 10 valid users plus identity verification; referral link or code; VIP5–6 invitees capped 100,000/month, none at VIP7+; bans on brand-keyword bidding, look-alike sites, self-invites, Prohibited Jurisdictions. OKX Card not mentioned.",
-      "accessed_at": "2026-11-23T06:30:00Z",
+      "accessed_at": "2026-11-25T06:34:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -519,8 +519,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-23T06:30:00Z",
-    "last_auto_check_at": "2026-11-23T06:30:00Z"
+    "last_content_verified_at": "2026-11-25T06:34:00Z",
+    "last_auto_check_at": "2026-11-25T06:34:00Z"
   },
   "changelog": [
     {
@@ -595,6 +595,24 @@
       "from": "2026-11-21T06:28:00Z",
       "to": "2026-11-23T06:30:00Z",
       "reason": "Fifth independent read on 2026-11-23 (48 h 02 min after the fourth) of all eight evidence pages: every material value confirmed, unchanged. Three stored URLs were read through the same article at another locale path returned by the search engine (EEA fee article via /en-us/help/what-fees-apply-when-using-my-card, Cardholder Agreement via /en-eu/help/okx-cardholder-agreement, Australian PDS via /en-au/help/okx-card-product-disclosure-statement); stored URLs unchanged. EEA fee article (published 20 Jan 2026, updated 5 Nov 2026): FX EUR 0 %, FX non-EUR 0 % on top of Mastercard rates, USDC/G→EUR conversion 0.1 %, issuance €0 virtual only, monthly/annual €0, inactivity €0, settles in EUR, 'no hidden fees', 'may not apply to all customers', no ATM/physical/delivery/top-up fee or limits. EEA Addendum (27 Jan 2026, last updated 5 Feb 2026): issuer UAB Monavate (Lithuania, code 305628001, Bank of Lithuania EMI licence LB002139), programme manager OKX Europe Limited (Malta, MFSA CASP), 'for residents of the European Economic Area', Iceland/Liechtenstein not mentioned, card denominated in EUR, crypto liquidation fee 'not more than 0.10 %', 0 % card-level conversion on non-EUR purchases, cashback requires completed identity verification, rates/caps determined by OKX, ATM usage excluded from cashback, limits not stated, prepaid BIN, 14-day withdrawal right. Cardholder Agreement (published 15 Aug 2025, no update date): UAB Monavate code 305628001 LB002139, OKX Europe Limited programme manager, Mastercard/Visa acceptance with Mastercard scheme for chargebacks, ≥ 18, 'We will not issue the Card or open a Card Account until we have verified your identity', no fee or limit figures (EUR 50 liability cap only), Lithuanian law, no residency clause, no suspension/termination statement. Learn article (28 Jan 2026, updated 18 Aug 2026): 'available to users across the EU and Norway, excluding Iceland and Liechtenstein', Mastercard, 'currently issued as a virtual card only', USDC and USDG spend assets, no transaction/FX fees, 0.1 % market spread, no issuance/monthly/annual/inactivity fee, Apple/Google Pay, launch promo 'up to 20 % cashback' for the first 30 days after launch without dates or caps, afterwards VIP-dependent, standard users may get none — rewards still not modelled; issuer not named. Singapore fee article (published 25 Mar 2026, updated 5 Nov 2026 — same date as the third read; the fourth read saw 11 Aug 2026 on the /en-sg/ copy; figures identical): FX SGD 0 %, non-SGD/non-USD 0 % on Visa rates, USDG/USDC→USD 0 %, USDT→USD 0.10 %, USDG/USDT/USDC→SGD 0.10 %, issuance S$0 virtual only, monthly/annual S$0, inactivity S$0, settles USD international / SGD domestic, Visa, no issuer, no eligibility, no KYC, 'may not apply to all customers'. Australian PDS (published 8 Jun 2026, preparation date 9 Jun 2026): issuer Bano Pty Limited ACN 643 260 431 / ABN 93 643 260 431, AFSL 536984, distributor OKX Australia Pty Ltd ABN 22 636 269 040 (CAR 1318306), 'intended for Australian residents only', individuals only, personal use, Mastercard, settled in USD, USDC/USDT/USDG, 0.10 % conversion spread USD→stablecoin, contactless AUD 100, limits in the app, virtual card, 5-year expiry, AML/CTF screening; issuance/replacement/refund nil, ≥ 18, KYC and the AUD 1,000 in-app check again seen only in the fetcher's summary of the back half (verbatim text truncated at clause 1.20). ATM article (published and updated 25 Sep 2026): physical card only, 'a fee applies to each ATM withdrawal', amount only in the app, not available in every region, rolling 24-hour daily limit by VIP tier without figure. Affiliate rules (published 27 Sep 2023, updated 29 Sep 2026): trading-fee rebate on spot/futures/options/CeDeFi, default 30 %, monthly level assessment, 5-month protection, 10 valid users + identity verification, VIP5–6 cap 100,000/month, none at VIP7+, OKX Card not mentioned. NOT published: the validator's publication gate (dry run this morning) still refuses 'okx-card-eea eligibility not verified' (hypothesis from the Learn article), 'okx-card-sg eligibility not verified' and 'okx-card-sg kyc not verified'; this run never upgrades a field status or adds evidence. Leads for the research run unchanged (OKX SG Cards FAQ /help/okx-sg-cards-faq, StraitsX cardholder agreement, physical-card application article, EEA referral terms /en-us/help/okx-card-referral-program-terms-and-conditions-eea, AU Target Market Determination /en-gb/help/okx-card-target-market-determination).",
+      "evidence": [
+        "ev-okx-eea-fees",
+        "ev-okx-eea-addendum",
+        "ev-okx-cardholder-agreement",
+        "ev-okx-eea-learn",
+        "ev-okx-sg-fees",
+        "ev-okx-au-pds",
+        "ev-okx-atm",
+        "ev-okx-affiliate-rules"
+      ],
+      "actor": "second-read-run"
+    },
+    {
+      "date": "2026-11-25T06:34:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-23T06:30:00Z",
+      "to": "2026-11-25T06:34:00Z",
+      "reason": "Sixth independent read on 2026-11-25 (48 h 04 min after the fifth) of all eight evidence pages: every material value confirmed, unchanged. One stored URL was read through the same article at another locale path returned by the search engine (EEA fee article via /en-br/help/what-fees-apply-when-using-my-card, which again shows 'Updated Sep 11, 2026' where the /en-eu/ copy showed 5 Nov 2026 — figures identical); stored URLs unchanged. EEA fee article (published 20 Jan 2026): FX EUR 0 %, FX non-EUR 0 % on top of Mastercard rates, USDC/G→EUR conversion 0.1 %, issuance €0 virtual only, monthly/annual €0, inactivity €0, settles in EUR, 'no hidden fees', 'may not apply to all customers', no ATM/physical/delivery/top-up fee or limit rows. EEA Addendum (27 Jan 2026, last updated 5 Feb 2026): issuer UAB Monavate (code 305628001, Bank of Lithuania EMI licence LB002139), programme manager OKX Europe Limited (Malta, MFSA CASP), 'for residents of the European Economic Area', Iceland/Liechtenstein not mentioned, card denominated in EUR, crypto liquidation fee 'not more than 0.10 %', 0 % card-level conversion on non-EUR purchases, cashback for EEA residents without published rate, ATM usage excluded from cashback, limits not stated, prepaid BIN. Cardholder Agreement (published 15 Aug 2025): UAB Monavate 305628001 / LB002139, OKX Europe Limited programme manager, Mastercard/Visa acceptance with Mastercard as card scheme for chargebacks, ≥ 18, 'We will not issue the Card or open a Card Account until we have verified your identity', unauthorised-payment liability up to EUR 50, limits only in the OKX Account, Lithuanian law, no residency clause. Learn article (28 Jan 2026, updated 18 Aug 2026): 'available to users across the EU and Norway, excluding Iceland and Liechtenstein', Mastercard, 'currently issued as a virtual card only', no transaction/FX fees, 0.1 % market spread, no issuance/monthly/annual/inactivity fee, Apple/Google Pay, launch promo up to 20 % cashback on USDG for the first 30 days after launch without dates or caps, afterwards VIP-dependent, standard users may receive none outside promotions — rewards still not modelled; issuer not named. Singapore fee article (25 Mar 2026, updated 5 Nov 2026): FX SGD 0 %, non-SGD/non-USD 0 % on Visa rates, USDG/USDC→USD 0 %, USDT→USD 0.10 %, USDG/USDT/USDC→SGD 0.10 %, issuance S$0 virtual only, monthly/annual S$0, inactivity S$0, settles USD international / SGD domestic, Visa, no issuer, no eligibility, no KYC, 'Not all products mentioned are available in all jurisdictions'. Australian PDS (published 8 Jun 2026, preparation date 9 Jun 2026): issuer Bano Pty Limited ACN 643 260 431 / ABN 93 643 260 431, AFSL 536984, distributor OKX Australia Pty Ltd ABN 22 636 269 040 (CAR 1318306), 'intended for Australian residents only', individuals only, Mastercard, OKX receives transactions in USD, wallet USDC/USDT/USDG, 0.10 % conversion spread USD→stablecoin, contactless AUD 100, limits in the app, virtual card with 5-year expiry; issuance/replacement/refund nil, ≥ 18, KYC/AML, the 'only fee' wording and the AUD 1,000 in-app check again seen only in the fetcher's summary of the back half (verbatim text truncated at about 40 k characters). ATM article (published and updated 25 Sep 2026): physical card only, 'a fee applies to each ATM withdrawal', amount only in the app, rolling 24-hour daily limit by VIP tier without figure, not available in every region. Affiliate rules (published 27 Sep 2023, updated 29 Sep 2026): default 30 % commission on spot/futures/options/CeDeFi, 10 valid users + identity verification, monthly assessment, 5-month protection, VIP5–6 cap 100,000/month, none at VIP7+, OKX Card not mentioned. NOT published: the validator's publication gate still refuses 'okx-card-eea eligibility not verified' (hypothesis from the Learn article), 'okx-card-sg eligibility not verified' and 'okx-card-sg kyc not verified'; this run never upgrades a field status or adds evidence. Leads for the research run unchanged (OKX SG Cards FAQ /en-sg/help/okx-sg-cards-faq, StraitsX cardholder agreement /en-us/help/okx-cardholder-agreement-straitsx, physical-card application article /en-eu/help/how-do-i-apply-for-an-okx-physical-card, EEA referral terms /en-us/help/okx-card-referral-program-terms-and-conditions-eea, AU Target Market Determination /en-au/help/okx-card-target-market-determination). Six reads without a path to publication: a decision by David (accept the Learn article as the EEA eligibility source, or drop the Singapore variant) or a research run on the leads is needed before further second reads add value.",
       "evidence": [
         "ev-okx-eea-fees",
         "ev-okx-eea-addendum",
