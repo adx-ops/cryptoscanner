@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "ledger-affiliate",
+  "provider_id": "crypto-life",
+  "program_name": "Ledger Affiliate programme (Ledger | Affiliate, partners page) — hardware/Ledger products; CL Card not stated as commissionable",
+  "legal_entity": "Ledger SAS, 106 rue du Temple, 75003 Paris, France (site footer; not stated in programme terms, which were not readable).",
+  "program_url": "https://affiliate.ledger.com/",
+  "type": "publisher_affiliate",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Partners page: 'You are a blogger, a Youtuber, an influencer or have a voice in the crypto world? Become a Ledger affiliate and be rewarded for promoting our products.' CTA to www.ledgerwallet.com/affiliates (not fetched). The programme portal affiliate.ledger.com returned a client error to the fetcher; no terms, rates or conditions could be read.",
+  "our_status": "identified",
+  "paid_action": "Not stated on the pages read ('Attractive commissions in crypto', 'Direct relation with Ledger', 'Early access to Ledger news'). Which products are commissionable is not stated; the CL Card appears on the partners page only in site navigation, never in an affiliate context. A separate Ledger 'Refer a Friend' programme (shop.ledger.com referral terms) exists for hardware purchases — not read.",
+  "validation_conditions": "Unknown.",
+  "commission": {
+    "model_note": "'Attractive commissions in crypto' — no rate, no product list. The CL Card is provided by Baanx/Crypto Life, not sold by Ledger; whether card sign-ups pay anything is unknown.",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "unknown",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "payout": {
+    "threshold": "not stated",
+    "method": "'commissions in crypto' (partners page) — details not stated",
+    "frequency": "not stated",
+    "holdbacks_note": "Not stated."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "No channel rules, prohibited promotion rules or country restrictions readable this run. Crypto Life's own site has only a 'Partner FAQ' for wallet integrators (withcl.com/faq-partners) and no publisher programme; Baanx UK's legal page lists no affiliate document.",
+  "allowed_countries_note": "Not stated.",
+  "evidence": [
+    {
+      "url": "https://www.ledger.com/partners",
+      "title": "Partners Programs I Ledger (meta modified 2025-02-20)",
+      "accessed_at": "2026-11-25T05:37:00Z",
+      "excerpt": "'Ledger | Affiliate': 'You are a blogger, a Youtuber, an influencer or have a voice in the crypto world? Become a Ledger affiliate and be rewarded for promoting our products.' Bullets: 'Attractive commissions in crypto', 'Direct relation with Ledger', 'Early access to Ledger news'. CTA → www.ledgerwallet.com/affiliates; footer 'Affiliates' → affiliate.ledger.com."
+    },
+    {
+      "url": "https://www.withcl.com/legal",
+      "title": "Legal — Crypto Life",
+      "accessed_at": "2026-11-25T05:25:00Z",
+      "excerpt": "Document index for the CL platform (fees, terms, US documents); links 'Partner FAQ' (withcl.com/faq-partners) for wallet partners. No affiliate or referral programme document listed."
+    }
+  ],
+  "verification": "unknown",
+  "notes": "Identified only — nobody contacted, no application. The programme page affiliate.ledger.com could not be read (client error); the partners page confirms a creator-oriented affiliate programme paid in crypto but gives no rates and never names the CL Card as commissionable. A browser session should read affiliate.ledger.com (terms, platform, rates, product scope) before any decision. David to decide whether a hardware-wallet affiliate programme is relevant to a card listing at all."
+}

@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-24.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-25.",
   "target": {
     "min": 15,
     "max": 50
@@ -382,6 +382,28 @@
       "record": "data/cards/thorwallet-card.json",
       "needs_browser_read": true,
       "note": "Validated 2026-11-24 from 9 official pages (Membership Terms v1.1 Nov 2026 — governing; card page thorwallet.org/cards with fee/limit/country tables; fees page checked 2026-11-12; FAQ; KYC + ordering help articles 2026-11-12; Terms of Service v2 Jul 2026 — first half verbatim only; IBAN/Mastercard FAQ and THORCash FAQ for context). USD Mastercard via the Unblock programme (Atomo Sarl), issuer not disclosed; 175+ countries incl. US/UK/EEA/CH (indicative list; 31 excluded incl. NG, IN, CN, RU; NY and WA states excluded by the ToS). Basic: virtual, $5 one-off (free with invite), no subscription, FX 1.5%, ATM $1 dom / $5 intl, top-up 0% with USDC on Ethereum (other assets converted at the 1.25% swap fee = hypothesis), no cashback, $100,000/month after full KYC ($10,000 initially). Premium: $124 one-off ($99 with invite), physical card, 0.5% USDC cashback on $5,000/month for 3 months then $2,000 — 'Coming soon' in the app, not for UK residents. Full KYC by Unblock (ID, selfie, proof of address, financial questions). Contradictions: 175+ vs 170+ countries and differing lists (Kosovo/Montenegro; Cuba listed vs sanctions clause); cashback window 3 months vs 'first year' (FAQ); Premium price basis. Unreadable (fetcher permission): help articles card-fees-and-limits and top-up-card → needs_browser_read; ToS Section 12 (card services) only summarised. Apple/Google Pay not mentioned for this card. The older Swiss IBAN Mastercard (Fiat24) is a separate product — candidate of its own. Affiliate: data/affiliate/thorwallet-referral.json (identified; in-app referral up to $25 + up to 0.2% of referred FX spend in USDC; no terms page). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "Crypto Life / Baanx (Frozen Time Unipessoal LDA, Baanx Group Ltd, Baanx US Corp) for Ledger",
+      "product": "CL Card compatible with Ledger",
+      "status": "validated",
+      "record": "data/cards/ledger-cl-card.json",
+      "needs_browser_read": true,
+      "note": "Validated 2026-11-25 from 12 official pages (Ledger card page/shop page/US blog 2025-05-28/card-program page; CL product page for Ledger, Platform Fees PDF (undated), legal index, General Terms (Monavate version), Monavate cardholder terms (Nov 2023), FAQ, US card page, 2022 launch post; Baanx UK legal index). Visa debit (terms) — Mastercard logos on the CL site; EU: UAB Monavate, UK: Monavate Ltd (terms also list Optimus Cards UK Ltd), US: Cross River Bank. Free virtual card, physical free with $100 top-up (shipping cost unstated), no subscription, 1% cashback BTC/USDT (2% BXX) paid monthly, KYC (Veriff) before ordering, platform fees 1.75% crypto→fiat and 2% 'Card Spend' (relation unexplained). UNKNOWN: card FX margin, ATM fee, delivery/replacement/inactivity amounts, limits, US fee schedule — the Fee Information Document (public.withcl.com / baanxuk.com 2026), page-version Platform Fees, 2025/2026 Terms of Use, US Customer Fees and the Ledger support article could not be fetched (permission not granted / not surfaced by search) → needs_browser_read. Country coverage contradictory (EEA+UK hero vs 8-country FAQ list vs CL 7-region list; US 'starting soon' vs 'available'). Affiliate: data/affiliate/ledger-affiliate.json (identified; affiliate.ledger.com unreadable; CL Card not stated as commissionable). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "SafePal (with Fiat24, Switzerland)",
+      "product": "SafePal Mastercard (Fiat24 Swiss IBAN account)",
+      "status": "validated",
+      "record": "data/cards/safepal-card.json",
+      "needs_browser_read": true,
+      "note": "Validated 2026-11-25 from 8 official pages (help-centre fee article, FAQ, tiers article, card activation article, $10 USDC activation article — all updated 2026-07-25; bank product page; launch post 2024-03-07; zero-fee campaign post with March 2026 update). Virtual Mastercard 'jointly issued by SafePal and Fiat24' on a Fiat24 IBAN (EUR24/USD24/CHF24 on Arbitrum); no account/annual fees; top-up 0% (fee article) vs 1% standard with rebates (tiers article); FX 1% on non-USD purchases vs 'zero FX' in enabled currencies; ATM not mentioned → unknown; limits $20,000/month, $10,000/day (FAQ) vs 1,600/5,000 EUR per day (bank page); KYC by Fiat24, documents not listed; Apple/Google/Samsung Pay; no cashback; $10 USDC activation deposit. UNKNOWN: supported countries (www.safepal.com/en/bank/regions script-rendered → needs_browser_read; USA excluded per 2024 launch post), tier/referral tables (images), physical card (none mentioned), Fiat24 legal entity. Fiat on-ramp 'disabled until further notice' since March 2026. Affiliate: data/affiliate/safepal-affiliate.json (identified; Tapfiliate hardware programme 10–20%, card not commissionable; in-app referral on top-up fees). Second read ≥ 24 h required."
+    },
+    {
+      "provider": "Bitget",
+      "product": "Bitget Card (exchange card; Asia Pacific variant)",
+      "status": "blocked",
+      "note": "Blocked 2026-11-25: 'Effective August 1, 2026, Bitget Card no longer accepts new applications' (support articles Introduction 12560603820722 and Common Questions 12560603803533); existing cards run until expiry, no renewal; applicants redirected to the Bitget Wallet Card (already recorded: data/cards/bitget-wallet-card.json). Fee schedule read (0.9% transaction, 1% FX, ATM $0.65 + 2%, no annual fee, $1/month inactivity after 12 months) but issuer not named, no country list. The Asia-Pacific card (academy guide 2026-04-02, cashback/welcome articles 2026-03-25: USDC-funded Visa, BGB cashback 2–12% by VIP level, welcome 10–20% for 30 days, physical card 'Coming Soon', 'selected countries within the Asia-Pacific region', KYC Level 2) has no closure notice but no country list or issuer → status unclear. bitget.com/cards/ and the en-CA eligibility article unreadable → needs_browser_read. See data/candidates.json bitget-card.blocked_reason."
     }
   ],
   "no_kyc_track": {
@@ -455,7 +477,7 @@
         "claim": "$90 virtual / $500 physical one-time",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: search returns only cryptocards.so pages; no official Agora Cards domain indexed — fetcher cannot reach it. Browser session needed. | 2026-11-20: retried — search returns only directories and press; no official domain indexed; browser session still needed.",
+        "note": "2026-11-11: search returns only cryptocards.so pages; no official Agora Cards domain indexed — fetcher cannot reach it. Browser session needed. | 2026-11-20: retried — search returns only directories and press; no official domain indexed; browser session still needed. | 2026-11-25: official site agora.cards readable (homepage, Physical Card Plus page, 'Who we are' blog upd. 2026-10-31, llms-full.txt 2026-10-31). Fees, limits, prices ($90/$100/$550 one-time), 28 unsupported countries, prohibited uses and referral ($5/$30 per sale) are published and the card is orderable (app.agora.cards). Missing for rule (1): no statement anywhere readable of whether/when identity verification applies (only 'collects only the information strictly necessary'); no operator legal entity, issuer, network or terms. The homepage FAQ (#faq) was not returned by the fetcher → browser read of the FAQ/app sign-up before blocking. Full detail in data/candidates.json agora-card.note.",
         "needs_browser_read": true
       },
       {
@@ -491,7 +513,7 @@
         "claim": "pre-verified on purchase; $89/$349 one-time",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: search returns only directories (cardpilled, polymart, cryptocards.money) and X posts; no official Sovrae domain indexed — fetcher cannot reach it. Browser session needed to locate and read official pages. | 2026-11-18: re-attempted; web search ('Sovrae card official site fees terms') returns only polymart.app and unrelated cardholder terms — no official Sovrae domain surfaced (provenance). Browser session still needed.",
+        "note": "2026-11-11: search returns only directories (cardpilled, polymart, cryptocards.money) and X posts; no official Sovrae domain indexed — fetcher cannot reach it. Browser session needed to locate and read official pages. | 2026-11-18: re-attempted; web search ('Sovrae card official site fees terms') returns only polymart.app and unrelated cardholder terms — no official Sovrae domain surfaced (provenance). Browser session still needed. | 2026-11-25: official domain sovrae.io now surfaced by search but the fetcher hits an http↔https redirect loop — unreadable; browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -511,5 +533,5 @@
       }
     ]
   },
-  "updated": "2026-11-24"
+  "updated": "2026-11-25"
 }
