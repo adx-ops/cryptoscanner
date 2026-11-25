@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory. Discovery 2026-11-23: priority recomputed for every entry with the header formula (+3 only when affiliate_hint names a publisher programme; +1 for referral/ambassador); +2 region bonus not applied (every region in src/lib/regions.ts already has a published card).",
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "entries": [
     {
       "provider": "Wirex",
@@ -1151,13 +1151,13 @@
       "cross_listing_count": 1,
       "no_kyc_claim": true,
       "operator_named": false,
-      "affiliate_hint": "unknown",
+      "affiliate_hint": "referral ($5 per virtual card sale, $30 per physical card sale — agora.cards/#referral)",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-25",
       "priority": -3,
       "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-20: retried — web search still returns only directories (cryptocards.so, cryptoslate, cryptocardhub), Product Hunt/press; no official domain indexed; fetcher cannot reach the operator's pages."
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-20: retried — web search still returns only directories (cryptocards.so, cryptoslate, cryptocardhub), Product Hunt/press; no official domain indexed; fetcher cannot reach the operator's pages. | 2026-11-25: official site agora.cards now surfaced and readable (homepage, physical-card-plus page, 'Who we are' blog updated 2026-10-31, llms-full.txt 'Last updated: 2026-10-31'): Virtual Card Basic $90 one-time ($10 credit included, '3 year / $1M validity'), Virtual Card Plus $100, Physical Card Plus $550; top-up 2% (2.5% Plus/physical), transaction $0.35 + 1.5% (virtual) / $0.10 + 1.5% (physical), FX 1.5%, ATM 2% (physical only, $3,000/day, $80,000/month); limits Basic $20,000/tx, $240,000/day, $900,000/month, Plus $60,000/tx, $900,000/day, unlimited/month; USD card funded in USDT/USDC; Apple/Google Pay; 28 unsupported countries incl. US (Plus/physical only), IN, TR, MA, BD, RU, UA, BY; prohibited uses listed; referral $5/$30 per sale; distributor GoDarkEU. NOT stated anywhere readable: operator legal entity/jurisdiction ('Off-shore jurisdictions' badge only), card issuer, network, custodian names, terms of service, refund policy, and — decisive for the no-KYC rule — any statement of whether/when identity verification applies ('collects only the information strictly necessary'). The homepage FAQ section (#faq) was not returned by the fetcher. Not blocked yet: a browser read of the FAQ/app is needed to confirm the verification statement; if it is absent, block under rule (1)."
     },
     {
       "provider": "UTORG",
@@ -1225,10 +1225,10 @@
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-25",
       "priority": -3,
       "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-25: search now returns the official domain sovrae.io, but the fetcher gets an http↔https redirect loop (302 to http://sovrae.io/) — unreadable. Browser session needed."
     },
     {
       "provider": "MaxSwap",
@@ -1377,11 +1377,15 @@
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-25",
       "discovery_note": "Exchange card, distinct from Bitget Wallet Card",
-      "priority": 2
+      "priority": 2,
+      "needs_browser_read": true,
+      "operator_named": true,
+      "blocked_reason": "Blocked 2026-11-25: official support articles read (Introduction 12560603820722, Fee Schedule and Spending Limit 12560603803519, Common Questions 12560603803533 — all dated 2025-12-23; APAC guide academy/12560603882019 of 2026-04-02; APAC cashback 12560603881037 and welcome cashback 12560603881038 of 2026-03-25). 'Effective August 1, 2026, Bitget Card no longer accepts new applications' (Introduction + Common Questions) — users are sent to the Bitget Wallet Card; existing cards work until expiry and 'cannot be renewed'. Product closed to new applicants. Fees were published (0.9% transaction, 1% FX on top of Visa, ATM $0.65 + 2%, no annual fee, inactivity $1/month after 12 months) but issuer/issuing bank not named and no country list. The 'Bitget Card (Asia Pacific)' (USDC-funded Visa, 'selected countries within the Asia-Pacific region', physical card 'Coming Soon', BGB cashback 2–12% by VIP level, welcome 10–20% for 30 days) carries no closure notice but no country list, no issuer and KYC Level 2; its product status is unclear. bitget.com/cards/ and the en-CA eligibility article are client-rendered/unreadable → re-check the APAC card in a browser session. Bitget runs a publisher affiliate programme (not read this run).",
+      "note": "2026-11-25: see blocked_reason; APAC variant may be a separate active product — David to decide whether to open an 'bitget-card-apac' candidate."
     },
     {
       "provider": "MEXC",
@@ -1609,14 +1613,17 @@
       ],
       "cross_listing_count": 2,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "publisher affiliate (Ledger affiliate programme, hardware-oriented; CL Card not stated as commissionable)",
+      "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-23",
-      "priority": 4,
-      "regions_hint": [
-        "NG (directory)"
-      ]
+      "last_seen": "2026-11-25",
+      "priority": 0,
+      "operator_named": true,
+      "regions": [
+        "EEA and UK (Ledger page); FAQ adds US, Canada, Switzerland, Colombia, Mexico, Brazil; CL product page lists EU & Switzerland, UK, Canada, Brazil, Argentina, Australia, US"
+      ],
+      "needs_browser_read": true,
+      "note": "2026-11-25: validated — data/cards/ledger-cl-card.json (EEA/UK/US variants). Fee Information Document (Monavate), page-version Platform Fees, 2025/2026 Terms of Use, US Customer Fees and the Ledger support article were not readable (fetcher permission / not surfaced) → browser read needed for FX, ATM, delivery, limits."
     },
     {
       "provider": "Pionex",
@@ -2478,11 +2485,17 @@
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": false,
-      "affiliate_hint": "unknown",
-      "status": "identified",
+      "affiliate_hint": "publisher affiliate (SafePal Affiliate Program via Tapfiliate, hardware sales only) + in-app Fiat gateway referral",
+      "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2
+      "last_seen": "2026-11-25",
+      "priority": 0,
+      "operator_named": true,
+      "regions": [
+        "supported-regions page script-rendered (list unread); USA excluded (launch post 2024)"
+      ],
+      "needs_browser_read": true,
+      "note": "2026-11-25: validated — data/cards/safepal-card.json (virtual Mastercard with Fiat24 Swiss IBAN). Browser read needed: www.safepal.com/en/bank/regions (country list), tier/referral tables (images), KYC documents."
     },
     {
       "provider": "Simple.app",

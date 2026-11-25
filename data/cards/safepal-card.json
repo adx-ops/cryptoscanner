@@ -1,0 +1,347 @@
+{
+  "schema_version": "1.0.0",
+  "id": "safepal-card",
+  "slug": "safepal-card",
+  "name": "SafePal Mastercard (Fiat24 Swiss IBAN account)",
+  "brand": "SafePal",
+  "provider_id": "safepal",
+  "issuer": {
+    "name": "Fiat24 (Switzerland) — 'The Master debit card jointly issued by SafePal and Fiat24'; Fiat24 'solely handles the compliance and licensing aspect' (described by SafePal as regulated and licensed in Switzerland / FINMA). Fiat24's legal entity (SR Saphirstein AG) is not named on any SafePal page read",
+    "status": "verified",
+    "evidence": [
+      "ev-safepal-faq",
+      "ev-safepal-bank-page",
+      "ev-safepal-launch-blog"
+    ]
+  },
+  "network": "mastercard",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "hybrid",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "The card draws on a Fiat24 IBAN account whose balances are tokenised fiat on Arbitrum ('EUR24, USD24, CHF24 on the Arbitrum chain, pegged to EUR, USD, CHF'; FAQ). Top-up from the SafePal self-custodial wallet in USDC (Arbitrum) — 'default top-up asset is USDC' — plus a little ETH for gas; fiat can also arrive by wire transfer. March 2026 notice on the zero-fee campaign post: 'The on-ramp feature for the fiat gateway has been disabled until further notice' (fiat purchase of crypto), with MoonPay as the alternative. Wallet self-custodial, account/card balance held with Fiat24 → hybrid.",
+    "evidence": [
+      "ev-safepal-faq",
+      "ev-safepal-bank-page",
+      "ev-safepal-activation",
+      "ev-safepal-zero-fee-blog"
+    ]
+  },
+  "variants": [
+    {
+      "id": "safepal-card-international",
+      "region_label": "International (supported-regions list not readable; USA excluded)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [
+          "US"
+        ],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "Bank page: 'If you are a citizen in any of the supported regions and reside in supported areas, you will be able to open an account.' — both citizenship and residence appear to matter; the FAQ splits account limits 'into two levels by region: $100,000 per month and $1,000 per month' (Mainland China: $100,000/month).",
+        "usage_note": "The official 'Supported regions for SafePal Fiat gateway' page (www.safepal.com/en/bank/regions) renders its country list by script — no country names reached the fetcher → needs_browser_read. The only exclusion stated in text: launch post (2024-03-07) 'other countries (excluding the USA and US-sanctioned nations)'. The FAQ refers to a 'SafePal Fiat Gateway Service Area' article that was not surfaced. Until the list is read, every country other than the US is to_confirm.",
+        "evidence": [
+          "ev-safepal-bank-page",
+          "ev-safepal-launch-blog",
+          "ev-safepal-faq"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [],
+        "thresholds_note": "No document list, stage or threshold published on the pages read. Bank page footnote: 'As required by financial license and compliance requirements by regulators, there are KYC and onboarding processes for eligible users.' 'No credit checks or mandatory staking of assets for account eligibility'.",
+        "stages_note": "FAQ: 'As a decentralized wallet, SafePal does not require users to do any KYC processes'; KYC and onboarding for the IBAN account and card are 'conducted by Fiat24' inside the SafePal app (open Fiat24 IBAN account → register/activate → Card tab → 'Activate Card' with a $10 USDC deposit). Campaign posts count a referral only once the referred user 'completes KYC'.",
+        "evidence": [
+          "ev-safepal-faq",
+          "ev-safepal-bank-page",
+          "ev-safepal-activation",
+          "ev-safepal-card-activation-article"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "SafePal Mastercard",
+          "access": {
+            "type": "free",
+            "note": "'There are no account creation or management fees' (bank page FAQ; fee article: 'no account opening fees, management fees, or any other additional charges'). Activation requires depositing $10 USDC (Arbitrum) to the card — the article calls it a 'deposit' that can then be spent; not described as a fee.",
+            "status": "verified",
+            "evidence": [
+              "ev-safepal-fee-rates",
+              "ev-safepal-bank-page",
+              "ev-safepal-activation"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual Mastercard provided with the IBAN account: 'no account opening fees, management fees, or any other additional charges' (fee article updated 2026-07-25); 'no annual fees' (launch post). Card activation requires a $10 USDC deposit ('How to deposit $10USDC to activate your Mastercard'), which the article presents as a spendable balance, not a charge → modelled as no issuance fee with this caveat.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-safepal-fee-rates",
+                "ev-safepal-activation",
+                "ev-safepal-launch-blog"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'There are no account creation or management fees' (bank page FAQ, fee article); 'no account creation or annual management fees' (launch post 2024-03-07).",
+              "status": "verified",
+              "evidence": [
+                "ev-safepal-fee-rates",
+                "ev-safepal-bank-page",
+                "ev-safepal-launch-blog"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "none",
+              "conditions": "Fee article (updated 2026-07-25): 'The standard deposit/top-up fee is set at 0%.' The tiers article (same date) still describes a Silver user who 'will still pay the standard 1% rate when depositing, and will get the 0.1% rebate', and the bank page advertises top-up 'rates as low as 0.4%' (highest tier) and 'fiat transfer and deposit fees being as low as 0.6%'; the tiers article adds 'zero on-ramp and deposit fees indefinitely while the waiver program is valid'. The dedicated fee article governs (0%); the waiver may be the reason. Gas fees on Arbitrum apply ('All transactions run on the blockchain and incur gas fees'). Crypto swap spreads apply when swapping into USDC.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-safepal-fee-rates",
+                "ev-safepal-tiers",
+                "ev-safepal-bank-page",
+                "ev-safepal-zero-fee-blog"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 1,
+              "period": "per_transaction",
+              "conditions": "Fee article: 'Mastercard transactions settled in non-USD currencies' incur 'a 1% currency exchange fee'; refund processing fee '1 USD/1 EUR/1 CHF/7 CNH' per refund. The activation article instead says 'Enjoy zero FX fees when spending in EUR, CHF, USD, and CNY' — 'After a currency account is enabled, you will not incur exchange fees when making payments in this currency', otherwise the default currency is used. Modelled: 1% on any currency other than an enabled account currency (USD modelled as the card currency); the 1% figure is the dated fee article's value.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-safepal-fee-rates",
+                "ev-safepal-card-activation-article"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "ATM withdrawals are not mentioned on any page read (virtual card; limits stated for 'contactless payments' and 'other payment methods' only).",
+              "status": "unknown",
+              "evidence": [
+                "ev-safepal-fee-rates",
+                "ev-safepal-faq"
+              ]
+            },
+            {
+              "type": "other",
+              "kind": "none",
+              "conditions": "Transfers between Fiat24 accounts free; transfers to external banks: 'no SafePal/Fiat24 charge, but other banks may charge' (fee article). Fiat off-ramp/withdrawal fees 'as low as 0.6%' by tier on the bank page (waived by rebate under the zero-fee campaign) — not a card fee.",
+              "status": "verified",
+              "evidence": [
+                "ev-safepal-fee-rates",
+                "ev-safepal-bank-page"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 20000,
+                "currency": "USD"
+              },
+              "period": "month",
+              "note": "FAQ (updated 2026-07-25): card currently issued 'is $20,000/month, $10,000/day, 100 transactions/day, 500/month'; two higher card levels ($200,000/month and $1 million/month) 'have not yet been issued to ordinary users'. Bank page FAQ: 'the limit for contactless payments is 1,600 EUR per day and 5,000 EUR per day for other payment methods' (contradiction with the FAQ figures, not resolved). Account limits by region: $100,000/month or $1,000/month.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-safepal-faq",
+                "ev-safepal-bank-page"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay",
+            "samsung_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-safepal-fee-rates",
+      "url": "https://safepalsupport.zendesk.com/hc/en-us/articles/22647224575643-Fee-Rates-for-the-SafePal-Fiat-Gateway-and-Mastercard",
+      "title": "Fee Rates for the SafePal Fiat Gateway and Mastercard — SafePal Help Center (Updated July 25, 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "1. 'The standard deposit/top-up fee is set at 0%.' 2. Mastercard transactions settled in non-USD currencies: 'a 1% currency exchange fee'; refund processing fee '1 USD/1 EUR/1 CHF/7 CNH' per refund. 3. 'There are no account opening fees, management fees, or any other additional charges.' 4. Intra-IBAN transfers free. 5. External bank transfers: no SafePal/Fiat24 charge. 6. Gas fees apply.",
+      "accessed_at": "2026-11-25T05:44:00Z",
+      "effective_from": "2026-07-25",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "0% top-up vs 'standard 1% rate' with 0.1% rebate in the tiers article and 'as low as 0.4%' on the bank page; no ATM, card-issuance or tier-based fee rows."
+    },
+    {
+      "id": "ev-safepal-faq",
+      "url": "https://safepalsupport.zendesk.com/hc/en-us/articles/22646856800027-FAQs-about-the-SafePal-Fiat-Gateway-and-Mastercard",
+      "title": "FAQs about the SafePal Fiat Gateway and Mastercard — SafePal Help Center (Updated July 25, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'The Master debit card jointly issued by SafePal and Fiat24.' Linkable to Google Pay, Apple Pay, Samsung Pay. 'As a decentralized wallet, SafePal does not require users to do any KYC processes' — KYC 'conducted by Fiat24'. Account limits 'divided into two levels by region: $100,000 per month and $1,000 per month'. Card: $20,000/month, $10,000/day, 100 transactions/day, 500/month.",
+      "accessed_at": "2026-11-25T05:44:00Z",
+      "effective_from": "2026-07-25",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Card limits ($20,000/month, $10,000/day) vs bank page FAQ (1,600 EUR/day contactless, 5,000 EUR/day other). No country list; the 'SafePal Fiat Gateway Service Area' article it refers to was not surfaced."
+    },
+    {
+      "id": "ev-safepal-tiers",
+      "url": "https://safepalsupport.zendesk.com/hc/en-us/articles/22646881975195-Introducing-the-Account-Tiers-Points-and-Privileges-of-the-SafePal-Fiat-Gateway-Services",
+      "title": "Introducing the Account Tiers, Points and Privileges of the SafePal Fiat Gateway Services — SafePal Help Center (Updated July 25, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Tier table, SFP staking amounts, referral rates and USDC purchase fees are images (not read). Text: registration gives 'the initial 1500 points'; tiers evaluated monthly on the previous three months' points (3000 points → Silver); a Silver user 'will still pay the standard 1% rate when depositing, and will get the 0.1% rebate';",
+      "accessed_at": "2026-11-25T05:44:00Z",
+      "effective_from": "2026-07-25",
+      "expires_at": null,
+      "scope": {
+        "note": "Tier percentages live in images → needs_browser_read."
+      },
+      "verification": "verified",
+      "contradiction_note": "'standard 1% rate when depositing' vs fee article '0%'."
+    },
+    {
+      "id": "ev-safepal-card-activation-article",
+      "url": "https://safepalsupport.zendesk.com/hc/en-us/articles/22558153923739-How-to-obtain-and-activate-Fiat24-bank-card",
+      "title": "How to obtain and activate Fiat24 IBAN card — SafePal Help Center (Updated July 25, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'Enjoy zero FX fees when spending in EUR, CHF, USD, and CNY'; 'no deposit fees'; personal IBAN; steps: create IBAN account → register and activate → Card tab → complete signature → 'Activate Card' → enable currencies: 'After a currency account is enabled, you will not incur exchange fees when making payments in this currency.' Otherwise the default currency is used.",
+      "accessed_at": "2026-11-25T05:44:00Z",
+      "effective_from": "2026-07-25",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "'zero FX fees' in enabled currencies vs the fee article's 1% on non-USD Mastercard transactions."
+    },
+    {
+      "id": "ev-safepal-activation",
+      "url": "https://safepalsupport.zendesk.com/hc/en-us/articles/39066233008283-How-to-deposit-10USDC-to-activate-your-Mastercard-in-SafePal-wallet",
+      "title": "How to deposit $10USDC to activate your Mastercard in SafePal wallet — SafePal Help Center (Updated July 25, 2026)",
+      "source_type": "help_center",
+      "excerpt": "Prerequisites: SafePal Wallet, '$USDC (Arbitrum)' and 'a small amount of $ETH(Arbitrum) for gas fees'. Wallet tab → Fiat tab → 'Activate Card' → choose USDC, amount and fiat currency to receive → confirm and sign. 'You can now load funds onto the card and use it for online/offline purchases.' The $10 is called a deposit; not described as a fee.",
+      "accessed_at": "2026-11-25T05:52:00Z",
+      "effective_from": "2026-07-25",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-safepal-bank-page",
+      "url": "https://www.safepal.com/en/bank",
+      "title": "SafePal Banking Gateway - Manage crypto-friendly bank accounts and Visa cards from today (product page; © 2024 footer)",
+      "source_type": "pricing_page",
+      "excerpt": "'offered in collaboration with Fiat24, which solely handles the compliance and licensing aspect.' 'virtual Master debit cards'; 'Zero fees for account setup and management, as well as wire transfers'; top-up 'rates as low as 0.4%'; 'deposit fees being as low as 0.6%'; Limits: 'contactless payments is 1,600 EUR per day and 5,000 EUR per day for other payment methods'. Referral 'up to 40%'.",
+      "accessed_at": "2026-11-25T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Title says 'Visa cards' while the body says Mastercard. Regions page linked from here (www.safepal.com/en/bank/regions) is script-rendered."
+      },
+      "verification": "verified",
+      "contradiction_note": "Visa (title) vs Mastercard (body, help centre); card limits differ from the FAQ; 'Paypal, Apple Pay, Google Pay, Samsung Pay' listed for spending."
+    },
+    {
+      "id": "ev-safepal-launch-blog",
+      "url": "https://www.safepal.com/en/blog/safepal-launches-1st-crypto-friendly-banking-gateway-and-visa-card",
+      "title": "SafePal launches 1st Crypto-Friendly Fiat Gateway and Visa Card — SafePal blog (Mar 07, 2024)",
+      "source_type": "official_terms",
+      "excerpt": "Fiat24 'regulated and licensed in Switzerland'; SafePal 'strategic investment' in Fiat24; balances 'stored as $USD, $EUR, and $CHF'; 'no account creation or annual management fees'; rollout to 'selected regions in Europe before extending to the entire continent, and other countries (excluding the USA and US-sanctioned nations)'; 'Mastercard services in Q3 this year';",
+      "accessed_at": "2026-11-25T05:40:00Z",
+      "effective_from": "2024-03-07",
+      "expires_at": null,
+      "scope": {
+        "note": "Launch announcement (2024) — used for the US exclusion and the Fiat24 description only; the 'Visa' product it describes was replaced by the Mastercard."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-safepal-zero-fee-blog",
+      "url": "https://www.safepal.com/en/blog/safepal-launches-zero-fee-banking-campaign",
+      "title": "SafePal Launches Zero Fee Fiat Campaign — SafePal blog (Oct 18, 2024; 'Update as of March 2026')",
+      "source_type": "official_terms",
+      "excerpt": "'Update as of March 2026: The on-ramp feature for the fiat gateway has been disabled until further notice.' Deposit and off-ramp fees waived 'in the form of rebates' (redeemable from 5 USDC); 'Rebates will only apply for routes where service fees are charged. Each referred user completing KYC adds 'an additional 30-day extension'.",
+      "accessed_at": "2026-11-25T05:40:00Z",
+      "effective_from": "2024-10-18",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "Campaign has no end date; the March 2026 on-ramp notice conflicts with the live 'Fiat gateway' marketing on the bank page."
+    }
+  ],
+  "links": {
+    "official_url": "https://www.safepal.com/en/bank",
+    "affiliate": {
+      "program_id": "safepal-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-25T05:52:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-25T06:10:00Z",
+      "field": "*",
+      "reason": "Initial record from 8 official SafePal pages read by the unattended research run (help-centre fee article, FAQ, tiers article, card activation article, $10 USDC activation article — all updated 2026-07-25 — bank product page, launch post 2024-03-07, zero-fee campaign post with a March 2026 update) — single read; second independent read ≥ 24 h later required before publication. Virtual Mastercard 'jointly issued by SafePal and Fiat24' on a Fiat24 Swiss IBAN account (tokenised EUR24/USD24/CHF24 on Arbitrum); no account/annual fees; top-up 0% (fee article) vs 1% standard with rebates (tiers article); FX 1% on non-USD Mastercard transactions vs 'zero FX' in enabled currencies; ATM not mentioned → unknown; card limits $20,000/month, $10,000/day (FAQ) vs 1,600/5,000 EUR per day (bank page); KYC by Fiat24, documents not listed; Apple/Google/Samsung Pay. UNKNOWN: supported countries (regions page script-rendered → needs_browser_read), KYC documents and thresholds, ATM fee, tier table and referral rates (images), physical card (none mentioned), Fiat24 legal entity. Product status active (help articles updated July 2026) although the fiat on-ramp is 'disabled until further notice' since March 2026. Affiliate: SafePal Affiliate Program recorded (data/affiliate/safepal-affiliate.json) — hardware sales only, card not listed as commissionable.",
+      "evidence": [
+        "ev-safepal-fee-rates",
+        "ev-safepal-faq",
+        "ev-safepal-tiers",
+        "ev-safepal-card-activation-article",
+        "ev-safepal-activation",
+        "ev-safepal-bank-page",
+        "ev-safepal-launch-blog",
+        "ev-safepal-zero-fee-blog"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual Mastercard attached to a Fiat24 Swiss IBAN account opened from the SafePal wallet app, 'jointly issued by SafePal and Fiat24' (Fiat24 handles licensing and KYC; its legal entity is not named by SafePal). No account, annual or management fees; top-up from the SafePal wallet in USDC on Arbitrum at 0% per the July 2026 fee article (the tiers article still describes a 1% standard rate with rebates); 1% currency-exchange fee on Mastercard purchases settled outside USD, or none in a currency whose account is enabled (EUR, CHF, USD, CNY); no ATM information; card limit $20,000 per month and $10,000 per day. Apple Pay, Google Pay and Samsung Pay. No cashback. Supported countries are shown on a script-rendered page the run could not read; the USA is excluded. Activation requires a $10 USDC deposit.",
+    "good_for": [
+      "SafePal wallet users who want a Swiss IBAN plus a virtual Mastercard with no account fees",
+      "Spending in USD, EUR or CHF from stablecoins with 0% top-up (per the current fee article)",
+      "Apple Pay / Google Pay / Samsung Pay users who do not need a physical card"
+    ],
+    "not_for": [
+      "US residents (excluded at launch; no change found)",
+      "Anyone needing cash: ATM withdrawals are not documented for this virtual card",
+      "Users looking for cashback — none is offered",
+      "Residents of a country whose eligibility cannot be confirmed: the supported-regions list could not be read this run"
+    ],
+    "watch_outs": [
+      "Supported-regions page renders its list by script; eligibility is unknown until a browser session reads it.",
+      "Top-up fee: fee article says 0%, tiers article says 1% standard with a 0.1% rebate for Silver, bank page says 'as low as 0.4%'.",
+      "FX: 1% on non-USD purchases (fee article) vs 'zero FX fees' in enabled currencies (activation article).",
+      "Card limits differ between the help centre ($20,000/month, $10,000/day) and the bank page (1,600 EUR/day contactless, 5,000 EUR/day other).",
+      "The fiat on-ramp of the gateway has been 'disabled until further notice' since March 2026; funding is by crypto (USDC) or wire transfer.",
+      "KYC is performed by Fiat24; documents, stages and thresholds are not published.",
+      "SafePal's own pages do not name Fiat24's legal entity or its licence; the bank page title still says 'Visa cards' while the product is a Mastercard.",
+      "Account-level limits depend on region ($100,000/month vs $1,000/month) — the region split is not published in text."
+    ]
+  }
+}

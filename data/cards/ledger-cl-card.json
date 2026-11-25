@@ -1,0 +1,845 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ledger-cl-card",
+  "slug": "ledger-cl-card",
+  "name": "CL Card compatible with Ledger",
+  "brand": "Crypto Life (CL) / Ledger",
+  "provider_id": "crypto-life",
+  "issuer": {
+    "name": "EU: UAB Monavate (Lithuania, legal entity code 305628001, Bank of Lithuania authorisation LB002139); UK: Monavate Ltd (England, 12472532, FCA 901097) — the CL General Terms also list Optimus Cards UK Ltd (FCA 902034) for 'UK Card Issuing'; US: Visa debit card 'in partnership with Cross River Bank, Member FDIC'. Programme provided by Baanx Group Ltd (UK), Baanx US Corp (US) and Frozen Time Unipessoal LDA (EU, Portugal 516096478)",
+    "status": "contradictory",
+    "evidence": [
+      "ev-cl-ledger-page",
+      "ev-cl-shop-page",
+      "ev-cl-general-terms",
+      "ev-cl-monavate-card-terms",
+      "ev-cl-faq"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "hybrid",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "unknown",
+    "supported_assets_note": "Card topped up from a Ledger device through the Ledger Wallet (Ledger Live) app: 'Fund your card quickly and easily with BTC, ETH, SOL, stablecoins and more' (Ledger shop page); 'Your crypto will be automatically converted to fiat at the time purchase' (Ledger card page) and 'instant conversion to fiat at the time of purchase' (CL product page). The CL General Terms list the platform assets as BTC, ETH, EURT, XRP, LTC, USDT, USDC, BXX (fiat GBP, EUR, USD); the FAQ adds Solana (receive-only) and says Layer 2 networks are not supported. Crypto deposited on the CL platform is held with 'Bitgo Europe Ltd' (UK/EU Crypto Wallet, General Terms) — the card balance is custodial even though the Ledger wallet is self-custodial → custody modelled as hybrid. Whether conversion happens at top-up (Platform Fees 'Crypto to Fiat 1.75%') or at spend ('Card Spend 2%') is not explained on the pages read → conversion 'unknown'.",
+    "evidence": [
+      "ev-cl-shop-page",
+      "ev-cl-ledger-page",
+      "ev-cl-product-page",
+      "ev-cl-general-terms",
+      "ev-cl-platform-fees",
+      "ev-cl-faq"
+    ]
+  },
+  "variants": [
+    {
+      "id": "ledger-cl-card-eea",
+      "region_label": "EEA (list expanded by us from 'EEA'; CL product page says 'EU & Switzerland')",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "FAQ: 'You must be a resident in the country you select, and have an address within that country in order to receive your card.' General Terms §3: at least 18 years old; 'Reside in a country where CL products & services are available'; §7: CL 'may, at Our discretion, restrict or deny the provision of Services in certain countries'. No published country list.",
+        "usage_note": "Ledger card page hero: 'Available now in EEA and UK, US starting soon.'; steps: 'The CL Card is currently available to UK and EEA* customers.'; FAQ on the same page: 'currently available in the EEA, the UK, the US, Canada, Switzerland, Colombia, Mexico, and Brazil.' CL product page 'Regional availability': EU & Switzerland, UK, Canada, Brazil, Argentina, Australia, United States. The 30 EEA countries are expanded by us from the word 'EEA'; no provider list of individual countries exists on the pages read. Switzerland, Canada, Brazil, Argentina, Australia, Colombia and Mexico are named on one page each and are not modelled (to_confirm). The EU card and account are 'maintained and operated by UAB Monavate'.",
+        "evidence": [
+          "ev-cl-ledger-page",
+          "ev-cl-product-page",
+          "ev-cl-faq",
+          "ev-cl-general-terms"
+        ],
+        "status": "contradictory"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "email",
+          "phone",
+          "other"
+        ],
+        "thresholds_note": "FAQ: 'You may be required to provide us with certain documentation for transactions above 10,000 GBP/EUR.' General Terms §3: 'a copy of Your driver's license and a copy of Your passport' may be requested; §9 lists name, e-mail, residential address, telephone number, government-issued ID and date of birth. Selfie and proof of address are not named on the pages read (the Ledger-branded support article could not be read).",
+        "stages_note": "FAQ: 'Before ordering your Crypto Life card, we require all users to pass KYC / Account Verification.' Identity provider Veriff ('Veriff helps us confirm your identity'). 2022 CL announcement: 'Before you can order your card, you will need to create an account and complete the KYC process.' Order flow: Ledger Wallet app → Card section → select country of residence → CL Card → create account (card.withcl.com).",
+        "evidence": [
+          "ev-cl-faq",
+          "ev-cl-general-terms",
+          "ev-cl-ledger-page",
+          "ev-cl-medium-launch"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "CL Card",
+          "access": {
+            "type": "free",
+            "note": "'Free virtual card' (Ledger shop page); 'Free card', 'No subscription or hidden fees' (CL product page). Physical card: 'Get the Crypto Life Card FREE with a $100 crypto top-up, or just cover the shipping cost' — shipping cost not stated.",
+            "status": "verified",
+            "evidence": [
+              "ev-cl-shop-page",
+              "ev-cl-product-page"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card free ('Free virtual card', Ledger shop page; 'Free card', CL product page). Physical card free 'with a $100 crypto top-up, or just cover the shipping cost' (CL product page) — the physical card without a $100 top-up costs the (unstated) shipping fee, modelled under delivery.",
+              "status": "verified",
+              "evidence": [
+                "ev-cl-shop-page",
+                "ev-cl-product-page"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "'just cover the shipping cost' (CL product page) and FAQ 'To order a physical card, you may be required to pay a delivery fee' — amount not published on any page read. Replacement: 'fees may apply' (FAQ), 'Fees may apply in certain cases where we send you a new Card' (Monavate card terms) — amount not stated.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-product-page",
+                "ev-cl-faq",
+                "ev-cl-monavate-card-terms"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'No subscription or hidden fees' and 'the Crypto Life Card doesn't require any monthly payments to keep your account' (CL product page). No annual or monthly fee row exists in the Platform Fees PDF.",
+              "status": "verified",
+              "evidence": [
+                "ev-cl-product-page",
+                "ev-cl-platform-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1.75,
+              "period": "per_transaction",
+              "conditions": "Platform Fees PDF (undated): 'Crypto to Fiat 1.75%' for BTC, LTC, ETH, XRP, USDT, USDC and EURT; 'Fiat to Crypto 1.75%' for GBP/EUR. The same PDF prints a separate 'Card Spend 2%' row per asset (modelled under conversion). Which of the two applies when a card purchase converts crypto at the time of purchase is not explained → hypothesis. The FAQ links a different Platform Fees file (cdn.prod.website-files.com …CL - Platform Fees.pdf) and the Baanx UK legal page a 'CL-Platform-Fees-2026.pdf' — both unread; figures may differ.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-cl-platform-fees",
+                "ev-cl-faq",
+                "ev-cl-legal-page"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "Platform Fees PDF: 'Card Spend 2%' for every listed crypto asset (BTC, LTC, ETH, XRP, USDT, USDC, EURT). Read as the fee on spending crypto directly with the card ('Auto-conversion from crypto to fiat at the time of purchase'); whether it replaces or adds to the 1.75% 'Crypto to Fiat' rate is not stated → hypothesis. Card loads by bank card: EUR €2.00 below €56, €0.60 + 2.49% from €56; GBP £1.99 below £51, £0.50 + 2.49% from £51; bank transfer free; fiat withdrawal 3.49% (FAQ: 'The fee is 3.49% of the total amount you request to withdraw', minimum £100/€100).",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-cl-platform-fees",
+                "ev-cl-faq"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "Monavate card terms: 'We will also apply our margin which is available on the fees pages of our website www.withcl.com/legal.' The 'Fee Information Document — CL Card — Monavate' (public.withcl.com and baanxuk.com/docs …-2026.pdf) that should carry the card FX margin and ATM fees could not be read this run (fetcher permission). General Terms §6: conversion rates 'indexed to' Coinbase Prime, BitPanda, Binance, LMAX, Finery Markets. No FX percentage on any page read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-monavate-card-terms",
+                "ev-cl-general-terms",
+                "ev-cl-legal-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Ledger shop page: 'Withdraw local currencies at ATMs worldwide'. No ATM fee or limit on any page read; the Fee Information Document (unread) is the likely source.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-shop-page",
+                "ev-cl-legal-page"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "unknown",
+              "conditions": "Monavate card terms: after 12 months without transactions 'we will start deducting a fee from your account that will cover our costs' — amount not stated. General Terms §11: platform account inactive after 365 days without deposits/restorations; accounts without assets are closed (no fee stated).",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-monavate-card-terms",
+                "ev-cl-general-terms"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "'earn 1% cashback in BTC, USDT or 2% in BXX' (Ledger card page hero); FAQ on the same page: 'rewards are 1% cashback in BTC or USDC in the US and 1% cashback in BTC or USDT, in other countries'; CL General Terms §5.6: 'BXX - 2%, BTC - 1%, USDT - 1%'; CL FAQ: 'a 1% reward on the total amount of card transactions (in BTC or USDT) or a 2% reward if you choose BXX', 'excluding transactions funded by Cryptodraft'. Paid monthly: 'At the end of each month, you will receive your reward for the total amount of card transactions.' The cardholder must first choose the payout asset. No cap published. The Ledger shop page lists 'BTC, USDC, or USDT' depending on country.",
+              "excluded_categories": [
+                "transactions funded by Cryptodraft (credit line)"
+              ],
+              "description": "1% cashback in BTC or USDT on card purchases, paid monthly",
+              "status": "verified",
+              "evidence": [
+                "ev-cl-ledger-page",
+                "ev-cl-general-terms",
+                "ev-cl-faq",
+                "ev-cl-shop-page"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "BXX"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "2% only when the cardholder elects BXX (the Baanx token) as the cashback asset: 'or 2% in BXX' (Ledger card page hero), 'BXX - 2%' (General Terms §5.6), 'a 2% reward if you choose BXX' (CL FAQ). The Ledger card page FAQ and the CL product page mention only 1% in BTC/USDT/USDC — the 2% BXX option is absent there (contradiction recorded). BXX market value and availability per country are not addressed.",
+              "description": "2% cashback in BXX (Baanx token) when BXX is chosen as payout asset",
+              "status": "contradictory",
+              "evidence": [
+                "ev-cl-ledger-page",
+                "ev-cl-general-terms",
+                "ev-cl-faq",
+                "ev-cl-product-page"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "No figures published: General Terms §16 'CL will from time to time impose limits'; FAQ refers to the in-app 'User restrictions table'; Monavate terms refer to www.withcl.com/legal.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-general-terms",
+                "ev-cl-faq"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "ledger-cl-card-uk",
+      "region_label": "United Kingdom",
+      "currency": "GBP",
+      "eligibility": {
+        "residence_allowed": [
+          "GB"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "Residence in the selected country with an address there (FAQ); 18+ (General Terms §3).",
+        "usage_note": "'Available now in EEA and UK' (Ledger card page); 'UK' in the CL product page regional list; 'The CL Card and underlying Account for UK customers are maintained and operated by Monavate Ltd' (Ledger pages). The CL General Terms entity table lists both 'Optimus Cards UK Ltd' and 'Monavate Ltd' under UK Card Issuing — contradiction, not resolved. 'UK customers — click here' on the CL legal page points to baanxuk.com (Baanx.com Ltd, FCA cryptoasset registration 927401), whose 2026 fee documents were not read.",
+        "evidence": [
+          "ev-cl-ledger-page",
+          "ev-cl-product-page",
+          "ev-cl-general-terms",
+          "ev-cl-legal-page",
+          "ev-cl-baanxuk-legal"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document",
+          "email",
+          "phone",
+          "other"
+        ],
+        "thresholds_note": "Same CL platform rules as the EEA variant: documentation 'for transactions above 10,000 GBP/EUR' (FAQ); driver's licence / passport may be requested (General Terms §3).",
+        "stages_note": "KYC (Veriff) before ordering the card (FAQ).",
+        "evidence": [
+          "ev-cl-faq",
+          "ev-cl-general-terms"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "CL Card",
+          "access": {
+            "type": "free",
+            "note": "Free virtual card; physical card free with a $100 crypto top-up or against the shipping cost (CL product page).",
+            "status": "verified",
+            "evidence": [
+              "ev-cl-shop-page",
+              "ev-cl-product-page"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Virtual card free (Ledger shop page, CL product page); physical card free with a $100 top-up, otherwise shipping cost (see delivery).",
+              "status": "verified",
+              "evidence": [
+                "ev-cl-shop-page",
+                "ev-cl-product-page"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Shipping / delivery fee amount not published (CL product page, FAQ).",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-product-page",
+                "ev-cl-faq"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'No subscription or hidden fees', no monthly payments (CL product page).",
+              "status": "verified",
+              "evidence": [
+                "ev-cl-product-page"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1.75,
+              "period": "per_transaction",
+              "conditions": "Platform Fees PDF: 'Crypto to Fiat 1.75%' (all listed assets); 'Fiat to Crypto 1.75%' for GBP. Card loads by bank card in GBP: £1.99 below £51, £0.50 + 2.49% from £51; bank transfer free; withdrawal 3.49%. Relation to the 'Card Spend 2%' row unexplained → hypothesis. The Baanx UK 'CL-Platform-Fees-2026.pdf' (which 'apply to the CL Card, compatible with the Ledger and 1inch platforms') was not read.",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-cl-platform-fees",
+                "ev-cl-baanxuk-legal"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 2,
+              "period": "per_transaction",
+              "conditions": "Platform Fees PDF: 'Card Spend 2%' per asset — meaning not explained (see EEA variant).",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-cl-platform-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "FX margin referred to the fees pages (Monavate card terms); Fee Information Document unread.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-monavate-card-terms",
+                "ev-cl-baanxuk-legal"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "ATM withdrawals advertised ('Withdraw local currencies at ATMs worldwide'); no fee published on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-shop-page"
+              ]
+            },
+            {
+              "type": "inactivity",
+              "kind": "unknown",
+              "conditions": "Dormancy fee after 12 months without transactions, amount not stated (Monavate card terms).",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-monavate-card-terms"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "1% in BTC or USDT on card transactions, paid monthly, excluding Cryptodraft-funded transactions (Ledger card page, General Terms §5.6, CL FAQ). No cap published.",
+              "excluded_categories": [
+                "transactions funded by Cryptodraft (credit line)"
+              ],
+              "description": "1% cashback in BTC or USDT, paid monthly",
+              "status": "verified",
+              "evidence": [
+                "ev-cl-ledger-page",
+                "ev-cl-general-terms",
+                "ev-cl-faq"
+              ]
+            },
+            {
+              "type": "conditional_max",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "BXX"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "2% only when BXX is chosen as the cashback asset (Ledger card page hero, General Terms §5.6, CL FAQ); absent from the Ledger FAQ and the CL product page.",
+              "description": "2% cashback in BXX when BXX is chosen as payout asset",
+              "status": "contradictory",
+              "evidence": [
+                "ev-cl-ledger-page",
+                "ev-cl-general-terms",
+                "ev-cl-faq",
+                "ev-cl-product-page"
+              ]
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "note": "No figures published (in-app restrictions table).",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-general-terms",
+                "ev-cl-faq"
+              ]
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "ledger-cl-card-us",
+      "region_label": "United States (availability contradictory: 'starting soon' / waitlist vs 'currently available')",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "US"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "Ledger blog (2025-05-28): 'US residents (with the exception of residents in the states of New York and Vermont) can sign up now to be notified when the CL Card becomes available.' State exclusions for the live product not confirmed.",
+        "usage_note": "Ledger card page hero: 'Available now in EEA and UK, US starting soon.' and a US waitlist form link (form.typeform.com/to/qEvkx7qt) vs the FAQ on the same page: 'currently available in the EEA, the UK, the US, Canada, …'; CL product page lists 'United States'; the Ledger blog of 2025-05-28 announced a waitlist only. The CL legal page carries US-specific documents (US Terms & Conditions, 'BAANX US ACCOUNT OPENING AGREEMENTS AND DISCLOSURES 08152025', US Customer Fees) — none read. 'The VISA debit card offered in the US is in partnership with Cross River Bank, Member FDIC' (Ledger shop page); 'US residents are not eligible for credit lines' (Ledger card page FAQ). Whether the card can be ordered today in the US is unresolved.",
+        "evidence": [
+          "ev-cl-ledger-page",
+          "ev-cl-product-page",
+          "ev-cl-shop-page",
+          "ev-cl-blog-us",
+          "ev-cl-legal-page"
+        ],
+        "status": "contradictory"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "unknown",
+        "requirements": [],
+        "thresholds_note": "US account opening agreements and disclosures (Baanx US Corp, dated 08152025) not read; US KYC documents unknown.",
+        "stages_note": "KYC before ordering applies to every CL account (CL FAQ); US-specific process unread.",
+        "evidence": [
+          "ev-cl-faq",
+          "ev-cl-legal-page"
+        ],
+        "status": "hypothesis"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "CL Card (US)",
+          "access": {
+            "type": "free",
+            "note": "'A free card that converts your crypto to fiat', 'No hidden subscription fees' (CL US card page). US Customer Fees page (www.withcl.com/legal/us-customer-fees) not read.",
+            "status": "hypothesis",
+            "evidence": [
+              "ev-cl-us-card-page",
+              "ev-cl-legal-page"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "'A free card' (CL US marketing page) but the US Customer Fees schedule was not read; physical/virtual split for the US not stated.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-us-card-page",
+                "ev-cl-legal-page"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "conditions": "'No hidden subscription fees' (CL US page) — US fee schedule unread.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-us-card-page"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "US fee schedule unread; the Platform Fees PDF read is the Monavate (EU/UK) one.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-legal-page"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "US fee schedule unread.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-legal-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "US fee schedule unread.",
+              "status": "unknown",
+              "evidence": [
+                "ev-cl-legal-page"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "none",
+              "valid_from": null,
+              "valid_until": null,
+              "conditions": "Ledger card page FAQ: 'rewards are 1% cashback in BTC or USDC in the US'; Ledger blog 2025-05-28: 'offers 1% Bitcoin cashback and direct paycheck deposits'. No cap, no US terms read.",
+              "description": "1% cashback in BTC or USDC (US)",
+              "status": "hypothesis",
+              "evidence": [
+                "ev-cl-ledger-page",
+                "ev-cl-blog-us"
+              ]
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "hypothesis"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-cl-ledger-page",
+      "url": "https://www.ledger.com/en/ledger-card",
+      "title": "CL Card compatible with Ledger | Ledger (canonical ledger.com/cl-card; meta modified 2025-11-26)",
+      "source_type": "pricing_page",
+      "excerpt": "'The CL Card compatible with Ledger is provided by Baanx*' — '*… provided by Baanx Group Ltd (in the UK), Baanx US Corp (in the United States) and Frozen Time UNIPESSOAL LDA (in the EU).' 'Available now in EEA and UK, US starting soon.' 'earn 1% cashback in BTC, USDT or 2% in BXX'; FAQ: 'You can find the full breakdown of fees here' → withcl.com/legal;",
+      "accessed_at": "2026-11-25T05:22:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Ledger-branded page; EU/UK operator paragraphs (UAB Monavate / Monavate Ltd) printed in the footer."
+      },
+      "verification": "verified",
+      "contradiction_note": "Hero 'EEA and UK, US starting soon' vs FAQ 'currently available in the EEA, the UK, the US, Canada, Switzerland, Colombia, Mexico, and Brazil'; hero '2% in BXX' vs FAQ 1% only (BTC/USDC in the US, BTC/USDT elsewhere)."
+    },
+    {
+      "id": "ev-cl-shop-page",
+      "url": "https://shop.ledger.com/pages/cl-card-crypto-card",
+      "title": "CL Card compatible with Ledger | Ledger (shop page, redirect target of ledger.com/cl-card)",
+      "source_type": "pricing_page",
+      "excerpt": "'CL Card, provided by Baanx* designed for Ledger.' 'Free virtual card'. 'cashback rewards in BTC, USDT or USDC depending on your country of residence'. 'The CL Card and underlying Account for EU customers are maintained and operated by UAB Monavate … 305628001 … for UK customers … Monavate Ltd … 12472532, FCA 901097. US: VISA debit card 'in partnership with Cross River Bank, Member FDIC'.",
+      "accessed_at": "2026-11-25T05:12:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "FAQ answers ('What are the fees associated with the CL Card?', 'Where is the CL Card available?') were not returned by the fetcher — only the questions."
+    },
+    {
+      "id": "ev-cl-blog-us",
+      "url": "https://www.ledger.com/blog-the-cl-card-comes-to-the-us",
+      "title": "Spend Your Crypto with Ledger: The CL Card Comes to the US | Ledger (2025-05-28)",
+      "source_type": "pricing_page",
+      "excerpt": "'expanding the CL Card, a Visa crypto card, to the United States'; 'powered by the crypto payments platform Baanx, offers 1% Bitcoin cashback and direct paycheck deposits'; 'US residents (with the exception of residents in the states of New York and Vermont) can sign up now to be notified when the CL Card becomes available.'",
+      "accessed_at": "2026-11-25T05:12:00Z",
+      "effective_from": "2025-05-28",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "Waitlist announcement (May 2025) vs the Ledger card page FAQ listing the US as 'currently available'."
+    },
+    {
+      "id": "ev-cl-product-page",
+      "url": "https://www.withcl.com/products/ledger",
+      "title": "Crypto Life Card with Ledger | Crypto Spending (withcl.com)",
+      "source_type": "pricing_page",
+      "excerpt": "'Free card'; 'Auto-conversion from crypto to fiat at the time of purchase.'; 'Get the Crypto Life Card FREE with a $100 crypto top-up, or just cover the shipping cost.'; 'No subscription or hidden fees'; 'Cashback 1% in BTC and USDT'; 'Choose between a physical or a virtual card'; Regional availability: EU & Switzerland, UK, Canada, Brazil, Argentina, Australia, United States;",
+      "accessed_at": "2026-11-25T05:25:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified",
+      "contradiction_note": "'Up to 2% cashback' headline vs 'Cashback 1% in BTC and USDT' (no BXX); regional list (EU & Switzerland, Canada, Brazil, Argentina, Australia, US) differs from the Ledger page (EEA, UK; FAQ adds Colombia, Mexico)."
+    },
+    {
+      "id": "ev-cl-platform-fees",
+      "url": "https://public.withcl.com/CL-Platform-Fees.pdf",
+      "title": "Platform Fees — Crypto Life (PDF, undated)",
+      "source_type": "pricing_page",
+      "excerpt": "Per asset (BTC, LTC, ETH, XRP, USDT, USDC, EURT): 'Crypto to Crypto 1.75%', 'Crypto to Fiat 1.75%', 'Card Spend 2%', 'Transfer out 0.4%' (0.5% USDT/USDC/EURT); 'GBP Fiat to Crypto 1.75%', 'EUR Fiat to Crypto 1.75%'. Deposits via card load: EUR below €56 = €2.00, €56 or above = €0.60 + 2.49%; GBP below £51 = £1.99, £51 or above = £0.50 + 2.49%. Bank transfer deposits free; withdrawals 3.49%.",
+      "accessed_at": "2026-11-25T05:25:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "No card issuance, physical card, delivery, monthly, FX, ATM or inactivity rows. The CL legal page links a page version (www.withcl.com/legal/cl-platform-fees), the FAQ another PDF, and baanxuk.com a '2026' PDF — none read."
+      },
+      "verification": "verified",
+      "contradiction_note": "'Crypto to Fiat 1.75%' and 'Card Spend 2%' coexist without explanation."
+    },
+    {
+      "id": "ev-cl-legal-page",
+      "url": "https://www.withcl.com/legal",
+      "title": "Legal — Crypto Life (document index, © 2026)",
+      "source_type": "official_terms",
+      "excerpt": "Lists: Platform Fees (www.withcl.com/legal/cl-platform-fees); Fee Information Document (public.withcl.com/Fee-Information-Document-CL-Card-Monavate.pdf); General Terms & Conditions (CL Platform Terms of Use - Monavate 2025); Cryptodraft Terms; Cardholder Terms (Monavate-Issuer-Terms-2023-Nov.pdf); US Terms & Conditions; US Account Opening Disclosures (08152025); US Customer Fees;",
+      "accessed_at": "2026-11-25T05:25:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Index only; the Fee Information Document, the page-version Platform Fees, the US Customer Fees page and the US disclosures could not be read this run (fetcher permission / not surfaced by search) → needs_browser_read."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cl-general-terms",
+      "url": "https://public.withcl.com/CL-Platform-Terms-of-Use-Internal-Monavate.pdf",
+      "title": "CL General Terms & Conditions (platform terms, Monavate version; undated PDF)",
+      "source_type": "official_terms",
+      "excerpt": "'CL' / 'Frozen Time': Almancil, Portugal, registration 516096478. Entity table: EU Card Issuing UAB Monavate (305628001); UK Card Issuing Monavate Ltd (12472532) and Optimus Cards UK Ltd (9044866, FCA 902034); crypto wallet Bitgo Europe Ltd. 'the CL™ account and Visa debit card'. §5.6: 'BXX - 2%, BTC - 1%, USDT - 1%'. §17: 'All fees for the platform can be found under https://withcl.com/legal/'.",
+      "accessed_at": "2026-11-25T05:26:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "The legal page links a differently named 'CL Platform Terms of Use - Monavate 2025.pdf' (cdn.prod.website-files.com) — not read; the two may differ."
+      },
+      "verification": "verified",
+      "contradiction_note": "Terms say Visa debit card; the CL legal page and FAQ footers show a Mastercard logo, the Monavate card terms say 'Mastercard/Visa'. Optimus Cards UK Ltd and Monavate Ltd both listed for UK card issuing."
+    },
+    {
+      "id": "ev-cl-monavate-card-terms",
+      "url": "https://public.withcl.com/Monavate-Issuer-Terms-2023-Nov.pdf",
+      "title": "Monavate Card Terms & Conditions — Frozen Time Unipessoal (cardholder terms, file dated Nov 2023)",
+      "source_type": "official_terms",
+      "excerpt": "'UAB Monavate is a company incorporated in Lithuania under Legal Entity Code: 305628001 … authorised and regulated by the Bank of Lithuania under Authorisation Code: LB002139'. 'You can see all fees applicable to you on our website www.withcl.com/legal.' FX: 'We will also apply our margin which is available on the fees pages'. 'The Card is not a credit card'.",
+      "accessed_at": "2026-11-25T05:33:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Body heading 'Monavate Business Debit Card Terms' with a 'corporate customer' confirmation clause although the document is listed as the consumer 'Crypto Life Card Cardholder Terms' — recorded as read, not resolved."
+      },
+      "verification": "verified",
+      "contradiction_note": "Business/corporate wording in a document presented as the cardholder terms; §5.1 names 'Movavate Limited' (typo)."
+    },
+    {
+      "id": "ev-cl-faq",
+      "url": "https://www.withcl.com/faq",
+      "title": "Crypto Life FAQs | Your Questions Answered (© 2026)",
+      "source_type": "help_center",
+      "excerpt": "'The Crypto Life Platform is provided by Frozen Time Unipessoal LDA, registered by Banco de Portugal'. 'Before ordering your Crypto Life card, we require all users to pass KYC / Account Verification.' (Veriff). 'documentation for transactions above 10,000 GBP/EUR'. Withdrawal 'fee is 3.49%'. 'a 1% reward … (in BTC or USDT)",
+      "accessed_at": "2026-11-25T05:33:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cl-baanxuk-legal",
+      "url": "https://www.baanxuk.com/legal/",
+      "title": "Baanx UK Legal | Terms, Privacy, and Compliance (© Baanx.com Ltd, 2026)",
+      "source_type": "official_terms",
+      "excerpt": "'Baanx.com Ltd is registered with the Financial Conduct Authority as a cryptoasset business … FCA Registration Number: 927401. Company Number: 11155611.' Documents: CL-Platform-Terms-of-Use-2026.pdf, CL-Platform-Fees-2026.pdf ('apply to the CL Card, compatible with the Ledger and 1inch platforms'), Fee-Information-Document-CL-Card-Monavate-2026.pdf, CL-Cryptodraft-Terms-2026.pdf, …",
+      "accessed_at": "2026-11-25T05:34:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Index only — the 2026 fee PDFs were not surfaced by search and could not be fetched (provenance)."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cl-us-card-page",
+      "url": "https://www.withcl.com/us/card",
+      "title": "Crypto Life Card | Spend Crypto Anywhere, Anytime (US page, © 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "'A free card that converts your crypto to fiat.' 'No hidden subscription fees.' 'All the features and services of the CL platform are provided by Baanx Group LTD and its associates.' 'For US customers, banking services are provided by Cross River Bank, Member FDIC.' 'Connect with Apple and Google Pay.' Wallet partners: Ledger, MetaMask, 1inch, Exodus. Mastercard and Visa logos both shown.",
+      "accessed_at": "2026-11-25T05:34:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cl-medium-launch",
+      "url": "https://medium.com/@cryptolifeCL/live-in-the-uk-and-eea-cl-card-powered-by-ledger-fcd05750b63f",
+      "title": "LIVE in the UK and EEA: CL Card powered by Ledger! — Crypto Life (CL) on Medium, 2022-11-25",
+      "source_type": "official_terms",
+      "excerpt": "'earn up to 2% cashback on every purchase' — '1% in BTC and USDT, and 2% in BXX, with more crypto cashback to come.' 'Before you can order your card, you will need to create an account and complete the KYC process.' 'your digital card will be instantly available for online payments' and a physical card arrives later. 'Rates start from 0%.*' (Cryptodraft/Stableloan).",
+      "accessed_at": "2026-11-25T05:22:00Z",
+      "effective_from": "2022-11-25",
+      "expires_at": null,
+      "scope": {
+        "note": "Operator's own blog post (launch announcement, 2022) — used only for the launch date, KYC-before-order wording and card types; figures may be outdated."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-cl-card-program",
+      "url": "https://www.ledger.com/card-program",
+      "title": "Card program | Ledger (Ledger Compatible Card Program; meta modified 2025-05-05)",
+      "source_type": "pricing_page",
+      "excerpt": "CL Card: 'Spend your crypto or use it as collateral and get 1% cashback in BTC or USDT on every purchase.' Provider: Baanx. FAQ: 'No, the cards compatible with Ledger are provided by our providers.' 'You do not need a Ledger wallet or Ledger Live to obtain or use the card.' 'You can select your country of residence to see where the card is available.' A Mercuryo 'Spend Card' is also listed.",
+      "accessed_at": "2026-11-25T05:12:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://www.ledger.com/cl-card",
+    "affiliate": {
+      "program_id": "ledger-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-25T05:34:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-25T06:05:00Z",
+      "field": "*",
+      "reason": "Initial record from 12 official pages read by the unattended research run (Ledger: card page, shop page, US blog 2025-05-28, card-program page; Crypto Life: product page for Ledger, Platform Fees PDF, legal index, General Terms (Monavate version), Monavate cardholder terms (Nov 2023), FAQ, US card page, 2022 launch post; Baanx UK legal index) — single read; second independent read ≥ 24 h later required before publication. Three variants modelled: EEA (EUR, UAB Monavate), UK (GBP, Monavate Ltd / Optimus Cards UK Ltd), US (USD, Cross River Bank — availability contradictory, all fees unknown). Known from official pages: free virtual card, no subscription, 1% cashback in BTC/USDT (2% in BXX), KYC before ordering (Veriff), platform conversion fees 1.75% (crypto→fiat) and 2% ('Card Spend'), card-load and withdrawal fees. UNKNOWN: card FX margin, ATM fee, shipping/delivery and replacement fee amounts, inactivity fee amount, spend/ATM limits, Cryptodraft APR/LTV details (terms unread), US fee schedule — the 'Fee Information Document — CL Card — Monavate' (public.withcl.com and baanxuk.com …-2026.pdf), the page-version Platform Fees, the 2025/2026 Terms of Use, the US Customer Fees page and the Ledger support article could not be fetched (permission not granted / not surfaced by search) → needs_browser_read. Contradictions recorded: country coverage (EEA+UK vs 8-country FAQ list vs 7-region CL list; US 'starting soon' vs 'available'); network Visa (terms, US blog) vs Mastercard logos; cashback 2% BXX present/absent; UK issuer Monavate Ltd vs Optimus Cards UK Ltd; 1.75% vs 2% conversion rows; cardholder terms carry business-card wording.",
+      "evidence": [
+        "ev-cl-ledger-page",
+        "ev-cl-shop-page",
+        "ev-cl-blog-us",
+        "ev-cl-card-program",
+        "ev-cl-product-page",
+        "ev-cl-platform-fees",
+        "ev-cl-legal-page",
+        "ev-cl-general-terms",
+        "ev-cl-monavate-card-terms",
+        "ev-cl-faq",
+        "ev-cl-us-card-page",
+        "ev-cl-baanxuk-legal",
+        "ev-cl-medium-launch"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Visa debit card from the Crypto Life (CL) platform of Baanx, marketed as the card 'compatible with Ledger' and topped up from a Ledger device through the Ledger Wallet app. EU cards and accounts are operated by UAB Monavate (Lithuania), UK cards by Monavate Ltd (the platform terms also name Optimus Cards UK Ltd), US cards 'in partnership with Cross River Bank'. Free virtual card, physical card free with a $100 top-up (otherwise shipping at an unstated cost), no subscription, 1% cashback in BTC or USDT paid monthly (2% if BXX is chosen), Apple Pay and Google Pay. Crypto-to-fiat conversion is priced at 1.75% and 'Card Spend' at 2% on the platform fee sheet; the card's FX margin, ATM fee and limits sit in a Fee Information Document that could not be read. Available in the EEA and UK; the US, Canada, Switzerland, Brazil and other countries are named inconsistently across the official pages. KYC (Veriff) is required before ordering.",
+    "good_for": [
+      "Ledger device owners in the EEA or UK who want a free card funded directly from the Ledger Wallet app",
+      "Users who want cashback paid in BTC or USDT with no subscription",
+      "Crypto-backed credit (Cryptodraft/Stableloan, 'rates from 0%') for non-US residents — terms not modelled"
+    ],
+    "not_for": [
+      "Anyone who needs to know the FX margin or ATM fee before ordering — neither is published on a page the run could read",
+      "US residents counting on ordering today: the Ledger page says both 'US starting soon' and 'currently available in … the US'",
+      "Spenders who object to a 1.75%–2% crypto conversion charge on top of any FX margin"
+    ],
+    "watch_outs": [
+      "The card's own fee schedule (Fee Information Document, Monavate) and the 2026 Baanx UK fee PDFs were not readable this run; FX, ATM, delivery and inactivity fees are unknown.",
+      "Platform Fees list both 'Crypto to Fiat 1.75%' and 'Card Spend 2%' without saying which applies to a card purchase.",
+      "Country coverage differs between the Ledger page hero (EEA, UK), its FAQ (EEA, UK, US, Canada, Switzerland, Colombia, Mexico, Brazil) and the CL product page (EU & Switzerland, UK, Canada, Brazil, Argentina, Australia, US).",
+      "Network: the platform terms and the Ledger US blog say Visa; the CL site shows Mastercard logos and the cardholder terms say 'Mastercard/Visa'.",
+      "The cardholder terms linked for consumers carry 'Business Debit Card' and 'corporate customer' wording (file dated Nov 2023).",
+      "Cashback of 2% is only in BXX (Baanx token); 1% in BTC/USDT is the comparable rate; Cryptodraft-funded purchases earn nothing; no cap published.",
+      "Card balances are custodial (Monavate e-money / Bitgo Europe for crypto) and not covered by the FSCS; only the Ledger wallet is self-custodial.",
+      "Ledger runs an affiliate programme (affiliate.ledger.com) but nothing read says the CL Card is commissionable."
+    ]
+  }
+}

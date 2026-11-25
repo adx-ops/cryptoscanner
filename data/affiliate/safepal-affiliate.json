@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "safepal-affiliate",
+  "provider_id": "safepal",
+  "program_name": "SafePal Affiliate Program (Tapfiliate; hardware-wallet sales) + Fiat Gateway referral programme (in-app, personal)",
+  "legal_entity": "Not stated on the affiliate page or the help-centre guide (SafePal; no company name or registration printed).",
+  "program_url": "https://www.safepal.com/en/affiliate",
+  "type": "publisher_affiliate",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Affiliate page: sign-up through Tapfiliate (https://safepal.tapfiliate.com/programs/magento2-s1/signup/, '3 clicks to finish sign-up'); personal affiliate link with real-time tracking. Help-centre guide (updated April 11, 2024): new affiliates start at a 10% sales commission; after 100 conversion orders an affiliate may e-mail sales@safepal.com to request 20%. Commissionable products listed by code: s1, s1pro, x1, cypher, leathercase (hardware wallets and accessories only). The Fiat gateway, the Fiat24 account and the Mastercard are NOT in the commissionable list.",
+  "our_status": "identified",
+  "paid_action": "Sale of SafePal hardware products through the affiliate link (affiliate page: 'Earn up to 10-20% commission from each sale'). Card sign-ups: not a paid action on the pages read. Separate Fiat Gateway referral (personal, in-app): 'indefinite commissions based on the top-up amount of your referees' — referee enters the invite code within 7 days of opening the IBAN account and tops up ≥ 100 USDC within 30 days; bank page: 'up to 40% referral commissions indefinitely on all top-up fees from referred accounts' (rate table by tier is an image, unread).",
+  "validation_conditions": "Hardware: completed order through the tracked link (conversions can fail on the same network, with an ad blocker or in Brave — guide). Fiat gateway referral: invite code within 7 days + 100 USDC accumulated top-up within 30 days.",
+  "commission": {
+    "model_note": "Hardware sales: 10% standard, 20% negotiable after 100 orders (guide, 2024); affiliate page 'up to 10-20%'. Card/fiat gateway: not commissionable through the affiliate programme; the in-app referral pays a share (up to 40%, tier-dependent) of the referees' top-up fees — which are currently 0% per the fee article, so the economic value is unclear.",
+    "percent": 10,
+    "tiers_note": "10% → 20% on request after 100 conversion orders (hardware). Fiat gateway referral tiers: percentages in an image (unread).",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "hypothesis"
+  },
+  "payout": {
+    "threshold": "US$100 total commission (hardware programme, guide 2024)",
+    "method": "PayPal or USDT (BEP-20) address; affiliate page: 'Receive commissions in fiat or crypto, as you like'. Fiat gateway referral rewards: claimed in-app as USDC (Arbitrum).",
+    "frequency": "monthly — settlement notification on the last day of the month for balances ≥ US$100, paid on the 4th of the following month (guide)",
+    "holdbacks_note": "Not stated."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "No channel rules, brand-bidding rules or country restrictions on the pages read. Banners available 'in 15 languages' (guide). The guide is dated 2024 and may be stale versus the 2026 help-centre pages.",
+  "allowed_countries_note": "Not stated.",
+  "evidence": [
+    {
+      "url": "https://www.safepal.com/en/affiliate",
+      "title": "SafePal Affiliate | Earn 10-20% Commissions from Every Sale (© 2024)",
+      "accessed_at": "2026-11-25T05:52:00Z",
+      "excerpt": "'SAFEPAL AFFILIATE PROGRAM' — 'Earn up to 10-20% commission from each sale.' 'Receive commissions in fiat or crypto, as you like.' Sign-up via safepal.tapfiliate.com ('3 clicks to finish sign-up'); personal affiliate link with real-time tracking. No mention of the Fiat24 card or bank account."
+    },
+    {
+      "url": "https://safepalsupport.zendesk.com/hc/en-us/articles/24721259056155-A-complete-guide-to-the-SafePal-Affiliate-Program",
+      "title": "A complete guide to the SafePal Affiliate Program — SafePal Help Center (Updated April 11, 2024)",
+      "accessed_at": "2026-11-25T05:52:00Z",
+      "excerpt": "New affiliates get 'a sales commission rate of 10%'; 20% on request after 100 conversion orders. 'We will send a settlement commission notification to affiliates whose total commission reaches US$100 on the last day of each month, and pay the commission on the 4th of the following month.' Payout via PayPal or a 'USDT (Bep20)' address. Product codes: s1, s1pro, x1, cypher, leathercase."
+    },
+    {
+      "url": "https://safepalsupport.zendesk.com/hc/en-us/articles/24357347212187-The-Complete-Guide-of-the-SafePal-Fiat-Gateway-Referral-Program",
+      "title": "The Complete Guide of the SafePal Fiat Gateway Referral Program — SafePal Help Center (Updated July 25, 2026)",
+      "accessed_at": "2026-11-25T05:52:00Z",
+      "excerpt": "'Once you join the program, you will enjoy indefinite commissions based on the top-up amount of your referees.' Invite code within 7 days of account opening; referee tops up a minimum accumulated 100 USDC within 30 days; one successful referral = 1500 points; rewards claimed as '$USDC(Arbitrum)'. Rates by tier: in the tiers article (image)."
+    },
+    {
+      "url": "https://www.safepal.com/en/bank",
+      "title": "SafePal Banking Gateway (product page)",
+      "accessed_at": "2026-11-25T05:40:00Z",
+      "excerpt": "'Enjoy up to 40% referral commissions indefinitely on all top-up fees from referred accounts'; footnote: referral rates 'differ between account tiers' and 'may vary and be adjusted at the discretion of SafePal and Fiat24'."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Identified only — nobody contacted, no application. The publisher programme (Tapfiliate) pays on hardware-wallet sales only; the card and Fiat24 account are not commissionable, so it does not fund card referrals. The Fiat Gateway referral is a personal in-app scheme paying a share of top-up fees that are currently 0%. David to decide whether the hardware programme is worth joining for a card comparator (it would monetise SafePal wallet/device clicks, not card sign-ups)."
+}
