@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0.0",
+  "id": "lemon-card",
+  "slug": "lemon-card",
+  "name": "Visa Lemon Card (Lemon Cash)",
+  "brand": "Lemon",
+  "provider_id": "lemon",
+  "issuer": {
+    "name": "not disclosed on the pages read — the card terms are hosted by Digifin S.A. ('Digifin S.A. is not a financial institution', payment-account provider named in every footer); Bay Treasure Caramel S.A. is the registered VASP (CNV No. 162). No bank, issuer or BIN sponsor named on the product page, the cashback page, the help article or the Colombia launch post.",
+    "status": "unknown",
+    "evidence": [
+      "ev-lemon-card-page",
+      "ev-lemon-terms-index",
+      "ev-lemon-help-what-is"
+    ]
+  },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "Argentina help article: the card 'solo va a funcionar si tiene fondos en pesos argentinos o en crypto' (prepaid, single instalment). Cashback page: paying 'en dólares digitales u otro activo' carries 'una comisión del 0,5% en el momento de pago'. Colombia post: balance deposited in pesos by PSE from any bank or wallet; ACH in/out, Bre-B integration under way. Which assets other than 'dólares digitales' can be spent is not listed on the pages read.",
+    "evidence": [
+      "ev-lemon-help-what-is",
+      "ev-lemon-cashback",
+      "ev-lemon-blog-colombia"
+    ]
+  },
+  "variants": [
+    {
+      "id": "lemon-card-argentina",
+      "region_label": "Argentina",
+      "currency": "ARS",
+      "eligibility": {
+        "residence_allowed": [
+          "AR"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "Help article: 'Ser mayor de 18 años', 'Tener un documento de identidad argentino', 'Tener una cuenta creada y validada en Lemon'. The requirement is an Argentine identity document rather than a residence statement.",
+        "usage_note": "Usable 'en cualquier comercio o página web del mundo que esté dentro de la red VISA' and 'en cualquier país del mundo' after a travel form (no confirmation needed). Lemon also runs the card in Colombia (own variant below) and publishes separate help centres and terms for Perú, Brasil and Chile; those markets are not modelled because no official card page for them could be read this run (Peru limits article and Colombia card collection returned a client error).",
+        "evidence": [
+          "ev-lemon-help-what-is",
+          "ev-lemon-card-page",
+          "ev-lemon-terms-index"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "id_document"
+        ],
+        "thresholds_note": "No threshold or limit tied to verification level is published on the pages read; the purchase-limit help articles returned a client error. The only limit figure read: spending abroad 'serán deducidos de tu límite de compra de los USD 200 (dólar ahorro) de los meses siguientes' (a tax/FX-regime limit, not a card limit).",
+        "stages_note": "A 'cuenta creada y validada en Lemon' and an Argentine identity document are required before requesting the card (help article). The validation procedure itself is not described on the pages read.",
+        "evidence": [
+          "ev-lemon-help-what-is"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Visa Lemon Card",
+          "access": {
+            "type": "free",
+            "note": "'La tarjeta no tiene costos de envío ni de mantenimiento' (help article); 'Nuestra tarjeta internacional gratuita' (Colombia post, for Colombia).",
+            "status": "verified",
+            "evidence": [
+              "ev-lemon-help-what-is"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "unknown",
+              "conditions": "The Argentina help article names only delivery and maintenance as free; no issuance figure for the virtual or physical card appears on the Argentina pages read (the Colombia post states free issuance for Colombia only). The card T&C (digifin.ghost.io) could not be read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-lemon-help-what-is",
+                "ev-lemon-card-page"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "none",
+              "conditions": "'La tarjeta no tiene costos de envío ni de mantenimiento' (help article 'Qué es la Lemon Card').",
+              "status": "verified",
+              "evidence": [
+                "ev-lemon-help-what-is"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'no tiene costos ... de mantenimiento' (help article).",
+              "status": "verified",
+              "evidence": [
+                "ev-lemon-help-what-is"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Funding is the Lemon account balance in pesos or crypto; no deposit/top-up fee statement on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-lemon-help-what-is"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "conditions": "Cashback page, section on paying 'en dólares digitales u otro activo' with Lemon Card or QR: '*Hay una comisión del 0,5% en el momento de pago.*' No fee is stated for payments debited from the peso balance.",
+              "status": "verified",
+              "evidence": [
+                "ev-lemon-cashback"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "The product page only states that foreign-currency purchases do not pay the 30% 'impuesto RG5617' perception ('Chau percepción del 30%', 'Un dólar es un dólar') — a tax statement, not a Lemon fee. The help article '¿Qué pasa cuándo hago consumos en moneda extranjera?' returned a client error; exchange rate, spread or fee not established.",
+              "status": "unknown",
+              "evidence": [
+                "ev-lemon-card-page"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "ATM withdrawals are not mentioned; the product page offers cash withdrawal 'en comercios adheridos' (map of merchants) without a fee statement.",
+              "status": "unknown",
+              "evidence": [
+                "ev-lemon-card-page"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "conditional_max",
+              "percent": 1,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "none",
+              "conditions": "'Hasta 1% de cashback pagando en pesos' — 'Todas las compras que hagas en pesos con Lemon Card o QR en Argentina generan hasta un 1% de cashback en Bitcoin o dólares digitales'; 'automático y aplica en cualquier comercio físico o virtual del país'. What determines the rate below the 1% ceiling, the monthly cap, instant credit and foreign-currency purchases are FAQ headings whose answers are not rendered on the page.",
+              "description": "Up to 1% back in Bitcoin or digital dollars on purchases paid in Argentine pesos (Argentina only per the page).",
+              "evidence": [
+                "ev-lemon-cashback",
+                "ev-lemon-card-page"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "conditional_max",
+              "percent": 2,
+              "payout": {
+                "kind": "token",
+                "code": "BTC"
+              },
+              "requires": "none",
+              "conditions": "'Hasta 2% de cashback pagando en dólares digitales u otro activo' — 'Hasta 2% con Lemon Card' (1% with QR); the same section states the 0.5% commission at payment. Product page: 'Ganá hasta 2% de cashback en Bitcoin con cada compra.' Caps, dates and rate conditions not readable (FAQ accordions empty).",
+              "description": "Up to 2% back in Bitcoin or digital dollars when the purchase is paid from digital dollars or another crypto asset (0.5% payment commission applies).",
+              "evidence": [
+                "ev-lemon-cashback",
+                "ev-lemon-card-page"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "none",
+              "conditions": "Product page: 'por cada pago que supere los $10.000' the user receives tickets for monthly prize draws ('viajes, tecnología y mucho más'); currency of the $10.000 threshold not stated.",
+              "description": "Prize-draw tickets per qualifying payment.",
+              "evidence": [
+                "ev-lemon-card-page"
+              ],
+              "status": "verified"
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "lemon-card-colombia",
+      "region_label": "Colombia",
+      "currency": "COP",
+      "eligibility": {
+        "residence_allowed": [
+          "CO"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "usage_note": "Launch post 2026-05-15: the card 'permite pagar en pesos en cualquier comercio del país y del mundo'; balance deposited 'en pesos por PSE desde cualquier banco o billetera'. Virtual card available in the app at launch; the physical card had a waitlist (20,000+ registrations). The Colombia help centre lists a 39-article card collection and a 'Programa de Referidos' collection, but the collection pages returned a client error → needs_browser_read.",
+        "evidence": [
+          "ev-lemon-blog-colombia",
+          "ev-lemon-help-co-index"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "unknown",
+        "editorial_level": "unknown",
+        "requirements": [],
+        "thresholds_note": "Not stated on the pages read for Colombia. The post's boilerplate mentions 'más de 4 millones de usuarios validados' in Latin America; the Colombia help-centre card articles could not be read.",
+        "stages_note": "Steps given by the post: download the app, request the card for free from the 'Tarjeta' section, deposit pesos, pay. No verification stage described.",
+        "evidence": [
+          "ev-lemon-blog-colombia"
+        ],
+        "status": "unknown"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Visa Lemon Card (Colombia)",
+          "access": {
+            "type": "free",
+            "note": "'Ambas versiones tanto virtual como física no tienen costo alguno en su emisión y mantenimiento ni costos ocultos.' (launch post).",
+            "status": "verified",
+            "evidence": [
+              "ev-lemon-blog-colombia"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "'no tienen costo alguno en su emisión y mantenimiento ni costos ocultos' — virtual and physical (launch post 2026-05-15).",
+              "status": "verified",
+              "evidence": [
+                "ev-lemon-blog-colombia"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "'ni costos ... de mantenimiento' (launch post).",
+              "status": "verified",
+              "evidence": [
+                "ev-lemon-blog-colombia"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Physical-card delivery cost not stated (card was on a waitlist at the time of the post).",
+              "status": "unknown",
+              "evidence": [
+                "ev-lemon-blog-colombia"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "unknown",
+              "conditions": "Deposits by PSE/ACH; no fee statement on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-lemon-blog-colombia"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "International purchases are advertised ('del país y del mundo') without any exchange-rate or fee statement.",
+              "status": "unknown",
+              "evidence": [
+                "ev-lemon-blog-colombia"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "Not mentioned on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-lemon-blog-colombia"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.4,
+              "payout": {
+                "kind": "token"
+              },
+              "requires": "none",
+              "conditions": "'acredita automáticamente un 0.4% de cashback en dólares digitales en cada pago' — presented as matching Colombia's 4x1000 (GMF) tax; applies to 'todas las compras'; no cap, date or exclusion stated. 'Dólares digitales' are stablecoin-type virtual assets (footer); the specific token is not named in the post (the Colombia help centre has a 'Dólar Digital - USDt' collection).",
+              "description": "0.4% back in digital dollars on every payment.",
+              "evidence": [
+                "ev-lemon-blog-colombia",
+                "ev-lemon-help-co-index"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "none",
+              "conditions": "Every purchase adds 'tickets' redeemable in in-app prize draws (trips, technology).",
+              "description": "Prize-draw tickets per purchase.",
+              "evidence": [
+                "ev-lemon-blog-colombia"
+              ],
+              "status": "verified"
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [],
+          "mobile_wallets_status": "unknown"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-lemon-card-page",
+      "url": "https://lemon.me/en/lemon_card",
+      "title": "VISA Lemon Card — Lemon product page (Spanish body; undated)",
+      "source_type": "pricing_page",
+      "excerpt": "'VISA Lemon Card', 'Física o virtual'; 'Ganá hasta 2% de cashback en Bitcoin con cada compra'; tickets 'por cada pago que supere los $10.000'; foreign-currency purchases do not pay the 30% 'impuesto RG5617'; cash 'en comercios adheridos'; T&C link to digifin.ghost.io/terminos-y-condiciones-tarjeta-prepaga/; Lemon Credit Card 'respaldada en Bitcoin'. FAQ answers not rendered.",
+      "accessed_at": "2026-11-26T05:47:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AR"
+        ],
+        "currency": "ARS",
+        "note": "Page is Argentina-oriented ('Buy and sell cryptocurrencies in Argentina'). No fee figures, issuer, KYC or wallet-pay statements."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-lemon-cashback",
+      "url": "https://lemon.me/en/cashback",
+      "title": "Cashback — Lemon ('Satoshis Calculator'; undated)",
+      "source_type": "pricing_page",
+      "excerpt": "'Pagás en Argentina con la Visa Lemon Card y te devolvemos automáticamente un % en Bitcoin o dólares digitales'; 'Hasta 1% de cashback pagando en pesos'; 'Hasta 2% de cashback pagando en dólares digitales u otro activo' — 'Hasta 2% con Lemon Card'; '*Hay una comisión del 0,5% en el momento de pago.*' FAQ headings on cap and foreign purchases have no answer text.",
+      "accessed_at": "2026-11-26T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AR"
+        ],
+        "currency": "ARS"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-lemon-help-what-is",
+      "url": "https://help.lemon.me/es/articles/4868375-que-es-la-lemon-card-y-donde-la-puedo-usar",
+      "title": "¿Qué es la Lemon Card y dónde la puedo usar? — Lemon help centre (Argentina; 'Actualizado hace más de una semana')",
+      "source_type": "help_center",
+      "excerpt": "'La Lemon Card es una tarjeta prepaga VISA'; usable at any merchant in the VISA network; works only with funds 'en pesos argentinos o en crypto'; single instalment; 'La tarjeta no tiene costos de envío ni de mantenimiento'; requirements: 'Ser mayor de 18 años', 'documento de identidad argentino', 'cuenta creada y validada en Lemon'; abroad after a travel form; USD 200 'dólar ahorro' limit note.",
+      "accessed_at": "2026-11-26T05:52:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AR"
+        ],
+        "currency": "ARS",
+        "note": "Five other help articles (foreign-currency purchases, travel abroad, purchase limits, Colombia card collection, Peru limits) and 'Todo sobre la Lemon Card' returned a client error to the fetcher → needs_browser_read."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-lemon-blog-colombia",
+      "url": "https://lemon.me/en/blog/visa-lemon-card-colombia",
+      "title": "Lanzamos la Visa Lemon Card en Colombia: la tarjeta que devuelve dólares digitales por cada compra — Lemon blog (2026-05-15)",
+      "source_type": "official_terms",
+      "excerpt": "'Nuestra tarjeta internacional gratuita'; virtual available, physical on waitlist; 'Ambas versiones tanto virtual como física no tienen costo alguno en su emisión y mantenimiento ni costos ocultos'; 'acredita automáticamente un 0.4% de cashback en dólares digitales en cada pago'; deposit pesos by PSE; footer: Bay Treasure Caramel S.A. VASP No. 162; 'Digifin S.A. is not a financial institution'.",
+      "accessed_at": "2026-11-26T05:48:00Z",
+      "effective_from": "2026-05-15",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "CO"
+        ],
+        "currency": "COP"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-lemon-terms-index",
+      "url": "https://lemon.me/en/terms",
+      "title": "Legales — Terms and Conditions Lemon Cash (index by country: Argentina, Perú, Brasil, Chile, Colombia, Latinoamérica, El Salvador)",
+      "source_type": "official_terms",
+      "excerpt": "Index of legal documents per country (Argentina: T&C, 'T&C Digifin S.A. - Servicios PSPCP', T&C Productos, Promociones; Perú: 'T&C - Billetera Electrónica' (laninpay.pe); Brasil: 'Carteira Fiduciária DOCK SOLUÇÕES EM MEIOS DE PAGAMENTO S.A. - Lemon Instituição de Pagamento Ltda.'; Chile: Lanin Pay SpA; Colombia: 'T&C Producto Billetera Digital'). No card terms, fee schedule or issuer on this page.",
+      "accessed_at": "2026-11-26T05:48:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "The Lemon Card T&C are hosted at digifin.ghost.io/terminos-y-condiciones-tarjeta-prepaga/ (linked from the product page) — not readable this run (permission not granted) → needs_browser_read."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-lemon-terms-productos-ar",
+      "url": "https://lemon.me/en/argentina-terms/t%C3%A9rminos-y-condiciones-productos",
+      "title": "T&C - PRODUCTOS (Argentina) — Lemon (index of product terms on legals.lemon.me)",
+      "source_type": "official_terms",
+      "excerpt": "Lists 15 products (PERFIL THE PLACE y PERFIL AMIGOS, LEMON JUICE, SERVICIO P2P, PAGOS CON PIX, Compra de DD con Moneda Extranjera, RENDIMIENTOS, LEMONERA, MINI APPS, SUSCRIPCION FRESH…) with links to legals.lemon.me; no Lemon Card or Lemon Credit Card section, no fees, no version date.",
+      "accessed_at": "2026-11-26T05:50:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "AR"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-lemon-help-co-index",
+      "url": "https://help.lemon.me/colombia/es/",
+      "title": "Centro de Ayuda — Lemon Colombia (index; canonical of intercom.help/lemon-colombia/es/)",
+      "source_type": "help_center",
+      "excerpt": "Collections: 'Tu tarjeta VISA Lemon Card' (39 artículos, help.lemon.me/colombia/es/collections/18931853-…), 'Programa de Referidos' (6 artículos, …/collections/14017444-programa-de-referidos), 'Dólar Digital - USDt' (12), 'Operar con pesos', 'Bre-b en Lemon'. The card collection page returned a client error to the fetcher.",
+      "accessed_at": "2026-11-26T05:53:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "CO"
+        ]
+      },
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://lemon.me/en/lemon_card",
+    "affiliate": {
+      "program_id": "lemon-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-26T05:53:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-26T06:05:00Z",
+      "field": "*",
+      "reason": "Initial record from 7 official Lemon pages read by the unattended research run (product page, cashback page, Argentina help article 'Qué es la Lemon Card', Colombia launch post 2026-05-15, legal index, Argentina product-terms index, Colombia help-centre index) — single read; second independent read ≥ 24 h later required before publication. Prepaid Visa, virtual and physical, free delivery and maintenance (Argentina) / free issuance and maintenance (Colombia); up to 1% (ARS payments) or 2% (digital-dollar/crypto payments, 0.5% commission at payment) cashback in Bitcoin or digital dollars in Argentina; 0.4% in digital dollars in Colombia; Argentine ID document and validated account required. UNKNOWN: issuer (not named; card T&C on digifin.ghost.io not readable), Argentina issuance fee, top-up, FX, ATM, limits, cashback caps, KYC stage in Colombia, Apple/Google Pay; Perú/Brasil/Chile card availability not modelled (help pages unreadable). needs_browser_read: digifin.ghost.io card T&C, help.lemon.me card articles (AR, CO, PE). Affiliate: 'Programa de Referidos' collection seen in the Colombia help centre (data/affiliate/lemon-referral.json, identified, not read); no publisher programme found.",
+      "evidence": [
+        "ev-lemon-card-page",
+        "ev-lemon-cashback",
+        "ev-lemon-help-what-is",
+        "ev-lemon-blog-colombia",
+        "ev-lemon-terms-index",
+        "ev-lemon-terms-productos-ar",
+        "ev-lemon-help-co-index"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Prepaid Visa card of the Argentine crypto app Lemon (Bay Treasure Caramel S.A., registered VASP; payment account by Digifin S.A.), virtual or physical, with no delivery or maintenance fee, spending from a pesos or crypto balance. In Argentina it pays up to 1% cashback in Bitcoin or digital dollars on purchases in pesos and up to 2% when paying from digital dollars or another crypto asset (a 0.5% commission applies at payment); foreign-currency purchases are advertised as exempt from the 30% tax perception. A Colombian version launched in May 2026 with free issuance and maintenance and 0.4% cashback in digital dollars. The card issuer, the card terms, FX and ATM fees, limits and cashback caps could not be read this run (terms hosted on a third-party domain, help-centre articles returning errors).",
+    "good_for": [
+      "Lemon users in Argentina who want Bitcoin cashback on everyday purchases in pesos",
+      "Spending from digital dollars with up to 2% cashback (net of the 0.5% payment commission)",
+      "Colombian users looking for a free card that returns 0.4% in digital dollars"
+    ],
+    "not_for": [
+      "Residents outside Argentina and Colombia: Perú, Brasil and Chile have their own Lemon terms but no readable card page this run; other countries are ineligible",
+      "Anyone who needs the issuer, the FX fee or ATM terms before applying — none is published on the pages read",
+      "Users expecting Apple Pay / Google Pay: not mentioned"
+    ],
+    "watch_outs": [
+      "Card issuer not named on any page read; the prepaid-card T&C sit on digifin.ghost.io and could not be read.",
+      "Cashback is stated as 'hasta' (up to) 1% / 2%: the rate rules, caps and timing are behind FAQ accordions whose answers do not render.",
+      "A 0.5% commission applies when paying from digital dollars or another crypto asset.",
+      "Foreign-currency purchases: the 30% perception exemption is a tax statement; Lemon's own FX rate/fee is unknown.",
+      "Argentina: an Argentine identity document and a validated Lemon account are required; spending abroad counts against a USD 200 'dólar ahorro' limit per the help article.",
+      "Colombia: physical card was on a waitlist at launch (May 2026); KYC stage not read.",
+      "Lemon also sells a Bitcoin-backed Visa credit card in Argentina (not modelled here; separate product)."
+    ]
+  }
+}
