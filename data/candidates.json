@@ -1,5 +1,5 @@
 {
-  "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory. Discovery 2026-11-23: priority recomputed for every entry with the header formula (+3 only when affiliate_hint names a publisher programme; +1 for referral/ambassador); +2 region bonus not applied (every region in src/lib/regions.ts already has a published card).",
+  "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory. Discovery 2026-11-23: priority recomputed for every entry with the header formula (+3 only when affiliate_hint names a publisher programme; +1 for referral/ambassador); +2 region bonus not applied (every region in src/lib/regions.ts already has a published card). Discovery 2026-11-26: one X article (Gronko_mania, 50 cards) counted as one source like any directory; 10 new entries, 42 existing entries cross-listed.",
   "updated": "2026-11-26",
   "entries": [
     {
@@ -14,15 +14,16 @@
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
         "defillama.com/crypto-cards/philippines 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 7,
+      "cross_listing_count": 8,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "global",
@@ -123,15 +124,16 @@
         "crypto.news/best-crypto-cards 2026-11-02",
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptoslate.com/crypto-cards/usa-crypto-cards 2026-11-09",
-        "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16"
+        "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 6,
+      "cross_listing_count": 7,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "affiliate_hint_note": "Impact (sjv.io) tracking link seen on crypto.news 2026-11-02; unverified",
       "regions_hint": [
@@ -145,15 +147,16 @@
       "slug": "metamask-card",
       "seen_in": [
         "brief 2026-10-26",
-        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-26",
       "priority": 0
     },
     {
@@ -171,15 +174,16 @@
         "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
         "cryptocardhub.com/blog/best-crypto-cards-in-brazil-2026 2026-11-23",
         "defillama.com/crypto-cards/philippines 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 8,
+      "cross_listing_count": 9,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "affiliate_hint_note": "Official affiliate programme at ether.fi/affiliates (pays on card activation + $100 spend), read 2026-11-02",
       "regions_hint": [
@@ -203,15 +207,16 @@
         "cryptocardhub.com/cards/south-africa 2026-11-23",
         "thisdaylive.com/2026/05/17/best-crypto-cards-available-in-nigeria-in-2026 2026-11-23",
         "defillama.com/crypto-cards/philippines 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 7,
+      "cross_listing_count": 8,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "affiliate_hint_note": "Site menu lists an 'Affiliate Program' and a 'Payment Partnership Program'; Europe help section has 'How to use a referral code'. Not read 2026-11-03. referral link seen on kkinvesting.io 2026-11-16",
       "regions_hint": [
@@ -230,15 +235,16 @@
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 4,
+      "cross_listing_count": 5,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only ($20/$10 in-app)",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "UAE (directory)",
@@ -253,17 +259,18 @@
       "seen_in": [
         "brief 2026-10-26",
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
-        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)"
+        "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "blocked",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-16",
-      "priority": 7,
-      "discovery_note": "Listed as 'currently unavailable' (Ready Lite, Ready Metal) by spendnode.io on 2026-11-02; unverified",
+      "last_seen": "2026-11-26",
+      "priority": 9,
+      "discovery_note": "Listed as 'currently unavailable' (Ready Lite, Ready Metal) by spendnode.io on 2026-11-02; unverified Third-party hint (X article 2026-11-21, not evidence): Ready's previous Mastercard programme discontinued; the updated Base-based app now offers a virtual Visa linked to a self-custodial digital-dollar account → re-check help.ready.co for the new programme.",
       "needs_browser_read": true,
       "blocked_reason": "Blocked 2026-11-05: official help centre (help.ready.co, article updated 2026-07-16) says 'Ready Cards are not available to order' during a transition to 'a new card program with a new card partner', no date, no waitlist; issuer not named in the Ready App Terms (Argent Labs Limited); fee and card-deactivation articles return a client error to the fetcher. Product status unclear → re-check when the new programme launches.",
       "regions_hint": [
@@ -279,15 +286,16 @@
         "brief 2026-10-26",
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-09"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-09",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 4,
+      "cross_listing_count": 5,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "official publisher programme (kraken.com/affiliate); card commissions coming soon",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "needs_browser_read": true,
       "regions_hint": [
@@ -300,16 +308,18 @@
       "product": "Deblock Card",
       "slug": "deblock-card",
       "seen_in": [
-        "brief 2026-10-26"
+        "brief 2026-10-26",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-28",
-      "priority": 2
+      "last_seen": "2026-11-26",
+      "priority": 4,
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Premium €14.99/month or €120/year."
     },
     {
       "provider": "Plutus",
@@ -369,15 +379,16 @@
       "slug": "bleap-card",
       "seen_in": [
         "brief 2026-10-26",
-        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "ambassador programme page exists (unread) + in-app referral",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "affiliate_hint_note": "bleap.finance/about/ambassador-program surfaced by search 2026-11-05 but returned a client error to the fetcher; help-centre Referrals Program documented (amounts in-app only). Record data/affiliate/bleap-ambassador.json.",
       "needs_browser_read": true
@@ -390,15 +401,16 @@
         "cryptocards.so 2026-10-28 (sponsored list)",
         "crypto.news/best-crypto-cards 2026-11-02",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "personal referral only (in-app code); no publisher programme found 2026-11-06",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "record": "data/cards/oobit-crypto-card.json",
       "needs_browser_read": true,
@@ -451,15 +463,16 @@
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 5,
+      "cross_listing_count": 6,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "affiliate_hint_note": "Official Rewards Addendum (2026-09-26) + help centre: personal referral programme only (0.25–1% of referred spend in XPL, $300 Platinum upgrade bonus in spend credit); no publisher programme found 2026-11-03. Record data/affiliate/plasma-one-referral.json.",
       "regions_hint": [
@@ -530,22 +543,24 @@
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "defillama.com/crypto-cards/philippines 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-23",
-      "priority": 6,
+      "last_seen": "2026-11-26",
+      "priority": 8,
       "regions_hint": [
         "global",
         "PH (directory)",
         "NG (directory)"
       ],
-      "blocked_reason": "Blocked 2026-11-09: docs.solayer.org Emerald Card fee, FAQ and overview pages read. Card issuer not named ('the card provider'); application 'currently required' to be a Community Sale participant or airdrop recipient — public access 'Coming Soon' (fee page), no date; no supported-country list (only a 20-US-state + ~95-country restricted list); card type, custody and limits not stated. Fees readable (activation $10 / free for Community Sale, top-up 1%, $0.15 per USD transaction, $0.10 + 1.5% non-USD). Fails documentation rule (issuer undisclosed, product status unclear). Re-check when public applications open."
+      "blocked_reason": "Blocked 2026-11-09: docs.solayer.org Emerald Card fee, FAQ and overview pages read. Card issuer not named ('the card provider'); application 'currently required' to be a Community Sale participant or airdrop recipient — public access 'Coming Soon' (fee page), no date; no supported-country list (only a 20-US-state + ~95-country restricted list); card type, custody and limits not stated. Fees readable (activation $10 / free for Community Sale, top-up 1%, $0.15 per USD transaction, $0.10 + 1.5% non-USD). Fails documentation rule (issuer undisclosed, product status unclear). Re-check when public applications open.",
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): stablecoin-funded spending on Solana, multi-network deposits."
     },
     {
       "provider": "Fold",
@@ -575,15 +590,16 @@
         "cryptocards.so 2026-10-28 (sponsored list)",
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptocardhub.com/cards/singapore 2026-11-09",
-        "cryptocardhub.com/cards/south-africa 2026-11-23"
+        "cryptocardhub.com/cards/south-africa 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "none found 2026-11-09 (Rewards Terms: no referral programme; no publisher programme page)",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "global",
@@ -690,23 +706,25 @@
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "fasset.com/blog/best-crypto-cards-in-uae 2026-11-16",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 4,
+      "cross_listing_count": 5,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-23",
-      "priority": 8,
+      "last_seen": "2026-11-26",
+      "priority": 10,
       "needs_browser_read": true,
       "blocked_reason": "Blocked 2026-11-06: operator Hardline Holding Limited (Kazakhstan, AIFC FinTech Lab AFSA-G-LA-2024-0011) and card services 'in collaboration with Signify Holdings Inc' per Terms of Use v3.0.0 (2026-07-01); card issuer bank unnamed; no card fee schedule readable (homepage gives no figures; help-centre Card Overview / Cashback Program / EUR limits / Cash Withdrawal and promo.kolo.xyz/bitcoin-cashback not reachable by the fetcher); only a restricted-country list (USD card 454905 / EUR card 442601, EUR card without ATM). Retry with a browser session; David to decide whether a Kazakhstan-licensed operator is in scope for the EEA catalogue.",
       "regions_hint": [
         "UAE (directory)",
         "ZA (directory)",
         "NG (directory)"
-      ]
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): BTC cashback promotions up to 5% for eligible new users (thresholds, caps), regular 1% spending fee."
     },
     {
       "provider": "IZIPAY",
@@ -795,16 +813,17 @@
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
         "defillama.com/crypto-cards/philippines 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-23",
-      "priority": 6,
+      "last_seen": "2026-11-26",
+      "priority": 8,
       "regions_hint": [
         "global",
         "ZA (directory)",
@@ -813,7 +832,7 @@
       ],
       "needs_browser_read": true,
       "blocked_reason": "Blocked 2026-11-09: the only official documents found (Terms of Service — Avici Card, last updated 2024-12-04, and Avici Card Terms USA) are hosted on aviciii.notion.site, which is client-rendered and returns only the Notion shell to the fetcher; avici.money has no indexed product, fee or terms page. Issuer, entity, fees and countries not obtainable this run. Retry with a browser session.",
-      "discovery_note": "Discovery 2026-11-23: cryptocards.so notes an Aug 2026 Rain contract exploit on Solana card balances; Avici says users were refunded (ambcrypto, crypto.news). Not verified officially."
+      "discovery_note": "Discovery 2026-11-23: cryptocards.so notes an Aug 2026 Rain contract exploit on Solana card balances; Avici says users were refunded (ambcrypto, crypto.news). Not verified officially. Third-party hint (X article 2026-11-21, not evidence): crypto-backed spending on Solana (liquidity against collateral)."
     },
     {
       "provider": "Nocturne",
@@ -853,15 +872,16 @@
       "slug": "bitpanda-card",
       "seen_in": [
         "brief 2026-10-26",
-        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "published",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-26",
       "priority": 0
     },
     {
@@ -902,15 +922,16 @@
         "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)",
         "hellosafe.ca/en/investing/crypto/crypto-cards 2026-11-16 (page last modified 2023-07)",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 10,
+      "cross_listing_count": 11,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "UAE (directory)",
@@ -929,15 +950,16 @@
         "cryptoslate.com/crypto-cards/europe 2026-11-02",
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "coingape.com/crypto-cards/best 2026-11-02",
-        "crypto.news/best-crypto-cards 2026-11-02"
+        "crypto.news/best-crypto-cards 2026-11-02",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 5,
+      "cross_listing_count": 6,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-26",
       "priority": 0
     },
     {
@@ -952,15 +974,16 @@
         "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)",
         "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
         "thisdaylive.com/2026/05/17/best-crypto-cards-available-in-nigeria-in-2026 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 8,
+      "cross_listing_count": 9,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "LATAM",
@@ -981,15 +1004,16 @@
         "cryptoslate.com/crypto-cards/usa-crypto-cards 2026-11-09",
         "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 7,
+      "cross_listing_count": 8,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "referral only",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "global",
@@ -1009,15 +1033,16 @@
         "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16",
         "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
         "defillama.com/crypto-cards/philippines 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 7,
+      "cross_listing_count": 8,
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "UAE (directory)",
@@ -1062,18 +1087,20 @@
       "seen_in": [
         "cardpilled 2026-09-23",
         "cryptoslate 2026-10-22",
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": true,
       "operator_named": true,
       "affiliate_hint": "referral programme (deposit-fee share 5-40%, USDT) — data/affiliate/solcard-referral.json",
       "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "record": "data/cards/solcard.json",
-      "validation_note": "Validated 2026-11-10 (no-KYC track) from solcard.cc fees/terms/referral pages."
+      "validation_note": "Validated 2026-11-10 (no-KYC track) from solcard.cc fees/terms/referral pages.",
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): standard virtual card $10 issuance and 5% top-up fee (no research-list entry exists for solcard — the second read should check the official fee schedule)."
     },
     {
       "provider": "Bing",
@@ -1311,14 +1338,15 @@
       "seen_in": [
         "coingape.com/crypto-cards/best 2026-11-02",
         "crypto.news/best-crypto-cards 2026-11-02",
-        "cryptoslate.com/crypto-cards/usa-crypto-cards 2026-11-09"
+        "cryptoslate.com/crypto-cards/usa-crypto-cards 2026-11-09",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "affiliate_hint": "publisher programme",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-26",
       "operator_named": true,
       "discovery_note": "Directory names WebBank as issuer; US-only credit card; Impact (sjv.io) link seen on crypto.news; scope decision needed",
       "priority": 0,
@@ -1424,14 +1452,15 @@
       "slug": "gate-card",
       "seen_in": [
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
-        "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16"
+        "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "official affiliate programme (trading-fee revenue share, card not mentioned)",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "IN (directory)"
@@ -1450,14 +1479,15 @@
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)",
         "dailytrust.com/best-crypto-cards-in-india-in-2026 2026-11-16",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 4,
+      "cross_listing_count": 5,
       "no_kyc_claim": false,
       "affiliate_hint": "official KuCoin Affiliate Program (kucoin.com/affiliate, up to 60% of trading fees) — KuCard not mentioned as a paid action",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "AU (directory)",
@@ -1485,14 +1515,15 @@
         "kkinvesting.io/en/posts/best-crypto-cards-canada 2026-11-16 (referral links)",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
         "cryptocardhub.com/blog/best-crypto-cards-in-brazil-2026 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 5,
+      "cross_listing_count": 6,
       "no_kyc_claim": false,
       "affiliate_hint": "Ambassador Program (help centre 2026-06-14: 20–50% direct, 10% indirect commissions on card purchase/spend) → data/affiliate/tria-ambassador.json",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "record": "data/cards/tria-card.json",
       "needs_browser_read": true,
@@ -1563,14 +1594,15 @@
         "cryptocardhub.com/blog/best-crypto-cards-in-the-united-arab-emirates-2026 2026-11-16",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
         "cryptocardhub.com/blog/best-crypto-cards-in-brazil-2026 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 4,
+      "cross_listing_count": 5,
       "no_kyc_claim": false,
       "affiliate_hint": "none found 2026-11-06 (AppsFlyer install link only)",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "operator_named": true,
       "record": "data/cards/xplace-card.json",
@@ -1592,15 +1624,16 @@
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "defillama.com/crypto-cards/philippines 2026-11-23"
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 3,
+      "cross_listing_count": 4,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "blocked",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-23",
-      "priority": 6,
+      "last_seen": "2026-11-26",
+      "priority": 8,
       "operator_named": true,
       "regions_hint": [
         "global",
@@ -1608,7 +1641,8 @@
         "PH (directory)"
       ],
       "needs_browser_read": true,
-      "blocked_reason": "Blocked 2026-11-10: the only official pages are docs.hyperbeat.org (GitBook) — the Hyperbeat Pay page is a product overview (virtual/physical Visa card, Direct Pay or Credit mode, spend USDC/USDT or borrow against the portfolio) with no fee schedule, no terms, no issuer, no KYC statement and no country list; the docs index (llms.txt) has no fees/terms/eligibility page; the legal page could not be fetched (provenance). Ordering runs in app.hyperbeat.org/pay (client-rendered). Retry with a browser session; fees may live only in the app."
+      "blocked_reason": "Blocked 2026-11-10: the only official pages are docs.hyperbeat.org (GitBook) — the Hyperbeat Pay page is a product overview (virtual/physical Visa card, Direct Pay or Credit mode, spend USDC/USDT or borrow against the portfolio) with no fee schedule, no terms, no issuer, no KYC statement and no country list; the docs index (llms.txt) has no fees/terms/eligibility page; the legal page could not be fetched (provenance). Ordering runs in app.hyperbeat.org/pay (client-rendered). Retry with a browser session; fees may live only in the app.",
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): stablecoin spending + crypto-backed liquidity in the Hyperliquid ecosystem."
     },
     {
       "provider": "Ledger",
@@ -1637,15 +1671,17 @@
       "product": "Pionex Card",
       "slug": "pionex-card",
       "seen_in": [
-        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02"
+        "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
-      "priority": 2
+      "last_seen": "2026-11-26",
+      "priority": 4,
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): up to 1% Visa cashback, 5% APY advertised on eligible USDT in the Visa Card Account, 1% Visa transaction fee."
     },
     {
       "provider": "Payy",
@@ -1697,14 +1733,15 @@
       "seen_in": [
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "defillama.com/crypto-cards/philippines 2026-11-23"
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "referral (ambassador programme, in-app code)",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "operator_named": true,
       "regions_hint": [
@@ -1726,14 +1763,15 @@
       "seen_in": [
         "spendnode.io/crypto-cards (for-europeans, no-kyc) 2026-11-02",
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "defillama.com/crypto-cards/philippines 2026-11-23"
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "personal referral only ($10 per qualified referral); Jupiter Global Ambassador codes exist, programme not described",
       "status": "validated",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "operator_named": true,
       "discovery_note": "Directory says issuer is Rain or DCS by country, KYC via Sumsub",
       "priority": 0,
@@ -1842,20 +1880,21 @@
       "product": "Karta Card",
       "slug": "karta-card",
       "seen_in": [
-        "defillama.com/crypto-cards/united-states 2026-11-09"
+        "defillama.com/crypto-cards/united-states 2026-11-09",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2,
+      "last_seen": "2026-11-26",
+      "priority": 4,
       "operator_named": true,
       "regions_hint": [
         "US"
       ],
-      "discovery_note": "DeFiLlama lists issuer Third National, US only"
+      "discovery_note": "DeFiLlama lists issuer Third National, US only Third-party hint (X article 2026-11-21, not evidence): Telegram-based Visa Signature; virtual card 5 USDT issuance; 1.5% spending fee."
     },
     {
       "provider": "Exactly (exactly.app)",
@@ -1865,14 +1904,15 @@
         "defillama.com/crypto-cards/united-states 2026-11-09",
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "defillama.com/crypto-cards/philippines 2026-11-23"
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "personal referral only (10 USDC, lifetime cap 100 USDC, paid advertising prohibited)",
       "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "operator_named": true,
       "regions_hint": [
@@ -1897,14 +1937,15 @@
       "slug": "crypto-com-visa-credit-card-us",
       "seen_in": [
         "defillama.com/crypto-cards/united-states 2026-11-09",
-        "cryptoslate.com/crypto-cards/usa-crypto-cards 2026-11-09"
+        "cryptoslate.com/crypto-cards/usa-crypto-cards 2026-11-09",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "Crypto.com Affiliate Program already recorded (data/affiliate/crypto-com-affiliate.json, terms_verified)",
       "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "operator_named": true,
       "regions_hint": [
@@ -1922,20 +1963,21 @@
       "product": "Phantom Cash Card",
       "slug": "phantom-cash-card",
       "seen_in": [
-        "defillama.com/crypto-cards/united-states 2026-11-09"
+        "defillama.com/crypto-cards/united-states 2026-11-09",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "priority": 2,
+      "last_seen": "2026-11-26",
+      "priority": 4,
       "operator_named": true,
       "regions_hint": [
         "US"
       ],
-      "discovery_note": "DeFiLlama lists issuer Lead Bank, US only"
+      "discovery_note": "DeFiLlama lists issuer Lead Bank, US only Third-party hint (X article 2026-11-21, not evidence): virtual Visa + Apple/Google Pay, mainly eligible US residents, no broad standard cashback."
     },
     {
       "provider": "Robinhood",
@@ -2175,14 +2217,15 @@
       "seen_in": [
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "defillama.com/crypto-cards/philippines 2026-11-23"
+        "defillama.com/crypto-cards/philippines 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "referral (personal, $30 in AVAX; paid promotion prohibited — not a publisher programme)",
       "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "ZA (directory)",
@@ -2406,14 +2449,15 @@
       "slug": "okx-card",
       "seen_in": [
         "cryptocardhub.com/cards/singapore 2026-11-09",
-        "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)"
+        "finder.com.au/cryptocurrency/debit-cards 2026-11-16 (affiliate 'Go to site' links)",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "official OKX Affiliate Program (trading-fee rebate, default 30%; EEA article: hourly USDC settlement) — card not a paid action",
       "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "AU (directory)"
@@ -2495,14 +2539,15 @@
       "product": "SafePal Card",
       "slug": "safepal-card",
       "seen_in": [
-        "cryptocardhub.com/cards/singapore 2026-11-09"
+        "cryptocardhub.com/cards/singapore 2026-11-09",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "publisher affiliate (SafePal Affiliate Program via Tapfiliate, hardware sales only) + in-app Fiat gateway referral",
       "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-25",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "operator_named": true,
       "regions": [
@@ -2621,14 +2666,15 @@
       "seen_in": [
         "cryptocardhub.com/cards/singapore 2026-11-09",
         "cryptocardhub.com/cards/south-africa 2026-11-23",
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 2,
+      "cross_listing_count": 3,
       "no_kyc_claim": false,
       "affiliate_hint": "referral (hardware wallets only; card not covered)",
       "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
       "priority": 0,
       "regions_hint": [
         "ZA (directory)",
@@ -3096,20 +3142,21 @@
       "product": "Trustee Card",
       "slug": "trustee-card",
       "seen_in": [
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": null,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-23",
-      "last_seen": "2026-11-23",
-      "priority": 2,
+      "last_seen": "2026-11-26",
+      "priority": 4,
       "regions_hint": [
         "NG (directory)"
       ],
-      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown). Third-party hint (X article 2026-11-21, not evidence): virtual cards for eligible European users; ~$10 issuance, ~0.5% stablecoin funding fee."
     },
     {
       "provider": "Bitnob",
@@ -3236,20 +3283,21 @@
       "product": "WhiteBIT Nova Card",
       "slug": "whitebit-nova-card",
       "seen_in": [
-        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23"
+        "cryptocards.so/en/crypto-cards/nigeria 2026-11-23",
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
       ],
-      "cross_listing_count": 1,
+      "cross_listing_count": 2,
       "no_kyc_claim": false,
       "operator_named": null,
       "affiliate_hint": "unknown",
       "status": "identified",
       "first_seen": "2026-11-23",
-      "last_seen": "2026-11-23",
-      "priority": 2,
+      "last_seen": "2026-11-26",
+      "priority": 4,
       "regions_hint": [
         "NG (directory)"
       ],
-      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown)."
+      "discovery_note": "cryptocards.so routes every provider link through /go/<slug> and discloses commissions (affiliate route exists, programme unknown). Third-party hint (X article 2026-11-21, not evidence): up to 10% BTC cashback on selected categories, programme-dependent."
     },
     {
       "provider": "Brahma",
@@ -3410,6 +3458,206 @@
         "50+ countries (FAQ, undated)"
       ],
       "discovery_note": "Separate product from the THORWallet Card (Unblock): virtual multi-currency Mastercard (USD/CHF/EUR/RMB) with Swiss IBAN provided with Fiat24 (SR Saphirstein AG); card page: free, FX 1%, top-up 0.25–1%, no ATM fee; FAQ shows an older tiered schedule (Standard 1% / Gold 0.5% for 1.5 ETH / Platinum 0.25% for 15 ETH). Official pages already surfaced: thorwallet.org/cards, faqs.thorwallet.org/thorwallet-iban-mastercard, membership-terms."
+    },
+    {
+      "provider": "Another",
+      "product": "Another card (Mastercard)",
+      "slug": "another-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "unknown"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Mastercard payments, stablecoin top-ups, EUR/USD accounts via financial partners; first virtual card promoted with free issuance and no recurring subscription (anotherapp.io)."
+    },
+    {
+      "provider": "BingX",
+      "product": "BingX Card",
+      "slug": "bingx-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "unknown"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Exchange card; cashback 'reaching 5%' for eligible users; no standard annual maintenance fee in advertised terms; tiers/caps/countries unknown."
+    },
+    {
+      "provider": "Solid",
+      "product": "Solid Card",
+      "slug": "solid-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "unknown"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): 3% cashback advertised on the free Core tier, up to 5% on premium levels; separate earning products (solidyield / @SolidYield)."
+    },
+    {
+      "provider": "Pulsar Money",
+      "product": "Pulsar card",
+      "slug": "pulsar-money-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "unknown"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): USD/EUR accounts, stablecoin funding, virtual cards, cashback and DeFi earning; Free and Pro plans; perpetual trading via Extended."
+    },
+    {
+      "provider": "Cashi",
+      "product": "Cashi virtual card",
+      "slug": "cashi-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "unknown"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Crypto-funded virtual payments (stablecoins + major assets), selected retail cashback campaigns."
+    },
+    {
+      "provider": "El Dorado",
+      "product": "El Dorado USDT virtual Visa",
+      "slug": "el-dorado-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "LATAM (article)"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): P2P crypto services + USDT-funded virtual Visa for eligible Latin American markets; issuance priced at 3.99 USDT, no monthly maintenance (eldorado.io)."
+    },
+    {
+      "provider": "Brighty",
+      "product": "Brighty card",
+      "slug": "brighty-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "unknown"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Fiat accounts, crypto, transfers, cards and earning products; rewards depend on the plan; free exchange allowances then conversion costs."
+    },
+    {
+      "provider": "Wallbit",
+      "product": "Wallbit virtual Visa",
+      "slug": "wallbit-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "LATAM (article)"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): USD payments for Latin America; virtual Visa offered for $5, no monthly maintenance, USDC/USDT funding; 2% FX fee on non-USD purchases."
+    },
+    {
+      "provider": "Fuse",
+      "product": "Fuse virtual Visa",
+      "slug": "fuse-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "unknown"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Solana smart wallet with a virtual Visa for eligible USDC spending; advertised zero top-up and transaction fees; Apple Pay; no physical card, no ATM; regional issuance."
+    },
+    {
+      "provider": "Anodos Finance",
+      "product": "Anodos card",
+      "slug": "anodos-card",
+      "seen_in": [
+        "x.com/Gronko_mania/status/2124187879354335283 (article '50 Crypto Cards Worth Knowing in 2026', 2026-11-21; pasted by David 2026-11-26)"
+      ],
+      "cross_listing_count": 1,
+      "no_kyc_claim": false,
+      "operator_named": null,
+      "affiliate_hint": "unknown",
+      "status": "identified",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "priority": 2,
+      "regions_hint": [
+        "unknown"
+      ],
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Named only in a reply to the article ('50 of them and not putting @AnodosFinance is just so wrong'); product unknown."
     }
   ]
 }
