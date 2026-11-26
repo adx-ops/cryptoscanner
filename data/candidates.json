@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory. Discovery 2026-11-23: priority recomputed for every entry with the header formula (+3 only when affiliate_hint names a publisher programme; +1 for referral/ambassador); +2 region bonus not applied (every region in src/lib/regions.ts already has a published card).",
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "entries": [
     {
       "provider": "Wirex",
@@ -359,7 +359,9 @@
       "status": "identified",
       "first_seen": "2026-10-26",
       "last_seen": "2026-10-28",
-      "priority": 2
+      "priority": 2,
+      "needs_browser_read": true,
+      "note": "2026-11-26: research attempt — web search ('site:holyheld.com card fees', 'Holyheld card official site holyheld.com pricing cashback countries') returns only directories (cryptocardhub, cryptocards.so, defillama, polymart, todey, coinsoncards, cryptocardcompare, ucard.observer, monetiro) and a Medium post; no holyheld.com page surfaced, so the fetcher cannot reach the operator's pages (provenance). Not blocked: read fees, countries, KYC, issuer and terms in a browser session."
     },
     {
       "provider": "Bleap",
@@ -1336,12 +1338,15 @@
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-02",
       "operator_named": true,
       "discovery_note": "Directory names Metropolitan Commercial Bank; US-only (SSN required per directory); reported US-only by a directory — to be rejected by the research run if the official eligibility page confirms it (scope decision 2026-11-02)",
-      "priority": 2
+      "priority": 0,
+      "needs_browser_read": true,
+      "blocked_reason": "2026-11-26: official post bitpay.com/blog/bitpay-card-transition: 'Our bank partner and BitPay have decided to discontinue the current BitPay Prepaid Mastercard program' (new applications stopped, last load 2023-06-01, last spend 2023-06-15); a successor 'new BitPay card program with a new bank partner' was announced with a waitlist at bitpay.com/card/ but no official page confirming a launched product, fees or issuer could be surfaced by search (bitpay.com/card not indexed) → product status unclear. Re-check bitpay.com/card in a browser session.",
+      "note": "2026-11-26: blocked — prepaid Mastercard programme discontinued June 2023 per official post; successor programme unconfirmed (waitlist page not readable)."
     },
     {
       "provider": "Zypto",
@@ -1535,14 +1540,16 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-11-02",
       "last_seen": "2026-11-23",
       "discovery_note": "Directory says KYC handled by Baanx; issuer not named",
-      "priority": 4,
+      "priority": 0,
       "regions_hint": [
         "NG (directory)"
-      ]
+      ],
+      "blocked_reason": "2026-11-26: official help-centre article '1inch Card - FAQ' (help.1inch.com/en/articles/17662416-1inch-card-faq, 2026-10-20): 'The 1inch Card programme is being discontinued… new sign-ups are closed and the programme is winding down'; balances to be withdrawn 'at the latest by 18 December 2026'; 1inch.com/card redirects to that FAQ. Product closed to new customers → no record.",
+      "note": "2026-11-26: blocked — programme discontinued (official FAQ 2026-10-20); provider Crypto Life (Baanx.com Ltd UK / Frozen Time UNIPESSOAL LDA EU)."
     },
     {
       "provider": "Xplace",
@@ -2020,14 +2027,21 @@
       "cross_listing_count": 1,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-11-09",
       "last_seen": "2026-11-09",
-      "priority": 2,
+      "priority": 0,
       "regions_hint": [
         "LATAM"
       ],
-      "discovery_note": "Argentina, Brazil"
+      "discovery_note": "Argentina, Brazil",
+      "operator_named": true,
+      "regions": [
+        "AR",
+        "CO"
+      ],
+      "needs_browser_read": true,
+      "note": "2026-11-26: validated — data/cards/lemon-card.json (Argentina ARS + Colombia COP variants) from lemon.me product/cashback pages, one Argentina help article, Colombia launch post 2026-05-15, legal and product-terms indexes, Colombia help-centre index. Card T&C (digifin.ghost.io) and most help-centre card articles (AR/CO/PE) not readable by the fetcher → needs_browser_read for issuer, FX, ATM, limits, caps, Perú/Brasil/Chile availability. Referral programme seen in the Colombia help centre (data/affiliate/lemon-referral.json, identified)."
     },
     {
       "provider": "Ripio",

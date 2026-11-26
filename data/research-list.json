@@ -1,5 +1,5 @@
 {
-  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-25.",
+  "_note": "Research list (brief §4). Presence here certifies nothing. status: identified | reading | validated | published | blocked | rejected. Updated 2026-11-26.",
   "target": {
     "min": 15,
     "max": 50
@@ -151,7 +151,9 @@
       "provider": "Holyheld",
       "product": "Holyheld Card",
       "status": "identified",
-      "record": null
+      "record": null,
+      "needs_browser_read": true,
+      "note": "2026-11-26: research attempt — no holyheld.com page returned by web search (directories only); fetcher cannot reach the operator's pages (provenance). Browser session needed."
     },
     {
       "provider": "Bleap",
@@ -404,6 +406,29 @@
       "product": "Bitget Card (exchange card; Asia Pacific variant)",
       "status": "blocked",
       "note": "Blocked 2026-11-25: 'Effective August 1, 2026, Bitget Card no longer accepts new applications' (support articles Introduction 12560603820722 and Common Questions 12560603803533); existing cards run until expiry, no renewal; applicants redirected to the Bitget Wallet Card (already recorded: data/cards/bitget-wallet-card.json). Fee schedule read (0.9% transaction, 1% FX, ATM $0.65 + 2%, no annual fee, $1/month inactivity after 12 months) but issuer not named, no country list. The Asia-Pacific card (academy guide 2026-04-02, cashback/welcome articles 2026-03-25: USDC-funded Visa, BGB cashback 2–12% by VIP level, welcome 10–20% for 30 days, physical card 'Coming Soon', 'selected countries within the Asia-Pacific region', KYC Level 2) has no closure notice but no country list or issuer → status unclear. bitget.com/cards/ and the en-CA eligibility article unreadable → needs_browser_read. See data/candidates.json bitget-card.blocked_reason."
+    },
+    {
+      "provider": "Lemon Cash",
+      "product": "Visa Lemon Card (Argentina / Colombia)",
+      "status": "validated",
+      "record": "data/cards/lemon-card.json",
+      "needs_browser_read": true,
+      "note": "Validated 2026-11-26 (single read, fetcher) from lemon.me/en/lemon_card, lemon.me/en/cashback, help.lemon.me article 4868375 ('tarjeta prepaga VISA', free delivery/maintenance, Argentine ID + validated account), Colombia launch post 2026-05-15 (free issuance/maintenance, 0.4% cashback in digital dollars), legal index, Argentina product-terms index, Colombia help-centre index. Cashback AR: up to 1% (pesos) / 2% (digital dollars, 0.5% commission at payment) in BTC or digital dollars. Unknown: issuer (card T&C on digifin.ghost.io blocked by provenance), AR issuance fee, top-up, FX, ATM, limits, caps, CO KYC, wallet pay. Help-centre card articles (AR 10486660/14669244/14708255/4993583, CO collection 18931853, PE 10306700) return a client error → needs_browser_read. Perú/Brasil/Chile not modelled. Affiliate: data/affiliate/lemon-referral.json (identified; 'Programa de Referidos' collection unread; no publisher programme found)."
+    },
+    {
+      "provider": "1inch",
+      "product": "1inch Card (Crypto Life / Baanx)",
+      "status": "blocked",
+      "record": null,
+      "note": "Blocked 2026-11-26: official '1inch Card - FAQ' (help.1inch.com, 2026-10-20) — 'The 1inch Card programme is being discontinued… new sign-ups are closed'; balances to be withdrawn by 18 December 2026 (redeemable up to six years under the issuer terms, Monavate-Issuer-Terms-2023-Nov.pdf). Provider Crypto Life; funds held by Baanx.com Ltd (UK) / Frozen Time UNIPESSOAL LDA (EU). No fees, countries or KYC on the page. Product closed → no record."
+    },
+    {
+      "provider": "BitPay",
+      "product": "BitPay Card (prepaid Mastercard, US)",
+      "status": "blocked",
+      "record": null,
+      "needs_browser_read": true,
+      "note": "Blocked 2026-11-26: official post 'bitpay-card-transition' — prepaid Mastercard programme discontinued (new applications stopped; last load 2023-06-01, last spend 2023-06-15, balances by check after 2023-06-30); 'new BitPay card program with a new bank partner' announced with a waitlist at bitpay.com/card/, but no official page confirming a launched successor, fees or issuer was surfaced by search (bitpay.com/card not indexed). Product status unclear → no record; re-check bitpay.com/card in a browser session."
     }
   ],
   "no_kyc_track": {
@@ -439,14 +464,14 @@
         "issuer_disclosed": false,
         "status": "identified",
         "needs_browser_read": true,
-        "note": "2026-11-12: web search (standard and extended) returns only directories (cardpilled, polymart, todey, promp.it, bitcoin.com, cryptocards.money), an X article and project profiles (thegrid.id, solanacompass); no official OffGrid domain indexed — fetcher cannot reach it (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read fees, subscription plans, verification stage and terms in a browser session. | 2026-11-19: retried — web search still returns only directories/project profiles, no official domain; fetcher cannot reach it."
+        "note": "2026-11-12: web search (standard and extended) returns only directories (cardpilled, polymart, todey, promp.it, bitcoin.com, cryptocards.money), an X article and project profiles (thegrid.id, solanacompass); no official OffGrid domain indexed — fetcher cannot reach it (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read fees, subscription plans, verification stage and terms in a browser session. | 2026-11-19: retried — web search still returns only directories/project profiles, no official domain; fetcher cannot reach it. | 2026-11-26: retried — official domain offgridcash.com now surfaced by search (meta description: 'Privacy-first crypto cards and instant payments. No KYC, no delays, no compromise.') but the page is an empty client-rendered shell (254 characters, no links, no text); fees, plans, verification statements and terms unreadable → needs_browser_read kept; still identified."
       },
       {
         "product": "Trocador prepaid cards",
         "claim": "reseller, no document",
         "issuer_disclosed": false,
         "status": "identified",
-        "note": "2026-11-11: site:trocador.app returns nothing; the prepaid-card section is not reachable by the fetcher (provenance). Browser session needed. | 2026-11-19: retried — web search returns only directories and a Substack; trocador.app not indexed for the card section; fetcher cannot reach it.",
+        "note": "2026-11-11: site:trocador.app returns nothing; the prepaid-card section is not reachable by the fetcher (provenance). Browser session needed. | 2026-11-19: retried — web search returns only directories and a Substack; trocador.app not indexed for the card section; fetcher cannot reach it. | 2026-11-26: retried — 'site:trocador.app prepaid cards' returns only bitcoin.com, cryptocards.so, cryptocardhub, a Substack and a forum thread; trocador.app still not indexed for the card section; fetcher cannot reach it (provenance). Browser session still needed.",
         "needs_browser_read": true
       },
       {
@@ -533,5 +558,5 @@
       }
     ]
   },
-  "updated": "2026-11-25"
+  "updated": "2026-11-26"
 }

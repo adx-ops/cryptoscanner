@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "lemon-referral",
+  "provider_id": "lemon",
+  "program_name": "Lemon 'Programa de Referidos' (customer referral; Colombia help-centre collection) / 'Perfil Amigos' (Argentina product terms)",
+  "legal_entity": "Bay Treasure Caramel S.A. (VASP No. 162, CNV Argentina) per the site footer; the Colombia entity is not named on the pages read.",
+  "program_url": "https://help.lemon.me/colombia/es/collections/14017444-programa-de-referidos",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Not read: the 'Programa de Referidos' collection (6 articles) is listed on the Colombia help-centre index but the collection page was not fetched this run; the Argentina product-terms index lists 'PERFIL THE PLACE y PERFIL AMIGOS' terms on legals.lemon.me (not read). No publisher, affiliate or media programme page found on lemon.me (web search 2026-11-26 returned only press and directories).",
+  "our_status": "identified",
+  "paid_action": "unknown — collection not read",
+  "validation_conditions": "unknown",
+  "commission": {
+    "model_note": "Unknown; the programme appears to be an in-app customer referral (press reports of Bitcoin rewards for inviting friends are discovery only).",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "unknown",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "payout": {
+    "threshold": "unknown",
+    "method": "unknown",
+    "frequency": "unknown",
+    "holdbacks_note": "Terms not read."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Customer-to-customer programme by appearance; commercial use by a comparison site not assessed. Nobody contacted, no application made.",
+  "allowed_countries_note": "Colombia (help-centre collection); Argentina ('Perfil Amigos' terms listed). Other Lemon markets not checked.",
+  "evidence": [
+    {
+      "url": "https://help.lemon.me/colombia/es/",
+      "title": "Centro de Ayuda — Lemon Colombia (index)",
+      "accessed_at": "2026-11-26T05:53:00Z",
+      "excerpt": "Collection 'Programa de Referidos' (1 autor, 6 artículos) at help.lemon.me/colombia/es/collections/14017444-programa-de-referidos; index page only, articles not read."
+    },
+    {
+      "url": "https://lemon.me/en/argentina-terms/t%C3%A9rminos-y-condiciones-productos",
+      "title": "T&C - PRODUCTOS (Argentina) — Lemon",
+      "accessed_at": "2026-11-26T05:50:00Z",
+      "excerpt": "Product terms index listing 'PERFIL THE PLACE y PERFIL AMIGOS' among 15 products (terms hosted on legals.lemon.me, not read)."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Existence of a referral programme is established from official index pages only; its terms, reward and attribution are unread (needs_browser_read). No publisher/affiliate programme found; the card can be listed without monetisation."
+}
