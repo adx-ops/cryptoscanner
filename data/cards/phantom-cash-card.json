@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0.0",
+  "id": "phantom-cash-card",
+  "slug": "phantom-cash-card",
+  "name": "Phantom Cash debit card (virtual Visa)",
+  "brand": "Phantom",
+  "provider_id": "phantom",
+  "issuer": {
+    "name": "Lead Bank (legal line on phantom.com/cash, the 'Understanding your Cash account' article and the learn page updated 2026-11-20: 'The Prepaid Debit Visa Card is issued by Lead Bank pursuant to licensing by Visa U.S.A. Inc.'; 'Bridge Ventures LLC is the program manager for the card on behalf of Lead Bank') — but the help article 'Update your replacement virtual Phantom debit card (US)' states 'Phantom is moving from Bridge to Stripe as our debit card issuer', with Bridge-issued cards replaced in stages from 5 October 2026. The bank behind the Stripe-issued card is not named on any page read.",
+    "status": "contradictory",
+    "evidence": [
+      "ev-phantom-cash-page",
+      "ev-phantom-help-understanding",
+      "ev-phantom-learn-reloadable",
+      "ev-phantom-help-replacement"
+    ]
+  },
+  "network": "visa",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "self_custodial",
+  "funding": {
+    "mechanism": "spend_from_balance",
+    "conversion": "at_spend",
+    "supported_assets_note": "The card spends the Cash account balance, held in CASH ('a USD-pegged stablecoin' on Solana) in 'a self-custodial smart-contract wallet on Solana'. At payment the card partner 'draws CASH from your Cash account, converts it to USD'. The Cash account is funded by debit/credit card via Stripe (incl. Apple Pay / Google Pay), US bank direct deposit or wire, or by swapping USDC/USDT/USDG/PYUSD on Solana (free) or other tokens (0.85%) into CASH.",
+    "evidence": [
+      "ev-phantom-help-spend",
+      "ev-phantom-help-faq",
+      "ev-phantom-help-fees",
+      "ev-phantom-help-understanding"
+    ]
+  },
+  "variants": [
+    {
+      "id": "phantom-cash-card-us",
+      "region_label": "United States (except New York)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [
+          "US"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "ineligible",
+        "nationality_restrictions_note": "'Must be 18 or older to apply.' (legal line). The card is 'available only in the US (except New York)'; 'We don't have a timeline to share for other regions.' New York is excluded by the provider (sub-national exclusion, not representable as an ISO country code).",
+        "usage_note": "Spend article: 'If you're in the US (except New York), you can get a virtual Phantom debit card'. The Cash account itself 'is available to Phantom users in most countries' (not in US-sanctioned jurisdictions; Cash Rewards not in the UK), but the card is US-only on every page read. The 'Feature availability by region' article returned a client error to the fetcher → needs_browser_read. ITIN not accepted for verification (SSN required).",
+        "evidence": [
+          "ev-phantom-help-spend",
+          "ev-phantom-cash-page",
+          "ev-phantom-learn-reloadable",
+          "ev-phantom-help-verify"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "phone",
+          "proof_of_address",
+          "id_document",
+          "selfie",
+          "other"
+        ],
+        "thresholds_note": "US: 'Cash uses progressive verification' for Stripe funding — basic information for a first deposit, more 'as the amount goes up' (no amount thresholds published). For the debit card itself verification is required outright: US (except New York) requires verification for 'Stripe funding, direct bank deposits and withdrawals, and the Phantom debit card'. Card limits are not tied to verification level: standard $2,000/day, $5,000/day after the Cash account is 30 days old with 30 days of transaction history.",
+        "stages_note": "Account creation and on-chain Cash features: 'You're not required to KYC to use Phantom or Phantom Cash' (phantom.com/cash FAQ). Card order: 'To get a card, you'll need to verify your identity.' Verification is run by 'Link, Stripe's service'; information that may be requested: phone number, date of birth, residential address (no P.O. box), Social Security Number, government-issued ID and a selfie. 'Phantom cannot manually review, approve, or override a verification decision.'",
+        "evidence": [
+          "ev-phantom-help-verify",
+          "ev-phantom-help-spend",
+          "ev-phantom-cash-page",
+          "ev-phantom-help-understanding"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Phantom debit card",
+          "access": {
+            "type": "free",
+            "note": "Fees article, 'Fees for the Phantom debit card': virtual card issuance 'Free'. No plan or subscription exists.",
+            "status": "verified",
+            "evidence": [
+              "ev-phantom-help-fees"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "'Virtual card issuance: Free' (Cash fees article).",
+              "status": "verified",
+              "evidence": [
+                "ev-phantom-help-fees"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "conditions": "No monthly, annual or maintenance fee appears on the fees article or any other page read; no page states that there is none. Left unknown rather than free.",
+              "status": "unknown",
+              "evidence": [
+                "ev-phantom-help-fees"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 1.75,
+              "period": "per_transaction",
+              "conditions": "Funding the Cash account (the card's only balance): debit card via Stripe incl. Apple Pay / Google Pay 1.75%; credit card via Stripe 3.50%; direct deposit from a US bank 0.30%; domestic wire 1.00%; swap of USDC, USDT, USDG or PYUSD on Solana into Cash 'Free'; other tokens into Cash 0.85%. Modelled: the debit-card route (1.75%); a stablecoin swap is free.",
+              "status": "verified",
+              "evidence": [
+                "ev-phantom-help-fees"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Swapping USDC, USDT, USDG or PYUSD on Solana into Cash: 'Free'. Swaps from other tokens into Cash: 0.85% (see topup). Card payments: 'Domestic purchases in the US: Free'.",
+              "status": "verified",
+              "evidence": [
+                "ev-phantom-help-fees"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "unknown",
+              "conditions": "'International purchases (online or in-store): Fees may apply. Phantom shows them before you confirm.' No percentage is published on any page read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-phantom-help-fees",
+                "ev-phantom-help-spend"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "No ATM function: 'ATM withdrawals and cash back are not supported' (learn page); the spend article lists 'cash advances, and ATM withdrawals' among declined transaction types. No fee exists because the capability does not; left unknown rather than free.",
+              "status": "unknown",
+              "evidence": [
+                "ev-phantom-learn-reloadable",
+                "ev-phantom-help-spend"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "token",
+                "code": "CASH"
+              },
+              "requires": "none",
+              "conditions": "Not a card reward: Cash Rewards pay '6% annual percentage yield (APY) for everyone enrolled' on CASH held in the Cash account, calculated daily, 'added to your Cash balance every week', no minimum, no cap stated; 'Phantom sets the rate and can raise it, lower it, or pause or end the program'; 'funded by Phantom as a marketing expense'; not available in the UK or US-sanctioned jurisdictions. Card spending earns nothing: 'Cash back functionality is not currently supported.' Recorded here only so the balance yield is not mistaken for cashback; it is excluded from the calculator.",
+              "description": "6% APY on the held CASH balance (variable, provider-funded); no cashback on card spending.",
+              "evidence": [
+                "ev-phantom-help-rewards",
+                "ev-phantom-help-spend"
+              ],
+              "status": "verified"
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 2000,
+                "currency": "USD"
+              },
+              "period": "per_day",
+              "note": "'Standard daily limit: $2,000'; increases to '$5,000 per day' once the Cash account is at least 30 days old with 30 days of transaction history. 'Phantom Support can't increase or manually reset this limit.' Money-transfer (e.g. funding Apple Cash) limit $500 per week.",
+              "evidence": [
+                "ev-phantom-help-spend"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-phantom-help-fees",
+      "url": "https://help.phantom.com/hc/en-us/articles/44800531617939-Cash-fees",
+      "title": "Cash fees — Phantom help centre (undated)",
+      "source_type": "pricing_page",
+      "excerpt": "Debit card: virtual card issuance Free; domestic purchases in the US Free; international purchases 'Fees may apply. Phantom shows them before you confirm.' Adding Cash: debit card via Stripe 1.75%, credit card 3.50%, direct deposit 0.30%, domestic wire 1.00%; ACH withdrawal Free, fast ACH $1.00 + 0.75% (min $1.50). Swaps USDC/USDT/USDG/PYUSD → Cash Free; other tokens 0.85%.",
+      "accessed_at": "2026-11-27T05:22:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-phantom-help-spend",
+      "url": "https://help.phantom.com/hc/en-us/articles/44800221533459-Spend-CASH-with-your-Phantom-Cash-debit-card",
+      "title": "Spend Cash with a virtual Phantom debit card (US) — Phantom help centre (undated)",
+      "source_type": "help_center",
+      "excerpt": "'If you're in the US (except New York), you can get a virtual Phantom debit card'; 'The Phantom debit card is virtual only'; 'a stablecoin-linked Visa card' 'issued through a regulated card program partner'; 'To get a card, you'll need to verify your identity'; Apple/Google Wallet; daily limit $2,000 → $5,000 after 30 days; 'Cash back functionality is not currently supported'.",
+      "accessed_at": "2026-11-27T05:22:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD",
+        "note": "Dispute section distinguishes cards activated after October 5, 2026 (Stripe line) from earlier Bridge/Galileo cards."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-phantom-help-faq",
+      "url": "https://help.phantom.com/hc/en-us/articles/44800866087443-Phantom-Cash-FAQ",
+      "title": "Cash FAQ — Phantom help centre (undated)",
+      "source_type": "help_center",
+      "excerpt": "'Cash is available to Phantom users in most countries through the Phantom mobile app'; 'It isn't available in jurisdictions sanctioned by the US'; 'Your balance is held in a self-custodial smart-contract wallet on Solana'; 'If eligible, you can spend your Cash account balance with a virtual Phantom debit card'; 'Bridge is Phantom's payments partner and powers bank deposits and withdrawals.'",
+      "accessed_at": "2026-11-27T05:22:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Cash account availability, not card availability."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-phantom-help-verify",
+      "url": "https://help.phantom.com/articles/verify-your-identity-for-cash-us-only-53106357740179",
+      "title": "Verify your identity for Cash (US/EU) — Phantom help centre (undated)",
+      "source_type": "help_center",
+      "excerpt": "US except New York: verification required for 'Stripe funding, direct bank deposits and withdrawals, and the Phantom debit card'; EU: for 'Stripe funding' only. 'Link, Stripe's service, handles identity verification for Cash.' 'Cash uses progressive verification' (US). May be requested: phone, date of birth, residential address, SSN ('ITIN is not accepted'), government-issued ID and a selfie.",
+      "accessed_at": "2026-11-27T05:22:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-phantom-help-understanding",
+      "url": "https://help.phantom.com/hc/en-us/articles/44799497237395-Understanding-your-Cash-account",
+      "title": "Understanding your Cash account — Phantom help centre (undated)",
+      "source_type": "issuer_doc",
+      "excerpt": "'It holds CASH, a USD-pegged stablecoin.' Verification required for 'Funding through Stripe', 'Bank transfers, domestic wires, and USD withdrawals', 'The virtual Phantom debit card'. Legal line: 'The Prepaid Debit Visa Card is issued by Lead Bank pursuant to licensing by Visa U.S.A. Inc.'; 'Must be 18 or older'; 'Bridge Ventures LLC is the program manager for the card on behalf of Lead Bank.'",
+      "accessed_at": "2026-11-27T05:22:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ]
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-phantom-cash-page",
+      "url": "https://phantom.com/cash",
+      "title": "Meet Phantom Cash — phantom.com product page (© Phantom 2026, undated)",
+      "source_type": "official_terms",
+      "excerpt": "FAQ 'Is KYC required to use Phantom Cash?': 'No. You're not required to KYC to use Phantom or Phantom Cash.' but 'bank transfers, direct deposit, and the debit card, require identity verification.' 'Where is Phantom Cash available?': 'launching first in the United States, except in New York.' Footer: card 'issued by Lead Bank pursuant to licensing by Visa U.S.A. Inc.'.",
+      "accessed_at": "2026-11-27T05:22:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-phantom-blog-intro",
+      "url": "https://phantom.com/learn/blog/introducing-phantom-cash",
+      "title": "Introducing Phantom Cash: New Money, Now in Your Wallet — Phantom blog (Seyi Taylor, 2025-09-30)",
+      "source_type": "official_terms",
+      "excerpt": "'a virtual (and soon physical) Phantom Debit Card'; '(soon) even earn rewards like cash back'; 'KYC is not required to use on-chain Phantom Cash features; however' virtual accounts, direct deposit and the debit card 'do require KYC'; waitlist wording (stale — the help centre describes live features). Footer: same Lead Bank legal line; 'This post is not intended for UK audience.'",
+      "accessed_at": "2026-11-27T05:22:00Z",
+      "effective_from": "2025-09-30",
+      "expires_at": null,
+      "scope": {
+        "note": "Launch post; superseded on physical card and cashback by the help centre (see contradiction_note)."
+      },
+      "verification": "verified",
+      "contradiction_note": "Says 'soon physical' and 'soon' cash back; the spend article (current) says 'virtual only' and 'Cash back functionality is not currently supported'. The current help-centre wording is modelled."
+    },
+    {
+      "id": "ev-phantom-learn-reloadable",
+      "url": "https://phantom.com/learn/crypto-101/reloadable-visa-card",
+      "title": "Reloadable Visa Card: Spend crypto with Phantom Cash — phantom.com learn (published 2025-12-25, last updated 2026-11-20)",
+      "source_type": "official_terms",
+      "excerpt": "'It's available in the US (except New York) once you verify your identity.' 'Fees and spending limits apply, and Phantom shows any fee before you confirm.' 'ATM withdrawals and cash back are not supported.' 'The Prepaid Debit Visa Card is issued by Lead Bank and managed by Bridge Ventures, LLC.' 'The card is virtual, and there is no physical version.' 'Funds on the Card are not FDIC insured.'",
+      "accessed_at": "2026-11-27T05:30:00Z",
+      "effective_from": "2026-11-20",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ],
+        "currency": "USD"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-phantom-help-rewards",
+      "url": "https://help.phantom.com/articles/cash-rewards-faq-56103765083411",
+      "title": "Cash Rewards FAQ — Phantom help centre (updated 2 days before access)",
+      "source_type": "help_center",
+      "excerpt": "'6% annual percentage yield (APY) for everyone enrolled in Cash Rewards'; on CASH held in the Cash account only, 'Any positive balance earns; there's no minimum'; calculated daily, paid weekly in CASH; 'Phantom sets the rate and can raise it, lower it, or pause or end the program'; 'funded by Phantom as a marketing expense'; card works 'exactly the same whether or not you're enrolled'.",
+      "accessed_at": "2026-11-27T05:36:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "note": "Balance yield, not a card reward. Terms at phantom.com/cash-rewards-terms not read."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-phantom-help-replacement",
+      "url": "https://help.phantom.com/articles/update-your-replacement-virtual-phantom-debit-card-us-56135715481619",
+      "title": "Update your replacement virtual Phantom debit card (US) — Phantom help centre (updated about a month before access)",
+      "source_type": "help_center",
+      "excerpt": "'Phantom is moving from Bridge to Stripe as our debit card issuer.' 'Starting October 5, 2026, existing Bridge-issued virtual Phantom debit cards are being replaced automatically.' 'Cards are being replaced in stages during October.' New card number, new PIN; 'Your Cash balance, card spending limits, and transaction history remain unchanged.' No issuing bank named.",
+      "accessed_at": "2026-11-27T05:36:00Z",
+      "effective_from": "2026-10-05",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "US"
+        ]
+      },
+      "verification": "verified",
+      "contradiction_note": "Names Stripe as the new card issuer, while the legal lines on phantom.com/cash, the learn page (updated 2026-11-20) and the 'Understanding your Cash account' article still name Lead Bank with Bridge Ventures LLC as program manager. The issuing bank of the Stripe-issued card is not disclosed."
+    }
+  ],
+  "links": {
+    "official_url": "https://phantom.com/cash",
+    "affiliate": {
+      "program_id": null,
+      "status": "none",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-27T05:36:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-27T05:55:00Z",
+      "field": "*",
+      "reason": "Initial record from 10 official Phantom pages read by the unattended research run (help centre: Cash fees, spend article, Cash FAQ, verify identity, Understanding your Cash account, Cash Rewards FAQ, replacement-card article; phantom.com/cash; launch blog post 2025-09-30; learn page updated 2026-11-20) — single read; second independent read ≥ 24 h later required before publication. Virtual-only prepaid Visa spending a self-custodial CASH balance; US except New York; identity verification required for the card; issuance free; domestic purchases free; daily limit $2,000 → $5,000; Apple/Google Wallet; no cashback (6% APY on the held balance is a separate, variable, provider-funded programme — excluded from the calculator). UNKNOWN: international/FX fee ('Fees may apply'), any monthly fee (none stated), ATM (not supported). CONTRADICTORY: issuer — Lead Bank (legal lines) vs 'moving from Bridge to Stripe as our debit card issuer' (replacement article, from 2026-10-05). needs_browser_read: 'Feature availability by region' article (client error), phantom.com/cash-rewards-terms. No affiliate or referral programme found on any page read.",
+      "evidence": [
+        "ev-phantom-help-fees",
+        "ev-phantom-help-spend",
+        "ev-phantom-help-faq",
+        "ev-phantom-help-verify",
+        "ev-phantom-help-understanding",
+        "ev-phantom-cash-page",
+        "ev-phantom-blog-intro",
+        "ev-phantom-learn-reloadable",
+        "ev-phantom-help-rewards",
+        "ev-phantom-help-replacement"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual-only prepaid Visa card of the Phantom wallet, spending the balance of a Phantom Cash account (CASH, a USD-pegged stablecoin held in a self-custodial smart-contract wallet on Solana). Available in the United States except New York after identity verification through Stripe's Link; free to issue, free for domestic purchases, works with Apple Wallet and Google Wallet, $2,000 per day rising to $5,000 after 30 days. International purchases carry fees that Phantom only shows at checkout, ATM withdrawals are not supported and there is no cashback; a separate, variable 6% APY applies to the held CASH balance. The card issuer is stated inconsistently: Lead Bank (program manager Bridge Ventures) on the legal lines, while a help article says cards are being reissued through Stripe since October 2026.",
+    "good_for": [
+      "US Phantom users who want to spend a stablecoin balance with a free virtual Visa and Apple/Google Wallet",
+      "Spending without a monthly plan: issuance and domestic purchases are free, stablecoin swaps into CASH are free",
+      "Users who value self-custody of the spending balance (smart-contract wallet on Solana)"
+    ],
+    "not_for": [
+      "Residents outside the United States, and residents of New York",
+      "Anyone who needs a physical card or ATM access — neither is offered",
+      "Cashback seekers: card spending earns nothing; the 6% APY is on the held balance and can be changed or ended by Phantom",
+      "Travellers who need a published FX fee: international purchase fees are only shown at confirmation"
+    ],
+    "watch_outs": [
+      "Issuer stated inconsistently: Lead Bank / Bridge Ventures on the legal lines vs 'moving from Bridge to Stripe as our debit card issuer' from 5 October 2026; the bank behind the Stripe-issued card is not named.",
+      "International purchases: 'Fees may apply' — no percentage published.",
+      "Funding the Cash account costs 1.75% by debit card, 3.50% by credit card, 0.30% direct deposit, 1.00% wire; only Solana stablecoin swaps are free.",
+      "Daily spend limit $2,000 (then $5,000 after 30 days); support cannot raise it; $500/week for money transfers.",
+      "The 6% APY on CASH is variable, 'funded by Phantom as a marketing expense' and not available in the UK; it is not a card reward.",
+      "'Funds on the Card are not FDIC insured.' (learn page).",
+      "Identity verification requires an SSN (ITIN not accepted) and is decided by Stripe/Link; Phantom cannot override it.",
+      "Authorization holds can last up to 30 days; Phantom suggests keeping 20% more than the expected bill in the account."
+    ]
+  }
+}

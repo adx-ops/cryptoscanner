@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "deblock-referral",
+  "provider_id": "deblock",
+  "program_name": "Deblock referrals program (customer-to-customer; random cash reward per referred account)",
+  "legal_entity": "Deblock SAS (Lille, RCS 852 173 210; EMI ACPR CIB 17748; CASP AMF A2025-001)",
+  "program_url": "https://cdn1.deblock.com/terms/referrals/FR/20240604-2-referrals-terms.pdf",
+  "type": "personal_referral",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "No application: 'Deblock allows its existing customers to refer one or more referrals' by sharing the referral link from the app (Profile tab). The sponsor's account must be open and neither restricted nor being closed. No publisher, media or affiliate programme page was found on deblock.com (web search 2026-11-27 restricted to deblock.com / cdn1.deblock.com returned only customer referral terms in English and Italian and campaign terms).",
+  "our_status": "identified",
+  "paid_action": "A referred person who (1) opens an account and passes KYC, (2) credits the account (P2P transfers excluded), (3) creates a physical or virtual card and (4) makes a purchase of 5 EUR or more; paid only on the referral's first account opening.",
+  "validation_conditions": "All four steps above; Deblock may end the offer on notice on its website and may ban users for abuse. Italian-language 'Continuous referrals terms v1' exist (not read) and may differ.",
+  "commission": {
+    "model_note": "Random reward per validated referral: 10 EUR (45%), 20 EUR (50.4%), 50 EUR (4%), 100 EUR (0.5%), 500 EUR (0.1%). Paid to the sponsor; whether the referee also receives a reward is not stated in the document read.",
+    "amount": 10,
+    "currency": "EUR",
+    "tiers_note": "Probability-weighted; 'The sponsor can refer up to ten people per campaign.'",
+    "status": "verified"
+  },
+  "attribution": {
+    "mechanism": "tracking_link",
+    "window_days": "unknown",
+    "status": "verified"
+  },
+  "payout": {
+    "threshold": "none stated",
+    "method": "credited in the Deblock app (asset not stated)",
+    "frequency": "per validated referral",
+    "holdbacks_note": "Not stated."
+  },
+  "reporting": {
+    "dashboard": false,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "unknown"
+  },
+  "rules_note": "Customer programme capped at ten referrals per campaign: not a publisher channel. Using it would require a personal Deblock account and would be limited in volume; editorial question for David. Nobody contacted, no account opened.",
+  "allowed_countries_note": "Follows Deblock eligibility (French residence under the FR T&C v12.2; Italian referral terms exist).",
+  "evidence": [
+    {
+      "url": "https://cdn1.deblock.com/terms/referrals/FR/20240604-2-referrals-terms.pdf",
+      "title": "Referrals terms — How to benefit from our referrals program? (Deblock, file dated 2024-06-04)",
+      "accessed_at": "2026-11-27T05:40:00Z",
+      "excerpt": "'Deblock allows its existing customers to refer one or more referrals'; referral validated after account opening + KYC, a credit (no P2P), a card created and a purchase ≥ 5 EUR; 'up to ten people per campaign'; random reward 10 € (45%) / 20 € (50.4%) / 50 € (4%) / 100 € (0.5%) / 500 € (0.1%)."
+    },
+    {
+      "url": "https://deblock.com/en/pricing-plans",
+      "title": "Pricing plans — Deblock",
+      "accessed_at": "2026-11-27T05:40:00Z",
+      "excerpt": "No affiliate, partner or ambassador link in the page navigation or footer; footer names Deblock SAS (CASP A2025-001, EMI CIB 17748)."
+    }
+  ],
+  "verification": "verified",
+  "notes": "Identified only. Personal referral programme with a volume cap; no publisher programme found. The card can be listed without monetisation."
+}
