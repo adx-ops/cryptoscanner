@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "is_demo": false,
+  "id": "maxswap-affiliate",
+  "provider_id": "maxswap",
+  "program_name": "MaxSwap Affiliate Program (trading commission on referred users) + MaxSwap Card referral programme (via support)",
+  "legal_entity": "MW Profit Ltd (London, company number 15541776; Terms of Use governed by Seychelles law) — operator named in the Terms of Use; the affiliate page names no entity.",
+  "program_url": "https://maxswap.cc/affiliate-program/",
+  "type": "unknown",
+  "allowed_channels": [
+    "unknown"
+  ],
+  "application_conditions": "Sign-up through the platform dashboard (my.maxswap.cc/sign-in); for the card programme: 'Our referral program is already live — message our support to start earning today' (Telegram @maxswap_support). No acceptance criteria, publisher requirements or channel rules published.",
+  "our_status": "identified",
+  "paid_action": "'Every time your referrals trade, you receive a commission' (exchange trades). The card-specific paid action is not described.",
+  "validation_conditions": "Not published.",
+  "commission": {
+    "model_note": "No rate, amount or tier published on the page (page modified 2026-10-15).",
+    "status": "unknown"
+  },
+  "attribution": {
+    "mechanism": "unknown",
+    "window_days": "unknown",
+    "status": "unknown"
+  },
+  "payout": {
+    "threshold": "unknown",
+    "method": "unknown",
+    "frequency": "unknown",
+    "holdbacks_note": "Not published."
+  },
+  "reporting": {
+    "dashboard": true,
+    "export": false,
+    "api": false,
+    "postback": false,
+    "status": "hypothesis"
+  },
+  "rules_note": "Commission is tied to referred users' trading on an exchange whose card issuer is undisclosed and whose terms are governed by Seychelles law; the page also shows unverifiable marketing figures ('30k+ Active Users'). Editorial-independence and counterparty questions for David before any step. Nobody contacted, no account opened.",
+  "allowed_countries_note": "Not stated; no territory restriction published.",
+  "evidence": [
+    {
+      "url": "https://maxswap.cc/affiliate-program/",
+      "title": "Affiliate Program — MaxSwap (published 2025-08-06, modified 2026-10-15)",
+      "accessed_at": "2026-11-27T05:49:00Z",
+      "excerpt": "'The MaxSwap Affiliate Program allows you to earn passive income by referring new users to our platform. Every time your referrals trade, you receive a commission'; 'Use your dashboard for real-time performance monitoring'; 'Earn with the MaxSwap Card': 'Our referral program is already live — message our support to start earning today.' No rates, territories or channel rules."
+    },
+    {
+      "url": "https://maxswap.cc/terms-of-use/",
+      "title": "Terms of Use — MaxSwap (effective 2023-10-01, modified 2026-10-09)",
+      "accessed_at": "2026-11-27T05:49:00Z",
+      "excerpt": "Operator 'MW Profit Ltd, registered at 71-75 Shelton Street, London, England, WC2H 9JQ, company number 15541776'; governed by 'the laws of Republic of Seychelles'."
+    }
+  ],
+  "verification": "hypothesis",
+  "notes": "Identified only: the programme exists (official page) but every commercial term is unpublished; the card referral runs through support chat. Not applied, nobody contacted."
+}

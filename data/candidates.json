@@ -1,6 +1,6 @@
 {
   "_note": "Discovery list maintained by agents/discovery-run.md. Never evidence. priority = cross_listing_count×2 + 3 (official publisher affiliate programme known) + 1 (referral programme known) + 1 (no-KYC-initial claim AND operator named) − 5 (operator undisclosed); validated/published = 0. Sponsored entries on directories count as one source, like any other. regions_hint = regions as a directory describes them (not the provider's statement); the research run replaces it with `regions` from the official eligibility page. Discovery 2026-11-09: cross_listing_count increments only for a new source domain, not a new page of a known directory. Discovery 2026-11-23: priority recomputed for every entry with the header formula (+3 only when affiliate_hint names a publisher programme; +1 for referral/ambassador); +2 region bonus not applied (every region in src/lib/regions.ts already has a published card). Discovery 2026-11-26: one X article (Gronko_mania, 50 cards) counted as one source like any directory; 10 new entries, 42 existing entries cross-listed.",
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "entries": [
     {
       "provider": "Wirex",
@@ -315,11 +315,17 @@
       "no_kyc_claim": false,
       "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-26",
-      "priority": 4,
-      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Premium €14.99/month or €120/year."
+      "last_seen": "2026-11-27",
+      "priority": 0,
+      "discovery_note": "Third-party hint (X article 2026-11-21, not evidence): Premium €14.99/month or €120/year.",
+      "record": "data/cards/deblock-card.json",
+      "regions": [
+        "FR (T&C v12.2); other EU markets to confirm"
+      ],
+      "note": "2026-11-27: validated from 13 official pages (pricing, cards page, EN fee schedule 2025-05-28, FR fee schedule applicable from 2026-11-07 v6.4.2, referral terms, T&C v12.2 FR, 7 help-centre articles). Visa debit issued by Deblock SAS (EMI/CASP); Standard free / Premium 14.99 EUR per month or 120 EUR per year per schedule (pricing page: 10 EUR) / Native free with NFT; cashback 0.1% EEA merchants to 1% elsewhere (Premium, Native); FX contradictory across three official pages (schedule 0.5%/1% all plans vs help article EUR 500/month free then Standard 0.5%/1%, Premium 0% vs cards page 0%). Affiliate: customer referral only (data/affiliate/deblock-referral.json). Browser re-read of the FR fee schedule (garbled PDF layout) and of non-French T&C needed.",
+      "needs_browser_read": true
     },
     {
       "provider": "Plutus",
@@ -1181,12 +1187,13 @@
       "no_kyc_claim": true,
       "operator_named": false,
       "affiliate_hint": "referral ($5 per virtual card sale, $30 per physical card sale — agora.cards/#referral)",
-      "status": "identified",
+      "status": "blocked",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-25",
-      "priority": -3,
+      "last_seen": "2026-11-27",
+      "priority": 0,
       "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-20: retried — web search still returns only directories (cryptocards.so, cryptoslate, cryptocardhub), Product Hunt/press; no official domain indexed; fetcher cannot reach the operator's pages. | 2026-11-25: official site agora.cards now surfaced and readable (homepage, physical-card-plus page, 'Who we are' blog updated 2026-10-31, llms-full.txt 'Last updated: 2026-10-31'): Virtual Card Basic $90 one-time ($10 credit included, '3 year / $1M validity'), Virtual Card Plus $100, Physical Card Plus $550; top-up 2% (2.5% Plus/physical), transaction $0.35 + 1.5% (virtual) / $0.10 + 1.5% (physical), FX 1.5%, ATM 2% (physical only, $3,000/day, $80,000/month); limits Basic $20,000/tx, $240,000/day, $900,000/month, Plus $60,000/tx, $900,000/day, unlimited/month; USD card funded in USDT/USDC; Apple/Google Pay; 28 unsupported countries incl. US (Plus/physical only), IN, TR, MA, BD, RU, UA, BY; prohibited uses listed; referral $5/$30 per sale; distributor GoDarkEU. NOT stated anywhere readable: operator legal entity/jurisdiction ('Off-shore jurisdictions' badge only), card issuer, network, custodian names, terms of service, refund policy, and — decisive for the no-KYC rule — any statement of whether/when identity verification applies ('collects only the information strictly necessary'). The homepage FAQ section (#faq) was not returned by the fetcher. Not blocked yet: a browser read of the FAQ/app is needed to confirm the verification statement; if it is absent, block under rule (1)."
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-20: retried — web search still returns only directories (cryptocards.so, cryptoslate, cryptocardhub), Product Hunt/press; no official domain indexed; fetcher cannot reach the operator's pages. | 2026-11-25: official site agora.cards now surfaced and readable (homepage, physical-card-plus page, 'Who we are' blog updated 2026-10-31, llms-full.txt 'Last updated: 2026-10-31'): Virtual Card Basic $90 one-time ($10 credit included, '3 year / $1M validity'), Virtual Card Plus $100, Physical Card Plus $550; top-up 2% (2.5% Plus/physical), transaction $0.35 + 1.5% (virtual) / $0.10 + 1.5% (physical), FX 1.5%, ATM 2% (physical only, $3,000/day, $80,000/month); limits Basic $20,000/tx, $240,000/day, $900,000/month, Plus $60,000/tx, $900,000/day, unlimited/month; USD card funded in USDT/USDC; Apple/Google Pay; 28 unsupported countries incl. US (Plus/physical only), IN, TR, MA, BD, RU, UA, BY; prohibited uses listed; referral $5/$30 per sale; distributor GoDarkEU. NOT stated anywhere readable: operator legal entity/jurisdiction ('Off-shore jurisdictions' badge only), card issuer, network, custodian names, terms of service, refund policy, and — decisive for the no-KYC rule — any statement of whether/when identity verification applies ('collects only the information strictly necessary'). The homepage FAQ section (#faq) was not returned by the fetcher. Not blocked yet: a browser read of the FAQ/app is needed to confirm the verification statement; if it is absent, block under rule (1). | 2026-11-27: blocked — see blocked_reason.",
+      "blocked_reason": "Blocked 2026-11-27 (rule 1 of 2026-11-09): homepage FAQ now readable (6 questions: what is Agora Cards, top-up, who holds funds, ATM, Apple/Google Pay, unsupported countries) — no question or statement on identity verification; 'Who we are' and UltimoPay comparison blogs (mod. 2026-10-31) say only 'card use is not anonymous' and that 'compliance processes create records'; the only 'no KYC' wording is in /llms.txt (an LLM guide dated 2026-10-10 that contradicts the human pages on price $500 vs $550 and ATM limits $1,500/$15,000 vs $3,000/$80,000). No terms of service, legal entity, issuer, network or verification threshold anywhere on agora.cards. Re-open only if a browser read of the app sign-up (app.agora.cards) or a published terms page states when verification applies."
     },
     {
       "provider": "UTORG",
@@ -1269,14 +1276,15 @@
       ],
       "cross_listing_count": 1,
       "no_kyc_claim": true,
-      "operator_named": false,
+      "operator_named": true,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
-      "priority": -3,
-      "needs_browser_read": true,
-      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track."
+      "last_seen": "2026-11-27",
+      "priority": 0,
+      "needs_browser_read": false,
+      "note": "2026-11-11: official site not returned by web search; fetcher cannot reach it (provenance). See data/research-list.json no_kyc_track. | 2026-11-27: official domain maxswap.cc surfaced by search; 5 pages read (card terms mod. 2026-07-30, EN FAQ mod. 2026-11-12, ES cards FAQ 2026-09-03, Terms of Use, affiliate page). Inclusion rule met: fees published, verification stage stated (no ID at ordering; KYC may be required on rule violation; no threshold), product active, no territory restriction; operator MW Profit Ltd (London, Seychelles law), issuer not disclosed. Record validated; fee pages contradict each other (modelled least favourable). Affiliate: data/affiliate/maxswap-affiliate.json (identified, no rates).",
+      "record": "data/cards/maxswap-virtual-card.json"
     },
     {
       "provider": "Kardpay",
@@ -1969,15 +1977,21 @@
       "cross_listing_count": 2,
       "no_kyc_claim": false,
       "affiliate_hint": "unknown",
-      "status": "identified",
+      "status": "validated",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-26",
-      "priority": 4,
+      "last_seen": "2026-11-27",
+      "priority": 0,
       "operator_named": true,
       "regions_hint": [
         "US"
       ],
-      "discovery_note": "DeFiLlama lists issuer Lead Bank, US only Third-party hint (X article 2026-11-21, not evidence): virtual Visa + Apple/Google Pay, mainly eligible US residents, no broad standard cashback."
+      "discovery_note": "DeFiLlama lists issuer Lead Bank, US only Third-party hint (X article 2026-11-21, not evidence): virtual Visa + Apple/Google Pay, mainly eligible US residents, no broad standard cashback.",
+      "record": "data/cards/phantom-cash-card.json",
+      "regions": [
+        "US (except New York)"
+      ],
+      "note": "2026-11-27: validated from 10 official Phantom pages (help centre fees/spend/FAQ/verify/understanding/rewards/replacement-card, phantom.com/cash, launch post 2025-09-30, learn page upd. 2026-11-20). Virtual-only prepaid Visa, US except NY, KYC required for the card, issuance and domestic purchases free, FX unknown ('Fees may apply'), no ATM, no cashback (6% APY on held CASH is a separate variable programme). Issuer contradictory: Lead Bank/Bridge legal lines vs 'moving from Bridge to Stripe as our debit card issuer' (Oct 2026). needs_browser_read: 'Feature availability by region' article (client error), cash-rewards-terms. No affiliate/referral programme found.",
+      "needs_browser_read": true
     },
     {
       "provider": "Robinhood",

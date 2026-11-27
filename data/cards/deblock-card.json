@@ -1,0 +1,805 @@
+{
+  "schema_version": "1.0.0",
+  "id": "deblock-card",
+  "slug": "deblock-card",
+  "name": "Deblock Visa debit card (Standard / Premium / Native)",
+  "brand": "Deblock",
+  "provider_id": "deblock",
+  "issuer": {
+    "name": "Deblock SAS (Lille, RCS 852 173 210) — electronic money institution authorised by the ACPR (CIB 17748) and crypto-asset service provider (CASP) registered with the AMF (A2025-001); T&C §3.2: 'Deblock délivrera au Client une carte de débit Deblock unique'; cards page: 'Deblock is a direct VISA member'. No partner bank or BIN sponsor is named.",
+    "status": "verified",
+    "evidence": [
+      "ev-deblock-terms-fr",
+      "ev-deblock-pricing",
+      "ev-deblock-cards"
+    ]
+  },
+  "network": "visa",
+  "category": "debit",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual",
+    "physical"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "prefund_fiat",
+    "conversion": "manual",
+    "supported_assets_note": "The card debits the euro current account (EMI account with IBAN). Crypto is held in a separate non-custodial wallet inside the app and must be sold into euros first (buy/sell/swap fee 1.99% Standard, 0.49% Premium, free Native); help article: card payments cannot be made directly with cryptocurrencies (article listed, not read). Top-ups by card, PayPal (eligible countries), SEPA and instant transfers; a percentage of salary can be converted to crypto for free.",
+    "evidence": [
+      "ev-deblock-fees-fr-2026",
+      "ev-deblock-pricing",
+      "ev-deblock-help-cashback"
+    ]
+  },
+  "variants": [
+    {
+      "id": "deblock-card-france",
+      "region_label": "France",
+      "currency": "EUR",
+      "eligibility": {
+        "residence_allowed": [
+          "FR"
+        ],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "T&C v12.2 §3.4.1 / §3.5: the client declares being over 18 and having 'la résidence permanente en France'; must 'résider légalement en France' to open an account; one personal account per person; US persons excluded. Help centre: 'You must be 18 or older to open a Deblock account.'",
+        "usage_note": "Only the French-language T&C (v12.2, 1 Dec 2025) were read; they require French residence. Deblock also publishes referral terms in Italian and a PayPal top-up line 'in eligible countries', so other EU markets may have their own terms — not read this run (to_confirm). Cards 'work globally in the Visa network' (help article 2025-02-12); the help centre has a dedicated 'French Pacific Territories' collection (not read).",
+        "evidence": [
+          "ev-deblock-terms-fr",
+          "ev-deblock-help-age",
+          "ev-deblock-help-countries"
+        ],
+        "status": "verified"
+      },
+      "kyc": {
+        "initial_verification": "required",
+        "editorial_level": "standard",
+        "requirements": [
+          "phone",
+          "email",
+          "id_document",
+          "selfie",
+          "other"
+        ],
+        "thresholds_note": "No verification tier or threshold: services are available only after the 'statut d'identité vérifiée' is granted (T&C §3.5.2). Card payment cap: 'each card payment you make is capped at €10,000' (help article 2025-02-13).",
+        "stages_note": "Account opening = full verification: phone number and email, a colour video of an official identity document issued by an EU state, Monaco, Andorra or Switzerland (with MRZ), a selfie video and a qualified electronic signature (T&C §3.5.1–3.5.2); help centre: 'You can verify your identity during your sign-up process in the Deblock app' and 'you will be asked to provide your proof of identity and a photograph'. Cards are ordered from the verified account.",
+        "evidence": [
+          "ev-deblock-terms-fr",
+          "ev-deblock-help-verify",
+          "ev-deblock-help-documents",
+          "ev-deblock-help-limits"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "access": {
+            "type": "free",
+            "note": "Fee schedule: Standard plan 'Free'; cards page: Standard card 'Free forever'.",
+            "status": "verified",
+            "evidence": [
+              "ev-deblock-fees-fr-2026",
+              "ev-deblock-cards"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Physical card free within the limit of one per year ('delivery fees may apply'); 1 virtual card and 3 single-use cards included (fee schedule EN 2025-05-28 / FR 2026-11-07). Pricing page says '5 per day' one-off cards for Standard (differs from the schedule's three).",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-en-2025",
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-pricing"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Fee schedule: 'delivery fees may apply' (no amount); pricing page: 0 free express deliveries on Standard. Standard delivery cost not published on the pages read.",
+              "status": "unknown",
+              "evidence": [
+                "ev-deblock-fees-en-2025",
+                "ev-deblock-pricing"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Standard plan: Free (fee schedule and pricing page).",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-pricing"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 2000,
+                  "currency": "EUR"
+                },
+                "period": "month"
+              },
+              "conditions": "Card top-up: free up to 2,000 EUR per 30-day billing cycle, then 0.5% (all plans; FR schedule from 2026-11-07, EN schedule 2025-05-28 'per calendar month'). PayPal top-up: same, in eligible countries. Separate 'AFT' line (Standard): free for one transaction or 500 EUR per cycle, then 1 EUR + 2%. SEPA and instant transfers in: free.",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-fees-en-2025"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 1.99,
+              "period": "per_transaction",
+              "conditions": "Crypto buy, sell and swap: 1.99% on Standard (fee schedule and pricing page). Converting a percentage of salary to crypto: free.",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-pricing"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "conditions": "Governing value = dated fee schedule applicable from 7 Nov 2026 (FR v6.4.2), non-EUR card payments 'sous conditions': 0.5% on weekdays (Mon–Fri, Paris time), 1% on weekends; once card spending in a cycle exceeds 1,000 EUR, 1% on all further card payments until the end of the cycle; +0.5% on some merchant categories (financial services, money transfers, prepaid loads, crypto, quasi-cash, gambling, precious metals/jewellery) in any currency. Help article 'Are there any fees for making card payments?' (2026-05-05): 'Everyone gets €500/month with zero FX markup', then Standard '0.5% on weekdays, 1% on weekends'. Cards page: 'Deblock doesn't charge any FX fee on card payments abroad'. Modelled at the weekday schedule rate; weekend/over-threshold rate is 1%.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-help-card-fees",
+                "ev-deblock-cards"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 1,
+              "min": {
+                "amount": 1,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 100,
+                  "currency": "EUR"
+                },
+                "count": 1,
+                "period": "month"
+              },
+              "conditions": "Standard: free for one withdrawal or 100 EUR per 30-day cycle (whichever comes first), then 1% (min 1 EUR) — euro-zone ATMs of other banks; cards page: 0% FX on ATM abroad with a 'plan-dependent' limit. Pricing page: ATM limit 15,000 EUR.",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-fees-en-2025",
+                "ev-deblock-pricing"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 10000,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "note": "'Currently, each card payment you make is capped at €10,000' (help article 2025-02-13); cards page: 'No spending cap'.",
+              "evidence": [
+                "ev-deblock-help-limits",
+                "ev-deblock-cards"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "access": {
+            "type": "subscription",
+            "amount": {
+              "amount": 14.99,
+              "currency": "EUR"
+            },
+            "period": "month",
+            "note": "Fee schedule (FR, from 2026-11-07): '14,99 Euros par mois ou 120 Euros par an'; EN schedule 2025-05-28: 14.99 EUR/month. The pricing page shows '10€/mo' — the dated schedule governs.",
+            "status": "contradictory",
+            "evidence": [
+              "ev-deblock-fees-fr-2026",
+              "ev-deblock-fees-en-2025",
+              "ev-deblock-pricing"
+            ]
+          },
+          "fees": [
+            {
+              "type": "subscription",
+              "kind": "fixed",
+              "amount": {
+                "amount": 14.99,
+                "currency": "EUR"
+              },
+              "period": "month",
+              "conditions": "14.99 EUR per month or 120 EUR per year (fee schedule from 7 Nov 2026). Pricing page: 10 EUR/month, no yearly price.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-pricing"
+              ]
+            },
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Physical card free within three per year; 10 virtual cards; single-use cards free/unlimited; Premium Metal card ('21g of solid metal'), LED Metal and Artist cards advertised on the cards page without a price on the pages read.",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-cards",
+                "ev-deblock-pricing"
+              ]
+            },
+            {
+              "type": "delivery",
+              "kind": "unknown",
+              "conditions": "Pricing page: 3 free express deliveries; cost beyond that not published.",
+              "status": "unknown",
+              "evidence": [
+                "ev-deblock-pricing"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 2000,
+                  "currency": "EUR"
+                },
+                "period": "month"
+              },
+              "conditions": "Card top-up free up to 2,000 EUR per 30-day cycle, then 0.5% (all plans). 'AFT' line (Premium/Native): free for two transactions or 1,000 EUR per cycle, then 1 EUR + 1%.",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "percent",
+              "percent": 0.49,
+              "period": "per_transaction",
+              "conditions": "Crypto buy, sell and swap: 0.49% on Premium.",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-pricing"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "conditions": "The fee schedule from 7 Nov 2026 states the non-EUR card payment fee (0.5% weekdays / 1% weekends / 1% above 1,000 EUR card spend per cycle, 'sous conditions') for all plans; the help article (2026-05-05) says Premium pays '0% markup — always' beyond the €500 allowance everyone gets; the cards page says no FX fee at all. Dated schedule modelled; the contradiction is shown.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-help-card-fees",
+                "ev-deblock-cards"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 1,
+              "min": {
+                "amount": 1,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 1000,
+                  "currency": "EUR"
+                },
+                "count": 3,
+                "period": "month"
+              },
+              "conditions": "Premium/Native: free for three withdrawals or 1,000 EUR per 30-day cycle, then 1% (min 1 EUR). Pricing page: ATM limit 30,000 EUR.",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-pricing"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.1,
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "subscription",
+              "conditions": "Help article 'Do you offer cashback?' (2026-10-02): cashback 'only available on the Premium and Native plans'; 0.1% for merchants in EEA countries and French territories; paid automatically every month on the subscription anniversary date; 'There's currently no maximum.' Calculated on the settled amount after fees. Payout asset not stated ('cashback balance' in the app). Exclusions: cash withdrawals, money transfers, prepaid/e-wallet loads, foreign currency and crypto purchases, investments, financial services, government payments, refunds; clawback on refunded purchases.",
+              "excluded_categories": [
+                "cash withdrawals",
+                "money transfers and money orders",
+                "prepaid card / e-wallet / payment-account loads",
+                "foreign currency, travellers' cheques, crypto purchases",
+                "investments and securities",
+                "financial services",
+                "government payments",
+                "refunds, chargebacks, disputed payments"
+              ],
+              "description": "0.1% cashback on card payments at merchants in the EEA and French territories (Premium).",
+              "evidence": [
+                "ev-deblock-help-cashback",
+                "ev-deblock-fees-fr-2026"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "conditional_max",
+              "percent": 1,
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "subscription",
+              "conditions": "1% for merchants 'in all other countries and currencies' (outside the EEA and French territories) — the 'up to 1%' of the fee schedule and pricing page. The article says the rate depends on the merchant's country in its terms section and on 'the currency you pay in' in its first section (not reconciled). No cap; same exclusions and monthly payout as the base rate.",
+              "description": "Up to 1% cashback on card payments at merchants outside the EEA / French territories (Premium).",
+              "evidence": [
+                "ev-deblock-help-cashback",
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-pricing"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "non_monetary",
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "subscription",
+              "conditions": "Pricing page: product, travel and car insurance on Premium (product insurance only on Standard); 50% discount on international transfers; unlimited free currency exchange (Standard: 1,000 EUR/month). Terms of the insurance not read.",
+              "description": "Travel, car and product insurance; unlimited free currency exchange.",
+              "evidence": [
+                "ev-deblock-pricing"
+              ],
+              "status": "verified"
+            }
+          ],
+          "limits": [
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 10000,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "note": "'each card payment you make is capped at €10,000' (help article 2025-02-13).",
+              "evidence": [
+                "ev-deblock-help-limits"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        },
+        {
+          "id": "native",
+          "name": "Native (Deblock NFT holders)",
+          "access": {
+            "type": "holding",
+            "token": "Deblock NFT",
+            "note": "Fee schedule: Native plan free 'provided you have owned a Deblock NFT ... for at least 30 days'. The plan is absent from the pricing page (which lists an 'NFT card' included with Premium). How the NFT is obtained and its price are not on the pages read.",
+            "status": "verified",
+            "evidence": [
+              "ev-deblock-fees-en-2025",
+              "ev-deblock-fees-fr-2026",
+              "ev-deblock-pricing"
+            ]
+          },
+          "fees": [
+            {
+              "type": "subscription",
+              "kind": "none",
+              "period": "month",
+              "conditions": "Native plan: no monthly cost while the Deblock NFT has been held for at least 30 days (fee schedule).",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-fees-en-2025"
+              ]
+            },
+            {
+              "type": "issuance",
+              "kind": "none",
+              "conditions": "Physical card free within three per year; 10 virtual cards; single-use cards free (fee schedule).",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 2000,
+                  "currency": "EUR"
+                },
+                "period": "month"
+              },
+              "conditions": "Card top-up free up to 2,000 EUR per 30-day cycle, then 0.5%; AFT line as Premium.",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "none",
+              "period": "per_transaction",
+              "conditions": "Crypto buy, sell and swap: free on Native (fee schedule EN 2025-05-28 and FR 2026-11-07).",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-fees-en-2025"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 0.5,
+              "period": "per_transaction",
+              "conditions": "Fee schedule (all plans): 0.5% weekdays / 1% weekends / 1% above 1,000 EUR card spend per cycle, 'sous conditions'; the help article does not mention Native; the cards page says no FX fee. Dated schedule modelled.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-deblock-fees-fr-2026",
+                "ev-deblock-help-card-fees",
+                "ev-deblock-cards"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "percent",
+              "percent": 1,
+              "min": {
+                "amount": 1,
+                "currency": "EUR"
+              },
+              "period": "per_transaction",
+              "free_allowance": {
+                "amount": {
+                  "amount": 1000,
+                  "currency": "EUR"
+                },
+                "count": 3,
+                "period": "month"
+              },
+              "conditions": "Native: as Premium — free for three withdrawals or 1,000 EUR per cycle, then 1% (min 1 EUR).",
+              "status": "verified",
+              "evidence": [
+                "ev-deblock-fees-fr-2026"
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "base",
+              "percent": 0.1,
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "holding",
+              "conditions": "Cashback 'only available on the Premium and Native plans': 0.1% at EEA / French-territory merchants; same exclusions, monthly payout and no cap as Premium.",
+              "description": "0.1% cashback at EEA / French-territory merchants (Native).",
+              "evidence": [
+                "ev-deblock-help-cashback",
+                "ev-deblock-fees-fr-2026"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "conditional_max",
+              "percent": 1,
+              "payout": {
+                "kind": "other"
+              },
+              "requires": "holding",
+              "conditions": "1% at merchants outside the EEA and French territories (help article 2026-10-02); 'Up to 1%' in the fee schedule.",
+              "description": "Up to 1% cashback at merchants outside the EEA / French territories (Native).",
+              "evidence": [
+                "ev-deblock-help-cashback",
+                "ev-deblock-fees-fr-2026"
+              ],
+              "status": "verified"
+            }
+          ],
+          "limits": [],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "verified"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-deblock-pricing",
+      "url": "https://deblock.com/en/pricing-plans",
+      "title": "Pricing plans — Deblock (undated, © 2026)",
+      "source_type": "pricing_page",
+      "excerpt": "Standard 'Free'; Premium '10€/mo' (no yearly price, no Native plan). Standard: 1 virtual card, one-off cards '5 per day', free ATM '100€/mo', limit '15 000€', cashback 0%, crypto 1.99%. Premium: 3 free express deliveries, NFT card, 10 virtual cards, free ATM '1000€/mo', limit '30 000€', cashback 'up to 1%', crypto 0.49%, insurance. Footer: CASP A2025-001, EMI CIB 17748.",
+      "accessed_at": "2026-11-27T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified",
+      "contradiction_note": "Premium price 10 EUR/month here vs 14.99 EUR/month (or 120 EUR/year) in the dated fee schedules; no Native plan shown; one-off cards '5 per day' vs 'three' in the schedule."
+    },
+    {
+      "id": "ev-deblock-cards",
+      "url": "https://deblock.com/en/cards",
+      "title": "The debit card that will change your life — Deblock cards page (undated)",
+      "source_type": "official_terms",
+      "excerpt": "Standard card 'Free forever', 'Full VISA debit. No spending cap.'; Premium Metal, LED Metal, Artist, virtual and one-off cards; 'Deblock is a direct VISA member'; all cards 'fully compatible with Apple Wallet and Google Wallet'; FX table: card payment abroad 0%, ATM abroad 0% ('Plan-dependent' limit); 'Deblock doesn't charge any FX fee on card payments abroad.'",
+      "accessed_at": "2026-11-27T05:40:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified",
+      "contradiction_note": "0% FX on card payments abroad vs 0.5%/1% non-EUR card payment fee in the fee schedule from 7 Nov 2026 and in the help article of 2026-05-05 (Standard, beyond €500/month)."
+    },
+    {
+      "id": "ev-deblock-fees-en-2025",
+      "url": "https://cdn1.deblock.com/terms/fee_info/20250528-6-Fees-Document-EN.pdf",
+      "title": "Fees Pages — Fees applying from 28 May 2025, Standard extract of fees (EN)",
+      "source_type": "pricing_page",
+      "excerpt": "Plans Standard (Free), Premium (14.99 Euros/month), Native (Free with a Deblock NFT held ≥ 30 days). Physical card free within 1/year (Standard) or 3/year (Premium, Native), 'delivery fees may apply'; virtual cards 1/10/10; cashback 'Up to 1%' Premium and Native; top-up free until 2000 Euros per calendar month then 0.5%; ATM free 1 withdrawal or 100€ / 3 or 1000€ per month, then 1% (min 1€).",
+      "accessed_at": "2026-11-27T05:40:00Z",
+      "effective_from": "2025-05-28",
+      "expires_at": "2026-11-06",
+      "scope": {
+        "currency": "EUR",
+        "note": "Superseded by the FR schedule applicable from 7 Nov 2026; no English version of the newer schedule surfaced by search."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-deblock-fees-fr-2026",
+      "url": "https://cdn1.deblock.com/terms/fee_info/Fees_Pages_Deblock_FR_v6.4.2.pdf",
+      "title": "Fees Pages Deblock FR v6.4.2 — 'Ces frais s'appliqueront à compter du 7 novembre 2026'",
+      "source_type": "pricing_page",
+      "excerpt": "Premium '14,99 Euros par mois ou 120 Euros par an'; Native free (NFT ≥ 30 days); 30-day cycle; top-up free to 2000 EUR/cycle then 0.5%; AFT 1 EUR + 2% / 1 EUR + 1% beyond allowances; ATM Standard 1 withdrawal or 100 EUR then 1% (min 1 EUR), Premium/Native 3 or 1000 EUR; non-EUR card payments 0.5% weekdays / 1% weekends, 1% once card spend > 1000 EUR per cycle; crypto 1.99% / 0.49% / free.",
+      "accessed_at": "2026-11-27T05:40:00Z",
+      "effective_from": "2026-11-07",
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR",
+        "note": "PDF layout partly garbled in the fetch; the note numbering of the non-EUR card-payment conditions ('sous conditions') is not fully certain — re-read in a browser."
+      },
+      "verification": "verified",
+      "contradiction_note": "Non-EUR card payment fee for all plans here vs '0% markup — always' for Premium and a €500/month zero-markup allowance for everyone in the help article (2026-05-05), and 0% on the cards page."
+    },
+    {
+      "id": "ev-deblock-referral-terms",
+      "url": "https://cdn1.deblock.com/terms/referrals/FR/20240604-2-referrals-terms.pdf",
+      "title": "Referrals terms — How to benefit from our referrals program? (Deblock, file dated 2024-06-04, undated text)",
+      "source_type": "affiliate_program",
+      "excerpt": "'Deblock allows its existing customers to refer one or more referrals' via the link in the app (Profile tab); referral counts after account opening + KYC, a credit (no P2P), a card created and a purchase ≥ 5 EUR; 'The sponsor can refer up to ten people per campaign'; random reward: 10 € (45%), 20 € (50.4%), 50 € (4%), 100 € (0.5%), 500 € (0.1%).",
+      "accessed_at": "2026-11-27T05:40:00Z",
+      "effective_from": "2024-06-04",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "FR"
+        ],
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-deblock-terms-fr",
+      "url": "https://cdn1.deblock.com/terms/personal-terms/FR/20251201-v12.2-personal_terms-FR.pdf",
+      "title": "Conditions générales Deblock SAS — Version 12.2, 1 Dec 2025 (French; first 39,900 of 130,179 characters read verbatim, remainder summarised by the fetcher)",
+      "source_type": "official_terms",
+      "excerpt": "Deblock SAS, Lille, RCS 852 173 210; EMI (ACPR CIB 17748), PSAN/CASP (AMF A2025-001). §3.4.1/§3.5: over 18, 'la résidence permanente en France', 'résider légalement en France'; US persons excluded. §3.5.1–3.5.2: ID from an EU state, Monaco, Andorra or Switzerland (MRZ), selfie video, qualified e-signature. §3.2: 'Deblock délivrera au Client une carte de débit Deblock unique.'",
+      "accessed_at": "2026-11-27T05:40:00Z",
+      "effective_from": "2025-12-01",
+      "expires_at": null,
+      "scope": {
+        "countries": [
+          "FR"
+        ],
+        "currency": "EUR",
+        "note": "Only the French T&C were read; terms for other markets (Italian referral terms exist) not checked."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-deblock-help-cashback",
+      "url": "https://intercom.help/deblock/en/articles/9257049-do-you-offer-cashback",
+      "title": "Do you offer cashback? — Deblock Help Center (October 2, 2026)",
+      "source_type": "help_center",
+      "excerpt": "'up to 1% cashback', 'only available on the Premium and Native plans'; 0.1% for merchants in EEA countries (30 listed) and French territories (13 listed); 1% 'for merchants in all other countries and currencies'; 'There's currently no maximum.'; paid monthly on the subscription date, on the settled amount after fees; exclusions (cash, transfers, prepaid loads, FX/crypto, investments); clawback.",
+      "accessed_at": "2026-11-27T05:44:00Z",
+      "effective_from": "2026-10-02",
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-deblock-help-card-fees",
+      "url": "https://intercom.help/deblock/en/articles/8911354-are-there-any-fees-for-making-card-payments",
+      "title": "Are there any fees for making card payments? — Deblock Help Center (May 5, 2026)",
+      "source_type": "help_center",
+      "excerpt": "No fee for card payments; non-EUR payments carry a currency-exchange fee: 'Everyone gets €500/month with zero FX markup'; after that Standard '0.5% on weekdays, 1% on weekends', Premium '0% markup — always' including weekends; previously a 0.5% markup on all FX spending refunded at year-end, now replaced by the monthly allowance.",
+      "accessed_at": "2026-11-27T05:47:00Z",
+      "effective_from": "2026-05-05",
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified",
+      "contradiction_note": "Premium 0% and a €500/month allowance here vs the fee schedule applicable from 7 Nov 2026 (0.5%/1% for all plans, 'sous conditions', 1% above 1,000 EUR card spend per cycle) and the cards page (0%)."
+    },
+    {
+      "id": "ev-deblock-help-countries",
+      "url": "https://intercom.help/deblock/en/articles/8899846-do-my-cards-work-in-all-countries",
+      "title": "Do my cards work in all countries? — Deblock Help Center (February 12, 2025)",
+      "source_type": "help_center",
+      "excerpt": "Physical and virtual cards 'work globally in the Visa network'; no country restriction stated (usage, not residence).",
+      "accessed_at": "2026-11-27T05:47:00Z",
+      "effective_from": "2025-02-12",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-deblock-help-limits",
+      "url": "https://intercom.help/deblock/en/articles/8911134-are-there-any-limits-to-how-much-money-i-can-spend-on-my-cards",
+      "title": "Are there any limits to how much money I can spend on my cards? — Deblock Help Center (February 13, 2025)",
+      "source_type": "help_center",
+      "excerpt": "'Currently, each card payment you make is capped at €10,000.' — may change; no daily/monthly or per-plan limits stated.",
+      "accessed_at": "2026-11-27T05:47:00Z",
+      "effective_from": "2025-02-13",
+      "expires_at": null,
+      "scope": {
+        "currency": "EUR"
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-deblock-help-age",
+      "url": "https://intercom.help/deblock/en/articles/8899900-how-old-do-i-need-to-be-to-open-an-account",
+      "title": "How old do I need to be to open an account? — Deblock Help Center (March 31, 2025)",
+      "source_type": "help_center",
+      "excerpt": "'You must be 18 or older to open a Deblock account'; no residence statement.",
+      "accessed_at": "2026-11-27T05:50:00Z",
+      "effective_from": "2025-03-31",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-deblock-help-verify",
+      "url": "https://intercom.help/deblock/en/articles/8899978-how-do-i-verify-my-identify",
+      "title": "How do I verify my identify? [sic] — Deblock Help Center (February 14, 2024)",
+      "source_type": "help_center",
+      "excerpt": "'You can verify your identity during your sign-up process in the Deblock app.' 'it only takes a couple of minutes.' No documents or countries listed.",
+      "accessed_at": "2026-11-27T05:50:00Z",
+      "effective_from": "2024-02-14",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    },
+    {
+      "id": "ev-deblock-help-documents",
+      "url": "https://intercom.help/deblock/en/articles/8900042-what-documents-will-i-need-to-open-an-account",
+      "title": "What documents will I need to open an account? — Deblock Help Center (February 14, 2024)",
+      "source_type": "help_center",
+      "excerpt": "'In order to open your Deblock account you will be asked to provide your proof of identity and a photograph.' The app validates 'all the necessary documents in a single flow.'",
+      "accessed_at": "2026-11-27T05:47:00Z",
+      "effective_from": "2024-02-14",
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://deblock.com/en/cards",
+    "affiliate": {
+      "program_id": "deblock-referral",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-27T05:50:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-27T06:05:00Z",
+      "field": "*",
+      "reason": "Initial record from 13 official Deblock pages read by the unattended research run (pricing page, cards page, EN fee schedule 2025-05-28, FR fee schedule applicable from 2026-11-07 v6.4.2, referral terms 2024-06-04, T&C v12.2 FR 2025-12-01, and 7 help-centre articles: cashback 2026-10-02, card-payment fees 2026-05-05, countries, limits, age, verify identity, documents) — single read; second independent read ≥ 24 h later required before publication. Visa debit issued by Deblock SAS itself (EMI ACPR CIB 17748, CASP AMF A2025-001, 'direct VISA member'); France residence per the FR T&C (other markets to_confirm); full verification at sign-up; plans Standard (free) / Premium (14.99 EUR/month or 120 EUR/year per schedule — pricing page says 10 EUR/month) / Native (free with a Deblock NFT held 30 days); cashback 0.1% (EEA / French-territory merchants) to 1% (elsewhere), Premium and Native only, no cap; ATM 1% (min 1 EUR) beyond 1 withdrawal/100 EUR (Standard) or 3/1,000 EUR (Premium, Native) per cycle; top-up 0.5% beyond 2,000 EUR per cycle; crypto 1.99% / 0.49% / free. CONTRADICTORY: FX on non-EUR card payments (schedule 0.5% weekdays / 1% weekends all plans vs help article €500/month free then Standard 0.5%/1%, Premium 0% vs cards page 0%), Premium price. UNKNOWN: delivery fees, cashback payout asset, metal card prices, non-French T&C. Affiliate: customer referral programme only (data/affiliate/deblock-referral.json, identified); no publisher programme found.",
+      "evidence": [
+        "ev-deblock-pricing",
+        "ev-deblock-cards",
+        "ev-deblock-fees-en-2025",
+        "ev-deblock-fees-fr-2026",
+        "ev-deblock-referral-terms",
+        "ev-deblock-terms-fr",
+        "ev-deblock-help-cashback",
+        "ev-deblock-help-card-fees",
+        "ev-deblock-help-countries",
+        "ev-deblock-help-limits",
+        "ev-deblock-help-age",
+        "ev-deblock-help-verify",
+        "ev-deblock-help-documents"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Visa debit card of Deblock SAS, a French electronic money institution (ACPR) and registered crypto-asset service provider (AMF) that issues the card itself as a direct Visa member. The euro account and the non-custodial crypto wallet sit side by side in one app; the card spends euros, so crypto must be sold first (1.99% on the free Standard plan, 0.49% on Premium, free on the NFT-gated Native plan). Standard is free with one physical card a year, one virtual card and one free ATM withdrawal or 100 EUR per 30-day cycle; Premium costs 14.99 EUR a month or 120 EUR a year per the dated fee schedule (the pricing page still shows 10 EUR) and adds 0.1% to 1% cashback depending on the merchant's country, three free withdrawals or 1,000 EUR, insurance and metal cards. Non-EUR card payments are the main open point: the fee schedule in force since 7 November 2026 lists 0.5% on weekdays and 1% at weekends for all plans, while the help centre grants everyone 500 EUR a month at zero markup and Premium 0% always, and the cards page advertises no FX fee at all. Opening an account requires French residence under the French terms and full identity verification.",
+    "good_for": [
+      "French residents who want a regulated euro account, Visa debit card and crypto wallet in one app from a French EMI/CASP",
+      "Premium or Native users spending mostly outside the EEA, where cashback reaches 1% with no cap",
+      "NFT holders on the Native plan: free plan, free crypto trading and Premium-level allowances"
+    ],
+    "not_for": [
+      "Residents outside France until the terms for other markets are read (the French T&C require French residence; US persons are excluded)",
+      "Spending crypto directly: the card debits the euro account only, after a 1.99% / 0.49% sale on Standard / Premium",
+      "Cashback seekers on the free plan: Standard earns 0%; inside the EEA even Premium earns only 0.1%",
+      "Anyone who needs a clear FX fee today: three official pages give three different answers"
+    ],
+    "watch_outs": [
+      "Premium price: 14.99 EUR/month or 120 EUR/year in the fee schedule in force since 7 Nov 2026 vs '10€/mo' on the pricing page.",
+      "Non-EUR card payments: fee schedule 0.5% weekdays / 1% weekends (1% once card spend passes 1,000 EUR in a cycle; +0.5% on some merchant categories) for all plans; help article (May 2026): 500 EUR/month free for everyone, then Standard 0.5%/1% and Premium 0%; cards page: 0%. The schedule's conditions text was partly garbled in the fetch — browser re-read needed.",
+      "Cashback is paid only on Premium and Native and only 0.1% at EEA / French-territory merchants; payout asset not stated.",
+      "Top-ups by card are free only up to 2,000 EUR per cycle (then 0.5%); a separate 'AFT' fee line (1 EUR + 2% / 1%) applies beyond small allowances.",
+      "Each card payment is capped at 10,000 EUR (help centre) although the cards page says 'No spending cap'.",
+      "Native plan requires holding a Deblock NFT for 30 days; the plan is not shown on the pricing page.",
+      "Only the French T&C (v12.2) were read; eligibility in other EU countries is to be confirmed."
+    ]
+  }
+}

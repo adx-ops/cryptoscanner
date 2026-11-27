@@ -129,9 +129,10 @@
     {
       "provider": "Deblock",
       "product": "Deblock Card",
-      "status": "identified",
-      "record": null,
-      "note": "France-based; EEA availability to verify."
+      "status": "validated",
+      "record": "data/cards/deblock-card.json",
+      "note": "France-based; EEA availability to verify. | Validated 2026-11-27 (single read, fetcher) from deblock.com/en/pricing-plans, /en/cards, EN fee schedule 2025-05-28, FR fee schedule applicable from 2026-11-07 (v6.4.2), referral terms 2024-06-04, T&C v12.2 FR (2025-12-01) and 7 help-centre articles (cashback 2026-10-02, card-payment fees 2026-05-05, countries, limits, age, verify identity, documents). Visa debit issued by Deblock SAS (EMI ACPR CIB 17748, CASP AMF A2025-001). Plans Standard free / Premium 14.99 EUR per month or 120 EUR per year (schedule) vs 10 EUR per month (pricing page) / Native free with Deblock NFT held 30 days. Cashback 0.1% (EEA/French-territory merchants) to 1% (elsewhere), Premium and Native only, no cap. CONTRADICTORY FX: schedule 0.5% weekdays / 1% weekends for all plans vs help article 500 EUR/month free then Standard 0.5%/1%, Premium 0% vs cards page 0%. Unknown: delivery fees, cashback payout asset, metal card prices, non-French T&C. needs_browser_read: FR fee schedule PDF (layout garbled), T&C beyond first 40k chars, other-market T&C. Affiliate: data/affiliate/deblock-referral.json (customer referral, identified; no publisher programme).",
+      "needs_browser_read": true
     },
     {
       "provider": "Plutus",
@@ -429,6 +430,14 @@
       "record": null,
       "needs_browser_read": true,
       "note": "Blocked 2026-11-26: official post 'bitpay-card-transition' — prepaid Mastercard programme discontinued (new applications stopped; last load 2023-06-01, last spend 2023-06-15, balances by check after 2023-06-30); 'new BitPay card program with a new bank partner' announced with a waitlist at bitpay.com/card/, but no official page confirming a launched successor, fees or issuer was surfaced by search (bitpay.com/card not indexed). Product status unclear → no record; re-check bitpay.com/card in a browser session."
+    },
+    {
+      "provider": "Phantom",
+      "product": "Phantom Cash debit card (virtual Visa, US)",
+      "status": "validated",
+      "record": "data/cards/phantom-cash-card.json",
+      "needs_browser_read": true,
+      "note": "Validated 2026-11-27 (single read, fetcher) from 10 official Phantom pages: help centre (Cash fees, spend article, Cash FAQ, verify identity US/EU, Understanding your Cash account, Cash Rewards FAQ, replacement-card article), phantom.com/cash, launch post 2025-09-30, learn page updated 2026-11-20. Virtual-only prepaid Visa spending a self-custodial CASH (USD stablecoin, Solana) balance; US except New York; verification (Stripe Link: SSN, ID, selfie) required for the card; issuance free, domestic purchases free; daily limit 2,000 USD then 5,000 USD; Apple/Google Wallet; no cashback (6% APY on held CASH is a separate variable programme, excluded from the calculator). Unknown: FX ('Fees may apply'), monthly fee (none stated), ATM (not supported). CONTRADICTORY issuer: Lead Bank / Bridge Ventures (legal lines, learn page 2026-11-20) vs 'moving from Bridge to Stripe as our debit card issuer' (from 2026-10-05). needs_browser_read: 'Feature availability by region' (client error), phantom.com/cash-rewards-terms. No affiliate or referral programme found."
     }
   ],
   "no_kyc_track": {
@@ -501,8 +510,8 @@
         "product": "Agora Card",
         "claim": "$90 virtual / $500 physical one-time",
         "issuer_disclosed": false,
-        "status": "identified",
-        "note": "2026-11-11: search returns only cryptocards.so pages; no official Agora Cards domain indexed — fetcher cannot reach it. Browser session needed. | 2026-11-20: retried — search returns only directories and press; no official domain indexed; browser session still needed. | 2026-11-25: official site agora.cards readable (homepage, Physical Card Plus page, 'Who we are' blog upd. 2026-10-31, llms-full.txt 2026-10-31). Fees, limits, prices ($90/$100/$550 one-time), 28 unsupported countries, prohibited uses and referral ($5/$30 per sale) are published and the card is orderable (app.agora.cards). Missing for rule (1): no statement anywhere readable of whether/when identity verification applies (only 'collects only the information strictly necessary'); no operator legal entity, issuer, network or terms. The homepage FAQ (#faq) was not returned by the fetcher → browser read of the FAQ/app sign-up before blocking. Full detail in data/candidates.json agora-card.note.",
+        "status": "blocked",
+        "note": "2026-11-11: search returns only cryptocards.so pages; no official Agora Cards domain indexed — fetcher cannot reach it. Browser session needed. | 2026-11-20: retried — search returns only directories and press; no official domain indexed; browser session still needed. | 2026-11-25: official site agora.cards readable (homepage, Physical Card Plus page, 'Who we are' blog upd. 2026-10-31, llms-full.txt 2026-10-31). Fees, limits, prices ($90/$100/$550 one-time), 28 unsupported countries, prohibited uses and referral ($5/$30 per sale) are published and the card is orderable (app.agora.cards). Missing for rule (1): no statement anywhere readable of whether/when identity verification applies (only 'collects only the information strictly necessary'); no operator legal entity, issuer, network or terms. The homepage FAQ (#faq) was not returned by the fetcher → browser read of the FAQ/app sign-up before blocking. Full detail in data/candidates.json agora-card.note. | Blocked 2026-11-27 (rule 1): homepage FAQ now readable — no verification statement among its 6 questions; blogs (mod. 2026-10-31) only say card use 'is not anonymous' and compliance processes create records; the sole 'requires no KYC' wording sits in /llms.txt (2026-10-10), which contradicts the human pages on price and ATM limits; no terms of service, legal entity, issuer, network or threshold published. Re-open only if the app sign-up (app.agora.cards, browser) or a published terms page states when verification applies.",
         "needs_browser_read": true
       },
       {
@@ -545,9 +554,10 @@
         "product": "MaxSwap Virtual Card",
         "claim": "email-only onboarding; $50 card",
         "issuer_disclosed": false,
-        "status": "identified",
-        "note": "2026-11-11: no official MaxSwap domain is returned by web search (only cardik/coingape/coincodex directories and press releases), so the fetcher cannot reach the operator's pages (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read card fees, verification stage and terms in a browser session. | 2026-11-18: re-attempted; web search ('MaxSwap virtual card official site fees terms') still returns only cardik and unrelated issuers — no official MaxSwap domain surfaced (provenance). Browser session still needed. | 2026-11-24: retried — web search returns only cardik/teletype directories and unrelated fee pages; no official MaxSwap domain indexed. Browser session still needed.",
-        "needs_browser_read": true
+        "status": "validated",
+        "note": "2026-11-11: no official MaxSwap domain is returned by web search (only cardik/coingape/coincodex directories and press releases), so the fetcher cannot reach the operator's pages (provenance). No official affiliate/referral page found. Not blocked: identify the official site and read card fees, verification stage and terms in a browser session. | 2026-11-18: re-attempted; web search ('MaxSwap virtual card official site fees terms') still returns only cardik and unrelated issuers — no official MaxSwap domain surfaced (provenance). Browser session still needed. | 2026-11-24: retried — web search returns only cardik/teletype directories and unrelated fee pages; no official MaxSwap domain indexed. Browser session still needed. | 2026-11-27: maxswap.cc surfaced by search and readable; 5 official pages read (Terms of Use for Virtual Cards mod. 2026-07-30, EN FAQ mod. 2026-11-12, ES cards FAQ 2026-09-03, Terms of Use eff. 2023-10-01, affiliate page). Rule of 2026-11-09 met: fees published, verification stage stated (no ID stage at ordering, card described as anonymous; KYC may be required on rule violation or at account setup; no threshold), product active (Telegram bot), no territory/solicitation restriction; operator MW Profit Ltd (London 15541776, Seychelles law), issuer not disclosed. Record validated with contradictory fee figures across pages (issuance 50 USD + 5% + min balance 25/50 USD; top-up 4.5% vs 4.5%+1 USD; 0.25 USD + 0.4% per transaction; 0.6% non-USD). Affiliate: data/affiliate/maxswap-affiliate.json (identified; trading-commission programme, no rates; card referral via support chat).",
+        "needs_browser_read": false,
+        "record": "data/cards/maxswap-virtual-card.json"
       },
       {
         "product": "Kardpay",
@@ -558,5 +568,5 @@
       }
     ]
   },
-  "updated": "2026-11-26"
+  "updated": "2026-11-27"
 }

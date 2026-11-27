@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "maxswap-virtual-card",
+  "slug": "maxswap-virtual-card",
+  "name": "MaxSwap virtual prepaid card",
+  "brand": "MaxSwap",
+  "provider_id": "maxswap",
+  "issuer": {
+    "name": "not disclosed — operator MW Profit Ltd (71-75 Shelton Street, London WC2H 9JQ, company number 15541776; Terms of Use governed by the laws of the Republic of Seychelles). The card terms name 'Mastercard Prepaid' and 'Visa Prepaid' cards but no issuing bank, BIN sponsor or programme manager.",
+    "status": "verified",
+    "evidence": [
+      "ev-maxswap-terms-of-use",
+      "ev-maxswap-card-policy"
+    ]
+  },
+  "network": "mastercard",
+  "category": "prepaid",
+  "record_status": "validated",
+  "product_status": "active",
+  "is_demo": false,
+  "form_factors": [
+    "virtual"
+  ],
+  "custody": "custodial",
+  "funding": {
+    "mechanism": "prefund_crypto",
+    "conversion": "at_topup",
+    "supported_assets_note": "Card issued and topped up from a MaxSwap balance in USDT (ERC-20 or TRC-20) via the Telegram bot; blocked-card balances are returned to the 'MaxSwap spot USDT account'. Card balance in USD; a 0.6% conversion fee applies when settlement is not in USD (card terms §4.4).",
+    "evidence": [
+      "ev-maxswap-faq-en",
+      "ev-maxswap-card-policy"
+    ]
+  },
+  "variants": [
+    {
+      "id": "maxswap-virtual-card-global",
+      "region_label": "Worldwide (no country list published)",
+      "currency": "USD",
+      "eligibility": {
+        "residence_allowed": [],
+        "residence_excluded": [],
+        "default_for_unlisted": "to_confirm",
+        "nationality_restrictions_note": "Terms of Use §2.1: 'Users must be at least 18 years of age to register and use the Platform.' No residence or nationality list is published.",
+        "usage_note": "No positive or negative list of residence countries on any page read. The card terms (§2.5) prohibit payments in the currencies of Afghanistan, Belarus, Cuba, Iran, North Korea, Syria, Russia, the occupied regions of Ukraine 'and more' (list incomplete in the fetch) — a usage restriction, not a residence rule. §3.4: the card 'is not linked to a specific address'; some merchants check the card's country of issue (BIN country not published). The terms contain no clause restricting the product to one territory or forbidding solicitation elsewhere.",
+        "evidence": [
+          "ev-maxswap-card-policy",
+          "ev-maxswap-terms-of-use"
+        ],
+        "status": "unknown"
+      },
+      "kyc": {
+        "initial_verification": "not_required_initially",
+        "editorial_level": "light",
+        "requirements": [
+          "email",
+          "other"
+        ],
+        "thresholds_note": "No monetary threshold is published. Card terms §2.6: the service 'has the right to require the client to undergo KYC if their operations violate the rules of the service'. Terms of Use §3.2: 'Users may be required to complete a verification process as part of setting up their account' (documents not named). Card limits (FAQ, MasterCard): single top-up max 5,000 USD, monthly top-up 200,000 USD, max balance 200,000 USD, single transaction 50,000; these are not tied to a verification level.",
+        "stages_note": "What the operator states: the card is ordered in the Telegram bot (@MaxSwap_bot) and paid from the user's MaxSwap crypto wallet; §3.3 of the card terms describes the card as 'anonymous' and asks the user to enter name details in Latin letters; Google Pay enrolment is verified with a code from the bot by email. No identity-document stage is described for ordering; verification is reserved to rule violations (§2.6) or account setup 'may be required' (Terms of Use §3.2). This record describes only what the operator states.",
+        "evidence": [
+          "ev-maxswap-card-policy",
+          "ev-maxswap-terms-of-use",
+          "ev-maxswap-faq-en"
+        ],
+        "status": "verified"
+      },
+      "tiers": [
+        {
+          "id": "virtual",
+          "name": "Virtual card (Mastercard / Visa prepaid)",
+          "access": {
+            "type": "free",
+            "note": "No plan or subscription; the card is bought once (see issuance fee).",
+            "status": "verified",
+            "evidence": [
+              "ev-maxswap-card-policy",
+              "ev-maxswap-faq-en"
+            ]
+          },
+          "fees": [
+            {
+              "type": "issuance",
+              "kind": "fixed",
+              "amount": {
+                "amount": 50,
+                "currency": "USD"
+              },
+              "conditions": "Card terms (modified 2026-07-30) §4.1: 'Issuing a card costs 50 USDT', plus 'a commission of 5%' on the creation transaction (2.5 USDT) and a mandatory initial balance of at least 25 USD. English FAQ (modified 2026-11-12): card price 50 USD (ERC-20/TRC-20) + initial minimum deposit 50 USD, 'Total card issuance cost ... 77.125 USD'. Spanish FAQ: Visa card 50 USD, 'AI Card' 45 USD, 'Premium Card with ATM' 85 USDT, minimum deposit 25 USD. Modelled: the 50 USD price of the terms; minimum initial balance 25 vs 50 USD contradictory.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-maxswap-card-policy",
+                "ev-maxswap-faq-en",
+                "ev-maxswap-faq-es"
+              ]
+            },
+            {
+              "type": "subscription",
+              "kind": "unknown",
+              "conditions": "No monthly, annual or inactivity fee appears in the card terms or FAQs; no page states that there is none. Left unknown rather than free.",
+              "status": "unknown",
+              "evidence": [
+                "ev-maxswap-card-policy",
+                "ev-maxswap-faq-en"
+              ]
+            },
+            {
+              "type": "topup",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 1,
+                "currency": "USD"
+              },
+              "percent": 4.5,
+              "period": "per_transaction",
+              "conditions": "Card terms §4.3: 'The commission for replenishing the card is 4.5% of the replenishment amount', minimum top-up 10 USDT. English FAQ: 'Virtual card replenishment fee ... 4.5%+$1', minimum 10 USD; Spanish FAQ: '4,5% + 1 USD' (Visa and AI cards), '4.5%' (Premium card). Modelled at the least favourable published value (4.5% + 1 USD).",
+              "status": "contradictory",
+              "evidence": [
+                "ev-maxswap-card-policy",
+                "ev-maxswap-faq-en",
+                "ev-maxswap-faq-es"
+              ]
+            },
+            {
+              "type": "conversion",
+              "kind": "fixed_plus_percent",
+              "amount": {
+                "amount": 0.25,
+                "currency": "USD"
+              },
+              "percent": 0.4,
+              "period": "per_transaction",
+              "conditions": "Per-transaction fee on card payments. Card terms §4.4: 'A commission of 0.4% is charged for each successful transaction' and 'a fee of 0.25 USD is charged for each rejected transaction'. FAQs: 'Transaction fee ... 0.25 USD + 0.4%' per transaction (Spanish FAQ, Premium card: 0.30 USD per successful transaction). Modelled at the FAQ value (0.25 USD + 0.4%), the least favourable reading.",
+              "status": "contradictory",
+              "evidence": [
+                "ev-maxswap-card-policy",
+                "ev-maxswap-faq-en",
+                "ev-maxswap-faq-es"
+              ]
+            },
+            {
+              "type": "fx",
+              "kind": "percent",
+              "percent": 0.6,
+              "period": "per_transaction",
+              "conditions": "Card terms §4.4: 'a 0.6% conversion fee is charged if the settlement was not in USD'. Not mentioned in the FAQs.",
+              "status": "verified",
+              "evidence": [
+                "ev-maxswap-card-policy"
+              ]
+            },
+            {
+              "type": "atm_withdrawal",
+              "kind": "unknown",
+              "conditions": "The virtual card has no ATM function on the pages read. The Spanish FAQ lists a separate 'Premium Card with ATM' (85 USDT, withdrawals up to 750 USD per day and 250 USD per operation) without an ATM fee; not modelled.",
+              "status": "unknown",
+              "evidence": [
+                "ev-maxswap-faq-es"
+              ]
+            }
+          ],
+          "rewards": [],
+          "limits": [
+            {
+              "type": "topup",
+              "amount": {
+                "amount": 5000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "English FAQ (MasterCard): 'Maximum amount to top up the card at one time | 5,000 USD'; 'Maximum monthly card top-up amount | 200,000 USD'; 'Maximum balance of 1 card | $200,000'; minimum top-up 10 USD.",
+              "evidence": [
+                "ev-maxswap-faq-en"
+              ],
+              "status": "verified"
+            },
+            {
+              "type": "spend",
+              "amount": {
+                "amount": 50000,
+                "currency": "USD"
+              },
+              "period": "per_transaction",
+              "note": "English FAQ: 'Maximum purchase or payment amount on the online platform | $50,000'; transaction limits block: single 50,000, daily 200,000, monthly 2,000,000 (currency not written next to these figures).",
+              "evidence": [
+                "ev-maxswap-faq-en"
+              ],
+              "status": "verified"
+            }
+          ],
+          "mobile_wallets": [
+            "apple_pay",
+            "google_pay"
+          ],
+          "mobile_wallets_status": "contradictory"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-maxswap-card-policy",
+      "url": "https://maxswap.cc/virtual-card-policy/",
+      "title": "Terms of Use for Virtual Cards from MaxSwap (published 2024-09-12, modified 2026-07-30)",
+      "source_type": "official_terms",
+      "excerpt": "§4.1 'Issuing a card costs 50 USDT' + 5% commission, initial balance ≥ 25 USD; §4.3 top-up 4.5%, min 10 USDT; §4.4 0.4% per successful transaction, 0.6% conversion if settlement not in USD, 0.25 USD per rejected transaction; §2.2 'Mastercard Prepaid', §3.6 Visa card 3D Secure; §2.6 'has the right to require the client to undergo KYC if their operations violate the rules'; §3.3 card 'anonymous'.",
+      "accessed_at": "2026-11-27T05:49:00Z",
+      "effective_from": "2026-07-30",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD",
+        "note": "Support hours 08:00–20:00 UTC+3; support via Telegram @MaxSwap_support."
+      },
+      "verification": "verified",
+      "contradiction_note": "Top-up 4.5% here vs '4.5%+$1' in the English FAQ; minimum initial balance 25 USD here vs 50 USD in the English FAQ."
+    },
+    {
+      "id": "ev-maxswap-faq-en",
+      "url": "https://maxswap.cc/faq/frequently-asked-questions/",
+      "title": "Guide to creating and using virtual cards in MaxSwap — FAQ (published 2024-09-09, modified 2026-11-12)",
+      "source_type": "pricing_page",
+      "excerpt": "Table (MasterCard): card price 50 USD (ERC-20, TRC-20) + initial minimum deposit 50 USD; replenishment fee '4.5%+$1', min top-up 10 USD; transaction fee '0.25 USD + 0.4%'; 'Total card issuance cost | MasterCard | 77.125 USD'; max single top-up 5,000 USD; monthly top-up 200,000 USD; max balance 200,000; max payment 50,000.",
+      "accessed_at": "2026-11-27T05:49:00Z",
+      "effective_from": "2026-11-12",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "Covers 'MasterCard' only, while the card terms and the Spanish FAQ also describe a Visa card; fee figures differ from the card terms (see fee entries)."
+    },
+    {
+      "id": "ev-maxswap-faq-es",
+      "url": "https://maxswap.cc/faq/maxswap-cards/",
+      "title": "MaxSwap Cards — FAQ (Spanish-language body, published/modified 2026-09-03)",
+      "source_type": "pricing_page",
+      "excerpt": "Three cards: 'Visa (Apple Pay & Google Pay) USA' — issuance 50 USD, minimum deposit 25 USD, top-up '4,5% + 1 USD', transaction '0,25 USD + 0,4%'; 'AI Card + Google Pay ES' — 45 USD, 25 USD minimum, same fees; 'Premium Card with ATM USA' — 85 USDT, cash withdrawal 'hasta 750 USD por día (hasta 250 USD por operación)', top-up 4.5%, 0.30 USD per successful transaction, Apple Pay, Google Pay, PayPal.",
+      "accessed_at": "2026-11-27T05:49:00Z",
+      "effective_from": "2026-09-03",
+      "expires_at": null,
+      "scope": {
+        "currency": "USD"
+      },
+      "verification": "verified",
+      "contradiction_note": "Three-card line-up (Visa, AI Card, Premium with ATM) vs the single 'MasterCard' table of the English FAQ."
+    },
+    {
+      "id": "ev-maxswap-terms-of-use",
+      "url": "https://maxswap.cc/terms-of-use/",
+      "title": "Terms of Use — MaxSwap (effective 1 October 2023, modified 2026-10-09)",
+      "source_type": "official_terms",
+      "excerpt": "Operator 'MW Profit Ltd, registered at 71-75 Shelton Street, London, England, WC2H 9JQ, company number 15541776'; §21.1 governed by 'the laws of Republic of Seychelles'; §2.1 'Users must be at least 18 years of age'; §3.2 'Users may be required to complete a verification process as part of setting up their account'.",
+      "accessed_at": "2026-11-27T05:49:00Z",
+      "effective_from": "2023-10-01",
+      "expires_at": null,
+      "scope": {
+        "note": "UK registration with Seychelles governing law — the only legal-entity statement found."
+      },
+      "verification": "verified"
+    },
+    {
+      "id": "ev-maxswap-affiliate",
+      "url": "https://maxswap.cc/affiliate-program/",
+      "title": "Affiliate Program — MaxSwap (published 2025-08-06, modified 2026-10-15)",
+      "source_type": "affiliate_program",
+      "excerpt": "'The MaxSwap Affiliate Program allows you to earn passive income by referring new users to our platform. Every time your referrals trade, you receive a commission'; dashboard at my.maxswap.cc; 'Earn with the MaxSwap Card': 'Our referral program is already live — message our support to start earning today.' No commission rate, territory or channel rule published.",
+      "accessed_at": "2026-11-27T05:49:00Z",
+      "effective_from": null,
+      "expires_at": null,
+      "scope": {},
+      "verification": "verified"
+    }
+  ],
+  "links": {
+    "official_url": "https://maxswap.cc/faq/maxswap-cards/",
+    "affiliate": {
+      "program_id": "maxswap-affiliate",
+      "status": "identified",
+      "url": null
+    }
+  },
+  "freshness": {
+    "last_content_verified_at": "2026-11-27T05:49:00Z",
+    "last_auto_check_at": null
+  },
+  "changelog": [
+    {
+      "date": "2026-11-27T06:15:00Z",
+      "field": "*",
+      "reason": "Initial record (no-KYC track, rule of 2026-11-09) from 5 official maxswap.cc pages read by the unattended research run: card terms (modified 2026-07-30), English FAQ (modified 2026-11-12), Spanish cards FAQ (2026-09-03), Terms of Use (effective 2023-10-01, modified 2026-10-09), affiliate page (modified 2026-10-15) — single read; second independent read ≥ 24 h later required before publication. Inclusion rule: fees published (card terms + FAQ), verification stage stated (no ID stage at ordering; KYC may be required on rule violation or at account setup; no threshold), product active and orderable via Telegram bot, no territory/solicitation restriction, operator named (MW Profit Ltd, London; Seychelles law), issuer not disclosed. Fees modelled at the least favourable published value where the terms and FAQs differ (issuance 50 USD + 5% + minimum balance 25/50 USD; top-up 4.5% + 1 USD; 0.25 USD + 0.4% per transaction; 0.6% non-USD conversion). UNKNOWN: issuer/BIN country, monthly fee, ATM (virtual card), residence eligibility, whether the current product is Mastercard, Visa or both. CONTRADICTORY: fee figures and card line-up across the three fee pages. Affiliate: data/affiliate/maxswap-affiliate.json (identified; no rates published).",
+      "evidence": [
+        "ev-maxswap-card-policy",
+        "ev-maxswap-faq-en",
+        "ev-maxswap-faq-es",
+        "ev-maxswap-terms-of-use",
+        "ev-maxswap-affiliate"
+      ],
+      "actor": "claude"
+    }
+  ],
+  "editorial": {
+    "summary": "Virtual prepaid card sold through the MaxSwap Telegram bot by MW Profit Ltd (a UK-registered company whose terms are governed by Seychelles law); the card issuer is not disclosed. The card costs about 50 USD once (plus a 5% creation commission and a mandatory initial balance of 25 to 50 USD depending on the page), is topped up in USDT with a 4.5% (+1 USD) fee, charges 0.25 USD + 0.4% per payment and 0.6% on non-USD settlements, and offers no rewards. The operator states that no identity document is requested to order the card and reserves the right to require verification if the service rules are breached; no verification threshold is published. The three official fee pages disagree on the minimum deposit, the top-up fee and even which card networks are on offer.",
+    "good_for": [
+      "One-off online purchases or subscriptions paid from a USDT balance without a plan",
+      "Users who accept a high top-up cost (4.5% + 1 USD) in exchange for a card ordered in Telegram"
+    ],
+    "not_for": [
+      "Everyday spending: 4.5% on every top-up plus 0.25 USD + 0.4% per payment adds up fast",
+      "Anyone who needs an identified issuer, a BIN country or a deposit guarantee — none is disclosed, and the card is non-refundable",
+      "Cash withdrawals: the virtual card has no ATM function",
+      "Residents of countries with sanctions or restricted payment currencies listed in the card terms"
+    ],
+    "watch_outs": [
+      "Issuer not disclosed; operator MW Profit Ltd registered in London but terms governed by Seychelles law.",
+      "Fee pages contradict each other: initial minimum balance 25 vs 50 USD, top-up 4.5% vs 4.5% + 1 USD, transaction fee 0.4% vs 0.25 USD + 0.4%, card line-up Mastercard-only vs Visa/AI/Premium cards.",
+      "Non-refundable: 'Prepaid virtual cards belong to the category of goods that cannot be returned or exchanged'; refund considered only if the card does not work.",
+      "No identity-document stage is described at ordering; the operator may require KYC on rule violations — limits are not tied to any verification level. Funds on a blocked card are returned to the MaxSwap USDT account 'up to 2 calendar days'.",
+      "Payments in certain currencies (sanctioned countries, Russia, occupied Ukrainian regions) and at 18+ or gambling merchants are prohibited; 0.25 USD is charged per declined transaction.",
+      "Apple Pay / Google Pay support is stated for the Visa card and Google Pay for the AI card (Spanish FAQ) and the English FAQ gives set-up steps; which current card supports which wallet is unclear."
+    ]
+  }
+}
