@@ -203,7 +203,7 @@
       "title": "Terms of Use for Virtual Cards from MaxSwap (published 2024-09-12, modified 2026-07-30)",
       "source_type": "official_terms",
       "excerpt": "§4.1 'Issuing a card costs 50 USDT' + 5% commission, initial balance ≥ 25 USD; §4.3 top-up 4.5%, min 10 USDT; §4.4 0.4% per successful transaction, 0.6% conversion if settlement not in USD, 0.25 USD per rejected transaction; §2.2 'Mastercard Prepaid', §3.6 Visa card 3D Secure; §2.6 'has the right to require the client to undergo KYC if their operations violate the rules'; §3.3 card 'anonymous'.",
-      "accessed_at": "2026-11-27T05:49:00Z",
+      "accessed_at": "2026-11-28T06:29:00Z",
       "effective_from": "2026-07-30",
       "expires_at": null,
       "scope": {
@@ -219,7 +219,7 @@
       "title": "Guide to creating and using virtual cards in MaxSwap — FAQ (published 2024-09-09, modified 2026-11-12)",
       "source_type": "pricing_page",
       "excerpt": "Table (MasterCard): card price 50 USD (ERC-20, TRC-20) + initial minimum deposit 50 USD; replenishment fee '4.5%+$1', min top-up 10 USD; transaction fee '0.25 USD + 0.4%'; 'Total card issuance cost | MasterCard | 77.125 USD'; max single top-up 5,000 USD; monthly top-up 200,000 USD; max balance 200,000; max payment 50,000.",
-      "accessed_at": "2026-11-27T05:49:00Z",
+      "accessed_at": "2026-11-28T06:29:00Z",
       "effective_from": "2026-11-12",
       "expires_at": null,
       "scope": {
@@ -234,7 +234,7 @@
       "title": "MaxSwap Cards — FAQ (Spanish-language body, published/modified 2026-09-03)",
       "source_type": "pricing_page",
       "excerpt": "Three cards: 'Visa (Apple Pay & Google Pay) USA' — issuance 50 USD, minimum deposit 25 USD, top-up '4,5% + 1 USD', transaction '0,25 USD + 0,4%'; 'AI Card + Google Pay ES' — 45 USD, 25 USD minimum, same fees; 'Premium Card with ATM USA' — 85 USDT, cash withdrawal 'hasta 750 USD por día (hasta 250 USD por operación)', top-up 4.5%, 0.30 USD per successful transaction, Apple Pay, Google Pay, PayPal.",
-      "accessed_at": "2026-11-27T05:49:00Z",
+      "accessed_at": "2026-11-28T06:29:00Z",
       "effective_from": "2026-09-03",
       "expires_at": null,
       "scope": {
@@ -249,7 +249,7 @@
       "title": "Terms of Use — MaxSwap (effective 1 October 2023, modified 2026-10-09)",
       "source_type": "official_terms",
       "excerpt": "Operator 'MW Profit Ltd, registered at 71-75 Shelton Street, London, England, WC2H 9JQ, company number 15541776'; §21.1 governed by 'the laws of Republic of Seychelles'; §2.1 'Users must be at least 18 years of age'; §3.2 'Users may be required to complete a verification process as part of setting up their account'.",
-      "accessed_at": "2026-11-27T05:49:00Z",
+      "accessed_at": "2026-11-28T06:29:00Z",
       "effective_from": "2023-10-01",
       "expires_at": null,
       "scope": {
@@ -263,7 +263,7 @@
       "title": "Affiliate Program — MaxSwap (published 2025-08-06, modified 2026-10-15)",
       "source_type": "affiliate_program",
       "excerpt": "'The MaxSwap Affiliate Program allows you to earn passive income by referring new users to our platform. Every time your referrals trade, you receive a commission'; dashboard at my.maxswap.cc; 'Earn with the MaxSwap Card': 'Our referral program is already live — message our support to start earning today.' No commission rate, territory or channel rule published.",
-      "accessed_at": "2026-11-27T05:49:00Z",
+      "accessed_at": "2026-11-28T06:29:00Z",
       "effective_from": null,
       "expires_at": null,
       "scope": {},
@@ -279,8 +279,8 @@
     }
   },
   "freshness": {
-    "last_content_verified_at": "2026-11-27T05:49:00Z",
-    "last_auto_check_at": null
+    "last_content_verified_at": "2026-11-28T06:29:00Z",
+    "last_auto_check_at": "2026-11-28T06:29:00Z"
   },
   "changelog": [
     {
@@ -295,6 +295,21 @@
         "ev-maxswap-affiliate"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-28T06:29:00Z",
+      "field": "freshness.last_content_verified_at",
+      "from": "2026-11-27T05:49:00Z",
+      "to": "2026-11-28T06:29:00Z",
+      "reason": "Second independent read on 2026-11-28 (24 h 40 min after the first) of all five evidence pages at their stored URLs: every material value confirmed, unchanged. Card terms https://maxswap.cc/virtual-card-policy/ (published 2024-09-12, modified 2026-07-30): §4.1 issuance 50 USDT + 5 % commission on the creation transaction (example 50 + 25 + 2.5 USDT) + initial balance ≥ 25 USD, '1 USDT = 1 USD'; §4.3 top-up 4.5 %, minimum 10 USDT; §4.4 0.4 % per successful transaction, 0.6 % conversion if settlement not in USD, 0.25 USD per rejected transaction; Mastercard Prepaid (§2.2, §3.5, §4.2) and Visa Prepaid (§3.6, §4.2); §2.6 'has the right to require' KYC on rule violations; §3.3 'The card is anonymous' + Latin-letter name entry; §3.4 'not linked to a specific address'; §1.1–1.5 non-returnable, refund only for technical faults; §2.1 blocked-card balance returned to the spot USDT account within up to 2 calendar days; no monthly/annual/inactivity fee, no ATM, no residence rule; support 08:00–20:00 UTC+3. The §2.5 prohibited-currency list is now fully readable (Afghanistan, Belarus, Cuba, Iran, North Korea, Syria, Venezuela, Russia, Myanmar, Somalia, Ukraine (Donetsk, Luhansk, Crimea, Sevastopol), Yemen) — it completes the first read's 'and more', is a usage restriction and not a residence rule, and is recorded here only (this run never rewrites a note). English FAQ https://maxswap.cc/faq/frequently-asked-questions/ (published 2024-09-09, modified 2026-11-12), 'MasterCard' column: card 50 USD (ERC-20, TRC-20) + initial minimum deposit 50 USD, replenishment '4.5%+$1', minimum top-up 10 USD, maximum single top-up 5,000 USD, monthly top-up 200,000 USD, max balance $200,000, max purchase $50,000, transaction limits single 50,000 / daily 200,000 / monthly 2,000,000 (no unit), transaction fee '0.25 USD + 0.4%', 'Total card issuance cost 77.125 USD'; Apple Pay / Google Pay set-up steps (Google Pay code from the bot by email); bot t.me/MaxSwap_bot; no KYC wording — unchanged. Spanish cards FAQ https://maxswap.cc/faq/maxswap-cards/ (2026-09-03): 'Visa (Apple Pay & Google Pay) USA' 50 USD / 25 USD minimum / '4,5% + 1 USD' / '0,25 USD + 0,4%'; 'AI Card + Google Pay ES' 45 USD / 25 USD / same fees; 'Premium Card with ATM USA' 85 USDT / 25 USD / ATM up to 750 USD per day and 250 USD per operation, no ATM fee printed / top-up 4.5 % / 0.30 USD per successful transaction / Apple Pay, Google Pay, PayPal — unchanged. Terms of Use https://maxswap.cc/terms-of-use/ (effective 1 October 2023, modified 2026-10-09): MW Profit Ltd, 71-75 Shelton Street, London WC2H 9JQ, company number 15541776; §21.1–21.2 laws and courts of the Republic of Seychelles; §2.1 18+; §3.2 verification 'may be required'; no territorial or no-solicitation clause, no prohibited-residence list — unchanged. Affiliate page https://maxswap.cc/affiliate-program/ (published 2025-08-06, modified 2026-10-15): percentage of referral trades, no rate, sign-in my.maxswap.cc, 'Earn with the MaxSwap Card — Our referral program is already live — message our support to start earning today' — unchanged. Product active on every page (card ordering described, 2026 modified dates, no suspension wording). Issuer still not disclosed. All known contradictions (minimum deposit 25 vs 50 USD, top-up 4.5 % vs 4.5 % + 1 USD, 0.25 USD per rejected vs per transaction, 77.5 USDT vs 77.125 USD total, Mastercard-only table vs Visa/AI/Premium line-up) unchanged and already modelled at the least favourable value. NOT published: the validator's publication gate refuses 'maxswap-virtual-card-global eligibility not verified' (status 'unknown': no page states a residence rule, positive or negative) and this run never upgrades a field status. The two reads now agree on every material value, so the record is blocked only by David's decision (model eligibility as verified with empty lists and default 'to_confirm', as for Solcard and Plasma One whose official pages publish only exclusions — here none — or keep 'unknown'); flagged awaiting_decision in data/research-list.json (rule of 2026-11-02) and out of the second-read rotation until then.",
+      "evidence": [
+        "ev-maxswap-card-policy",
+        "ev-maxswap-faq-en",
+        "ev-maxswap-faq-es",
+        "ev-maxswap-terms-of-use",
+        "ev-maxswap-affiliate"
+      ],
+      "actor": "second-read-run"
     }
   ],
   "editorial": {
