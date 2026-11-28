@@ -599,7 +599,7 @@
         "currency": "EUR",
         "note": "Superseded by the FR schedule applicable from 7 Nov 2026; no English version of the newer schedule surfaced by search."
       },
-      "verification": "verified"
+      "verification": "stale"
     },
     {
       "id": "ev-deblock-fees-fr-2026",
@@ -777,6 +777,17 @@
         "ev-deblock-help-documents"
       ],
       "actor": "claude"
+    },
+    {
+      "date": "2026-11-28T00:00:00Z",
+      "field": "evidence.ev-deblock-fees-en-2025.verification",
+      "from": "verified",
+      "to": "stale",
+      "reason": "Evidence expired on 2026-11-06.",
+      "evidence": [
+        "ev-deblock-fees-en-2025"
+      ],
+      "actor": "expire-promos"
     }
   ],
   "editorial": {
